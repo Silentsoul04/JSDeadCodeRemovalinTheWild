@@ -1,0 +1,10450 @@
+@font-face {
+    font-family: rfont;
+    src: url(https://www.redditstatic.com/mweb2x/fonts/icon/rfont.a245821253a1aa1b7b92e1cc005dcc25.eot), url(https://www.redditstatic.com/mweb2x/fonts/icon/rfont.a245821253a1aa1b7b92e1cc005dcc25.woff), url(https://www.redditstatic.com/mweb2x/fonts/icon/rfont.a245821253a1aa1b7b92e1cc005dcc25.ttf), url(https://www.redditstatic.com/mweb2x/fonts/icon/rfont.a245821253a1aa1b7b92e1cc005dcc25.svg)
+}
+
+.icon:before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: rfont
+}
+
+.icon-bar-chart:before {
+    content: "\F101"
+}
+
+.icon-best:before {
+    content: "\F102"
+}
+
+.icon-cake:before {
+    content: "\F103"
+}
+
+.icon-caron-circled:before {
+    content: "\F104"
+}
+
+.icon-caron:before {
+    content: "\F105"
+}
+
+.icon-check-circled:before {
+    content: "\F106"
+}
+
+.icon-check:before {
+    content: "\F107"
+}
+
+.icon-circle:before {
+    content: "\F108"
+}
+
+.icon-clear:before {
+    content: "\F109"
+}
+
+.icon-comment:before {
+    content: "\F10A"
+}
+
+.icon-comments-circled:before {
+    content: "\F10B"
+}
+
+.icon-comments:before {
+    content: "\F10C"
+}
+
+.icon-compact:before {
+    content: "\F10D"
+}
+
+.icon-controversial:before {
+    content: "\F10E"
+}
+
+.icon-crown-circled:before {
+    content: "\F10F"
+}
+
+.icon-crown:before {
+    content: "\F110"
+}
+
+.icon-delete_remove:before {
+    content: "\F111"
+}
+
+.icon-desktop:before {
+    content: "\F112"
+}
+
+.icon-distinguish:before {
+    content: "\F113"
+}
+
+.icon-downvote-circled:before {
+    content: "\F114"
+}
+
+.icon-downvote:before {
+    content: "\F115"
+}
+
+.icon-eye:before {
+    content: "\F116"
+}
+
+.icon-flag-circled:before {
+    content: "\F117"
+}
+
+.icon-flag:before {
+    content: "\F118"
+}
+
+.icon-follow:before {
+    content: "\F119"
+}
+
+.icon-full-screen-collapse:before {
+    content: "\F11A"
+}
+
+.icon-full-screen:before {
+    content: "\F11B"
+}
+
+.icon-gallery_squares:before {
+    content: "\F11C"
+}
+
+.icon-gold-snoo:before {
+    content: "\F11D"
+}
+
+.icon-gold:before {
+    content: "\F11E"
+}
+
+.icon-header-18plus:before {
+    content: "\F11F"
+}
+
+.icon-header_banned:before {
+    content: "\F120"
+}
+
+.icon-header_gold:before {
+    content: "\F121"
+}
+
+.icon-header_locked:before {
+    content: "\F122"
+}
+
+.icon-header_private:before {
+    content: "\F123"
+}
+
+.icon-header_quarantine:before {
+    content: "\F124"
+}
+
+.icon-header_user:before {
+    content: "\F125"
+}
+
+.icon-hide:before {
+    content: "\F126"
+}
+
+.icon-history:before {
+    content: "\F127"
+}
+
+.icon-hot:before {
+    content: "\F128"
+}
+
+.icon-info-circled:before {
+    content: "\F129"
+}
+
+.icon-info:before {
+    content: "\F12A"
+}
+
+.icon-karma-circled:before {
+    content: "\F12B"
+}
+
+.icon-karma:before {
+    content: "\F12C"
+}
+
+.icon-law-circled:before {
+    content: "\F12D"
+}
+
+.icon-law:before {
+    content: "\F12E"
+}
+
+.icon-link-circled:before {
+    content: "\F12F"
+}
+
+.icon-link:before {
+    content: "\F130"
+}
+
+.icon-linkout:before {
+    content: "\F131"
+}
+
+.icon-lock:before {
+    content: "\F132"
+}
+
+.icon-megaphone:before {
+    content: "\F133"
+}
+
+.icon-menu:before {
+    content: "\F134"
+}
+
+.icon-message:before {
+    content: "\F135"
+}
+
+.icon-mod:before {
+    content: "\F136"
+}
+
+.icon-moose:before {
+    content: "\F137"
+}
+
+.icon-mute:before {
+    content: "\F138"
+}
+
+.icon-nav-arrowback:before {
+    content: "\F139"
+}
+
+.icon-nav-arrowback2:before {
+    content: "\F13A"
+}
+
+.icon-nav-arrowdown:before {
+    content: "\F13B"
+}
+
+.icon-nav-arrowforward:before {
+    content: "\F13C"
+}
+
+.icon-nav-arrowup:before {
+    content: "\F13D"
+}
+
+.icon-nav-close:before {
+    content: "\F13E"
+}
+
+.icon-new:before {
+    content: "\F13F"
+}
+
+.icon-nsfw:before {
+    content: "\F140"
+}
+
+.icon-op:before {
+    content: "\F141"
+}
+
+.icon-play-circled:before {
+    content: "\F142"
+}
+
+.icon-play:before {
+    content: "\F143"
+}
+
+.icon-play_triangle:before {
+    content: "\F144"
+}
+
+.icon-post-circled:before {
+    content: "\F145"
+}
+
+.icon-post-image:before {
+    content: "\F146"
+}
+
+.icon-post-link:before {
+    content: "\F147"
+}
+
+.icon-post-text:before {
+    content: "\F148"
+}
+
+.icon-post:before {
+    content: "\F149"
+}
+
+.icon-post_edit:before {
+    content: "\F14A"
+}
+
+.icon-posts:before {
+    content: "\F14B"
+}
+
+.icon-r-circled:before {
+    content: "\F14C"
+}
+
+.icon-r:before {
+    content: "\F14D"
+}
+
+.icon-replay:before {
+    content: "\F14E"
+}
+
+.icon-reply-circled:before {
+    content: "\F14F"
+}
+
+.icon-reply:before {
+    content: "\F150"
+}
+
+.icon-reply2:before {
+    content: "\F151"
+}
+
+.icon-rising:before {
+    content: "\F152"
+}
+
+.icon-rules:before {
+    content: "\F153"
+}
+
+.icon-save-circled:before {
+    content: "\F154"
+}
+
+.icon-save:before {
+    content: "\F155"
+}
+
+.icon-search-circled:before {
+    content: "\F156"
+}
+
+.icon-search:before {
+    content: "\F157"
+}
+
+.icon-seashells-circled:before {
+    content: "\F158"
+}
+
+.icon-seashells:before {
+    content: "\F159"
+}
+
+.icon-settings-circled:before {
+    content: "\F15A"
+}
+
+.icon-settings:before {
+    content: "\F15B"
+}
+
+.icon-share-circled:before {
+    content: "\F15C"
+}
+
+.icon-share:before {
+    content: "\F15D"
+}
+
+.icon-snoo-circled:before {
+    content: "\F15E"
+}
+
+.icon-snoo:before {
+    content: "\F15F"
+}
+
+.icon-snoo_logo_20:before {
+    content: "\F160"
+}
+
+.icon-snoosilhouette:before {
+    content: "\F161"
+}
+
+.icon-spaceship:before {
+    content: "\F162"
+}
+
+.icon-spam:before {
+    content: "\F163"
+}
+
+.icon-spoiler:before {
+    content: "\F164"
+}
+
+.icon-sticky:before {
+    content: "\F165"
+}
+
+.icon-text-circled:before {
+    content: "\F166"
+}
+
+.icon-text:before {
+    content: "\F167"
+}
+
+.icon-trending:before {
+    content: "\F168"
+}
+
+.icon-twirly-circled:before {
+    content: "\F169"
+}
+
+.icon-twirly:before {
+    content: "\F16A"
+}
+
+.icon-unmute:before {
+    content: "\F16B"
+}
+
+.icon-unsave-circled:before {
+    content: "\F16C"
+}
+
+.icon-unsave:before {
+    content: "\F16D"
+}
+
+.icon-upvote-circled:before {
+    content: "\F16E"
+}
+
+.icon-upvote:before {
+    content: "\F16F"
+}
+
+.icon-user-account:before {
+    content: "\F170"
+}
+
+.icon-verified:before {
+    content: "\F171"
+}
+
+.icon-x-circled:before {
+    content: "\F172"
+}
+
+.icon-x:before {
+    content: "\F173"
+}
+
+.icon {
+    font-size: 16px;
+    line-height: 16px;
+    vertical-align: middle
+}
+
+.dayMode .icon {
+    color: #ccccca
+}
+
+.nightMode .icon {
+    color: #545452
+}
+
+.icon.neutral {
+    color: #ccccca
+}
+
+.icon.blue {
+    color: #24a0ed
+}
+
+.icon.red {
+    color: #d84141
+}
+
+.icon.orangered {
+    color: #ff4500
+}
+
+.icon.darkgrey {
+    color: #545452
+}
+
+.icon.lime {
+    color: #94e044
+}
+
+.icon.nsfw-salmon {
+    color: #ff585b
+}
+
+.icon.ban-red {
+    color: #ea0027
+}
+
+.icon.green {
+    color: #46d160
+}
+
+.icon.white {
+    color: #fff
+}
+
+.icon.nsfw {
+    color: #ff585b
+}
+
+.icon.gold {
+    color: #ddbd37
+}
+
+.icon.warning-yellow {
+    color: #ffd635
+}
+
+.icon.mint {
+    color: #0dd3bb
+}
+
+.icon.mango {
+    color: #ffb000
+}
+
+.icon.black {
+    color: #000
+}
+
+.icon:before {
+    vertical-align: inherit
+}
+
+.dayMode a:hover.icon,
+.dayMode button:hover.icon {
+    color: #d9d9d7
+}
+
+.nightMode a:hover.icon,
+.nightMode button:hover.icon {
+    color: #61615f
+}
+
+a:hover.icon.neutral,
+button:hover.icon.neutral {
+    color: #bfbfbd
+}
+
+a:hover.icon.blue,
+button:hover.icon.blue {
+    color: #1394e5
+}
+
+a:hover.icon.red,
+button:hover.icon.red {
+    color: #d42c2c
+}
+
+a:hover.icon.orangered,
+button:hover.icon.orangered {
+    color: #f54200
+}
+
+a:hover.icon.lime,
+button:hover.icon.lime {
+    color: #7bcf22
+}
+
+a:hover.icon.green,
+button:hover.icon.green {
+    color: #2db747
+}
+
+a:hover.icon.nsfw,
+button:hover.icon.nsfw {
+    color: #ff4e51
+}
+
+a:hover.icon.gold,
+button:hover.icon.gold {
+    color: #dbb92a
+}
+
+a:hover.icon.warning-yellow,
+button:hover.icon.warning-yellow {
+    color: #ffd016
+}
+
+a:hover.icon.mint,
+button:hover.icon.mint {
+    color: #0cbba6
+}
+
+a:hover.icon.mango,
+button:hover.icon.mango {
+    color: #e69e00
+}
+
+a:hover.icon.black,
+button:hover.icon.black {
+    color: #050505
+}
+
+.icon-xxl {
+    font-size: 64px
+}
+
+.icon-xl {
+    font-size: 38px
+}
+
+.icon-large {
+    font-size: 23px
+}
+
+.icon-bar-chart.orangered-circled-xl {
+    background-color: #ff4500
+}
+
+.icon-bar-chart.orangered-circled-xl,
+.icon-rising.mint-circled-xl {
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    line-height: 39px;
+    padding-left: 1px;
+    font-size: 21px;
+    color: #fff !important;
+    width: 38px;
+    height: 38px;
+    border-radius: 19px
+}
+
+.icon-rising.mint-circled-xl {
+    background-color: #0dd3bb
+}
+
+.icon-snoo-circled.orangered:before {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8////fwAKAAP+j4hsjgAAAABJRU5ErkJggg==");
+    background-size: .7em .7em;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 1em
+}
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+[hidden],
+template {
+    display: none
+}
+
+a {
+    background: transparent
+}
+
+a:active,
+a:hover {
+    outline: 0
+}
+
+abbr[title] {
+    border-bottom: 1px dotted
+}
+
+b,
+strong {
+    font-weight: 700
+}
+
+dfn {
+    font-style: italic
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+mark {
+    background: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sup {
+    top: -.5em
+}
+
+sub {
+    bottom: -.25em
+}
+
+img {
+    border: 0
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+figure {
+    margin: 1em 40px
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0
+}
+
+pre {
+    overflow: auto
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+button,
+form,
+input,
+optgroup,
+select,
+textarea {
+    background-color: inherit;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    border-width: 0
+}
+
+button {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+html input[type=button] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default
+}
+
+button input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+input {
+    line-height: normal
+}
+
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+input[type=search] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+
+legend {
+    border: 0;
+    padding: 0
+}
+
+textarea {
+    overflow: auto
+}
+
+optgroup {
+    font-weight: 700
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td,
+th {
+    padding: 0
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+
+body,
+html {
+    font-size: 14px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #222
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+
+a {
+    color: #0079d3;
+    text-decoration: none
+}
+
+a:focus,
+a:hover {
+    color: #005ca0;
+    text-decoration: underline
+}
+
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+figure {
+    margin: 0
+}
+
+img {
+    vertical-align: middle
+}
+
+[role=button] {
+    cursor: pointer
+}
+
+input[type=number],
+input[type=password],
+input[type=text],
+textarea {
+    font-size: 16px
+}
+
+html {
+    -webkit-font-smoothing: antialiased
+}
+
+.dayMode a,
+.dayMode a .icon-inline {
+    color: #0079d3
+}
+
+.dayMode a:active,
+.dayMode a:active .icon-inline {
+    color: #0795ff
+}
+
+.dayMode a:visited,
+.dayMode a:visited .icon-inline {
+    color: #3aabff
+}
+
+.nightMode a,
+.nightMode a .icon-inline {
+    color: #24a0ed
+}
+
+.nightMode a:active,
+.nightMode a:active .icon-inline {
+    color: #53b4f1
+}
+
+.nightMode a:visited,
+.nightMode a:visited .icon-inline {
+    color: #82c9f5
+}
+
+.text-upvote,
+a.voted.text-upvote:focus,
+a.voted.text-upvote:hover,
+button.upvoted:hover .icon-upvote-circled {
+    color: #ff4500
+}
+
+.text-downvote,
+a.voted.text-downvote:focus,
+a.voted.text-downvote:hover,
+button.downvoted:hover .icon-downvote-circled {
+    color: #7193ff
+}
+
+.label.label-large {
+    font-size: 100%
+}
+
+.label a:hover {
+    text-decoration: none
+}
+
+.text-admin {
+    color: #ff4500
+}
+
+.text-admin:after {
+    content: " [A]"
+}
+
+.text-moderator {
+    color: #94e044
+}
+
+.text-moderator:after {
+    content: " [M]"
+}
+
+.linkbar {
+    margin: 4px 0 0
+}
+
+.linkbar,
+.linkbar>li {
+    display: inline-block;
+    padding: 0
+}
+
+.linkbar>li {
+    margin-right: .5em;
+    vertical-align: bottom
+}
+
+.linkbar>li:nth-child(n+2):before {
+    content: "\B7";
+    padding-right: .5em
+}
+
+.linkbar-single-line {
+    height: 1.5em;
+    overflow: hidden;
+    width: 100%;
+    position: relative
+}
+
+.linkbar-single-line:after {
+    content: "";
+    position: absolute;
+    height: 2em;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 3em;
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), #fff)
+}
+
+.linkbar-single-line>.linkbar {
+    width: 1000%
+}
+
+.linkbar>li.linkbar-item-no-seperator:before {
+    content: "";
+    padding-right: 0
+}
+
+.linkbar-compact {
+    vertical-align: middle;
+    margin: 0
+}
+
+.linkbar-compact li:before {
+    display: none
+}
+
+.linkbar-compact>li:nth-child(n+2):before {
+    content: "";
+    padding-right: 0
+}
+
+.linkbar-spread {
+    width: 100%;
+    text-align: center;
+    padding: 0
+}
+
+.linkbar-spread>li {
+    float: left
+}
+
+.linkbar-spread.linkbar-spread-5>li {
+    width: 20%
+}
+
+.linkbar-spread.linkbar-spread-5>.linkbar-spread-li-double {
+    width: 40%
+}
+
+.text-inverted {
+    color: #fff
+}
+
+.text-muted a:active {
+    color: #a5a4a4
+}
+
+.text-link,
+.text-muted .text-link {
+    color: #0079d3
+}
+
+.logo-reddit {
+    background: url(https://www.redditstatic.com/mweb2x/img/snoo-32.png) 100% no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0
+}
+
+.logo-reddit.logo-small {
+    width: 16px;
+    height: 16px;
+    background-size: 16px
+}
+
+@media only screen and (-moz-min-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:2),
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2) {
+    .logo-reddit {
+        background: url(https://www.redditstatic.com/mweb2x/img/snoo-64.png) 100% no-repeat;
+        background-size: 32px
+    }
+    .logo-reddit.logo-small {
+        background: url(https://www.redditstatic.com/mweb2x/img/snoo-32.png) 100% no-repeat;
+        background-size: 16px
+    }
+}
+
+blockquote,
+table {
+    font-size: inherit
+}
+
+blockquote {
+    margin: .5rem 0 1rem .5rem;
+    padding: .5rem 1rem
+}
+
+.dayMode blockquote {
+    border-left: 5px solid #efefed
+}
+
+.nightMode blockquote {
+    border-left: 5px solid #353535
+}
+
+blockquote ol:last-child,
+blockquote ul:last-child {
+    margin-bottom: 0
+}
+
+blockquote .small,
+blockquote footer,
+blockquote small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143
+}
+
+blockquote .small:before,
+blockquote footer:before,
+blockquote small:before {
+    content: "\2014   \A0"
+}
+
+.dayMode pre {
+    border: 1px solid #ccccca;
+    color: #222
+}
+
+.nightMode pre {
+    border: 1px solid #545452;
+    color: #cfd0ca
+}
+
+.dayMode code,
+.dayMode pre,
+.dayMode pre code {
+    background-color: #f7f7f7
+}
+
+.nightMode code,
+.nightMode pre,
+.nightMode pre code {
+    background-color: #000
+}
+
+.dayMode code {
+    background-color: #fbeaea;
+    color: #d84141
+}
+
+.nightMode code {
+    color: #dc5656
+}
+
+p {
+    word-wrap: break-word;
+    word-break: break-word
+}
+
+.text-small {
+    font-size: 12px
+}
+
+.text-small [class*=" icon-"] {
+    line-height: 13px
+}
+
+.text-super-large {
+    font-size: 128px
+}
+
+.text-mirror {
+    transform: scaleX(-1)
+}
+
+.encircle-icon {
+    padding: 3px;
+    color: #fff
+}
+
+dd {
+    margin-bottom: 1em
+}
+
+.title {
+    color: #0079d3;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+@media screen and (min-width:0px) {
+    .jumbotron {
+        padding: 1em;
+        margin-bottom: 0
+    }
+    .jumbotron h1 {
+        font-size: 18px
+    }
+    .jumbotron p {
+        font-size: 13px
+    }
+}
+
+.sponsored-label {
+    color: #3aabff;
+    text-transform: uppercase
+}
+
+.blue {
+    color: #24a0ed
+}
+
+.red {
+    color: #d84141
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1
+}
+
+.h1 .small,
+.h1 small,
+.h2 .small,
+.h2 small,
+.h3 .small,
+.h3 small,
+.h4 .small,
+.h4 small,
+.h5 .small,
+.h5 small,
+.h6 .small,
+.h6 small,
+h1 .small,
+h1 small,
+h2 .small,
+h2 small,
+h3 .small,
+h3 small,
+h4 .small,
+h4 small,
+h5 .small,
+h5 small,
+h6 .small,
+h6 small {
+    font-weight: 400;
+    line-height: 1
+}
+
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+.h1 .small,
+.h1 small,
+.h2 .small,
+.h2 small,
+.h3 .small,
+.h3 small,
+h1 .small,
+h1 small,
+h2 .small,
+h2 small,
+h3 .small,
+h3 small {
+    font-size: 65%
+}
+
+.h4,
+.h5,
+.h6,
+h4,
+h5,
+h6 {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.h4 .small,
+.h4 small,
+.h5 .small,
+.h5 small,
+.h6 .small,
+.h6 small,
+h4 .small,
+h4 small,
+h5 .small,
+h5 small,
+h6 .small,
+h6 small {
+    font-size: 75%
+}
+
+.h1,
+h1 {
+    font-size: 36px
+}
+
+.h2,
+h2 {
+    font-size: 30px
+}
+
+.h3,
+h3 {
+    font-size: 24px
+}
+
+.h4,
+h4 {
+    font-size: 18px
+}
+
+.h5,
+h5 {
+    font-size: 14px
+}
+
+.h6,
+h6 {
+    font-size: 12px
+}
+
+p {
+    margin: 0 0 10px
+}
+
+.lead {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4
+}
+
+.small,
+small {
+    font-size: 71%
+}
+
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
+}
+
+.text-center {
+    text-align: center
+}
+
+.text-justify {
+    text-align: justify
+}
+
+.text-nowrap {
+    white-space: nowrap
+}
+
+.text-lowercase {
+    text-transform: lowercase
+}
+
+.text-uppercase {
+    text-transform: uppercase
+}
+
+.text-capitalize {
+    text-transform: capitalize
+}
+
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 10px
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-bottom: 0
+}
+
+.list-inline,
+.list-unstyled {
+    padding-left: 0;
+    list-style: none
+}
+
+.list-inline {
+    margin-left: -5px
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+dl {
+    margin-top: 0;
+    margin-bottom: 20px
+}
+
+dd,
+dt {
+    line-height: 1.42857143
+}
+
+dt {
+    font-weight: 700
+}
+
+dd {
+    margin-left: 0
+}
+
+@media (min-width:768px) {
+    .dl-horizontal dt {
+        float: left;
+        width: 160px;
+        clear: left;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap
+    }
+    .dl-horizontal dd {
+        margin-left: 180px
+    }
+}
+
+abbr[data-original-title],
+abbr[title] {
+    cursor: help
+}
+
+.dayMode abbr[data-original-title],
+.dayMode abbr[title] {
+    border-bottom: 1px solid #ccccca
+}
+
+.nightMode abbr[data-original-title],
+.nightMode abbr[title] {
+    border-bottom: 1px solid #545452
+}
+
+.initialism {
+    font-size: 90%;
+    text-transform: uppercase
+}
+
+.blockquote-reverse,
+blockquote.pull-right {
+    padding-right: 15px;
+    padding-left: 0;
+    border-left: 0;
+    text-align: right
+}
+
+.dayMode .blockquote-reverse,
+.dayMode blockquote.pull-right {
+    border: 5px solid #efefed
+}
+
+.nightMode .blockquote-reverse,
+.nightMode blockquote.pull-right {
+    border: 5px solid #353535
+}
+
+.blockquote-reverse .small:before,
+.blockquote-reverse footer:before,
+.blockquote-reverse small:before,
+blockquote.pull-right .small:before,
+blockquote.pull-right footer:before,
+blockquote.pull-right small:before {
+    content: ""
+}
+
+.blockquote-reverse .small:after,
+.blockquote-reverse footer:after,
+.blockquote-reverse small:after,
+blockquote.pull-right .small:after,
+blockquote.pull-right footer:after,
+blockquote.pull-right small:after {
+    content: "\A0   \2014"
+}
+
+address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.42857143
+}
+
+.md span.md-spoiler-text {
+    border-radius: 2px;
+    transition: background 1s ease-out
+}
+
+.md span.md-spoiler-text:not(.revealed) {
+    cursor: pointer
+}
+
+.dayMode .md span.md-spoiler-text {
+    background-color: #222
+}
+
+.dayMode .md span.md-spoiler-text:not(.revealed) * {
+    color: #222
+}
+
+.dayMode .md span.md-spoiler-text.revealed {
+    background-color: transparent
+}
+
+.nightMode .md span.md-spoiler-text {
+    background-color: #cfd0ca
+}
+
+.nightMode .md span.md-spoiler-text:not(.revealed) * {
+    color: #cfd0ca
+}
+
+.nightMode .md span.md-spoiler-text.revealed {
+    background-color: transparent
+}
+
+.Button {
+    padding: .5em 1em;
+    letter-spacing: 1.6;
+    line-height: 1.5
+}
+
+.Button,
+.Button:active,
+.Button:focus,
+.Button:hover,
+.Button:visited {
+    border: none
+}
+
+.dayMode .Button,
+.dayMode .Button:active,
+.dayMode .Button:focus,
+.dayMode .Button:hover,
+.dayMode .Button:visited,
+.nightMode .Button,
+.nightMode .Button:active,
+.nightMode .Button:focus,
+.nightMode .Button:hover,
+.nightMode .Button:visited {
+    background: #24a0ed;
+    color: #fff
+}
+
+.dayMode .Button:active:focus,
+.dayMode .Button:focus,
+.dayMode .Button:focus:focus,
+.dayMode .Button:hover:focus,
+.dayMode .Button:visited:focus {
+    outline: 1px dotted #efefed
+}
+
+.nightMode .Button:active:focus,
+.nightMode .Button:focus,
+.nightMode .Button:focus:focus,
+.nightMode .Button:hover:focus,
+.nightMode .Button:visited:focus {
+    outline: 1px dotted #353535
+}
+
+.dayMode .Button.m-disabled,
+.dayMode .Button:active.m-disabled,
+.dayMode .Button:focus.m-disabled,
+.dayMode .Button:hover.m-disabled,
+.dayMode .Button:visited.m-disabled {
+    background: #efefed;
+    color: #b3b3aa
+}
+
+.nightMode .Button.m-disabled,
+.nightMode .Button:active.m-disabled,
+.nightMode .Button:focus.m-disabled,
+.nightMode .Button:hover.m-disabled,
+.nightMode .Button:visited.m-disabled {
+    background: #545452;
+    color: #949491
+}
+
+.Button.m-linkbutton,
+.Button:active.m-linkbutton,
+.Button:focus.m-linkbutton,
+.Button:hover.m-linkbutton,
+.Button:visited.m-linkbutton {
+    background: transparent;
+    cursor: pointer
+}
+
+.dayMode .Button.m-linkbutton,
+.dayMode .Button:active.m-linkbutton,
+.dayMode .Button:focus.m-linkbutton,
+.dayMode .Button:hover.m-linkbutton,
+.dayMode .Button:visited.m-linkbutton,
+.nightMode .Button.m-linkbutton,
+.nightMode .Button:active.m-linkbutton,
+.nightMode .Button:focus.m-linkbutton,
+.nightMode .Button:hover.m-linkbutton,
+.nightMode .Button:visited.m-linkbutton {
+    color: #a5a4a4
+}
+
+.icon-gold,
+.icon-gold:before {
+    color: #ffd635
+}
+
+body.dayMode {
+    background-color: #fff;
+    color: #222;
+    fill: #222
+}
+
+body.nightMode {
+    background-color: #000;
+    color: #cfd0ca;
+    fill: #cfd0ca
+}
+
+main {
+    position: relative
+}
+
+.footer {
+    margin-top: 1em;
+    padding-top: 1em
+}
+
+.center-image {
+    margin: auto
+}
+
+.pull-left {
+    float: left !important
+}
+
+.pull-right {
+    float: right !important
+}
+
+.dayMode .alert-success {
+    padding: 1em .5em;
+    border: 1px solid #45a508;
+    background-color: #ecfee1;
+    color: #3b8d07
+}
+
+.nightMode .alert-success {
+    padding: 1em .5em;
+    border: 1px solid #3b8d07;
+    background-color: #000;
+    color: #3b8d07
+}
+
+.dayMode .alert-info {
+    padding: 1em .5em;
+    border: 1px solid #24a0ed;
+    background-color: #e1f2fc;
+    color: #0079d3
+}
+
+.nightMode .alert-info {
+    padding: 1em .5em;
+    border: 1px solid #1394e5;
+    background-color: #000;
+    color: #0079d3
+}
+
+.dayMode .alert-warning {
+    padding: 1em .5em;
+    border: 1px solid #ffd635;
+    background-color: #fff7e5;
+    color: #8e5e3b
+}
+
+.nightMode .alert-warning {
+    padding: 1em .5em;
+    border: 1px solid #ffd11b;
+    background-color: #000;
+    color: #ffd635
+}
+
+.dayMode .alert-danger {
+    padding: 1em .5em;
+    border: 1px solid #ea0027;
+    background-color: #d84141;
+    color: #fff
+}
+
+.nightMode .alert-danger {
+    padding: 1em .5em;
+    border: 1px solid #d10023;
+    background-color: #000;
+    color: #fff
+}
+
+.CommentTree__tree {
+    padding: 8px 0;
+    padding-right: 8px
+}
+
+.CommentTree__tree.m-listing-below {
+    max-height: 500px;
+    overflow: hidden;
+    position: relative
+}
+
+.CommentTree__tree.m-listing-below:after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.dayMode .CommentTree__tree.m-listing-below:after {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 90%, #fff)
+}
+
+.nightMode .CommentTree__tree.m-listing-below:after {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 90%, #fff);
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 90%, #000)
+}
+
+.CommentTree__tree.m-redesign {
+    padding: 0
+}
+
+.CommentTree__SeeFullBtn {
+    border: 1px solid #0079d3;
+    border-radius: 4px;
+    color: #0079d3;
+    display: block;
+    font-weight: 700;
+    height: 32px;
+    margin-bottom: 8px;
+    margin-left: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    width: calc(100% - 32px)
+}
+
+.CommentTree__comment {
+    position: relative;
+    padding: 0
+}
+
+.CommentTree__comment.m-hidden {
+    display: none
+}
+
+.CommentTree__comment.m-redesign {
+    padding: 16px 16px 0
+}
+
+.CommentTree__comment.m-redesign.m-toplevel:not(:first-child) {
+    margin-top: 16px
+}
+
+.dayMode .CommentTree__comment.m-redesign.m-toplevel:not(:first-child) {
+    border-top: 1px solid #efefed
+}
+
+.nightMode .CommentTree__comment.m-redesign.m-toplevel:not(:first-child) {
+    border-top: 1px solid #353535
+}
+
+.CommentTree__comment.m-redesign.m-toplevel.m-comment:last-child {
+    padding-bottom: 16px
+}
+
+.CommentTree__comment.m-redesign.m-more {
+    padding-top: 12px
+}
+
+.CommentTree__comment.m-redesign.m-more:not(.m-hidden)+.CommentTree__comment.m-redesign.m-more {
+    padding-top: 4px
+}
+
+.CommentTree__comment.m-current {
+    background-color: rgba(0, 113, 188, .05)
+}
+
+.dayMode .CommentTree__comment.m-current .Comment,
+.nightMode .CommentTree__comment.m-current .Comment {
+    background: none
+}
+
+.CommentTree__commentContent {
+    position: relative
+}
+
+.CommentTree__commentContent.m-hasArrow {
+    padding-left: 24px
+}
+
+.CommentTree__commentDepthLine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid
+}
+
+.dayMode .CommentTree__commentDepthLine {
+    border-left: 1px solid #efefed
+}
+
+.nightMode .CommentTree__commentDepthLine {
+    border-left: 1px solid #353535
+}
+
+.CommentTree__commentDepthLine.m-last {
+    top: 32px
+}
+
+.CommentTree__commentDepthLine.m-thick {
+    border-left-width: 2px
+}
+
+.CommentTree__commentArrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    border-radius: 16px;
+    text-align: center;
+    line-height: 16px;
+    background-color: #ccccca;
+    cursor: pointer;
+    font-size: 13px
+}
+
+.CommentTree__commentArrow.m-toplevel {
+    background-color: #0dd3bb
+}
+
+.CommentTree__commentArrow.m-collapsed {
+    transform: rotate(-90deg)
+}
+
+.CommentTree__continueThread {
+    padding-left: 6px;
+    padding-top: 5px;
+    font-size: 11px;
+    letter-spacing: 1.2;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #24a0ed;
+    cursor: pointer
+}
+
+.CommentTree__continueThread .icon {
+    font-size: 12px;
+    transform: rotate(-90deg);
+    padding: 0 5px;
+    display: inline-block;
+    position: relative;
+    top: -2px
+}
+
+.CommentTree__continueThread.m-redesign {
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    letter-spacing: .5;
+    line-height: 16px;
+    padding: 7px 11px
+}
+
+.dayMode .CommentTree__continueThread.m-redesign {
+    background: #efefed;
+    color: #1a1a1b
+}
+
+.nightMode .CommentTree__continueThread.m-redesign {
+    background: #353535;
+    color: #cfd0ca
+}
+
+.CommentTree__continueThread.m-redesign:hover,
+.CommentTree__continueThread.m-redesign:visited {
+    text-decoration: none
+}
+
+.CommentTree__continueThread.m-redesign.m-more .icon {
+    transform: rotate(0deg)
+}
+
+.CommentTree__continueThread.m-showAll {
+    display: block;
+    font-size: 12px;
+    height: 40px;
+    letter-spacing: normal;
+    line-height: 16px;
+    margin-bottom: -8px;
+    margin-right: -8px;
+    margin-top: 16px;
+    padding: 12px 16px
+}
+
+.dayMode .CommentTree__continueThread.m-showAll {
+    border-top: 1px solid #efefed;
+    color: #0079d3
+}
+
+.nightMode .CommentTree__continueThread.m-showAll {
+    border-top: 1px solid #353535;
+    color: #0079d3
+}
+
+.CommentTree__continueThread.m-showAll:hover,
+.CommentTree__continueThread.m-showAll:visited {
+    text-decoration: none
+}
+
+.dayMode .CommentTree__continueThread.m-showAll:hover,
+.dayMode .CommentTree__continueThread.m-showAll:visited,
+.nightMode .CommentTree__continueThread.m-showAll:hover,
+.nightMode .CommentTree__continueThread.m-showAll:visited {
+    color: #0079d3
+}
+
+.CommentTree__continueThread.m-showAll.m-redesign {
+    margin: -4px -16px 0
+}
+
+.dayMode .CommentTree__continueThread.m-showAll.m-redesign,
+.nightMode .CommentTree__continueThread.m-showAll.m-redesign {
+    background: none;
+    border: none
+}
+
+.CommentTree__continueThreadIcon {
+    margin-left: 11px;
+    display: inline-block;
+    line-height: 1.5;
+    vertical-align: middle
+}
+
+.CommentTree__continueThread.m-redesign .CommentTree__continueThreadIcon {
+    line-height: 16px;
+    margin-left: 0;
+    padding: 0;
+    top: 0
+}
+
+.dayMode .CommentTree__continueThread.m-redesign .CommentTree__continueThreadIcon {
+    color: #1a1a1b
+}
+
+.nightMode .CommentTree__continueThread.m-redesign .CommentTree__continueThreadIcon {
+    color: #cfd0ca
+}
+
+.Comment {
+    padding-left: 10px
+}
+
+.dayMode .Comment.in-comment-tree {
+    background-color: #fff
+}
+
+.nightMode .Comment.in-comment-tree {
+    background-color: #000
+}
+
+.Comment.m-redesign {
+    padding-left: 0
+}
+
+.dayMode .Comment.m-removed,
+.nightMode .Comment.m-removed {
+    background-color: #efefed
+}
+
+.Comment__header {
+    padding: 7px 0
+}
+
+.Comment.m-redesign .Comment__header {
+    padding: 0
+}
+
+.Comment__body,
+.Comment__replies,
+.Comment__toolsContainer {
+    overflow: auto
+}
+
+.Comment__body.m-hidden,
+.Comment__replies.m-hidden,
+.Comment__toolsContainer.m-hidden {
+    display: none
+}
+
+.Comment__body:after,
+.Comment__replies:after,
+.Comment__toolsContainer:after {
+    content: " ";
+    display: table
+}
+
+.Comment__toolsContainer.m-redesign {
+    overflow: visible;
+    padding-left: 32px
+}
+
+.Comment__body {
+    overflow-x: hidden
+}
+
+.Comment__body table {
+    margin: 1em 0;
+    width: 100%;
+    display: inline-block;
+    overflow-x: scroll;
+    max-width: 100%
+}
+
+.Comment__body td,
+.Comment__body th {
+    padding: .25em;
+    border-bottom: 1px solid #ccccca
+}
+
+.Comment__body a {
+    color: #24a0ed
+}
+
+.Comment.m-redesign .Comment__body {
+    margin-top: 2px;
+    max-height: 250px;
+    overflow: hidden;
+    padding-left: 32px
+}
+
+.Comment.m-redesign .Comment__body.m-truncated {
+    margin-bottom: 20px;
+    transition: max-height .8s cubic-bezier(.5, .1, .5, 1), margin-bottom .8s cubic-bezier(.5, .1, .5, 1)
+}
+
+.Comment.m-redesign .Comment__body.m-expanded {
+    margin-bottom: 0;
+    max-height: 9999px
+}
+
+.Comment.m-redesign .Comment__body>p:last-child {
+    margin-bottom: 6px
+}
+
+.Comment__readMore {
+    margin-bottom: 4px;
+    margin-top: -24px;
+    opacity: 1;
+    padding-left: 32px;
+    position: relative;
+    transition: opacity .8s cubic-bezier(.5, .1, .5, 1)
+}
+
+.dayMode .Comment__readMore {
+    background-color: #fff
+}
+
+.nightMode .Comment__readMore {
+    background-color: #000
+}
+
+.Comment.m-redesign .Comment__body.m-expanded+.Comment__readMore {
+    opacity: 0;
+    pointer-events: none
+}
+
+.Comment__readMoreFade {
+    bottom: 16px;
+    height: 50px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%
+}
+
+.dayMode .Comment__readMoreFade {
+    background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0))
+}
+
+.nightMode .Comment__readMoreFade {
+    background: linear-gradient(0deg, #000, transparent)
+}
+
+.Comment__readMoreButton {
+    outline: none;
+    padding: 0;
+    text-align: left;
+    width: 100%
+}
+
+.dayMode .Comment__readMoreButton,
+.nightMode .Comment__readMoreButton {
+    color: #0079d3;
+    font-size: 14px;
+    line-height: 19px
+}
+
+.Comment__tools {
+    float: right
+}
+
+.Comment__tools.m-redesign {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    float: unset;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.Comment__replyForm {
+    margin-top: 8px
+}
+
+.Comment__replies {
+    padding-left: 16px
+}
+
+.dayMode .Comment__replies {
+    border-left: 1px solid #efefed
+}
+
+.nightMode .Comment__replies {
+    border-left: 1px solid #353535
+}
+
+.Comment__replies.m-no-indent {
+    padding-left: 0;
+    border-left: none !important
+}
+
+.Comment__reply,
+.Comment__seemore {
+    margin-top: 8px;
+    padding-top: 8px
+}
+
+.dayMode .Comment__reply,
+.dayMode .Comment__seemore {
+    border-top: 1px solid #efefed
+}
+
+.nightMode .Comment__reply,
+.nightMode .Comment__seemore {
+    border-top: 1px solid #353535
+}
+
+.Comment__reply.m-highlight,
+.Comment__seemore.m-highlight {
+    border-color: #ffb000
+}
+
+.Comment__replyFormLocked {
+    text-align: right;
+    color: #ccccca
+}
+
+.Comment__continueThread,
+.Comment__loadMore {
+    padding: 7px 0
+}
+
+.Comment__continueThread .icon-caron-circled,
+.Comment__loadMore .icon-caron-circled {
+    display: inline-block;
+    margin-right: 8px;
+    transform: rotate(-90deg);
+    margin-top: -4px;
+    font-size: 12px
+}
+
+.dayMode .Comment__loadMore-text,
+.nightMode .Comment__loadMore-text {
+    color: #24a0ed
+}
+
+.AwardingsBar {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative
+}
+
+.dayMode .AwardingsBar,
+.nightMode .AwardingsBar {
+    color: #a5a4a4
+}
+
+.AwardingsBar.m-redesign {
+    border-radius: 10px;
+    color: #818384;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 5px 5px 6px
+}
+
+.dayMode .AwardingsBar.m-redesign {
+    background-color: #f6f7f8
+}
+
+.nightMode .AwardingsBar.m-redesign {
+    background-color: #222
+}
+
+.AwardingsBar__awardItem {
+    display: inline-block;
+    white-space: nowrap
+}
+
+.AwardingsBar.m-redesign .AwardingsBar__awardItem {
+    display: -ms-inline-flexbox;
+    display: inline-flex
+}
+
+.AwardingsBar.m-redesign .AwardingsBar__awardItem:last-child {
+    margin-right: 0
+}
+
+.AwardingsBar__awardIcon {
+    margin-left: 4px;
+    margin-right: 2px;
+    vertical-align: middle;
+    max-height: 16px;
+    max-width: 16px
+}
+
+.AwardingsBar.m-redesign .AwardingsBar__awardIcon {
+    margin-left: 0;
+    margin-right: 2px;
+    max-height: 13px;
+    max-width: 13px
+}
+
+.AwardingsBar__showAllButton {
+    margin-left: 4px;
+    padding: 0;
+    white-space: nowrap
+}
+
+.AwardingsBar__showAllButton:hover {
+    text-decoration: underline
+}
+
+.AwardingsBar.m-redesign .AwardingsBar__showAllButton {
+    margin-left: 2px
+}
+
+.GildingsBar.m-redesign {
+    border-radius: 10px;
+    color: #818384;
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 5px 5px 6px
+}
+
+.dayMode .GildingsBar.m-redesign {
+    background-color: #f6f7f8
+}
+
+.nightMode .GildingsBar.m-redesign {
+    background-color: #222
+}
+
+.GildingsBar__award {
+    margin-right: 4px;
+    white-space: nowrap
+}
+
+.dayMode .GildingsBar__award,
+.nightMode .GildingsBar__award {
+    color: #a5a4a4
+}
+
+.GildingsBar__award-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px
+}
+
+.GildingsBar__award-icon_gid_1 {
+    background-image: url(https://www.redditstatic.com/mweb2x/img/award-silver-gid1.svg)
+}
+
+.GildingsBar__award-icon_gid_2 {
+    background-image: url(https://www.redditstatic.com/mweb2x/img/award-gold-gid2.svg)
+}
+
+.GildingsBar__award-icon_gid_3 {
+    background-image: url(https://www.redditstatic.com/mweb2x/img/award-platinum-gid3.svg)
+}
+
+.GildingsBar__award-count {
+    margin-left: 2px
+}
+
+.GildingsBar.m-redesign .GildingsBar__award {
+    margin-right: 2px
+}
+
+.GildingsBar.m-redesign .GildingsBar__award:last-child {
+    margin-right: 0
+}
+
+.GildingsBar.m-redesign .GildingsBar__award-icon {
+    background-size: 13px;
+    max-height: 13px;
+    max-width: 13px
+}
+
+.CommentHeader__table {
+    width: 100%
+}
+
+.CommentHeader__col1,
+.CommentHeader__col2,
+.CommentHeader__col3 {
+    vertical-align: middle
+}
+
+.CommentHeader__col1 {
+    width: 10px
+}
+
+.CommentHeader__col2 {
+    max-width: 0
+}
+
+.CommentHeader.m-redesign .CommentHeader__col2 {
+    padding-left: 32px
+}
+
+.CommentHeader__col3 {
+    width: 45px;
+    text-align: right
+}
+
+.CommentHeader__colMore {
+    vertical-align: top;
+    width: 16px
+}
+
+.CommentHeader__modStatus {
+    width: 20px
+}
+
+.CommentHeader__modStatus.icon {
+    font-size: 16px
+}
+
+.CommentHeader__modStatus.m-report-count {
+    vertical-align: bottom;
+    color: #ccccca;
+    width: 5px
+}
+
+.CommentHeader__modStatus.m-report-count.warning-yellow {
+    color: #ffd635
+}
+
+.CommentHeader__avatar,
+.CommentHeader__caron,
+.CommentHeader__dots,
+.CommentHeader__flair,
+.CommentHeader__separator,
+.CommentHeader__sticky,
+.CommentHeader__timestamp,
+.CommentHeader__username,
+.CommentHeader__usernameIcon,
+.CommentHeader__votes {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.CommentHeader.m-redesign .CommentHeader__sticky,
+.CommentHeader.m-redesign .CommentHeader__usernameIcon {
+    display: inline-block;
+    vertical-align: text-bottom
+}
+
+.CommentHeader__flair,
+.CommentHeader__separator,
+.CommentHeader__timestamp,
+.CommentHeader__username,
+.CommentHeader__votes {
+    margin-right: 4px
+}
+
+.CommentHeader.m-redesign .CommentHeader__flair,
+.CommentHeader.m-redesign .CommentHeader__timestamp,
+.CommentHeader.m-redesign .CommentHeader__username,
+.CommentHeader.m-redesign .CommentHeader__votes {
+    font-size: 12px;
+    line-height: 17px;
+    margin-right: 8px
+}
+
+.CommentHeader.m-redesign.m-collapsed .CommentHeader__timestamp,
+.CommentHeader.m-redesign.m-collapsed .CommentHeader__username,
+.CommentHeader.m-redesign.m-collapsed .CommentHeader__votes {
+    line-height: 24px
+}
+
+.dayMode .CommentHeader__flair,
+.dayMode .CommentHeader__flair:visited,
+.dayMode .CommentHeader__timestamp,
+.dayMode .CommentHeader__timestamp:visited,
+.dayMode .CommentHeader__username,
+.dayMode .CommentHeader__username:visited,
+.dayMode .CommentHeader__votes,
+.dayMode .CommentHeader__votes:visited,
+.nightMode .CommentHeader__flair,
+.nightMode .CommentHeader__flair:visited,
+.nightMode .CommentHeader__timestamp,
+.nightMode .CommentHeader__timestamp:visited,
+.nightMode .CommentHeader__username,
+.nightMode .CommentHeader__username:visited,
+.nightMode .CommentHeader__votes,
+.nightMode .CommentHeader__votes:visited {
+    color: #a5a4a4
+}
+
+.dayMode .CommentHeader.m-redesign .CommentHeader__flair,
+.dayMode .CommentHeader.m-redesign .CommentHeader__flair:visited,
+.dayMode .CommentHeader.m-redesign .CommentHeader__timestamp,
+.dayMode .CommentHeader.m-redesign .CommentHeader__timestamp:visited {
+    color: #a5a4a4;
+    color: #565758
+}
+
+.nightMode .CommentHeader.m-redesign .CommentHeader__flair,
+.nightMode .CommentHeader.m-redesign .CommentHeader__flair:visited,
+.nightMode .CommentHeader.m-redesign .CommentHeader__timestamp,
+.nightMode .CommentHeader.m-redesign .CommentHeader__timestamp:visited {
+    color: #a5a4a4
+}
+
+.CommentHeader__flair.m-highlight,
+.CommentHeader__username.m-highlight {
+    color: #ffb000
+}
+
+.CommentHeader__sticky {
+    margin-right: 4px;
+    color: inherit !important
+}
+
+.CommentHeader__flair {
+    padding: 0 4px
+}
+
+.dayMode .CommentHeader__flair {
+    border: 1px solid #efefed
+}
+
+.nightMode .CommentHeader__flair {
+    border: 1px solid #353535
+}
+
+.CommentHeader__dots {
+    margin-right: 4px;
+    color: #0dd3bb
+}
+
+.CommentHeader__caron {
+    margin-right: 8px;
+    transition: .2s
+}
+
+.CommentHeader__caron.icon {
+    font-size: 12px;
+    line-height: 12px
+}
+
+.CommentHeader__caron.m-collapsed {
+    transform: rotate(-90deg)
+}
+
+.CommentHeader__avatar {
+    border-radius: 50%;
+    height: 24px;
+    margin-right: 8px;
+    width: 24px
+}
+
+.CommentHeader.m-redesign .CommentHeader__avatar {
+    margin-left: -32px;
+    margin-right: 8px;
+    margin-top: 4px;
+    position: absolute
+}
+
+.CommentHeader.m-collapsed .CommentHeader__avatar {
+    margin-top: 0
+}
+
+.CommentHeader__separator {
+    color: #efefed
+}
+
+.CommentHeader__username {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.CommentHeader__username.m-admin {
+    color: #ff4500
+}
+
+.CommentHeader__username.m-moderator {
+    color: #46d160
+}
+
+.CommentHeader__username.m-op {
+    color: #24a0ed
+}
+
+.CommentHeader__username.m-self {
+    color: #0dd3bb
+}
+
+.CommentHeader.m-redesign .CommentHeader__username {
+    font-weight: 700;
+    margin-right: 8px
+}
+
+.dayMode .CommentHeader.m-redesign .CommentHeader__username:not(.m-admin):not(.m-moderator):not(.m-op):not(.m-self) {
+    color: #121213
+}
+
+.CommentHeader__usernameIcon {
+    margin-left: 4px
+}
+
+.CommentHeader.m-redesign .CommentHeader__usernameIcon {
+    margin-left: 8px
+}
+
+.dayMode .CommentHeader__more {
+    color: #565758
+}
+
+.CommentTools__divider,
+.CommentTools__more,
+.CommentTools__moreContainer,
+.CommentTools__reply {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.dayMode .CommentTools__divider,
+.dayMode .CommentTools__more,
+.dayMode .CommentTools__moreContainer,
+.dayMode .CommentTools__reply {
+    color: #ccccca;
+    fill: #ccccca
+}
+
+.nightMode .CommentTools__divider,
+.nightMode .CommentTools__more,
+.nightMode .CommentTools__moreContainer,
+.nightMode .CommentTools__reply {
+    color: #545452;
+    fill: #545452
+}
+
+.CommentTools__divider,
+.CommentTools__more {
+    margin-right: 8px
+}
+
+.CommentTools__votingBox.m-redesign {
+    margin-right: 16px
+}
+
+.CommentTools__more,
+.CommentTools__reply {
+    text-align: center
+}
+
+.CommentTools__more.icon,
+.CommentTools__reply.icon {
+    font-size: 20px;
+    line-height: 24px;
+    width: 24px
+}
+
+.CommentTools__more.m-redesign,
+.CommentTools__reply.m-redesign {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    height: 24px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    line-height: 24px;
+    margin-right: 16px;
+    width: 24px
+}
+
+.dayMode .CommentTools__more.m-redesign,
+.dayMode .CommentTools__reply.m-redesign {
+    color: #878a8c;
+    fill: #878a8c
+}
+
+.CommentTools__more.m-redesign:before,
+.CommentTools__reply.m-redesign:before {
+    display: none
+}
+
+.CommentTools__more.m-redesign:last-child,
+.CommentTools__reply.m-redesign:last-child {
+    margin-right: 0
+}
+
+.CommentTools__more.m-redesign>svg,
+.CommentTools__reply.m-redesign>svg {
+    height: 20px;
+    width: 20px
+}
+
+.CommentTools__reply {
+    margin-right: 8px
+}
+
+.dayMode .CommentTools__reply:active,
+.dayMode .CommentTools__reply:visited {
+    color: #ccccca
+}
+
+.nightMode .CommentTools__reply:active,
+.nightMode .CommentTools__reply:visited {
+    color: #545452
+}
+
+.CommentTools__reply__replying {
+    transform: rotate(270deg)
+}
+
+.CommentTools__divider {
+    height: 20px
+}
+
+.dayMode .CommentTools__divider {
+    border-right: 1px solid #efefed
+}
+
+.nightMode .CommentTools__divider {
+    border-right: 1px solid #353535
+}
+
+.CommentTools__dropdown {
+    width: 600px
+}
+
+.dayMode .CommentTools__dropdown {
+    border: 1px solid #efefed
+}
+
+.nightMode .CommentTools__dropdown {
+    border: 1px solid #353535
+}
+
+.upvoteBounceAnimation {
+    animation: bounceUp .4s ease-out 0s 1 normal
+}
+
+.downvoteBounceAnimation {
+    animation: bounceDown .4s ease-out 0s 1 normal
+}
+
+@keyframes bounceUp {
+    0% {
+        -webkit-transform: translateY(0)
+    }
+    15% {
+        -webkit-transform: translateY(-6px)
+    }
+    95% {
+        -webkit-transform: translateY(0)
+    }
+    to {
+        -webkit-transform: translateY(0)
+    }
+}
+
+@keyframes bounceDown {
+    0% {
+        -webkit-transform: translateY(0)
+    }
+    15% {
+        -webkit-transform: translateY(3px)
+    }
+    80% {
+        -webkit-transform: translateY(0)
+    }
+    to {
+        -webkit-transform: translateY(0)
+    }
+}
+
+.VotingBox {
+    display: inline-block
+}
+
+.VotingBox__downvote,
+.VotingBox__score,
+.VotingBox__upvote {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center
+}
+
+.dayMode .VotingBox__downvote,
+.dayMode .VotingBox__score,
+.dayMode .VotingBox__upvote {
+    color: #ccccca;
+    fill: #ccccca
+}
+
+.nightMode .VotingBox__downvote,
+.nightMode .VotingBox__score,
+.nightMode .VotingBox__upvote {
+    color: #545452;
+    fill: #545452
+}
+
+.VotingBox__downvote.icon,
+.VotingBox__upvote.icon {
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+    width: 24px
+}
+
+.VotingBox__downvote.m-redesign,
+.VotingBox__upvote.m-redesign {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.dayMode .VotingBox__downvote.m-redesign,
+.dayMode .VotingBox__upvote.m-redesign {
+    color: #878a8c;
+    fill: #878a8c
+}
+
+.VotingBox__downvote.m-redesign>svg,
+.VotingBox__upvote.m-redesign>svg {
+    height: 20px;
+    width: 20px
+}
+
+.VotingBox__upvote.m-animated {
+    animation: bounceUp .4s ease-out 0s 1 normal
+}
+
+.VotingBox__upvote.upvoted,
+.VotingBox__upvote.upvoted.m-redesign {
+    color: #ff4500;
+    fill: #ff4500
+}
+
+.VotingBox__upvote.m-redesign:before {
+    display: none
+}
+
+.VotingBox__downvote.m-animated {
+    animation: bounceDown .4s ease-out 0s 1 normal
+}
+
+.VotingBox__downvote.downvoted,
+.VotingBox__downvote.downvoted.m-redesign {
+    color: #7193ff;
+    fill: #7193ff
+}
+
+.VotingBox__downvote.m-redesign:before {
+    display: none
+}
+
+.VotingBox__score {
+    min-width: 32px;
+    font-size: 14px
+}
+
+.VotingBox__score.upvoted {
+    color: #ff4500
+}
+
+.VotingBox__score.downvoted {
+    color: #7193ff
+}
+
+.VotingBox__score.m-redesign {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 8px;
+    min-width: 0
+}
+
+.dayMode .VotingBox__score.m-redesign {
+    color: #565758
+}
+
+.DropdownWrapper {
+    position: fixed;
+    z-index: 20
+}
+
+.Dropdown {
+    width: 600px
+}
+
+.dayMode .Dropdown {
+    border: 1px solid #efefed
+}
+
+.nightMode .Dropdown {
+    border: 1px solid #353535
+}
+
+.dayMode .Dropdown__arrow {
+    border-top-color: #fff !important
+}
+
+.nightMode .Dropdown__arrow {
+    border-top-color: #000 !important
+}
+
+.DropdownModal {
+    left: 2.5%;
+    margin: auto;
+    overflow: scroll;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 95%;
+    max-height: 90%
+}
+
+.dayMode .DropdownModal {
+    border: 1px solid #efefed
+}
+
+.nightMode .DropdownModal {
+    border: 1px solid #353535
+}
+
+@media (min-width:600px) {
+    .DropdownModal {
+        top: 200px;
+        bottom: auto;
+        left: 50%;
+        margin-left: -300px;
+        max-width: 600px
+    }
+}
+
+.DropdownModal .DropdownClose {
+    float: right
+}
+
+.DropdownModal .DropdownClose .icon-x {
+    font-size: 22px
+}
+
+.DropdownLinkRow,
+.DropdownRow {
+    display: block
+}
+
+.dayMode .DropdownLinkRow,
+.dayMode .DropdownRow {
+    background-color: #fff
+}
+
+.nightMode .DropdownLinkRow,
+.nightMode .DropdownRow {
+    background-color: #000
+}
+
+.DropdownLinkRow__icon,
+.DropdownLinkRow__text,
+.DropdownRow__icon,
+.DropdownRow__text {
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    line-height: 50px
+}
+
+.DropdownLinkRow__icon,
+.DropdownRow__icon {
+    width: 50px;
+    text-align: center
+}
+
+.DropdownLinkRow__icon.m-selected,
+.DropdownRow__icon.m-selected {
+    color: #24a0ed
+}
+
+.DropdownLinkRow__icon.icon-check-circled.m-selected,
+.DropdownRow__icon.icon-check-circled.m-selected {
+    color: #94e044
+}
+
+.DropdownLinkRow__icon.icon-delete_remove.m-selected,
+.DropdownRow__icon.icon-delete_remove.m-selected {
+    color: #ea0027
+}
+
+.DropdownLinkRow__icon.icon-spam.m-selected,
+.DropdownRow__icon.icon-spam.m-selected {
+    color: #ff585b
+}
+
+.DropdownLinkRow__icon.icon-flag.m-selected,
+.DropdownRow__icon.icon-flag.m-selected {
+    color: #ffd635
+}
+
+.DropdownLinkRow__icon.icon-distinguish.m-selected,
+.DropdownRow__icon.icon-distinguish.m-selected {
+    color: #46d160
+}
+
+.DropdownLinkRow__icon.icon-lock.m-selected,
+.DropdownRow__icon.icon-lock.m-selected {
+    color: #ffd635
+}
+
+.DropdownLinkRow__icon.icon-nsfw.m-selected,
+.DropdownRow__icon.icon-nsfw.m-selected {
+    color: #ff585b
+}
+
+.DropdownLinkRow__icon.icon-spoiler.m-selected,
+.DropdownRow__icon.icon-spoiler.m-selected {
+    color: #545452
+}
+
+.DropdownLinkRow__icon.icon-link,
+.DropdownRow__icon.icon-link {
+    font-size: 36px
+}
+
+.DropdownLinkRow__icon.icon-check-circled,
+.DropdownLinkRow__icon.icon-delete_remove,
+.DropdownLinkRow__icon.icon-distinguish,
+.DropdownLinkRow__icon.icon-flag,
+.DropdownLinkRow__icon.icon-hide,
+.DropdownLinkRow__icon.icon-history,
+.DropdownLinkRow__icon.icon-new,
+.DropdownLinkRow__icon.icon-posts,
+.DropdownLinkRow__icon.icon-save,
+.DropdownLinkRow__icon.icon-snoosilhouette,
+.DropdownLinkRow__icon.icon-user-account,
+.DropdownRow__icon.icon-check-circled,
+.DropdownRow__icon.icon-delete_remove,
+.DropdownRow__icon.icon-distinguish,
+.DropdownRow__icon.icon-flag,
+.DropdownRow__icon.icon-hide,
+.DropdownRow__icon.icon-history,
+.DropdownRow__icon.icon-new,
+.DropdownRow__icon.icon-posts,
+.DropdownRow__icon.icon-save,
+.DropdownRow__icon.icon-snoosilhouette,
+.DropdownRow__icon.icon-user-account {
+    font-size: 22px
+}
+
+.DropdownLinkRow__icon.icon-bar-chart,
+.DropdownLinkRow__icon.icon-hot,
+.DropdownLinkRow__icon.icon-op,
+.DropdownLinkRow__icon.icon-rising,
+.DropdownRow__icon.icon-bar-chart,
+.DropdownRow__icon.icon-hot,
+.DropdownRow__icon.icon-op,
+.DropdownRow__icon.icon-rising {
+    font-size: 21px
+}
+
+.DropdownLinkRow__icon.icon-karma,
+.DropdownRow__icon.icon-karma {
+    font-size: 28px
+}
+
+.DropdownLinkRow__icon.icon-circle,
+.DropdownRow__icon.icon-circle {
+    font-size: 20px;
+    color: #efefed
+}
+
+.DropdownLinkRow__icon.icon-save.m-selected,
+.DropdownRow__icon.icon-save.m-selected {
+    color: #46d160
+}
+
+.DropdownLinkRow__text,
+.DropdownRow__text {
+    font-size: 16px
+}
+
+.DropdownLinkRow,
+.DropdownLinkRow:active,
+.DropdownLinkRow:visited {
+    text-decoration: none
+}
+
+.dayMode .DropdownLinkRow .DropdownLinkRow__icon,
+.dayMode .DropdownLinkRow:active .DropdownLinkRow__icon,
+.dayMode .DropdownLinkRow:visited .DropdownLinkRow__icon,
+.nightMode .DropdownLinkRow .DropdownLinkRow__icon,
+.nightMode .DropdownLinkRow:active .DropdownLinkRow__icon,
+.nightMode .DropdownLinkRow:visited .DropdownLinkRow__icon {
+    color: #a5a4a4
+}
+
+.dayMode .DropdownLinkRow .DropdownLinkRow__text,
+.dayMode .DropdownLinkRow:active .DropdownLinkRow__text,
+.dayMode .DropdownLinkRow:visited .DropdownLinkRow__text {
+    color: #222
+}
+
+.nightMode .DropdownLinkRow .DropdownLinkRow__text,
+.nightMode .DropdownLinkRow:active .DropdownLinkRow__text,
+.nightMode .DropdownLinkRow:visited .DropdownLinkRow__text {
+    color: #cfd0ca
+}
+
+.ModeratorModalRowWrapper {
+    border-top: 1px solid #efefed
+}
+
+.ModeratorModalRowWrapper .DropdownRow {
+    cursor: pointer
+}
+
+.ModeratorModalRowWrapper .DropdownRow .icon {
+    font-size: 24px
+}
+
+.ModeratorModalRowWrapper .m-nonToggleActions {
+    border-top: 1px solid #efefed
+}
+
+.ModalBanner {
+    font-weight: 700
+}
+
+.ModalBanner.moderatorModal.m-spam {
+    color: #ff585b
+}
+
+.ModalBanner.moderatorModal.m-removed {
+    color: #ea0027
+}
+
+.ModalBanner.moderatorModal.m-approved {
+    color: #46d160
+}
+
+.ModalBanner.postHeader {
+    color: #fff
+}
+
+.ModalBanner.postHeader.m-spam .DropdownRow {
+    background-color: #ff585b
+}
+
+.ModalBanner.postHeader.m-removed .DropdownRow {
+    background-color: #ea0027
+}
+
+.ModalBanner.postHeader.m-approved .DropdownRow {
+    background-color: #46d160
+}
+
+.ModalBanner .DropdownRow {
+    padding-left: 15px
+}
+
+.ModalBanner .DropdownRow__text {
+    display: inline
+}
+
+.ReportsModal__reports {
+    border-top: 1px solid #efefed;
+    padding-left: 15px;
+    background: #fff
+}
+
+.ReportsModal__reports div {
+    padding: 10px 0
+}
+
+.ReportsModal__reports .m-reports-title {
+    font-weight: 700
+}
+
+.CommentsPage__replyForm {
+    margin: 0 12px
+}
+
+.CommentReplyForm__textarea {
+    width: 100%;
+    height: 10em
+}
+
+.CommentReplyForm textarea {
+    width: 100%;
+    height: 100%
+}
+
+.dayMode .CommentReplyForm textarea {
+    border: 1px solid #efefed
+}
+
+.nightMode .CommentReplyForm textarea {
+    border: 1px solid #353535
+}
+
+.CommentReplyForm__close {
+    padding: 0;
+    float: left
+}
+
+.CommentReplyForm__close[class*=" icon-"],
+.CommentReplyForm__close[class*=" icon-"]:visited {
+    color: #ccccca;
+    font-size: 32px;
+    font-weight: 800
+}
+
+.CommentReplyForm__button {
+    float: right;
+    margin: 8px 0 0
+}
+
+.CommentReplyForm__error {
+    color: #ea0027;
+    padding: 4px
+}
+
+.CommentReplyForm__footer:after,
+.CommentReplyForm__footer:before {
+    content: " ";
+    display: table
+}
+
+.CommentReplyForm__footer:after {
+    clear: both
+}
+
+.EditForm__textarea-holder {
+    height: 300px;
+    padding: 8px
+}
+
+.EditForm__textarea {
+    width: 100%;
+    height: 100%;
+    resize: none
+}
+
+.dayMode .EditForm__textarea {
+    background-color: #fcfcfb;
+    border: 1px solid #ccccca;
+    border-radius: 3px
+}
+
+.nightMode .EditForm__textarea {
+    background-color: #000;
+    border: 1px solid #545452;
+    border-radius: 3px
+}
+
+.EditForm__edit-controls {
+    text-align: right
+}
+
+.EditForm__edit-cancel {
+    color: #0079d3
+}
+
+.EditForm__edit-button,
+.EditForm__edit-cancel {
+    line-height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px
+}
+
+.EditForm__edit-button {
+    background-color: #24a0ed;
+    color: #fff;
+    text-align: center;
+    height: 32px;
+    width: 88px
+}
+
+.EditForm__edit-button.disabled {
+    background-color: #a5a4a4
+}
+
+.Loading {
+    padding: 64px;
+    text-align: center;
+    position: relative
+}
+
+.Loading:before {
+    content: "";
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-color: #ff4500;
+    opacity: .75;
+    border-radius: 100%;
+    animation: scaleout 1.5s infinite ease-in-out
+}
+
+.Loading .SnooIcon {
+    margin: auto;
+    height: 64px;
+    width: 64px;
+    position: relative
+}
+
+@keyframes scaleout {
+    0% {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.5);
+        opacity: 0
+    }
+}
+
+.CommentsPageTools {
+    padding: 5px
+}
+
+.CommentsPageTools.m-redesign {
+    padding: 8px 16px 4px
+}
+
+.CommentsPageTools.m-redesign .alert-warning {
+    margin-top: 8px
+}
+
+.CommentsPageTools.m-redesign.m-single {
+    padding-bottom: 10px;
+    padding-top: 12px
+}
+
+.dayMode .CommentsPageTools.m-redesign.m-single {
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .CommentsPageTools.m-redesign.m-single {
+    border-bottom: 1px solid #353535
+}
+
+.CommentsPageTools p {
+    margin: 0
+}
+
+.CommentsPageTools__toolbar:after,
+.CommentsPageTools__toolbar:before {
+    content: " ";
+    display: table
+}
+
+.CommentsPageTools__toolbar:after {
+    clear: both
+}
+
+.CommentsPageTools__toolbar .Button {
+    float: right
+}
+
+.CommentsPageTools__sortSelector {
+    float: left;
+    line-height: 1.5;
+    padding: .5em 0
+}
+
+.CommentsPageTools.m-redesign .CommentsPageTools_sortSelector {
+    padding: 4px 0
+}
+
+.CommentsPageTools__login {
+    background-color: #0079d3;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    height: 30px;
+    line-height: 14px;
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%
+}
+
+.CommentsPageTools__comment {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    width: 100%
+}
+
+.CommentsPageTools__userIcon {
+    border-radius: 50%;
+    height: 24px;
+    margin-right: 8px;
+    width: 24px
+}
+
+.CommentsPageTools__reply {
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-sizing: border-box;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    height: 30px;
+    line-height: 17px;
+    padding: 0 8px;
+    text-align: left
+}
+
+.dayMode .CommentsPageTools__reply {
+    border-color: #d3d6da;
+    color: #818384
+}
+
+.nightMode .CommentsPageTools__reply {
+    border-color: #545452
+}
+
+.CommentsPageTools__singleCommentThread {
+    -ms-flex-align: center;
+    align-items: center;
+    color: #565758;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    font-size: 12px;
+    font-weight: 500;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    line-height: 16px
+}
+
+.dayMode .CommentsPageTools__singleCommentThread>a,
+.dayMode .CommentsPageTools__singleCommentThread>a:hover,
+.dayMode .CommentsPageTools__singleCommentThread>a:visited,
+.nightMode .CommentsPageTools__singleCommentThread>a,
+.nightMode .CommentsPageTools__singleCommentThread>a:hover,
+.nightMode .CommentsPageTools__singleCommentThread>a:visited {
+    color: #0079d3;
+    text-decoration: none
+}
+
+.SortSelector {
+    display: inline-block
+}
+
+.SortSelector.m-redesign {
+    width: 100%
+}
+
+.SortSelector+.SortSelector {
+    margin-left: 16px
+}
+
+.SortSelector__currentCaron,
+.SortSelector__currentIcon,
+.SortSelector__currentText,
+.SortSelector__numComments {
+    vertical-align: middle;
+    display: inline-block
+}
+
+.SortSelector__currentIcon {
+    width: 24px
+}
+
+.SortSelector__numComments {
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 4px
+}
+
+.dayMode .SortSelector__numComments {
+    color: #545452
+}
+
+.SortSelector__currentText {
+    color: #a5a4a4;
+    padding-right: 8px
+}
+
+.SortSelector.m-redesign .SortSelector__currentText {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    padding-right: 4px
+}
+
+.dayMode .SortSelector.m-redesign .SortSelector__currentText {
+    color: #545452
+}
+
+.SortSelector__currentCaron {
+    color: #a5a4a4
+}
+
+.SortSelector.m-redesign .SortSelector__currentCaron {
+    font-size: 12px;
+    line-height: 14px;
+    font-size: 14px
+}
+
+.dayMode .SortSelector.m-redesign .SortSelector__currentCaron {
+    color: #545452
+}
+
+.SortSelector__title {
+    padding: 8px 8px 0;
+    font-size: 10px;
+    line-height: 24px;
+    letter-spacing: 1.5;
+    font-weight: 700
+}
+
+.dayMode .SortSelector__title {
+    background-color: #fff;
+    color: #a5a4a4
+}
+
+.nightMode .SortSelector__title {
+    background-color: #000;
+    color: #a5a4a4
+}
+
+.SortSelector__title-separator {
+    margin-top: 8px
+}
+
+.dayMode .SortSelector__title-separator {
+    border-top: 1px solid #ccccca
+}
+
+.nightMode .SortSelector__title-separator {
+    border-top: 1px solid #545452
+}
+
+.dayMode .Post {
+    background-color: #fff
+}
+
+.nightMode .Post {
+    background-color: #000
+}
+
+.Post+.Post {
+    margin-top: 8px
+}
+
+.Post.size-compact+.Post.size-compact {
+    margin-top: 0
+}
+
+.Post__header-wrapper {
+    position: relative
+}
+
+.PostHeader.size-compact .PostHeader__post-title-line {
+    font-size: 14px;
+    font-weight: 400
+}
+
+.PostHeader.size-compact .PostHeader__post-descriptor-line-overflow,
+.PostHeader.size-compact .PostHeader__post-title-line {
+    padding-bottom: 4px
+}
+
+.PostHeader.size-compact .PostHeader__post-link {
+    margin-bottom: 4px
+}
+
+.PostContent.size-compact+.PostHeader.m-thumbnail-margin {
+    margin-left: 86px;
+    min-height: 68px
+}
+
+.PostContent.size-compact+.PostHeader.m-thumbnail-margin .PostHeader__post-descriptor-line-overflow,
+.PostContent.size-compact+.PostHeader.m-thumbnail-margin .PostHeader__post-title-line {
+    padding-left: 0
+}
+
+.PostContent.size-compact+.PostHeader.m-thumbnail-margin .PostHeader__post-title-line {
+    padding-top: 0
+}
+
+.PostContent.size-compact+.PostHeader.m-thumbnail-margin .PostHeader__post-link {
+    margin-left: 0
+}
+
+.PostHeader__post-descriptor-line-overflow {
+    padding: 8px 16px
+}
+
+.PostHeader__post-title-line {
+    padding: 0 16px 8px
+}
+
+.PostHeader__post-link {
+    margin-left: 16px
+}
+
+.PostHeader__post-descriptor-line-overflow {
+    overflow-x: auto;
+    padding-right: 3em
+}
+
+.PostHeader__post-descriptor-line {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    -ms-flex: 1 0;
+    flex: 1 0
+}
+
+.dayMode .PostHeader__post-descriptor-line,
+.nightMode .PostHeader__post-descriptor-line {
+    color: #a5a4a4
+}
+
+.PostHeader__post-descriptor-line .icon {
+    vertical-align: text-bottom;
+    font-size: 12px;
+    line-height: 12px;
+    margin-right: 2px
+}
+
+.PostHeader__post-descriptor-line .icon+:not(.PostHeader__flush-w-icon) {
+    margin-left: 6px
+}
+
+.PostHeader__post-descriptor-line .icon.icon-nsfw {
+    font-size: 12px;
+    line-height: 14px
+}
+
+.PostHeader__post-descriptor-line:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3em
+}
+
+.dayMode .PostHeader__post-descriptor-line:after {
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 0, #fff 70%)
+}
+
+.nightMode .PostHeader__post-descriptor-line:after {
+    background: linear-gradient(90deg, transparent 0, #000 70%)
+}
+
+.PostHeader__metadata-container {
+    display: -ms-flexbox;
+    display: flex
+}
+
+.PostHeader__metadata {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 5 5 0 0;
+    white-space: nowrap
+}
+
+.PostHeader .m-report-count {
+    vertical-align: bottom;
+    color: #ccccca
+}
+
+.PostHeader .m-report-count.warning-yellow {
+    color: #ffd635
+}
+
+.PostHeader__mod-status-flair .icon-mod {
+    font-size: 20px
+}
+
+.PostHeader__subreddit-link,
+.PostHeader__subreddit-link:hover,
+.PostHeader__subreddit-link:visited {
+    text-decoration: none
+}
+
+.dayMode .PostHeader__subreddit-link,
+.dayMode .PostHeader__subreddit-link:hover,
+.dayMode .PostHeader__subreddit-link:visited {
+    color: #0079d3
+}
+
+.nightMode .PostHeader__subreddit-link,
+.nightMode .PostHeader__subreddit-link:hover,
+.nightMode .PostHeader__subreddit-link:visited {
+    color: #24a0ed
+}
+
+.PostHeader__subreddit-link .icon.icon-verified {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 4px;
+    font-size: 16px
+}
+
+.dayMode .PostHeader__author-link,
+.dayMode .PostHeader__author-link:visited,
+.nightMode .PostHeader__author-link,
+.nightMode .PostHeader__author-link:visited {
+    color: #a5a4a4
+}
+
+.PostHeader__author-link:hover {
+    text-decoration: none
+}
+
+.dayMode .PostHeader__author-link:hover {
+    color: #545452
+}
+
+.nightMode .PostHeader__author-link:hover {
+    color: #efefed
+}
+
+.PostHeader__link-flair {
+    display: inline-block;
+    color: #0dd3bb
+}
+
+.PostHeader__promoted-flair {
+    color: #24a0ed
+}
+
+.PostHeader__megaphone.icon {
+    vertical-align: top
+}
+
+.PostHeader__mod-text,
+.PostHeader__mod-text a,
+.PostHeader__mod-text a:hover,
+.PostHeader__mod-text a:visited {
+    color: #46d160 !important;
+    text-decoration: none
+}
+
+.PostHeader__admin-text,
+.PostHeader__admin-text a,
+.PostHeader__admin-text a:hover,
+.PostHeader__admin-text a:visited {
+    color: #ff4500 !important;
+    text-decoration: none
+}
+
+.PostHeader__nsfw-text,
+.PostHeader__nsfw-text a,
+.PostHeader__nsfw-text a:hover,
+.PostHeader__nsfw-text a:visited {
+    font-size: 11px;
+    color: #ff585b !important;
+    text-decoration: none
+}
+
+.PostHeader__nsfw-text+.PostHeader__spoiler-text {
+    margin-left: 5px
+}
+
+.PostHeader__spoiler-text {
+    background-color: #545452;
+    padding: 2px 5px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 3px 3px
+}
+
+.PostHeader__spoiler-text,
+.PostHeader__spoiler-text a,
+.PostHeader__spoiler-text a:hover,
+.PostHeader__spoiler-text a:visited {
+    font-size: 11px;
+    text-decoration: none
+}
+
+.PostHeader__post-title-line {
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    overflow-x: hidden
+}
+
+.dayMode .PostHeader__post-title-line {
+    color: #222
+}
+
+.nightMode .PostHeader__post-title-line {
+    color: #cfd0ca
+}
+
+.PostHeader__post-title-line:hover {
+    text-decoration: none
+}
+
+.dayMode a.PostHeader__post-title-line.m-visited,
+.dayMode a.PostHeader__post-title-line:visited {
+    color: #a5a4a4
+}
+
+.dayMode a.PostHeader__post-title-line:hover {
+    color: #0079d3
+}
+
+.nightMode a.PostHeader__post-title-line.m-visited,
+.nightMode a.PostHeader__post-title-line:visited {
+    color: #a5a4a4
+}
+
+.nightMode a.PostHeader__post-title-line:hover {
+    color: #24a0ed
+}
+
+.PostHeader__promoted-user-post-line {
+    color: #24a0ed !important
+}
+
+.PostHeader__seperator:after {
+    content: "\25CF";
+    margin: 0 4px;
+    font-size: .6em;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    top: -1px
+}
+
+.dayMode .PostHeader__seperator:after {
+    color: #ccccca
+}
+
+.nightMode .PostHeader__seperator:after {
+    color: #545452
+}
+
+.PostHeader__post-link {
+    display: inline-block
+}
+
+.PostHeader__post-link,
+.PostHeader__post-link:visited {
+    color: #a5a4a4
+}
+
+.PostHeader__post-link:hover {
+    color: #545452
+}
+
+.PostHeader__post-link-icon {
+    position: relative;
+    bottom: 1px
+}
+
+.PostHeader__post-link-icon:hover {
+    text-decoration: none
+}
+
+.PostHeader__post-link-icon:before {
+    margin-left: 4px;
+    font-size: 13px
+}
+
+.PostHeader__subredditHeader {
+    background-color: #212a3b;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto 96px;
+    overflow: hidden;
+    padding-top: 48px;
+    position: relative
+}
+
+.PostHeader__subredditHeaderBanner {
+    background-position: 50%;
+    background-size: cover;
+    left: 0;
+    padding-top: 30%;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.PostHeader__subredditHeaderOverlay {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.dayMode .PostHeader__subredditHeaderOverlay.m-dark {
+    background-color: rgba(0, 0, 0, .2)
+}
+
+.PostHeader__subredditHeaderLayout {
+    border-radius: 20px 20px 0 0;
+    position: relative
+}
+
+.dayMode .PostHeader__subredditHeaderLayout {
+    background-color: #fff
+}
+
+.nightMode .PostHeader__subredditHeaderLayout {
+    background-color: #000
+}
+
+.PostHeader__subredditLink {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap
+}
+
+.dayMode .PostHeader__subredditLink,
+.dayMode .PostHeader__subredditLink:hover,
+.dayMode .PostHeader__subredditLink:visited {
+    text-decoration: none;
+    color: #1a1a1b
+}
+
+.nightMode .PostHeader__subredditLink,
+.nightMode .PostHeader__subredditLink:hover,
+.nightMode .PostHeader__subredditLink:visited {
+    text-decoration: none;
+    color: #fff
+}
+
+.PostHeader__subredditIcon {
+    background-color: #24a0ed;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 72px;
+    margin-bottom: 8px;
+    margin-top: -36px;
+    width: 72px
+}
+
+.PostHeader__subredditIcon.m-image {
+    background-color: transparent;
+    background-position: 0 0;
+    background-size: 100%
+}
+
+.dayMode .PostHeader__subredditIcon.m-image,
+.nightMode .PostHeader__subredditIcon.m-image {
+    background-color: #fff
+}
+
+.PostHeader__subredditIcon .PlanetIcon {
+    height: 60px;
+    left: 6px;
+    position: relative;
+    top: 6px;
+    width: 60px
+}
+
+.PostHeader__subredditIcon.m-header-image {
+    background-position: 50%;
+    background-size: auto
+}
+
+.PostHeader__subredditName {
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0
+}
+
+.PostHeader__close {
+    background: #efefed;
+    border-radius: 50%;
+    position: absolute;
+    right: 16px;
+    top: 16px
+}
+
+.PostHeader__close,
+.PostHeader__close:focus,
+.PostHeader__close:hover {
+    text-decoration: none
+}
+
+.PostHeader__close .icon {
+    font-size: 20px;
+    line-height: 20px
+}
+
+.dayMode .PostHeader__close .icon {
+    color: #1a1a1b
+}
+
+.nightMode .PostHeader__close .icon {
+    color: #cfd0ca
+}
+
+.QuarantineBadge {
+    background-color: #ffd635;
+    border-radius: 2px;
+    color: #8e5e3b;
+    display: inline-block;
+    font-size: 11px;
+    margin: 0 4px;
+    padding: 0 4px
+}
+
+.QuarantineBadge:first-child {
+    margin-left: 0
+}
+
+.QuarantineBadge:last-child {
+    margin-right: 0
+}
+
+.PostContent table {
+    margin: 1em 0;
+    width: 100%;
+    display: inline-block;
+    overflow-x: scroll;
+    max-width: 100%
+}
+
+.PostContent td,
+.PostContent th {
+    padding: .25em;
+    border-bottom: 1px solid #ccccca
+}
+
+.PostContent.size-compact {
+    position: absolute;
+    width: 70px;
+    height: 52px;
+    top: 8px;
+    left: 8px
+}
+
+.PostContent.size-compact .PostContent__image-link {
+    height: 52px;
+    width: 70px
+}
+
+.PostContent.size-default {
+    margin: 4px 0
+}
+
+.PostContent__media-wrapper {
+    margin: 0 8px
+}
+
+.dayMode .PostContent__media-wrapper {
+    border: 1px solid #efefed
+}
+
+.nightMode .PostContent__media-wrapper {
+    border: 1px solid #353535
+}
+
+.PostContent__link-bar {
+    display: block;
+    padding: 8px;
+    overflow-x: hidden;
+    white-space: nowrap
+}
+
+.PostContent__link-bar:after,
+.PostContent__link-bar:before {
+    content: " ";
+    display: table
+}
+
+.PostContent__link-bar:after {
+    clear: both
+}
+
+.dayMode .PostContent__link-bar {
+    background-color: #fff
+}
+
+.dayMode .PostContent__link-bar,
+.dayMode .PostContent__link-bar:visited {
+    color: #0079d3
+}
+
+.dayMode .PostContent__link-bar:hover {
+    color: #0795ff
+}
+
+.nightMode .PostContent__link-bar {
+    background-color: #000
+}
+
+.nightMode .PostContent__link-bar,
+.nightMode .PostContent__link-bar:visited {
+    color: #24a0ed
+}
+
+.nightMode .PostContent__link-bar:hover {
+    color: #53b4f1
+}
+
+.PostContent__link-bar-text {
+    display: inline-block;
+    width: calc(100% - 3em);
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.PostContent__link-bar-icon {
+    float: right;
+    position: relative;
+    top: 2px
+}
+
+.PostContent__link-bar-icon:before {
+    font-size: 14px;
+    line-height: 14px
+}
+
+.PostContent__iframe-wrapper,
+.PostContent__image-link,
+.PostContent__video-wrapper {
+    position: relative
+}
+
+.PostContent__iframe,
+.PostContent__image-img,
+.PostContent__inline-gif,
+.PostContent__video {
+    width: 100%
+}
+
+.PostContent__height,
+.PostContent__iframe,
+.PostContent__video {
+    height: 100%
+}
+
+.PostContent__iframe,
+.PostContent__inline-gif,
+.PostContent__video {
+    position: absolute;
+    top: 0
+}
+
+.dayMode .PostContent__image-link,
+.dayMode .PostContent__video-wrapper {
+    background-color: #fff
+}
+
+.nightMode .PostContent__image-link,
+.nightMode .PostContent__video-wrapper {
+    background-color: #000
+}
+
+.PostContent__image-link {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 100%
+}
+
+.PostContent__image-link.placeholder {
+    background-size: 100% auto;
+    background-image: url(https://www.redditstatic.com/mweb2x/img/placeholder.svg)
+}
+
+.PostContent__iframe-wrapper {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    -webkit-transform: translateZ(0);
+    -webkit-perspective: 1000
+}
+
+.PostContent__html {
+    position: relative
+}
+
+.PostContent__html iframe,
+.PostContent__html object,
+.PostContent__warning {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0
+}
+
+.PostContent__warning {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .2)
+}
+
+.PostContent__warning-button,
+.PostContent__warning-text {
+    color: #fff;
+    font-size: 18px;
+    max-width: 300px;
+    text-align: center;
+    margin: 5px 0
+}
+
+.PostContent__warning-button {
+    line-height: 0;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    padding: 20px
+}
+
+.PostContent__playback-action-circle {
+    opacity: .6;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center
+}
+
+.PostContent__playback-action-circle:hover {
+    opacity: .8;
+    background-color: #fcfcfb
+}
+
+.PostContent__playback-action-circle.regular {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    margin-top: -24px;
+    margin-left: -24px
+}
+
+.PostContent__playback-action-circle.regular [class*=" icon-"],
+.PostContent__playback-action-circle.regular [class^=icon-] {
+    font-size: 24px;
+    line-height: 48px;
+    display: inline-block
+}
+
+.PostContent__playback-action-circle.compact {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    margin-top: -14px;
+    margin-left: -14px
+}
+
+.PostContent__playback-action-circle.compact [class*=" icon-"],
+.PostContent__playback-action-circle.compact [class^=icon-] {
+    font-size: 14px;
+    line-height: 28px;
+    display: inline-block
+}
+
+.PostContent__playback-action-icon.icon-play_triangle {
+    margin-left: .3em
+}
+
+.PostContent__selftext {
+    padding: 8px 16px
+}
+
+.PostContent.m-redesign .PostContent__selftext {
+    overflow: hidden
+}
+
+.PostContent.m-redesign .PostContent__selftext.m-truncated {
+    margin-bottom: 20px;
+    transition: max-height .8s cubic-bezier(.5, .1, .5, 1), margin-bottom .8s cubic-bezier(.5, .1, .5, 1)
+}
+
+.PostContent.m-redesign .PostContent__selftext.m-expanded {
+    margin-bottom: 0;
+    max-height: 9999px
+}
+
+.PostContent__readMore {
+    margin-bottom: 4px;
+    margin-top: -24px;
+    opacity: 1;
+    padding-left: 16px;
+    position: relative;
+    transition: opacity .8s cubic-bezier(.5, .1, .5, 1)
+}
+
+.dayMode .PostContent__readMore {
+    background-color: #fff
+}
+
+.nightMode .PostContent__readMore {
+    background-color: #000
+}
+
+.PostContent.m-redesign .PostContent__selftext.m-expanded+.PostContent__readMore {
+    opacity: 0;
+    pointer-events: none
+}
+
+.PostContent__readMoreFade {
+    bottom: 16px;
+    height: 50px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%
+}
+
+.dayMode .PostContent__readMoreFade {
+    background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0))
+}
+
+.nightMode .PostContent__readMoreFade {
+    background: linear-gradient(0deg, #000, transparent)
+}
+
+.PostContent__readMoreButton {
+    outline: none;
+    padding: 0;
+    text-align: left;
+    width: 100%
+}
+
+.dayMode .PostContent__readMoreButton,
+.nightMode .PostContent__readMoreButton {
+    color: #0079d3;
+    font-size: 14px;
+    line-height: 19px
+}
+
+.HTML5StreamPlayer {
+    box-sizing: border-box;
+    height: auto;
+    max-width: 100vw
+}
+
+.HTML5StreamPlayer__video__fullscreen {
+    left: 50%;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.HTML5StreamPlayer__video__fullscreen,
+.HTML5StreamPlayer__video__regular {
+    -webkit-video-playable-inline: true;
+    width: 100%;
+    height: 100%;
+    position: absolute
+}
+
+.HTML5StreamPlayer__video__regular {
+    top: 0
+}
+
+.HTML5StreamPlayer__video__regular::-webkit-media-controls-play-button {
+    display: none
+}
+
+.HTML5StreamPlayer__video__regular::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none
+}
+
+.HTML5StreamPlayer__videoContainer {
+    position: relative;
+    max-width: 100%;
+    background-color: #000
+}
+
+.HTML5StreamPlayer__videoContainer__fullscreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000
+}
+
+.HTML5StreamPlayer__videoTrim:before {
+    z-index: -999;
+    pointer-events: none
+}
+
+.HTML5StreamPlayer__controlPanel {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+
+.HTML5StreamPlayer__control,
+.HTML5StreamPlayer__control:focus {
+    outline: none
+}
+
+.HTML5StreamPlayer__control__play {
+    outline: none;
+    height: 100%;
+    width: 100%
+}
+
+.HTML5StreamPlayer__control__button {
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 0 5vw
+}
+
+.HTML5StreamPlayer__control__play:hover .HTML5StreamPlayer__playback-action-circle {
+    opacity: .8;
+    background-color: #0dd3bb
+}
+
+.HTML5StreamPlayer__control__bar {
+    position: absolute;
+    height: 45px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .65));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#a6000000", GradientType=0)
+}
+
+.HTML5StreamPlayer__control__fullscreen {
+    outline: none;
+    float: right
+}
+
+.HTML5StreamPlayer__control__mute {
+    outline: none;
+    float: left
+}
+
+.HTML5StreamPlayer__control__barMargin {
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%
+}
+
+.HTML5StreamPlayer__control__timeCurrent {
+    float: left;
+    width: 35px;
+    margin-left: -35px;
+    margin-top: -5px;
+    color: #0dd3bb;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left
+}
+
+.HTML5StreamPlayer__control__scrubThumb {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top: -85px;
+    background-color: #000
+}
+
+.HTML5StreamPlayer__control__thumbContainer {
+    position: relative;
+    width: 100%;
+    margin-left: -30px
+}
+
+.HTML5StreamPlayer__control__scrubVideo {
+    height: 70px;
+    width: 70px
+}
+
+.HTML5StreamPlayer__control__scrubThumbHidden {
+    display: none;
+    position: absolute
+}
+
+.HTML5StreamPlayer__control__timeTotal {
+    float: right;
+    width: 35px;
+    margin-right: -35px;
+    margin-top: -5px;
+    color: #0dd3bb;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right
+}
+
+.HTML5StreamPlayer__control__scrubberContainer {
+    position: relative;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: auto;
+    height: 45px;
+    margin-top: 4px;
+    margin-left: 15vw;
+    margin-right: 15vw
+}
+
+.HTML5StreamPlayer__control__scrubBar,
+.HTML5StreamPlayer__control__scrubBar__buffer {
+    height: 4px;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    margin-left: 15%;
+    margin-right: 15%
+}
+
+.HTML5StreamPlayer__control__scrubBar__buffer {
+    width: 70%;
+    background-color: transparent;
+    pointer-events: none;
+    position: absolute;
+    z-index: 0
+}
+
+.HTML5StreamPlayer__control__scrubBar {
+    position: absolute;
+    -webkit-appearance: none;
+    width: 70%
+}
+
+.HTML5StreamPlayer__control__scrubBar:focus {
+    outline: none
+}
+
+.HTML5StreamPlayer__control__scrubBar::-webkit-slider-runnable-track {
+    width: 70%;
+    height: 4px;
+    cursor: pointer;
+    animate: .2s;
+    background: transparent;
+    border-radius: 100px
+}
+
+.HTML5StreamPlayer__control__scrubBar::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
+    border: 1px solid #fff;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    background: #0dd3bb;
+    cursor: pointer;
+    z-index: 999;
+    -webkit-appearance: none;
+    margin-top: -6px
+}
+
+.HTML5StreamPlayer__control__scrubBar:focus::-webkit-slider-runnable-track {
+    background: hsla(0, 0%, 5%, 0)
+}
+
+.HTML5StreamPlayer__control__scrubBar::-moz-range-track {
+    width: 70%;
+    height: 4px;
+    cursor: pointer;
+    animate: .2s;
+    background: transparent;
+    border-radius: 100px
+}
+
+.HTML5StreamPlayer__control__scrubBar::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
+    border: 1px solid #fff;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    background: #0dd3bb;
+    cursor: pointer;
+    z-index: 999
+}
+
+.HTML5StreamPlayer__control__scrubBar::-ms-track {
+    width: 70%;
+    height: 4px;
+    cursor: pointer;
+    animate: .2s;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent
+}
+
+.HTML5StreamPlayer__control__scrubBar::-ms-fill-lower,
+.HTML5StreamPlayer__control__scrubBar::-ms-fill-upper {
+    background: transparent;
+    border-radius: 200px
+}
+
+.HTML5StreamPlayer__control__scrubBar::-ms-thumb {
+    box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
+    border: 1px solid #fff;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    background: #0dd3bb;
+    cursor: pointer;
+    z-index: 999
+}
+
+.HTML5StreamPlayer__control__scrubBar:focus::-ms-fill-lower {
+    background: transparent
+}
+
+.HTML5StreamPlayer__control__scrubBar:focus::-ms-fill-upper {
+    background: hsla(0, 0%, 5%, 0)
+}
+
+.HTML5StreamPlayer__playback-full-screen {
+    outline: none;
+    width: 25px;
+    height: 25px
+}
+
+.HTML5StreamPlayer__playback-full-screen.icon-full-screen {
+    outline: none;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    color: #0dd3bb
+}
+
+.HTML5StreamPlayer__playback-full-screen-collapse {
+    outline: none;
+    width: auto;
+    height: auto
+}
+
+.HTML5StreamPlayer__playback-full-screen-collapse.icon-full-screen-collapse {
+    outline: none;
+    font-size: 25px;
+    color: #0dd3bb
+}
+
+.HTML5StreamPlayer__playback-mute {
+    outline: none;
+    width: auto;
+    height: auto
+}
+
+.HTML5StreamPlayer__playback-mute.icon-mute {
+    outline: none;
+    font-size: 25px;
+    color: #0dd3bb
+}
+
+.HTML5StreamPlayer__playback-unmute {
+    outline: none;
+    width: auto;
+    height: auto
+}
+
+.HTML5StreamPlayer__playback-unmute.icon-unmute {
+    outline: none;
+    font-size: 25px;
+    color: #0dd3bb
+}
+
+.HTML5StreamPlayer__replay-icon-container {
+    padding-top: .38em;
+    padding-left: .42em
+}
+
+.HTML5StreamPlayer__play-icon-container {
+    padding-top: 10px
+}
+
+.HTML5StreamPlayer__playback-action-circle {
+    opacity: .9;
+    background-color: #0dd3bb;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center
+}
+
+.HTML5StreamPlayer__playback-action-circle:hover {
+    opacity: .8;
+    background-color: #0dd3bb
+}
+
+.HTML5StreamPlayer__playback-action-circle.regular {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    margin-top: -24px;
+    margin-left: -24px
+}
+
+.HTML5StreamPlayer__playback-action-circle.compact {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    margin-top: -14px;
+    margin-left: -14px
+}
+
+.HTML5StreamPlayer__playback-action-icon.icon-play_triangle {
+    margin-left: .3em;
+    font-size: 28px;
+    line-height: 28px
+}
+
+.HTML5StreamPlayer__playback-action-icon.icon-replay {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    line-height: 48px
+}
+
+.PostFooter {
+    padding: 8px 16px
+}
+
+.PostFooter:after,
+.PostFooter:before {
+    content: " ";
+    display: table
+}
+
+.PostFooter:after {
+    clear: both
+}
+
+.dayMode .PostFooter {
+    border-bottom: 1px solid #efefed;
+    border-bottom-width: 8px
+}
+
+.nightMode .PostFooter {
+    border-bottom: 1px solid #353535;
+    border-bottom-width: 8px
+}
+
+.PostFooter.size-compact {
+    border-bottom-width: 1px;
+    padding-top: 0
+}
+
+.PostFooter.single {
+    border-bottom-width: 1px
+}
+
+.PostFooter__comments-link {
+    margin-left: -2px
+}
+
+.PostFooter__comments-link,
+.PostFooter__comments-link:hover,
+.PostFooter__comments-link:visited {
+    text-decoration: none
+}
+
+.dayMode .PostFooter__comments-link,
+.dayMode .PostFooter__comments-link:hover,
+.dayMode .PostFooter__comments-link:visited,
+.nightMode .PostFooter__comments-link,
+.nightMode .PostFooter__comments-link:hover,
+.nightMode .PostFooter__comments-link:visited {
+    color: #a5a4a4
+}
+
+.PostFooter__hit-area {
+    line-height: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center
+}
+
+.PostFooter__comments-icon.icon-comment {
+    margin: 0 4px;
+    position: relative;
+    top: -3px
+}
+
+.PostFooter__comments-icon.icon-comment:before {
+    font-size: 18px;
+    line-height: 18px
+}
+
+.PostFooter__vote-and-tools-wrapper {
+    float: right;
+    position: relative;
+    top: 2px
+}
+
+.PostFooter__dropdown-button {
+    font-size: 20px
+}
+
+.PostFooter__dropdown-button.icon-seashells {
+    text-align: center;
+    position: relative;
+    top: 3px
+}
+
+.PostFooter__dropdown-button.icon-seashells:before {
+    line-height: 18px
+}
+
+.PostFooter__vertical-divider {
+    height: 2em;
+    margin: 0 8px;
+    vertical-align: middle
+}
+
+.dayMode .PostFooter__vertical-divider {
+    border-right: 1px solid #ccccca
+}
+
+.nightMode .PostFooter__vertical-divider {
+    border-right: 1px solid #545452
+}
+
+.PostFooter__tooltip {
+    width: 600px
+}
+
+.dayMode .PostFooter__tooltip {
+    border: 1px solid #efefed
+}
+
+.nightMode .PostFooter__tooltip {
+    border: 1px solid #353535
+}
+
+.Share {
+    display: inline-block;
+    color: grey;
+    margin-right: 24px
+}
+
+.Share__image {
+    opacity: .25;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px
+}
+
+.Share__image.v2 {
+    margin-bottom: 6px
+}
+
+.adLinkBar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 43px;
+    padding-left: 16px;
+    padding-right: 16px
+}
+
+.dayMode .adLinkBar {
+    background-color: #f6f7f8
+}
+
+.nightMode .adLinkBar {
+    background-color: #272729
+}
+
+.adLinkBar.__compactView {
+    background-color: transparent;
+    padding-left: 86px
+}
+
+.adLinkBar.__compactNoImg {
+    padding-left: 16px
+}
+
+.callToAction {
+    border: 1px solid #0079d3;
+    box-sizing: border-box;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-decoration: none;
+    height: 27px;
+    width: 123px;
+    border-radius: 4px;
+    font-size: 12px;
+    padding-top: 3px;
+    background-color: transparent
+}
+
+.nightMode .callToAction {
+    color: #fff;
+    border: 1px solid #fff
+}
+
+.dayMode .RecommendedPosts__container {
+    background-color: #fff
+}
+
+.nightMode .RecommendedPosts__container {
+    background-color: #000;
+    background-color: #222
+}
+
+.RecommendedPosts__container .RecommendedPosts__title {
+    margin: 0 40px;
+    padding: 10px 10px 0;
+    text-align: center
+}
+
+.RecommendedPosts__container .title-text {
+    padding: 10px
+}
+
+.RecommendedPosts__container hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    width: 90%
+}
+
+.dayMode .RecommendedPosts__container hr {
+    border-top: 1px solid #efefed
+}
+
+.nightMode .RecommendedPosts__container hr {
+    border-top: 1px solid #353535
+}
+
+.RecommendedPosts__container .Post__header-wrapper,
+.RecommendedPosts__container .PostFooter {
+    padding-left: 16px
+}
+
+.RecommendedPosts__container .PostContent {
+    left: 16px
+}
+
+.dayMode .RecommendedPosts__container .Post,
+.dayMode .RecommendedPosts__container .PostsList {
+    background-color: #fff
+}
+
+.nightMode .RecommendedPosts__container .Post,
+.nightMode .RecommendedPosts__container .PostsList {
+    background-color: #000;
+    background-color: #222
+}
+
+.RecommendedPosts__container .Post .PostHeader__post-descriptor-line:after,
+.RecommendedPosts__container .PostsList .PostHeader__post-descriptor-line:after {
+    background: none
+}
+
+.RecommendedPosts__container .PaginationButtons {
+    display: none
+}
+
+.RecommendedPosts__container .PostContent.size-compact+.PostHeader.m-thumbnail-margin {
+    margin-left: 80px
+}
+
+@media screen and (min-width:360px) {
+    .RecommendedPosts__title {
+        font-size: 13pt
+    }
+}
+
+.dayMode .PostAndCommentList {
+    background-color: #fff
+}
+
+.nightMode .PostAndCommentList {
+    background-color: #000
+}
+
+.PaginationButtons {
+    padding: 0 16px
+}
+
+.dayMode .PaginationButtons {
+    background-color: #fff
+}
+
+.nightMode .PaginationButtons {
+    background-color: #000
+}
+
+.PaginationButtons__buttons {
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 10px
+}
+
+.PaginationButtons__buttons:after,
+.PaginationButtons__buttons:before {
+    content: " ";
+    display: table
+}
+
+.PaginationButtons__buttons:after {
+    clear: both
+}
+
+.PaginationButtons__buttons.m-compact {
+    padding-top: 10px
+}
+
+.PaginationButtons__button {
+    background-color: #24a0ed;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 10px;
+    line-height: 1.5em;
+    cursor: pointer
+}
+
+.PaginationButtons__button,
+.PaginationButtons__button:hover,
+.PaginationButtons__button:visited {
+    color: #fff !important;
+    text-decoration: none
+}
+
+.PaginationButtons__button .icon {
+    vertical-align: text-bottom
+}
+
+.PaginationButtons__button.m-next {
+    float: right
+}
+
+.PaginationButtons__button.m-prev {
+    float: left
+}
+
+.XPromoAdFeed {
+    display: block;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    padding: 15px 10px;
+    margin: -1px 0;
+    background-color: #fff;
+    box-shadow: inset 0 10px 5px -10px rgba(0, 0, 0, .2)
+}
+
+.dayMode .XPromoAdFeed,
+.nightMode .XPromoAdFeed {
+    border-top: 1px solid #efefed;
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .XPromoAdFeed {
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #353535
+}
+
+.XPromoAdFeed:after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 15px;
+    box-shadow: inset 0 -10px 5px -10px rgba(0, 0, 0, .2)
+}
+
+.dayMode .XPromoAdFeed,
+.dayMode .XPromoAdFeed:active,
+.dayMode .XPromoAdFeed:visited,
+.nightMode .XPromoAdFeed,
+.nightMode .XPromoAdFeed:active,
+.nightMode .XPromoAdFeed:visited {
+    color: inherit;
+    text-decoration: none
+}
+
+.XPromoAdFeed:before {
+    z-index: 1;
+    content: " ";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-image: url(https://www.redditstatic.com/mweb2x/img/listing-click-pattern.png);
+    background-size: 50%;
+    background-repeat: repeat
+}
+
+.dayMode .XPromoAdFeed:before {
+    opacity: .3;
+    background-color: #fff
+}
+
+.nightMode .XPromoAdFeed:before {
+    opacity: .3;
+    background-color: #fff;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .85)
+}
+
+.XPromoAdFeed__title {
+    z-index: 2;
+    width: 60%;
+    margin: 0 0 10px;
+    display: block;
+    position: relative;
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: 700
+}
+
+.XPromoAdFeed__button,
+.XPromoAdFeed__img {
+    z-index: 2;
+    position: relative;
+    background-repeat: no-repeat
+}
+
+.XPromoAdFeed__text {
+    z-index: 2;
+    margin: 0 0 12px;
+    line-height: 16px;
+    position: relative
+}
+
+.XPromoAdFeed__sub {
+    z-index: 2;
+    display: block;
+    padding-bottom: 7px;
+    padding-top: 20px;
+    color: #999
+}
+
+.XPromoAdFeed.mSmall .XPromoAdFeed__img {
+    float: right;
+    position: absolute;
+    right: 5px;
+    height: 150px;
+    width: 150px;
+    background-size: 150px;
+    background-image: url(https://www.redditstatic.com/mweb2x/img/ad-snoo1.png)
+}
+
+.XPromoAdFeed.mSmall .XPromoAdFeed__button {
+    float: left
+}
+
+.appButton,
+a.appButton {
+    display: block;
+    padding: 0 20px;
+    font-size: 14px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #ff4500;
+    color: #fff
+}
+
+.appButton:active,
+.appButton:hover,
+a.appButton:active,
+a.appButton:hover {
+    background-color: #cc3700;
+    color: #fff
+}
+
+.appButton.m-adfeed,
+a.appButton.m-adfeed {
+    height: 40px;
+    padding: 0 40px;
+    font-size: 13px;
+    line-height: 38px;
+    font-weight: 700
+}
+
+.dayMode .appButton.m-adfeed,
+.dayMode a.appButton.m-adfeed {
+    color: #0dd3bb;
+    background: #fff;
+    border: 2px solid #0dd3bb
+}
+
+.nightMode .appButton.m-adfeed,
+.nightMode a.appButton.m-adfeed {
+    color: #0dd3bb;
+    background: #fff;
+    border: 2px solid #0dd3bb;
+    background: transparent
+}
+
+.XPromoInFeed {
+    background-color: #f4f4f4;
+    background-size: cover;
+    display: block;
+    font-size: 0;
+    height: 148px;
+    position: relative;
+    width: 100%;
+    z-index: 1
+}
+
+.dayMode .XPromoInFeed,
+.nightMode .XPromoInFeed {
+    border-top: 1px solid #efefed;
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .XPromoInFeed {
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #353535
+}
+
+.XPromoInFeed.dark {
+    background-color: #202c3f
+}
+
+@media (min-width:360px) {
+    .XPromoInFeed {
+        height: 166.5px
+    }
+}
+
+@media (min-width:375px) {
+    .XPromoInFeed {
+        height: 173px
+    }
+}
+
+@media (min-width:411px) {
+    .XPromoInFeed {
+        height: 190px
+    }
+}
+
+.XPromoInFeed__Image {
+    height: 100%
+}
+
+.RecommendedSubredditsBottom__wrapper .listing-comment-collapsed-more {
+    font-weight: 700;
+    font-size: 11pt;
+    text-transform: uppercase;
+    display: block;
+    padding: 17px;
+    text-align: center;
+    letter-spacing: 1;
+    width: 100%
+}
+
+.dayMode .RecommendedSubredditsBottom__wrapper .listing-comment-collapsed-more {
+    background-color: #24a0ed;
+    color: #fff
+}
+
+.nightMode .RecommendedSubredditsBottom__wrapper .listing-comment-collapsed-more {
+    background-color: #24a0ed;
+    color: #efefed
+}
+
+.RecommendedSubreddits__SubredditInfo {
+    margin-top: 8px
+}
+
+.RecommendedSubreddits__button_wrapper {
+    display: block;
+    padding: 15px
+}
+
+.dayMode .RecommendedSubreddits__button_wrapper {
+    background-color: #fff
+}
+
+.nightMode .RecommendedSubreddits__button_wrapper {
+    background-color: #000
+}
+
+.RecommendedSubreddits__container {
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 16pt
+}
+
+.dayMode .RecommendedSubreddits__container {
+    background-color: #fff
+}
+
+.nightMode .RecommendedSubreddits__container {
+    background-color: #000;
+    background-color: #222
+}
+
+.RecommendedSubreddits__container .subreddit-icon-image {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 16px;
+    border-radius: 25px;
+    background-color: inherit;
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: 6px 6px
+}
+
+.dayMode .RecommendedSubreddits__container .subreddit-icon-image {
+    border: 1px solid #fff
+}
+
+.nightMode .RecommendedSubreddits__container .subreddit-icon-image {
+    border: 1px solid #000
+}
+
+.RecommendedSubreddits__container .subreddit-icon-image .PlanetIcon {
+    height: 36px;
+    left: 6px;
+    position: relative;
+    top: 6px;
+    width: 36px
+}
+
+.RecommendedSubreddits__container.sr-header {
+    padding-bottom: 0
+}
+
+.RecommendedSubreddits__container .RecommendedSubreddits__title {
+    margin: 0 40px;
+    padding: 10px 10px 0;
+    text-align: center
+}
+
+.RecommendedSubreddits__container .title-text {
+    padding: 10px
+}
+
+.RecommendedSubreddits__container hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    width: 90%
+}
+
+.dayMode .RecommendedSubreddits__container hr {
+    border-top: 1px solid #efefed
+}
+
+.nightMode .RecommendedSubreddits__container hr {
+    border-top: 1px solid #353535
+}
+
+.dayMode .RecommendedSubreddits__container .sr-url {
+    color: #0079d3
+}
+
+.nightMode .RecommendedSubreddits__container .sr-url {
+    color: #24a0ed
+}
+
+.RecommendedSubreddits__container .sr-subscriber-count {
+    font-weight: regular;
+    font-size: 10pt
+}
+
+.dayMode .RecommendedSubreddits__container .sr-subscriber-count,
+.nightMode .RecommendedSubreddits__container .sr-subscriber-count {
+    color: #a5a4a4
+}
+
+.RecommendedSubreddits__bottom,
+.RecommendedSubreddits__top {
+    margin: 0 10px;
+    padding: 12px 5px
+}
+
+.RecommendedSubreddits__top-plain {
+    padding: 5px 20px
+}
+
+.RecommendedSubreddits__top-plain hr {
+    border-top: 1px solid #efefed
+}
+
+.RecommendedSubreddits__header {
+    text-transform: uppercase;
+    padding: 15px;
+    text-align: center;
+    letter-spacing: 1;
+    font-weight: 500
+}
+
+.dayMode .RecommendedSubreddits__header {
+    background-color: #0079d3
+}
+
+.nightMode .RecommendedSubreddits__header {
+    background-color: #24a0ed
+}
+
+.dayMode .RecommendedSubreddits__header a.sr-url {
+    color: #fff
+}
+
+.nightMode .RecommendedSubreddits__header a.sr-url {
+    color: #000
+}
+
+@media screen and (min-width:320px) {
+    .RecommendedSubreddits__container {
+        font-size: 14px
+    }
+    .RecommendedSubreddits__container .RecommendedSubreddits__bottom a,
+    .RecommendedSubreddits__container .RecommendedSubreddits__top a {
+        font-size: 16px
+    }
+    .RecommendedSubreddits__header {
+        font-size: 13px
+    }
+}
+
+@media screen and (min-width:360px) {
+    .RecommendedSubreddits__container {
+        font-size: 14pt
+    }
+}
+
+@media screen and (min-width:360px) {
+    .RecommendedSubreddits__title {
+        font-size: 13pt
+    }
+}
+
+@media screen and (min-width:768px) {
+    .RecommendedSubreddits__bottom,
+    .RecommendedSubreddits__top {
+        margin-left: 4%
+    }
+}
+
+.Subnav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    line-height: 32px;
+    padding: 8px 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 48px;
+    position: relative
+}
+
+.dayMode .Subnav {
+    background-color: #fff
+}
+
+.nightMode .Subnav {
+    background-color: #000
+}
+
+.BannerAd__320x50 {
+    margin-top: 10px;
+    text-align: center
+}
+
+.dayMode .BannerAd__fluid {
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .BannerAd__fluid {
+    border-bottom: 1px solid #353535
+}
+
+.BannerAd__bottom {
+    margin-bottom: 24px
+}
+
+.labelsFont,
+.SectionHeader {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px
+}
+
+.SectionHeader {
+    margin: 0;
+    width: 100%
+}
+
+.dayMode .SectionHeader,
+.nightMode .SectionHeader {
+    background-color: #1a1a1b
+}
+
+.SectionHeader__text {
+    display: block;
+    padding: 12px 16px;
+    width: 100%
+}
+
+.SectionHeader__text,
+.SectionHeader__text:hover,
+.SectionHeader__text:visited {
+    text-decoration: none
+}
+
+.dayMode .SectionHeader__text,
+.dayMode .SectionHeader__text:hover,
+.dayMode .SectionHeader__text:visited,
+.nightMode .SectionHeader__text,
+.nightMode .SectionHeader__text:hover,
+.nightMode .SectionHeader__text:visited {
+    color: #fff
+}
+
+.dayMode .TopPosts {
+    border-top: 1px solid #efefed;
+    border-top-width: 8px
+}
+
+.nightMode .TopPosts {
+    border-top: 1px solid #353535;
+    border-top-width: 8px
+}
+
+.XPromoPill {
+    bottom: 16px;
+    color: #fff;
+    font-weight: 700;
+    left: 50%;
+    margin-left: -90px;
+    opacity: 1;
+    padding-bottom: env(safe-area-inset-bottom);
+    position: fixed;
+    text-align: center;
+    transition: all .3s;
+    width: 180px;
+    z-index: 1
+}
+
+.XPromoPill a,
+.XPromoPill a:active,
+.XPromoPill a:link,
+.XPromoPill a:visited {
+    color: #fff;
+    text-decoration: none
+}
+
+.XPromoPill__container {
+    background-color: #0079d3;
+    border-radius: 16px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .2);
+    margin-bottom: 24px;
+    padding: 8px 0
+}
+
+.XPromoPill__close {
+    float: right;
+    margin-right: 12px
+}
+
+.XPromoPill.dismissed {
+    opacity: 0;
+    pointer-events: none
+}
+
+.CommunityHeader {
+    padding-bottom: 12px
+}
+
+.dayMode .CommunityHeader {
+    background-color: #fff;
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .CommunityHeader {
+    background-color: #000;
+    border-bottom: 1px solid #353535
+}
+
+.CommunityHeader.with-error {
+    padding-bottom: 0
+}
+
+.CommunityHeader-banner {
+    position: relative;
+    width: 100%;
+    padding-bottom: 20%;
+    margin-bottom: 20px;
+    background-position: 50%;
+    background-size: cover;
+    overflow-y: visible
+}
+
+.dayMode .CommunityHeader-banner {
+    background-color: #24a0ed
+}
+
+.nightMode .CommunityHeader-banner {
+    background-color: #000
+}
+
+.CommunityHeader-banner.m-with-banner {
+    padding-bottom: 30%
+}
+
+.CommunityHeader-banner-icon-holder {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 50%;
+    margin-left: -32px;
+    bottom: -12px;
+    border-radius: 32px;
+    border: 1px solid #fff;
+    background-color: inherit;
+    background-repeat: no-repeat
+}
+
+.CommunityHeader-banner-icon-holder.CommunityHeader-banner-icon-holder-image {
+    background-position: 0 0;
+    background-size: 100%
+}
+
+.CommunityHeader-banner-icon-holder .PlanetIcon {
+    height: 50px;
+    left: 6px;
+    position: relative;
+    top: 6px;
+    width: 50px
+}
+
+.CommunityHeader-text-row {
+    text-align: center;
+    font-size: 13px
+}
+
+.dayMode .CommunityHeader-text-row,
+.nightMode .CommunityHeader-text-row {
+    color: #a5a4a4
+}
+
+.CommunityHeader-community-title {
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 0
+}
+
+.dayMode .CommunityHeader-community-title {
+    color: #222
+}
+
+.nightMode .CommunityHeader-community-title {
+    color: #cfd0ca
+}
+
+.CommunityHeader-no-outline {
+    outline: none
+}
+
+.CommunityHeader-subscribe-form {
+    display: block
+}
+
+.CommunityHeader-subscribe-button,
+.CommunityHeader-subscriber-button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 120px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #24a0ed;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 1px
+}
+
+.CommunityHeader-subscribe-button {
+    border-color: #24a0ed;
+    background: #24a0ed;
+    color: #fff
+}
+
+.CommunityHeader-subscriber-button {
+    border-color: #25b79f;
+    color: #25b79f
+}
+
+.CommunityHeader-error {
+    margin-bottom: 0;
+    margin-top: 4px
+}
+
+.CommunityHeader-clear-error-icon {
+    margin-left: 4px
+}
+
+.CommunityHeader-clear-error-icon[class*=" icon-"] {
+    vertical-align: text-bottom
+}
+
+.CustomFeedHeader {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 16px
+}
+
+.dayMode .CustomFeedHeader {
+    background-color: #fff;
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .CustomFeedHeader {
+    background-color: #000;
+    border-bottom: 1px solid #353535
+}
+
+.CustomFeedHeader-title {
+    margin-top: 0
+}
+
+.dayMode .CustomFeedHeader-title {
+    color: #222
+}
+
+.nightMode .CustomFeedHeader-title {
+    color: #cfd0ca
+}
+
+.CustomFeedHeader-details {
+    margin-top: 0
+}
+
+.dayMode .CustomFeedHeader-details,
+.nightMode .CustomFeedHeader-details {
+    color: #a5a4a4
+}
+
+.CustomFeedHeader-icon {
+    border-radius: 8px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    height: 128px;
+    margin-right: 16px;
+    width: 128px
+}
+
+.CustomFeedHeader-description {
+    margin-top: 8px
+}
+
+.LogActions {
+    padding: 8px 24px 28px;
+    width: 100%
+}
+
+.LogActions__Btn {
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 21px;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    height: 42px;
+    line-height: 40px;
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 350px;
+    text-align: center;
+    width: 100%
+}
+
+.dayMode .LogActions__Btn,
+.nightMode .LogActions__Btn {
+    color: #182f40
+}
+
+.LogActions__Btn:focus,
+.LogActions__Btn:visited {
+    text-decoration: none
+}
+
+.dayMode .LogActions__Btn:focus,
+.dayMode .LogActions__Btn:visited,
+.nightMode .LogActions__Btn:focus,
+.nightMode .LogActions__Btn:visited {
+    color: #182f40
+}
+
+.LogActions__Btn.secondary {
+    background-color: transparent;
+    margin-bottom: 0
+}
+
+.dayMode .LogActions__Btn.secondary,
+.nightMode .LogActions__Btn.secondary {
+    color: #fff
+}
+
+.LogActions__Btn.secondary:focus,
+.LogActions__Btn.secondary:visited {
+    background-color: transparent
+}
+
+.dayMode .LogActions__Btn.secondary:focus,
+.dayMode .LogActions__Btn.secondary:visited,
+.nightMode .LogActions__Btn.secondary:focus,
+.nightMode .LogActions__Btn.secondary:visited {
+    color: #fff
+}
+
+.SuspensionBanner {
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none !important
+}
+
+.SuspensionBanner__icon.icon.icon-law {
+    -ms-flex: 0 1 60px;
+    flex: 0 1 60px;
+    text-align: center;
+    color: #fff;
+    background-color: #d84141
+}
+
+.SuspensionBanner__icon.icon.icon-law:before {
+    position: relative;
+    top: 35%
+}
+
+.SuspensionBanner__text {
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 20px;
+    padding: 10px;
+    color: #fff;
+    background-color: #ff585b;
+    font-size: 16px
+}
+
+.NSFWInterstitial {
+    padding: 24px;
+    max-width: 400px;
+    margin: 0 auto
+}
+
+.NSFWInterstitial__icon-wrapper {
+    margin: 0 auto;
+    height: 100px;
+    text-align: center
+}
+
+.NSFWInterstitial__icon {
+    font-size: 91px;
+    position: relative;
+    top: 45px
+}
+
+.NSFWInterstitial__buttons,
+.NSFWInterstitial__header,
+.NSFWInterstitial__text {
+    text-align: center
+}
+
+.NSFWInterstitial__button,
+.NSFWInterstitial__form {
+    display: inline-block
+}
+
+.NSFWInterstitial__button {
+    background-color: #24a0ed;
+    vertical-align: middle;
+    padding: 5px 10px;
+    line-height: 1.5em;
+    cursor: pointer
+}
+
+.NSFWInterstitial__button,
+.NSFWInterstitial__button:hover,
+.NSFWInterstitial__button:visited {
+    color: #fff !important;
+    text-decoration: none
+}
+
+.NSFWInterstitial__form {
+    margin-left: 16px
+}
+
+.QuarantineBanner {
+    display: block;
+    background-color: #ffd635;
+    color: #8e5e3b
+}
+
+.QuarantineBanner__icon.icon.icon-header_quarantine {
+    position: absolute;
+    width: 60px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    height: 60px;
+    line-height: 60px;
+    color: #fff
+}
+
+.QuarantineBanner__summary {
+    line-height: 20px;
+    margin-left: 60px;
+    padding: 10px;
+    height: 60px;
+    font-size: 16px
+}
+
+.QuarantineBanner__details {
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 20px
+}
+
+.QuarantineBanner.collapsed .QuarantineBanner__details,
+.QuarantineBanner.expanded .QuarantineBanner__icon,
+.QuarantineBanner.expanded .QuarantineBanner__summary {
+    display: none
+}
+
+.QuarantineBanner__button {
+    background-color: #fff7e5;
+    padding: 5px 10px;
+    line-height: 1.5em;
+    cursor: pointer;
+    display: block;
+    width: 100%
+}
+
+.QuarantineBanner__button,
+.QuarantineBanner__button:hover,
+.QuarantineBanner__button:visited {
+    text-decoration: none
+}
+
+.Checkbox {
+    color: #f6f7f8;
+    font-size: 16px
+}
+
+.Checkbox__Icon {
+    background-color: #f6f7f8;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 22px;
+    height: 24px;
+    line-height: 22px;
+    margin-right: 8px;
+    width: 24px
+}
+
+.dayMode .Checkbox__Icon,
+.nightMode .Checkbox__Icon {
+    color: #0079d3
+}
+
+.Checkbox__Label {
+    vertical-align: middle
+}
+
+.LoginInput {
+    position: relative
+}
+
+.LoginInput__error-text {
+    color: #fff;
+    font-size: 16px;
+    margin: 2px 16px;
+    padding: 0;
+    text-align: center
+}
+
+.LoginInput__input {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #000;
+    font-size: 16px;
+    height: 48px;
+    padding: 22px 36px 10px 12px;
+    width: 100%
+}
+
+.LoginInput__input:focus {
+    outline: none
+}
+
+.LoginInput__input.error {
+    border-color: #ea0027;
+    color: #ea0027
+}
+
+.LoginInput__input.otpInput {
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px
+}
+
+.dayMode .LoginInput__input.otpInput {
+    border: 1px solid #efefed
+}
+
+.nightMode .LoginInput__input.otpInput {
+    border: 1px solid #353535
+}
+
+.LoginInput__input.otpInput:focus {
+    border: 1px solid #24a0ed
+}
+
+.LoginInput__input.otpInput.error {
+    border: 1px solid #e99696
+}
+
+.LoginInput__input:focus+label,
+.LoginInput__input[data-empty=false]+label {
+    transform: translate3d(0, -10px, 0) scale(.83)
+}
+
+.LoginInput__label {
+    color: #818384;
+    display: inline-block;
+    font-size: 16px;
+    left: 12px;
+    position: absolute;
+    top: 16px;
+    transform-origin: 0 50%;
+    transition: all .2s ease-in-out;
+    vertical-align: middle
+}
+
+.SquareButton {
+    background-color: #ff4500;
+    border-radius: 24px;
+    height: 48px;
+    position: relative;
+    width: 100%
+}
+
+.SquareButton.m-disabled {
+    pointer-events: none
+}
+
+.dayMode .SquareButton.m-disabled,
+.nightMode .SquareButton.m-disabled {
+    background-color: rgba(255, 69, 0, .5)
+}
+
+.SquareButton.m-disabled .SquareButton__content {
+    color: #8b979f
+}
+
+.SquareButton.m-danger {
+    background-color: #ea0027
+}
+
+.SquareButton__content {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff
+}
+
+.ReCaptcha {
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 1s
+}
+
+.ReCaptcha.hidden {
+    display: none;
+    opacity: 0
+}
+
+.AppStoreButton {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 46px;
+    width: 138px
+}
+
+.AppStoreButton.large {
+    width: 174.8px
+}
+
+.SignupWall {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.SignupWall:after {
+    background-image: linear-gradient(#182f40, rgba(55, 55, 55, .34) 34%);
+    content: "";
+    display: block;
+    height: calc(100vh - 73% + 32px);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.SignupWall.large {
+    height: calc(100vh + 16px)
+}
+
+.SignupWall.large.m-safari {
+    height: calc(100vh - 44px)
+}
+
+.SignupWall__Background {
+    width: 100%
+}
+
+.SignupWall__Background.animated {
+    animation: 30s linear 0s slideout;
+    transform: translateY(-100px)
+}
+
+.SignupWall__Navigation {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 24px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2
+}
+
+.SignupWall__NavigationLink {
+    font-weight: 700;
+    text-decoration: none
+}
+
+.dayMode .SignupWall__NavigationLink,
+.nightMode .SignupWall__NavigationLink {
+    color: #fff
+}
+
+.SignupWall__NavigationLink:focus,
+.SignupWall__NavigationLink:visited {
+    font-weight: 700;
+    text-decoration: none
+}
+
+.dayMode .SignupWall__NavigationLink:focus,
+.dayMode .SignupWall__NavigationLink:visited,
+.nightMode .SignupWall__NavigationLink:focus,
+.nightMode .SignupWall__NavigationLink:visited {
+    color: #fff
+}
+
+.SignupWall__NavigationLink.to-page {
+    background-color: #ff4500;
+    border-radius: 24px;
+    font-size: 18px;
+    padding: 8px 16px
+}
+
+.dayMode .SignupWall__NavigationLink.to-page,
+.dayMode .SignupWall__NavigationLink.to-page:active,
+.dayMode .SignupWall__NavigationLink.to-page:visited,
+.nightMode .SignupWall__NavigationLink.to-page,
+.nightMode .SignupWall__NavigationLink.to-page:active,
+.nightMode .SignupWall__NavigationLink.to-page:visited {
+    text-decoration: none
+}
+
+.SignupWall__NavigationLink.close-btn {
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 24px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 32px;
+    padding: 4px;
+    width: 32px
+}
+
+.dayMode .SignupWall__NavigationLink.close-btn,
+.dayMode .SignupWall__NavigationLink.close-btn:active,
+.dayMode .SignupWall__NavigationLink.close-btn:visited,
+.nightMode .SignupWall__NavigationLink.close-btn,
+.nightMode .SignupWall__NavigationLink.close-btn:active,
+.nightMode .SignupWall__NavigationLink.close-btn:visited {
+    color: #000;
+    text-decoration: none
+}
+
+.SignupWall__Container {
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #182f40;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    height: 73%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    z-index: 2
+}
+
+.SignupWall__Container .SnooIcon {
+    height: 72px;
+    margin-top: -36px;
+    position: absolute;
+    width: 72px
+}
+
+.SignupWall__Title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 16px;
+    text-align: center
+}
+
+.SignupWall__Section {
+    width: 100%
+}
+
+.SignupWall__Section:nth-child(2) {
+    margin-top: 36px;
+    overflow-y: auto
+}
+
+.SignupWall__AppBtn {
+    display: block;
+    margin: 24px auto
+}
+
+.SignupWall__FooterLink {
+    display: block;
+    font-size: 18px;
+    margin: 0 0 32px;
+    text-align: center;
+    text-decoration: none
+}
+
+.dayMode .SignupWall__FooterLink,
+.dayMode .SignupWall__FooterLink:focus,
+.dayMode .SignupWall__FooterLink:visited,
+.nightMode .SignupWall__FooterLink,
+.nightMode .SignupWall__FooterLink:focus,
+.nightMode .SignupWall__FooterLink:visited {
+    color: #f6f7f8
+}
+
+.SignupWall__FooterLink.m-safari {
+    margin-bottom: 76px
+}
+
+.SignupWall__FooterLinkIcon {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 13px;
+    margin-right: 8px
+}
+
+.SignupWall__FooterText {
+    color: #f6f7f8;
+    font-size: 18px;
+    margin: 0 16px 16px;
+    text-align: center
+}
+
+.SignupWall__ScrollBtn {
+    background-color: #f6f7f8;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    display: -ms-flexbox;
+    display: flex;
+    height: 40px;
+    margin: auto;
+    outline: none;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 64px
+}
+
+.SignupWall__CaronIcon {
+    display: inline-block;
+    font-size: 36px;
+    margin-top: 16px
+}
+
+.dayMode .SignupWall__CaronIcon,
+.nightMode .SignupWall__CaronIcon {
+    color: #ff4500
+}
+
+@keyframes slideout {
+    0% {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(-100px)
+    }
+}
+
+.AuthForm {
+    padding: 24px;
+    text-align: center;
+    position: relative
+}
+
+.AuthForm__ReCaptcha {
+    width: 100%
+}
+
+.AuthForm__Checkbox,
+.AuthForm__ReCaptcha {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 8px 0
+}
+
+.AuthForm__Checkbox {
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.AuthForm__Checkbox.hidden {
+    display: none
+}
+
+.AuthForm__LoginLinks {
+    color: #fff;
+    font-size: 15px;
+    padding: 8px;
+    text-align: center
+}
+
+.AuthForm__LoginLinks.hidden {
+    display: none
+}
+
+.AuthForm__ForgotLink {
+    font-weight: 700;
+    text-decoration: none;
+    font-weight: 400
+}
+
+.dayMode .AuthForm__ForgotLink,
+.nightMode .AuthForm__ForgotLink {
+    color: #fff
+}
+
+.AuthForm__ForgotLink:focus,
+.AuthForm__ForgotLink:visited {
+    font-weight: 700;
+    text-decoration: none;
+    font-weight: 400
+}
+
+.dayMode .AuthForm__ForgotLink:focus,
+.dayMode .AuthForm__ForgotLink:visited,
+.nightMode .AuthForm__ForgotLink:focus,
+.nightMode .AuthForm__ForgotLink:visited {
+    color: #fff
+}
+
+.AuthForm__Input {
+    margin: 0 16px 8px
+}
+
+.AuthForm__Input.hidden {
+    display: none
+}
+
+.AuthForm__form {
+    margin: 0;
+    width: 100%
+}
+
+.AuthForm__error-text {
+    color: #fff;
+    font-size: 16px;
+    margin: 2px 16px;
+    padding: 0;
+    text-align: center
+}
+
+.AuthForm__submit {
+    margin: 0 16px
+}
+
+.AuthForm__input-action-btn {
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    font-size: 1.8em
+}
+
+.AuthForm__input-action-btn .icon {
+    font-size: 24px
+}
+
+.AuthForm__input-action-btn:focus {
+    outline: none
+}
+
+.AuthForm__terms {
+    color: #f6f7f8;
+    font-size: 15px;
+    margin: auto;
+    max-width: 450px;
+    padding: 8px 24px;
+    text-align: center
+}
+
+.AuthForm__back-to-auth {
+    margin: auto;
+    font-size: 32px;
+    font-weight: 800
+}
+
+.AuthForm__switch-code-type {
+    margin-bottom: 60px;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.AuthForm__switch-code-type>a {
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.Tutorial {
+    padding: 20px
+}
+
+.Tutorial__row {
+    margin-bottom: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.Tutorial__rowImg {
+    max-width: 40%;
+    margin-right: 5px
+}
+
+.Tutorial__rowText {
+    padding: 12px;
+    font-size: large
+}
+
+.dayMode .Tutorial__rowText {
+    color: #222
+}
+
+.nightMode .Tutorial__rowText {
+    color: #cfd0ca
+}
+
+.Tutorial__button {
+    display: inline-block;
+    font-size: large;
+    font-weight: 700;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%
+}
+
+.dayMode .Tutorial__button,
+.nightMode .Tutorial__button {
+    color: #fff !important;
+    background-color: #24a0ed
+}
+
+.XPromoPopup a,
+.XPromoPopup a:active,
+.XPromoPopup a:link,
+.XPromoPopup a:visited {
+    text-decoration: none
+}
+
+.XPromoPopup__overlay {
+    top: 0;
+    background-color: #000;
+    height: 100%;
+    z-index: 0;
+    opacity: 0
+}
+
+.XPromoPopup__content,
+.XPromoPopup__overlay {
+    left: 0;
+    position: fixed;
+    width: 100%;
+    pointer-events: none
+}
+
+.XPromoPopup__content {
+    background-color: #fff;
+    z-index: 30;
+    height: 152px;
+    bottom: -200px;
+    transition: bottom .5s
+}
+
+.XPromoPopup__content.m-sbanner {
+    height: 192px
+}
+
+.XPromoPopup__header {
+    font-size: 18px;
+    font-weight: 600;
+    color: #121213;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd
+}
+
+.XPromoPopup__actions {
+    padding: 16px;
+    vertical-align: top
+}
+
+.XPromoPopup__action {
+    display: block;
+    position: relative;
+    height: 42px
+}
+
+.XPromoPopup__actionTitle {
+    position: absolute;
+    left: 42px;
+    color: #787c7e;
+    font-size: 16px;
+    line-height: 32px
+}
+
+.XPromoPopup__actionButton {
+    position: absolute;
+    font-weight: 600;
+    top: 0;
+    right: 0;
+    line-height: 32px;
+    text-align: center;
+    color: #0079d3;
+    height: 32px;
+    width: 102px;
+    border-radius: 5px;
+    border: 1px solid #0079d3
+}
+
+.active .XPromoPopup__overlay {
+    z-index: 30;
+    opacity: .5;
+    pointer-events: all
+}
+
+.active .XPromoPopup__content {
+    z-index: 31;
+    bottom: 0;
+    pointer-events: all
+}
+
+.active .SnooIcon,
+.XPromoPopup__chrome,
+.XPromoPopup__safari {
+    width: 32px;
+    height: 32px
+}
+
+.SocialAppBanner {
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #0079d3;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 40px;
+    text-align: center;
+    width: 100%
+}
+
+.SocialAppBanner .SnooIcon {
+    margin-right: 8px;
+    width: 28px
+}
+
+.SocialAppBanner__Header {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0
+}
+
+.dayMode .PostAndCommentList {
+    background-color: #fff
+}
+
+.nightMode .PostAndCommentList {
+    background-color: #000
+}
+
+.CommentPreview {
+    padding: 0 16px
+}
+
+.CommentPreview__wrapper {
+    padding: 8px 0
+}
+
+.dayMode .CommentPreview {
+    background-color: #fff
+}
+
+.nightMode .CommentPreview {
+    background-color: #000
+}
+
+.dayMode .CommentPreview~.CommentPreview .CommentPreview__wrapper {
+    border-top: 1px solid #efefed
+}
+
+.nightMode .CommentPreview~.CommentPreview .CommentPreview__wrapper {
+    border-top: 1px solid #353535
+}
+
+.CommentPreview.separated {
+    margin-top: 8px;
+    margin-bottom: 8px
+}
+
+.dayMode .CommentPreview.separated {
+    border-top: 1px solid #efefed;
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .CommentPreview.separated {
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #353535
+}
+
+.CommentPreview__permalink,
+.CommentPreview__permalink:hover,
+.CommentPreview__permalink:visited {
+    text-decoration: none
+}
+
+.dayMode .CommentPreview__permalink,
+.dayMode .CommentPreview__permalink:hover,
+.dayMode .CommentPreview__permalink:visited {
+    color: #222
+}
+
+.nightMode .CommentPreview__permalink,
+.nightMode .CommentPreview__permalink:hover,
+.nightMode .CommentPreview__permalink:visited {
+    color: #cfd0ca
+}
+
+.SearchPage__searchBar {
+    height: 48px
+}
+
+.dayMode .SearchPage__searchBar {
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .SearchPage__searchBar {
+    border-bottom: 1px solid #353535
+}
+
+.SearchPage__communities,
+.SearchPage__links {
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+.SearchPage__communitiesHeader,
+.SearchPage__linksHeader {
+    padding: 0 16px;
+    font-size: 16px;
+    line-height: 2
+}
+
+.SearchPage__communitiesHeader:after,
+.SearchPage__communitiesHeader:before,
+.SearchPage__linksHeader:after,
+.SearchPage__linksHeader:before {
+    content: " ";
+    display: table
+}
+
+.SearchPage__communitiesHeader:after,
+.SearchPage__linksHeader:after {
+    clear: both
+}
+
+.dayMode .SearchPage__communitiesHeader,
+.dayMode .SearchPage__linksHeader {
+    background-color: #fff;
+    color: #a5a4a4
+}
+
+.nightMode .SearchPage__communitiesHeader,
+.nightMode .SearchPage__linksHeader {
+    background-color: #000;
+    color: #a5a4a4
+}
+
+.SearchPage__communitiesHeaderTitle {
+    float: left
+}
+
+.SearchPage__communitiesHeaderMore {
+    float: right;
+    font-size: 14px;
+    line-height: 32px
+}
+
+.SearchPage__communitiesHeaderMore,
+.SearchPage__communitiesHeaderMore:visited {
+    color: #a5a4a4
+}
+
+.SearchPage__communitiesHeaderMore:hover {
+    text-decoration: none
+}
+
+.SearchPage__communitiesHeaderMoreIcon {
+    display: inline-block;
+    margin-left: 8px
+}
+
+.SearchPage__communitiesResults {
+    padding: 4px
+}
+
+.dayMode .SearchPage__communitiesResults {
+    background-color: #fff;
+    border-top: 1px solid #efefed;
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .SearchPage__communitiesResults {
+    background-color: #000;
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #353535
+}
+
+.SearchPage__community {
+    padding: 8px 4px
+}
+
+.SearchPage__linksHeaderTitle {
+    float: left
+}
+
+.SearchPage__linksHeaderTools {
+    float: right;
+    font-size: 14px;
+    line-height: 32px
+}
+
+.SearchPage__linksHeaderSort {
+    margin-left: 8px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.dayMode .SearchPage__link {
+    background-color: #fff;
+    border-top: 1px solid #efefed;
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .SearchPage__link {
+    background-color: #000;
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #353535
+}
+
+.SearchPage__link~.SearchPage__link {
+    margin-top: 8px
+}
+
+.SearchPage__searchAll {
+    padding: 8px;
+    text-align: center
+}
+
+.SearchPage__searchAllLink,
+.SearchPage__searchAllLink:visited {
+    color: #24a0ed
+}
+
+.SearchPage__noResults {
+    padding: 48px 8px;
+    text-align: center
+}
+
+.SearchPage__noResultsMsg {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #a5a4a4
+}
+
+.SearchPage__noResultsQuery {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #24a0ed
+}
+
+.SearchPage__helpfulMsg {
+    padding: 48px 8px;
+    text-align: center;
+    color: #a5a4a4;
+    font-size: 14px;
+    line-height: 1.5
+}
+
+.SearchPage__helpfulIcon {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.CommunityRow {
+    display: table
+}
+
+.dayMode .CommunityRow {
+    background-color: #fff
+}
+
+.nightMode .CommunityRow {
+    background-color: #000
+}
+
+.CommunityRow__add,
+.CommunityRow__details,
+.CommunityRow__icon {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.CommunityRow__add:hover,
+.CommunityRow__details:hover,
+.CommunityRow__icon:hover {
+    text-decoration: none
+}
+
+.CommunityRow__icon {
+    width: 32px;
+    height: 32px;
+    text-align: center
+}
+
+.CommunityRow__iconBlank,
+.CommunityRow__iconImg {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px
+}
+
+.CommunityRow__iconBlank-large,
+.CommunityRow__iconImg-large {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px
+}
+
+.CommunityRow__iconBlank-large {
+    background-image: url(https://www.redditstatic.com/mweb2x/img/snoo-64.png);
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    background-position: 0 5px
+}
+
+.dayMode .CommunityRow__iconBlank-large {
+    background-color: #24a0ed
+}
+
+.nightMode .CommunityRow__iconBlank-large {
+    border: 1px solid #24a0ed;
+    background-position-x: -1px
+}
+
+.CommunityRow__iconBlank {
+    background-image: url(https://www.redditstatic.com/mweb2x/img/snoo-64.png);
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: 0 5px
+}
+
+.dayMode .CommunityRow__iconBlank {
+    background-color: #24a0ed
+}
+
+.nightMode .CommunityRow__iconBlank {
+    border: 1px solid #24a0ed;
+    background-position-x: -1px
+}
+
+.CommunityRow__details {
+    max-width: 0;
+    width: 100%;
+    padding-left: 8px
+}
+
+.dayMode .CommunityRow__name {
+    color: #222
+}
+
+.nightMode .CommunityRow__name {
+    color: #cfd0ca
+}
+
+.CommunityRow__rSlash {
+    font-size: 12px;
+    margin-right: 2px
+}
+
+.dayMode .CommunityRow__rSlash,
+.nightMode .CommunityRow__rSlash {
+    color: #a5a4a4
+}
+
+.CommunityRow__counts {
+    font-size: 12px
+}
+
+.dayMode .CommunityRow__counts,
+.nightMode .CommunityRow__counts {
+    color: #a5a4a4
+}
+
+.CommunityRow__add {
+    width: 40px;
+    padding: 0 8px;
+    text-align: center
+}
+
+.CommunityRow__subscriptionButton {
+    outline: none;
+    font-size: 24px;
+    line-height: 24px
+}
+
+.NSFWFlair {
+    font-size: 11px;
+    color: #ff585b;
+    margin: 0 4px
+}
+
+.NSFWFlair .icon-nsfw {
+    vertical-align: text-bottom;
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 2px
+}
+
+.SubredditAbout {
+    padding: 8px
+}
+
+.SubredditAbout__loading-error {
+    font-size: 18px;
+    word-wrap: break-word
+}
+
+.SubredditAbout__try-logging-in {
+    margin-top: 16px
+}
+
+.SubredditAbout__community-rules-link {
+    line-height: 32px;
+    margin-bottom: 8px;
+    text-align: right
+}
+
+.SubredditRulesList {
+    padding: 8px 16px
+}
+
+.SubredditRulesList__title {
+    font-size: 24px;
+    font-weight: 500
+}
+
+.SubredditRulesList__description {
+    font-weight: 600
+}
+
+.SubredditRule {
+    padding: 8px 0
+}
+
+.SubredditRule__title {
+    font-size: 18px;
+    font-weight: 500
+}
+
+.SubredditRule__meta {
+    color: #a5a4a4
+}
+
+.SubredditRule__description,
+.SubredditRule__meta,
+.SubredditRule__title {
+    margin-bottom: 4px;
+    margin-top: 4px
+}
+
+.UserProfileHeader__banner {
+    padding: 8px;
+    text-align: center
+}
+
+.UserProfileHeader__banner-user-icon {
+    border-radius: 100%;
+    display: block;
+    height: 64px;
+    margin: auto
+}
+
+.UserProfileHeader__banner-user-name {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    vertical-align: middle;
+    margin: 0
+}
+
+.UserProfileHeader__banner-karma {
+    display: block;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: lighter;
+    vertical-align: middle;
+    margin: 0
+}
+
+.UserProfileHeader__tabs {
+    padding: 8px
+}
+
+.UserProfileHeader__tab {
+    width: 33%;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center
+}
+
+.UserProfileHeader__tab,
+.UserProfileHeader__tab:hover,
+.UserProfileHeader__tab:visited {
+    text-decoration: none
+}
+
+.dayMode .UserProfileHeader__tab~.UserProfileHeader__tab {
+    border-left: 1px solid #efefed
+}
+
+.nightMode .UserProfileHeader__tab~.UserProfileHeader__tab {
+    border-left: 1px solid #353535
+}
+
+.UserProfileHeader__tab-text {
+    font-size: 14px;
+    font-weight: 700
+}
+
+.dayMode .UserProfileHeader__tab-text,
+.nightMode .UserProfileHeader__tab-text {
+    color: #a5a4a4
+}
+
+.UserProfileHeader__tab-text.selected {
+    color: #008985
+}
+
+.UserProfileHeader__follow,
+.UserProfileHeader__follower {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 120px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #24a0ed;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 1px
+}
+
+.UserProfileHeader__follow {
+    border-color: #24a0ed;
+    background: #24a0ed;
+    color: #fff
+}
+
+.UserProfileHeader__follower {
+    border-color: #25b79f;
+    color: #25b79f
+}
+
+.UserProfilePage {
+    height: 100%;
+    height: calc(100% - 48px)
+}
+
+.UserProfilePage__section {
+    margin-bottom: 8px
+}
+
+.dayMode .UserProfilePage__section {
+    background-color: #fff;
+    border-bottom: 1px solid #ccccca
+}
+
+.nightMode .UserProfilePage__section {
+    background-color: #000;
+    border-bottom: 1px solid #545452
+}
+
+.UserProfilePage__userLink {
+    display: block;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: lighter
+}
+
+.UserProfilePage__userLink,
+.UserProfilePage__userLink:hover,
+.UserProfilePage__userLink:visited {
+    text-decoration: none
+}
+
+.dayMode .UserProfilePage__userLink,
+.dayMode .UserProfilePage__userLink:hover,
+.dayMode .UserProfilePage__userLink:visited {
+    color: #222
+}
+
+.nightMode .UserProfilePage__userLink,
+.nightMode .UserProfilePage__userLink:hover,
+.nightMode .UserProfilePage__userLink:visited {
+    color: #cfd0ca
+}
+
+.UserProfilePage__userLinkIcon {
+    margin-right: 16px;
+    position: relative;
+    top: -2px
+}
+
+.UserProfilePage__sorts {
+    padding: .5em 1em
+}
+
+.UserProfileSummary__row {
+    margin: 0 16px
+}
+
+.dayMode .UserProfileSummary__row {
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .UserProfileSummary__row {
+    border-bottom: 1px solid #353535
+}
+
+.UserProfileSummary__badge.half,
+.UserProfileSummary__badgeIcon,
+.UserProfileSummary__text-wrapper {
+    display: inline-block
+}
+
+.UserProfileSummary__badge.half {
+    display: inline-block;
+    width: 50%
+}
+
+.UserProfileSummary__badge.half .UserProfileSummary__badge-subtext {
+    font-weight: 700
+}
+
+.UserProfileSummary__badge,
+.UserProfileSummary__text-werapper {
+    margin: 18px 0
+}
+
+.UserProfileSummary__badgeIcon {
+    vertical-align: top;
+    margin-right: 10px;
+    line-height: 28px
+}
+
+.UserProfileSummary__badgeIcon.icon-karma {
+    font-size: 37px;
+    margin-left: -6px;
+    margin-right: 5px
+}
+
+.UserProfileSummary__badgeIcon.icon-cake {
+    font-size: 24px
+}
+
+.UserProfileSummary__badgeIcon.icon-gold-snoo {
+    font-size: 25px
+}
+
+.UserProfileSummary__badge-text {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: lighter;
+    margin-bottom: 4px
+}
+
+.UserProfileSummary__badge-subtext {
+    font-size: 10px;
+    line-height: 10px
+}
+
+.dayMode .UserProfileSummary__badge-subtext,
+.nightMode .UserProfileSummary__badge-subtext {
+    color: #a5a4a4
+}
+
+.Wiki {
+    padding: 8px
+}
+
+.Wiki__loading-error {
+    font-size: 18px;
+    word-wrap: break-word
+}
+
+.Wiki__try-logging-in {
+    margin-top: 16px
+}
+
+.Wiki__content .toc {
+    display: none
+}
+
+.BadgedIcon {
+    position: relative
+}
+
+.BadgedIcon>:first-child {
+    height: 32px;
+    margin-top: -5px;
+    width: 32px
+}
+
+.BadgedIcon>:last-child {
+    height: 24px;
+    left: 16px;
+    position: absolute;
+    top: 8px;
+    width: 24px
+}
+
+.dayMode .BadgedIcon>:last-child {
+    fill: #373c3f
+}
+
+.BadgedIcon.large>:first-child {
+    height: 64px;
+    margin-top: 0;
+    width: 64px
+}
+
+.BadgedIcon.large>:last-child {
+    height: 32px;
+    left: 46px;
+    position: absolute;
+    top: 37px;
+    width: 32px
+}
+
+.dayMode .BadgedIcon.large>:last-child {
+    fill: #1a1a1b
+}
+
+.Avatar {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 1px solid #fff;
+    border-radius: 50%
+}
+
+.xPromoChat {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: auto;
+    margin-top: auto;
+    padding: 24px
+}
+
+.xPromoChat .PlanetIcon {
+    background-color: #0079d3;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px
+}
+
+.xPromoChat__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 8px 0 4px
+}
+
+.xPromoChat__description {
+    font-weight: 700;
+    margin-bottom: 8px
+}
+
+.xPromoChat__activeUsers {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.xPromoChat__usersIcon {
+    height: 16px;
+    margin-right: 8px
+}
+
+.xPromoChat__number {
+    display: inline-block
+}
+
+.xPromoChat__button {
+    background-color: #0079d3;
+    border-radius: 5px;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 16px;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.dayMode .xPromoChat__button,
+.nightMode .xPromoChat__button {
+    color: #fff
+}
+
+.xPromoChat__button:active,
+.xPromoChat__button:hover,
+.xPromoChat__button:visited {
+    text-decoration: none
+}
+
+.dayMode .xPromoChat__button:active,
+.dayMode .xPromoChat__button:hover,
+.dayMode .xPromoChat__button:visited,
+.nightMode .xPromoChat__button:active,
+.nightMode .xPromoChat__button:hover,
+.nightMode .xPromoChat__button:visited {
+    color: #fff
+}
+
+.ChatPage {
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 48px;
+    width: 100%
+}
+
+.DirectMessage {
+    padding-top: 50px
+}
+
+.dayMode .DirectMessage__header {
+    background-color: #fff;
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .DirectMessage__header {
+    background-color: #000;
+    border-bottom: 1px solid #353535
+}
+
+.dayMode .DirectMessage__body {
+    background-color: #fff
+}
+
+.nightMode .DirectMessage__body {
+    background-color: #000
+}
+
+.DirectMessageHeader {
+    position: relative;
+    line-height: 50px
+}
+
+.DirectMessageHeader__back {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 16px;
+    line-height: 50px;
+    font-size: 18px
+}
+
+.DirectMessageHeader__back,
+.DirectMessageHeader__back:active,
+.DirectMessageHeader__back:visited {
+    text-decoration: none
+}
+
+.dayMode .DirectMessageHeader__back,
+.dayMode .DirectMessageHeader__back:active,
+.dayMode .DirectMessageHeader__back:visited {
+    color: #ccccca
+}
+
+.nightMode .DirectMessageHeader__back,
+.nightMode .DirectMessageHeader__back:active,
+.nightMode .DirectMessageHeader__back:visited {
+    color: #545452
+}
+
+.DirectMessageHeader__title {
+    font-size: 16px;
+    text-align: center
+}
+
+.dayMode .DirectMessageHeader__title,
+.nightMode .DirectMessageHeader__title {
+    color: #a5a4a4
+}
+
+.DirectMessageComposition {
+    padding: 16px
+}
+
+.DirectMessageComposition__input {
+    line-height: 48px
+}
+
+.DirectMessageComposition__input,
+.DirectMessageComposition__textarea {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 8px
+}
+
+.dayMode .DirectMessageComposition__input,
+.dayMode .DirectMessageComposition__textarea {
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .DirectMessageComposition__input,
+.nightMode .DirectMessageComposition__textarea {
+    border-bottom: 1px solid #353535
+}
+
+.dayMode .DirectMessageComposition__input:focus,
+.dayMode .DirectMessageComposition__textarea:focus {
+    border-bottom: 1px solid #ccccca
+}
+
+.nightMode .DirectMessageComposition__input:focus,
+.nightMode .DirectMessageComposition__textarea:focus {
+    border-bottom: 1px solid #545452
+}
+
+.DirectMessageComposition__submit {
+    width: 100%;
+    color: #fcfcfb;
+    background-color: #24a0ed;
+    padding: 16px;
+    text-align: center;
+    letter-spacing: 1.6;
+    font-size: 16px
+}
+
+.DropdownCover {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 10
+}
+
+.dayMode .DropdownCover {
+    background-color: rgba(0, 0, 0, .4)
+}
+
+.nightMode .DropdownCover {
+    background-color: rgba(0, 0, 0, .7)
+}
+
+.ErrorPage {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 1px
+}
+
+.ErrorPage__image {
+    margin-top: 30px;
+    display: inline-block;
+    background: url(https://www.redditstatic.com/mweb2x/img/404.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 224px
+}
+
+.ErrorPage__error {
+    margin-bottom: 5px;
+    line-height: 1.5
+}
+
+.dayMode .Messages__divider,
+.dayMode .Messages__header,
+.dayMode .Messages__nav {
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .Messages__divider,
+.nightMode .Messages__header,
+.nightMode .Messages__nav {
+    border-bottom: 1px solid #353535
+}
+
+.Messages__divider {
+    height: 8px
+}
+
+.dayMode .Messages__divider {
+    background-color: #efefed
+}
+
+.nightMode .Messages__divider {
+    background-color: #545452
+}
+
+.Messages__content {
+    padding: 0 16px
+}
+
+.dayMode .Messages__content {
+    background-color: #fff
+}
+
+.nightMode .Messages__content {
+    background-color: #000
+}
+
+.Messages__item {
+    padding: 16px 0
+}
+
+.dayMode .Messages__item~.Messages__item {
+    border-top: 1px solid #efefed
+}
+
+.nightMode .Messages__item~.Messages__item {
+    border-top: 1px solid #353535
+}
+
+.MessageHeader {
+    position: relative;
+    height: 50px
+}
+
+.dayMode .MessageHeader {
+    background-color: #fff
+}
+
+.nightMode .MessageHeader {
+    background-color: #000
+}
+
+.MessageHeader__title {
+    font-size: 22px;
+    line-height: 50px;
+    text-align: center
+}
+
+.dayMode .MessageHeader__title {
+    color: #222
+}
+
+.nightMode .MessageHeader__title {
+    color: #cfd0ca
+}
+
+.MessageHeader__compose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 16px;
+    font-size: 24px;
+    line-height: 50px
+}
+
+.MessageHeader__compose,
+.MessageHeader__compose:active,
+.MessageHeader__compose:visited {
+    text-decoration: none
+}
+
+.dayMode .MessageHeader__compose,
+.dayMode .MessageHeader__compose:active,
+.dayMode .MessageHeader__compose:visited {
+    color: #ccccca
+}
+
+.nightMode .MessageHeader__compose,
+.nightMode .MessageHeader__compose:active,
+.nightMode .MessageHeader__compose:visited {
+    color: #545452
+}
+
+.dayMode .MessagesNav {
+    background-color: #fff
+}
+
+.nightMode .MessagesNav {
+    background-color: #000
+}
+
+.MessagesNav__item {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 0;
+    box-sizing: border-box;
+    width: 25%;
+    text-align: center
+}
+
+.MessagesNav__item,
+.MessagesNav__item:focus,
+.MessagesNav__item:visited {
+    text-decoration: none
+}
+
+.dayMode .MessagesNav__item,
+.dayMode .MessagesNav__item .MessagesNav__icon,
+.dayMode .MessagesNav__item .MessagesNav__text,
+.dayMode .MessagesNav__item:focus,
+.dayMode .MessagesNav__item:focus .MessagesNav__icon,
+.dayMode .MessagesNav__item:focus .MessagesNav__text,
+.dayMode .MessagesNav__item:visited,
+.dayMode .MessagesNav__item:visited .MessagesNav__icon,
+.dayMode .MessagesNav__item:visited .MessagesNav__text {
+    color: #ccccca
+}
+
+.nightMode .MessagesNav__item,
+.nightMode .MessagesNav__item .MessagesNav__icon,
+.nightMode .MessagesNav__item .MessagesNav__text,
+.nightMode .MessagesNav__item:focus,
+.nightMode .MessagesNav__item:focus .MessagesNav__icon,
+.nightMode .MessagesNav__item:focus .MessagesNav__text,
+.nightMode .MessagesNav__item:visited,
+.nightMode .MessagesNav__item:visited .MessagesNav__icon,
+.nightMode .MessagesNav__item:visited .MessagesNav__text {
+    color: #545452
+}
+
+.dayMode .MessagesNav__item.m-selected,
+.dayMode .MessagesNav__item.m-selected .MessagesNav__icon,
+.dayMode .MessagesNav__item.m-selected .MessagesNav__text,
+.dayMode .MessagesNav__item:focus.m-selected,
+.dayMode .MessagesNav__item:focus.m-selected .MessagesNav__icon,
+.dayMode .MessagesNav__item:focus.m-selected .MessagesNav__text,
+.dayMode .MessagesNav__item:visited.m-selected,
+.dayMode .MessagesNav__item:visited.m-selected .MessagesNav__icon,
+.dayMode .MessagesNav__item:visited.m-selected .MessagesNav__text,
+.nightMode .MessagesNav__item.m-selected,
+.nightMode .MessagesNav__item.m-selected .MessagesNav__icon,
+.nightMode .MessagesNav__item.m-selected .MessagesNav__text,
+.nightMode .MessagesNav__item:focus.m-selected,
+.nightMode .MessagesNav__item:focus.m-selected .MessagesNav__icon,
+.nightMode .MessagesNav__item:focus.m-selected .MessagesNav__text,
+.nightMode .MessagesNav__item:visited.m-selected,
+.nightMode .MessagesNav__item:visited.m-selected .MessagesNav__icon,
+.nightMode .MessagesNav__item:visited.m-selected .MessagesNav__text {
+    color: #0dd3bb
+}
+
+.MessagesNav__icon {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 6px
+}
+
+.MessagesNav__icon.icon-crown,
+.MessagesNav__icon.icon-post {
+    font-size: 24px
+}
+
+.MessagesNav__text {
+    font-size: 12px;
+    line-height: 12px
+}
+
+.MessagesComment__title {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.MessagesComment__title,
+.MessagesComment__title:hover,
+.MessagesComment__title:visited {
+    text-decoration: none
+}
+
+.dayMode .MessagesComment__title,
+.dayMode .MessagesComment__title:hover,
+.dayMode .MessagesComment__title:visited {
+    color: #222
+}
+
+.nightMode .MessagesComment__title,
+.nightMode .MessagesComment__title:hover,
+.nightMode .MessagesComment__title:visited {
+    color: #cfd0ca
+}
+
+.MessagesComment__metaData {
+    font-size: 11px;
+    line-height: 1.2;
+    margin-bottom: 8px
+}
+
+.dayMode .MessagesComment__metaData,
+.nightMode .MessagesComment__metaData {
+    color: #a5a4a4
+}
+
+.MessagesComment__metaDataLink,
+.MessagesComment__metaDataLink:hover,
+.MessagesComment__metaDataLink:visited {
+    text-decoration: none
+}
+
+.dayMode .MessagesComment__metaDataLink,
+.dayMode .MessagesComment__metaDataLink:hover,
+.dayMode .MessagesComment__metaDataLink:visited,
+.nightMode .MessagesComment__metaDataLink,
+.nightMode .MessagesComment__metaDataLink:hover,
+.nightMode .MessagesComment__metaDataLink:visited {
+    color: #a5a4a4
+}
+
+.MessagesComment__body {
+    font-size: 11px;
+    line-height: 1.2
+}
+
+.dayMode .MessagesComment__body {
+    color: #222
+}
+
+.nightMode .MessagesComment__body {
+    color: #cfd0ca
+}
+
+.MessagesMessage {
+    position: relative;
+    width: 100%
+}
+
+.MessagesMessage__header {
+    padding-right: 40px;
+    margin-bottom: 16px
+}
+
+.MessagesMessage__title {
+    font-size: 13px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.MessagesMessage__titleLink,
+.MessagesMessage__titleLink:active,
+.MessagesMessage__titleLink:visited {
+    text-decoration: none
+}
+
+.dayMode .MessagesMessage__titleLink,
+.dayMode .MessagesMessage__titleLink:active,
+.dayMode .MessagesMessage__titleLink:visited {
+    color: #222
+}
+
+.nightMode .MessagesMessage__titleLink,
+.nightMode .MessagesMessage__titleLink:active,
+.nightMode .MessagesMessage__titleLink:visited {
+    color: #cfd0ca
+}
+
+.MessagesMessage__subtitle {
+    font-size: 11px;
+    line-height: 1.2
+}
+
+.dayMode .MessagesMessage__subtitle,
+.nightMode .MessagesMessage__subtitle {
+    color: #a5a4a4
+}
+
+.MessagesMessage__authorLink,
+.MessagesMessage__authorLink:active,
+.MessagesMessage__authorLink:visited {
+    text-decoration: none
+}
+
+.dayMode .MessagesMessage__authorLink,
+.dayMode .MessagesMessage__authorLink:active,
+.dayMode .MessagesMessage__authorLink:visited,
+.nightMode .MessagesMessage__authorLink,
+.nightMode .MessagesMessage__authorLink:active,
+.nightMode .MessagesMessage__authorLink:visited {
+    color: #a5a4a4
+}
+
+.MessagesMessage__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    font-size: 22px
+}
+
+.MessagesMessage__link,
+.MessagesMessage__link:active,
+.MessagesMessage__link:visited {
+    text-decoration: none
+}
+
+.dayMode .MessagesMessage__link,
+.dayMode .MessagesMessage__link:active,
+.dayMode .MessagesMessage__link:visited {
+    color: #ccccca
+}
+
+.nightMode .MessagesMessage__link,
+.nightMode .MessagesMessage__link:active,
+.nightMode .MessagesMessage__link:visited {
+    color: #545452
+}
+
+.MessagesMessage__body {
+    font-size: 11px;
+    line-height: 1.2
+}
+
+.dayMode .MessagesMessage__body {
+    color: #222
+}
+
+.nightMode .MessagesMessage__body {
+    color: #cfd0ca
+}
+
+.dayMode .MessageThread__divider,
+.dayMode .MessageThread__header {
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .MessageThread__divider,
+.nightMode .MessageThread__header {
+    border-bottom: 1px solid #353535
+}
+
+.MessageThread__divider {
+    height: 8px
+}
+
+.dayMode .MessageThread__divider {
+    background-color: #efefed
+}
+
+.nightMode .MessageThread__divider {
+    background-color: #545452
+}
+
+.MessageThread__subject {
+    padding: 8px 16px;
+    display: block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-align: center
+}
+
+.MessageThread__backlink {
+    position: absolute;
+    padding: 8px;
+    font-size: 22px
+}
+
+.MessageThread__backlink,
+.MessageThread__backlink:active,
+.MessageThread__backlink:visited {
+    text-decoration: none
+}
+
+.dayMode .MessageThread__backlink,
+.dayMode .MessageThread__backlink:active,
+.dayMode .MessageThread__backlink:visited {
+    color: #ccccca
+}
+
+.nightMode .MessageThread__backlink,
+.nightMode .MessageThread__backlink:active,
+.nightMode .MessageThread__backlink:visited {
+    color: #545452
+}
+
+.MessageThread__content {
+    padding: 0 16px
+}
+
+.dayMode .MessageThread__content {
+    background-color: #fff
+}
+
+.nightMode .MessageThread__content {
+    background-color: #000
+}
+
+.MessageThread__item {
+    padding: 16px 0
+}
+
+.dayMode .MessageThread__item~.MessageThread__item {
+    border-top: 1px solid #efefed
+}
+
+.nightMode .MessageThread__item~.MessageThread__item {
+    border-top: 1px solid #353535
+}
+
+.MessageThread__reply {
+    color: #24a0ed;
+    width: 100%;
+    text-align: right;
+    padding-right: 16px
+}
+
+.MessageThread__replyIcon {
+    vertical-align: text-bottom
+}
+
+.dayMode .MessageThread__replyIcon,
+.nightMode .MessageThread__replyIcon {
+    color: #24a0ed
+}
+
+.MessageThread__cancelReplyIcon {
+    font-size: 22px
+}
+
+.MessageThread__form,
+.MessageThread__formBody,
+.MessageThread__formSubmit {
+    padding: 16px;
+    width: 100%
+}
+
+.dayMode .MessageThread__formBody {
+    border-top: 1px solid #efefed;
+    border-bottom: 1px solid #efefed
+}
+
+.nightMode .MessageThread__formBody {
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #353535
+}
+
+.MessageThread__formSubmit {
+    color: #fcfcfb;
+    background-color: #24a0ed;
+    margin-top: 16px;
+    text-align: center;
+    letter-spacing: 1.6;
+    font-size: 16px
+}
+
+.MessageThreadMessage {
+    position: relative;
+    width: 100%
+}
+
+.MessageThreadMessage__title {
+    font-size: 11px;
+    line-height: 1.2
+}
+
+.dayMode .MessageThreadMessage__title,
+.nightMode .MessageThreadMessage__title {
+    color: #a5a4a4
+}
+
+.MessageThreadMessage__authorLink,
+.MessageThreadMessage__authorLink:active,
+.MessageThreadMessage__authorLink:visited {
+    text-decoration: none
+}
+
+.dayMode .MessageThreadMessage__authorLink,
+.dayMode .MessageThreadMessage__authorLink:active,
+.dayMode .MessageThreadMessage__authorLink:visited,
+.nightMode .MessageThreadMessage__authorLink,
+.nightMode .MessageThreadMessage__authorLink:active,
+.nightMode .MessageThreadMessage__authorLink:visited {
+    color: #a5a4a4
+}
+
+.MessageThreadMessage__body {
+    font-size: 11px;
+    line-height: 1.2
+}
+
+.dayMode .MessageThreadMessage__body {
+    color: #222
+}
+
+.nightMode .MessageThreadMessage__body {
+    color: #cfd0ca
+}
+
+.ReportingModalWrapper {
+    z-index: 40;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
+}
+
+.ReportingModal {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: auto 20px;
+    max-height: 360px
+}
+
+.dayMode .ReportingModal {
+    background-color: #fcfcfb
+}
+
+.nightMode .ReportingModal {
+    background-color: #000;
+    border: 1px solid #353535
+}
+
+.ReportingModal__title-bar {
+    text-align: center;
+    min-height: 35px;
+    line-height: 35px;
+    font-size: 13px
+}
+
+.dayMode .ReportingModal__title-bar {
+    border-bottom: 1px solid #ccccca;
+    background-color: #fff
+}
+
+.nightMode .ReportingModal__title-bar {
+    border-bottom: 1px solid #545452;
+    background-color: #000
+}
+
+.ReportingModal__options {
+    overflow: auto;
+    max-height: 275px;
+    padding: 10px 0 5px
+}
+
+.ReportingModal__option {
+    margin: 8px 18px;
+    line-height: 19px;
+    vertical-align: middle;
+    font-size: 15px;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.ReportingModal__option .icon {
+    margin-right: 6px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    -ms-flex: 0 0 20px;
+    flex: 0 0 20px
+}
+
+.ReportingModal__option .icon-check-circled {
+    color: #94e044
+}
+
+.ReportingModal__option .ReportingModal__option-content {
+    -ms-flex: 1 1;
+    flex: 1 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.ReportingModal__custom-text {
+    margin: 10px 0 5px;
+    border-radius: 0;
+    border: 1px solid #a5a4a4
+}
+
+.ReportingModal__custom-text::placeholder {
+    font-style: italic
+}
+
+.ReportingModal__submit {
+    height: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    margin: 0 15px
+}
+
+.ReportingModal__back-button,
+.ReportingModal__file-complaint-button,
+.ReportingModal__submit-button {
+    -ms-flex: 0 50%;
+    flex: 0 50%;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 0;
+    text-align: center
+}
+
+.ReportingModal__back-button.disabled,
+.ReportingModal__file-complaint-button.disabled,
+.ReportingModal__submit-button.disabled {
+    background-color: #a5a4a4 !important
+}
+
+.dayMode .ReportingModal__back-button,
+.dayMode .ReportingModal__file-complaint-button,
+.dayMode .ReportingModal__submit-button,
+.nightMode .ReportingModal__back-button,
+.nightMode .ReportingModal__file-complaint-button,
+.nightMode .ReportingModal__submit-button {
+    color: #fff;
+    background-color: #24a0ed
+}
+
+.ReportingModal__back-button {
+    margin-right: 7px
+}
+
+.ReportingModal__submit-button {
+    margin-left: 7px
+}
+
+.ReportingModal__file-complaint-button {
+    margin: 15px
+}
+
+.ReportingModal__file-complaint-button a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none
+}
+
+.dayMode .ReportingModal__file-complaint-button a,
+.nightMode .ReportingModal__file-complaint-button a {
+    color: #fff
+}
+
+.ReportingModal__file-prompt {
+    margin: 15px
+}
+
+.RulesModal {
+    z-index: 40;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
+}
+
+.RulesModal__title {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 8px
+}
+
+.RulesModal__modal {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: auto 20px;
+    padding: 8px
+}
+
+.dayMode .RulesModal__modal {
+    background-color: #fcfcfb
+}
+
+.nightMode .RulesModal__modal {
+    background-color: #000;
+    border: 1px solid #353535
+}
+
+.RulesModal__footerButtonRow {
+    display: -ms-flexbox;
+    display: flex
+}
+
+.RulesModal__button {
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    padding: 8px;
+    background-color: #efefed;
+    color: #545452;
+    margin: 4px
+}
+
+.RulesModal__acceptButton {
+    background-color: #24a0ed;
+    color: #fff
+}
+
+.RulesModal__rulesLink {
+    padding: 4px;
+    display: block
+}
+
+.RulesModal__rules {
+    padding: 4px;
+    border: 1px solid #efefed;
+    max-height: 50vh;
+    overflow: scroll
+}
+
+.RulesModal .SubredditRule {
+    padding: 4px 0
+}
+
+.RulesModal .SubredditRule__title {
+    font-size: 12px;
+    font-weight: 600
+}
+
+.RulesModal .SubredditRule__meta {
+    display: none
+}
+
+.RulesModal .SubredditRule__description {
+    font-size: 12px;
+    margin-left: 4px
+}
+
+.Place__container {
+    position: absolute;
+    top: 0;
+    padding-top: 48px;
+    width: 100%;
+    height: 100%
+}
+
+.Place__click {
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    height: 30%;
+    z-index: 10
+}
+
+.Place__container>iframe {
+    display: block;
+    width: 100%;
+    z-index: 0
+}
+
+.Place__iframe.large {
+    height: 100%
+}
+
+.Place__iframe.small {
+    height: 30%
+}
+
+.Place__loadingWrapper {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0
+}
+
+.Modal__menubar {
+    height: 48px;
+    line-height: 50px;
+    text-align: center
+}
+
+.dayMode .Modal__menubar {
+    background-color: #fff;
+    border-bottom: 1px solid #ccccca
+}
+
+.nightMode .Modal__menubar {
+    background-color: #000;
+    border-bottom: 1px solid #545452
+}
+
+.Modal__menubar-close {
+    position: absolute;
+    top: 15px;
+    left: 12px
+}
+
+.Modal__menubar-close:focus,
+.Modal__menubar-close:hover {
+    text-decoration: none
+}
+
+.Modal__menubar-text {
+    font-size: 17px;
+    font-weight: 300
+}
+
+.dayMode .Modal__menubar-text {
+    color: #353535
+}
+
+.nightMode .Modal__menubar-text {
+    color: #efefed
+}
+
+.Modal__body {
+    overflow: auto;
+    height: 100%
+}
+
+.dayMode .Modal__body {
+    background-color: #fcfcfb
+}
+
+.nightMode .Modal__body {
+    background-color: #000
+}
+
+.PostSubmitCommunity {
+    font-size: 16px
+}
+
+.PostSubmitCommunity__search {
+    margin: 5px 18px 0
+}
+
+.dayMode .PostSubmitCommunity__search {
+    border-bottom: 1px solid #ccccca
+}
+
+.nightMode .PostSubmitCommunity__search {
+    border-bottom: 1px solid #545452
+}
+
+.PostSubmitCommunity__search .icon {
+    display: inline-block;
+    float: left;
+    font-size: 22px;
+    margin-top: 7px
+}
+
+.PostSubmitCommunity__search-input {
+    overflow: hidden
+}
+
+.PostSubmitCommunity__search-input input {
+    padding: 10px 12px;
+    width: 100%
+}
+
+.dayMode .PostSubmitCommunity__search-input input {
+    color: #222
+}
+
+.nightMode .PostSubmitCommunity__search-input input {
+    color: #cfd0ca
+}
+
+.PostSubmitCommunity__search-input input:focus {
+    outline: none
+}
+
+.PostSubmitCommunity__subreddits-title {
+    padding: 9px 16px;
+    font-size: 14px
+}
+
+.dayMode .PostSubmitCommunity__subreddits-title {
+    border-bottom: 1px solid #efefed;
+    color: #a5a4a4
+}
+
+.nightMode .PostSubmitCommunity__subreddits-title {
+    border-bottom: 1px solid #353535;
+    color: #a5a4a4
+}
+
+.PostSubmitCommunity__subreddits-list {
+    padding: 15px 13px
+}
+
+.PostSubmitCommunity__subreddits-row {
+    display: block;
+    margin-bottom: 8px
+}
+
+.PostSubmitCommunity__subreddits-icon {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #24a0ed;
+    overflow: hidden;
+    vertical-align: middle
+}
+
+.PostSubmitCommunity__subreddits-icon-snoo {
+    background: url(https://www.redditstatic.com/mweb2x/img/snoo-64.png) no-repeat;
+    background-size: 100%;
+    width: 32px;
+    height: 32px
+}
+
+.PostSubmitCommunity__subreddits-name {
+    display: inline-block;
+    margin-left: 13px
+}
+
+.dayMode .PostSubmitCommunity__subreddits-name {
+    color: #222
+}
+
+.nightMode .PostSubmitCommunity__subreddits-name {
+    color: #cfd0ca
+}
+
+.ReCaptchaBox {
+    z-index: 40;
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    right: 20px;
+    border: 1px solid #000
+}
+
+.dayMode .ReCaptchaBox {
+    background-color: #fff
+}
+
+.nightMode .ReCaptchaBox {
+    background-color: #000
+}
+
+.ReCaptchaBox .icon {
+    display: inline-block;
+    margin-left: 7px;
+    margin-top: 7px
+}
+
+.ReCaptchaBox__question {
+    font-size: 16px;
+    margin: 10px
+}
+
+.ReCaptchaBox__captcha {
+    padding: 20px 0;
+    text-align: center;
+    vertical-align: middle
+}
+
+.ReCaptchaBox__submit {
+    margin: 20px auto;
+    display: block;
+    height: 32px;
+    width: 200px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.dayMode .ReCaptchaBox__submit,
+.nightMode .ReCaptchaBox__submit {
+    background-color: #24a0ed
+}
+
+.PostSubmitModal {
+    font-size: 16px
+}
+
+.PostSubmitModal__submit {
+    position: absolute;
+    top: 8px;
+    right: 8px
+}
+
+.PostSubmitModal__submit-button {
+    font-size: 14px;
+    height: 32px;
+    width: 64px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.dayMode .PostSubmitModal__submit-button {
+    background-color: #efefed
+}
+
+.nightMode .PostSubmitModal__submit-button {
+    background-color: #545452
+}
+
+.dayMode .PostSubmitModal__submit-button.ready,
+.nightMode .PostSubmitModal__submit-button.ready {
+    background-color: #24a0ed
+}
+
+.PostSubmitModal__community {
+    margin: 8px 12px 0;
+    padding-bottom: 7px
+}
+
+.dayMode .PostSubmitModal__community {
+    border-bottom: 1px solid #ccccca
+}
+
+.nightMode .PostSubmitModal__community {
+    border-bottom: 1px solid #545452
+}
+
+.PostSubmitModal__community-snoo-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: #24a0ed;
+    overflow: hidden
+}
+
+.PostSubmitModal__community-snoo {
+    background: url(https://www.redditstatic.com/mweb2x/img/snoo-64.png) no-repeat;
+    background-size: 100%;
+    width: 32px;
+    height: 32px
+}
+
+.PostSubmitModal__community-text {
+    display: inline-block;
+    line-height: 32px;
+    vertical-align: middle
+}
+
+.dayMode .PostSubmitModal__community-text {
+    color: #222
+}
+
+.nightMode .PostSubmitModal__community-text {
+    color: #cfd0ca
+}
+
+.PostSubmitModal__community-text.greyed {
+    color: #a5a4a4
+}
+
+.PostSubmitModal__community-text .icon {
+    margin-left: 6px;
+    margin-top: -4px;
+    display: inline-block
+}
+
+.PostSubmitModal__content,
+.PostSubmitModal__title {
+    margin: 0 12px
+}
+
+.PostSubmitModal__safeHarborText {
+    position: fixed;
+    margin: 0 12px;
+    bottom: 8px;
+    font-size: 13px;
+    color: #a4a7a8
+}
+
+.PostSubmitModal input:focus {
+    border-bottom: 1px solid #0dd3bb
+}
+
+.PostSubmitModal textarea {
+    resize: vertical
+}
+
+.PostSubmitModal input,
+.PostSubmitModal textarea {
+    padding: 14px;
+    width: 100%;
+    border-radius: 0
+}
+
+.dayMode .PostSubmitModal input,
+.dayMode .PostSubmitModal textarea {
+    color: #222;
+    border-bottom: 1px solid #ccccca
+}
+
+.nightMode .PostSubmitModal input,
+.nightMode .PostSubmitModal textarea {
+    color: #cfd0ca;
+    border-bottom: 1px solid #545452
+}
+
+.PostSubmitModal input:focus,
+.PostSubmitModal textarea:focus {
+    outline: none
+}
+
+.QuarantineInterstitial {
+    padding: 24px;
+    max-width: 400px;
+    margin: 0 auto
+}
+
+.QuarantineInterstitial__icon-wrapper {
+    margin: 0 auto;
+    height: 100px;
+    text-align: center
+}
+
+.QuarantineInterstitial__icon.icon {
+    font-size: 91px;
+    position: relative;
+    top: 45px;
+    color: #ffd635
+}
+
+.QuarantineInterstitial__buttons,
+.QuarantineInterstitial__header,
+.QuarantineInterstitial__text {
+    text-align: center
+}
+
+.QuarantineInterstitial__button,
+.QuarantineInterstitial__form {
+    display: inline-block
+}
+
+.QuarantineInterstitial__button {
+    background-color: #24a0ed;
+    vertical-align: middle;
+    padding: 5px 10px;
+    line-height: 1.5em;
+    cursor: pointer
+}
+
+.QuarantineInterstitial__button,
+.QuarantineInterstitial__button:hover,
+.QuarantineInterstitial__button:visited {
+    color: #fff !important;
+    text-decoration: none
+}
+
+.QuarantineInterstitial__form {
+    margin-left: 16px
+}
+
+.Toaster {
+    width: 100%;
+    position: fixed;
+    z-index: 50
+}
+
+.Toaster__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.dayMode .Toaster__content {
+    background-color: #545452
+}
+
+.nightMode .Toaster__content {
+    background-color: #efefed
+}
+
+.Toaster__icon-box {
+    width: 80px;
+    height: 80px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+.Toaster__icon-box.error {
+    background-color: #ea0027
+}
+
+.Toaster__icon-box.success {
+    background-color: #94e044
+}
+
+.Toaster__icon-box.report-success {
+    background-color: #ffd635
+}
+
+.Toaster__icon-box .icon {
+    line-height: 80px;
+    color: #fff
+}
+
+.Toaster__icon-box .icon-moose,
+.Toaster__icon-box .icon-snoo {
+    font-size: 65px
+}
+
+.Toaster__icon-box .icon-flag {
+    font-size: 75px
+}
+
+.Toaster__message {
+    display: inline-block;
+    padding: 15px;
+    padding-right: 0;
+    font-size: 15px
+}
+
+.dayMode .Toaster__message {
+    color: #fff
+}
+
+.nightMode .Toaster__message {
+    color: #000
+}
+
+.Toaster__close {
+    margin-left: auto;
+    margin-right: 5px;
+    padding: 10px
+}
+
+.ShareCTA {
+    z-index: 39;
+    position: fixed;
+    bottom: -270px;
+    height: 135px;
+    text-align: center;
+    transition: bottom .3s;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+.ShareCTA.visible {
+    bottom: 0
+}
+
+.ShareCTA__content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 8px
+}
+
+.ShareCTA__image {
+    opacity: .25;
+    width: 24px;
+    height: 24px;
+    margin-right: 4px
+}
+
+.ShareCTA__image.v2 {
+    margin-bottom: 6px;
+    opacity: .4
+}
+
+.ShareCTA__close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 24px;
+    cursor: pointer
+}
+
+.ShareCTA__header {
+    font-size: 22px;
+    color: #4a4a4a;
+    margin: 0 auto
+}
+
+.ShareCTA.pending .ShareCTA__target {
+    opacity: 0
+}
+
+.ShareCTA__target {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #9b9b9b;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity .5s
+}
+
+.ShareCTA.pending .ShareCTA__button {
+    opacity: .5
+}
+
+.ShareCTA__button {
+    background-color: #0079d3;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    line-height: 40px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .5s
+}
+
+.NavFrame__below-top-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: 48px
+}
+
+.NavFrame__below-top-nav.m-fsx {
+    padding-top: 0
+}
+
+.NavFrame__below-top-nav .NavFrame__banner {
+    margin-top: 0;
+    padding-top: 10px;
+    z-index: 1
+}
+
+.dayMode .NavFrame__below-top-nav .NavFrame__banner {
+    background-color: #fff
+}
+
+.nightMode .NavFrame__below-top-nav .NavFrame__banner {
+    background-color: #000
+}
+
+.DualPartInterstitial.xpromoMinimal,
+.xpromoMinimal .DualPartInterstitial {
+    z-index: 25;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transition-timing-function: cubic-bezier(.5, .1, .5, 1);
+    -webkit-transition-property: bottom;
+    -webkit-transition-duration: .8s;
+    -webkit-transition-delay: 0;
+    -moz-transition-property: bottom;
+    -moz-transition-duration: .8s;
+    -moz-transition-delay: 0;
+    -o-transition-property: bottom;
+    -o-transition-duration: .8s;
+    -o-transition-delay: 0;
+    -ms-transition-property: bottom;
+    -ms-transition-duration: .8s;
+    -ms-transition-delay: 0;
+    transition-property: bottom;
+    transition-duration: .8s;
+    transition-delay: 0
+}
+
+.DualPartInterstitial.xpromoMinimal.fadeOut,
+.xpromoMinimal .DualPartInterstitial.fadeOut {
+    bottom: -100%
+}
+
+.DualPartInterstitial.xpromoMinimal__common,
+.DualPartInterstitial.xpromoMinimal__content,
+.xpromoMinimal .DualPartInterstitial__common,
+.xpromoMinimal .DualPartInterstitial__content {
+    height: auto
+}
+
+.DualPartInterstitial.xpromoPersist,
+.xpromoPersist .DualPartInterstitial {
+    z-index: 25;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(.5, .1, .5, 1);
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .4s;
+    -webkit-transition-delay: 0;
+    -moz-transition-property: all;
+    -moz-transition-duration: .4s;
+    -moz-transition-delay: 0;
+    -o-transition-property: all;
+    -o-transition-duration: .4s;
+    -o-transition-delay: 0;
+    -ms-transition-property: all;
+    -ms-transition-duration: .4s;
+    -ms-transition-delay: 0;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-delay: 0
+}
+
+.DualPartInterstitial.xpromoPersist.fadeOut,
+.xpromoPersist .DualPartInterstitial.fadeOut {
+    bottom: -30%
+}
+
+.DualPartInterstitial.xpromoPersist.visiblePersist,
+.xpromoPersist .DualPartInterstitial.visiblePersist {
+    opacity: 1
+}
+
+.DualPartInterstitial.xpromoPersist__common,
+.DualPartInterstitial.xpromoPersist__content,
+.xpromoPersist .DualPartInterstitial__common,
+.xpromoPersist .DualPartInterstitial__content {
+    height: auto
+}
+
+.DualPartInterstitial.m-invisible,
+.m-invisible .DualPartInterstitial {
+    position: relative;
+    visibility: hidden
+}
+
+.DualPartInterstitial.m-invisible.fadeOut,
+.m-invisible .DualPartInterstitial.fadeOut {
+    display: none
+}
+
+.DualPartInterstitial__content {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden
+}
+
+.DualPartInterstitial__common {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%
+}
+
+.DualPartInterstitial__modalCover {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 39
+}
+
+.dayMode .DualPartInterstitial__modalCover {
+    background-color: rgba(0, 0, 0, .4)
+}
+
+.nightMode .DualPartInterstitial__modalCover {
+    background-color: rgba(0, 0, 0, .7)
+}
+
+.DualPartInterstitial__modal {
+    z-index: 40;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
+}
+
+.DualPartInterstitial__modalcontent {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: auto 20px;
+    margin-bottom: 8px;
+    height: 94vh;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative
+}
+
+.dayMode .DualPartInterstitial__modalcontent {
+    background-color: #fcfcfb
+}
+
+.nightMode .DualPartInterstitial__modalcontent {
+    background-color: #000;
+    border: 1px solid #353535
+}
+
+.DualPartInterstitial__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 4px;
+    font-size: 30px
+}
+
+.dayMode .DualPartInterstitial__close,
+.nightMode .DualPartInterstitial__close {
+    color: #222
+}
+
+.DualPartInterstitial__headerPlaceholder {
+    padding-bottom: 85%
+}
+
+.DualPartInterstitial+.TopNav {
+    position: relative;
+    z-index: 33
+}
+
+.DualPartInterstitial+.TopNav+.BelowTopNav {
+    margin-top: 0;
+    position: relative
+}
+
+.TransparentOverlay__overlay {
+    position: absolute;
+    z-index: 31;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 53, 53, .3)
+}
+
+.TransparentOverlay__childContainer {
+    height: 100%;
+    overflow: hidden;
+    padding-top: 48px
+}
+
+.DualPartInterstitialHeader.xpromoMinimal,
+.DualPartInterstitialHeader.xpromoPersist,
+.xpromoMinimal .DualPartInterstitialHeader,
+.xpromoPersist .DualPartInterstitialHeader {
+    display: none
+}
+
+.DualPartInterstitialHeader.m-invisible,
+.m-invisible .DualPartInterstitialHeader {
+    position: relative;
+    visibility: hidden
+}
+
+.DualPartInterstitialHeader.m-invisible.fadeOut,
+.m-invisible .DualPartInterstitialHeader.fadeOut {
+    display: none
+}
+
+.TopNav {
+    height: 48px;
+    position: fixed;
+    width: 100%;
+    z-index: 30;
+    -webkit-user-select: none;
+    top: 0
+}
+
+.dayMode .TopNav {
+    background-color: #fff
+}
+
+.nightMode .TopNav {
+    background-color: #000
+}
+
+.TopNav:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: .2s
+}
+
+.dayMode .TopNav:after {
+    background-color: #fff
+}
+
+.nightMode .TopNav:after {
+    background-color: #000
+}
+
+.dayMode .TopNav.headerUpdate,
+.nightMode .TopNav.headerUpdate {
+    background-color: #212a3b
+}
+
+.TopNav.headerUpdate:after {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2)
+}
+
+.dayMode .TopNav.headerUpdate:after,
+.nightMode .TopNav.headerUpdate:after {
+    background-color: #212a3b
+}
+
+.TopNav.headerUpdate.redesign:after {
+    box-shadow: none
+}
+
+.TopNav-list-container {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0 4px
+}
+
+.TopNav-left,
+.TopNav-list-container {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.TopNav-left {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto
+}
+
+.TopNav-left .Logo {
+    line-height: 48px
+}
+
+.TopNav-left .headerUpdate {
+    fill: #fff
+}
+
+.TopNav-snoo {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.TopNav-snoo .SnooIcon {
+    width: 30px;
+    height: 30px;
+    color: #ff4500;
+    line-height: 30px;
+    font-size: 30px
+}
+
+.TopNav-snoo .SnooIcon .SVG-fill {
+    fill: #ff4500 !important
+}
+
+.TopNav-padding,
+.TopNav .Dropdown {
+    padding: 0 4px
+}
+
+.MobileButton {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 5px;
+    position: relative
+}
+
+@media screen and (min-width:360px) {
+    .MobileButton {
+        padding: 0 8px
+    }
+}
+
+.MobileButton,
+.MobileButton:hover,
+.MobileButton:visited {
+    text-decoration: none
+}
+
+.MobileButton.community-button {
+    height: 24px;
+    width: 24px;
+    margin-left: 4px;
+    border-radius: 50%;
+    vertical-align: text-bottom
+}
+
+.MobileButton.community-button .icon-nav-arrowdown,
+.MobileButton.community-button .icon-nav-arrowup {
+    line-height: 1.3em
+}
+
+.MobileButton.community-button .icon-nav-arrowdown.headerUpdate,
+.MobileButton.community-button .icon-nav-arrowup.headerUpdate {
+    color: #fff
+}
+
+.dayMode .MobileButton.community-button {
+    border: 1px solid #ccccca
+}
+
+.nightMode .MobileButton.community-button {
+    border: 1px solid #545452
+}
+
+.MobileButton.community-button.hasHeaderNavUpdate {
+    border: 1px solid #fff
+}
+
+.MobileButton.twirlyIcon-open {
+    transform: rotate(180deg)
+}
+
+.MobileButton .icon-menu,
+.MobileButton .icon-nav-close,
+.MobileButton .icon-post_edit,
+.MobileButton .icon-search {
+    position: relative
+}
+
+.MobileButton .icon-menu.headerUpdate,
+.MobileButton .icon-nav-close.headerUpdate,
+.MobileButton .icon-post_edit.headerUpdate,
+.MobileButton .icon-search.headerUpdate {
+    color: #fff
+}
+
+.TopNav-text {
+    font-size: 21px;
+    margin: 0;
+    line-height: 48px;
+    display: inline-block
+}
+
+.dayMode .TopNav-text {
+    color: #222
+}
+
+.nightMode .TopNav-text {
+    color: #efefed
+}
+
+.TopNav-text .TopNav-text-vcentering {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    line-height: 100%
+}
+
+.TopNav-a,
+.TopNav-a:hover,
+.TopNav-a:visited {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    height: 100%
+}
+
+.dayMode .TopNav-a:active {
+    color: #ccccca
+}
+
+.nightMode .TopNav-a:active {
+    color: #545452
+}
+
+.TopNav-Mcdonalds {
+    height: 16px;
+    margin-top: 16px
+}
+
+@media screen and (max-width:320px) {
+    .TopNav-promoButton {
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto
+    }
+}
+
+.svg-menu-icon {
+    height: 20px;
+    position: relative;
+    width: 20px
+}
+
+.dayMode .svg-menu-icon {
+    fill: #ccccca
+}
+
+.nightMode .svg-menu-icon {
+    fill: #545452
+}
+
+.dayMode .svg-menu-icon.headerUpdate,
+.nightMode .svg-menu-icon.headerUpdate {
+    fill: #fff
+}
+
+.svg-menu-icon.active {
+    fill: #24a0ed
+}
+
+.svg-menu-icon.headerUpdate.active {
+    fill: #ff4500
+}
+
+.TopButton {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    padding: 6px 12px;
+    background-color: #0079d3;
+    color: #fff !important;
+    border-radius: 5px;
+    z-index: 10;
+    text-align: center
+}
+
+@media screen and (min-width:360px) {
+    .TopButton {
+        margin-right: 8px
+    }
+}
+
+.TopButton.headerUpdate {
+    border-radius: 20px;
+    background-color: #ff4500
+}
+
+.TopButton:active,
+.TopButton:hover,
+.TopButton:link,
+.Topbutton:visited {
+    text-decoration: none
+}
+
+.DualPartInterstitialFooter,
+.DualPartInterstitialFooter.xpromoMinimal,
+.xpromoMinimal .DualPartInterstitialFooter {
+    position: absolute;
+    padding-bottom: env(safe-area-inset-bottom);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 32;
+    color: #222;
+    background-color: #fff;
+    text-align: center
+}
+
+.DualPartInterstitialFooter.xpromoMinimal,
+.xpromoMinimal .DualPartInterstitialFooter {
+    background-color: #222
+}
+
+.DualPartInterstitialFooter.xpromoMinimal__subtitle,
+.xpromoMinimal .DualPartInterstitialFooter__subtitle {
+    color: #fff
+}
+
+.DualPartInterstitialFooter.xpromoMinimal__bulletList,
+.xpromoMinimal .DualPartInterstitialFooter__bulletList {
+    display: none
+}
+
+.DualPartInterstitialFooter.xpromoPersist,
+.xpromoPersist .DualPartInterstitialFooter {
+    position: absolute;
+    padding-bottom: env(safe-area-inset-bottom);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 32;
+    color: #222;
+    background-color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #222
+}
+
+.DualPartInterstitialFooter.xpromoPersist__bulletList,
+.DualPartInterstitialFooter.xpromoPersist__dismissal,
+.DualPartInterstitialFooter.xpromoPersist__subtitle,
+.xpromoPersist .DualPartInterstitialFooter__bulletList,
+.xpromoPersist .DualPartInterstitialFooter__dismissal,
+.xpromoPersist .DualPartInterstitialFooter__subtitle {
+    display: none
+}
+
+.DualPartInterstitialFooter.xpromoPersist__button,
+.xpromoPersist .DualPartInterstitialFooter__button {
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.DualPartInterstitialFooter.m-invisible,
+.m-invisible .DualPartInterstitialFooter {
+    position: relative;
+    visibility: hidden
+}
+
+.DualPartInterstitialFooter.m-invisible.fadeOut,
+.m-invisible .DualPartInterstitialFooter.fadeOut {
+    display: none
+}
+
+.DualPartInterstitialFooter__subtitle {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 16px auto;
+    padding: 0 8px;
+    text-align: center
+}
+
+@media (max-width:320px) {
+    .DualPartInterstitialFooter__subtitle {
+        font-size: 20px;
+        line-height: 22px
+    }
+}
+
+.DualPartInterstitialFooter__content {
+    margin: auto;
+    padding: 0 16px 16px
+}
+
+.DualPartInterstitialFooter__bulletList {
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 8px auto;
+    width: 140px;
+    text-align: left
+}
+
+.DualPartInterstitialFooter__bulletItem {
+    font-size: 17px;
+    line-height: 30px;
+    display: -ms-flexbox;
+    display: flex
+}
+
+@media (max-height:500px) {
+    .DualPartInterstitialFooter__bulletItem:nth-child(n+2) {
+        display: none
+    }
+}
+
+.DualPartInterstitialFooter__bulletIcon {
+    display: inline-block;
+    width: 32px;
+    text-align: left
+}
+
+.DualPartInterstitialFooter__bulletIcon.icon {
+    line-height: 30px;
+    color: #0dd3bb
+}
+
+.DualPartInterstitialFooter__bulletIcon.icon-compact {
+    position: relative;
+    left: -2px
+}
+
+.DualPartInterstitialFooter__dismissalLink,
+.DualPartInterstitialFooter__dismissalLink:hover,
+.DualPartInterstitialFooter__dismissalLink:visited {
+    text-decoration: underline
+}
+
+.dayMode .DualPartInterstitialFooter__dismissalLink,
+.dayMode .DualPartInterstitialFooter__dismissalLink:hover,
+.dayMode .DualPartInterstitialFooter__dismissalLink:visited,
+.nightMode .DualPartInterstitialFooter__dismissalLink,
+.nightMode .DualPartInterstitialFooter__dismissalLink:hover,
+.nightMode .DualPartInterstitialFooter__dismissalLink:visited {
+    color: #a5a4a4
+}
+
+.DualPartInterstitialFooter__dismissalLink:after {
+    content: "";
+    padding: 20px 100px;
+    position: absolute;
+    left: -28%;
+    top: -72%
+}
+
+.DualPartInterstitialFooter__dismissalText {
+    position: relative;
+    right: -16px
+}
+
+.DualPartInterstitialFooter__dismissal {
+    margin-top: 8px;
+    color: #a5a4a4
+}
+
+.EUCookieNotice {
+    padding: 8px
+}
+
+.EUCookieNotice__content {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+    padding: 4px 16px 4px 8px;
+    position: relative;
+    border-radius: 3px
+}
+
+.dayMode .EUCookieNotice__content {
+    border: 1px solid #efefed
+}
+
+.nightMode .EUCookieNotice__content {
+    border: 1px solid #353535
+}
+
+.EUCookieNotice__close {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.EUCookieNotice__link {
+    margin-left: 2px
+}
+
+.SnackBar {
+    height: 140px;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 0 12px 3px rgba(0, 0, 0, .2);
+    transition: bottom .3s
+}
+
+.SnackBar__backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.SnackBar.dismissed {
+    bottom: -200px
+}
+
+.SnackBar__header {
+    padding: 8px;
+    padding-bottom: 0;
+    position: relative;
+    text-align: left;
+    color: #4a4a4a;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 34px
+}
+
+.SnackBar__body {
+    margin-top: -4px;
+    padding: 8px 48px;
+    padding-top: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #9b9b9b
+}
+
+.SnackBar__buttons {
+    position: absolute;
+    right: 8px;
+    bottom: 8px
+}
+
+.SnackBar__button {
+    width: 140px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 8px;
+    font-weight: 700;
+    text-align: center
+}
+
+.SnackBar__yes,
+.SnackBar__yes:active,
+.SnackBar__yes:link,
+.SnackBar__yes:visited {
+    border: 1px solid #0079d3;
+    background-color: #0079d3;
+    color: #fff;
+    margin-left: 8px
+}
+
+.SnackBar__no {
+    color: #0079d3;
+    background-color: transparent;
+    margin-left: 8px
+}
+
+.SnackBar__text {
+    margin-left: 40px
+}
+
+.SnackBar .SnooIcon {
+    width: 32px;
+    height: 32px;
+    position: absolute
+}
+
+.xPromoAppStoreFooter {
+    background-color: #000;
+    border-top: 1px solid;
+    color: #fff;
+    text-align: center;
+    z-index: 1
+}
+
+.dayMode .xPromoAppStoreFooter {
+    border-top-color: #efefed
+}
+
+.nightMode .xPromoAppStoreFooter {
+    border-top-color: #545452
+}
+
+.xPromoAppStoreFooter__header {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 16px 0;
+    width: 200px
+}
+
+.xPromoAppStoreFooter__appButton {
+    height: 50px;
+    margin-bottom: 32px;
+    width: 150px
+}
+
+.xPromoAppStoreFooter__appButton.large {
+    width: 190px
+}
+
+.xPromoAppStoreFooter__appButton.m-safari {
+    margin-bottom: 76px
+}
+
+.xPromoChoiceBanner {
+    border-top: 1px solid;
+    padding: 12px 12px 20px;
+    z-index: 1
+}
+
+.dayMode .xPromoChoiceBanner {
+    background-color: #fff;
+    border-color: #efefed
+}
+
+.nightMode .xPromoChoiceBanner {
+    background-color: #000;
+    border-color: #353535
+}
+
+.xPromoChoiceBanner__header {
+    display: -ms-flexbox;
+    display: flex
+}
+
+.xPromoChoiceBanner__image {
+    background-color: #fff;
+    border: 1px solid #edeff1;
+    border-radius: 18px;
+    display: inline-block;
+    height: 64px;
+    padding: 5px;
+    width: 64px
+}
+
+.xPromoChoiceBanner__image .SnooIcon {
+    height: 52px;
+    width: 52px
+}
+
+.xPromoChoiceBanner__title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    margin: auto 0;
+    padding: 0 8px
+}
+
+.dayMode .xPromoChoiceBanner__title {
+    color: #1a1a1b
+}
+
+.nightMode .xPromoChoiceBanner__title {
+    color: #cfd0ca
+}
+
+.xPromoChoiceBanner__link,
+.xPromoChoiceBanner__link:active,
+.xPromoChoiceBanner__link:visited {
+    text-decoration: none
+}
+
+.dayMode .xPromoChoiceBanner__link,
+.dayMode .xPromoChoiceBanner__link:active,
+.dayMode .xPromoChoiceBanner__link:visited,
+.nightMode .xPromoChoiceBanner__link,
+.nightMode .xPromoChoiceBanner__link:active,
+.nightMode .xPromoChoiceBanner__link:visited {
+    color: #fff
+}
+
+.xPromoChoiceBanner__link {
+    background-color: #017aff;
+    border: 1px solid #017aff;
+    border-radius: 16px;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 34px;
+    margin-top: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%
+}
+
+.xPromoChoiceBanner__link.secondary,
+.xPromoChoiceBanner__link.secondary:active,
+.xPromoChoiceBanner__link.secondary:visited {
+    background-color: transparent
+}
+
+.dayMode .xPromoChoiceBanner__link.secondary,
+.dayMode .xPromoChoiceBanner__link.secondary:active,
+.dayMode .xPromoChoiceBanner__link.secondary:visited {
+    color: #017aff
+}
+
+.nightMode .xPromoChoiceBanner__link.secondary,
+.nightMode .xPromoChoiceBanner__link.secondary:active,
+.nightMode .xPromoChoiceBanner__link.secondary:visited {
+    border-color: #cfd0ca;
+    color: #cfd0ca
+}
+
+.rpan {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: auto;
+    margin-top: auto;
+    padding: 24px
+}
+
+.rpan__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 8px 0 4px
+}
+
+.rpan__description {
+    margin-bottom: 8px
+}
+
+.rpan__button,
+.rpan__description {
+    font-weight: 700;
+    text-align: center
+}
+
+.rpan__button {
+    background-color: #0079d3;
+    border-radius: 5px;
+    display: block;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 16px;
+    padding: 0 20px;
+    text-transform: uppercase
+}
+
+.dayMode .rpan__button,
+.nightMode .rpan__button {
+    color: #fff
+}
+
+.rpan .rpanIcon {
+    border-radius: 4px;
+    background-color: #000;
+    fill: #ff4500;
+    height: 24px;
+    padding: 3px;
+    width: 24px
+}
+
+.OverlayMenu-visible {
+    overflow: hidden
+}
+
+.OverlayMenu {
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 48px;
+    font-size: 16px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
+}
+
+.OverlayMenu.m-with-top-nav {
+    top: 48px
+}
+
+.dayMode .OverlayMenu {
+    background-color: rgba(0, 0, 0, .4)
+}
+
+.nightMode .OverlayMenu {
+    background-color: rgba(0, 0, 0, .7)
+}
+
+.OverlayMenu-ul {
+    margin-bottom: 0;
+    z-index: 30
+}
+
+.OverlayMenu-row {
+    transform: translateZ(0);
+    position: relative
+}
+
+.dayMode .OverlayMenu-row {
+    background-color: #fff
+}
+
+.nightMode .OverlayMenu-row {
+    background-color: #000
+}
+
+.OverlayMenu-row.top-border:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8px;
+    right: 8px;
+    height: 1px
+}
+
+.dayMode .OverlayMenu-row.top-border:before {
+    background: #efefed
+}
+
+.nightMode .OverlayMenu-row.top-border:before {
+    background: #353535
+}
+
+.OverlayMenu-row.bottom-border:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+    height: 1px
+}
+
+.dayMode .OverlayMenu-row.bottom-border:after {
+    background: #efefed
+}
+
+.nightMode .OverlayMenu-row.bottom-border:after {
+    background: #353535
+}
+
+.OverlayMenu-row .OverlayMenu-icon,
+.OverlayMenu-row .OverlayMenu-row-spacer,
+.OverlayMenu-row .SVG-icon {
+    display: inline-block
+}
+
+.OverlayMenu-row .OverlayMenu-row-spacer {
+    width: 64px;
+    text-align: center
+}
+
+.OverlayMenu-row .badge-with-spacing {
+    margin-left: 4px
+}
+
+.OverlayMenu-icon-img {
+    background-repeat: none;
+    background-size: cover;
+    background-position: 0 0;
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+    border-radius: 32px
+}
+
+.OverlayMenu-row-right-item {
+    position: absolute;
+    right: 24px;
+    top: 1.25em;
+    font-size: 14px
+}
+
+.OverlayMenu-row-right-item,
+.OverlayMenu-row-right-item:hover,
+.OverlayMenu-row-right-item:visited {
+    text-decoration: none
+}
+
+.dayMode .OverlayMenu-row-right-item,
+.dayMode .OverlayMenu-row-right-item:hover,
+.dayMode .OverlayMenu-row-right-item:visited,
+.nightMode .OverlayMenu-row-right-item,
+.nightMode .OverlayMenu-row-right-item:hover,
+.nightMode .OverlayMenu-row-right-item:visited {
+    color: #a5a4a4
+}
+
+.OverlayMenu-row-button,
+.OverlayMenu-row-text {
+    height: 48px;
+    line-height: 48px
+}
+
+.dayMode .OverlayMenu-row-button,
+.dayMode .OverlayMenu-row-text {
+    color: #222
+}
+
+.nightMode .OverlayMenu-row-button,
+.nightMode .OverlayMenu-row-text {
+    color: #cfd0ca
+}
+
+.OverlayMenu-row-text {
+    vertical-align: middle
+}
+
+.OverlayMenu-row-text.with-subtext {
+    line-height: 16px
+}
+
+.OverlayMenu-row-text .subtext,
+.OverlayMenu-row-text.with-subtext {
+    padding-left: 16px
+}
+
+.OverlayMenu-row-text .subtext {
+    font-size: 14px;
+    line-height: 14px
+}
+
+.dayMode .OverlayMenu-row-text .subtext,
+.nightMode .OverlayMenu-row-text .subtext {
+    color: #a5a4a4
+}
+
+.OverlayMenu-row-button {
+    width: 100%;
+    display: block;
+    padding: 0;
+    text-align: left
+}
+
+.OverlayMenu-row-button:hover,
+.OverlayMenu-row-button:visited {
+    color: inherit;
+    text-decoration: none
+}
+
+.OverlayMenu-icon-following-snoo {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-image: url(https://www.redditstatic.com/mweb2x/img/snoo-64.png);
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: -1px 5px;
+    vertical-align: middle
+}
+
+.dayMode .OverlayMenu-icon-following-snoo {
+    background-color: #24a0ed
+}
+
+.nightMode .OverlayMenu-icon-following-snoo {
+    border: 1px solid #24a0ed
+}
+
+.OverlayMenu-form {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0
+}
+
+.OverlayMenu-form-input-group {
+    display: table;
+    width: 100%
+}
+
+.OverlayMenu-form-input {
+    display: table-cell;
+    width: 100%;
+    line-height: 48px;
+    border-width: 0;
+    outline: 0
+}
+
+.OverlayMenu-form-button {
+    text-align: right
+}
+
+.OverlayMenu-form-button,
+.OverlayMenu-form-label {
+    display: table-cell;
+    line-height: 48px
+}
+
+.OverlayMenu-form-label.r-label {
+    width: 8px
+}
+
+.SearchBar {
+    position: relative;
+    height: 100%
+}
+
+.SearchBar.headerUpdate {
+    height: auto
+}
+
+.SearchBar__input {
+    width: 100%;
+    height: 100%;
+    padding: 0 56px 0 16px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 0
+}
+
+.SearchBar__input.headerUpdate {
+    border: 1px solid #cecece;
+    border-radius: 32px;
+    box-sizing: border-box;
+    height: 32px;
+    margin: 8px 0;
+    padding-left: 16px
+}
+
+.SearchBar__reset {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    top: 50%;
+    right: 12px;
+    margin-top: -16px;
+    text-align: center
+}
+
+.SearchBar__reset[class*=" icon-"] {
+    font-size: 16px;
+    line-height: 32px;
+    color: #a5a4a4
+}
+
+.Search-row-container {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 16px;
+    padding-right: 20px
+}
+
+.Search-bar {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    padding: 0
+}
+
+.Close-button {
+    margin-left: 20px;
+    padding: 0;
+    width: 16px
+}
+
+.SearchBarOverlay {
+    height: 100%
+}
+
+.SearchBarOverlay__searchArea {
+    display: table;
+    height: 48px
+}
+
+.dayMode .SearchBarOverlay__searchArea {
+    background-color: #fff
+}
+
+.nightMode .SearchBarOverlay__searchArea {
+    background-color: #000
+}
+
+.SearchBarOverlay__barContainer,
+.SearchBarOverlay__close {
+    display: table-cell
+}
+
+.SearchBarOverlay__close {
+    padding-left: 16px;
+    vertical-align: middle
+}
+
+.SearchBarOverlay__close .icon {
+    font-size: 20px;
+    line-height: 21px
+}
+
+.SearchBarOverlay__barContainer {
+    width: 100%
+}
+
+.CustomAdFlair {
+    border-radius: 4px;
+    background: #24a0ed;
+    color: #fff;
+    font-size: 12px;
+    display: inline;
+    padding-left: 2px;
+    padding-right: 2px
+}
+
+.ClaimCheeseburger__right {
+    float: right;
+    margin-right: 10px
+}
+
+.PostSubmitOverlay {
+    height: 108px;
+    text-align: center;
+    position: relative
+}
+
+.dayMode .PostSubmitOverlay {
+    background-color: #fff;
+    border-top: 1px solid #efefed
+}
+
+.nightMode .PostSubmitOverlay {
+    background-color: #000;
+    border-top: 1px solid #353535
+}
+
+.PostSubmitOverlay__icons {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.PostSubmitOverlay__icon {
+    display: inline-block;
+    width: 33%
+}
+
+.PostSubmitOverlay__icon:focus,
+.PostSubmitOverlay__icon:hover {
+    text-decoration: none
+}
+
+.PostSubmitOverlay__icon-text {
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 2px
+}
+
+.dayMode .PostSubmitOverlay__icon-text,
+.nightMode .PostSubmitOverlay__icon-text {
+    color: #a5a4a4
+}
+
+.PostSubmitOverlay .icon {
+    position: relative;
+    top: 20px;
+    height: 60px;
+    font-size: 60px;
+    color: #24a0ed
+}
+
+.Notification.hidden {
+    opacity: 0;
+    pointer-events: none
+}
+
+.Notification {
+    transition: opacity .3s;
+    opacity: 1;
+    width: 98%;
+    position: fixed;
+    left: 1%;
+    top: 2%;
+    z-index: 99;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px
+}
+
+.Notification__close.icon {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    font-size: 16px;
+    color: #000
+}
+
+.Notification__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 8px;
+    color: #484c4f
+}
+
+.Notification__content {
+    margin-top: 16px;
+    text-align: center;
+    color: #484c4f
+}
+
+.Notification__button {
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 16px;
+    margin-bottom: 1%;
+    font-weight: 700;
+    background-color: #0079d3;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    text-align: center
+}
+
+/*# sourceMappingURL=Mweb.762011172249624b854d.css.map*/

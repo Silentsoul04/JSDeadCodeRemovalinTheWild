@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+        ! function(t) {
+            var r = {};
+
+            function o(e) {
+                if (r[e]) return r[e].exports;
+                var n = r[e] = {
+                    i: e,
+                    l: !1,
+                    exports: {}
+                };
+                return t[e].call(n.exports, n, n.exports, o), n.l = !0, n.exports
+            }
+            o.m = t, o.c = r, o.d = function(e, n, t) {
+                o.o(e, n) || Object.defineProperty(e, n, {
+                    configurable: !1,
+                    enumerable: !0,
+                    get: t
+                })
+            }, o.n = function(e) {
+                var n = e && e.__esModule ? function() {
+                    return e.default
+                } : function() {
+                    return e
+                };
+                return o.d(n, "a", n), n
+            }, o.o = function(e, n) {
+                return Object.prototype.hasOwnProperty.call(e, n)
+            }, o.p = "/", o(o.s = 21)
+        }({
+            21: function(e, n, t) {
+                "use strict";
+                Object.defineProperty(n, "__esModule", {
+                    value: !0
+                });
+                var r = t(22),
+                    d = t.n(r);
+                ! function() {
+                    var i = "APID",
+                        s = "CM",
+                        u = 316224e5;
+
+                    function a(e) {
+                        var n, t, c, r, o = (n = i, (t = document.cookie.match("(^|;) ?" + n + "=([^;]*)(;|$)")) ? t[2] : null);
+                        o ? e(o) : (c = e, r = function(e) {
+                            if (!1 === e) c();
+                            else {
+                                var n = s + d()();
+                                t = i, r = n, o = u, (a = new Date).setTime(a.getTime() + o), document.cookie = t + "=" + r + ";Domain=advertising.com;path=/;expires=" + a.toGMTString(), c(n)
+                            }
+                            var t, r, o, a
+                        }, "function" == typeof document.hasStorageAccess ? document.hasStorageAccess().then(function(e) {
+                            r(e)
+                        }) : r(!0))
+                    }
+
+                    function e(e) {
+                        var n = e.data || "";
+                        try {
+                            n = JSON.parse(e.data)
+                        } catch (e) {}
+                        var t = n.__cmpApidCall;
+                        if (t) {
+                            var r = t.command,
+                                o = t.callId;
+                            "getApid" === r && a(function(e) {
+                                var n;
+                                n = {
+                                    __cmpApidReturn: {
+                                        returnValue: e,
+                                        success: !!e,
+                                        callId: o
+                                    }
+                                }, window.parent.postMessage(JSON.stringify(n), "*")
+                            })
+                        }
+                    }
+                    window.addEventListener ? window.addEventListener("message", e, !1) : window.attachEvent("onmessage", e)
+                }()
+            },
+            22: function(e, n, t) {
+                var v, m, y = t(23),
+                    g = t(24),
+                    w = 0,
+                    h = 0;
+                e.exports = function(e, n, t) {
+                    var r = n && t || 0,
+                        o = n || [],
+                        a = (e = e || {}).node || v,
+                        c = void 0 !== e.clockseq ? e.clockseq : m;
+                    if (null == a || null == c) {
+                        var i = y();
+                        null == a && (a = v = [1 | i[0], i[1], i[2], i[3], i[4], i[5]]), null == c && (c = m = 16383 & (i[6] << 8 | i[7]))
+                    }
+                    var s = void 0 !== e.msecs ? e.msecs : (new Date).getTime(),
+                        u = void 0 !== e.nsecs ? e.nsecs : h + 1,
+                        d = s - w + (u - h) / 1e4;
+                    if (d < 0 && void 0 === e.clockseq && (c = c + 1 & 16383), (d < 0 || w < s) && void 0 === e.nsecs && (u = 0), 1e4 <= u) throw new Error("uuid.v1(): Can't create more than 10M uuids/sec");
+                    w = s, m = c;
+                    var f = (1e4 * (268435455 & (s += 122192928e5)) + (h = u)) % 4294967296;
+                    o[r++] = f >>> 24 & 255, o[r++] = f >>> 16 & 255, o[r++] = f >>> 8 & 255, o[r++] = 255 & f;
+                    var l = s / 4294967296 * 1e4 & 268435455;
+                    o[r++] = l >>> 8 & 255, o[r++] = 255 & l, o[r++] = l >>> 24 & 15 | 16, o[r++] = l >>> 16 & 255, o[r++] = c >>> 8 | 128, o[r++] = 255 & c;
+                    for (var p = 0; p < 6; ++p) o[r + p] = a[p];
+                    return n || g(o)
+                }
+            },
+            23: function(e, n) {
+                var t = "undefined" != typeof crypto && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || "undefined" != typeof msCrypto && "function" == typeof window.msCrypto.getRandomValues && msCrypto.getRandomValues.bind(msCrypto);
+                if (t) {
+                    var r = new Uint8Array(16);
+                    e.exports = function() {
+                        return t(r), r
+                    }
+                } else {
+                    var o = new Array(16);
+                    e.exports = function() {
+                        for (var e, n = 0; n < 16; n++) 0 == (3 & n) && (e = 4294967296 * Math.random()), o[n] = e >>> ((3 & n) << 3) & 255;
+                        return o
+                    }
+                }
+            },
+            24: function(e, n) {
+                for (var o = [], t = 0; t < 256; ++t) o[t] = (t + 256).toString(16).substr(1);
+                e.exports = function(e, n) {
+                    var t = n || 0,
+                        r = o;
+                    return [r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]]].join("")
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
