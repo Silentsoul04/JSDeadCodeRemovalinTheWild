@@ -1,0 +1,3 @@
+
+    window['ytInitialGuideDataPresent'] = true;
+  

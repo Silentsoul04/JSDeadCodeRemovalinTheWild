@@ -1,0 +1,5355 @@
+{
+    "runDate": "2019-10-09T21:23:49.893Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages1/www.wikipedia.org/0",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 0,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages1/www.wikipedia.org/0"
+    },
+    "graphStats": {
+        "connectedNodes": 83,
+        "disconnectedNodes": 64,
+        "nodes": 147,
+        "files": 4
+    },
+    "deadFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                386,
+                398
+            ],
+            "bodyRange": [
+                396,
+                398
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 2,
+            "start": {
+                "line": 1,
+                "column": 386
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                886,
+                929
+            ],
+            "bodyRange": [
+                901,
+                929
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 7,
+            "start": {
+                "line": 1,
+                "column": 886
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1000,
+                1047
+            ],
+            "bodyRange": [
+                1011,
+                1047
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 8,
+            "start": {
+                "line": 1,
+                "column": 1000
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1131,
+                1209
+            ],
+            "bodyRange": [
+                1142,
+                1209
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 9,
+            "start": {
+                "line": 1,
+                "column": 1131
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1253,
+                1721
+            ],
+            "bodyRange": [
+                1266,
+                1721
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 10,
+            "start": {
+                "line": 1,
+                "column": 1253
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                940,
+                1722
+            ],
+            "bodyRange": [
+                950,
+                1722
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 11,
+            "start": {
+                "line": 1,
+                "column": 940
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1777,
+                2057
+            ],
+            "bodyRange": [
+                1790,
+                2057
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 12,
+            "start": {
+                "line": 1,
+                "column": 1777
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2186,
+                2426
+            ],
+            "bodyRange": [
+                2205,
+                2426
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 13,
+            "start": {
+                "line": 1,
+                "column": 2186
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2479,
+                2552
+            ],
+            "bodyRange": [
+                2490,
+                2552
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 15,
+            "start": {
+                "line": 1,
+                "column": 2479
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2790,
+                2802
+            ],
+            "bodyRange": [
+                2800,
+                2802
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 16,
+            "start": {
+                "line": 1,
+                "column": 2790
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2805,
+                2905
+            ],
+            "bodyRange": [
+                2815,
+                2905
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 17,
+            "start": {
+                "line": 1,
+                "column": 2805
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2604,
+                2978
+            ],
+            "bodyRange": [
+                2615,
+                2978
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 18,
+            "start": {
+                "line": 1,
+                "column": 2604
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3313,
+                3348
+            ],
+            "bodyRange": [
+                3323,
+                3348
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 19,
+            "start": {
+                "line": 1,
+                "column": 3313
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3353,
+                3391
+            ],
+            "bodyRange": [
+                3364,
+                3391
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 20,
+            "start": {
+                "line": 1,
+                "column": 3353
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3174,
+                3394
+            ],
+            "bodyRange": [
+                3184,
+                3394
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 21,
+            "start": {
+                "line": 1,
+                "column": 3174
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3468,
+                3598
+            ],
+            "bodyRange": [
+                3481,
+                3598
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 22,
+            "start": {
+                "line": 1,
+                "column": 3468
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3641,
+                3773
+            ],
+            "bodyRange": [
+                3651,
+                3773
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 23,
+            "start": {
+                "line": 1,
+                "column": 3641
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3802,
+                3840
+            ],
+            "bodyRange": [
+                3812,
+                3840
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 24,
+            "start": {
+                "line": 1,
+                "column": 3802
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3905,
+                3979
+            ],
+            "bodyRange": [
+                3915,
+                3979
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 25,
+            "start": {
+                "line": 1,
+                "column": 3905
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3987,
+                4192
+            ],
+            "bodyRange": [
+                3997,
+                4192
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 26,
+            "start": {
+                "line": 1,
+                "column": 3987
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3852,
+                4193
+            ],
+            "bodyRange": [
+                3867,
+                4193
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 27,
+            "start": {
+                "line": 1,
+                "column": 3852
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4237,
+                4337
+            ],
+            "bodyRange": [
+                4247,
+                4337
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 28,
+            "start": {
+                "line": 1,
+                "column": 4237
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4345,
+                4458
+            ],
+            "bodyRange": [
+                4355,
+                4458
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 29,
+            "start": {
+                "line": 1,
+                "column": 4345
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                4493,
+                4628
+            ],
+            "bodyRange": [
+                4506,
+                4628
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 31,
+            "start": {
+                "line": 1,
+                "column": 4493
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4642,
+                4685
+            ],
+            "bodyRange": [
+                4653,
+                4685
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 32,
+            "start": {
+                "line": 1,
+                "column": 4642
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4694,
+                5241
+            ],
+            "bodyRange": [
+                4709,
+                5241
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 33,
+            "start": {
+                "line": 1,
+                "column": 4694
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5246,
+                5271
+            ],
+            "bodyRange": [
+                5257,
+                5271
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 34,
+            "start": {
+                "line": 1,
+                "column": 5246
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5278,
+                5303
+            ],
+            "bodyRange": [
+                5289,
+                5303
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 35,
+            "start": {
+                "line": 1,
+                "column": 5278
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5681,
+                5744
+            ],
+            "bodyRange": [
+                5692,
+                5744
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 41,
+            "start": {
+                "line": 1,
+                "column": 5681
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6895,
+                7073
+            ],
+            "bodyRange": [
+                6908,
+                7073
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 51,
+            "start": {
+                "line": 1,
+                "column": 6895
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7079,
+                7091
+            ],
+            "bodyRange": [
+                7089,
+                7091
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 52,
+            "start": {
+                "line": 1,
+                "column": 7079
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7219,
+                7302
+            ],
+            "bodyRange": [
+                7232,
+                7302
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 53,
+            "start": {
+                "line": 1,
+                "column": 7219
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7628,
+                8070
+            ],
+            "bodyRange": [
+                7641,
+                8070
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 55,
+            "start": {
+                "line": 1,
+                "column": 7628
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8079,
+                8285
+            ],
+            "bodyRange": [
+                8092,
+                8285
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 56,
+            "start": {
+                "line": 1,
+                "column": 8079
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8300,
+                8375
+            ],
+            "bodyRange": [
+                8311,
+                8375
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 57,
+            "start": {
+                "line": 1,
+                "column": 8300
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8454,
+                8505
+            ],
+            "bodyRange": [
+                8465,
+                8505
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 58,
+            "start": {
+                "line": 1,
+                "column": 8454
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8506,
+                8554
+            ],
+            "bodyRange": [
+                8517,
+                8554
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 59,
+            "start": {
+                "line": 1,
+                "column": 8506
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8564,
+                8661
+            ],
+            "bodyRange": [
+                8577,
+                8661
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 60,
+            "start": {
+                "line": 1,
+                "column": 8564
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                10346,
+                10407
+            ],
+            "bodyRange": [
+                10358,
+                10407
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 70,
+            "start": {
+                "line": 1,
+                "column": 10346
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                10407,
+                10762
+            ],
+            "bodyRange": [
+                10420,
+                10762
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 71,
+            "start": {
+                "line": 1,
+                "column": 10407
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                10762,
+                11003
+            ],
+            "bodyRange": [
+                10775,
+                11003
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 72,
+            "start": {
+                "line": 1,
+                "column": 10762
+            },
+            "functionName": "i"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                13267,
+                13365
+            ],
+            "bodyRange": [
+                13277,
+                13365
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 76,
+            "start": {
+                "line": 1,
+                "column": 13267
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                14139,
+                14416
+            ],
+            "bodyRange": [
+                14154,
+                14416
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 80,
+            "start": {
+                "line": 1,
+                "column": 14139
+            },
+            "functionName": "i"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                14416,
+                15234
+            ],
+            "bodyRange": [
+                14429,
+                15234
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 81,
+            "start": {
+                "line": 1,
+                "column": 14416
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                15990,
+                16033
+            ],
+            "bodyRange": [
+                16000,
+                16033
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 84,
+            "start": {
+                "line": 1,
+                "column": 15990
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16046,
+                16114
+            ],
+            "bodyRange": [
+                16057,
+                16114
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 85,
+            "start": {
+                "line": 1,
+                "column": 16046
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16135,
+                16168
+            ],
+            "bodyRange": [
+                16146,
+                16168
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 86,
+            "start": {
+                "line": 1,
+                "column": 16135
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16189,
+                16330
+            ],
+            "bodyRange": [
+                16200,
+                16330
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 87,
+            "start": {
+                "line": 1,
+                "column": 16189
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16357,
+                16380
+            ],
+            "bodyRange": [
+                16368,
+                16380
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 88,
+            "start": {
+                "line": 1,
+                "column": 16357
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16391,
+                16515
+            ],
+            "bodyRange": [
+                16402,
+                16515
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 89,
+            "start": {
+                "line": 1,
+                "column": 16391
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16525,
+                16585
+            ],
+            "bodyRange": [
+                16536,
+                16585
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 90,
+            "start": {
+                "line": 1,
+                "column": 16525
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16592,
+                16621
+            ],
+            "bodyRange": [
+                16602,
+                16621
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 91,
+            "start": {
+                "line": 1,
+                "column": 16592
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16697,
+                17053
+            ],
+            "bodyRange": [
+                16708,
+                17053
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 92,
+            "start": {
+                "line": 1,
+                "column": 16697
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16655,
+                17054
+            ],
+            "bodyRange": [
+                16666,
+                17054
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 93,
+            "start": {
+                "line": 1,
+                "column": 16655
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                17097,
+                17118
+            ],
+            "bodyRange": [
+                17108,
+                17118
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 94,
+            "start": {
+                "line": 1,
+                "column": 17097
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                17316,
+                17392
+            ],
+            "bodyRange": [
+                17326,
+                17392
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 96,
+            "start": {
+                "line": 1,
+                "column": 17316
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                18658,
+                18833
+            ],
+            "bodyRange": [
+                18668,
+                18833
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 103,
+            "start": {
+                "line": 1,
+                "column": 18658
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                21406,
+                21704
+            ],
+            "bodyRange": [
+                21421,
+                21704
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 118,
+            "start": {
+                "line": 1,
+                "column": 21406
+            },
+            "functionName": "l"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                22863,
+                22894
+            ],
+            "bodyRange": [
+                22873,
+                22894
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 121,
+            "start": {
+                "line": 1,
+                "column": 22863
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                23076,
+                23088
+            ],
+            "bodyRange": [
+                23086,
+                23088
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 125,
+            "start": {
+                "line": 1,
+                "column": 23076
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                23688,
+                23703
+            ],
+            "bodyRange": [
+                23698,
+                23703
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 128,
+            "start": {
+                "line": 1,
+                "column": 23688
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                25144,
+                25310
+            ],
+            "bodyRange": [
+                25154,
+                25310
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 136,
+            "start": {
+                "line": 1,
+                "column": 25144
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                25746,
+                25823
+            ],
+            "bodyRange": [
+                25756,
+                25823
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 138,
+            "start": {
+                "line": 1,
+                "column": 25746
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                614,
+                636
+            ],
+            "bodyRange": [
+                624,
+                636
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 3,
+            "start": {
+                "line": 1,
+                "column": 614
+            },
+            "functionName": null
+        }
+    ],
+    "aliveFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                678,
+                861
+            ],
+            "bodyRange": [
+                688,
+                861
+            ],
+            "file": "lacuna_cache/exported_mkp69k.js",
+            "index": 0,
+            "start": {
+                "line": 13,
+                "column": 21
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2059,
+                2428
+            ],
+            "bodyRange": [
+                2069,
+                2428
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 14,
+            "start": {
+                "line": 1,
+                "column": 2059
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4482,
+                5305
+            ],
+            "bodyRange": [
+                4492,
+                5305
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 36,
+            "start": {
+                "line": 1,
+                "column": 4482
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5333,
+                5386
+            ],
+            "bodyRange": [
+                5343,
+                5386
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 37,
+            "start": {
+                "line": 1,
+                "column": 5333
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5652,
+                5746
+            ],
+            "bodyRange": [
+                5663,
+                5746
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 42,
+            "start": {
+                "line": 1,
+                "column": 5652
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5751,
+                6805
+            ],
+            "bodyRange": [
+                5774,
+                6805
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 50,
+            "start": {
+                "line": 1,
+                "column": 5751
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                6318,
+                6468
+            ],
+            "bodyRange": [
+                6337,
+                6468
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 46,
+            "start": {
+                "line": 1,
+                "column": 6318
+            },
+            "functionName": "l"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                6468,
+                6495
+            ],
+            "bodyRange": [
+                6481,
+                6495
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 47,
+            "start": {
+                "line": 1,
+                "column": 6468
+            },
+            "functionName": "u"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6824,
+                8663
+            ],
+            "bodyRange": [
+                6834,
+                8663
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 61,
+            "start": {
+                "line": 1,
+                "column": 6824
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8680,
+                10092
+            ],
+            "bodyRange": [
+                8693,
+                10092
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 67,
+            "start": {
+                "line": 1,
+                "column": 8680
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                8694,
+                9044
+            ],
+            "bodyRange": [
+                8706,
+                9044
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 63,
+            "start": {
+                "line": 1,
+                "column": 8694
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                8707,
+                8769
+            ],
+            "bodyRange": [
+                8720,
+                8769
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 62,
+            "start": {
+                "line": 1,
+                "column": 8707
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                505,
+                607
+            ],
+            "bodyRange": [
+                526,
+                607
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 5,
+            "start": {
+                "line": 1,
+                "column": 505
+            },
+            "functionName": "getIso639"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                9261,
+                9570
+            ],
+            "bodyRange": [
+                9273,
+                9570
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 66,
+            "start": {
+                "line": 1,
+                "column": 9261
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5393,
+                5470
+            ],
+            "bodyRange": [
+                5404,
+                5470
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 38,
+            "start": {
+                "line": 1,
+                "column": 5393
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7327,
+                7618
+            ],
+            "bodyRange": [
+                7337,
+                7618
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 54,
+            "start": {
+                "line": 1,
+                "column": 7327
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5475,
+                5559
+            ],
+            "bodyRange": [
+                5488,
+                5559
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 39,
+            "start": {
+                "line": 1,
+                "column": 5475
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6508,
+                6756
+            ],
+            "bodyRange": [
+                6521,
+                6756
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 49,
+            "start": {
+                "line": 1,
+                "column": 6508
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                6155,
+                6318
+            ],
+            "bodyRange": [
+                6176,
+                6318
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 45,
+            "start": {
+                "line": 1,
+                "column": 6155
+            },
+            "functionName": "c"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                5788,
+                6155
+            ],
+            "bodyRange": [
+                5801,
+                6155
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 44,
+            "start": {
+                "line": 1,
+                "column": 5788
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5967,
+                6147
+            ],
+            "bodyRange": [
+                5978,
+                6147
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 43,
+            "start": {
+                "line": 1,
+                "column": 5967
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                9105,
+                9261
+            ],
+            "bodyRange": [
+                9117,
+                9261
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 65,
+            "start": {
+                "line": 1,
+                "column": 9105
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                9044,
+                9105
+            ],
+            "bodyRange": [
+                9057,
+                9105
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 64,
+            "start": {
+                "line": 1,
+                "column": 9044
+            },
+            "functionName": "r"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6646,
+                6753
+            ],
+            "bodyRange": [
+                6656,
+                6753
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 48,
+            "start": {
+                "line": 1,
+                "column": 6646
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10114,
+                13069
+            ],
+            "bodyRange": [
+                10127,
+                13069
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 74,
+            "start": {
+                "line": 1,
+                "column": 10114
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                17145,
+                17399
+            ],
+            "bodyRange": [
+                17158,
+                17399
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 97,
+            "start": {
+                "line": 1,
+                "column": 17145
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                13114,
+                17144
+            ],
+            "bodyRange": [
+                13127,
+                17144
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 95,
+            "start": {
+                "line": 1,
+                "column": 13114
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                607,
+                853
+            ],
+            "bodyRange": [
+                637,
+                853
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 6,
+            "start": {
+                "line": 1,
+                "column": 607
+            },
+            "functionName": "getDevicePixelRatio"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                0,
+                146
+            ],
+            "bodyRange": [
+                24,
+                146
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 0,
+            "start": {
+                "line": 1,
+                "column": 0
+            },
+            "functionName": "addEvent"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4205,
+                4459
+            ],
+            "bodyRange": [
+                4220,
+                4459
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 30,
+            "start": {
+                "line": 1,
+                "column": 4205
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                17420,
+                19725
+            ],
+            "bodyRange": [
+                17433,
+                19725
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 108,
+            "start": {
+                "line": 1,
+                "column": 17420
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                17434,
+                17497
+            ],
+            "bodyRange": [
+                17447,
+                17497
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 98,
+            "start": {
+                "line": 1,
+                "column": 17434
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                17497,
+                17594
+            ],
+            "bodyRange": [
+                17510,
+                17594
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 99,
+            "start": {
+                "line": 1,
+                "column": 17497
+            },
+            "functionName": "r"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5567,
+                5650
+            ],
+            "bodyRange": [
+                5578,
+                5650
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 40,
+            "start": {
+                "line": 1,
+                "column": 5567
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                17594,
+                17741
+            ],
+            "bodyRange": [
+                17606,
+                17741
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 100,
+            "start": {
+                "line": 1,
+                "column": 17594
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                19018,
+                19365
+            ],
+            "bodyRange": [
+                19030,
+                19365
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 107,
+            "start": {
+                "line": 1,
+                "column": 19018
+            },
+            "functionName": "u"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                18238,
+                18511
+            ],
+            "bodyRange": [
+                18251,
+                18511
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 102,
+            "start": {
+                "line": 1,
+                "column": 18238
+            },
+            "functionName": "i"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                19737,
+                23019
+            ],
+            "bodyRange": [
+                19747,
+                23019
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 124,
+            "start": {
+                "line": 1,
+                "column": 19737
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                267,
+                505
+            ],
+            "bodyRange": [
+                290,
+                505
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 4,
+            "start": {
+                "line": 1,
+                "column": 267
+            },
+            "functionName": "doWhenReady"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                23092,
+                23705
+            ],
+            "bodyRange": [
+                23102,
+                23705
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 129,
+            "start": {
+                "line": 1,
+                "column": 23092
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23384,
+                23544
+            ],
+            "bodyRange": [
+                23397,
+                23544
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 127,
+            "start": {
+                "line": 1,
+                "column": 23384
+            },
+            "functionName": "t"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                23708,
+                25320
+            ],
+            "bodyRange": [
+                23725,
+                25320
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 137,
+            "start": {
+                "line": 1,
+                "column": 23708
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                25358,
+                26040
+            ],
+            "bodyRange": [
+                25369,
+                26040
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 139,
+            "start": {
+                "line": 1,
+                "column": 25358
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                297,
+                399
+            ],
+            "bodyRange": [
+                307,
+                399
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 3,
+            "start": {
+                "line": 1,
+                "column": 297
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                146,
+                267
+            ],
+            "bodyRange": [
+                173,
+                267
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 1,
+            "start": {
+                "line": 1,
+                "column": 146
+            },
+            "functionName": "removeEvent"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                22089,
+                22530
+            ],
+            "bodyRange": [
+                22099,
+                22530
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 120,
+            "start": {
+                "line": 1,
+                "column": 22089
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20373,
+                20477
+            ],
+            "bodyRange": [
+                20385,
+                20477
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 113,
+            "start": {
+                "line": 1,
+                "column": 20373
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20225,
+                20373
+            ],
+            "bodyRange": [
+                20237,
+                20373
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 112,
+            "start": {
+                "line": 1,
+                "column": 20225
+            },
+            "functionName": "r"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20939,
+                21178
+            ],
+            "bodyRange": [
+                20952,
+                21178
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 116,
+            "start": {
+                "line": 1,
+                "column": 20939
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                19761,
+                19809
+            ],
+            "bodyRange": [
+                19774,
+                19809
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 109,
+            "start": {
+                "line": 1,
+                "column": 19761
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                19809,
+                20042
+            ],
+            "bodyRange": [
+                19822,
+                20042
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 110,
+            "start": {
+                "line": 1,
+                "column": 19809
+            },
+            "functionName": "t"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20042,
+                20225
+            ],
+            "bodyRange": [
+                20055,
+                20225
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 111,
+            "start": {
+                "line": 1,
+                "column": 20042
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                22544,
+                22896
+            ],
+            "bodyRange": [
+                22554,
+                22896
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 122,
+            "start": {
+                "line": 1,
+                "column": 22544
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                22910,
+                23002
+            ],
+            "bodyRange": [
+                22920,
+                23002
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 123,
+            "start": {
+                "line": 1,
+                "column": 22910
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                21704,
+                22077
+            ],
+            "bodyRange": [
+                21716,
+                22077
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 119,
+            "start": {
+                "line": 1,
+                "column": 21704
+            },
+            "functionName": "u"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                10141,
+                10272
+            ],
+            "bodyRange": [
+                10156,
+                10272
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 68,
+            "start": {
+                "line": 1,
+                "column": 10141
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                10272,
+                10346
+            ],
+            "bodyRange": [
+                10285,
+                10346
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 69,
+            "start": {
+                "line": 1,
+                "column": 10272
+            },
+            "functionName": "r"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                11003,
+                11340
+            ],
+            "bodyRange": [
+                11016,
+                11340
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 73,
+            "start": {
+                "line": 1,
+                "column": 11003
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                13128,
+                13243
+            ],
+            "bodyRange": [
+                13141,
+                13243
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 75,
+            "start": {
+                "line": 1,
+                "column": 13128
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                13243,
+                13371
+            ],
+            "bodyRange": [
+                13255,
+                13371
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 77,
+            "start": {
+                "line": 1,
+                "column": 13243
+            },
+            "functionName": "r"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                13371,
+                13472
+            ],
+            "bodyRange": [
+                13384,
+                13472
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 78,
+            "start": {
+                "line": 1,
+                "column": 13371
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                13472,
+                14139
+            ],
+            "bodyRange": [
+                13487,
+                14139
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 79,
+            "start": {
+                "line": 1,
+                "column": 13472
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                15234,
+                15441
+            ],
+            "bodyRange": [
+                15249,
+                15441
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 82,
+            "start": {
+                "line": 1,
+                "column": 15234
+            },
+            "functionName": "c"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                15441,
+                15709
+            ],
+            "bodyRange": [
+                15454,
+                15709
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 83,
+            "start": {
+                "line": 1,
+                "column": 15441
+            },
+            "functionName": "l"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                17741,
+                18238
+            ],
+            "bodyRange": [
+                17756,
+                18238
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 101,
+            "start": {
+                "line": 1,
+                "column": 17741
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                18511,
+                18843
+            ],
+            "bodyRange": [
+                18526,
+                18843
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 104,
+            "start": {
+                "line": 1,
+                "column": 18511
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                18843,
+                18889
+            ],
+            "bodyRange": [
+                18858,
+                18889
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 105,
+            "start": {
+                "line": 1,
+                "column": 18843
+            },
+            "functionName": "c"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                18889,
+                19018
+            ],
+            "bodyRange": [
+                18904,
+                19018
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 106,
+            "start": {
+                "line": 1,
+                "column": 18889
+            },
+            "functionName": "l"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20477,
+                20582
+            ],
+            "bodyRange": [
+                20492,
+                20582
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 114,
+            "start": {
+                "line": 1,
+                "column": 20477
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20582,
+                20939
+            ],
+            "bodyRange": [
+                20595,
+                20939
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 115,
+            "start": {
+                "line": 1,
+                "column": 20582
+            },
+            "functionName": "i"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                21178,
+                21406
+            ],
+            "bodyRange": [
+                21191,
+                21406
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 117,
+            "start": {
+                "line": 1,
+                "column": 21178
+            },
+            "functionName": "c"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23103,
+                23384
+            ],
+            "bodyRange": [
+                23115,
+                23384
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 126,
+            "start": {
+                "line": 1,
+                "column": 23103
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23726,
+                23789
+            ],
+            "bodyRange": [
+                23739,
+                23789
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 130,
+            "start": {
+                "line": 1,
+                "column": 23726
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23789,
+                23857
+            ],
+            "bodyRange": [
+                23801,
+                23857
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 131,
+            "start": {
+                "line": 1,
+                "column": 23789
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23857,
+                23983
+            ],
+            "bodyRange": [
+                23872,
+                23983
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 132,
+            "start": {
+                "line": 1,
+                "column": 23857
+            },
+            "functionName": "i"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23983,
+                24099
+            ],
+            "bodyRange": [
+                23998,
+                24099
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 133,
+            "start": {
+                "line": 1,
+                "column": 23983
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                24099,
+                24711
+            ],
+            "bodyRange": [
+                24112,
+                24711
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 134,
+            "start": {
+                "line": 1,
+                "column": 24099
+            },
+            "functionName": "c"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                24711,
+                24811
+            ],
+            "bodyRange": [
+                24724,
+                24811
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 135,
+            "start": {
+                "line": 1,
+                "column": 24711
+            },
+            "functionName": "l"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1,
+                640
+            ],
+            "bodyRange": [
+                11,
+                640
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 5,
+            "start": {
+                "line": 1,
+                "column": 1
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                37,
+                638
+            ],
+            "bodyRange": [
+                47,
+                638
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 4,
+            "start": {
+                "line": 1,
+                "column": 37
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                175,
+                489
+            ],
+            "bodyRange": [
+                187,
+                489
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 1,
+            "start": {
+                "line": 1,
+                "column": 175
+            },
+            "functionName": "t"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                48,
+                175
+            ],
+            "bodyRange": [
+                61,
+                175
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 0,
+            "start": {
+                "line": 1,
+                "column": 48
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                489,
+                538
+            ],
+            "bodyRange": [
+                502,
+                538
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 2,
+            "start": {
+                "line": 1,
+                "column": 489
+            },
+            "functionName": "n"
+        }
+    ],
+    "allFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                678,
+                861
+            ],
+            "bodyRange": [
+                688,
+                861
+            ],
+            "file": "lacuna_cache/exported_mkp69k.js",
+            "index": 0,
+            "start": {
+                "line": 13,
+                "column": 21
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                0,
+                146
+            ],
+            "bodyRange": [
+                24,
+                146
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 0,
+            "start": {
+                "line": 1,
+                "column": 0
+            },
+            "functionName": "addEvent"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                146,
+                267
+            ],
+            "bodyRange": [
+                173,
+                267
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 1,
+            "start": {
+                "line": 1,
+                "column": 146
+            },
+            "functionName": "removeEvent"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                386,
+                398
+            ],
+            "bodyRange": [
+                396,
+                398
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 2,
+            "start": {
+                "line": 1,
+                "column": 386
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                297,
+                399
+            ],
+            "bodyRange": [
+                307,
+                399
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 3,
+            "start": {
+                "line": 1,
+                "column": 297
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                267,
+                505
+            ],
+            "bodyRange": [
+                290,
+                505
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 4,
+            "start": {
+                "line": 1,
+                "column": 267
+            },
+            "functionName": "doWhenReady"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                505,
+                607
+            ],
+            "bodyRange": [
+                526,
+                607
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 5,
+            "start": {
+                "line": 1,
+                "column": 505
+            },
+            "functionName": "getIso639"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                607,
+                853
+            ],
+            "bodyRange": [
+                637,
+                853
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 6,
+            "start": {
+                "line": 1,
+                "column": 607
+            },
+            "functionName": "getDevicePixelRatio"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                886,
+                929
+            ],
+            "bodyRange": [
+                901,
+                929
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 7,
+            "start": {
+                "line": 1,
+                "column": 886
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1000,
+                1047
+            ],
+            "bodyRange": [
+                1011,
+                1047
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 8,
+            "start": {
+                "line": 1,
+                "column": 1000
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1131,
+                1209
+            ],
+            "bodyRange": [
+                1142,
+                1209
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 9,
+            "start": {
+                "line": 1,
+                "column": 1131
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1253,
+                1721
+            ],
+            "bodyRange": [
+                1266,
+                1721
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 10,
+            "start": {
+                "line": 1,
+                "column": 1253
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                940,
+                1722
+            ],
+            "bodyRange": [
+                950,
+                1722
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 11,
+            "start": {
+                "line": 1,
+                "column": 940
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1777,
+                2057
+            ],
+            "bodyRange": [
+                1790,
+                2057
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 12,
+            "start": {
+                "line": 1,
+                "column": 1777
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2186,
+                2426
+            ],
+            "bodyRange": [
+                2205,
+                2426
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 13,
+            "start": {
+                "line": 1,
+                "column": 2186
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2059,
+                2428
+            ],
+            "bodyRange": [
+                2069,
+                2428
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 14,
+            "start": {
+                "line": 1,
+                "column": 2059
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2479,
+                2552
+            ],
+            "bodyRange": [
+                2490,
+                2552
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 15,
+            "start": {
+                "line": 1,
+                "column": 2479
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2790,
+                2802
+            ],
+            "bodyRange": [
+                2800,
+                2802
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 16,
+            "start": {
+                "line": 1,
+                "column": 2790
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2805,
+                2905
+            ],
+            "bodyRange": [
+                2815,
+                2905
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 17,
+            "start": {
+                "line": 1,
+                "column": 2805
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2604,
+                2978
+            ],
+            "bodyRange": [
+                2615,
+                2978
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 18,
+            "start": {
+                "line": 1,
+                "column": 2604
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3313,
+                3348
+            ],
+            "bodyRange": [
+                3323,
+                3348
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 19,
+            "start": {
+                "line": 1,
+                "column": 3313
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3353,
+                3391
+            ],
+            "bodyRange": [
+                3364,
+                3391
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 20,
+            "start": {
+                "line": 1,
+                "column": 3353
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3174,
+                3394
+            ],
+            "bodyRange": [
+                3184,
+                3394
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 21,
+            "start": {
+                "line": 1,
+                "column": 3174
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3468,
+                3598
+            ],
+            "bodyRange": [
+                3481,
+                3598
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 22,
+            "start": {
+                "line": 1,
+                "column": 3468
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3641,
+                3773
+            ],
+            "bodyRange": [
+                3651,
+                3773
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 23,
+            "start": {
+                "line": 1,
+                "column": 3641
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3802,
+                3840
+            ],
+            "bodyRange": [
+                3812,
+                3840
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 24,
+            "start": {
+                "line": 1,
+                "column": 3802
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3905,
+                3979
+            ],
+            "bodyRange": [
+                3915,
+                3979
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 25,
+            "start": {
+                "line": 1,
+                "column": 3905
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3987,
+                4192
+            ],
+            "bodyRange": [
+                3997,
+                4192
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 26,
+            "start": {
+                "line": 1,
+                "column": 3987
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3852,
+                4193
+            ],
+            "bodyRange": [
+                3867,
+                4193
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 27,
+            "start": {
+                "line": 1,
+                "column": 3852
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4237,
+                4337
+            ],
+            "bodyRange": [
+                4247,
+                4337
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 28,
+            "start": {
+                "line": 1,
+                "column": 4237
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4345,
+                4458
+            ],
+            "bodyRange": [
+                4355,
+                4458
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 29,
+            "start": {
+                "line": 1,
+                "column": 4345
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4205,
+                4459
+            ],
+            "bodyRange": [
+                4220,
+                4459
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 30,
+            "start": {
+                "line": 1,
+                "column": 4205
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                4493,
+                4628
+            ],
+            "bodyRange": [
+                4506,
+                4628
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 31,
+            "start": {
+                "line": 1,
+                "column": 4493
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4642,
+                4685
+            ],
+            "bodyRange": [
+                4653,
+                4685
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 32,
+            "start": {
+                "line": 1,
+                "column": 4642
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4694,
+                5241
+            ],
+            "bodyRange": [
+                4709,
+                5241
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 33,
+            "start": {
+                "line": 1,
+                "column": 4694
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5246,
+                5271
+            ],
+            "bodyRange": [
+                5257,
+                5271
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 34,
+            "start": {
+                "line": 1,
+                "column": 5246
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5278,
+                5303
+            ],
+            "bodyRange": [
+                5289,
+                5303
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 35,
+            "start": {
+                "line": 1,
+                "column": 5278
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4482,
+                5305
+            ],
+            "bodyRange": [
+                4492,
+                5305
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 36,
+            "start": {
+                "line": 1,
+                "column": 4482
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5333,
+                5386
+            ],
+            "bodyRange": [
+                5343,
+                5386
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 37,
+            "start": {
+                "line": 1,
+                "column": 5333
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5393,
+                5470
+            ],
+            "bodyRange": [
+                5404,
+                5470
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 38,
+            "start": {
+                "line": 1,
+                "column": 5393
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5475,
+                5559
+            ],
+            "bodyRange": [
+                5488,
+                5559
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 39,
+            "start": {
+                "line": 1,
+                "column": 5475
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5567,
+                5650
+            ],
+            "bodyRange": [
+                5578,
+                5650
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 40,
+            "start": {
+                "line": 1,
+                "column": 5567
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5681,
+                5744
+            ],
+            "bodyRange": [
+                5692,
+                5744
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 41,
+            "start": {
+                "line": 1,
+                "column": 5681
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5652,
+                5746
+            ],
+            "bodyRange": [
+                5663,
+                5746
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 42,
+            "start": {
+                "line": 1,
+                "column": 5652
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5967,
+                6147
+            ],
+            "bodyRange": [
+                5978,
+                6147
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 43,
+            "start": {
+                "line": 1,
+                "column": 5967
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                5788,
+                6155
+            ],
+            "bodyRange": [
+                5801,
+                6155
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 44,
+            "start": {
+                "line": 1,
+                "column": 5788
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                6155,
+                6318
+            ],
+            "bodyRange": [
+                6176,
+                6318
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 45,
+            "start": {
+                "line": 1,
+                "column": 6155
+            },
+            "functionName": "c"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                6318,
+                6468
+            ],
+            "bodyRange": [
+                6337,
+                6468
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 46,
+            "start": {
+                "line": 1,
+                "column": 6318
+            },
+            "functionName": "l"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                6468,
+                6495
+            ],
+            "bodyRange": [
+                6481,
+                6495
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 47,
+            "start": {
+                "line": 1,
+                "column": 6468
+            },
+            "functionName": "u"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6646,
+                6753
+            ],
+            "bodyRange": [
+                6656,
+                6753
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 48,
+            "start": {
+                "line": 1,
+                "column": 6646
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6508,
+                6756
+            ],
+            "bodyRange": [
+                6521,
+                6756
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 49,
+            "start": {
+                "line": 1,
+                "column": 6508
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5751,
+                6805
+            ],
+            "bodyRange": [
+                5774,
+                6805
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 50,
+            "start": {
+                "line": 1,
+                "column": 5751
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6895,
+                7073
+            ],
+            "bodyRange": [
+                6908,
+                7073
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 51,
+            "start": {
+                "line": 1,
+                "column": 6895
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7079,
+                7091
+            ],
+            "bodyRange": [
+                7089,
+                7091
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 52,
+            "start": {
+                "line": 1,
+                "column": 7079
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7219,
+                7302
+            ],
+            "bodyRange": [
+                7232,
+                7302
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 53,
+            "start": {
+                "line": 1,
+                "column": 7219
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7327,
+                7618
+            ],
+            "bodyRange": [
+                7337,
+                7618
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 54,
+            "start": {
+                "line": 1,
+                "column": 7327
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7628,
+                8070
+            ],
+            "bodyRange": [
+                7641,
+                8070
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 55,
+            "start": {
+                "line": 1,
+                "column": 7628
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8079,
+                8285
+            ],
+            "bodyRange": [
+                8092,
+                8285
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 56,
+            "start": {
+                "line": 1,
+                "column": 8079
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8300,
+                8375
+            ],
+            "bodyRange": [
+                8311,
+                8375
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 57,
+            "start": {
+                "line": 1,
+                "column": 8300
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8454,
+                8505
+            ],
+            "bodyRange": [
+                8465,
+                8505
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 58,
+            "start": {
+                "line": 1,
+                "column": 8454
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8506,
+                8554
+            ],
+            "bodyRange": [
+                8517,
+                8554
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 59,
+            "start": {
+                "line": 1,
+                "column": 8506
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8564,
+                8661
+            ],
+            "bodyRange": [
+                8577,
+                8661
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 60,
+            "start": {
+                "line": 1,
+                "column": 8564
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6824,
+                8663
+            ],
+            "bodyRange": [
+                6834,
+                8663
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 61,
+            "start": {
+                "line": 1,
+                "column": 6824
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                8707,
+                8769
+            ],
+            "bodyRange": [
+                8720,
+                8769
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 62,
+            "start": {
+                "line": 1,
+                "column": 8707
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                8694,
+                9044
+            ],
+            "bodyRange": [
+                8706,
+                9044
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 63,
+            "start": {
+                "line": 1,
+                "column": 8694
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                9044,
+                9105
+            ],
+            "bodyRange": [
+                9057,
+                9105
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 64,
+            "start": {
+                "line": 1,
+                "column": 9044
+            },
+            "functionName": "r"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                9105,
+                9261
+            ],
+            "bodyRange": [
+                9117,
+                9261
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 65,
+            "start": {
+                "line": 1,
+                "column": 9105
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                9261,
+                9570
+            ],
+            "bodyRange": [
+                9273,
+                9570
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 66,
+            "start": {
+                "line": 1,
+                "column": 9261
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8680,
+                10092
+            ],
+            "bodyRange": [
+                8693,
+                10092
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 67,
+            "start": {
+                "line": 1,
+                "column": 8680
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                10141,
+                10272
+            ],
+            "bodyRange": [
+                10156,
+                10272
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 68,
+            "start": {
+                "line": 1,
+                "column": 10141
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                10272,
+                10346
+            ],
+            "bodyRange": [
+                10285,
+                10346
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 69,
+            "start": {
+                "line": 1,
+                "column": 10272
+            },
+            "functionName": "r"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                10346,
+                10407
+            ],
+            "bodyRange": [
+                10358,
+                10407
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 70,
+            "start": {
+                "line": 1,
+                "column": 10346
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                10407,
+                10762
+            ],
+            "bodyRange": [
+                10420,
+                10762
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 71,
+            "start": {
+                "line": 1,
+                "column": 10407
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                10762,
+                11003
+            ],
+            "bodyRange": [
+                10775,
+                11003
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 72,
+            "start": {
+                "line": 1,
+                "column": 10762
+            },
+            "functionName": "i"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                11003,
+                11340
+            ],
+            "bodyRange": [
+                11016,
+                11340
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 73,
+            "start": {
+                "line": 1,
+                "column": 11003
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10114,
+                13069
+            ],
+            "bodyRange": [
+                10127,
+                13069
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 74,
+            "start": {
+                "line": 1,
+                "column": 10114
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                13128,
+                13243
+            ],
+            "bodyRange": [
+                13141,
+                13243
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 75,
+            "start": {
+                "line": 1,
+                "column": 13128
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                13267,
+                13365
+            ],
+            "bodyRange": [
+                13277,
+                13365
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 76,
+            "start": {
+                "line": 1,
+                "column": 13267
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                13243,
+                13371
+            ],
+            "bodyRange": [
+                13255,
+                13371
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 77,
+            "start": {
+                "line": 1,
+                "column": 13243
+            },
+            "functionName": "r"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                13371,
+                13472
+            ],
+            "bodyRange": [
+                13384,
+                13472
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 78,
+            "start": {
+                "line": 1,
+                "column": 13371
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                13472,
+                14139
+            ],
+            "bodyRange": [
+                13487,
+                14139
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 79,
+            "start": {
+                "line": 1,
+                "column": 13472
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                14139,
+                14416
+            ],
+            "bodyRange": [
+                14154,
+                14416
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 80,
+            "start": {
+                "line": 1,
+                "column": 14139
+            },
+            "functionName": "i"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                14416,
+                15234
+            ],
+            "bodyRange": [
+                14429,
+                15234
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 81,
+            "start": {
+                "line": 1,
+                "column": 14416
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                15234,
+                15441
+            ],
+            "bodyRange": [
+                15249,
+                15441
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 82,
+            "start": {
+                "line": 1,
+                "column": 15234
+            },
+            "functionName": "c"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                15441,
+                15709
+            ],
+            "bodyRange": [
+                15454,
+                15709
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 83,
+            "start": {
+                "line": 1,
+                "column": 15441
+            },
+            "functionName": "l"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                15990,
+                16033
+            ],
+            "bodyRange": [
+                16000,
+                16033
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 84,
+            "start": {
+                "line": 1,
+                "column": 15990
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16046,
+                16114
+            ],
+            "bodyRange": [
+                16057,
+                16114
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 85,
+            "start": {
+                "line": 1,
+                "column": 16046
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16135,
+                16168
+            ],
+            "bodyRange": [
+                16146,
+                16168
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 86,
+            "start": {
+                "line": 1,
+                "column": 16135
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16189,
+                16330
+            ],
+            "bodyRange": [
+                16200,
+                16330
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 87,
+            "start": {
+                "line": 1,
+                "column": 16189
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16357,
+                16380
+            ],
+            "bodyRange": [
+                16368,
+                16380
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 88,
+            "start": {
+                "line": 1,
+                "column": 16357
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16391,
+                16515
+            ],
+            "bodyRange": [
+                16402,
+                16515
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 89,
+            "start": {
+                "line": 1,
+                "column": 16391
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16525,
+                16585
+            ],
+            "bodyRange": [
+                16536,
+                16585
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 90,
+            "start": {
+                "line": 1,
+                "column": 16525
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16592,
+                16621
+            ],
+            "bodyRange": [
+                16602,
+                16621
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 91,
+            "start": {
+                "line": 1,
+                "column": 16592
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16697,
+                17053
+            ],
+            "bodyRange": [
+                16708,
+                17053
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 92,
+            "start": {
+                "line": 1,
+                "column": 16697
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                16655,
+                17054
+            ],
+            "bodyRange": [
+                16666,
+                17054
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 93,
+            "start": {
+                "line": 1,
+                "column": 16655
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                17097,
+                17118
+            ],
+            "bodyRange": [
+                17108,
+                17118
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 94,
+            "start": {
+                "line": 1,
+                "column": 17097
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                13114,
+                17144
+            ],
+            "bodyRange": [
+                13127,
+                17144
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 95,
+            "start": {
+                "line": 1,
+                "column": 13114
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                17316,
+                17392
+            ],
+            "bodyRange": [
+                17326,
+                17392
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 96,
+            "start": {
+                "line": 1,
+                "column": 17316
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                17145,
+                17399
+            ],
+            "bodyRange": [
+                17158,
+                17399
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 97,
+            "start": {
+                "line": 1,
+                "column": 17145
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                17434,
+                17497
+            ],
+            "bodyRange": [
+                17447,
+                17497
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 98,
+            "start": {
+                "line": 1,
+                "column": 17434
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                17497,
+                17594
+            ],
+            "bodyRange": [
+                17510,
+                17594
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 99,
+            "start": {
+                "line": 1,
+                "column": 17497
+            },
+            "functionName": "r"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                17594,
+                17741
+            ],
+            "bodyRange": [
+                17606,
+                17741
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 100,
+            "start": {
+                "line": 1,
+                "column": 17594
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                17741,
+                18238
+            ],
+            "bodyRange": [
+                17756,
+                18238
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 101,
+            "start": {
+                "line": 1,
+                "column": 17741
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                18238,
+                18511
+            ],
+            "bodyRange": [
+                18251,
+                18511
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 102,
+            "start": {
+                "line": 1,
+                "column": 18238
+            },
+            "functionName": "i"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                18658,
+                18833
+            ],
+            "bodyRange": [
+                18668,
+                18833
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 103,
+            "start": {
+                "line": 1,
+                "column": 18658
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                18511,
+                18843
+            ],
+            "bodyRange": [
+                18526,
+                18843
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 104,
+            "start": {
+                "line": 1,
+                "column": 18511
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                18843,
+                18889
+            ],
+            "bodyRange": [
+                18858,
+                18889
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 105,
+            "start": {
+                "line": 1,
+                "column": 18843
+            },
+            "functionName": "c"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                18889,
+                19018
+            ],
+            "bodyRange": [
+                18904,
+                19018
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 106,
+            "start": {
+                "line": 1,
+                "column": 18889
+            },
+            "functionName": "l"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                19018,
+                19365
+            ],
+            "bodyRange": [
+                19030,
+                19365
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 107,
+            "start": {
+                "line": 1,
+                "column": 19018
+            },
+            "functionName": "u"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                17420,
+                19725
+            ],
+            "bodyRange": [
+                17433,
+                19725
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 108,
+            "start": {
+                "line": 1,
+                "column": 17420
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                19761,
+                19809
+            ],
+            "bodyRange": [
+                19774,
+                19809
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 109,
+            "start": {
+                "line": 1,
+                "column": 19761
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                19809,
+                20042
+            ],
+            "bodyRange": [
+                19822,
+                20042
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 110,
+            "start": {
+                "line": 1,
+                "column": 19809
+            },
+            "functionName": "t"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20042,
+                20225
+            ],
+            "bodyRange": [
+                20055,
+                20225
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 111,
+            "start": {
+                "line": 1,
+                "column": 20042
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20225,
+                20373
+            ],
+            "bodyRange": [
+                20237,
+                20373
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 112,
+            "start": {
+                "line": 1,
+                "column": 20225
+            },
+            "functionName": "r"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20373,
+                20477
+            ],
+            "bodyRange": [
+                20385,
+                20477
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 113,
+            "start": {
+                "line": 1,
+                "column": 20373
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20477,
+                20582
+            ],
+            "bodyRange": [
+                20492,
+                20582
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 114,
+            "start": {
+                "line": 1,
+                "column": 20477
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20582,
+                20939
+            ],
+            "bodyRange": [
+                20595,
+                20939
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 115,
+            "start": {
+                "line": 1,
+                "column": 20582
+            },
+            "functionName": "i"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                20939,
+                21178
+            ],
+            "bodyRange": [
+                20952,
+                21178
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 116,
+            "start": {
+                "line": 1,
+                "column": 20939
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                21178,
+                21406
+            ],
+            "bodyRange": [
+                21191,
+                21406
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 117,
+            "start": {
+                "line": 1,
+                "column": 21178
+            },
+            "functionName": "c"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                21406,
+                21704
+            ],
+            "bodyRange": [
+                21421,
+                21704
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 118,
+            "start": {
+                "line": 1,
+                "column": 21406
+            },
+            "functionName": "l"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                21704,
+                22077
+            ],
+            "bodyRange": [
+                21716,
+                22077
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 119,
+            "start": {
+                "line": 1,
+                "column": 21704
+            },
+            "functionName": "u"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                22089,
+                22530
+            ],
+            "bodyRange": [
+                22099,
+                22530
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 120,
+            "start": {
+                "line": 1,
+                "column": 22089
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                22863,
+                22894
+            ],
+            "bodyRange": [
+                22873,
+                22894
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 121,
+            "start": {
+                "line": 1,
+                "column": 22863
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                22544,
+                22896
+            ],
+            "bodyRange": [
+                22554,
+                22896
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 122,
+            "start": {
+                "line": 1,
+                "column": 22544
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                22910,
+                23002
+            ],
+            "bodyRange": [
+                22920,
+                23002
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 123,
+            "start": {
+                "line": 1,
+                "column": 22910
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                19737,
+                23019
+            ],
+            "bodyRange": [
+                19747,
+                23019
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 124,
+            "start": {
+                "line": 1,
+                "column": 19737
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                23076,
+                23088
+            ],
+            "bodyRange": [
+                23086,
+                23088
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 125,
+            "start": {
+                "line": 1,
+                "column": 23076
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23103,
+                23384
+            ],
+            "bodyRange": [
+                23115,
+                23384
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 126,
+            "start": {
+                "line": 1,
+                "column": 23103
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23384,
+                23544
+            ],
+            "bodyRange": [
+                23397,
+                23544
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 127,
+            "start": {
+                "line": 1,
+                "column": 23384
+            },
+            "functionName": "t"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                23688,
+                23703
+            ],
+            "bodyRange": [
+                23698,
+                23703
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 128,
+            "start": {
+                "line": 1,
+                "column": 23688
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                23092,
+                23705
+            ],
+            "bodyRange": [
+                23102,
+                23705
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 129,
+            "start": {
+                "line": 1,
+                "column": 23092
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23726,
+                23789
+            ],
+            "bodyRange": [
+                23739,
+                23789
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 130,
+            "start": {
+                "line": 1,
+                "column": 23726
+            },
+            "functionName": "o"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23789,
+                23857
+            ],
+            "bodyRange": [
+                23801,
+                23857
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 131,
+            "start": {
+                "line": 1,
+                "column": 23789
+            },
+            "functionName": "a"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23857,
+                23983
+            ],
+            "bodyRange": [
+                23872,
+                23983
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 132,
+            "start": {
+                "line": 1,
+                "column": 23857
+            },
+            "functionName": "i"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                23983,
+                24099
+            ],
+            "bodyRange": [
+                23998,
+                24099
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 133,
+            "start": {
+                "line": 1,
+                "column": 23983
+            },
+            "functionName": "s"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                24099,
+                24711
+            ],
+            "bodyRange": [
+                24112,
+                24711
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 134,
+            "start": {
+                "line": 1,
+                "column": 24099
+            },
+            "functionName": "c"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                24711,
+                24811
+            ],
+            "bodyRange": [
+                24724,
+                24811
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 135,
+            "start": {
+                "line": 1,
+                "column": 24711
+            },
+            "functionName": "l"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                25144,
+                25310
+            ],
+            "bodyRange": [
+                25154,
+                25310
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 136,
+            "start": {
+                "line": 1,
+                "column": 25144
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                23708,
+                25320
+            ],
+            "bodyRange": [
+                23725,
+                25320
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 137,
+            "start": {
+                "line": 1,
+                "column": 23708
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                25746,
+                25823
+            ],
+            "bodyRange": [
+                25756,
+                25823
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 138,
+            "start": {
+                "line": 1,
+                "column": 25746
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                25358,
+                26040
+            ],
+            "bodyRange": [
+                25369,
+                26040
+            ],
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "index": 139,
+            "start": {
+                "line": 1,
+                "column": 25358
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                48,
+                175
+            ],
+            "bodyRange": [
+                61,
+                175
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 0,
+            "start": {
+                "line": 1,
+                "column": 48
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                175,
+                489
+            ],
+            "bodyRange": [
+                187,
+                489
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 1,
+            "start": {
+                "line": 1,
+                "column": 175
+            },
+            "functionName": "t"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                489,
+                538
+            ],
+            "bodyRange": [
+                502,
+                538
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 2,
+            "start": {
+                "line": 1,
+                "column": 489
+            },
+            "functionName": "n"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                614,
+                636
+            ],
+            "bodyRange": [
+                624,
+                636
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 3,
+            "start": {
+                "line": 1,
+                "column": 614
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                37,
+                638
+            ],
+            "bodyRange": [
+                47,
+                638
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 4,
+            "start": {
+                "line": 1,
+                "column": 37
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1,
+                640
+            ],
+            "bodyRange": [
+                11,
+                640
+            ],
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "index": 5,
+            "start": {
+                "line": 1,
+                "column": 1
+            },
+            "functionName": null
+        }
+    ],
+    "affectedFiles": [
+        {
+            "file": "lacuna_cache/exported_mkp69k.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "portal/wikipedia.org/assets/js/index-c7a86f8706.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "portal/wikipedia.org/assets/js/gt-ie9-a2995951ca.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_0rfq4p.js",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ]
+}

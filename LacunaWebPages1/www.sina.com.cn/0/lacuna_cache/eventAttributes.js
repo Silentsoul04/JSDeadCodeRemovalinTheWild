@@ -1,0 +1,2 @@
+/* JS Code that was found on HTML events */
+if(this.value==''){this.value='请输入关键字';this.className='inp-txt'};if(this.value==''){this.value='请输入查询词'};if(this.value==''){this.value='请输入查询词'};changeViewInputs(this);;if(this.value=='请输入关键字'){this.value='';this.className='inp-txt inp-txt-active'};if(this.value=='请输入查询词'){this.value=''};if(this.value=='请输入查询词'){this.value=''};return SearchSubmit();return blogsearch(this,'blog');return booksearch(this);this.className='submit-second-btn';this.className='submit-second-btn submit-second-btn-hover';

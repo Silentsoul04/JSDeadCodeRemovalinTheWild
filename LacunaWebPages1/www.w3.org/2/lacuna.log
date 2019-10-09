@@ -1,0 +1,28 @@
+{
+    "runDate": "2019-10-09T21:22:11.995Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages1/www.w3.org/2",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 2,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages1/www.w3.org/2"
+    },
+    "graphStats": {
+        "connectedNodes": 0,
+        "disconnectedNodes": 0,
+        "nodes": 0,
+        "files": 0
+    },
+    "deadFunctions": [],
+    "aliveFunctions": [],
+    "allFunctions": [],
+    "affectedFiles": []
+}

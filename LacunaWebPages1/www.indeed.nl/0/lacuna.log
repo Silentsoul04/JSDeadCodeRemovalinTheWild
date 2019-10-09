@@ -1,0 +1,472 @@
+{
+    "runDate": "2019-10-09T21:17:00.101Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages1/www.indeed.nl/0",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 0,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages1/www.indeed.nl/0"
+    },
+    "graphStats": {
+        "connectedNodes": 11,
+        "disconnectedNodes": 1,
+        "nodes": 12,
+        "files": 1
+    },
+    "deadFunctions": [
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1368,
+                1575
+            ],
+            "bodyRange": [
+                1381,
+                1575
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 10,
+            "start": {
+                "line": 1,
+                "column": 1368
+            },
+            "functionName": "e"
+        }
+    ],
+    "aliveFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1,
+                112
+            ],
+            "bodyRange": [
+                12,
+                112
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 1,
+            "start": {
+                "line": 1,
+                "column": 1
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                123,
+                1283
+            ],
+            "bodyRange": [
+                134,
+                1283
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 9,
+            "start": {
+                "line": 1,
+                "column": 123
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                925,
+                1282
+            ],
+            "bodyRange": [
+                940,
+                1282
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 8,
+            "start": {
+                "line": 1,
+                "column": 925
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                326,
+                350
+            ],
+            "bodyRange": [
+                337,
+                350
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 3,
+            "start": {
+                "line": 1,
+                "column": 326
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                293,
+                317
+            ],
+            "bodyRange": [
+                304,
+                317
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 2,
+            "start": {
+                "line": 1,
+                "column": 293
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                359,
+                500
+            ],
+            "bodyRange": [
+                372,
+                500
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 4,
+            "start": {
+                "line": 1,
+                "column": 359
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                608,
+                836
+            ],
+            "bodyRange": [
+                618,
+                836
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 6,
+            "start": {
+                "line": 1,
+                "column": 608
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                509,
+                599
+            ],
+            "bodyRange": [
+                519,
+                599
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 5,
+            "start": {
+                "line": 1,
+                "column": 509
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                845,
+                906
+            ],
+            "bodyRange": [
+                856,
+                906
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 7,
+            "start": {
+                "line": 1,
+                "column": 845
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1356,
+                1687
+            ],
+            "bodyRange": [
+                1367,
+                1687
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 11,
+            "start": {
+                "line": 1,
+                "column": 1356
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                41,
+                111
+            ],
+            "bodyRange": [
+                51,
+                111
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 0,
+            "start": {
+                "line": 1,
+                "column": 41
+            },
+            "functionName": null
+        }
+    ],
+    "allFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                41,
+                111
+            ],
+            "bodyRange": [
+                51,
+                111
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 0,
+            "start": {
+                "line": 1,
+                "column": 41
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1,
+                112
+            ],
+            "bodyRange": [
+                12,
+                112
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 1,
+            "start": {
+                "line": 1,
+                "column": 1
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                293,
+                317
+            ],
+            "bodyRange": [
+                304,
+                317
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 2,
+            "start": {
+                "line": 1,
+                "column": 293
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                326,
+                350
+            ],
+            "bodyRange": [
+                337,
+                350
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 3,
+            "start": {
+                "line": 1,
+                "column": 326
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                359,
+                500
+            ],
+            "bodyRange": [
+                372,
+                500
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 4,
+            "start": {
+                "line": 1,
+                "column": 359
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                509,
+                599
+            ],
+            "bodyRange": [
+                519,
+                599
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 5,
+            "start": {
+                "line": 1,
+                "column": 509
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                608,
+                836
+            ],
+            "bodyRange": [
+                618,
+                836
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 6,
+            "start": {
+                "line": 1,
+                "column": 608
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                845,
+                906
+            ],
+            "bodyRange": [
+                856,
+                906
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 7,
+            "start": {
+                "line": 1,
+                "column": 845
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                925,
+                1282
+            ],
+            "bodyRange": [
+                940,
+                1282
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 8,
+            "start": {
+                "line": 1,
+                "column": 925
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                123,
+                1283
+            ],
+            "bodyRange": [
+                134,
+                1283
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 9,
+            "start": {
+                "line": 1,
+                "column": 123
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1368,
+                1575
+            ],
+            "bodyRange": [
+                1381,
+                1575
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 10,
+            "start": {
+                "line": 1,
+                "column": 1368
+            },
+            "functionName": "e"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1356,
+                1687
+            ],
+            "bodyRange": [
+                1367,
+                1687
+            ],
+            "file": "lacuna_cache/exported_pggi29.js",
+            "index": 11,
+            "start": {
+                "line": 1,
+                "column": 1356
+            },
+            "functionName": null
+        }
+    ],
+    "affectedFiles": [
+        {
+            "file": "lacuna_cache/exported_pggi29.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ]
+}
