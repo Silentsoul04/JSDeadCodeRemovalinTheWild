@@ -1,2 +1,2 @@
 /* JS Code that was found on HTML events */
-if(_w.lb)lb();;var id = _ge('hpinsthk').getAttribute('h'); return si_T(id);;
+FallBackToDefaultProfilePic(this);if(_w.lb)lb();_ge('sb_form_q').focus();;return false;;var id = _ge('hpinsthk').getAttribute('h'); return si_T(id);;hpulc4hdr();selectScope(this, 'web');;hpulc4hdr();selectScope(this, 'images');;hpulc4hdr();selectScope(this, 'video');;hpulc4hdr();selectScope(this, 'local');;hpulc4hdr();selectScope(this, 'news');;hpulc4hdr();;hpulc4hdr();;hpulc4hdr();;hpulc4hdr();;hpulc4hdr();;hpulc4hdr();;hpulc4hdr();;hpulc4hdr();;hpulc4hdr();;hpulc4hdr();;hpulc4hdr();;_w.VM && VM.pause();;FallBackToDefaultProfilePic(this);

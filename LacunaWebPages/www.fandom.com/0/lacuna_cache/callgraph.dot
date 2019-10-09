@@ -1,15 +1,2 @@
 digraph lacunaCG {
- "rootNode@lacuna_cache/exported_jf8dxg.js:," -> "FunctionExpression@lacuna_cache/exported_jf8dxg.js:11,3965" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_jf8dxg.js:," -> "FunctionExpression@lacuna_cache/exported_jf8dxg.js:124,911" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_jf8dxg.js:," -> "FunctionDeclaration@lacuna_cache/exported_jf8dxg.js:1046,1500" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_jf8dxg.js:," -> "FunctionExpression@lacuna_cache/exported_jf8dxg.js:3080,3347" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_jf8dxg.js:," -> "FunctionExpression@lacuna_cache/exported_jf8dxg.js:3705,3825" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_jf8dxg.js:," -> "FunctionExpression@lacuna_cache/exported_jf8dxg.js:3373,3679" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_jf8dxg.js:," -> "FunctionExpression@lacuna_cache/exported_jf8dxg.js:3526,3590" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_jf8dxg.js:," -> "FunctionExpression@lacuna_cache/exported_jf8dxg.js:3451,3523" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_rm4j0b.js:," -> "FunctionExpression@lacuna_cache/exported_rm4j0b.js:10,285" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_juzd03.js:," -> "FunctionExpression@lacuna_cache/exported_juzd03.js:10,2004" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_juzd03.js:," -> "FunctionDeclaration@lacuna_cache/exported_juzd03.js:351,591" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_juzd03.js:," -> "FunctionDeclaration@lacuna_cache/exported_juzd03.js:35,337" [label="dynamic" ];
- "rootNode@lacuna_cache/exported_juzd03.js:," -> "FunctionExpression@lacuna_cache/exported_juzd03.js:134,321" [label="dynamic" ];
  }

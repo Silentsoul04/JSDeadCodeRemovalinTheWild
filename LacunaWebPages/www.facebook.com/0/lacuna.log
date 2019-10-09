@@ -1,0 +1,28 @@
+{
+    "runDate": "2019-10-09T20:13:15.175Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages/www.facebook.com/0",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 0,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages/www.facebook.com/0"
+    },
+    "graphStats": {
+        "connectedNodes": 0,
+        "disconnectedNodes": 0,
+        "nodes": 0,
+        "files": 0
+    },
+    "deadFunctions": [],
+    "aliveFunctions": [],
+    "allFunctions": [],
+    "affectedFiles": []
+}

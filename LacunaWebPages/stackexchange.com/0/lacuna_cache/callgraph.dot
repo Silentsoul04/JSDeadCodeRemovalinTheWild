@@ -1,0 +1,3 @@
+digraph lacunaCG {
+ "rootNode@lacuna_cache/exported_n89c67.js:," -> "FunctionExpression@lacuna_cache/exported_n89c67.js:2,45" [label="dynamic" ];
+ }

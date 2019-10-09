@@ -1,1 +1,0 @@
-B.load(function () {});

@@ -1,3 +1,0 @@
-
-                    B.init(function() {});
-                

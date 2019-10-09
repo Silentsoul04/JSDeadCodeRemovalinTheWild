@@ -1,3 +1,0 @@
-
-                    B.load(function() {});
-                

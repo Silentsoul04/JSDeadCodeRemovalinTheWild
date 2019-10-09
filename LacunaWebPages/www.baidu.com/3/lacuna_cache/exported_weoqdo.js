@@ -1,4 +1,0 @@
-
-        ! null(window);;
-        (null)(window);
-    
