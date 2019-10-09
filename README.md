@@ -31,8 +31,30 @@
 | 27 | wordpress.org | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
 | 28 | world.taobao.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
 | 29 | www.adobe.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
-| 30 | www.aliexpress.com| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 30 | www.aliexpress.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 31 | www.amazon.co.jp | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 32 | www.amazon.com| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 33 | www.apple.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 34 | www.baidu.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 35 | www.bbc.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 36 | www.bing.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 37 | www.buzzfeed.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 38 | www.csdn.net| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 39 | www.dropbox.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 40 | www.ebay.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 41 | www.espn.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 42 | www.facebook.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 43 | www.fandom.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 44 | www.forbes.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 45 | www.google.co.in| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 46 | www.google.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 47 | www.google.com.hk| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
 
+
+
+| 48 | www.ebay.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 49 | www.ebay.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 50 | www.ebay.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
 
 
 # JSDeadCodeRemovalinTheWild
