@@ -1,0 +1,522 @@
+<style type="text/css">
+    #bnp_ttc_div {
+        background: #404040;
+        height: 109px;
+        z-index: 20000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px
+    }
+
+    .hp_notif #bnp_ttc_div {
+        margin-top: -126px
+    }
+
+    .hp_notif.as_on #bnp_ttc_div {
+        margin-top: 0
+    }
+
+    #bnp_ttc_div.flex {
+        height: auto;
+        min-height: 109px
+    }
+
+    #bnp_ttc_div .header {
+        margin: 0 10px 10px;
+        height: 49px
+    }
+
+    #bnp_ttc_div.flex .header {
+        height: auto;
+        min-height: 54px
+    }
+
+    #bnp_ttc_div .icon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        padding: 15px 0
+    }
+
+    .hp_notif #bnp_ttc_div .icon {
+        position: relative;
+        float: left
+    }
+
+    #bnp_ttc_div.SmallFont {
+        font-size: 12px
+    }
+
+    #bnp_ttc_div.hastext2 {
+        font-size: 16px;
+        font-family: Helvetica Neue, Helvetica, Roboto, Segoe UI, Arial, sans-serif
+    }
+
+    #bnp_ttc_div .text {
+        display: inline-block;
+        color: #fff;
+        height: 34px;
+        line-height: 17px;
+        margin: 15px 0 0 28px;
+        overflow: hidden
+    }
+
+    .hp_notif #bnp_ttc_div .text {
+        margin: 15px 0 0 8px
+    }
+
+    #bnp_ttc_div .textUX2 {
+        display: inline-block;
+        color: #fff;
+        position: absolute;
+        top: 15px;
+        height: 34px;
+        line-height: 17px;
+        margin: 0 36px 0 28px;
+        overflow: hidden
+    }
+
+    .hp_notif #bnp_ttc_div .textUX2 {
+        top: auto;
+        margin: 15px 30px 0 8px
+    }
+
+    #bnp_ttc_div.flex .textUX2 {
+        position: relative;
+        top: 0;
+        height: auto;
+        margin-right: 0;
+        margin-top: 0;
+        display: table;
+        padding-right: 10px;
+        padding-top: 10px
+    }
+
+    .hp_notif #bnp_ttc_div.flex .textUX2 {
+        margin: 0 0 0 28px
+    }
+
+    #bnp_ttc_div.hastext2 .textUX2 {
+        display: block;
+        text-align: center;
+        height: initial;
+        position: initial;
+        line-height: 20px
+    }
+
+    #bnp_ttc_div.hastext2 .textUX2.text1 {
+        padding-top: 11px
+    }
+
+    #bnp_ttc_div .smalltxt {
+        font-size: 12px;
+        line-height: 14px;
+        overflow: initial
+    }
+
+    #bnp_ttc_div .text.smalltxt {
+        margin-top: 10px
+    }
+
+    #bnp_ttc_div .textUX2.smalltxt {
+        top: 10px
+    }
+
+    #bnp_ttc_div.flex .textUX2.smalltxt {
+        border-collapse: initial;
+        top: 0
+    }
+
+    #bnp_ttc_div .cta,
+    #bnp_ttc_div .close {
+        display: inline-block;
+        text-align: center;
+        height: 35px;
+        line-height: 35px
+    }
+
+    #bnp_ttc_div .cta {
+        margin: 0 10px;
+        color: #fff;
+        background: #36b
+    }
+
+    #bnp_ttc_div .cta:visited {
+        color: #fff
+    }
+
+    #bnp_ttc_div .close {
+        width: 145px;
+        margin-right: 10px;
+        color: #36b;
+        background: #fff
+    }
+
+    #bnp_ttc_div .close:visited {
+        color: #36b
+    }
+
+    #bnp_ttc_div .closeIcon {
+        float: right;
+        width: 16px;
+        height: 16px;
+        margin-top: 15px
+    }
+
+    #bnp_ttc_div.hastext2 .closeIcon {
+        position: absolute;
+        right: 10px
+    }
+
+    #bnp_ttc_div .fullSize {
+        width: 300px
+    }
+
+    #bnp_ttc_div .halfSize {
+        width: 145px
+    }
+
+    body.as_on div#mHeader.hpSearchBox {
+        top: 0;
+        height: 164px
+    }
+
+    body.hp_notif.as_on div#mHeaderInner {
+        padding-top: 119px
+    }
+
+    body.nonScroll {
+        overflow-y: hidden
+    }
+
+    #bnp_ttc_div.hasimg .header {
+        margin-bottom: 2px
+    }
+
+    #bnp_ttc_div.hastext2 .header {
+        margin-bottom: 11px
+    }
+
+    #bnp_ttc_div.hasimg.hastext2 .header {
+        margin-bottom: 10px
+    }
+
+    #bnp_ttc_div.hasimg .cta {
+        width: initial;
+        height: initial;
+        display: block;
+        margin: 0 auto
+    }
+
+    #bnp_ttc_div.flex .cta {
+        margin-bottom: 10px
+    }
+
+    .img_sbovr,
+    .vid_sbovr {
+        padding: 0 10px
+    }
+
+    .img_bnpovr:first-child+nav.b_scopebar {
+        margin: 0;
+        padding: 10px 10px 0 10px
+    }
+
+    #b_tq_header>div>.img_bnpovr,
+    #b_tq_header>div>.vid_bnpovr {
+        position: relative;
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    @media(orientation:landscape) {
+        #bnp_ttc_div.hastext2 .cta {
+            display: block;
+            margin: 0 auto
+        }
+    }
+
+    body.notif_top #bw-glm {
+        display: none !important
+    }
+</style>
+<div class="noti_ans">
+    <div id="bnp.nid.62287" style="display:none">
+        <div id="bnp_ttc_div" class="  flex" data-priority="2">
+            <div class="header"><img class="icon" src="/s/bnp/bingLogo.png" /><span class="textUX2 text1 smalltxt">This site uses cookies for analytics, personalized content and ads. By continuing to browse this site, you agree to this use.</span></div><a id="bnp_cta_link"
+                class="cta fullSize" data-applink="0" href="https://go.microsoft.com/fwlink/?linkid=845480" h="ID=SERP.2000,5006.1">Learn more</a></div>
+    </div>
+</div>
+<script type="text/javascript">
+    //<![CDATA[
+    var Bnp = Bnp || {};
+    Bnp.Common = Bnp.Common || function() {
+        function n(n, t, i, r) {
+            var s, h, e, c;
+            if (i) {
+                var f = sj_ev(i),
+                    u = sj_et(i),
+                    o = !1,
+                    l = f.ctrlKey || f.metaKey,
+                    a = u.target || u.parentNode && u.parentNode.target || "_self",
+                    v = a.toLocaleLowerCase() === "_blank";
+                l || v || ("which" in f ? o = f.which == 1 : "button" in f && (o = f.button == 0));
+                o && (s = function(n) {
+                    sj_pd(n);
+                    sj_ue(u, "click", s)
+                }, sj_be(u, "click", s));
+                h = u.href || u.parentNode && u.parentNode.href;
+                n == 1 && h && o && sj_evt.bind("bnpLogComplete", function(n) {
+                    r || n[1] != 1 || n[2] != t || _w.open(h, "_self")
+                }, 1)
+            }
+            return typeof sj_gx != "undefined" && (e = sj_gx(), c = "/notifications/handle?action=" + n + "&nid=" + t, e.open("GET", c, !0), e.onreadystatechange = function() {
+                e.readyState == 4 && sj_evt.fire("bnpLogComplete", n, t)
+            }, e.send()), !0
+        }
+
+        function t() {
+            var n = _d.querySelector('[id^="bnp.nid."]');
+            return n ? n.id : null
+        }
+
+        function i(t, i, r) {
+            _w.Log && Log.Log("Click", "Bnp", "BnpClick", !1, "ID", t);
+            n(1, t, i, r)
+        }
+
+        function r(t, i) {
+            if (i) {
+                var r = _ge("bnp.nid." + t);
+                r && (r.style.display = "none")
+            }
+            _w.Log && Log.Log("Click", "Bnp", "BnpClose", !1, "ID", t);
+            n(2, t)
+        }
+
+        function u(t) {
+            n(3, t)
+        }
+        return {
+            GetBnpContainerId: t,
+            Click: i,
+            Close: r,
+            RecordImpression: u
+        }
+    }();
+    var Bnp = Bnp || {};
+    Bnp.Events = Bnp.Events || {
+        Render: function(n) {
+            sj_evt.fire("onBnpRender", n)
+        },
+        Close: function(n) {
+            sj_evt.fire("onBnpClose", n)
+        }
+    };
+    var Bnp = Bnp || {};
+    Bnp.Embed = Bnp.Embed || function() {
+        function t(t) {
+            t.initE ? i(t.initE, function() {
+                n(t)
+            }) : n(t)
+        }
+
+        function i(n, t) {
+            for (var r, i = 0, u = n.length; i < u; i++) r = n[i], sj_evt.unbind(r, t), sj_evt.bind(r, t, 1)
+        }
+
+        function n(n) {
+            var i = _ge(n.vid),
+                t, r;
+            try {
+                r = n.tar;
+                t = _d.querySelector && r ? _d.querySelector(r) : _ge(r.substring(1))
+            } catch (u) {}
+            if (t && i) {
+                if (n.clear)
+                    while (t.hasChildNodes()) t.removeChild(t.lastChild);
+                n.sibling ? t.parentNode.insertBefore(i, t.nextSibling) : n.first ? t.insertBefore(i, t.firstChild) : t.appendChild(i);
+                sj_evt.fire("bnp.embed.ready", n);
+                n.isFromCachedImpression && Bnp.Common.RecordImpression(n.id)
+            }
+        }
+        return {
+            Show: t
+        }
+    }();
+    var ClassUtil = ClassUtil || function() {
+        function n(n, t) {
+            if (n && n.className) {
+                var i = " " + n.className + " ";
+                return i.indexOf(" " + t + " ") !== -1
+            }
+            return !1
+        }
+
+        function t(t, i) {
+            t && !n(t, i) && (t.className += " " + i)
+        }
+
+        function i(t, i) {
+            if (n(t, i)) {
+                var r = new RegExp("(\\s|^)" + i + "(\\s|$)", "g");
+                t.className = t.className.replace(r, " ")
+            }
+        }
+        return {
+            addClass: t,
+            removeClass: i
+        }
+    }();
+    var OpalHelper;
+    (function(n) {
+        function t(n) {
+            n && sj_be(n, "mousedown", function(t) {
+                sj_sp(t);
+                _w.si_T && si_T(n.getAttribute("h"))
+            })
+        }
+        n.PreventiOSAppStorePopup = t
+    })(OpalHelper || (OpalHelper = {}));
+    var BnpGetElementByClassUtil = BnpGetElementByClassUtil || function() {
+        function n(n, t, i) {
+            var r, f, u;
+            if (i = i || _d, i.getElementsByClassName) return f = i.getElementsByClassName(n), f.length > 0 ? f[0] : null;
+            for (t = t || "div", u = i.getElementsByTagName(t), r = 0; r < u.length; r++)
+                if (u[r].className.indexOf(n) > -1) return u[r];
+            return null
+        }
+        return {
+            _gc: n
+        }
+    }();
+    var BnpTtc = BnpTtc || function() {
+        function g() {
+            return n ? n.clientHeight : 0
+        }
+
+        function nt(t, r) {
+            var f = _ge(y),
+                e = _ge(p);
+            n = _ge("bnp.nid." + t);
+            f && (sj_be(f, "click", function(u) {
+                n && (n.style.display = "none");
+                var f = _ge(d);
+                return f && f.style.removeProperty("padding-top"), w(r, i), Bnp.Common.Click(t, u)
+            }), f.getAttribute("data-applink") == "1" && OpalHelper.PreventiOSAppStorePopup(f));
+            e && (sj_be(e, "click", function() {
+                w(r, i)
+            }), sj_be(e, "mouseup", function() {
+                return Bnp.Common.Close(t, !0)
+            }), sj_evt.bind("unload", function() {
+                n && n.parentNode && n.parentNode.removeChild(n)
+            }));
+            sj_evt.bind("bnp.embed.ready", function() {
+                if (n) {
+                    n.style.display = "inline-block";
+                    n.style.width = "100%";
+                    i = g();
+                    var t = _ge(u);
+                    t && (n.style.float = "right");
+                    tt(r, i);
+                    sj_evt.fire("bnp.notif.shown", i)
+                }
+            }, 1)
+        }
+
+        function tt(i, w) {
+            var g = _ge(y),
+                ot = _ge(p),
+                d = _w.innerWidth,
+                yt = _w.innerHeight,
+                nt, rt, ut, ft, lt, et, it, at, vt, tt;
+            d = Math.min(d, yt, 360);
+            d = Math.max(d, 320);
+            nt = !0;
+            switch (i) {
+                case "ux1":
+                    g && ot ? ot.style.width = g.style.width = (d - 30) / 2 + t : g && (g.style.width = d - 20 + t);
+                    break;
+                case "ux2":
+                    g && (g.style.width = d - 20 + t);
+                    break;
+                case "slim":
+                    nt = !1
+            }
+            rt = _ge(u);
+            ut = _ge(f);
+            rt && ut && (ClassUtil.addClass(rt, e), ClassUtil.addClass(ut, o), ClassUtil.addClass(_d.body, s));
+            var st = _ge(h),
+                ht = sj_b.className.indexOf("hp") >= 0 ? _ge(c) : null,
+                ct = _ge(v);
+            st && nt && (ft = !1, ct && (lt = _w.getComputedStyle(ct), ft = lt.position === "relative"), ft ? (et = 5, it = _w.scrollY, typeof it != "undefined" && w - et <= it && it <= w + et && _w.scrollTo(0, 0)) : r(st, w), ht && r(ht, w));
+            at = _ge(b);
+            tt = BnpGetElementByClassUtil._gc("touch-query-search-box");
+            at && nt && (ClassUtil.addClass(n, "img_bnpovr"), tt && ClassUtil.addClass(tt, "img_sbovr"));
+            vt = _ge(k);
+            tt = BnpGetElementByClassUtil._gc("touch-query-search-box");
+            vt && nt && (ClassUtil.addClass(n, "vid_bnpovr"), tt && ClassUtil.addClass(tt, "vid_sbovr"));
+            nt ? ClassUtil.addClass(_d.body, l) : ClassUtil.addClass(_d.body, a);
+            _w.scrollTo(0, 0)
+        }
+
+        function w(n, t) {
+            var b = _ge(u),
+                k = _ge(f),
+                d = n !== "slim",
+                i, y, p, w, g;
+            b && k && (ClassUtil.removeClass(b, e), ClassUtil.removeClass(k, o), ClassUtil.removeClass(_d.body, s));
+            i = _ge(h);
+            y = sj_b.className.indexOf("hp") >= 0 ? _ge(c) : null;
+            i && d && (p = !1, w = _ge(v), w && (g = _w.getComputedStyle(w), p = g.position === "relative"), p || r(i, -t), y && r(y, -t));
+            d ? ClassUtil.removeClass(_d.body, l) : ClassUtil.removeClass(_d.body, a);
+            sj_evt.fire("bnp.notif.closed", t)
+        }
+
+        function r(n, i) {
+            var u = _w.getComputedStyle(n),
+                r;
+            u && (r = parseInt(u.marginTop.split(t)[0]), r == null || isNaN(r) || (r += i, n.style.marginTop = r + t))
+        }
+        var u = "mHeader",
+            f = "bgDiv",
+            e = "hpSearchBox",
+            o = "hpContent",
+            s = "nonScroll",
+            h = "b_content",
+            b = "images",
+            k = "video",
+            c = "mHamburger",
+            l = "notif_top",
+            a = "sttc",
+            t = "px",
+            v = "b_header",
+            d = "mHeaderInner",
+            y = "bnp_cta_link",
+            p = "bnp_close_link",
+            n, i;
+        return {
+            Setup: nt
+        }
+    }();
+    sj_evt.bind("onP1", function() {
+        BnpTtc.Setup(62287, 'ux2');
+    }, 1, 50);;
+    //]]>
+</script>
+<script type="text/javascript" src="/rs/3Z/11/cj,nj/b900fd3c/ffe8d60e.js"></script>
+<script type="text/javascript" src="/rs/3Z/J/cj,nj/ba84d7f8/a2a5f48f.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        var n = {
+            "vid": "bnp.nid.62287",
+            "tar": "#mHeader",
+            "clear": false,
+            "first": true,
+            "sibling": false,
+            "id": "62287"
+        };
+        Bnp.Embed.Show(n);
+    })();;
+    //]]>
+</script>
