@@ -1,0 +1,28 @@
+{
+    "runDate": "2019-10-09T09:49:55.473Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "nl-nl.html",
+        "destination": "test",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 0,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "test"
+    },
+    "graphStats": {
+        "connectedNodes": 0,
+        "disconnectedNodes": 0,
+        "nodes": 0,
+        "files": 0
+    },
+    "deadFunctions": [],
+    "aliveFunctions": [],
+    "allFunctions": [],
+    "affectedFiles": []
+}
