@@ -1,0 +1,20 @@
+.text-icon {
+  display: flex;
+  align-items: center;
+
+  &.icon-left {
+    // .text-component,
+    .icon-component {
+      // float: left;
+      display: inline-block;
+    }
+
+    .text-icon-content {
+      padding-left: 10px;
+
+      * {
+        margin: 0;
+      }
+    }
+  }
+}

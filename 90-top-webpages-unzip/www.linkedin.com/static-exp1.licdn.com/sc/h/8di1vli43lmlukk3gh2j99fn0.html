@@ -1,0 +1,4811 @@
+(function () {
+  'use strict';
+
+  const uc = window.encodeURIComponent;
+  const COMSCORE_BEACON_URL = 'https://sb.scorecardresearch.com/b?';
+  const prefix = 'ns_';
+
+  /**
+   * Fire the Comscore tracking
+   *
+   * @export
+   * @returns {Image} returns the comscore tracking beacon image
+   */
+  function fireComscoreTracking() {
+    let params = ['c1=2', 'c2=6402952', 'c3=', 'c4=', 'c5=', 'c6=', 'c15='];
+
+    params.push(`${prefix}_t=${Date.now()}`);
+    params.push(`${prefix}c=${document.characterSet || document.defaultCharset || ''}`);
+    params.push(`c8=${uc(document.title)}`);
+    params.push(`c7=${uc(document.URL)}`);
+
+    const referrer = document.referrer && document.referrer.split('?')[0] || '';
+    params.push(`c9=${uc(referrer)}`);
+
+    const url = COMSCORE_BEACON_URL + params.join('&');
+    let img = new Image();
+    img.src = url;
+    return img;
+  }
+
+  function extend(a, b) {
+    for (var key in b) {
+      if (b.hasOwnProperty(key)) {
+        a[key] = b[key];
+      }
+    }
+    return a;
+  }
+
+  /*
+   * It is possible that new Date() and (navigationStart + window.performance.now()) are different because of system clock skew.
+   * This API returns the time in the clock of browser navigationStart
+   */
+  function getPerformanceTime() {
+    return window.performance && window.performance.timing && typeof window.performance.now === "function" ? Math.round(window.performance.now()) + window.performance.timing.navigationStart : new Date().getTime();
+  }
+
+  /*
+   * The Base RumPlugin class which contains
+   * the interface and common functionality for
+   * all plugins.
+   * All plugins will extend this class and implement
+   * atleast the collectData() method.
+   */
+  class RumPlugin {
+    constructor(parent) {
+      this._parent = parent;
+      this._config = parent.getConfig();
+      this._complete = false;
+      this.data = {};
+    }
+
+    /*
+     * Get the current completion status for the plugin.
+     */
+    isComplete() {
+      return this._complete;
+    }
+
+    /*
+     * Mark that the plugin is complete.
+     */
+    markComplete() {
+      this._complete = true;
+    }
+
+    /*
+     * Called by the plugin when its work is complete and the plugin data is ready.
+     * It calls the parent's pluginDone() method so that it can try to send the
+     * beacon data from all the plugins.
+     */
+    done() {
+      this._complete = true;
+      if (this.isAsync()) {
+        this._parent.pluginDone();
+      }
+    }
+
+    /*
+     * Called to reset the state between page views.
+     */
+    resetState() {
+      this._complete = false;
+      this.data = {};
+    }
+
+    /*
+     * Returns the data collected by the plugin.
+     */
+    getData() {
+      return this.data;
+    }
+
+    /*
+     * Some plugins need to wait until the end before collecting the data to be sent back.
+     * This method lets the plugin to collect data before sending the beacon data.
+     * The plugin needs to call done() at the end of collecting data.
+     * To be implemented by the actual plugin.
+     */
+    collectData() {}
+
+    /*
+     * Returns true if the plugin's data is asynchronous and will not be immediately
+     * ready after collectData method is completed.
+     */
+    isAsync() {
+      return false;
+    }
+  }
+
+  /*
+   * The LinkedInData plugin which collects LinkedIn specific
+   * data like TreeId etc.
+   */
+  class LinkedInData extends RumPlugin {
+    constructor(parent) {
+      super(parent);
+    }
+
+    collectData() {
+      this._readLinkedinData();
+    }
+
+    _readLinkedinData() {
+      this.data['timeSource'] = this._config['beacon-source'];
+      this.data['treeId'] = this._getTreeId();
+      if (this._config['commit-id']) {
+        this.data['sessionID'] = this._config['commit-id'];
+      }
+      this.data['isFromServiceWorker'] = this._getFromServiceWorker();
+      this.done();
+    }
+
+    _getTreeId() {
+      let treeIdMeta = document.querySelector('meta[name="treeID"]');
+      return treeIdMeta && treeIdMeta.getAttribute('content');
+    }
+
+    _getFromServiceWorker() {
+      let meta = document.querySelector('meta[name="fromServiceWorker"]');
+      return meta && meta.getAttribute('content') === 'true';
+    }
+  }
+
+  /*
+   * The NavigationTiming plugin which collects the Navigation Timing
+   * API (https://www.w3.org/TR/navigation-timing/) data.
+   */
+  class NavigationTiming extends RumPlugin {
+    constructor(parent) {
+      super(parent);
+      this._navigationTimingRead = false;
+      this._navigationTimingFields = ["loadEventEnd", "loadEventStart", "domComplete", "domContentLoadedEventEnd", "domContentLoadedEventStart", "domInteractive", "domLoading", "responseEnd", "responseStart", "requestStart", "secureConnectionStart", "connectEnd", "connectStart", "domainLookupEnd", "domainLookupStart", "fetchStart", "redirectEnd", "redirectStart", "unloadEventEnd", "unloadEventStart", "navigationStart"];
+    }
+
+    collectData() {
+      this._readNavigationTiming();
+      this.done();
+    }
+
+    _readNavigationTiming() {
+      var timingObject, i, key, navigation;
+
+      if (this._navigationTimingRead) {
+        return;
+      }
+
+      if (window.performance && window.performance.timing && window.performance.navigation) {
+        this.data['navigationTimingApi'] = true;
+        timingObject = window.performance.timing;
+        // Read all timing objects to the beacon.
+        for (i = 0; i < this._navigationTimingFields.length; i++) {
+          key = this._navigationTimingFields[i];
+          if (timingObject[key]) {
+            this.data[key] = timingObject[key];
+          }
+        }
+        // read navigation object
+        this.data['redirectCount'] = window.performance.navigation.redirectCount;
+        this.data['navigationType'] = window.performance.navigation.type;
+      } else {
+        this.data['navigationTimingApi'] = false;
+      }
+
+      if (window.performance && window.performance.getEntriesByType) {
+        navigation = window.performance.getEntriesByType('navigation')[0];
+        if (navigation !== undefined) {
+          this.data['workerStart'] = navigation['workerStart'];
+
+          // HTML related metrics
+          if (typeof navigation['fetchStart'] === "number" && typeof navigation['responseEnd'] === "number" && typeof navigation['decodedBodySize'] === "number" && typeof navigation['encodedBodySize'] === "number" && typeof navigation['transferSize'] === "number") {
+            let htmlNavigationTimingMetrics = {};
+            htmlNavigationTimingMetrics['htmlFetchStart'] = navigation['fetchStart'];
+            htmlNavigationTimingMetrics['htmlResponseEnd'] = navigation['responseEnd'];
+            htmlNavigationTimingMetrics['htmlDecodedBodySize'] = navigation['decodedBodySize'];
+            htmlNavigationTimingMetrics['htmlEncodedBodySize'] = navigation['encodedBodySize'];
+            htmlNavigationTimingMetrics['htmlTransferSize'] = navigation['transferSize'];
+            this.data['htmlMetrics'] = htmlNavigationTimingMetrics;
+          }
+        }
+      }
+
+      this._navigationTimingRead = true;
+    }
+  }
+
+  /*
+   * The ResourceTiming plugin which collects the Resource Timing
+   * API (https://www.w3.org/TR/resource-timing/) data.
+   */
+  class ResourceTiming extends RumPlugin {
+    constructor(parent) {
+      super(parent);
+      this._imgEntries = [];
+      this._resourceTimingFields = {
+        // default fields
+        name: true,
+        // entry type will always return resource string so no need to include
+        entryType: false,
+        duration: true,
+        initiatorType: true,
+        fetchStart: true,
+        responseEnd: true,
+        //startTime will be redirectStart if time allow origin passed, otherwise equal to fetchStart
+        startTime: true,
+        // 0 if time allow origin failed
+        connectEnd: true,
+        connectStart: true,
+        domainLookupEnd: true,
+        domainLookupStart: true,
+        redirectEnd: true,
+        redirectStart: true,
+        requestStart: true,
+        responseStart: true,
+        secureConnectionStart: true,
+        // fields not available yet
+        nextHopProtocol: true,
+        transferSize: true,
+        decodedBodySize: true,
+        encodedBodySize: true,
+        workerStart: true
+      };
+      this._requestSamplingRandVal = Math.random();
+      this._setupResourceTiming();
+    }
+
+    resetState() {
+      super.resetState();
+      this._requestSamplingRandVal = Math.random();
+    }
+
+    collectData() {
+      this._readResourceTiming();
+      this.done();
+    }
+
+    addTreeId(treeId, url) {
+      var i;
+      if (this._treeIdUrlParser && this._rsTimingUrlParser) {
+        // Parse the input url
+        this._treeIdUrlParser.href = url;
+        // Refresh the resource timing entries
+        this._readResourceTiming();
+        if (this.data['resourceTimingEntries']) {
+          for (i = this.data['resourceTimingEntries'].length - 1; i >= 0; i--) {
+            this._rsTimingUrlParser.href = this.data['resourceTimingEntries'][i]['name'];
+            if (this._treeIdUrlParser.protocol === this._rsTimingUrlParser.protocol && this._treeIdUrlParser.host === this._rsTimingUrlParser.host && this._treeIdUrlParser.pathname === this._rsTimingUrlParser.pathname && (
+            // In case the GET parameter is not provided.
+            this._treeIdUrlParser.search === this._rsTimingUrlParser.search || this._treeIdUrlParser.search === '')) {
+              this.data['resourceTimingEntries'][i]['resourceTreeId'] = treeId;
+              break;
+            }
+          }
+        }
+      }
+    }
+
+    _isResourceTimingSupported() {
+      return window.performance && typeof window.performance.getEntriesByType === "function";
+    }
+
+    _setupResourceTiming() {
+      var rsTimingSampleConfig = {
+        'default': 0.001,
+        'xmlhttprequest': 1.0
+      };
+
+      if (this._config['rs-sample-rate'] !== null && typeof this._config['rs-sample-rate'] === 'object') {
+        // if configs is an object, override rsTimingSampleConfig default values with config values
+        for (var key in this._config['rs-sample-rate']) {
+          if (this._config['rs-sample-rate'].hasOwnProperty(key)) {
+            rsTimingSampleConfig[key] = this._config['rs-sample-rate'][key];
+          }
+        }
+      }
+      this._config['rs-sample-rate'] = rsTimingSampleConfig;
+      // Bootstrap resource timing
+      if (this._isResourceTimingSupported()) {
+        this._readResourceTiming();
+        this._setBufferSize(100);
+        if (window.performance.onresourcetimingbufferfull === null) {
+          window.performance.onresourcetimingbufferfull = this._readResourceTiming.bind(this);
+        } else if (window.performance.onwebkitresourcetimingbufferfull === null) {
+          window.performance.onwebkitresourcetimingbufferfull = this._readResourceTiming.bind(this);
+        }
+      }
+      this._treeIdUrlParser = document.createElement('a');
+      this._rsTimingUrlParser = document.createElement('a');
+    }
+
+    _clearBuffer() {
+      if (!this._isResourceTimingSupported() || !this._config['enable-rs-timing']) {
+        return;
+      }
+
+      if (window.performance.clearResourceTimings && typeof window.performance.clearResourceTimings === 'function') {
+        window.performance.clearResourceTimings();
+      } else if (window.performance.webkitClearResourceTimings && typeof window.performance.webkitClearResourceTimings === 'function') {
+        window.performance.webkitClearResourceTimings();
+      }
+    }
+
+    _setBufferSize(bufferSize) {
+      if (!this._isResourceTimingSupported() || !this._config['enable-rs-timing']) {
+        return;
+      }
+
+      if (window.performance.setResourceTimingBufferSize && typeof window.performance.setResourceTimingBufferSize === 'function') {
+        window.performance.setResourceTimingBufferSize(bufferSize);
+      } else if (window.performance.webkitSetResourceTimingBufferSize && typeof window.performance.webkitSetResourceTimingBufferSize === 'function') {
+        window.performance.webkitSetResourceTimingBufferSize(bufferSize);
+      }
+    }
+
+    _readResourceTiming() {
+      var resourceList,
+          i,
+          rsEntryKey,
+          entryDict,
+          randVal,
+          sampleRate,
+          sampleMode = 'rand',
+          isRequestSampled = false,
+          resourceTimingEntries = this.data && this.data['resourceTimingEntries'] || [];
+
+      if (!this._isResourceTimingSupported() || !this._config['enable-rs-timing']) {
+        return;
+      }
+
+      resourceList = window.performance.getEntriesByType('resource');
+      //Sample resource timing array
+      for (i = 0; i < resourceList.length; i++) {
+        entryDict = {};
+        for (rsEntryKey in resourceList[i]) {
+          if (this._resourceTimingFields[rsEntryKey] === true) {
+            //TODO: Skip 0 fields that not passing time allow origin check
+            //TODO: truncate urls if needed
+            //TODO: round double to long to reduce the payload
+            entryDict[rsEntryKey] = resourceList[i][rsEntryKey];
+          }
+        }
+
+        if (entryDict['initiatorType'] === 'img') {
+          this._imgEntries.push(entryDict);
+        }
+
+        // for CDN H2
+        // https://jira01.corp.linkedin.com:8443/browse/CDO-4254
+        // RUMJS used to do a hard-coded XHR call to https://static.licdn.com/cdo/rum/id to extract X-CDN* headers,
+        // but in CDN experiment static content is coming from static-exp1.licdn.com. In order to get the correct
+        // X-CDN header, we need to pick one static resouce and make a request to that static resource.
+        if (this._parent._config['xcndUrl'] === null && entryDict['initiatorType'] === 'script') {
+          this._parent._config['xcndUrl'] = entryDict['name'];
+        }
+
+        randVal = Math.random();
+        sampleRate = this._config['rs-sample-rate'][resourceList[i].initiatorType] || this._config['rs-sample-rate']['default'];
+        isRequestSampled = this._requestSamplingRandVal <= this._config['request-sampling-rate'];
+        if (isRequestSampled || randVal <= sampleRate) {
+          resourceTimingEntries.push(entryDict);
+          entryDict['sampleMode'] = '';
+          if (isRequestSampled) {
+            entryDict['sampleMode'] = 'requestSampled,';
+          }
+          if (randVal <= sampleRate) {
+            entryDict['sampleMode'] += sampleMode + sampleRate.toString();
+          }
+        }
+      }
+
+      this._clearBuffer();
+      if (resourceTimingEntries.length > 0) {
+        this.data['resourceTimingEntries'] = resourceTimingEntries;
+      }
+    }
+  }
+
+  /*
+   * The UserTiming plugin which collects the User timing
+   * API (https://www.w3.org/TR/user-timing/) related marks
+   * and measures.
+   */
+  class UserTiming extends RumPlugin {
+    constructor(parent) {
+      super(parent);
+    }
+
+    collectData() {
+      this._readUserTimingEntries();
+      this.done();
+    }
+
+    _clearUserTimings() {
+      if (window.performance) {
+        if (window.performance.clearMarks) {
+          window.performance.clearMarks();
+        }
+        if (window.performance.clearMeasures) {
+          window.performance.clearMeasures();
+        }
+      }
+    }
+
+    _getUserTimingEntries(items, entryType) {
+      var item,
+          i,
+          entry,
+          entries = [];
+
+      for (i = 0; i < items.length; i++) {
+        item = items[i];
+        if (item) {
+          entry = {};
+          entry['entryType'] = entryType;
+          entry['name'] = item.name;
+          entry['startTime'] = item.startTime;
+          entry['duration'] = item.duration;
+          entries.push(entry);
+        }
+      }
+
+      return entries;
+    }
+
+    /*
+     * Reads the user timing entries and updates the beacon data.
+     * This method should be called only once before sending the beacon because it clears the user timing data and
+     * overwrites existing user timing data.
+     */
+    _readUserTimingEntries() {
+      var items,
+          entries = [];
+      if (window.performance && typeof window.performance.getEntriesByType === "function") {
+        if (this._config['user-timing-measure-enabled']) {
+          items = window.performance.getEntriesByType('measure');
+          entries = entries.concat(this._getUserTimingEntries(items, 'MEASURE'));
+        }
+        if (this._config['user-timing-mark-enabled']) {
+          items = window.performance.getEntriesByType('mark');
+          entries = entries.concat(this._getUserTimingEntries(items, 'MARK'));
+        }
+      }
+      this.data['userTimingEntries'] = entries;
+      this._clearUserTimings();
+    }
+  }
+
+  /*
+   * The CDNData plugin which collects CDN information
+   */
+  class CDNData extends RumPlugin {
+    constructor(parent) {
+      super(parent);
+      this._started = false;
+    }
+
+    /*
+     * Do not reset the state since CDN data doesn't change between page views.
+     */
+    resetState() {}
+
+    isAsync() {
+      return true;
+    }
+
+    collectData() {
+      if (this._started) {
+        return;
+      }
+      this._started = true;
+      this._getCDNData();
+    }
+
+    _getCDNData() {
+      let protocol = window.location.protocol,
+          url = this._parent._config['xcndUrl'],
+          xhr = new XMLHttpRequest(),
+          _this = this,
+          cdn = '',
+          cdnIpVersion = '',
+          cdnHttpVersion = '';
+
+      this.data['usedCDN'] = {
+        'static_domain': cdn,
+        'ip_version': cdnHttpVersion,
+        'http_version': cdnHttpVersion
+      };
+
+      if (protocol.lastIndexOf('http', 0) !== 0 || url === null) {
+        this.done();
+        return;
+      }
+
+      xhr.onreadystatechange = function () {
+        // BPR replaces the XMLHttpRequest object for some duration
+        // and the original xhr object should not be used to get response
+        // in such cases
+        var request = this.readyState ? this : xhr;
+        if (request.readyState === 4) {
+          if (request.status === 200) {
+            // Get CDN from X-CDN header otherwise fallback to responseText
+            try {
+              cdn = request.getResponseHeader('X-CDN');
+              cdnIpVersion = request.getResponseHeader('X-CDN-CLIENT-IP-VERSION');
+              cdnHttpVersion = request.getResponseHeader('X-CDN-Proto');
+            } catch (e) {
+              console.log('Canot read the X-CDN header possibly because of CORS restrictions');
+            }
+
+            _this.data['usedCDN']['static_domain'] = cdn === null ? '' : cdn;
+            _this.data['usedCDN']['ip_version'] = cdnIpVersion === null ? '' : cdnIpVersion.toLowerCase();
+            _this.data['usedCDN']['http_version'] = cdnHttpVersion === null ? '' : cdnHttpVersion.toLowerCase();
+          } else {
+            console.log('CDN request did not return a HTTP 200. Status: ' + request.status);
+          }
+          _this.done();
+        }
+      };
+      xhr.open('HEAD', url, true);
+      xhr.send();
+    }
+  }
+
+  /*
+   * The PoPData plugin which collects PoP information
+   */
+  class PoPData extends RumPlugin {
+    constructor(parent) {
+      super(parent);
+      this._started = false;
+    }
+
+    /*
+     * Do not reset the state since PoP data doesn't change between page views.
+     */
+    resetState() {}
+
+    isAsync() {
+      return true;
+    }
+
+    collectData() {
+      if (this._started) {
+        return;
+      }
+      this._started = true;
+      this._getPoPData();
+    }
+
+    /*
+     * Collect PoP data by making a health check request and reading response headers.
+     */
+    _getPoPData() {
+      var endPoint = '/fizzy/admin',
+          loc = window.location,
+          protocol = loc.protocol,
+          domain = loc.host,
+          url = protocol + '//' + domain + endPoint + "?" + new Date().getTime(),
+          xhr = new XMLHttpRequest(),
+          _this = this;
+
+      if (protocol.lastIndexOf('http', 0) !== 0) {
+        this.done();
+        return;
+      }
+
+      xhr.onreadystatechange = function () {
+        // BPR replaces the XMLHttpRequest object for some duration
+        // and the original xhr object should not be used to get response
+        // in such cases
+        var request = this.readyState ? this : xhr;
+        if (request.readyState === 4) {
+          if (request.status >= 200 && request.status < 400) {
+            _this.data['pointOfPresenceId'] = request.getResponseHeader('X-Li-Pop');
+            _this.data['rawXLiFabricHeader'] = request.getResponseHeader('X-Li-Fabric');
+            _this.data['httpVersion'] = request.getResponseHeader('X-Li-proto');
+          } else {
+            console.log('PoP request was not successful. Status: ' + request.status);
+          }
+
+          _this.done();
+        }
+      };
+      xhr.open('get', url, true);
+      xhr.send();
+    }
+  }
+
+  /*
+   * The LongTasksTiming plugin which collects the Long Tasks
+   * API (https://w3c.github.io/longtasks/) data.
+   */
+  class LongTasksTiming extends RumPlugin {
+    constructor(parent) {
+      super(parent);
+      this.data['longTasks'] = [];
+      this._longTaskFields = ["duration", "name", "startTime"];
+      this._observer = new PerformanceObserver(list => {
+        list.getEntries().forEach(entry => {
+          let longTask = {};
+          for (let i = 0; i < this._longTaskFields.length; i++) {
+            let key = this._longTaskFields[i];
+            if (entry[key] !== undefined) {
+              longTask[key] = entry[key];
+            }
+          }
+          this.data['longTasks'].push(longTask);
+        });
+      });
+
+      try {
+        this._observer.observe({ entryTypes: ['longtask'] });
+      } catch (err) {
+        console.log('Longtask api is not supported');
+      }
+    }
+
+    resetState() {
+      this._complete = false;
+      this.data = {};
+      this.data['longTasks'] = [];
+    }
+
+    collectData() {
+      this.done();
+    }
+  }
+
+  /*
+   * The NetworkInformation plugin which collects the Network Information
+   * API (http://wicg.github.io/netinfo/) data
+   */
+  class NetworkInformation extends RumPlugin {
+    constructor(parent) {
+      super(parent);
+    }
+
+    collectData() {
+      this._readNetworkInformation();
+      this.done();
+    }
+
+    _readNetworkInformation() {
+      if (navigator && navigator.connection) {
+        let networkInformation = {};
+        let downlinkMax = navigator.connection.downlinkMax;
+        networkInformation['connectionType'] = navigator.connection.type === undefined ? 'UNKNOWN' : navigator.connection.type.toUpperCase();
+        networkInformation['effectiveType'] = this._formatEffectiveType(navigator.connection.effectiveType);
+        networkInformation['roundTripTime'] = navigator.connection.rtt === undefined ? -1 : navigator.connection.rtt;
+        networkInformation['downlinkBandwidth'] = navigator.connection.downlink === undefined ? -1 : navigator.connection.downlink;
+        networkInformation['downlinkMaxBandwidth'] = downlinkMax === undefined ? -1 : downlinkMax === Infinity ? 0 : navigator.connection.downlinkMax;
+        this.data['networkInformationMetrics'] = networkInformation;
+      }
+    }
+
+    // avro schema does not allow enum to start with number
+    _formatEffectiveType(effectiveType) {
+      if (effectiveType === '2g') {
+        return 'TWO_G';
+      } else if (effectiveType === '3g') {
+        return 'THREE_G';
+      } else if (effectiveType === '4g') {
+        return 'FOUR_G';
+      } else {
+        return 'SLOW_2G';
+      }
+    }
+  }
+
+  /*
+   * The core RumTracking class which exposes the API to be
+   * used by applications and sends the beacon data to server
+   * based on the config data.
+   */
+  class RumTracking {
+    constructor(config) {
+      this._resetState(false);
+      this._defaults = {
+        'enabled': true,
+        'beacon-url': '/li/track',
+        'beacon-service': 'tracking',
+        'event-name': 'RealUserMonitoringEvent',
+        'topic-name': 'RealUserMonitoringEvent',
+        'app-id': 'linkedin.rum.tracking',
+        'is-single-page-app': true,
+        'cross-origin': false,
+        'beacon-timeout': 30000,
+        'request-sampling-rate': 0.01,
+        'user-timing-mark-enabled': false,
+        'user-timing-measure-enabled': true,
+        'beacon-source': 'apps',
+        'page-key-prefix': '',
+        'navigation-timing-only': false,
+        'pathname-depth': -1,
+        'lazy-image-class-names': ['lazy-image'],
+        'enable-cdn-tracking': false,
+        'enable-pop-tracking': false,
+        'async-plugins-timeout': 5000
+      };
+
+      this._config = extend(this._defaults, config);
+      if (!this._config['enabled']) {
+        return;
+      }
+      // Saving document.readyState in the config to be used, if it is not already passed
+      // This was added to allow testing different readyState, should not be used outside of tests
+      if (!this._config['readyState']) {
+        this._config['readyState'] = document.readyState;
+      }
+
+      // first css or javascript url from ResourceTiming
+      this._config['xcndUrl'] = null;
+
+      if (this._config['navigation-timing-only']) {
+        this._config['enable-rs-timing'] = this._config['enable-rs-timing'] || false;
+      } else {
+        this._config['enable-rs-timing'] = this._config['enable-rs-timing'] === false ? false : true;
+      }
+
+      this._config['plugins'] = [new LinkedInData(this), new NavigationTiming(this), new ResourceTiming(this), new UserTiming(this), new NetworkInformation(this)];
+
+      if (this._config['enable-cdn-tracking']) {
+        this._config['plugins'].push(new CDNData(this));
+      }
+
+      if (this._config['enable-pop-tracking']) {
+        this._config['plugins'].push(new PoPData(this));
+      }
+
+      if (typeof PerformanceObserver === 'function' && typeof PerformanceLongTaskTiming === 'function') {
+        this._config['plugins'].push(new LongTasksTiming(this));
+      }
+
+      this._isInitialLoad = true;
+      this._initialStartTime = undefined;
+      this._renderCompleteCount = 0;
+      this._isLazyRender = false;
+      this._allBeaconData = [];
+      this._csrfToken = '';
+
+      this._isInternalApp = false;
+      if (this._config['beacon-source'] && this._config['beacon-source'] === 'internal-apps') {
+        this._isInternalApp = true;
+        // for internal apps: hard-code the url to corp tracking-fe
+        if (this._config['beacon-service'] === 'lite' || this._config['beacon-url'] === 'https://www.linkedin-ei.com/lite/rum-track' || this._config['beacon-url'] == '/li/track') {
+          this._config['beacon-service'] = 'tracking';
+          this._config['beacon-url'] = 'https://lca1-mobile-tracking-frontend-vip-1.corp.linkedin.com/li/track/';
+        }
+      }
+
+      this._onLoad = () => {
+        setTimeout(() => {
+          this._collectPluginData();
+        }, 500);
+      };
+
+      this._onUnload = () => {
+        this._collectPluginData();
+      };
+
+      if (this._config['navigation-timing-only']) {
+        // non-SPA mode
+        if (this._config['readyState'] === 'complete') {
+          this._onLoad();
+        } else {
+          window.addEventListener('load', this._onLoad);
+        }
+      } else {
+        // SPA mode
+        window.addEventListener('unload', this._onUnload);
+      }
+    }
+
+    destroy() {
+      if (this._config['navigation-timing-only']) {
+        // non-SPA mode
+        window.removeEventListener('load', this._onLoad);
+      } else {
+        // SPA mode
+        this._collectPluginData();
+        window.removeEventListener('unload', this._onUnload);
+      }
+    }
+
+    /*
+     * API to set the page key for a partial page load scenario or full page load scenario
+     * @param {pageKey} the page key for the current page
+     */
+    setPageKey(pageKey) {
+      this._beaconData['pageKey'] = pageKey;
+    }
+
+    /*
+     * API to set the current user for the page load. Only enabled for internal apps.
+     * @param {username} the username for the current page view
+     */
+    setCurrentUser(username) {
+      if (this._isInternalApp && typeof username == 'string') {
+        this._beaconData['sessionID'] = username;
+      }
+    }
+
+    /*
+     * API to notify a new route transition in a single page app for a partial page load scenario.
+     *
+     * @param {isSubsequentPageTransition} Optional boolean parameter which calls
+     *                                     appTransitionStart only for subsequent page loads
+     */
+    appTransitionStart(isSubsequentPageTransition) {
+      // If the app calls appTransitionStart during initial page load we should ignore it.
+      // We check for this condition by verifying that renderComplete was called atleast once.
+      if (isSubsequentPageTransition || this._renderCompleteCount > 0) {
+        this._collectPluginData();
+        this._beaconData['navigationStart'] = getPerformanceTime();
+        this._isInitialLoad = false;
+      }
+    }
+
+    /*
+     * API to notify that a route transition is complete in both initial page load and partial page load scenarios.
+     */
+    appRenderComplete() {
+      this._renderCompleteCount++;
+      this._beaconData['renderCompleteTime'] = getPerformanceTime();
+      if (!this._timeOutVal) {
+        this._timeOutVal = setTimeout(() => {
+          this._collectPluginData();
+        }, this._config['beacon-timeout']);
+      }
+    }
+
+    /*
+     * API to set the treeId for a request. It will set treeId for the latest request which
+     * has the given url.
+     * example1: RUM2.addTreeId('testTreeId', '/ajaxapi') will try to match the request
+     * with the same path regardless of the get parameters.
+     * example2: RUM2.addTreeId('testTreeId', '/ajaxapi?param=3') will try to match the request
+     * with the same path and the same parameters.
+     * @param {treeId} the treeId for request
+     * @param {url} The absolute or relative url of the request. If the url does not contain the
+     * get parameters, it will match the url path.
+     */
+    addTreeId(treeId, url) {
+      if (this._config['plugins'] && this._config['plugins'].length > 2) {
+        var resourceTimingPlugin = this._config['plugins'][2];
+        if (resourceTimingPlugin) {
+          resourceTimingPlugin.addTreeId(treeId, url);
+        }
+      }
+    }
+
+    /*
+     * API to notify that a individual view/component rendering in a single page app has started.
+     * @param {viewId}   The unique view id which is unique across all the views in the current page. Ex: 'ember123'
+     * @param {viewName} The user identifiable name for the view/component whose rendering has started.
+                         This is optional. Ex: 'company-profile-detail'
+     */
+    appViewRenderStart(viewId, viewName) {
+      this._viewTimings[viewId] = {
+        'renderName': viewName || viewId,
+        'viewName': viewName,
+        'viewId': viewId,
+        'renderStart': getPerformanceTime()
+      };
+    }
+
+    /*
+     * API to notify that a individual view/component rendering in a single page app has completed.
+     * @param {viewId}   The unique view id which is unique across all the views in the current page.
+     * @param {viewName} The user identifiable name for the view/component whose rendering has started.
+                         This is optional. Ex: 'company-profile-detail'
+     */
+    appViewRenderComplete(viewId, viewName) {
+      if (this._viewTimings[viewId]) {
+        this._viewTimings[viewId]['renderEnd'] = getPerformanceTime();
+      }
+    }
+
+    /*
+     * API to fix the deep link + redirect issue from phone-fe.
+     * @param {deepLinkTrackingId} The unique id which tracks both native page view and mobile web.
+     */
+    setDeepLinkTrackingId(deepLinkTrackingId) {
+      // TODO(ruhou): currently we just exclude those data point without any backend schema&pig script changes.
+      this._shouldSendBeacon = false;
+    }
+
+    /*
+     * API to indicate if the current window has gone into background. If this is set to
+     * true, such samples can be discarded.
+     *
+     * @param {hasWindowHidden} Boolean indicating if the current window is hidden
+     */
+    setWindowHiddenState(hasWindowHidden) {
+      this._beaconData['isImpactedByHiddenWindow'] = hasWindowHidden;
+    }
+
+    /*
+     * API to set the pageInstance.
+     *
+     * @param {pageInstance} Object which represents the pageInstance
+     */
+    setPageInstance(pageInstance) {
+      this._beaconData['pageInstance'] = pageInstance;
+    }
+
+    /*
+     * API to set if we are lazy rendering.
+     *
+     * @param {isLazyRender} true if we are lazy rendering
+     */
+    setIsLazyRender(isLazyRender) {
+      this._isLazyRender = isLazyRender;
+    }
+
+    getConfig() {
+      return this._config;
+    }
+
+    pluginDone() {
+      var plugin;
+
+      // Wait for all asynchronous plugins to finish processing
+      for (var i = 0; i < this._config['plugins'].length; i++) {
+        plugin = this._config['plugins'][i];
+        if (plugin.isAsync() && !plugin.isComplete()) return false;
+      }
+
+      // All asynchronous plugins are done. Send the beacon data collected so far
+      setTimeout(() => {
+        this._sendAllData();
+      }, 500);
+    }
+
+    /*
+     * @param {shouldResetPlugins} Boolean indicating if the plugins need to be reset
+     */
+    _resetState(shouldResetPlugins) {
+      this._beaconData = {};
+      this._viewTimings = {};
+      this._scrollTime = undefined;
+      this._shouldSendBeacon = true;
+      // Clear timers
+      if (this._timeOutVal) {
+        clearTimeout(this._timeOutVal);
+        this._timeOutVal = undefined;
+      }
+
+      if (shouldResetPlugins) {
+        this._config['plugins'].map(plugin => {
+          plugin.resetState();
+        });
+      }
+    }
+
+    _readRenderTimingEntries() {
+      if (Object.keys(this._viewTimings).length > 0) {
+        this._beaconData['detailedRenderTimingEntries'] = [];
+        for (var viewId in this._viewTimings) {
+          if (this._viewTimings.hasOwnProperty(viewId)) {
+            this._beaconData['detailedRenderTimingEntries'].push(this._viewTimings[viewId]);
+          }
+        }
+      }
+    }
+
+    _collectPluginData() {
+      var allPluginsCompleted = true;
+
+      if (!this._config['enabled']) {
+        return;
+      }
+      this._config['plugins'].map(function (plugin) {
+        plugin.collectData();
+        if (!plugin.isComplete()) {
+          allPluginsCompleted = false;
+        }
+      });
+
+      this._pushCurrentBeaconData();
+      if (allPluginsCompleted) {
+        this._sendAllData();
+      } else {
+        setTimeout(() => {
+          this._markAllAsyncPluginComplete();
+        }, this._config['async-plugins-timeout']);
+      }
+      this._resetState(true);
+    }
+
+    /**
+     * Mark all aynsc plugins as complete
+     */
+    _markAllAsyncPluginComplete() {
+      this._config['plugins'].map(function (plugin) {
+        if (plugin.isAsync()) {
+          plugin.markComplete();
+        }
+      });
+      this._sendAllData();
+    }
+
+    /*
+     * Returns true if element does not have lazy image class names
+     */
+    _doesNotHaveLazyImageClass(element) {
+      var i,
+          result = true,
+          lazyImageClassNames = this._config['lazy-image-class-names'];
+      if (element && element.className && lazyImageClassNames) {
+        for (i = lazyImageClassNames.length - 1; i >= 0; i--) {
+          if (element.className.indexOf(lazyImageClassNames[i]) > -1) {
+            result = false;
+          }
+        }
+      }
+      return result;
+    }
+
+    /*
+     * Checks if an element's bounding rect overlaps with the viewport
+     */
+    _doesElementOverlapWithViewport(el) {
+      var intersectRect,
+          elRect = el.getBoundingClientRect();
+
+      intersectRect = { 'top': Math.max(elRect.top, 0),
+        'left': Math.max(elRect.left, 0),
+        'bottom': Math.min(elRect.bottom, window.innerHeight || doc.documentElement.clientHeight),
+        'right': Math.min(elRect.right, window.innerWidth || doc.documentElement.clientWidth) };
+
+      return !(intersectRect.bottom <= intersectRect.top || intersectRect.right <= intersectRect.left);
+    }
+
+    _getImgResourceEntries() {
+      var imgEntries = [],
+          i,
+          resourceEntry,
+          resourceEntries = this._beaconData['resourceTimingEntries'];
+
+      if (resourceEntries) {
+        for (i = resourceEntries.length - 1; i >= 0; i--) {
+          resourceEntry = resourceEntries[i];
+          if (resourceEntry['initiatorType'] === 'img') {
+            imgEntries.push(resourceEntry);
+          }
+        }
+      }
+      return imgEntries;
+    }
+
+    _cleanUpResourceTimingEntries() {
+      var i;
+      // Strip the query parameters since they cause a JSON parsing exception in lite server
+      // TODO: Remove this code when lite-server does the parsing correctly
+      if (this._beaconData['resourceTimingEntries']) {
+        for (i = this._beaconData['resourceTimingEntries'].length - 1; i >= 0; i--) {
+          if (this._beaconData['resourceTimingEntries'][i]['name']) {
+            this._beaconData['resourceTimingEntries'][i]['name'] = this._beaconData['resourceTimingEntries'][i]['name'].split(/[?#]/)[0];
+          }
+        }
+      }
+    }
+
+    _readPageKey() {
+      if (this._beaconData && !this._beaconData['pageKey'] && this._isInitialLoad) {
+        this._beaconData['pageKey'] = this._getPageKey();
+      }
+      if (this._isInternalApp) {
+        if (this._config['web-ui-framework'] === 'EMBER' && this._beaconData['pageKey'] !== undefined) {
+          // For Flyer apps, prepend appName prefix to an already-set pageKey
+          this._beaconData['pageKey'] = this._config['page-key-prefix'] + ':' + this._beaconData['pageKey'];
+        } else if (!document.querySelector('meta[name="pageKey"]')) {
+          // For internal tools, page key format is: {page key prefix, which is multiproduct name}:{pathName}
+          this._beaconData['pageKey'] = this._config['page-key-prefix'] + ':';
+          if (this._config['pathname-depth'] > -1) {
+            // Only copy this._config['pathname-depth'] number of pathname parts into the page key. useful for dynamic params
+            this._beaconData['pageKey'] += window.location.pathname.split(/[/#]/).slice(0, this._config['pathname-depth'] + 1).join('/');
+          } else {
+            this._beaconData['pageKey'] += window.location.pathname;
+          }
+        }
+      }
+    }
+
+    _getPageKey() {
+      var pageKeyMeta = document.querySelector('meta[name="pageKey"]');
+      if (pageKeyMeta) {
+        return pageKeyMeta.getAttribute('content');
+      } else {
+        //TODO: what if page key is not there?
+        return document.body.id ? document.body.id.substring('pagekey-'.length) : '';
+      }
+    }
+
+    _getRenderingMode() {
+      var renderMode,
+          renderingModeMeta = document.querySelector('meta[name="renderingMode"]');
+      if (renderingModeMeta) {
+        renderMode = renderingModeMeta.getAttribute('data-mode');
+        // The kafka schema value and the value passed by voyager is different for BIGPIPE. Fix it to match the schema
+        if (renderMode === 'BIGPIPE') {
+          renderMode = 'BIG_PIPE';
+        }
+      }
+      return renderMode;
+    }
+
+    /*
+     * Returns true if a code block with id renderError exists
+     */
+    _doesRenderErrorCodeBlockExists() {
+      return document.querySelector('code#renderError') != null;
+    }
+
+    _readSinglePageAppData() {
+      this._beaconData['isSinglePageApp'] = this._config['is-single-page-app'];
+
+      if (this._beaconData['isSinglePageApp']) {
+        // Single Page App Specific fields
+        this._beaconData['webUIFramework'] = this._config['web-ui-framework'];
+        this._beaconData['appRenderMode'] = this._getRenderingMode();
+
+        if (this._isInitialLoad) {
+          this._beaconData['pageLoadMode'] = 'INITIAL';
+          if (this._doesRenderErrorCodeBlockExists()) {
+            this._beaconData['isAppRenderFailed'] = true;
+          }
+        } else {
+          this._beaconData['pageLoadMode'] = 'PARTIAL';
+        }
+      }
+    }
+
+    _sendAllData() {
+      var i,
+          plugin,
+          asyncPluginData = {},
+          data;
+
+      for (var i = 0; i < this._config['plugins'].length; i++) {
+        plugin = this._config['plugins'][i];
+        if (plugin.isAsync()) {
+          asyncPluginData = extend(asyncPluginData, plugin.getData());
+        }
+      }
+
+      for (i = 0; i < this._allBeaconData.length; i++) {
+        data = extend(this._allBeaconData[i], asyncPluginData);
+        this._sendBeacon(data);
+      }
+      this._allBeaconData = [];
+    }
+
+    _pushCurrentBeaconData() {
+      var currentBeaconAndPluginData;
+
+      // Store global data and data from synchronous plugins
+      currentBeaconAndPluginData = this._getBeaconAndPluginData();
+      if (currentBeaconAndPluginData) {
+        this._allBeaconData.push(extend({}, currentBeaconAndPluginData));
+      }
+    }
+
+    _readIsSSL() {
+      if (window && window.location) {
+        this._beaconData['isSSL'] = window.location.protocol === 'https:' ? 1 : 0;
+      }
+    }
+
+    _getBeaconAndPluginData() {
+      // Read global data not specific to any plugin
+      this._readPageKey();
+      this._readSinglePageAppData();
+      this._readRenderTimingEntries();
+      this._readIsSSL();
+      if (this._config['app-version']) {
+        this._beaconData['appVersion'] = this._config['app-version'];
+      }
+
+      // Read beacon data from all plugins
+      this._config['plugins'].map(plugin => {
+        this._beaconData = extend(this._beaconData, plugin.getData());
+      });
+
+      if (!('navigationStart' in this._beaconData) || !this._shouldSendBeacon) {
+        return;
+      }
+
+      if (!this._initialStartTime) {
+        this._initialStartTime = this._beaconData['navigationStart'];
+      }
+      this._beaconData['boomerangStart'] = this._initialStartTime;
+      this._cleanUpResourceTimingEntries();
+
+      if (this._beaconData['isSinglePageApp']) {
+        // Set the timeDone only for single page apps which have a valid renderCompleteTime
+        if ('renderCompleteTime' in this._beaconData) {
+          this._beaconData['timeDone'] = this._beaconData['renderCompleteTime'] - this._beaconData['navigationStart'];
+        } else if (!this._config['navigation-timing-only']) {
+          // Don't send beacon if we don't have renderCompleteTime
+          return;
+        }
+      }
+
+      return this._beaconData;
+    }
+
+    _sendBeacon(data) {
+
+      if (!this._config['enabled']) {
+        return;
+      }
+
+      try {
+        this._fireTrackingBeacon(data);
+        if (typeof CustomEvent !== 'undefined') {
+          var rumEvent = new CustomEvent('RUMEvent', {
+            detail: data
+          });
+          document.dispatchEvent(rumEvent);
+        }
+      } catch (e) {
+        /*
+         * TODO: error handling here. and add retry logic
+         */
+      }
+    }
+
+    _fireTrackingBeacon(data) {
+      var request,
+          trackingData = {
+        eventInfo: {
+          eventName: this._config['event-name'],
+          topicName: this._config['topic-name'],
+          appId: this._config['app-id']
+        },
+        eventBody: data
+      };
+      // ONLY set header for li/track
+      // for lite/rum-track, if the header is set it will not generate other values
+      // in header(EventHeader.avsc).
+      data['header'] = { pageInstance: data['pageInstance'] };
+      data['requestHeader'] = { pageKey: data['pageKey'] };
+      // TODO: remove this after new schema deployed.
+      trackingData.eventBody['trackingTime'] = -1;
+      request = new XMLHttpRequest();
+      request.open('POST', this._config['beacon-url'], true);
+      request.setRequestHeader('content-type', 'application/json');
+      if (!this._csrfToken) {
+        this._csrfToken = this._getCsrfToken();
+      }
+      request.setRequestHeader('Csrf-Token', this._csrfToken);
+      request.send(JSON.stringify([trackingData]));
+    }
+
+    // Copy from https://gitli.corp.linkedin.com/core-web-libs/web-tracking-transport/source/c71d00e27705edfdb92f7b9f94349a2e5ae4c956:src/web-tracking-transport.js#L225-229
+    // The reason not to use web-tracking-transport in rumjs is that we dont want to include the library twice in voyager
+
+    /**
+     * Returns document.cookie
+     * @returns {string}
+     */
+    _getCookieString() {
+      return document.cookie;
+    }
+
+    /**
+     * Gets the CSRF token from the browser's cookies.
+     * @returns {string} The CSRF token.
+     */
+    _getCsrfToken() {
+      var token = 'JSESSIONID=';
+      var ca = this._getCookieString().split(';');
+
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') {
+          c = c.substring(1);
+        }
+
+        if (c.indexOf(token) !== -1) {
+          // The value seems to be saved with quotes in the cookie, so lets remove
+          // quotes if they are there
+          var value = c.substring(token.length, c.length);
+          if (value[0] === '"' && value[value.length - 1] === '"') {
+            value = value.substring(1, value.length - 1);
+          }
+
+          return value;
+        }
+      }
+
+      return '';
+    }
+  }
+
+  let rumTracking = null;
+
+  /**
+   * Initializes the RUM instance
+   *
+   * @export
+   * @retuns {RumTracking} Returns the RUM tracking instance
+   */
+  function initRumTracking() {
+    if (!rumTracking) {
+      rumTracking = new RumTracking({
+        'is-single-page-app': false,
+        'navigation-timing-only': true,
+        'enable-rs-timing': true,
+        'enable-cdn-tracking': true,
+        'enable-pop-tracking': true,
+        'request-sampling-rate': 1.0
+      });
+    }
+
+    return rumTracking;
+  }
+
+  var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+  function createCommonjsModule(fn, module) {
+  	return module = { exports: {} }, fn(module, module.exports), module.exports;
+  }
+
+  var trackingTwoWeb = createCommonjsModule(function (module, exports) {
+  	(function (global, factory) {
+  		 factory(exports) ;
+  	})(commonjsGlobal, function (exports) {
+
+  		var commonjsGlobal$1 = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof commonjsGlobal !== 'undefined' ? commonjsGlobal : typeof self !== 'undefined' ? self : {};
+
+  		function createCommonjsModule(fn, module) {
+  			return module = { exports: {} }, fn(module, module.exports), module.exports;
+  		}
+
+  		var webTrackingTransport = createCommonjsModule(function (module, exports) {
+  			(function (global, factory) {
+  				{
+  					factory(exports, module);
+  				}
+  			})(commonjsGlobal$1, function (exports, module) {
+
+  				var isBrowser = typeof window !== 'undefined' && window && window.appEnvironment !== 'node';
+  				var useRequestIdleCallback = isBrowser && !!window.requestIdleCallback;
+
+  				// Experimental for now, but the logic here is half a paint frame
+  				var idleThreshold = 8;
+
+  				var webTrackingTransport = {
+  					/**
+        * HTTP method used for the ajax request
+        * @var {string}
+        */
+  					AJAX_METHOD: 'POST',
+
+  					/**
+        * Default page type for PageViewEvents
+        * @var {string}
+        */
+  					DEFAULT_PAGE_TYPE: 'ajax',
+
+  					/**
+        * Url of the tracking server. This can be overwritten with setTrackingUrl
+        * @var {string}
+        */
+  					globalTrackingUrl: null,
+
+  					/**
+        * App id that will be added to tracking request
+        * @var {string}
+        */
+  					globalTrackingAppId: 'no.app.id',
+
+  					/**
+        * Queue of metrics that will be sent in the next flush
+        * @var {array}
+        */
+  					queue: [],
+
+  					/**
+        * Flag determining if flushing based on maxQueueSize is paused. Does not
+        * pause queueTimeout-based flushing.
+        * @var {boolean}
+        */
+  					paused: false,
+
+  					/**
+        * The queue will be automatically flushed once the queue reaches this number
+        * @var {number}
+        */
+  					maxQueueSize: 1,
+
+  					/**
+        * If there are items in the queue they will be flushed after this timeout
+        * (in miliseconds), even if maxQueueSize hasn't been reached
+        * @var {number}
+        */
+  					queueTimeout: 1000,
+
+  					/**
+        * Id returned by the setTimeout used for batching
+        * @var {number}
+        */
+  					timeoutId: null,
+
+  					/**
+        * Flag disabling use of sendBeacon
+        * @var {boolean}
+        */
+  					disableSendBeacon: true,
+
+  					/**
+        * CSRF token used to send POST requests to pages that require a CSRF token
+        * @var {string}
+        */
+  					csrfToken: '',
+
+  					/**
+        * Cookie used by sauron to identify tracking events
+        * @var {string}
+        */
+  					testId: '',
+
+  					/**
+        * Cookie used by sauron to identify tracking events in finer granularity via segment
+        * @var {string}
+        */
+  					testSegId: '',
+
+  					/**
+        * Set a property with the given name. Uses the given value or searches for a
+        * meta tag.
+        * @param {string} key - Name of the property to set.
+        * @param {string} value - The value of the property to set.
+        *                         Without a value, this is a no-op.
+        */
+  					setProperty: function setProperty(key, value) {
+  						if (typeof value !== 'undefined') {
+  							this[key] = value;
+  						}
+  					},
+
+  					/**
+        * Sets the url that will be used for all tracking calls
+        * @param {string} trackingUrl
+        */
+  					setTrackingUrl: function setTrackingUrl(trackingUrl) {
+  						this.setProperty('globalTrackingUrl', trackingUrl);
+  					},
+
+  					/**
+        * Sets the app id that will be added to the requests
+        * @param {string} appId
+        */
+  					setAppId: function setAppId(appId) {
+  						this.setProperty('globalTrackingAppId', appId);
+  					},
+
+  					/**
+        * Sets the CSRF token used in the app
+        * @param {string} The token
+        */
+  					setCsrfToken: function setCsrfToken(token) {
+  						this.setProperty('csrfToken', token);
+  					},
+
+  					/**
+        * Sets the testId for events fired from tests can be identified by sauron
+        * @param {string} The TestId
+        */
+  					setTestId: function setTestId(testId) {
+  						this.setProperty('testId', testId);
+  					},
+
+  					/**
+        * Sets the testSegmentId for events fired from tests can be identified by sauron
+        * @param {string} The TestSegId
+        */
+  					setTestSegId: function setTestSegId(testSegId) {
+  						this.setProperty('testSegId', testSegId);
+  					},
+
+  					/**
+        * Returns document.cookie
+        * @returns {string}
+        */
+  					getCookieString: function getCookieString() {
+  						return document.cookie;
+  					},
+
+  					/**
+        * Gets the CSRF token from the browser's cookies.
+        * @returns {string} The CSRF token.
+        */
+  					getCsrfToken: function getCsrfToken() {
+  						var token = 'JSESSIONID=';
+  						var ca = this.getCookieString().split(';');
+
+  						for (var i = 0; i < ca.length; i++) {
+  							var c = ca[i];
+  							while (c.charAt(0) === ' ') {
+  								c = c.substring(1);
+  							}
+
+  							if (c.indexOf(token) !== -1) {
+  								// The value seems to be saved with quotes in the cookie, so lets remove
+  								// quotes if they are there
+  								var value = c.substring(token.length, c.length);
+  								if (value[0] === '"' && value[value.length - 1] === '"') {
+  									value = value.substring(1, value.length - 1);
+  								}
+
+  								return value;
+  							}
+  						}
+
+  						return '';
+  					},
+
+  					/**
+        * Create the correct xmlHttp object based on the browser
+        */
+  					createXmlHttpObject: function createXmlHttpObject() {
+  						return isBrowser && !!window.XMLHttpRequest ? new XMLHttpRequest() : null;
+  					},
+
+  					/**
+        * Send tracking information to server. Will use sendBeacon or ajax based on input flag
+        * @param {string} postData - Post data in query string format:
+        *                one=uno&two=dos
+        * @param {function} success - To be executed upon success
+        * @param {function} failure - To be executed upon failure
+        * @param {string} [trackingEndpointUrl=this.globalTrackingUrl] - URL of tracking
+        * endpoint. Usually the tracking frontend.
+        */
+  					beacon: function beacon(postData, success, failure, trackingEndpointUrl) {
+  						this._beacon(postData, success, failure, trackingEndpointUrl || this.globalTrackingUrl, this.disableSendBeacon ? null : isBrowser && navigator.sendBeacon && navigator.sendBeacon.bind(navigator));
+  					},
+
+  					/**
+        * Subroutine that actually executes beaconing based on boolean flag, calculated by beacon().
+        * `_beacon` and `beacon` and separate to make it easier to test.
+        * @private
+        */
+  					_beacon: function _beacon(postData, success, failure, trackingEndpointUrl, sendBeacon) {
+  						if (sendBeacon) {
+  							var result = undefined;
+  							try {
+  								result = sendBeacon(trackingEndpointUrl, postData);
+  							} catch (e) {
+  								if (typeof e === 'object') {
+  									e.message = 'Error sending [' + postData + '] to ' + trackingEndpointUrl + ' using sendBeacon:' + e.message;
+  									e.tags = ['tracking'];
+  								}
+  								throw e;
+  							}
+  							if (result) {
+  								if (success) {
+  									success(result);
+  								}
+  								return;
+  							}
+  						}
+  						// If sendBeacon not available or if sendBeacon fails, fallback to ajax
+  						this.ajax(postData, success, failure, trackingEndpointUrl);
+  					},
+
+  					/**
+        * Make an ajax request
+        * @private
+        * @param {string} postData - Post data in query string format:
+        *                one=uno&two=dos
+        * @param {function} success - To be executed upon success
+        * @param {function} failure - To be executed upon failure
+        * @param {string} trackingEndpointUrl - URL of tracking
+        * endpoint. Usually the tracking frontend.
+        */
+  					ajax: function ajax(postData, success, failure, trackingEndpointUrl) {
+  						var req;
+
+  						if (!trackingEndpointUrl) {
+  							if (failure) {
+  								failure('Tracking url is not defined');
+  							}
+  							return;
+  						}
+
+  						req = this.createXmlHttpObject();
+  						if (!req) {
+  							return;
+  						}
+
+  						req.open(this.AJAX_METHOD, trackingEndpointUrl, true);
+  						req.withCredentials = true;
+  						req.setRequestHeader('Content-type', 'application/json');
+  						// If the CSRF token has not been set explicitly
+  						// or set in a meta tag, try and parse the cookies for the
+  						// CSRF token.
+  						if (!this.csrfToken) {
+  							req.setRequestHeader('Csrf-Token', this.getCsrfToken());
+  						} else {
+  							req.setRequestHeader('Csrf-Token', this.csrfToken);
+  						}
+  						// If testId or testSegId is set, add these to the header
+  						if (this.testId) {
+  							req.setRequestHeader('X-LinkedIn-traceDataContext-ENG_TEST_ID', this.testId);
+  						}
+  						if (this.testSegId) {
+  							req.setRequestHeader('X-LinkedIn-traceDataContext-ENG_TEST_SEGMENT_ID', this.testSegId);
+  						}
+
+  						req.onreadystatechange = function () {
+  							if (req.readyState !== 4) {
+  								return;
+  							}
+  							if (req.status !== 200 && req.status !== 304) {
+  								if (failure) {
+  									failure('Response is not "OK" or "Not Modified" for tracking request');
+  								}
+  								return;
+  							}
+  							if ('function' === typeof success) {
+  								success(req);
+  							}
+  						};
+  						if (req.readyState === 4) {
+  							return;
+  						}
+
+  						req.send(postData);
+  					},
+
+  					/**
+        * Prevent sending a batch of events based on maxQueueSize
+        */
+  					pause: function pause() {
+  						this.paused = true;
+  					},
+
+  					/**
+        * Reverse behavior set in pause()
+        */
+  					unpause: function unpause() {
+  						this.paused = false;
+  						if (this.queue.length >= this.maxQueueSize) {
+  							this.flush();
+  						}
+  					},
+
+  					/**
+        * Submit a tracking event with all elements in the queue
+        */
+  					flush: function flush() {
+  						if (this.queue.length > 0) {
+  							var self = this;
+  							this.beacon(JSON.stringify(this.queue), null, self.logError);
+
+  							this.queue = [];
+  						}
+  						if (useRequestIdleCallback) {
+  							cancelIdleCallback(this.timeoutId);
+  						} else {
+  							clearTimeout(this.timeoutId);
+  						}
+
+  						this.timeoutId = null;
+  						this.paused = false;
+  					},
+
+  					/**
+        * Flush the queue on the next idle callback.
+        * @param {number} timeout - Timeout in ms to force flush
+        * @private
+        */
+  					idleFlush: function idleFlush(timeout) {
+  						var _this = this;
+
+  						var startTime = Date.now();
+  						return requestIdleCallback(function (deadline) {
+  							if (deadline.timeRemaining() > idleThreshold || deadline.didTimeout) {
+  								_this.flush();
+  							} else {
+  								_this.timeoutId = _this.idleFlush(timeout - (Date.now() - startTime));
+  							}
+  						}, {
+  							timeout: timeout
+  						});
+  					},
+
+  					/**
+        * Adds a tracking event to the queue
+        * @param {object} payload - The event payload
+        * @private
+        */
+  					addToQueue: function addToQueue(payload) {
+  						this.queue.push(payload);
+
+  						if (this.queue.length >= this.maxQueueSize && !this.paused) {
+  							return this.flush();
+  						}
+  						if (!this.timeoutId) {
+  							var self = this;
+  							if (useRequestIdleCallback && !this.paused) {
+  								this.timeoutId = this.idleFlush(this.queueTimeout);
+  							} else {
+  								this.timeoutId = setTimeout(function () {
+  									self.flush();
+  								}, this.queueTimeout);
+  							}
+  						}
+  					},
+
+  					/**
+        * Used to test an event against the validate endpoint
+        * @param {object|string} eventInfoOrName - Either the event name or object in this format:
+        *      {
+        *        eventName: 'KAFKA EVENT',
+        *        appId: 'Some id for your app. Something like: 'my.pretty.app'
+        *      }
+        *
+        * @param {object} eventBody - Object that conforms to your event schema
+        * @param {function} callback - Node-style callback. First argument is null
+        * on success, has error on failure.
+        */
+  					validateEvent: function validateEvent(eventInfoOrName, eventBody, callback) {
+  						this.beacon(JSON.stringify([{
+  							eventInfo: this.populateEventInfo(eventInfoOrName),
+  							eventBody: this.populateEventHeaders(eventBody)
+  						}]), function (requestObject) {
+  							return callback(null, requestObject);
+  						}, function (requestObject) {
+  							return callback(requestObject);
+  						}, this.globalTrackingUrl + '/validate');
+  					},
+
+  					/**
+        * Adds a tracking call to the queue to be sent when the queue is flushed
+        * Will attempt to add some extra metadata. If you just want to send a plain,
+        * unmodified event, use addToQueue().
+        * @param {object|string} eventInfoOrName - Either the event name or object in this format:
+        *      {
+        *        eventName: 'KAFKA EVENT',
+        *        appId: 'Some id for your app. Something like: 'my.pretty.app'
+        *      }
+        *
+        * @param {object} eventBody - Object that conforms to your event schema
+        */
+  					sendEvent: function sendEvent(eventInfoOrName, eventBody) {
+  						this.addToQueue({
+  							eventInfo: this.populateEventInfo(eventInfoOrName),
+  							eventBody: this.populateEventHeaders(eventBody)
+  						});
+  					},
+
+  					/**
+        * Cross browser function to get timestamp in seconds
+        * @return {number} Current timestamp
+        */
+  					getTimestamp: function getTimestamp() {
+  						return Math.round(new Date().getTime() / 1000);
+  					},
+
+  					populateEventInfo: function populateEventInfo(eventInfo) {
+  						// First argument can just be the event name
+  						if (typeof eventInfo === 'string') {
+  							eventInfo = {
+  								eventName: eventInfo
+  							};
+  						}
+
+  						if (!eventInfo || typeof eventInfo !== 'object') {
+  							this.logError('Event info must be object');
+  							return {};
+  						}
+
+  						if (!eventInfo.appId) {
+  							eventInfo.appId = this.globalTrackingAppId;
+  						}
+
+  						return eventInfo;
+  					},
+
+  					/**
+        * Fills missing data that can be guessed by the library into the data object
+        * @param {object} data - Object with missing data
+        * @returns {object} data - Object with added data
+        */
+  					populateEventHeaders: function populateEventHeaders(eventBody) {
+  						if (!eventBody || typeof eventBody !== 'object') {
+  							this.logError('Event body must be object');
+  							return {};
+  						}
+  						return eventBody;
+  					},
+
+  					/**
+        * Log error to console
+        * @param {string} message
+        */
+  					logError: function logError(message) {
+  						var console = window.console;
+  						if (console && console.error) {
+  							console.error(message);
+  						}
+  					},
+
+  					/**
+        * Some initialization steps
+        */
+  					init: function init() {
+  						this.setTrackingUrl();
+  						this.setAppId();
+  						this.onBeforeUnload = this.onBeforeUnload.bind(this);
+
+  						if (isBrowser) {
+  							window.addEventListener('beforeunload', this.onBeforeUnload);
+  						}
+  					},
+
+  					/**
+        * Destroy webtrackingtransport: remove event listener and flush the events
+        */
+  					destroy: function destroy() {
+  						this.flush();
+  						if (isBrowser) {
+  							window.removeEventListener('beforeunload', this.onBeforeUnload);
+  						}
+  					},
+
+  					/**
+        * calls flush for beforeUnload event listener
+        */
+  					onBeforeUnload: function onBeforeUnload() {
+  						this.flush();
+  					}
+  				};
+
+  				module.exports = webTrackingTransport;
+  			});
+  		});
+
+  		/* tslint:disable:no-any triple-equals */
+  		function assignPolyfill(target) {
+  			var args = [];
+  			for (var _i = 1; _i < arguments.length; _i++) {
+  				args[_i - 1] = arguments[_i];
+  			}
+  			if (target == null) {
+  				// TypeError if undefined or null
+  				throw new TypeError('Cannot convert undefined or null to object');
+  			}
+  			var to = Object(target);
+  			for (var index = 0; index < args.length; index++) {
+  				var nextSource = args[index];
+  				if (nextSource !== null) {
+  					// Skip over if undefined or null
+  					for (var nextKey in nextSource) {
+  						// Avoid bugs when hasOwnProperty is shadowed
+  						if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+  							to[nextKey] = nextSource[nextKey];
+  						}
+  					}
+  				}
+  			}
+  			return to;
+  		}
+
+  		var STORAGE_KEY = 'li_trk_navigation';
+  		var UNDEFINED_TYPE = 'undefined';
+  		/**
+     * Clear out navigation information in local storage.
+     * Designed to be called on logout pages to clear out browsing page history.
+     *
+     * @returns void
+     */
+  		function clearNavStorage() {
+  			window.sessionStorage.removeItem(STORAGE_KEY);
+  		}
+  		/**
+     * Read data from local storage.
+     *
+     * @returns Data from storage, JSON parsed.
+     */
+  		function fetchFromSessionStorage() {
+  			if (typeof window !== UNDEFINED_TYPE && typeof window.sessionStorage !== UNDEFINED_TYPE) {
+  				try {
+  					return JSON.parse(window.sessionStorage.getItem(STORAGE_KEY));
+  				} catch (e) {
+  					// Silently continue if we can't fetch from sessionStorage.
+  					// `sessionStorage` is null in webviews for Android apps (at least on 4.4.2)
+  				}
+  			}
+  		}
+  		/**
+     * Write data to local storage. Silently fails if sessionStorage isn't writable.
+     *
+     * @param data - The set of NavigationDetails to save. This method will JSON
+     *               stringify before saving.
+     */
+  		function saveToSessionStorage(data) {
+  			if (typeof window !== UNDEFINED_TYPE && typeof window.sessionStorage !== UNDEFINED_TYPE) {
+  				try {
+  					window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  				} catch (e) {
+  					// Silently continue if we can't save to sessionStorage.
+  				}
+  			}
+  		}
+  		/**
+     * Get the navigation info from storage that matches the current path or href. Once
+     * returned, this data is removed from storage.
+     *
+     * @hidden
+     * @returns The info for this path, or null if there is no match.
+     */
+  		function getNavigationInfo() {
+  			var currPathName = window.location.pathname;
+  			var currPathNameWithQuery = currPathName + window.location.search;
+  			var currHref = window.location.href;
+  			var storageVal = fetchFromSessionStorage();
+  			if (!storageVal) {
+  				return null;
+  			}
+  			for (var i = 0; i < storageVal.length; i++) {
+  				var curr = storageVal[i];
+  				var path = curr.href;
+  				if (path === currPathName || path === currPathNameWithQuery || path === currHref) {
+  					var foundData = storageVal.splice(i, 1)[0];
+  					saveToSessionStorage(storageVal);
+  					return foundData;
+  				}
+  			}
+  			return null;
+  		}
+  		/**
+     * Add navigation information to storage. This information is pushed into the
+     * set of data already saved (in the event of multiple tabs).
+     *
+     * @hidden
+     * @param info - The new information to save to storage.
+     */
+  		function addNavigationInfo(info) {
+  			var storageVal = fetchFromSessionStorage() || [];
+  			storageVal.push(info);
+  			saveToSessionStorage(storageVal);
+  		}
+
+  		/**
+     * The types of member-triggered interactions that are recognized when
+     * creating a ControlInteractionEvent. (i.e.: What did the member do to
+     * trigger this event?)
+     *
+     * @see https://iwww.corp.linkedin.com/wiki/cf/display/ENGS/UI+Tracking#UITracking-InteractionTypes
+     */
+  		(function (ControlInteractionType) {
+  			/**
+      * The member focused on a UI control.
+      * @deprecated
+      */
+  			ControlInteractionType[ControlInteractionType["FOCUS"] = 0] = "FOCUS";
+  			/**
+      * The member focus leaves a UI control.
+      * @deprecated
+      */
+  			ControlInteractionType[ControlInteractionType["UNFOCUS"] = 1] = "UNFOCUS";
+  			/**
+      * The member submits a form using the keyboard action.
+      */
+  			ControlInteractionType[ControlInteractionType["KEYBOARD_SUBMIT"] = 2] = "KEYBOARD_SUBMIT";
+  			/**
+      * The member drags or pans a UI container.
+      */
+  			ControlInteractionType[ControlInteractionType["DRAG"] = 3] = "DRAG";
+  			/**
+      * While touching a UI container with two fingers, the member moves the
+      * two fingers farther apart.
+      */
+  			ControlInteractionType[ControlInteractionType["PINCH_OPEN"] = 4] = "PINCH_OPEN";
+  			/**
+      * While touching a UI container with two fingers, the member moves the
+      * two fingers closer together.
+      */
+  			ControlInteractionType[ControlInteractionType["PINCH_CLOSE"] = 5] = "PINCH_CLOSE";
+  			/**
+      * The member taps or clicks on a UI control twice in quick succession.
+      */
+  			ControlInteractionType[ControlInteractionType["DOUBLE_PRESS"] = 6] = "DOUBLE_PRESS";
+  			/**
+      * The member taps and holds or clicks and holds a UI control.
+      */
+  			ControlInteractionType[ControlInteractionType["LONG_PRESS"] = 7] = "LONG_PRESS";
+  			/**
+      * The member taps or clicks a UI control.
+      */
+  			ControlInteractionType[ControlInteractionType["SHORT_PRESS"] = 8] = "SHORT_PRESS";
+  			/**
+      * The member drags up on a UI control.
+      */
+  			ControlInteractionType[ControlInteractionType["SWIPE_UP"] = 9] = "SWIPE_UP";
+  			/**
+      * The member drags down on a UI control.
+      */
+  			ControlInteractionType[ControlInteractionType["SWIPE_DOWN"] = 10] = "SWIPE_DOWN";
+  			/**
+      * THe member drags left on a UI control.
+      */
+  			ControlInteractionType[ControlInteractionType["SWIPE_LEFT"] = 11] = "SWIPE_LEFT";
+  			/**
+      * The member drags right on a UI control.
+      */
+  			ControlInteractionType[ControlInteractionType["SWIPE_RIGHT"] = 12] = "SWIPE_RIGHT";
+  			/**
+      * The member taps into a UI control and quickly flicks up while releasing
+      * their finger from the screen.
+      */
+  			ControlInteractionType[ControlInteractionType["FLICK_UP"] = 13] = "FLICK_UP";
+  			/**
+      * The member taps into a UI control and quickly flicks down while releasing
+      * their finger from the screen.
+      */
+  			ControlInteractionType[ControlInteractionType["FLICK_DOWN"] = 14] = "FLICK_DOWN";
+  			/**
+      * The member taps into a UI control and quickly flicks left while releasing
+      * their finger from the screen.
+      */
+  			ControlInteractionType[ControlInteractionType["FLICK_LEFT"] = 15] = "FLICK_LEFT";
+  			/**
+      * The member taps into a UI control and quickly flicks right while releasing
+      * their finger from the screen.
+      */
+  			ControlInteractionType[ControlInteractionType["FLICK_RIGHT"] = 16] = "FLICK_RIGHT";
+  			/**
+      * The member shakes the device.
+      */
+  			ControlInteractionType[ControlInteractionType["SHAKE"] = 17] = "SHAKE";
+  			/**
+      * The member uses the keyboard softkey to go to the next field.
+      */
+  			ControlInteractionType[ControlInteractionType["KEYBOARD_NEXT"] = 18] = "KEYBOARD_NEXT";
+  			/**
+      * The member hovers the cursor over a UI container or control.
+      */
+  			ControlInteractionType[ControlInteractionType["HOVER"] = 19] = "HOVER";
+  		})(exports.ControlInteractionType || (exports.ControlInteractionType = {}));
+  		(function (PageViewPageType) {
+  			PageViewPageType[PageViewPageType["FULL"] = 1] = "FULL";
+  			PageViewPageType[PageViewPageType["AJAX"] = 2] = "AJAX";
+  			PageViewPageType[PageViewPageType["IFRAME"] = 3] = "IFRAME";
+  			PageViewPageType[PageViewPageType["REDIRECT"] = 4] = "REDIRECT";
+  			PageViewPageType[PageViewPageType["API"] = 5] = "API";
+  			PageViewPageType[PageViewPageType["FORM"] = 6] = "FORM";
+  			PageViewPageType[PageViewPageType["ROUTER"] = 7] = "ROUTER";
+  			PageViewPageType[PageViewPageType["ERROR"] = 8] = "ERROR";
+  		})(exports.PageViewPageType || (exports.PageViewPageType = {}));
+  		(function (EventTypes) {
+  			/**
+      * An event denoting that a UI element has been displayed.
+      */
+  			EventTypes[EventTypes["PageViewEvent"] = 0] = "PageViewEvent";
+  			/**
+      * An event denoting that the member has moved between two pages.
+      */
+  			EventTypes[EventTypes["NavigationEvent"] = 1] = "NavigationEvent";
+  			/**
+      * An event denoting that the member has moved to an external page.
+      */
+  			EventTypes[EventTypes["ExternalNavigationEvent"] = 2] = "ExternalNavigationEvent";
+  			/**
+      * An event denoting that the member has interacted with a UI element.
+      */
+  			EventTypes[EventTypes["ControlInteractionEvent"] = 3] = "ControlInteractionEvent";
+  			/**
+      * An event denoting that there is a change in the visibility of the page .
+      */
+  			EventTypes[EventTypes["PageVisibilityChangeEvent"] = 4] = "PageVisibilityChangeEvent";
+  		})(exports.EventTypes || (exports.EventTypes = {}));
+
+  		// copied from https://github.com/broofa/node-uuid/blob/master/uuid.js
+  		//     uuid.js
+  		//
+  		//     Copyright (c) 2010-2012 Robert Kieffer
+  		//     MIT License - http://opensource.org/licenses/mit-license.php
+  		// Unique ID creation requires a high quality random # generator.  We feature
+  		// detect to determine the best RNG source, normalizing to a function that
+  		// returns 128-bits of randomness, since that's what's usually required
+  		var _rng;
+  		var _window = 'undefined' !== typeof window ? window : null;
+  		function setupBrowser() {
+  			// Allow for MSIE11 msCrypto
+  			var _crypto = _window.crypto || _window.msCrypto;
+  			if (!_rng && _crypto && _crypto.getRandomValues) {
+  				// WHATWG crypto-based RNG - http://wiki.whatwg.org/wiki/Crypto
+  				//
+  				// Moderately fast, high quality
+  				var _rnds8_1 = new Uint8Array(16);
+  				_rng = function whatwgRNG() {
+  					_crypto.getRandomValues(_rnds8_1);
+  					return _rnds8_1;
+  				};
+  				_rng();
+  			}
+  			if (!_rng) {
+  				// Math.random()-based (RNG)
+  				//
+  				// If all else fails, use Math.random().  It's fast, but is of unspecified
+  				// quality.
+  				var _rnds_1 = new Uint8Array(16);
+  				_rng = function _rng() {
+  					for (var i = 0, r = void 0; i < 16; i++) {
+  						if ((i & 0x03) === 0) {
+  							r = Math.random() * 0x100000000;
+  						}
+  						_rnds_1[i] = (r || 0) >>> ((i & 0x03) << 3) & 0xff;
+  					}
+  					return _rnds_1;
+  				};
+  			}
+  		}
+  		if (_window) {
+  			setupBrowser();
+  		} else {
+  			// This is only used in tests, we don't want to ship this to browser
+  			_rng = function _rng() {
+  				var a = new Uint8Array(16);
+  				return a.fill(Math.floor(Math.random() * 256));
+  			};
+  		}
+  		// Maps for number <-> hex string conversion
+  		var _byteToHex = [];
+  		for (var i = 0; i < 256; i++) {
+  			_byteToHex[i] = (i + 0x100).toString(16).substr(1);
+  		}
+  		function uuid() {
+  			var buf = new Uint8Array(16);
+  			var i = 0;
+  			var rnds = _rng();
+  			// Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+  			rnds[6] = rnds[6] & 0x0f | 0x40;
+  			rnds[8] = rnds[8] & 0x3f | 0x80;
+  			for (var ii = 0; ii < 16; ii++) {
+  				buf[i + ii] = rnds[ii];
+  			}
+  			return buf;
+  		}
+  		/**
+     * Generate a new tracking ID.
+     *
+     * @returns A newly created unique ID.
+     */
+  		function generateTrackingId() {
+  			return uint8ToBase64(uuid());
+  		}
+  		function uint8ToBase64(uint8) {
+  			var CHUNK_SIZE = 0x8000;
+  			var chunk = [];
+  			for (var i = 0; i < uint8.length; i += CHUNK_SIZE) {
+  				chunk.push(String.fromCharCode.apply(null, uint8.subarray(i, i + CHUNK_SIZE)));
+  			}
+  			return btoa(chunk.join(''));
+  		}
+
+  		/**
+     * From a given page key, generate the URN for that page.
+     *
+     * @param pageKey - The page key to URN-ify.
+     * @returns A URN representation of the page.
+     */
+  		function generatePageUrn(pageKey) {
+  			if (!pageKey) {
+  				return null;
+  			}
+  			return "urn:li:page:" + pageKey;
+  		}
+  		/**
+     * Generate a control URN for a given control name and page key.
+     *
+     * @param controlName - The name of the control.
+     * @param pageKey - The key of the containing UI element.
+     * @returns A URN representation of the UI control.
+     */
+  		function generateControlUrn(controlName, pageKey) {
+  			if (controlName && pageKey) {
+  				return "urn:li:control:" + pageKey + "-" + controlName;
+  			}
+  			return null;
+  		}
+  		/**
+     * Given a page URN, look up the page key represented by that URN.
+     * Basically, the last part of the URN.
+     *
+     * @param pageUrn - The URN to page key-ify.
+     * @returns The page key represented by that URN.
+     */
+  		function derivePageKeyFromUrn(pageUrn) {
+  			if (!pageUrn) {
+  				return null;
+  			}
+  			return pageUrn.split(':').pop();
+  		}
+  		/**
+     * Given a page key and tracking ID, generate a new PageInstance.
+     *
+     * @see https://iwww.corp.linkedin.com/wiki/cf/x/ZWFwBg
+     *
+     * @param pageKey - The page key to include with the instance.
+     * @param trackingId - A unique ID to include with the instance. If none is
+     *                     provided, we'll generate a new one.
+     * @returns A PageInstance that bundles together the provided information.
+     */
+  		function generatePageInstance(pageKey, trackingId) {
+  			if (!pageKey) {
+  				return null;
+  			}
+  			return {
+  				trackingId: trackingId || generateTrackingId(),
+  				pageUrn: generatePageUrn(pageKey)
+  			};
+  		}
+  		/**
+     * Generate a string representation of a PageInstance, for inclusion in
+     * event data.
+     *
+     * @param pageInstance - The instance to stringify.
+     * @returns A stringified version of the PageInstance.
+     */
+  		function stringifyPageInstance(pageInstance) {
+  			if (!pageInstance) {
+  				return null;
+  			}
+  			return pageInstance.pageUrn + ";" + pageInstance.trackingId;
+  		}
+  		/**
+     * Parse a stringified PageInstance into a PageInstance object. The string is
+     * expected to be in the format returned by `stringifyPageInstance()`.
+     * Specifically, the pageUrn followed by the trackingId, separated by
+     * a semicolon. Data that isn't in this format will return null.
+     *
+     * @param str - The string to parse.
+     * @returns The pageInstance derived from the string.
+     */
+  		function derivePageInstanceFromString(str) {
+  			if (typeof str !== 'string') {
+  				return null;
+  			}
+  			var splitStr = str.split(';');
+  			if (splitStr.length === 2) {
+  				return {
+  					pageUrn: splitStr[0],
+  					trackingId: splitStr[1]
+  				};
+  			}
+  			return null;
+  		}
+  		/**
+     * Gets the referrer to the current page from the document object.
+     * Does not return a referrer if document is not available (for example it won't be available in BPR)
+     */
+  		function getReferrer(document) {
+  			return document && document.referrer;
+  		}
+  		/**
+     * Gets the tracking code from the href of the current document object.
+     * Does not return a referrer if document is not available (for example it won't be available in BPR)
+     */
+  		function getTrackingCode(document) {
+  			if (document && document.URL) {
+  				var queryParams = document.URL.match(/trk=([^&]+)/);
+  				if (queryParams && queryParams.length === 2) {
+  					return queryParams[1];
+  				}
+  			}
+  			return null;
+  		}
+
+  		var REQUEST_BATCHING_MAX_QUEUE_SIZE = 10;
+  		var REQUEST_BATCHING_MAX_WAIT_SECONDS = 10;
+  		var objectAssign = Object.assign || assignPolyfill;
+  		/**
+     * A tracking object that encodifies information about the current tracking and
+     * page state, as well as handles the firing of tracking events for that state.
+     * You'll often use  createFromPageKey() to create an instance, but if that
+     * isn't applicable, you can construct a new instance directly.
+     *
+     * Generally, you'll create a new tracking instance on page load and use the
+     * same instance for the duration of the page's lifecycle. If you transition to
+     * a new anchor page without triggering a full page refresh, calling tracking
+     * methods within this class will update the known state of the instance.
+     */
+  		var AppTrackingInstance = /** @class */function () {
+  			/**
+      * Constructor. Saves the configuration and sets up this instance's state.
+      */
+  			function AppTrackingInstance(config) {
+  				if (config === void 0) {
+  					config = {
+  						appId: null,
+  						initialPageInstance: null
+  					};
+  				}
+  				this.config = config;
+  				var disableInitialPageViewEvent = this.config.disableInitialAnchorPageViewEvent || false;
+  				// Check that we have the items we expect as part of configuration.
+  				if (!this.config.appId) {
+  					throw new Error('TrackingTwo requires an appId.');
+  				}
+  				// If there's no page instance provided, check the meta tags for one.
+  				// At that point, if none's available, error out.
+  				if (!this.config.initialPageInstance) {
+  					var metaInstance = document.querySelector('meta[name="trk-pageinstance"]');
+  					if (metaInstance) {
+  						this.config.initialPageInstance = derivePageInstanceFromString(metaInstance.getAttribute('content'));
+  					}
+  					if (!this.config.initialPageInstance) {
+  						throw new Error('TrackingTwo requires an initialPageInstance');
+  					}
+  					disableInitialPageViewEvent = true;
+  				}
+  				// Setup the configuration with default values if optionals aren't provided.
+  				// Of note, we also delete pageInstance and pageKey from these config
+  				// values if they are present (these change on an event by event basis).
+  				if (!this.config.eventHeaderProperties) {
+  					this.config.eventHeaderProperties = {};
+  				} else if (this.config.eventHeaderProperties.pageInstance) {
+  					delete this.config.eventHeaderProperties.pageInstance;
+  				}
+  				if (!this.config.userRequestHeaderProperties) {
+  					this.config.userRequestHeaderProperties = {};
+  				} else if (this.config.userRequestHeaderProperties.pageKey) {
+  					delete this.config.userRequestHeaderProperties.pageKey;
+  				}
+  				this.config.validationMode = !!this.config.validationMode || false;
+  				this.config.trackingUrl = this.config.trackingUrl || '/li/track';
+  				// Check storage for previous transition info.
+  				var previousInfoFromStorage = getNavigationInfo();
+  				if (previousInfoFromStorage) {
+  					config.previousPageInstance = previousInfoFromStorage.prevInstance;
+  				}
+  				// Config should not change after init, so we freeze the config.
+  				Object.freeze(this.config.eventHeaderProperties);
+  				Object.freeze(this.config.userRequestHeaderProperties);
+  				Object.freeze(this.config);
+  				// Configure webTrackingTransport. Set tracking URL and batching config.
+  				webTrackingTransport.init();
+  				webTrackingTransport.setProperty('disableSendBeacon', false);
+  				webTrackingTransport.setTrackingUrl(this.config.trackingUrl);
+  				webTrackingTransport.setProperty('maxQueueSize', this.config.requestBatchingMaxQueueSize || REQUEST_BATCHING_MAX_QUEUE_SIZE);
+  				webTrackingTransport.setProperty('queueTimeout', (this.config.requestBatchingMaxWaitSeconds || REQUEST_BATCHING_MAX_WAIT_SECONDS) * 1000);
+  				// Set up our initial page instance state.
+  				this.state = {
+  					currentPageInstance: config.initialPageInstance,
+  					previousPageInstance: config.previousPageInstance || null
+  				};
+  				// Fire a NavigationEvent using prevControlName config value if exists. Otherwise use data for sessionStorage if present.
+  				var prevControlName = this.config.prevControlName || (previousInfoFromStorage ? previousInfoFromStorage.controlName : null);
+  				this.fireNavigationEvent(this.state.previousPageInstance, prevControlName);
+  				// Fire a PageViewEvent if we generated the pageInstance client-side.
+  				if (!disableInitialPageViewEvent) {
+  					this.firePageViewEvent();
+  				}
+  				// Handle click events. Check event targets for tracking data.
+  				// This event uses capture to avoid being preempted by stopPropagation.
+  				this._boundDocumentClickHandler = this._handleDocumentClicks.bind(this);
+  				if (document) {
+  					document.body.addEventListener('click', this._boundDocumentClickHandler, true);
+  				}
+  				// Handle window beforeunload event.
+  				this._boundWindowBeforeUnloadHandler = this._handleWindowBeforeUnload.bind(this);
+  				if (window) {
+  					window.addEventListener('beforeunload', this._boundWindowBeforeUnloadHandler, true);
+  				}
+  				// Handle page visibility change events.
+  				this._boundDocumentVisibilityChangeHandler = this._handleDocumentVisibilityChange.bind(this);
+  				var visibilityChangeEventName = 'visibilitychange';
+  				if (document) {
+  					if (typeof document.msHidden !== 'undefined') {
+  						visibilityChangeEventName = 'msvisibilitychange';
+  					}
+  					document.addEventListener(visibilityChangeEventName, this._boundDocumentVisibilityChangeHandler, true);
+  				}
+  			}
+  			/**
+      * Handler for clicks on the document body. In the constructor, the bound
+      * variant of this method is assigned to this._boundDocumentClickHandler.
+      *
+      * This handler checks for the closest element with tracking attributes and
+      * fires tracking events or saves transition information, depending on the
+      * attributes found.
+      */
+  			AppTrackingInstance.prototype._handleDocumentClicks = function (evt) {
+  				var tgt = evt.target;
+  				var currTgt = tgt;
+  				// Check up the tree of the triggering element to see if there's info.
+  				while (currTgt !== evt.currentTarget) {
+  					if (currTgt.hasAttribute('data-tracking-control-name')) {
+  						break;
+  					}
+  					currTgt = currTgt.parentElement;
+  				}
+  				// No attribute? Nothing to track here.
+  				if (currTgt === evt.currentTarget) {
+  					return;
+  				}
+  				// Look up information.
+  				var controlName = currTgt.getAttribute('data-tracking-control-name');
+  				var willNavigate = currTgt.hasAttribute('data-tracking-will-navigate');
+  				var trackControlInteractionEvent = !currTgt.hasAttribute('data-tracking-no-cie');
+  				var href = currTgt.getAttribute('data-tracking-href') || currTgt.getAttribute('href');
+  				// Record a controlInteractionEvent. We only support this attribute-based
+  				// data recording for clicks at the moment.
+  				if (trackControlInteractionEvent) {
+  					this.fireControlInteractionEvent(controlName);
+  				}
+  				// If this element will cause us to leave the page, save the current page
+  				// instance information and where we're going to.
+  				if (willNavigate) {
+  					this.saveStateForPageDeparture({
+  						controlName: controlName,
+  						href: href
+  					});
+  				}
+  			};
+  			/**
+      * Handler for window beforeunload. In the constructor, the bound
+      * variant of this method is assigned to this._boundWindowBeforeUnloadHandler.
+      *
+      * This handler fires the ExternalNavigationEvent.
+      */
+  			AppTrackingInstance.prototype._handleWindowBeforeUnload = function (evt) {
+  				var tgt = evt.target.activeElement;
+  				var currTgt = tgt;
+  				var controlName = null;
+  				var willNavigate = false;
+  				// Get attributes if an element triggered the unload
+  				if (tgt) {
+  					// Check up the tree of the triggering element to see if there's info.
+  					while (currTgt !== evt.currentTarget) {
+  						if (typeof currTgt.hasAttribute === 'function' && currTgt.hasAttribute('data-tracking-control-name') || !currTgt.parentElement) {
+  							break;
+  						}
+  						currTgt = currTgt.parentElement;
+  					}
+  					if (currTgt !== evt.currentTarget) {
+  						if ('getAttribute' in currTgt) {
+  							controlName = currTgt.getAttribute('data-tracking-control-name');
+  						}
+  						if ('hasAttribute' in currTgt) {
+  							willNavigate = currTgt.hasAttribute('data-tracking-will-navigate');
+  						}
+  					}
+  				}
+  				// If an element triggered the unload and will not cause us to navigate to another tracking 2.0 page
+  				// OR the unload was triggered by any other means
+  				// its an external navigation
+  				if (!willNavigate) {
+  					this.fireExternalNavigationEvent(controlName);
+  				}
+  			};
+  			/**
+      * Handler for document visibilitychange. In the constructor, the bound
+      * variant of this method is assigned to this._boundDocumentVisibilityChangeHandler.
+      *
+      * This handler fires the PageVisiblityChangeEvent.
+      */
+  			AppTrackingInstance.prototype._handleDocumentVisibilityChange = function () {
+  				var isHidden = false;
+  				if (typeof document.msHidden !== 'undefined') {
+  					isHidden = document.msHidden;
+  				} else if (typeof document.hidden !== 'undefined') {
+  					isHidden = document.hidden;
+  				} else {
+  					// if browser does not support the Page Visibility API
+  					return;
+  				}
+  				this.firePageVisibilityChangeEvent(isHidden);
+  			};
+  			/**
+      * Save the current state of the page in preparation for a page departure.
+      * On the other side of the navigation, when this is instantiated again, this
+      * information will be used to generate a NavigationEvent.
+      *
+      * @param trkDetails - Information we need for this navigation.
+      */
+  			AppTrackingInstance.prototype.saveStateForPageDeparture = function (trkDetails) {
+  				// Can't save state if we don't have any info. =/
+  				if (!trkDetails) {
+  					return;
+  				}
+  				var controlName = trkDetails.controlName;
+  				var href = trkDetails.href;
+  				addNavigationInfo({
+  					controlName: controlName,
+  					href: href,
+  					prevInstance: this.state.currentPageInstance
+  				});
+  			};
+  			/**
+      * Fire a ControlInteractionEvent.
+      *
+      * The ControlInteractionEvent tracks when a member interacts with a control,
+      * where a control is any physical element of the page (such as a button,
+      * link, or dropdown). We only track what the member physically did, not what
+      * the side effects of that action was.
+      *
+      * @param controlName - The name of the control being interacted with.
+      * @param interactionType - What behavior triggered the event.
+      * @param eventContext - Contextual information about this event. Usually you
+      *                       won't need to override this. See the EventContext
+      *                       interface documentation for details.
+      *
+      * @see https://iwww.corp.linkedin.com/wiki/cf/display/ENGS/UI+Tracking#UITracking-ControlInteractionEvent
+      */
+  			AppTrackingInstance.prototype.fireControlInteractionEvent = function (controlName, interactionType, eventContext) {
+  				if (interactionType === void 0) {
+  					interactionType = exports.ControlInteractionType.SHORT_PRESS;
+  				}
+  				if (eventContext === void 0) {
+  					eventContext = {};
+  				}
+  				if (!controlName) {
+  					throw new Error('controlName is required.');
+  				}
+  				var currentPageKey = derivePageKeyFromUrn(this.state.currentPageInstance.pageUrn);
+  				var uiControlPageKey = eventContext.uiControlPageKey || currentPageKey;
+  				this.fireTrackingEvent(exports.EventTypes[exports.EventTypes.ControlInteractionEvent], {
+  					requestHeader: {},
+  					header: {},
+  					controlUrn: generateControlUrn(controlName, uiControlPageKey),
+  					interactionType: exports.ControlInteractionType[interactionType]
+  				}, eventContext);
+  			};
+  			/**
+      * Fire a NavigationEvent, tracking the transition between two pages.
+      * Note that, depending on the stack you're using and whether this is a full
+      * page refresh, the backend might fire this event for you, so you'll only
+      * need to trigger this on the client side in single page (or single-page-ish)
+      * environments.
+      *
+      * A NavigationEvent is used to signal that the member has navigated from one
+      * anchor page to another. These events allow us to reconstruct a session,
+      * by joining together a path of page instances (and the events therein.)
+      *
+      * @param previousPageInstance - The page we've transitioned from.
+      * @param controlName - The name of the UI control that triggered this.
+      * @param eventContext - Contextual information about this event. Usually you
+      *                       won't need to override this. See the EventContext
+      *                       interface documentation for details.
+      *
+      * @see https://iwww.corp.linkedin.com/wiki/cf/display/ENGS/UI+Tracking#UITracking-NavigationEvent.1
+      */
+  			AppTrackingInstance.prototype.fireNavigationEvent = function (previousPageInstance, controlName, eventContext) {
+  				if (eventContext === void 0) {
+  					eventContext = {};
+  				}
+  				var previousPageKey = previousPageInstance ? derivePageKeyFromUrn(previousPageInstance.pageUrn) : null;
+  				var uiControlPageKey = eventContext.uiControlPageKey || previousPageKey;
+  				this.fireTrackingEvent(exports.EventTypes[exports.EventTypes.NavigationEvent], {
+  					requestHeader: {},
+  					header: {},
+  					previousPageInstance: previousPageInstance,
+  					triggerControlUrn: generateControlUrn(controlName, uiControlPageKey)
+  				}, eventContext);
+  			};
+  			/**
+      * Fire an ExternalNavigationEvent, tracking the transition to an external page.
+      *
+      * An ExternalNavigationEvent is used to signal that the member has navigated from one
+      * anchor page to an external page. These events allow us to track when a user navigates
+      * from the last page in a session.
+      *
+      * @param controlName - The name of the UI control that triggered this.
+      * @param eventContext - Contextual information about this event. Usually you
+      *                       won't need to override this. See the EventContext
+      *                       interface documentation for details.
+      */
+  			AppTrackingInstance.prototype.fireExternalNavigationEvent = function (controlName, eventContext) {
+  				if (eventContext === void 0) {
+  					eventContext = {};
+  				}
+  				var uiControlPageKey = eventContext.uiControlPageKey || derivePageKeyFromUrn(this.state.currentPageInstance.pageUrn);
+  				this.fireTrackingEvent(exports.EventTypes[exports.EventTypes.ExternalNavigationEvent], {
+  					requestHeader: {},
+  					header: {},
+  					triggerControlUrn: generateControlUrn(controlName, uiControlPageKey)
+  				}, eventContext, true // Since the WebTrackingTransport flushes its queue on 'unload' and this event is also triggered on `unload`, flush immediately to ensure the event is not queued and lost
+  				);
+  			};
+  			/**
+      * Fire a PageViewEvent, signaling that a UI element has been shown. Despite
+      * the name, PageViewEvents can track individual UI components, not just
+      * pages.
+      *
+      * As opposed to fireAnchorPageViewEvent, this method does not update any
+      * internal state about what page we're on. This method is primarily useful
+      * for sub-controls within the context of a page.
+      *
+      * @param pageKey - The key of the page being tracked. If none is provided,
+      *                  the pagekey for the current anchor page will be used.
+      * @param eventContext - Contextual information about this event. Usually you
+      *                       won't need to override this. See the EventContext
+      *                       interface documentation for details.
+      *
+      * @see https://iwww.corp.linkedin.com/wiki/cf/display/ENGS/UI+Tracking#UITracking-PageViewEvent
+      * @see http://svn-ha.corp.linkedin.com/repos/netrepo/avro-schemas/trunk/avro-schemas/avro-schemas-tracking/schemas/tracking/events/PageViewEvent.avsc
+      */
+  			AppTrackingInstance.prototype.firePageViewEvent = function (pageKey, eventContext) {
+  				if (eventContext === void 0) {
+  					eventContext = {};
+  				}
+  				eventContext = objectAssign({}, eventContext);
+  				var pageViewPageType = eventContext.pageViewPageType || exports.PageViewPageType.AJAX;
+  				var currentPageKey = derivePageKeyFromUrn(this.state.currentPageInstance.pageUrn);
+  				var eventPageKey = pageKey || currentPageKey;
+  				this.fireTrackingEvent(exports.EventTypes[exports.EventTypes.PageViewEvent], {
+  					requestHeader: {
+  						pageKey: eventPageKey
+  					},
+  					header: {},
+  					pageType: exports.PageViewPageType[pageViewPageType].toLowerCase(),
+  					trackingInfo: {
+  						clientTimestamp: Date.now().toString()
+  					}
+  				}, eventContext);
+  			};
+  			/**
+      * Fires a PageViewEvent for the transition between two anchor pages. This
+      * implicitly also calls a transition event and updates the internal state of
+      * what page we're actually on.
+      *
+      * @param pageKey - The key of the page being transitioned to.
+      * @param controlName - The name of the UI Control that triggered this.
+      * @param eventContext - Contextual information about this event. Usually you
+      *                       won't need to override this. See the EventContext
+      *                       interface documentation for details.
+      */
+  			AppTrackingInstance.prototype.fireAnchorPageViewEvent = function (newPageKey, controlName, eventContext) {
+  				if (eventContext === void 0) {
+  					eventContext = {};
+  				}
+  				if (!newPageKey) {
+  					throw new Error('newPageKey is required.');
+  				}
+  				var oldPageInstance = objectAssign({}, this.state.currentPageInstance);
+  				var newPageInstance = generatePageInstance(newPageKey);
+  				// Update the state.
+  				this.state.previousPageInstance = oldPageInstance;
+  				this.state.currentPageInstance = newPageInstance;
+  				// Fire relevant events.
+  				this.fireNavigationEvent(oldPageInstance, controlName, eventContext);
+  				this.firePageViewEvent(newPageKey, eventContext);
+  			};
+  			/**
+      * Fire an PageVisibilityChangeEvent, tracking the visibility of the current page.
+      *
+      * A PageVisibilityChangeEvent is used to signal that the page's visibility changed to visible or hidden.
+      * These events allow us to track when a page is no longer in focus.
+      *
+      * @param isHidden     - The visibility state of the page
+      * @param eventContext - Contextual information about this event. Usually you
+      *                       won't need to override this. See the EventContext
+      *                       interface documentation for details.
+      */
+  			AppTrackingInstance.prototype.firePageVisibilityChangeEvent = function (isHidden, eventContext) {
+  				if (eventContext === void 0) {
+  					eventContext = {};
+  				}
+  				this.fireTrackingEvent(exports.EventTypes[exports.EventTypes.PageVisibilityChangeEvent], {
+  					requestHeader: {},
+  					header: {},
+  					isVisible: !isHidden
+  				}, eventContext);
+  			};
+  			/**
+      * Fire a miscellaneous tracking event. This low-level method lets you track
+      * custom event types not covered by any of the other convenience methods in
+      * this library.
+      *
+      * Note that this method doesn't check the validity of your event data against
+      * any particular schema. If you're running in development mode, you'll get
+      * feedback in the console if the event data doesn't match the BE schema.
+      *
+      * @param eventName - The type of event being tracked.
+      * @param body - The body of of the event.
+      * @param eventContext - Contextual information about this event. Usually you
+      *                       won't need to override this. See the EventContext
+      *                       interface documentation for details.
+      * @param flushImmediately - Invoke WebTrackingTransport to flush the event queue immediately.
+      */
+  			AppTrackingInstance.prototype.fireTrackingEvent = function (eventName, body, eventContext, flushImmediately) {
+  				if (eventContext === void 0) {
+  					eventContext = {};
+  				}
+  				if (flushImmediately === void 0) {
+  					flushImmediately = false;
+  				}
+  				if (!eventName || !body) {
+  					throw new Error('eventName and body are required.');
+  				}
+  				// Make copies of incoming parameters.
+  				body = objectAssign({}, body);
+  				eventContext = objectAssign({}, eventContext);
+  				// Set up event context, using default data if necessary.
+  				if (!eventContext.topicName) {
+  					eventContext.topicName = eventName;
+  				}
+  				if (!eventContext.pageInstance) {
+  					eventContext.pageInstance = this.state.currentPageInstance;
+  				}
+  				// Set up body of event. requestHeader and header are individually merged
+  				// before the entire event body is merged. Anything that's passed in
+  				// overrides any defaults we might set here.
+  				var requestHeader = objectAssign({
+  					pageKey: derivePageKeyFromUrn(eventContext.pageInstance.pageUrn),
+  					path: window.location.href,
+  					referer: getReferrer(document),
+  					trackingCode: getTrackingCode(document)
+  				}, this.config.userRequestHeaderProperties, body.requestHeader);
+  				delete body.requestHeader;
+  				delete body.header.pageInstance;
+  				var header = objectAssign({
+  					pageInstance: eventContext.pageInstance,
+  					time: Date.now()
+  				}, this.config.eventHeaderProperties, body.header);
+  				delete body.header;
+  				var headers = {
+  					requestHeader: requestHeader,
+  					header: header
+  				};
+  				if (this.config.mapHeaders) {
+  					headers = this.config.mapHeaders(headers);
+  				}
+  				var webTrackEventBody = objectAssign(headers, body);
+  				// Send event to WebTrackingTransport
+  				var webTrackEventInfo = {
+  					eventName: eventName,
+  					topicName: eventContext.topicName,
+  					appId: this.config.appId
+  				};
+  				if (this.config.validationMode) {
+  					webTrackingTransport.validateEvent(webTrackEventInfo, webTrackEventBody, function (fail) {
+  						if (fail) {
+  							console.error("Event " + eventName + " failed validation!");
+  						}
+  					});
+  				} else {
+  					webTrackingTransport.sendEvent(webTrackEventInfo, webTrackEventBody);
+  					if (flushImmediately) {
+  						webTrackingTransport.flush();
+  					}
+  				}
+  			};
+  			/**
+      * Handle cleanup actions for this object.
+      */
+  			AppTrackingInstance.prototype.destroy = function () {
+  				webTrackingTransport.destroy();
+  				document.removeEventListener('click', this._boundDocumentClickHandler, true);
+  			};
+  			/**
+      * Create a new AppTrackingInstance using a given page key.
+      *
+      * @param config - Configuration information for this instance. At minimum,
+      *                 you must provide an appId.
+      * @param pageKey - The page key to use as the initial page.
+      * @returns A new AppTrackingInstance codified with the information provided.
+      */
+  			AppTrackingInstance.createFromPageKey = function (config, pageKey) {
+  				config.initialPageInstance = generatePageInstance(pageKey);
+  				return new AppTrackingInstance(config);
+  			};
+  			return AppTrackingInstance;
+  		}();
+
+  		exports.AppTrackingInstance = AppTrackingInstance;
+  		exports.clearNavStorage = clearNavStorage;
+  		exports.derivePageInstanceFromString = derivePageInstanceFromString;
+  		exports.derivePageKeyFromUrn = derivePageKeyFromUrn;
+  		exports.generateControlUrn = generateControlUrn;
+  		exports.generatePageInstance = generatePageInstance;
+  		exports.generatePageUrn = generatePageUrn;
+  		exports.generateTrackingId = generateTrackingId;
+  		exports.getReferrer = getReferrer;
+  		exports.getTrackingCode = getTrackingCode;
+  		exports.stringifyPageInstance = stringifyPageInstance;
+  		exports.uuid = uuid;
+  		exports.webTrackingTransport = webTrackingTransport;
+  	});
+  });
+
+  /**
+   * Get the pagekey from the meta tag in the document
+   *
+   * @export
+   * @param {Document} document
+   * @returns {String} Returns the pagekey string if found otherwise returns an empty string
+   */
+  function getPageKey(document) {
+    let pageKeyMeta = document.querySelector('meta[name="pageKey"]');
+    return pageKeyMeta ? pageKeyMeta.content + '_jsbeacon' : '';
+  }
+
+  /**
+   * Get the pageTag string from the meta tag in the document
+   *
+   * @export
+   * @param {Document} document
+   * @returns {String} Returns the pageTag string if found otherwise returns an empty string
+   */
+  function getPageTag(document) {
+    let pageTagMeta = document.querySelector('meta[name="linkedin:pageTag"]');
+    return pageTagMeta && pageTagMeta.content || '';
+  }
+
+  /**
+   * Get the locale string from the meta tag in the document
+   *
+   * @export
+   * @param {Document} document
+   * @returns {String} Returns the locale string if found, otherwise returns an empty string
+   */
+  function getLocale(document) {
+    let localeMeta = document.querySelector('meta[name="locale"]');
+    return localeMeta && localeMeta.content || '';
+  }
+
+  /**
+   * If there are double quotes around the string, return the string without the double quotes, otherwise returns the original string, typically used when getting specific cookie
+   * @param str
+   * @returns {*}
+   */
+  function trimDoubleQuotes(str) {
+    if (str.charAt(0) === '"' && str.charAt(str.length - 1) === '"') {
+      return str.slice(1, -1);
+    }
+    return str;
+  }
+
+  let tracking = null;
+
+  /**
+   * Initializes the page tracking instance
+   *
+   * @export
+   * @param {String} appId
+   * @param {String} trackingCode - Custom tracking code to instantiate the tracking instance with. Defaults to the query parameter trk's value
+   * @retuns {AppTrackingInstance} Returns the tracking instance
+   */
+  function getTrackingInstance() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$appId = _ref.appId;
+
+    let appId = _ref$appId === undefined ? 'seo' : _ref$appId,
+        trackingCode = _ref.trackingCode;
+
+    const pageKey = getPageKey(document);
+
+    const config = {
+      appId,
+      disableInitialAnchorPageViewEvent: true,
+      requestBatchingMaxWaitSeconds: 0.05
+    };
+
+    if (trackingCode) {
+      config.userRequestHeaderProperties = {
+        trackingCode
+      };
+    }
+
+    if (!tracking) {
+      tracking = trackingTwoWeb.AppTrackingInstance.createFromPageKey(config, pageKey);
+    }
+
+    tracking.generateTrackingId = trackingTwoWeb.generateTrackingId;
+
+    return tracking;
+  }
+
+  /**
+   * Fires the PageViewEvent
+   *
+   * @export
+   * @param {AppTrackingInstance} tracking
+   * @param [PageViewPageType='ajax'] pageType - Fire pageviewevent with the specified pageType argument
+   */
+  function firePageViewEvent(tracking) {
+    let pageType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'ajax';
+
+    const pageTag = getPageTag(document);
+    const locale = getLocale(document);
+
+    let trackingInfo = {
+      'clientTimestamp': Date.now(),
+      'pageTag': pageTag
+    };
+
+    let requestHeader = {};
+
+    if (locale) {
+      requestHeader.interfaceLocale = locale;
+    }
+
+    const eventBody = {
+      header: {},
+      requestHeader: requestHeader,
+      pageType,
+      trackingInfo: trackingInfo
+    };
+    tracking.fireTrackingEvent('PageViewEvent', eventBody);
+  }
+
+  /**
+   * Fires the fireViewModuleImpressionEvent
+   *
+   * @export
+   * @param {AppTrackingInstance} tracking
+   * @param {Array} observedComponents is an array of strings, each string containing the name of an observed component
+   */
+  function fireViewModuleImpressionEvent(tracking, observedComponents) {
+    const locale = getLocale(document);
+
+    const requestHeader = {};
+
+    if (locale) {
+      requestHeader.interfaceLocale = locale;
+    }
+
+    const eventBody = {
+      header: {},
+      requestHeader: requestHeader,
+      moduleNames: observedComponents
+    };
+    tracking.fireTrackingEvent('ViewModuleImpressionEvent', eventBody);
+  }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  /**
+   * Finds closest element matching the passed in selector up the dom tree. It is similar to jquery's closest function.
+   *
+   * @export
+   * @param {HTMLElement} el
+   * @param {string} selector
+   * @return {HTMLElement|null} Returns the closest html element if it found any otherwise returns null
+   */
+
+  /**
+   * Executes the passed in function after the window has finished loading.
+   * If the window has already been loaded it executes the passed in function immediately
+   *
+   * @export
+   * @param {function} fn
+   */
+  function onload(fn) {
+    if (document.readyState === 'complete') {
+      fn();
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(fn);
+      });
+    }
+  }
+
+  /**
+   * A utility method to convert list like objects e.g. NodeLists into Arrays.
+   * This is useful to get the full array suite of methods on these lists as they only have support for some basic functions out of the box
+   *
+   * @export
+   * @param {any} listLikeObject
+   * @returns {Array}
+   */
+  function makeArray(listLikeObject) {
+    if (listLikeObject === null || listLikeObject === undefined || typeof listLikeObject !== 'object') {
+      return [];
+    }
+    return Array.prototype.slice.call(listLikeObject);
+  }
+
+  /**
+   * Checks if the passed in element is in the current viewport.
+   *
+   * @export
+   * @param {HTMLElement} el
+   * @returns {boolean}
+   * NOTES:
+   * https://gist.github.com/davidtheclark/5515733#gistcomment-2113205 for implementation details.
+   * If your running into issues with fixed position elements in Safari read this: https://openradar.appspot.com/radar?id=6668472289329152
+   */
+  function elementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+    const verticalInView = rect.top <= windowHeight && rect.top + rect.height >= 0;
+    const horiztontalInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
+    return verticalInView && horiztontalInView;
+  }
+
+  /**
+   * Extracts the value of query param with passed in name in the passed in url.
+   *
+   * @export
+   * @param {string} url
+   * @param {string} name
+   * @param {boolean} raw - if true, the parameter will not be decoded
+   * @returns Null or the value of query param if it was found
+   */
+  function getQueryParam(url, name, raw) {
+    const results = new RegExp(`([\\?&])${raw ? name : encodeURIComponent(name)}=([^&#]*)`).exec(url);
+    return results && (raw ? results[2] : decodeURIComponent(results[2]));
+  }
+
+  /**
+   * Returns the cookie given the name
+   * @param name
+   * @returns {(RegExpMatchArray | null) | string} Returns null if no such cookie
+   */
+  function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match && match[2];
+  }
+
+  /**
+   * Returns a deferred promise which can be resolved/rejected
+   * by calling .resolve()/.reject() on it
+   * E.g. const p = getDeferredPromise();
+   * p.resolve() to resolve
+   * p.reject() to reject
+   */
+  function getDeferredPromise() {
+    let resolveFn, rejectFn;
+    const deferredPromise = new Promise((resolve, reject) => {
+      resolveFn = resolve;
+      rejectFn = reject;
+    });
+    deferredPromise.resolve = resolveFn;
+    deferredPromise.reject = rejectFn;
+    return deferredPromise;
+  }
+
+  /**
+   * Makes an async request to the passed in url with all the custom options that are passed in.
+   * It returns a promise that resolves to an object containing both the response status code and text.
+   * If the response status code is outside the success range, [200, 300)∪{304}, then throws an error
+   * with a message and an object containing the response status code and text.
+   *
+   * @export
+   * @param {string} url
+   * @param {object} {
+   *   method = 'GET',
+   *   headers = {},
+   *   sendCookies = true,
+   *   skipCsrfToken = false,
+   *   postData = undefined
+   * }
+   *
+   * @returns {Promise} - A Promise that resolves to an object with a statusCode and the responseText.
+   */
+  function request(url) {
+    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+        _ref$method = _ref.method;
+
+    let method = _ref$method === undefined ? 'GET' : _ref$method;
+    var _ref$headers = _ref.headers;
+    let headers = _ref$headers === undefined ? {} : _ref$headers;
+    var _ref$sendCookies = _ref.sendCookies;
+    let sendCookies = _ref$sendCookies === undefined ? true : _ref$sendCookies;
+    var _ref$skipCsrfToken = _ref.skipCsrfToken;
+    let skipCsrfToken = _ref$skipCsrfToken === undefined ? false : _ref$skipCsrfToken;
+    var _ref$postData = _ref.postData;
+    let postData = _ref$postData === undefined ? undefined : _ref$postData;
+
+    return new Promise((resolve, reject) => {
+      const request = new XMLHttpRequest();
+      request.addEventListener('load', function () {
+        if (request.status >= 200 && request.status < 300 || request.status === 304) {
+          resolve({
+            status: request.status,
+            responseText: request.responseText
+          });
+        } else {
+          const error = new Error(`${method} request for ${url} has failed with status code ${request.status}`);
+          error.response = {
+            status: request.status,
+            responseText: request.responseText
+          };
+          reject(error);
+        }
+      });
+
+      request.addEventListener('error', function (err) {
+        reject(err);
+      });
+
+      request.open(method, url, true);
+      request.withCredentials = sendCookies;
+      Object.keys(headers).forEach(name => {
+        request.setRequestHeader(name, headers[name]);
+      });
+
+      if (!skipCsrfToken) {
+        const csrfToken = getCookie('JSESSIONID');
+        if (csrfToken) {
+          request.setRequestHeader('Csrf-Token', trimDoubleQuotes(csrfToken));
+        }
+      }
+
+      request.send(postData);
+    });
+  }
+
+  const attributesMap = {
+    className: 'class'
+  };
+
+  const iconSrcMissingErrorMsg = 'A path to the asset must be provided';
+
+  function svgRequester(iconSource) {
+    let attributes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    if (!iconSource) {
+      return Promise.reject(new Error(iconSrcMissingErrorMsg));
+    }
+
+    const svgAttributes = _extends({ focusable: 'false' }, attributes);
+    return request(iconSource, {
+      sendCookies: false,
+      skipCsrfToken: true
+    }).then(response => parseStringToSVG(response.responseText)).then(node => addAttributes(node, svgAttributes));
+  }
+
+  // convert the requested string into a DOM node
+  function parseStringToSVG(string) {
+    const doc = new DOMParser().parseFromString(string, 'image/svg+xml');
+    return doc.firstChild;
+  }
+  // adds the a11y attr plus the custom class passed from li-icon tag
+  function addAttributes(svgNode) {
+    let attributes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    Object.keys(attributes).map(attributeKey => {
+      const attributeName = attributesMap[attributeKey] || attributeKey;
+      svgNode.setAttribute(attributeName, attributes[attributeKey]);
+    });
+    return svgNode;
+  }
+
+  const liIconTagMissingErrorMsg = 'An li-icon tag must be provided to inlineIcon';
+  /**
+   * request the SVG from the liIcon data-icon-src attribute and append it to it with the right attributes
+   *
+   * @export
+   * @param {HTMLElement} liIcon
+   */
+  function inlineIcon(liIcon, iconSource) {
+    if (!liIcon) {
+      return Promise.reject(new Error(liIconTagMissingErrorMsg));
+    }
+
+    const className = liIcon.getAttribute('class');
+    const attributes = className ? { className } : {};
+
+    return svgRequester(iconSource, attributes).then(svgNode => {
+      liIcon.appendChild(svgNode);
+      liIcon.setAttribute('aria-hidden', 'true');
+      return svgNode;
+    });
+  }
+
+  const TAGS_WITH_SRC = ['IMG', 'IFRAME', 'VIDEO', 'SCRIPT'];
+
+  const SCRIPT_TAG = 'SCRIPT';
+  const LI_ICON_TAG = 'LI-ICON';
+
+  class LazyLoader {
+    /**
+     * Creates an instance of LazyLoader.
+     * @param {object} {
+     *     delayedUrlAttributeName = 'data-delayed-url', - Name of attribute that contains the url to be added to element when it is being loaded
+     *     delayedPosterAttributeName = 'data-delayed-poster', - Name of attribute that contains the url to be added to poster attribute of a video element
+     *     delayedBackground = 'data-delayed-background', - Name of attribute that specifies if the delayed url needs to be applied as a background image style instead of src
+     *     lazyloadClassName = 'lazy-load', - Class name added to elements that need to be lazy loaded
+     *     lazyloadedClassName = 'lazy-loaded', - Class name that is added once the element has finished lazy loading.
+     *     onLoadClassName =  'onload' - Class name for elements that need to be loaded as soon as page is loaded instead of waiting for them to come into view port
+     *   }
+     *
+     * @memberOf LazyLoader
+     */
+    constructor() {
+      var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+          _ref$delayedUrlAttrib = _ref.delayedUrlAttributeName;
+
+      let delayedUrlAttributeName = _ref$delayedUrlAttrib === undefined ? 'data-delayed-url' : _ref$delayedUrlAttrib;
+      var _ref$delayedPosterAtt = _ref.delayedPosterAttributeName;
+      let delayedPosterAttributeName = _ref$delayedPosterAtt === undefined ? 'data-delayed-poster' : _ref$delayedPosterAtt;
+      var _ref$delayedBackgroun = _ref.delayedBackground;
+      let delayedBackground = _ref$delayedBackgroun === undefined ? 'data-delayed-background' : _ref$delayedBackgroun;
+      var _ref$lazyloadClassNam = _ref.lazyloadClassName;
+      let lazyloadClassName = _ref$lazyloadClassNam === undefined ? 'lazy-load' : _ref$lazyloadClassNam;
+      var _ref$lazyloadedClassN = _ref.lazyloadedClassName;
+      let lazyloadedClassName = _ref$lazyloadedClassN === undefined ? 'lazy-loaded' : _ref$lazyloadedClassN;
+      var _ref$onLoadClassName = _ref.onLoadClassName;
+      let onLoadClassName = _ref$onLoadClassName === undefined ? 'onload' : _ref$onLoadClassName;
+      var _ref$onErrorClassName = _ref.onErrorClassName;
+      let onErrorClassName = _ref$onErrorClassName === undefined ? 'onerror' : _ref$onErrorClassName;
+
+      this.elementCache = [];
+      this.onLoadClassName = onLoadClassName;
+      this.onErrorClassName = onErrorClassName;
+      this.delayedUrlAttributeName = delayedUrlAttributeName;
+      this.delayedPosterAttributeName = delayedPosterAttributeName;
+      this.delayedBackground = delayedBackground;
+      this.lazyloadClassName = lazyloadClassName;
+      this.lazyloadedClassName = lazyloadedClassName;
+      this.lazyloadElSelector = `[${this.delayedUrlAttributeName}], .${this.lazyloadClassName}`;
+      this.boundLoadVisibleImages = this.loadVisibleImages.bind(this);
+      this.boundEvents = false;
+      this.scriptLoadPromises = {};
+      onload(() => this.refreshLoader());
+    }
+
+    getLazyLoadedJavascriptModule(moduleId) {
+      this.scriptLoadPromises[moduleId] = this.scriptLoadPromises[moduleId] || getDeferredPromise();
+      return this.scriptLoadPromises[moduleId];
+    }
+
+    /**
+     * It also reinitializes the cache with the latest non lazy loaded elements
+     * Loads Visible Images and setups all the event listeners if they haven't already been setup.
+     *
+     * @memberOf LazyLoader
+     */
+    refreshLoader() {
+      this.elementCache = makeArray(document.querySelectorAll(this.lazyloadElSelector));
+      this.loadVisibleImages();
+      if (this.elementCache.length && !this.boundEvents) {
+        this._attachEvents();
+      }
+    }
+
+    _attachEvents() {
+      window.addEventListener('scroll', this.boundLoadVisibleImages, true);
+      window.addEventListener('touchmove', this.boundLoadVisibleImages, true);
+      window.addEventListener('resize', this.boundLoadVisibleImages, true);
+      this.boundEvents = true;
+    }
+
+    _detachEvents() {
+      window.removeEventListener('scroll', this.boundLoadVisibleImages, true);
+      window.removeEventListener('touchmove', this.boundLoadVisibleImages, true);
+      window.removeEventListener('resize', this.boundLoadVisibleImages, true);
+      this.boundEvents = false;
+    }
+
+    /**
+     * Adds and removes classes and attributes once lazy load has completed
+     *
+     * @param {HTMLElement} el
+     * @memberOf LazyLoader
+     */
+    lazyloadElOnload(el) {
+      el.classList.remove(this.lazyloadClassName);
+      el.classList.add(this.lazyloadedClassName);
+
+      if (el.tagName === SCRIPT_TAG) {
+        const moduleId = el.dataset.moduleId;
+
+        this.getLazyLoadedJavascriptModule(moduleId).resolve(window[moduleId]);
+      }
+    }
+
+    /**
+     * Adds error class for onerror
+     *
+     * @param {HTMLElement} el
+     * @memberOf LazyLoader
+     */
+    lazyloadOnerror(el) {
+      el.classList.remove(this.lazyloadClassName);
+      el.classList.add(this.lazyloadedClassName);
+      el.classList.add(this.onErrorClassName);
+
+      if (el.tagName === SCRIPT_TAG) {
+        const moduleId = el.dataset.moduleId;
+
+        this.getLazyLoadedJavascriptModule(moduleId).reject(new Error(`Could not lazy load JS with src ${el.src}`));
+      }
+    }
+
+    /**
+     * Loops through all elements in cache, if element has the onload class name or if it is in viewport the element is lazy loaded.
+     * In the end of there are no elements in the cache it also removes all the event listeners.
+     *
+     * @memberOf LazyLoader
+     */
+    loadVisibleImages() {
+      let i = 0;
+      while (i < this.elementCache.length) {
+        let el = this.elementCache[i];
+
+        if (el.tagName === SCRIPT_TAG || el.classList.contains(this.onLoadClassName) || elementInViewport(el)) {
+          const delayedUrl = el.getAttribute(this.delayedUrlAttributeName);
+
+          if (delayedUrl && el.tagName === LI_ICON_TAG) {
+            inlineIcon(el, delayedUrl).then(svgNode => {
+              this.lazyloadElOnload(svgNode);
+              this.lazyloadElOnload(el);
+            }).catch(() => this.lazyloadOnerror(el));
+          } else if (delayedUrl && TAGS_WITH_SRC.indexOf(el.tagName) !== -1) {
+            el.onerror = this.lazyloadOnerror.bind(this, el);
+            el.onload = el.oncanplay = this.lazyloadElOnload.bind(this, el);
+            el.src = delayedUrl;
+          } else {
+            if (delayedUrl && el.hasAttribute(this.delayedBackground)) {
+              el.style.backgroundImage = `url("${delayedUrl}")`;
+            }
+
+            this.lazyloadElOnload(el);
+          }
+
+          if (el.tagName === 'VIDEO') {
+            el.poster = el.getAttribute(this.delayedPosterAttributeName);
+          }
+
+          el.removeAttribute(this.delayedUrlAttributeName);
+          this.elementCache.splice(i, 1);
+          continue;
+        }
+
+        i++;
+      }
+
+      if (!this.elementCache.length) {
+        this._detachEvents();
+      }
+    }
+  }
+
+  let lazyloader = null;
+
+  /**
+   * Initializes a singleton instance of the lazy loader for the page.
+   *
+   * @param {object} - For details on options see @LazyLoader constructor docs.
+   * @export
+   * @returns
+   */
+  function init() {
+    let options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    lazyloader = lazyloader || new LazyLoader(options);
+    return lazyloader;
+  }
+
+  const CONTROL_NAME_ATTR = 'data-tracking-control-name';
+  const WILL_NAVIGATE_ATTR = 'data-tracking-will-navigate';
+  const TRACKING_QUERY_PARAM = 'trk';
+
+  var trackingExists = {
+    create: context => {
+      return {
+        'a': node => {
+          const controlName = node.getAttribute(CONTROL_NAME_ATTR);
+          const href = node.getAttribute('href');
+
+          if (!controlName || !controlName.trim()) {
+            context.report({
+              node,
+              message: `Link is missing a ${CONTROL_NAME_ATTR} attribute`
+            });
+          }
+
+          if (!node.hasAttribute(WILL_NAVIGATE_ATTR)) {
+            context.report({
+              node,
+              message: `Link is missing a ${WILL_NAVIGATE_ATTR} attribute`
+            });
+          }
+
+          if (!href) {
+            context.report({
+              node,
+              message: 'Link has no href'
+            });
+          } else if (!getQueryParam(href, TRACKING_QUERY_PARAM)) {
+            context.report({
+              node,
+              message: `Url in link is missing ${TRACKING_QUERY_PARAM} query param please use @addTrackingCode to add this`
+            });
+          }
+        },
+
+        'button': node => {
+          const controlName = node.getAttribute(CONTROL_NAME_ATTR);
+
+          if (!controlName || !controlName.trim()) {
+            context.report({
+              node,
+              message: `Button is missing a ${CONTROL_NAME_ATTR} attribute`
+            });
+          }
+        }
+      };
+    }
+  };
+
+  const GA_SCRIPT_LOCATION = '//platform.linkedin.com/js/analytics.js';
+  const GA_ACCOUNT = 'UA-62256447-1';
+
+  var googleAnalyticsExists = {
+    create: context => {
+      let foundGA = false;
+      return {
+        'script': node => {
+          if (node.textContent && node.textContent.indexOf(GA_SCRIPT_LOCATION) !== -1) {
+            foundGA = true;
+
+            if (node.textContent.indexOf(GA_ACCOUNT) === -1) {
+              context.report({
+                node,
+                message: 'Incorrect account used for google analytics'
+              });
+            }
+          }
+        },
+
+        onEnd: node => {
+          if (!foundGA) {
+            context.report({
+              node,
+              message: 'Page is missing google analytics'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  var guestUILibPlugin = {
+    name: 'guest-ui-lib',
+    rules: {
+      'tracking-exists': trackingExists,
+      'google-analytics-exists': googleAnalyticsExists
+    }
+  };
+
+  var lintConfig = {
+    plugins: [guestUILibPlugin],
+    rules: {
+      'image-alt-exists': 'error',
+      'h1-exists': 'error',
+      'canonical-exists': 'error',
+      'description-exists': 'error',
+      'noarchive-exists': 'error',
+      'og-twitter-canonical-mismatch': 'error',
+      'ogtags-exists': 'error',
+      'title-exists': 'error',
+      'twittertags-exists': 'error',
+      'guest-ui-lib/tracking-exists': 'error',
+      'guest-ui-lib/google-analytics-exists': 'error'
+    }
+  };
+
+  const levels = {
+    ERROR: 'error',
+    WARN: 'warn',
+    OFF: 'off'
+  };
+
+  let reportStyles = {};
+
+  reportStyles[levels.ERROR] = {
+    border: '10px solid #fa7073'
+  };
+
+  reportStyles[levels.WARN] = {
+    border: '10px solid #f0a070'
+  };
+
+  let logger = {};
+  logger[levels.ERROR] = console.error;
+  logger[levels.WARN] = console.warn;
+
+  var toArray = function toArray(arr) {
+    return Array.isArray(arr) ? arr : Array.from(arr);
+  };
+
+  /**
+   * Context that is passed into every rule.
+   * It is a container class for any specific rule options and reporting levels.
+   *
+   * @export
+   * @class Context
+   */
+  class Context {
+    /**
+     * @param {string} ruleId
+     * @param {Array} [
+     *     ruleLevel,
+     *     ...ruleOptions
+     *   ]
+     * @memberof Context
+     */
+    constructor(ruleId, _ref) {
+      var _ref2 = toArray(_ref);
+
+      let ruleLevel = _ref2[0],
+          ruleOptions = _ref2.slice(1);
+
+      this._ruleId = ruleId;
+      this._ruleLevel = ruleLevel;
+      this.ruleOptions = ruleOptions;
+    }
+
+    /**
+     * Report an issue at the passed in node.
+     * You can also send in any custom message that needs to show up in the console.
+     *
+     * @param {{node: Element, message?: string}}
+     * @memberof Context
+     */
+    report(_ref3) {
+      let node = _ref3.node;
+      var _ref3$message = _ref3.message;
+      let message = _ref3$message === undefined ? '' : _ref3$message;
+
+      // normalizes nodes
+      const nodes = Array.isArray(node) ? node : [node];
+      logger[this._ruleLevel](this._ruleId, message, ...nodes);
+
+      const styles = reportStyles[this._ruleLevel];
+      nodes.forEach(reportedNode => {
+        reportedNode && Object.keys(styles).forEach(style => {
+          reportedNode.style[style] = styles[style];
+        });
+      });
+    }
+  }
+
+  /**
+   * Verifies that there is a canonical tag on the page.
+   *
+   */
+
+  var canonicalExists = {
+    create(context) {
+      let hasValidCanonical = false;
+
+      return {
+        'link[rel="canonical"]': node => {
+          const href = node.getAttribute('href');
+          if (href && href.trim()) {
+            hasValidCanonical = true;
+          }
+        },
+
+        onEnd: node => {
+          if (!hasValidCanonical) {
+            context.report({
+              node,
+              message: 'No/Invalid Canonical url tag found'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there is (non-empty) meta description tag on the page.
+   *
+   */
+  var descriptionExists = {
+    create(context) {
+      let hasValidDescription = false;
+
+      return {
+        'meta[name="description"]': node => {
+          const content = node.getAttribute('content');
+          if (content && content.trim()) {
+            hasValidDescription = true;
+          }
+        },
+
+        onEnd: node => {
+          if (!hasValidDescription) {
+            context.report({
+              node,
+              message: 'No/Empty Meta Description found'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there is at least one h1 on the page.
+   * By default it also verifies that there is only 1 h1 on the page.
+   * If you want change the option you can configure the rule as follows,
+   *
+   * 'h1-exists': ['error', {'maxNum': 2 }] // This will allow 2 h1's on the page
+   */
+  var h1Exists = {
+    create(context) {
+      let hasH1 = false;
+      let options = context.ruleOptions[0] || {};
+      let maxNum = options.maxNum || 1;
+      let numSeen = 0;
+
+      return {
+        'h1': node => {
+          numSeen++;
+          hasH1 = true;
+
+          if (numSeen > maxNum) {
+            context.report({
+              node,
+              message: `More than ${maxNum} h1's found`
+            });
+          }
+        },
+
+        onEnd: node => {
+          if (!hasH1) {
+            context.report({
+              node,
+              message: 'No H1 found'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there are HrefLang tags on the page.
+   *
+   */
+  var hrefLangExists = {
+    create(context) {
+      let hasInvalidHref = false;
+      let hasXDefault = false;
+      let hasHrefLangs = false;
+
+      return {
+        'link[rel="alternate"][hreflang]': node => {
+          const href = node.getAttribute('href');
+          if (!hasInvalidHref && !href && !href.trim()) {
+            hasInvalidHref = true;
+          }
+          hasHrefLangs = true;
+        },
+
+        'link[rel="alternate"][hreflang="x-default"]': () => {
+          hasXDefault = true;
+        },
+
+        onEnd: node => {
+          if (hasHrefLangs) {
+            if (!hasXDefault) {
+              context.report({
+                node,
+                message: 'No x-default hreflang found'
+              });
+            }
+
+            if (hasInvalidHref) {
+              context.report({
+                node,
+                message: 'Invalid hreflang tags found'
+              });
+            }
+          } else {
+            context.report({
+              node,
+              message: 'No hreflang tags found'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that every image tag has an alt attribute
+   */
+  var imageAltExists = {
+    create(context) {
+      return {
+        'img': node => {
+          const alt = node.getAttribute('alt');
+          if (!alt || !alt.trim().length) {
+            context.report({
+              node,
+              message: 'Image alt must exist'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there is a noarchive robots tag on the page.
+   *
+   */
+
+  const CONTENT_ATTR = 'content';
+  const NOARCHIVE = 'noarchive';
+
+  var noArchiveExists = {
+    create(context) {
+      let hasNoArchive = false;
+
+      return {
+        'meta[name="robots"]': node => {
+          const content = node.getAttribute(CONTENT_ATTR);
+
+          if (content && content.trim() && content.indexOf(NOARCHIVE) !== -1) {
+            hasNoArchive = true;
+          }
+        },
+
+        onEnd: node => {
+          if (!hasNoArchive) {
+            context.report({
+              node,
+              message: 'No NoArchive robots tag found'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there are Open Graph tags on the page.
+   *
+   */
+  var ogTagsExists = {
+    create(context) {
+      let hasOGTitle = false;
+      let hasOGType = false;
+      let hasOGUrl = false;
+      let hasOGImage = false;
+
+      return {
+        'meta[property^="og:title"]': () => {
+          hasOGTitle = true;
+        },
+
+        'meta[property^="og:type"]': () => {
+          hasOGType = true;
+        },
+
+        'meta[property^="og:url"]': () => {
+          hasOGUrl = true;
+        },
+
+        'meta[property^="og:image"]': () => {
+          hasOGImage = true;
+        },
+
+        onEnd: node => {
+          if (!hasOGTitle) {
+            context.report({
+              node,
+              message: 'No Open Graph title tag found'
+            });
+          }
+
+          if (!hasOGType) {
+            context.report({
+              node,
+              message: 'No Open Graph type tag found'
+            });
+          }
+
+          if (!hasOGUrl) {
+            context.report({
+              node,
+              message: 'No Open Graph url tag found'
+            });
+          }
+
+          if (!hasOGImage) {
+            context.report({
+              node,
+              message: 'No Open Graph image tag found'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that the Oprn graph url tag, Twitter url tag and Canonical tag
+   * have the same url.
+   */
+
+  const HREF_ATTR = 'href';
+  const CONTENT_ATTR$1 = 'content';
+
+  var ogTwitterCanonicalMismatch = {
+    create(context) {
+      let canonicalUrl = null;
+      let ogUrl = null;
+      let twitterUrl = null;
+
+      return {
+        'link[rel="canonical"]': node => {
+          const href = node.getAttribute(HREF_ATTR);
+          if (href && href.trim()) {
+            canonicalUrl = href;
+          }
+        },
+
+        'meta[property="og:url"]': node => {
+          const content = node.getAttribute(CONTENT_ATTR$1);
+          if (content && content.trim()) {
+            ogUrl = content;
+          }
+        },
+
+        'meta[name="twitter:url"]': node => {
+          const content = node.getAttribute(CONTENT_ATTR$1);
+          if (content && content.trim()) {
+            twitterUrl = content;
+          }
+        },
+
+        onEnd: node => {
+          if (canonicalUrl) {
+            if (ogUrl && canonicalUrl !== ogUrl) {
+              context.report({
+                node,
+                message: 'Open Graph URL does not match Canonical URL'
+              });
+            }
+
+            if (twitterUrl && canonicalUrl !== twitterUrl) {
+              context.report({
+                node,
+                message: 'Twitter URL does not match Canonical URL'
+              });
+            }
+          } else if (ogUrl || twitterUrl) {
+            context.report({
+              node,
+              message: 'Open Graph/Twitter URL does not match Canonical URL since Canonical URL is absent'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there is a (non-empty) title tag on the page.
+   *
+   */
+  var titleExists = {
+    create(context) {
+      let hasValidTitle = false;
+
+      return {
+        'title': node => {
+          if (node.textContent && node.textContent.trim()) {
+            hasValidTitle = true;
+          }
+        },
+
+        onEnd: node => {
+          if (!hasValidTitle) {
+            context.report({
+              node,
+              message: 'No/Empty Title found'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there are Twitter tags on the page.
+   *
+   */
+  var twitterTagsExists = {
+    create(context) {
+      let hasTwitterTags = false;
+
+      return {
+        'meta[name="twitter:card"]': () => {
+          hasTwitterTags = true;
+        },
+
+        onEnd: node => {
+          if (!hasTwitterTags) {
+            context.report({
+              node,
+              message: 'No Twitter tags found'
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there are less than the specified number of outbound links on the page.
+   * By default the max number is set to 100.
+   * If you want change the option you can configure the rule as follows,
+   *
+   * 'num-outbound-links': ['error', {'maxNum': 50 }]
+   */
+  var numOutboundLinks = {
+    create(context) {
+      const options = context.ruleOptions[0] || {};
+      const maxNum = options.maxNum || 100;
+      let numSeen = 0;
+      let alreadyReported = false;
+
+      return {
+        'a': node => {
+          const href = node.getAttribute('href');
+          // Only treat links with an outbound href i.e. one that does not start with #.
+          if (href && href.indexOf('#') !== 0) {
+            numSeen++;
+          }
+
+          if (numSeen > maxNum && !alreadyReported) {
+            context.report({
+              node,
+              message: `More than ${maxNum} outbound links found please try reducing number of links on page`
+            });
+            alreadyReported = true;
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there are no external domain links present on the page.
+   * The whitelisted set of domains has to be provided as an option. The domain list can contain strings or regex objects
+   * Here's an example of how you can setup the rule,
+   *
+   * 'no-external-links': ['error', {'internalDomains': ['www.linkedin.com', /.*\.linkedin.com/] }]
+   */
+  var noExternalLinks = {
+    create(context) {
+      const options = context.ruleOptions[0] || {};
+      const internalDomains = options.internalDomains;
+
+      if (!internalDomains) {
+        context.report({
+          message: `
+          No internalDomains list specified for rule no-external-rules.
+          Example Usage:
+            'no-external-links': ['error', {'internalDomains': ['www.linkedin.com', /.*\.linkedin.com/] }]
+        `
+        });
+
+        return {};
+      }
+
+      const regexInternalDomains = internalDomains.filter(domain => {
+        return typeof domain === 'string' || domain instanceof RegExp;
+      }).map(domain => {
+        if (typeof domain === 'string') {
+          domain = new RegExp(`^${domain}$`);
+        }
+
+        return domain;
+      });
+
+      return {
+        'a': node => {
+          const url = new URL(node.href);
+
+          for (let i = 0; i < regexInternalDomains.length; i++) {
+            if (regexInternalDomains[i].test(url.hostname)) {
+              return;
+            }
+          }
+
+          context.report({
+            node,
+            message: `${node.href} is linking to an non whitelisted domain`
+          });
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there are only specified amount of duplicate links for a certain url host + path combination.
+   * The default number of maximum duplicates allowed is 5.
+   * You can also specify url patterns that should skip this check entirely.
+   *
+   * These can be configured in the rule as follows,
+   *
+   * 'no-duplicate-links': ['error', {'maxNumDuplications': 2, 'skipCheckPattern': /.+\.linkedin.com\/in\/.+/}]
+   *
+   * In the above example a maximum of 2 duplicate instances of a url host + path is allowed,
+   * i.e. 3 instances of <a href="/some/url"></a>. As soon as a fourth instance is found the linter will throw an error
+   */
+  var noDuplicateLinks = {
+    create(context) {
+      const options = context.ruleOptions[0] || {};
+      const maxNumDuplications = typeof options.maxNumDuplications === 'number' ? options.maxNumDuplications : 5;
+      const skipCheckPattern = options.skipCheckPattern;
+      const seenUrls = {};
+
+      return {
+        'a': node => {
+          if (skipCheckPattern && skipCheckPattern.test(node.href)) {
+            return;
+          }
+
+          const url = new URL(node.href);
+          let hashKey = `${url.origin}${url.pathname}`;
+          seenUrls[hashKey] = seenUrls[hashKey] || 0;
+          seenUrls[hashKey]++;
+
+          // Add 1 to maxNumDuplications since we are looking for duplicates and hence should ignore the first occurrence
+          if (seenUrls[hashKey] > maxNumDuplications + 1) {
+            context.report({
+              node,
+              message: `Too many urls of type ${hashKey} found. Consider reducing the number.`
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there is some text inside a h tag.
+   *
+   * 'h-tag-contains-text': ['error']
+   */
+  var hTagContainsText = {
+    create(context) {
+      return {
+        'h1,h2,h3,h4,h5,h6': node => {
+          let text = node.textContent || '';
+          text = text.trim();
+
+          if (!text) {
+            context.report({
+              node,
+              message: `${node.tagName.toLowerCase()} contains no text`
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that title is not longer than the passed in max length option.
+   * The default value for the max length is 70 characters
+   *
+   * 'title-length': ['error', 25] // This will allow a title with a max length of 25
+   */
+  var titleLength = {
+    create(context) {
+      const maxLength = context.ruleOptions[0] || 70;
+
+      return {
+        'title': node => {
+          const text = node.textContent && node.textContent.trim() || '';
+
+          if (text.length > maxLength) {
+            context.report({
+              node: document,
+              message: `Title exceeded max length of ${maxLength}`
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that meta description is not longer than the passed in max length option.
+   * The default value for the max length is 300 characters
+   *
+   * 'description-length': ['error', 25] // This will allow a title with a max length of 25
+   */
+  var descriptionLength = {
+    create(context) {
+      const maxLength = context.ruleOptions[0] || 300;
+
+      return {
+        'meta[name="description"]': node => {
+          let content = node.getAttribute('content') || '';
+          content = content.trim();
+          if (content.length > maxLength) {
+            context.report({
+              node: document,
+              message: `Meta description exceeded max length of ${maxLength}`
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that the maximum depth of the dom tree does not exceed the specified maximum depth.
+   * The default allowed maximum depth is 14.
+   *
+   * 'max-dom-nesting-depth': ['error', 2] // This will allow a maximum depth of 2.
+   * i.e. with the above configuration the following markup, will error on the p tag since it has a depth of 3
+   *
+   * <body>
+   *   <div> -> 1
+   *     <section> -> 2
+   *       <p>Content</p> -> 3
+   *     </section>
+   *   </div>
+   * </body>
+   */
+  var maxDomNestingDepth = {
+    create(context) {
+      const maxAllowedDepth = context.ruleOptions[0] || 14;
+
+      return {
+        'body': startNode => {
+          const queue = [{
+            node: startNode,
+            level: 0
+          }];
+
+          while (queue.length) {
+            const currentNodeObj = queue.shift();
+            const currentNode = currentNodeObj.node;
+            const currentLevel = currentNodeObj.level;
+
+            if (currentLevel > maxAllowedDepth) {
+              context.report({
+                node: currentNode,
+                message: `Node has nesting depth of ${currentLevel}. Max allowed depth is ${maxAllowedDepth}.`
+              });
+            } else if (currentNode.children.length) {
+              Array.prototype.slice.call(currentNode.children).forEach(childNode => {
+                queue.push({
+                  node: childNode,
+                  level: currentLevel + 1
+                });
+              });
+            }
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that the num-dom-nodes is not greater that than the configured maximum number.
+   * The default is set to 2000 nodes.
+   *
+   * 'num-dom-nodes': ['error', 10] // This will set the maximum number of allowed nodes to 10
+   */
+  var numDomNodes = {
+    create(context) {
+      const maxAllowedNodes = context.ruleOptions[0] || 2000;
+
+      return {
+        onEnd: node => {
+          const numNodes = node.querySelectorAll('*').length;
+
+          if (numNodes > maxAllowedNodes) {
+            context.report({
+              node,
+              message: `Total number of nodes ${numNodes} is greater than the allowed maximum of ${maxAllowedNodes}`
+            });
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that there is no duplicate IDs
+   *
+   */
+  var noDuplicateIds = {
+    create(context) {
+      const seenIDs = {};
+
+      return {
+        '[id]': node => {
+          const hashKey = node.getAttribute('id');
+
+          if (seenIDs[hashKey]) {
+            context.report({
+              node: [seenIDs[hashKey], node],
+              message: `The same id - "${hashKey}" - was found in more than one element.`
+            });
+          } else {
+            seenIDs[hashKey] = node;
+          }
+        }
+      };
+    }
+  };
+
+  /**
+   * Verifies that every <ul> and <ol> tag contains <li> and only <li>
+   *
+   */
+  var listContainsListItems = {
+    create(context) {
+      return {
+        'ul,ol': node => {
+          const childNodes = [...node.childNodes];
+          // filtering out whitespaces and comments
+          const listItems = childNodes.filter(listItem => listItem.textContent.trim().length && listItem.nodeType !== Node.COMMENT_NODE);
+
+          if (!listItems.length) {
+            context.report({
+              node,
+              message: 'The list doesn\'t contain any list items'
+            });
+          }
+
+          listItems.forEach(listItem => {
+            if (listItem.tagName !== 'LI') {
+              context.report({
+                node: node,
+                message: `The <${node.tagName.toLowerCase()}> element can not contain other than <li> tags`
+              });
+            }
+          });
+        }
+      };
+    }
+  };
+
+  var rules = {
+    'canonical-exists': canonicalExists,
+    'description-exists': descriptionExists,
+    'h1-exists': h1Exists,
+    'hreflang-exists': hrefLangExists,
+    'image-alt-exists': imageAltExists,
+    'noarchive-exists': noArchiveExists,
+    'ogtags-exists': ogTagsExists,
+    'og-twitter-canonical-mismatch': ogTwitterCanonicalMismatch,
+    'title-exists': titleExists,
+    'twittertags-exists': twitterTagsExists,
+    'num-outbound-links': numOutboundLinks,
+    'no-external-links': noExternalLinks,
+    'no-duplicate-links': noDuplicateLinks,
+    'h-tag-contains-text': hTagContainsText,
+    'title-length': titleLength,
+    'description-length': descriptionLength,
+    'max-dom-nesting-depth': maxDomNestingDepth,
+    'num-dom-nodes': numDomNodes,
+    'no-duplicate-id': noDuplicateIds,
+    'list-contains-listItems': listContainsListItems
+  };
+
+  /**
+   * Namespaces all the rules in the plugins with the name of the plugin.
+   * It then puts all the namespaced rules into an object and returns a list of those objects.
+   *
+   * @param {[SEOLinterPlugin]} plugins
+   * @return {[Object.<string, Rule>]} A list of objects, where each object contains a map from the namespaced ruleName to the rule.
+   */
+  function getPluginRules(plugins) {
+    const namespacedRules = plugins.map(plugin => {
+      const pluginName = plugin.name;
+      return Object.keys(plugin.rules).reduce((acc, ruleName) => {
+        acc[`${pluginName}/${ruleName}`] = plugin.rules[ruleName];
+        return acc;
+      }, {});
+    });
+
+    return namespacedRules;
+  }
+
+  /**
+   * Loads all enabled rules with a new context and returns the resultant event listeners that are produced by the rule.
+   *
+   * @export
+   * @param {Object.<string,RuleOptions>} ruleOptionsMap - An object that is keyed by the rule name/id and value is RuleOptions for that rule
+   * @param {[SEOLinterPlugin]} [plugins=[]] - Plugins to load rules from
+   * @returns {Array<Object.<string, function (node): void>} - A list of Objects where the key is a selector and value is the listener function for the selector
+   */
+  function loadRules(ruleOptionsMap) {
+    let plugins = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+    const pluginRules = getPluginRules(plugins);
+    const allRules = Object.assign({}, rules, ...pluginRules);
+
+    return Object.keys(ruleOptionsMap)
+    // Normalize rules
+    .map(ruleId => {
+      let ruleOptions = ruleOptionsMap[ruleId];
+
+      if (typeof ruleOptions === 'string') {
+        ruleOptions = [ruleOptions];
+      }
+
+      return {
+        ruleId,
+        ruleOptions
+      };
+    })
+    // Remove any rules that are turned off
+    .filter(_ref => {
+      let ruleOptions = _ref.ruleOptions;
+
+      return ruleOptions[0] !== levels.OFF;
+    })
+    // Create the rule listeners with a new context
+    .map(_ref2 => {
+      let ruleId = _ref2.ruleId,
+          ruleOptions = _ref2.ruleOptions;
+
+      if (!allRules[ruleId]) {
+        throw new Error(`No rule defined with name ${ruleId}`);
+      }
+
+      return allRules[ruleId].create(new Context(ruleId, ruleOptions));
+    });
+  }
+
+  /**
+   * A simple implementation for an event emitter.
+   *
+   * @export
+   * @class SimpleEmitter
+   */
+  class SimpleEmitter {
+    constructor() {
+      this._listeners = {};
+    }
+
+    /**
+     * Add event listener for passed in event name.
+     *
+     * @param {string} eventName
+     * @param {function} listener
+     * @memberof SimpleEmitter
+     */
+    on(eventName, listener) {
+      this._listeners[eventName] = this._listeners[eventName] || [];
+      this._listeners[eventName].push(listener);
+    }
+
+    /**
+     * Emit passed in event name and pass in any other arguments to the listener function.
+     *
+     * @param {string} eventName
+     * @param {...any} args
+     * @memberof SimpleEmitter
+     */
+    emit(eventName) {
+      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+      }
+
+      if (this._listeners[eventName]) {
+        this._listeners[eventName].forEach(listener => listener.apply(null, args));
+      }
+    }
+
+    /**
+     * @returns {[string]} - A list of all events with listeners attached
+     * @memberof SimpleEmitter
+     */
+    eventNames() {
+      return Object.keys(this._listeners);
+    }
+  }
+
+  const matches = Element.prototype.matches || Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector || Element.prototype.oMatchesSelector;
+
+  /**
+   * Traverses the node Tree and emits an event for any event names found in the emitter.
+   *
+   * @param {Element} node
+   * @param {SimpleEmitter} emitter
+   */
+  function dfsTraverse(node, emitter) {
+    const allSelectors = emitter.eventNames();
+    let nodes = [node];
+
+    while (nodes.length) {
+      const currentNode = nodes.shift();
+
+      // TODO: Optimize this by only running through selectors that match a tag name
+      // i.e. maintain a map from tag name to selectors.
+      if (currentNode instanceof Element) {
+        const matchedSelectors = allSelectors.filter(selector => {
+          return matches.call(currentNode, selector);
+        });
+
+        matchedSelectors.forEach(selector => emitter.emit(selector, currentNode));
+      }
+
+      // Traversing only html elements right now i.e. children not childNodes
+      if (currentNode.children && currentNode.children.length) {
+        nodes = Array.prototype.slice.call(currentNode.children, 0).concat(nodes);
+      }
+    }
+
+    emitter.emit('onEnd', node);
+  }
+
+  /**
+   * @typedef {"off"|"warn"|"error"} RuleLevel
+   */
+
+  /**
+   * @typedef {[RuleLevel, ...any]|RuleLevel} RuleOptions
+   */
+
+  /**
+   * @typedef {Object} Rule
+   * @property {(RuleContext) => Object.<string, (HTMLElement) => void>} create
+   */
+
+  /**
+   * @typedef {Object} SEOLinterPlugin
+   * @property {string} name - Name of the plugin the all rules will be prefixed with this.
+   * @property {Object.<string, Rule>} rules
+   */
+
+  /**
+   * @typedef {Object} SEOLinterOptions
+   * @property {[SEOLinterPlugin]} plugins
+   * @property {Object.<string,RuleOptions>} rules - An object that is keyed by the rule name/id and value is RuleOptions for that rule
+   */
+
+  /**
+   * Main lint function. It lints starting from root applying any rules that are applicable to all children nodes.
+   * At a high level, it performs the following 3 steps
+   * 1) Loads enabled rules
+   * 2) Setup all rule listeners
+   * 3) Traverse the html tree and emits events for the matching selectors
+   *
+   * @export
+   * @param {Element} root
+   * @param {SEOLinterOptions} options
+   */
+  function lint$1(root, options) {
+    // Load enabled rules
+    const ruleListenersList = loadRules(options.rules, options.plugins);
+
+    // Setup selector listeners
+    const emitter = new SimpleEmitter();
+    ruleListenersList.forEach(ruleListeners => {
+      Object.keys(ruleListeners).forEach(selector => {
+        emitter.on(selector, ruleListeners[selector]);
+      });
+    });
+
+    // Traverse tree and emit events
+    dfsTraverse(root, emitter);
+  }
+
+  class Ingraphs {
+    constructor() {
+      this.perfData = window.performance.timing;
+      this.pageKey = getPageKey(document);
+    }
+
+    /**
+     * Get page load time from Navigation Timing API
+     * @returns {number}
+     */
+    _getPageLoadTime() {
+      if (!this.perfData) {
+        throw new Error('Cannot get page load time because performance.timing unavailable!');
+      }
+      return this.perfData.loadEventEnd - this.perfData.navigationStart;
+    }
+
+    fireIngraphsRequest(apiPath) {
+      if (!apiPath && typeof apiPath !== 'string') {
+        throw new Error('No API path provided!');
+      }
+
+      if (!this.pageKey) {
+        throw new Error('No page-key found!');
+      }
+      const pageLoadTime = this._getPageLoadTime();
+      const body = JSON.stringify({ 'pageKey': this.pageKey, 'metricsType': 'pageLoadTime', 'metricsValue': pageLoadTime });
+      request(apiPath, { method: 'POST', headers: { 'Content-Type': 'application/json' }, postData: body });
+    }
+  }
+
+  const IMPRESSION_DATA_ATTRIBUTE = '[data-impression-id]';
+  const DATA_IMPRESSION_ID = 'data-impression-id';
+
+  const impressionTrackingIE = { observeComponents: () => {}, unobserveComponents: () => {}, handleDynamicElements: () => {} };
+
+  /**
+  * This class handles all the logic associated with tracking components that are rendered on the page.
+  * TODO: Investigate performance of intersection observer https://jira01.corp.linkedin.com:8443/browse/GUEST-6728
+  * @class Impression Tracking
+  */
+  class ImpressionTracking {
+    /**
+    * Creates an instance of ImpressionTracking.
+    *
+    * @param {Object} IntersectionObserver - This is a reference to the window.IntersectionObserver class
+    * @param {Object} trackingInstance - This is the instance of tracking 2.0
+    * @param {HTMLElement} root - This is the root element whose children we want to record. null by default is the viewport.
+    * @param {number} threshold - threshold is percent of the element we want to see visible before we record it
+    * @param {string} rootMargin - added to the corresponding side in the root element's bounding box before the intersection test is performed
+    */
+    constructor(IntersectionObserver, trackingInstance) {
+      var _ref = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {},
+          _ref$threshold = _ref.threshold;
+
+      let threshold = _ref$threshold === undefined ? 0.9 : _ref$threshold;
+      var _ref$root = _ref.root;
+      let root = _ref$root === undefined ? null : _ref$root;
+      var _ref$rootMargin = _ref.rootMargin;
+      let rootMargin = _ref$rootMargin === undefined ? '0px' : _ref$rootMargin;
+
+      if (!('IntersectionObserver' in window)) {
+        return impressionTrackingIE;
+      }
+
+      this.root = root;
+      this.threshold = threshold;
+      this.rootMargin = rootMargin;
+      this.trackingInstance = trackingInstance;
+      this.queuedImpressions = [];
+
+      const options = {
+        root: this.root,
+        rootMargin: this.rootMargin,
+        threshold: this.threshold
+      };
+
+      this.intersectionObserverInstance = new IntersectionObserver(this._handleObservedNodes.bind(this), options);
+      this.observeComponents();
+    }
+
+    /**
+      * Queres all the availble nodes on the page and adds them to the intersectionObserver
+      * @param {array} componentList a list of dom nodes that have data_impression_id
+      */
+    observeComponents() {
+      let componentList = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [...document.querySelectorAll(IMPRESSION_DATA_ATTRIBUTE)];
+
+      if (this.intersectionObserverInstance) {
+        componentList.forEach(component => {
+          this.intersectionObserverInstance.observe(component);
+        });
+      }
+    }
+
+    /**
+      * takes a list of components to iterate over and remove them being observed as well as their data attribute
+      * @param {array} componentList a list of components to unobserve that contained data_impression_id
+      */
+    unobserveComponents() {
+      let componentList = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+      componentList.forEach(component => {
+        this.intersectionObserverInstance.unobserve(component);
+        component.removeAttribute(DATA_IMPRESSION_ID);
+      });
+    }
+
+    /**
+      * returnImpressionMetaData formats the observed element to be a proper data event
+      * @param {HTMLElement} component - this is the htmlElement that was observed
+      */
+    _returnImpressionMetaData(component) {
+      return component.getAttribute(DATA_IMPRESSION_ID);
+    }
+
+    /**
+      * Function that takes in an element and checks to see that it meets the defined threshold
+      * @param {Object} elementData the data for an element returned from the intersectionObserverApi after it is observed
+      */
+    _isNodeVisible(elementData) {
+      return elementData.intersectionRatio >= this.threshold;
+    }
+
+    /**
+      * queueObservedNodes takes a list of elements, filters out nodes that are not in the viewport
+      * @param {array} elements an array of objects containing elements that have a certain data attribute
+      */
+    _handleObservedNodes(elements) {
+      if (this.intersectionObserverInstance) {
+        const observedNodes = elements.filter(element => this._isNodeVisible(element)).map((_ref2) => {
+          let target = _ref2.target;
+          return target;
+        });
+
+        const observedNodesEvents = observedNodes.map(this._returnImpressionMetaData);
+        this.queuedImpressions = this.queuedImpressions.concat(observedNodesEvents);
+
+        this.unobserveComponents(observedNodes);
+        this._dispatchEvent();
+      }
+    }
+
+    /**
+      * dispatchEvent fires the tracking event and empties the queuedImpressions array
+      */
+    _dispatchEvent() {
+      fireViewModuleImpressionEvent(this.trackingInstance, this.queuedImpressions);
+      this.queuedImpressions = [];
+    }
+
+    /**
+      * handleDynamicElements is used as a hook to track dynamically added nodes to DOM
+      * For example if you have something like two-pane that dynamically updates
+      *  - Wait for dynamically added nodes to render
+      *  - Call handleDynamicElements with the parent node of the dynamically added nodes
+      * @param {HTMLElement} el - el should be the parent node of dnymically added nodes (ex. right-pane)
+      */
+    handleDynamicElements() {
+      let el = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document;
+
+      if (this.intersectionObserverInstance) {
+        const uniqueNodes = [...el.querySelectorAll(IMPRESSION_DATA_ATTRIBUTE)];
+
+        if (uniqueNodes.length > 0) {
+          this.observeComponents(uniqueNodes);
+        }
+      }
+    }
+  }
+
+  const TIMEZONE_OFFSET_KEY = 'timezoneOffset';
+  const SCREEN_WIDTH_KEY = 'screenWidth';
+  const SCREEN_HEIGHT_KEY = 'screenHeight';
+  const DEVICE_PIXEL_RATIO_KEY = 'devicePixelRatio';
+  const CURRENT_CONTEXT_KEY = 'currentContext';
+  const TRANSACTION_ROUTING_URL = 'https://www.linkedin.com/transactional-routing/createguestdeferreddeeplink';
+
+  const IOS_USER_AGENT_REGEX = /iPad|iPhone|iPod/;
+
+  /**
+   * Attach event listener for all app store links.
+   */
+  function attachAppStoreLinkClickHandler() {
+    if (isIos(navigator.userAgent)) {
+      makeArray(document.querySelectorAll('.app-store-link')).forEach(el => {
+        if (el.href) {
+          el.addEventListener('click', event => sendDdlData(event.currentTarget.pathname));
+        }
+      });
+    }
+  }
+  /**
+   * Test if the given userAgnet is from an iOS device
+   * @param  {string} userAgent
+   */
+  function isIos(userAgent) {
+    return IOS_USER_AGENT_REGEX.test(userAgent);
+  }
+
+  /**
+   * Send Ddl data to backend for fingerprinting.
+   * @param  {string} currentContext relative page path as current context
+   */
+  function sendDdlData(currentContext) {
+    if (!currentContext) {
+      throw Error('The given context is not valid');
+    }
+    const data = {
+      [TIMEZONE_OFFSET_KEY]: new Date().getTimezoneOffset(),
+      [SCREEN_WIDTH_KEY]: window.screen.width,
+      [SCREEN_HEIGHT_KEY]: window.screen.height,
+      [DEVICE_PIXEL_RATIO_KEY]: window.devicePixelRatio,
+      [CURRENT_CONTEXT_KEY]: currentContext
+    };
+
+    try {
+      navigator.sendBeacon(TRANSACTION_ROUTING_URL, JSON.stringify(data));
+    } catch (e) {
+      // no-op. Ignore the network error.
+    }
+  }
+
+  /* global "development" */
+
+  const config = document.getElementById('config');
+  let appId, customTrackingCode, trackingPageType;
+
+  if (config && config.dataset) {
+    appId = config.dataset.appId || undefined;
+    customTrackingCode = config.dataset.customTrackingCode || undefined;
+    trackingPageType = config.dataset.trackingPageType || undefined;
+  }
+
+  /**
+   * Resolve a global instance with the specified value
+   *
+   * @param {string} globalPropName - Name of property on the global
+   * @param {*} value - value to resolve the global with
+   */
+  function resolveGlobal(globalPropName, value) {
+    if (window[globalPropName] && window[globalPropName].resolve) {
+      window[globalPropName].resolve(value);
+    } else {
+      window[globalPropName] = Promise.resolve(value);
+    }
+  }
+
+  // Export the lazy loader and tracking for reinit of cache on dynamic content adds or custom tracking
+  // Its more performant to just expose an api for this rather than listen to dom change events
+  resolveGlobal('lazyloader', init());
+
+  onload(() => {
+    const tracking = getTrackingInstance({
+      appId,
+      trackingCode: customTrackingCode
+    });
+    resolveGlobal('tracking', tracking);
+    resolveGlobal('impressionTracking', new ImpressionTracking(window.IntersectionObserver, tracking));
+
+    fireComscoreTracking();
+    initRumTracking();
+    firePageViewEvent(tracking, trackingPageType);
+
+    if (inGraphsMetaPresent()) {
+      const ingraphs = new Ingraphs();
+      ingraphs.fireIngraphsRequest(getApiPath());
+    }
+
+    {
+      lint$1(document.documentElement, lintConfig);
+    }
+
+    // Attach click handler to app store links if there is any.
+    attachAppStoreLinkClickHandler();
+  });
+
+  /**
+   * Check if clientSideIngraphs meta tag is present on the page
+   * @returns {boolean}
+   */
+  function inGraphsMetaPresent() {
+    const inGraphsMeta = document.querySelector('meta[name="clientSideIngraphs"]');
+    return inGraphsMeta !== null;
+  }
+
+  /**
+   * Get the API path of the application from the meta tag
+   * @returns {string} Returns the API path string if found otherwise returns empty string
+   */
+  function getApiPath() {
+    const apiPath = document.querySelector('meta[name="apiPath"]');
+    if (!apiPath) {
+      // This function will be called only if clientSideIngraphs tag is found, so throw an error when no API path found
+      throw new Error('No API path found!');
+    }
+    return apiPath.content;
+  }
+
+}());

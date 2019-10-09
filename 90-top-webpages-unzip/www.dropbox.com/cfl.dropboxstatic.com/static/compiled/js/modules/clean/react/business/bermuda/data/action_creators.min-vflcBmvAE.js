@@ -1,0 +1,2 @@
+define(["require","exports","modules/clean/react/business/bermuda/data/types"],function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.setSelectedCustomer=function(e){var t=e.customer,n=e.animationPause;return{type:a.ActionType.SET_SELECTED_CUSTOMER,data:{customer:t,animationPause:n}}},t.setPlanType=function(e){var t=e.planType;return{type:a.ActionType.SET_PLAN_TYPE,data:{planType:t}}}});
+//# sourceMappingURL=action_creators.min.js-vflzhxlVJ.map

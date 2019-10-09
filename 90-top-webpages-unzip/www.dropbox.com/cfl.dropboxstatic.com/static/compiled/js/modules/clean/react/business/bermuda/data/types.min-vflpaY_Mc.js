@@ -1,0 +1,2 @@
+define(["require","exports"],function(E,e){"use strict";Object.defineProperty(e,"__esModule",{value:!0});(function(E){E.SET_SELECTED_CUSTOMER="BUSINESS/SET_SELECTED_CUSTOMER",E.SET_PLAN_TYPE="BUSINESS/SET_PLAN_TYPE"})(e.ActionType||(e.ActionType={}))});
+//# sourceMappingURL=types.min.js-vflmeynAn.map

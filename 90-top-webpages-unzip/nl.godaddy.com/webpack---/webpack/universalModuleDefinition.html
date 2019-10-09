@@ -1,0 +1,15 @@
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("react"), require("prop-types"), require("react-transition-group")["default"], require("react-dom"));
+	else if(typeof define === 'function' && define.amd)
+		define(["react", "prop-types", "react-transition-group", "react-dom"], factory);
+	else {
+		var a = typeof exports === 'object' ? factory(require("react"), require("prop-types"), require("react-transition-group")["default"], require("react-dom")) : factory(root["React"], root["PropTypes"], root["ux"]["ReactTransitionGroup"], root["ReactDOM"]);
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_15__, __WEBPACK_EXTERNAL_MODULE_16__) {
+return 
+
+
+// WEBPACK FOOTER //
+// webpack/universalModuleDefinition

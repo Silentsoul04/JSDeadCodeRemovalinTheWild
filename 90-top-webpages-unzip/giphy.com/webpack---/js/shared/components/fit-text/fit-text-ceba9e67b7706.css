@@ -1,0 +1,11 @@
+exports = module.exports = require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.id, ".IfGNqgc7M-mXbjS5TU1Vy{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:100%;height:45px}", ""]);
+
+// exports
+exports.locals = {
+	"container": "IfGNqgc7M-mXbjS5TU1Vy"
+};

@@ -1,0 +1,16 @@
+exports = module.exports = require("../../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+
+// module
+exports.push([module.id, "._1qnrZettwUurYUxzoDqyV2{cursor:pointer}._1qnrZettwUurYUxzoDqyV2,._1qnrZettwUurYUxzoDqyV2:hover{color:" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + "}._1rECwdBNLGRsTFAFMf-9e5{opacity:.5;pointer-events:none}", ""]);
+
+// exports
+exports.locals = {
+	"colors": "\"shared/css/colors.css\"",
+	"giphyWhite": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + "",
+	"giphyCharcoal": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyCharcoal"] + "",
+	"giphyPurple": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyPurple"] + "",
+	"active": "_1qnrZettwUurYUxzoDqyV2",
+	"inactive": "_1rECwdBNLGRsTFAFMf-9e5"
+};

@@ -1,0 +1,167 @@
+var nunjucks = require("nunjucks/browser/nunjucks-slim");
+var env;
+if (!nunjucks.currentEnv){
+	env = nunjucks.currentEnv = new nunjucks.Environment([], undefined);
+} else {
+	env = nunjucks.currentEnv;
+}
+var dependencies = nunjucks.webpackDependencies || (nunjucks.webpackDependencies = {});
+dependencies["./partials/_top-featured-story.html"] = require( "./partials/_top-featured-story.html" );
+dependencies["./partials/_bottom-multiple-textitem.html"] = require( "./partials/_bottom-multiple-textitem.html" );
+dependencies["./partials/_xs-multiple-textitem.html"] = require( "./partials/_xs-multiple-textitem.html" );
+
+
+
+
+var shim = require("/usr/lib/node_modules/@buzzfeed/fe-build-tools/node_modules/@buzzfeed/nunjucks-loader/runtime-shim");
+
+
+(function() {(nunjucks.nunjucksPrecompiled = nunjucks.nunjucksPrecompiled || {})["app/static/components/quizzes/hall-of-fame.html"] = (function() {
+function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+var parentTemplate = null;
+output += "\n\n<div data-module=\"feed-package-visual\"\n     ";
+if(runtime.contextOrFrameLookup(context, frame, "package_type")) {
+output += "data-bfa=\"@l:Package; @d:";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "package_type"), env.opts.autoescape);
+output += "; @e:{obj_id:";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "id"), env.opts.autoescape);
+output += " };\" data-bfa-impressions=\"true\"";
+;
+}
+output += "\n     class=\"hall-of-fame xs-relative xs-mb05 md-mb1 fill-white card--package card-header--package-visual\n            js-hall-of-fame\">\n  <div class=\"hall-of-fame__top-border\"></div>\n  <div class=\"rounded-bottom xs-border-lighter xs-border-top-none fill-white\">\n    ";
+output += "\n    <div class=\"clearfix xs-p2\">\n        <h2 class=\"hall-of-fame__header text-purple bold xs-text-5\">\n          <span class=\"xs-pl05 xs-pr1\">🏆</span>Quizzes Hall Of Fame\n        </h2>\n    </div>\n    ";
+output += "\n\n      <!-- begin top row (featured story) -->\n      ";
+if(runtime.contextOrFrameLookup(context, frame, "image_item")) {
+output += "\n        ";
+var tasks = [];
+tasks.push(
+function(callback) {
+env.getTemplate("./partials/_top-featured-story.html", false, "app/static/components/quizzes/hall-of-fame.html", null, function(t_3,t_1) {
+if(t_3) { cb(t_3); return; }
+callback(null,t_1);});
+});
+tasks.push(
+function(template, callback){
+template.render(context.getVariables(), frame, function(t_4,t_2) {
+if(t_4) { cb(t_4); return; }
+callback(null,t_2);});
+});
+tasks.push(
+function(result, callback){
+output += result;
+callback(null);
+});
+env.waterfall(tasks, function(){
+output += "\n      ";
+});
+}
+output += "\n      ";
+if(runtime.contextOrFrameLookup(context, frame, "text_items")) {
+output += "\n        <div class=\"xs-px2 xs-pb1 clearfix sm-block-grid-";
+output += runtime.suppressValue(env.getFilter("length").call(context, runtime.contextOrFrameLookup(context, frame, "text_items")), env.opts.autoescape);
+output += " xs-hide sm-block md-block lg-block gutters\">\n          ";
+frame = frame.push();
+var t_7 = runtime.contextOrFrameLookup(context, frame, "text_items");
+if(t_7) {var t_6 = t_7.length;
+for(var t_5=0; t_5 < t_7.length; t_5++) {
+var t_8 = t_7[t_5];
+frame.set("item", t_8);
+frame.set("loop.index", t_5 + 1);
+frame.set("loop.index0", t_5);
+frame.set("loop.revindex", t_6 - t_5);
+frame.set("loop.revindex0", t_6 - t_5 - 1);
+frame.set("loop.first", t_5 === 0);
+frame.set("loop.last", t_5 === t_6 - 1);
+frame.set("loop.length", t_6);
+output += "\n            ";
+var tasks = [];
+tasks.push(
+function(callback) {
+env.getTemplate("./partials/_bottom-multiple-textitem.html", false, "app/static/components/quizzes/hall-of-fame.html", null, function(t_11,t_9) {
+if(t_11) { cb(t_11); return; }
+callback(null,t_9);});
+});
+tasks.push(
+function(template, callback){
+template.render(context.getVariables(), frame, function(t_12,t_10) {
+if(t_12) { cb(t_12); return; }
+callback(null,t_10);});
+});
+tasks.push(
+function(result, callback){
+output += result;
+callback(null);
+});
+env.waterfall(tasks, function(){
+output += "\n          ";
+});
+}
+}
+frame = frame.pop();
+output += "\n        </div>\n\n        <!-- smallest breakpoint -->\n        <div class=\"xs-show sm-hide md-hide lg-hide\">\n          <div class=\"js-carousel-wrapper package-carousel package-carousel--visual xs-col-12 xs-px2 xs-mb2\">\n            <div class=\"js-carousel-content package-carousel-content clearfix\">\n              ";
+frame = frame.push();
+var t_15 = runtime.contextOrFrameLookup(context, frame, "text_items");
+if(t_15) {var t_14 = t_15.length;
+for(var t_13=0; t_13 < t_15.length; t_13++) {
+var t_16 = t_15[t_13];
+frame.set("item", t_16);
+frame.set("loop.index", t_13 + 1);
+frame.set("loop.index0", t_13);
+frame.set("loop.revindex", t_14 - t_13);
+frame.set("loop.revindex0", t_14 - t_13 - 1);
+frame.set("loop.first", t_13 === 0);
+frame.set("loop.last", t_13 === t_14 - 1);
+frame.set("loop.length", t_14);
+output += "\n                ";
+var tasks = [];
+tasks.push(
+function(callback) {
+env.getTemplate("./partials/_xs-multiple-textitem.html", false, "app/static/components/quizzes/hall-of-fame.html", null, function(t_19,t_17) {
+if(t_19) { cb(t_19); return; }
+callback(null,t_17);});
+});
+tasks.push(
+function(template, callback){
+template.render(context.getVariables(), frame, function(t_20,t_18) {
+if(t_20) { cb(t_20); return; }
+callback(null,t_18);});
+});
+tasks.push(
+function(result, callback){
+output += result;
+callback(null);
+});
+env.waterfall(tasks, function(){
+output += "\n              ";
+});
+}
+}
+frame = frame.pop();
+output += "\n            </div>\n          </div>\n        </div>\n      ";
+;
+}
+output += "\n\n  </div>\n</div>\n";
+if(parentTemplate) {
+parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
+} else {
+cb(null, output);
+}
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+
+})();
+})();
+
+
+
+module.exports = shim(nunjucks, env, nunjucks.nunjucksPrecompiled["app/static/components/quizzes/hall-of-fame.html"] , dependencies)

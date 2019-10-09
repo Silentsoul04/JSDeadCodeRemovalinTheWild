@@ -1,0 +1,22 @@
+exports = module.exports = require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css"), undefined);
+
+// module
+exports.push([module.id, "._2DRDUytpBP01Xn0axHwV2y{padding:20px 0 40px}._19hwGJSzKVYXJRCo3F8GPr{background:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyNewBlack"] + ";height:40px;overflow:hidden;position:relative}._3M6-DSCkzqH7b4Yf9MX2pm{color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + ";font-size:15px;height:40px;line-height:42px;padding:0;position:absolute;right:0;top:0;width:40px}.wldHX8dgmaomx6D3325s3[type=text]{background:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyNewBlack"] + ";border:2px solid " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + ";-webkit-box-sizing:border-box;box-sizing:border-box;color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + ";height:40px;line-height:40px;margin:0;padding-right:50px;width:100%}", ""]);
+
+// exports
+exports.locals = {
+	"colors": "\"shared/css/colors.css\"",
+	"giphyWhite": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + "",
+	"giphyDarkGrey": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + "",
+	"giphyNewBlack": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyNewBlack"] + "",
+	"grid": "\"shared/css/grid.css\"",
+	"gridSpacing": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css").locals["gridSpacing"] + "",
+	"container": "_2DRDUytpBP01Xn0axHwV2y",
+	"search": "_19hwGJSzKVYXJRCo3F8GPr",
+	"searchButton": "_3M6-DSCkzqH7b4Yf9MX2pm",
+	"searchIcon": "uAyB3dK8ilpRUw6xB0fhq ss-search",
+	"searchInput": "wldHX8dgmaomx6D3325s3"
+};

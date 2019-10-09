@@ -1,0 +1,2 @@
+define(["require","exports","modules/clean/redux/selectors","modules/clean/redux/namespaces"],function(e,t,n,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var u=function(e){return n.getStateAtNamespace(e,r.BUSINESS_NAMESPACE_KEY)};t.getSelectedAnimationStatusFromState=function(e){return u(e).animationPause},t.getSelectedCustomerFromState=function(e){return u(e).customer},t.getSelectedPlanTypeFromState=function(e){return u(e).planType}});
+//# sourceMappingURL=selectors.min.js-vflkD2Vye.map

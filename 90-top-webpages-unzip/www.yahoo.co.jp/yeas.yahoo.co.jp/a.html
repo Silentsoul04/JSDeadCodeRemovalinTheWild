@@ -1,0 +1,64 @@
+if( document.domain.match( new RegExp("(www.yahoo.co.jp)$","i") ) ){var PREMIUMAD_YEAS = window.PREMIUMAD_YEAS || {
+  cloneTop: function (element) {
+    var el = document.createElement(element.nodeName);
+    for (var i = 0; i < element.attributes.length; i++) {
+      var item = element.attributes.item(i);
+      el.setAttribute(item.name, item.value);
+    }
+    return el;
+  },
+  appendHtml: function(element, in_html) {
+    var html = '<html><head></head><body>' + in_html + '</body></html>';
+    try {
+      var doc_html = new DOMParser().parseFromString(html, 'text/html');
+    } catch (ex) {}
+    var ad_html_nodes;
+    if (doc_html) {
+      ad_html_nodes = doc_html.body.childNodes;
+    } else {
+      var doc = document.implementation.createHTMLDocument('');
+      var buff = doc.documentElement;
+      buff.innerHTML = html;
+      ad_html_nodes = buff.childNodes[1].childNodes;
+    }
+
+    var appendHtmlInner = function(nodeIndex) {
+      if (nodeIndex >= ad_html_nodes.length) {
+        return;
+      }
+      var cl = ad_html_nodes.item(nodeIndex).cloneNode(true);
+      if (cl.nodeName.toLowerCase() == 'script') {
+        var script = PREMIUMAD_YEAS.cloneTop(cl);
+        if (cl.src && !cl.onload) {
+          script.onload = function () {
+            appendHtmlInner(nodeIndex + 1);
+          };
+          element.appendChild(script);
+          return;
+        } else {
+          element.appendChild(script);
+          if (cl.text) {
+            script.text = cl.text;
+          }
+        }
+      } else if (cl.nodeName.toLowerCase() == 'noscript') {
+      } else {
+        if (cl.nodeType == 1) {
+          var el = PREMIUMAD_YEAS.cloneTop(cl);
+          element.appendChild(el);
+          PREMIUMAD_YEAS.appendHtml(el, cl.innerHTML);
+        } else {
+          element.appendChild(cl);
+        }
+      }
+      appendHtmlInner(nodeIndex + 1);
+    };
+
+    appendHtmlInner(0);
+  }
+};
+var adHtml_82399_267903 = "<!-- SpaceID=2077296265 loc=TULT noad -->\n";
+adHtml_82399_267903 += "<img width=1 height=1 style=\"position:absolute;\" alt=\"\" src=\"https://b11.yahoo.co.jp/b?P=2HZxRDE4Mi7emwMBXZ3jUwFkMTQ1LgAAAACBlQR4&T=163btmipm%2fX%3d1570628764%2fE%3d2077296265%2fR%3djp_toppage%2fK%3d5%2fV%3d10.1%2fW%3dC%2fY%3djp%2fF%3d2783043458%2fH%3dc2VjdXJlPXRydWUgZHM9IjgyMzk5XzI2NzkwMyIgYWRjdmVyPTYuOC4x%2fQ%3d-1%2fI%3d1%2fS%3d1%2fJ%3dC0154464&U=128gb63uv%2fN%3d9fLQAWRE3i0-%2fC%3d-1%2fD%3dTULT%2fB%3d-1\">";
+PREMIUMAD_YEAS.appendHtml(document.getElementById('TULT'), adHtml_82399_267903);
+}
+YJ_YADS.YEAS.passback("82399_267903");

@@ -1,0 +1,18 @@
+exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!../shared/constants.css"), undefined);
+exports.i(require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+
+// module
+exports.push([module.id, "._2IFz42badWIE-1Gd6xEZAV{margin:0;height:100%;-webkit-box-sizing:border-box;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}._1depwdZJHwNmOWf8bQDqSI{display:none}", ""]);
+
+// exports
+exports.locals = {
+	"constants": "'../shared/constants.css'",
+	"margin": "" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!../shared/constants.css").locals["margin"] + "",
+	"colors": "'shared/css/colors.css'",
+	"giphyGreen": "" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyGreen"] + "",
+	"giphyBlack": "" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyBlack"] + "",
+	"content": "_2IFz42badWIE-1Gd6xEZAV",
+	"contentHidden": "_1depwdZJHwNmOWf8bQDqSI _2IFz42badWIE-1Gd6xEZAV"
+};

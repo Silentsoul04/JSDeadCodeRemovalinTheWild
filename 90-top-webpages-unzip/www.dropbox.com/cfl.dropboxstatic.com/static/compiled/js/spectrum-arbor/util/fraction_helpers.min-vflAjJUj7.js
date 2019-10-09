@@ -1,0 +1,2 @@
+define(["require","exports"],function(e,r){"use strict";Object.defineProperty(r,"__esModule",{value:!0}),r.reduceFraction=function(e,r){var n=function(e,r){return r?n(r,e%r):e},u=n(e,r);return e/u+"-"+r/u},r.isNumber=function(e){return"number"==typeof e},r.undefinedOrZero=function(e,n){if(0===n)return r.reduceFraction(0,e)}});
+//# sourceMappingURL=fraction_helpers.min.js-vfl1antiR.map

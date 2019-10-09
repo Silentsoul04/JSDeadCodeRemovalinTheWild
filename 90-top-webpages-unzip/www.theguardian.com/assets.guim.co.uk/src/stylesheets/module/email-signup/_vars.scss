@@ -1,0 +1,33 @@
+$form-elements-height: $gs-baseline * 3;
+$form-primary-colour: #ffffff;
+$form-secondary-colour: $sport-pastel;
+$form-label-colour: $brightness-46;
+$icon-size: 30px;
+$icon-padding: $icon-size + ($gs-gutter / 2);
+$rounded-adjustment: .66em;
+
+$tones: (
+    (analysis, $sport-bright, $sport-dark),
+    (comment, $opinion-main, $opinion-main, $opinion-main),
+    (feature, $lifestyle-main, $lifestyle-dark, $lifestyle-main),
+    (live, $news-dark, $news-main),
+    (media, $brightness-7,  $brightness-7),
+    (news, $sport-dark, $sport-dark),
+    (review, $highlight-main, darken($highlight-main, 10%), $brightness-46, $brightness-46),
+    (special-feature, $brightness-46, $brightness-46),
+    (plaindark, $brightness-86, $brightness-86, $brightness-86, $brightness-20)
+);
+
+// Signup boxes embedded in articles have a coloured background
+// so the colour scheme is different.
+$article-tones: (
+    // tone, title, accent, text, button-text, background
+    (analysis, $brand-main, $sport-bright, $brightness-46, #ffffff,  #f1f1f1),
+    (comment, $brightness-7, $opinion-main, $brightness-7, #ffffff, $brightness-93),
+    (feature, #ffffff, $lifestyle-pastel, #ffffff, $lifestyle-dark, $lifestyle-dark),
+    (live, #ffffff, $lifestyle-pastel, #ffffff, $news-dark, $news-dark),
+    (media, #ffffff, $highlight-main, #ffffff, $brightness-7, $brightness-20),
+    (news, #ffffff, $sport-pastel, #ffffff, $brand-main, $brand-main),
+    (review, #ffffff, $highlight-main, #ffffff, #615b52, #615b52),
+    (special-feature, #ffffff, $highlight-main, #ffffff, $brightness-46, $brightness-46)
+);

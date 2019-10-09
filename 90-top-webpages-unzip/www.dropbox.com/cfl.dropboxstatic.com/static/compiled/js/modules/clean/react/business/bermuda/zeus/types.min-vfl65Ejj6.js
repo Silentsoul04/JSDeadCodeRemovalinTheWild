@@ -1,0 +1,2 @@
+define(["require","exports"],function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});(function(e){e.T68="t68fl",e.T61="t61fl"})(t.SEMVariant||(t.SEMVariant={}));(function(e){e.INDEX="index",e.IP="dbv2",e.UPGRADE_ACCOUNT="upgrade-account"})(t.BizRouteVariant||(t.BizRouteVariant={}))});
+//# sourceMappingURL=types.min.js-vflPYDtTM.map

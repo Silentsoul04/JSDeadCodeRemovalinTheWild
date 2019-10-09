@@ -1,0 +1,8 @@
+.supernova-row {
+  // Be aware it is only hot-fix it follows the Apollo alignment
+  // it should be updated or remove once we start moving the whole site to Supernova
+  @media (min-width: 768px) {
+    margin-right: -4px;
+    margin-left: -4px;
+  }
+}

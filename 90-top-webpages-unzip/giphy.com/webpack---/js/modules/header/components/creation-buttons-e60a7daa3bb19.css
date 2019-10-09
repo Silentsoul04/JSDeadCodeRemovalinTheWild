@@ -1,0 +1,20 @@
+exports = module.exports = require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css"), undefined);
+
+// module
+exports.push([module.id, "._1M0Z7PVIPN5_uPtitkSCW7{float:left;cursor:pointer;margin-top:10px;margin-left:14px;background-size:200% 50%;background:-webkit-linear-gradient(347deg,#6157ff,#7067ff,#6157ff);background:linear-gradient(103deg,#6157ff,#7067ff,#6157ff)}._1M0Z7PVIPN5_uPtitkSCW7 a{padding:8.5px 16px;display:inline-block}._2bR0VNOr0505p4eSudMi0k{border-right:4px solid " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyBlack"] + "}._23RtopKAI5Hj6SZSgi0wR5{margin-left:0}._3zNy6xutECQ64hsEPFm_UH{color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + ";font-family:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css").locals["bodyFont"] + ";font-size:15px;font-weight:600}", ""]);
+
+// exports
+exports.locals = {
+	"colors": "\"shared/css/colors.css\"",
+	"giphyBlack": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyBlack"] + "",
+	"giphyWhite": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + "",
+	"fonts": "\"shared/css/fonts.css\"",
+	"bodyFont": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css").locals["bodyFont"] + "",
+	"creationButtons": "_1M0Z7PVIPN5_uPtitkSCW7",
+	"uploadButton": "_2bR0VNOr0505p4eSudMi0k",
+	"createButton": "_23RtopKAI5Hj6SZSgi0wR5",
+	"buttonText": "_3zNy6xutECQ64hsEPFm_UH"
+};

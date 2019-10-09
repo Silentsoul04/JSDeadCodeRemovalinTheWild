@@ -1,0 +1,31 @@
+exports = module.exports = require("../../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/buttons.css"), undefined);
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css"), undefined);
+
+// module
+exports.push([module.id, "._3_5FbH8wVuVudURuQBeHtY{padding:20px;text-align:left;margin-top:30px}.VM8bBwR79jf8kz0YzZXR2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;border:2px dashed #fff}._3i02mmqswRx30REGCD2sBQ{padding:30px;font-weight:700}._3T3GCiK_hC0QvnA4ucO1Oc{width:54px;height:54px;margin:auto;margin-bottom:10px}._1SECRwhOh9qdVlhVtBqucK{background:url(\"/static/img/upload-browse.svg\") no-repeat}._1DV1wQb0EtbhfYz_FciMcT{background:url(\"/static/img/upload-drag.svg\") no-repeat}._2Zvntruf3Jg6EV6KV2WuLv{background:url(\"/static/img/upload-copy.svg\") no-repeat}._1DNK27UEngS06jV8Xnlavq{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}._1XzJaRo-IZCO4SVOpUl2dE{position:relative}._1DNK27UEngS06jV8Xnlavq input[type=file]{height:100%;left:0;opacity:0;position:absolute;top:0;width:100%;cursor:pointer}._11USpev0OKk_x3OBjdLl-P{background:" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["primaryCTA"] + ";margin-left:10px}._28Wx0rmYDfSSA0DGirbOmM{padding:20px;text-align:left;margin-top:30px}.QRF3vZyoeZvDoXh9oMH_s,.Xsj75JyC7P43IaNuGVKrO{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.Xsj75JyC7P43IaNuGVKrO{min-height:155px;background:" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css").locals["sectionBackground"] + ";margin-right:10px;position:relative;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.Xsj75JyC7P43IaNuGVKrO:hover{background:" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css").locals["sectionBackgroundActive"] + "}.Xsj75JyC7P43IaNuGVKrO:last-child{margin-right:0}.Xsj75JyC7P43IaNuGVKrO:first-child:before{content:\"\";top:-6px;left:-6px;right:-6px;bottom:-6px;position:absolute;opacity:.5;border:2px dashed #fff}.Xsj75JyC7P43IaNuGVKrO:not(:first-child):before{content:\"\";top:-6px;left:-4px;right:-6px;bottom:-6px;position:absolute;opacity:.5;border-bottom:2px dashed #fff;border-top:2px dashed #fff;border-right:2px dashed #fff}.Xsj75JyC7P43IaNuGVKrO input[type=file]{height:100%;left:0;opacity:0;position:absolute;top:0;width:100%}", ""]);
+
+// exports
+exports.locals = {
+	"primaryCTA": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["primaryCTA"] + "",
+	"buttonGrow": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/buttons.css").locals["buttonGrow"] + "",
+	"welcome": "'../welcome.css'",
+	"subtitle": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css").locals["subtitle"] + "",
+	"sectionBackground": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css").locals["sectionBackground"] + "",
+	"sectionBackgroundActive": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css").locals["sectionBackgroundActive"] + "",
+	"container": "_3_5FbH8wVuVudURuQBeHtY",
+	"uploadInfoContainer": "VM8bBwR79jf8kz0YzZXR2",
+	"uploadInfoItem": "_3i02mmqswRx30REGCD2sBQ",
+	"uploadIcon": "_3T3GCiK_hC0QvnA4ucO1Oc",
+	"iconBrowse": "_1SECRwhOh9qdVlhVtBqucK _3T3GCiK_hC0QvnA4ucO1Oc",
+	"iconDrag": "_1DV1wQb0EtbhfYz_FciMcT _3T3GCiK_hC0QvnA4ucO1Oc",
+	"iconCopyAndPaste": "_2Zvntruf3Jg6EV6KV2WuLv _3T3GCiK_hC0QvnA4ucO1Oc",
+	"ctaWrapper": "_1DNK27UEngS06jV8Xnlavq",
+	"inputWrapper": "_1XzJaRo-IZCO4SVOpUl2dE",
+	"browseButton": "_11USpev0OKk_x3OBjdLl-P " + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/buttons.css").locals["buttonGrow"] + "",
+	"filePortal": "_28Wx0rmYDfSSA0DGirbOmM",
+	"fileContainer": "QRF3vZyoeZvDoXh9oMH_s",
+	"fileButton": "Xsj75JyC7P43IaNuGVKrO"
+};

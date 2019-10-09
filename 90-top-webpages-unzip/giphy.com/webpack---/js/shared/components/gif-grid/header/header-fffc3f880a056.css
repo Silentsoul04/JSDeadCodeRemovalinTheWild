@@ -1,0 +1,23 @@
+exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css"), undefined);
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css"), undefined);
+
+// module
+exports.push([module.id, "._3P2Ip_RX_38lUIswbi_aWj{padding:" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css").locals["gridSpacing"] + " 0}._3P2Ip_RX_38lUIswbi_aWj:after{content:\"\";clear:both;display:block;width:100%}.V9Vwcopme4i9JwwBgElx8{display:block;float:left;line-height:25px}._2Msf91pRGzDHxeEritLqgR{float:right}", ""]);
+
+// exports
+exports.locals = {
+	"colors": "\"shared/css/colors.css\"",
+	"giphyGrey": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyGrey"] + "",
+	"grid": "\"shared/css/grid.css\"",
+	"gridSpacing": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css").locals["gridSpacing"] + "",
+	"typography": "\"shared/css/typography.css\"",
+	"sectionHeading": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["sectionHeading"] + "",
+	"autoPlayLabel": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["autoPlayLabel"] + "",
+	"header": "_3P2Ip_RX_38lUIswbi_aWj",
+	"label": "V9Vwcopme4i9JwwBgElx8 " + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["sectionHeading"] + "",
+	"autoplay": "_2Msf91pRGzDHxeEritLqgR",
+	"autoplayLabel": "_7rr90APVsAHoUZKABl_nS " + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["autoPlayLabel"] + ""
+};

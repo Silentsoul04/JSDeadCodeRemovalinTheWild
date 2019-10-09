@@ -1,0 +1,21 @@
+exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css"), undefined);
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!../detail.css"), undefined);
+
+// module
+exports.push([module.id, "._1M8xq1jPOAHRc0OSZxxS8_{display:block;position:relative}._1M8xq1jPOAHRc0OSZxxS8_:hover ._3XsaOar44V4FPVTuTLqVU{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}._20f1HGz5MW_KOrDOB5cb3Y{background:url(\"/static/img/backgrounds/bg-tile-dark.png\") 0 0;-webkit-box-sizing:border-box;box-sizing:border-box}.KRS9L9BsuEdhF-ACKiX8x{position:relative;-webkit-animation:_1Q5B0AS-SFilgItAciVKey .2s ease-out;animation:_1Q5B0AS-SFilgItAciVKey .2s ease-out}.KRS9L9BsuEdhF-ACKiX8x video{display:block;position:relative;z-index:-1}.KRS9L9BsuEdhF-ACKiX8x video+img{height:100%;left:0;position:absolute;top:0;width:100%}._2e8VMsXvtwwOTebVU08mai{pointer-events:none}._3XsaOar44V4FPVTuTLqVU{-webkit-box-sizing:border-box;box-sizing:border-box;bottom:0;left:0;opacity:0;padding:10px;position:absolute;width:100%;-webkit-transform:translateY(" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css").locals["gridSpacing"] + ");transform:translateY(" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css").locals["gridSpacing"] + ");-webkit-transition:opacity .2s ease-out,-webkit-transform .2s ease-out;transition:opacity .2s ease-out,-webkit-transform .2s ease-out;transition:opacity .2s ease-out,transform .2s ease-out;transition:opacity .2s ease-out,transform .2s ease-out,-webkit-transform .2s ease-out}._24VXFKFghodc09xm_VRxdF{background-image:no-repeat url(\"/static/img/loader_purple.gif\") center center;width:100%;height:250px;-webkit-animation:_1Q5B0AS-SFilgItAciVKey .2s ease-out .3s 1 normal backwards;animation:_1Q5B0AS-SFilgItAciVKey .2s ease-out .3s 1 normal backwards}@-webkit-keyframes _1Q5B0AS-SFilgItAciVKey{0%{opacity:0}to{opacity:1}}@keyframes _1Q5B0AS-SFilgItAciVKey{0%{opacity:0}to{opacity:1}}._3xYY6QR2VuQXUgyDTl0hyu img,._3xYY6QR2VuQXUgyDTl0hyu video{left:0;position:absolute;pointer-events:none;top:0;z-index:auto}._3xYY6QR2VuQXUgyDTl0hyu img{-o-object-fit:contain;object-fit:contain}", ""]);
+
+// exports
+exports.locals = {
+	"grid": "\"shared/css/grid.css\"",
+	"gridSpacing": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css").locals["gridSpacing"] + "",
+	"gif": "_1M8xq1jPOAHRc0OSZxxS8_",
+	"overlay": "_3XsaOar44V4FPVTuTLqVU",
+	"sticker": "_20f1HGz5MW_KOrDOB5cb3Y _1M8xq1jPOAHRc0OSZxxS8_",
+	"image": "KRS9L9BsuEdhF-ACKiX8x",
+	"fadeIn": "_1Q5B0AS-SFilgItAciVKey",
+	"sourceDisabled": "_2e8VMsXvtwwOTebVU08mai",
+	"preload": "_24VXFKFghodc09xm_VRxdF",
+	"fullscreen": "_3xYY6QR2VuQXUgyDTl0hyu " + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!../detail.css").locals["takeover"] + ""
+};

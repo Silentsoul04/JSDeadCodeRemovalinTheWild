@@ -1,0 +1,81 @@
+.email-sub__heading {
+    @include fs-headline(3, $size-only: true);
+}
+
+.email-sub__heading-emph {
+    color: $brand-main;
+}
+
+.email-sub__description {
+    border-top: 3px solid $form-secondary-colour;
+    color: $form-primary-colour;
+    background-color: $brand-main;
+}
+
+.email-sub__description-emph {
+    display: block;
+    font-weight: bold;
+}
+
+// LANDING PAGE MODS
+.email-sub__header--landing {
+    @include fs-headline(2);
+    background-color: $form-primary-colour;
+
+    .email-sub__heading {
+        margin-bottom: $gs-baseline;
+    }
+
+    .email-sub__description {
+        @include fs-textSans(3);
+        color: $brightness-46;
+        margin-bottom: $gs-baseline;
+    }
+}
+
+
+// TONE SPECIFIC MODS
+@each $tone-class, $tone-colour-accent, $tone-colour-headline in $tones {
+    .email-sub--tone-#{$tone-class} {
+
+        @if ($tone-colour-headline) {
+            .email-sub__heading {
+                color: $tone-colour-headline;
+            }
+        }
+    }
+}
+
+// FOOTER MODS
+.email-sub__header--footer {
+    .email-sub__heading {
+        @include fs-textSans(5);
+        font-weight: 700;
+        color: $brightness-100;
+        margin: ($gs-baseline / 2) 0;
+    }
+}
+
+// PLAIN MODS
+.email-sub--plain {
+    .email-sub__message__headline {
+        color: $brand-main;
+        line-height: 2rem;
+    }
+
+    .email-sub__message__description {
+        display: none;
+    }
+}
+
+// PLAIN DARK MODS
+.email-sub--plaindark {
+    .email-sub__message__description {
+        display: none;
+    }
+
+    .email-sub__message__headline {
+        color: #ffffff;
+        line-height: 2rem;
+    }
+}

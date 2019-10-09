@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
+    <title>Inflowhelp_Feedback_Blue_Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8" transform="translate(-29.000000, -217.000000)">
+            <g id="Inflowhelp_Feedback_Blue_Icon" transform="translate(30.000000, 217.000000)">
+                <g id="Group-5" transform="translate(8.813393, 7.446429) rotate(-330.000000) translate(-8.813393, -7.446429) translate(7.313393, -0.053571)" fill="#0654BA">
+                    <rect id="Rectangle" transform="translate(1.461039, 7.500000) rotate(-360.000000) translate(-1.461039, -7.500000) " x="0" y="2.85714286" width="2.92207792" height="9.28571429"></rect>
+                    <polygon id="Rectangle-Copy-2" transform="translate(1.461039, 13.864742) rotate(-360.000000) translate(-1.461039, -13.864742) " points="0 12.8571429 2.92207792 12.8571429 1.622412 14.8602132 1.44046261 14.872341"></polygon>
+                    <path d="M0,0 L2.92207792,0 L2.92207792,1.14285714 C2.92207792,1.69514189 2.47436267,2.14285714 1.92207792,2.14285714 L1,2.14285714 C0.44771525,2.14285714 6.76353751e-17,1.69514189 0,1.14285714 L0,0 Z" id="Rectangle" transform="translate(1.461039, 1.071429) scale(1, -1) rotate(360.000000) translate(-1.461039, -1.071429) "></path>
+                </g>
+                <path d="M2.5,4.70123804 L6.66666667,4.70123804" id="Line-2-Copy-3" stroke="#0654BA" stroke-linecap="square"></path>
+                <path d="M2.5,6.70123804 L5.5,6.70123804" id="Line-2-Copy-4" stroke="#0654BA" stroke-linecap="square"></path>
+                <path d="M2.5,8.70123804 L3.76435442,8.70123804" id="Line-2-Copy-5" stroke="#0654BA" stroke-linecap="square"></path>
+                <polyline id="Path-2" stroke="#0654BA" points="7.04362655 2.18782217 0 2.18782217 0 17.3152951 13.0008084 17.3152951 13.0008084 7.23634716"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

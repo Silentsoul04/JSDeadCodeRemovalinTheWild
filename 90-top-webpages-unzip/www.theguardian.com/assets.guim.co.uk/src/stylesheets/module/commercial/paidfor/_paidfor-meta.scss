@@ -1,0 +1,34 @@
+.paidfor-meta {
+    @include fs-textSans(3);
+    color: $brightness-7;
+}
+
+
+.paidfor-meta__label,
+.paidfor-meta__more {
+    display: inline-block;
+}
+
+.paidfor-meta__label,
+.paidfor-meta__more > .popup__toggle {
+    padding: $gs-baseline / 3 $gs-gutter / 4;
+}
+
+.paidfor-meta__label {
+    font-weight: 700;
+
+    .commercial__header & {
+        padding-left: 0;
+    }
+}
+
+.paidfor-label .popup__toggle {
+    border-left: 1px solid $labs-dark;
+    border-right: 1px solid $labs-dark;
+    display: inline-block;
+
+    .commercial__header & {
+        border: 0;
+        font-weight: 400;
+    }
+}

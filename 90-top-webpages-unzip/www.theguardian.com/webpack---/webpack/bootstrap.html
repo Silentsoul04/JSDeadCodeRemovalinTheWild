@@ -1,0 +1,195 @@
+ 	// install a JSONP callback for chunk loading
+ 	function webpackJsonpCallback(data) {
+ 		var chunkIds = data[0];
+ 		var moreModules = data[1];
+
+
+ 		// add "moreModules" to the modules object,
+ 		// then flag all "chunkIds" as loaded and fire callback
+ 		var moduleId, chunkId, i = 0, resolves = [];
+ 		for(;i < chunkIds.length; i++) {
+ 			chunkId = chunkIds[i];
+ 			if(installedChunks[chunkId]) {
+ 				resolves.push(installedChunks[chunkId][0]);
+ 			}
+ 			installedChunks[chunkId] = 0;
+ 		}
+ 		for(moduleId in moreModules) {
+ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
+ 				modules[moduleId] = moreModules[moduleId];
+ 			}
+ 		}
+ 		if(parentJsonpFunction) parentJsonpFunction(data);
+
+ 		while(resolves.length) {
+ 			resolves.shift()();
+ 		}
+
+ 	};
+
+
+ 	// The module cache
+ 	var installedModules = {};
+
+ 	// object to store loaded and loading chunks
+ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
+ 	// Promise = chunk loading, 0 = chunk loaded
+ 	var installedChunks = {
+ 		28: 0
+ 	};
+
+
+
+ 	// script path function
+ 	function jsonpScriptSrc(chunkId) {
+ 		return __webpack_require__.p + "" + {"0":"ef0dba5b24cc6eb5bc6a","1":"1b562b1debf1bd928d93","2":"99f399560be2d8806953","3":"4d3131361d808f9fee1c","4":"f55ec14e59b05fac1b38","5":"bb2fc2c462a34a0aac1f","6":"2a8e470d3d2006c81137","7":"da2fb6ddbea88bc657dd","8":"beb810cb38a7e388ea56","10":"aeaf92619fb905f793b7","11":"40fade2cab950f927d99","12":"269806ba6d3624418000","13":"2809be780feca0880f25","15":"e1d1ecdc3d3a018eaf41","16":"a07dd730037db6881f4c","17":"d7ad0615c04060941b65","18":"183e617959956c35a2c4","19":"56bdea9f80041ac2760b","20":"afc0ad484dcaf0f83b67","21":"c106db7cb004a3626867","22":"2b5f7e636ba763889b98","23":"fc3aff59d16aba39796b","24":"f376a4e5758f30e0401c","25":"7929116580cab8eedd12","26":"6307917d27d010e1de0f","27":"71c05c7a8143ade53e01","29":"b57333e0be27ee693bca","30":"284dd6afdd028fab2c9c","31":"7fca3087397f5ab01a05","32":"d511bd47ef95366017e2","33":"86598c6e571f324d3ace","34":"f1ad968f14e75de7833e","35":"aad0b4f76afc5797f19e","36":"56fcce0d4f554ddda6da","38":"89901b2132fc35cedcb1","40":"37877483f93fdfb04cfd","42":"ef725474fd25d7bd1c29"}[chunkId] + "/graun." + ({"0":"article~facia~trail~youtube","1":"article~crosswords~trail","2":"article","3":"vendors~article","4":"vendors~crosswords~preferences~profile","5":"commercial~enhanced","6":"preferences","7":"vendors~commercial~enhanced","8":"vendors~commercial~facia","10":"audio","11":"commercial","12":"commercial-hosted","13":"crosswords","15":"enhanced","16":"experiments","17":"explainer-atom","18":"facia","19":"football","20":"guide-atom","21":"media-player","22":"membership","23":"newsletters","24":"ophan-embed","25":"profile","26":"profile-atom","27":"qanda-atom","29":"trail","30":"vendors~Prebid.js","31":"vendors~audio","32":"vendors~audio-atom","33":"vendors~commonsdivision-atom","34":"vendors~media-player","35":"vendors~storyquestions-atom","36":"vendors~timeline-atom","38":"video-player","40":"youtube"}[chunkId]||chunkId) + ".js"
+ 	}
+
+ 	// The require function
+ 	function __webpack_require__(moduleId) {
+
+ 		// Check if module is in cache
+ 		if(installedModules[moduleId]) {
+ 			return installedModules[moduleId].exports;
+ 		}
+ 		// Create a new module (and put it into the cache)
+ 		var module = installedModules[moduleId] = {
+ 			i: moduleId,
+ 			l: false,
+ 			exports: {}
+ 		};
+
+ 		// Execute the module function
+ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+ 		// Flag the module as loaded
+ 		module.l = true;
+
+ 		// Return the exports of the module
+ 		return module.exports;
+ 	}
+
+ 	// This file contains only the entry chunk.
+ 	// The chunk loading function for additional chunks
+ 	__webpack_require__.e = function requireEnsure(chunkId) {
+ 		var promises = [];
+
+
+ 		// JSONP chunk loading for javascript
+
+ 		var installedChunkData = installedChunks[chunkId];
+ 		if(installedChunkData !== 0) { // 0 means "already installed".
+
+ 			// a Promise means "currently loading".
+ 			if(installedChunkData) {
+ 				promises.push(installedChunkData[2]);
+ 			} else {
+ 				// setup Promise in chunk cache
+ 				var promise = new Promise(function(resolve, reject) {
+ 					installedChunkData = installedChunks[chunkId] = [resolve, reject];
+ 				});
+ 				promises.push(installedChunkData[2] = promise);
+
+ 				// start chunk loading
+ 				var script = document.createElement('script');
+ 				var onScriptComplete;
+
+ 				script.charset = 'utf-8';
+ 				script.timeout = 120;
+ 				if (__webpack_require__.nc) {
+ 					script.setAttribute("nonce", __webpack_require__.nc);
+ 				}
+ 				script.src = jsonpScriptSrc(chunkId);
+
+ 				onScriptComplete = function (event) {
+ 					// avoid mem leaks in IE.
+ 					script.onerror = script.onload = null;
+ 					clearTimeout(timeout);
+ 					var chunk = installedChunks[chunkId];
+ 					if(chunk !== 0) {
+ 						if(chunk) {
+ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+ 							var realSrc = event && event.target && event.target.src;
+ 							var error = new Error('Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')');
+ 							error.type = errorType;
+ 							error.request = realSrc;
+ 							chunk[1](error);
+ 						}
+ 						installedChunks[chunkId] = undefined;
+ 					}
+ 				};
+ 				var timeout = setTimeout(function(){
+ 					onScriptComplete({ type: 'timeout', target: script });
+ 				}, 120000);
+ 				script.onerror = script.onload = onScriptComplete;
+ 				document.head.appendChild(script);
+ 			}
+ 		}
+ 		return Promise.all(promises);
+ 	};
+
+ 	// expose the modules object (__webpack_modules__)
+ 	__webpack_require__.m = modules;
+
+ 	// expose the module cache
+ 	__webpack_require__.c = installedModules;
+
+ 	// define getter function for harmony exports
+ 	__webpack_require__.d = function(exports, name, getter) {
+ 		if(!__webpack_require__.o(exports, name)) {
+ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+ 		}
+ 	};
+
+ 	// define __esModule on exports
+ 	__webpack_require__.r = function(exports) {
+ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+ 		}
+ 		Object.defineProperty(exports, '__esModule', { value: true });
+ 	};
+
+ 	// create a fake namespace object
+ 	// mode & 1: value is a module id, require it
+ 	// mode & 2: merge all properties of value into the ns
+ 	// mode & 4: return value when already ns object
+ 	// mode & 8|1: behave like require
+ 	__webpack_require__.t = function(value, mode) {
+ 		if(mode & 1) value = __webpack_require__(value);
+ 		if(mode & 8) return value;
+ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+ 		var ns = Object.create(null);
+ 		__webpack_require__.r(ns);
+ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+ 		return ns;
+ 	};
+
+ 	// getDefaultExport function for compatibility with non-harmony modules
+ 	__webpack_require__.n = function(module) {
+ 		var getter = module && module.__esModule ?
+ 			function getDefault() { return module['default']; } :
+ 			function getModuleExports() { return module; };
+ 		__webpack_require__.d(getter, 'a', getter);
+ 		return getter;
+ 	};
+
+ 	// Object.prototype.hasOwnProperty.call
+ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+
+ 	// __webpack_public_path__
+ 	__webpack_require__.p = "";
+
+ 	// on error function for async loading
+ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
+
+ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
+ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
+ 	jsonpArray.push = webpackJsonpCallback;
+ 	jsonpArray = jsonpArray.slice();
+ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+ 	var parentJsonpFunction = oldJsonpFunction;
+
+
+ 	// Load entry module and return exports
+ 	return __webpack_require__(__webpack_require__.s = 480);

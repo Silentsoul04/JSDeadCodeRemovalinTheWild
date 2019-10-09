@@ -1,0 +1,22 @@
+"use strict";this.default_InstantbuyFrontendBuyflowPayframeUi=this.default_InstantbuyFrontendBuyflowPayframeUi||{};(function(_){var window=this;
+try{
+_.oq=function(a,b){this.x=void 0!==a?a:0;this.y=void 0!==b?b:0};_.oq.prototype.Ja=function(a){return a instanceof _.oq&&(this==a?!0:this&&a?this.x==a.x&&this.y==a.y:!1)};_.oq.prototype.ceil=function(){this.x=Math.ceil(this.x);this.y=Math.ceil(this.y);return this};_.oq.prototype.floor=function(){this.x=Math.floor(this.x);this.y=Math.floor(this.y);return this};_.oq.prototype.round=function(){this.x=Math.round(this.x);this.y=Math.round(this.y);return this};
+_.pq=function(a){if(1==a.nodeType){a:{try{var b=a.getBoundingClientRect()}catch(c){b={left:0,top:0,right:0,bottom:0};break a}_.vd&&a.ownerDocument.body&&(a=a.ownerDocument,b.left-=a.documentElement.clientLeft+a.body.clientLeft,b.top-=a.documentElement.clientTop+a.body.clientTop)}return new _.oq(b.left,b.top)}b=a.changedTouches?a.changedTouches[0]:a;return new _.oq(b.clientX,b.clientY)};_.qq=function(a,b){a=_.pq(a);b=_.pq(b);return new _.oq(a.x-b.x,a.y-b.y)};_.F("syc");
+var sq,tq,uq,vq,wq,xq,yq,zq,Aq,Cq,Dq,Fq,Gq,Kq,Jq;
+(function(){for(var a=["ms","moz","webkit","o"],b=0;b<a.length&&!window.requestAnimationFrame;++b)window.requestAnimationFrame=window[a[b]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[a[b]+"CancelAnimationFrame"]||window[a[b]+"CancelRequestAnimationFrame"];if(!window.requestAnimationFrame){var c=0;window.requestAnimationFrame=function(d){var e=(new Date).getTime(),f=Math.max(0,16-(e-c));c=e+f;return window.setTimeout(function(){d(e+f)},f)};window.cancelAnimationFrame||(window.cancelAnimationFrame=
+function(d){clearTimeout(d)})}})();_.rq=function(){};sq=[[],[]];tq=0;uq=!1;vq=null;wq=0;xq=1;yq=16;zq=0;Aq=0;_.p._F_getAverageFps=function(){return 1E3/(yq/xq)};_.Bq=0;Cq=0;Dq=[];Fq=function(a){this.j=this.g=void 0;this.h=!1;this.u=a;this.o=_.rq};Fq.prototype.measure=function(a){this.g=a;return this};Fq.prototype.Oa=function(a){this.j=a;return this};Fq.prototype.xa=function(){this.h=!0;return this};_.Hq=function(a){var b={measure:a.g,Oa:a.j,Vh:a.o,xa:a.h};a=a.u;b.Vh||(b.Vh=_.rq);return Gq(b,a)};
+_.Iq=function(a){return new Fq(a)};Gq=function(a,b){var c=Cq++,d={id:c,Ga:a.measure,context:b},e={id:c,Ga:a.Oa,context:b},f={uh:d,Ko:e,wa:void 0,Gf:!1,xa:a.xa,Kj:Math.max(d.Ga?d.Ga.length:0,e.Ga?e.Ga.length:0)};return function(){b||(d.context=this,e.context=this);f.wa&&(f.wa.length=0);if(0<arguments.length||0<f.Kj)f.wa||(f.wa=[]),f.wa.push.apply(f.wa,arguments),f.Kj>arguments.length&&f.wa.push(new a.Vh);if(!f.Gf){f.Gf=!0;var g=tq;f.xa&&0!=_.Bq&&(f.uh.Ga&&1==_.Bq||!f.uh.Ga)&&(g=(g+1)%2);sq[g].push(f)}return Jq()}};
+Kq=function(a,b){0>b&&0===window.dOeSnOtEXIST&&Kq(a,1);uq=!1;var c={};_.Bq=1;for(var d=0;d<a.length;++d){var e=a[d];e.wa&&e.wa[e.wa.length-1]&&(e.wa[e.wa.length-1].now=b);var f=e.uh;e.Gf=!1;if(f.Ga)try{f.Ga.apply(f.context,e.wa||Dq)}catch(g){c[d]=!0,_.ee(g)}}_.Bq=2;for(d=0;d<a.length;++d)if(e=a[d],e.wa&&e.wa[e.wa.length-1]&&(e.wa[e.wa.length-1].now=b),f=e.Ko,e.Gf=!1,!c[d]&&f.Ga)try{f.Ga.apply(f.context,e.wa||Dq)}catch(g){_.ee(g)}0<wq&&1<b&&(a=b-wq,500>a&&(yq+=a,xq++,100<a&&zq++,Aq<a&&(Aq=a)));wq=
+uq&&1<b?b:0};Jq=function(){uq||(uq=!0,vq=new Promise(function(a){window.requestAnimationFrame(function(b){var c=sq[tq];tq=(tq+1)%2;try{Kq(c,b)}finally{_.Bq=0,c.length=0}a()})}));return vq};
+
+_.n().g();
+
+_.F("lwddkf");
+var UF=function(a){_.N.call(this,a.I);this.u=a.ca.request;this.w=TF(this);this.T=a.C.window.get();this.v=_.Ts(this.T);this.S=this.j=null;this.o=this.T!=this.T.parent;this.o||(this.h=0,_.Xg(this.v,"resize",this.g,!1,this),this.g())};_.u(UF,_.N);UF.D=function(){return{ca:{request:_.oi},C:{window:_.Fn}}};UF.prototype.g=function(){this.o||(this.h&&clearTimeout(this.h),this.h=setTimeout(this.w,3E3))};
+var TF=function(a){return _.Hq(_.Iq(a).measure(function(){var b=_.rF(this.T),c=b.Va();this.j&&b==this.j||(this.j=c,b=this.u.rd(_.Lq()+"/browserinfo",b),b.Tg(),b.send().then(function(){},function(d){throw d;},this))}))};_.P(_.lo,UF);
+
+_.n().g();
+
+}catch(e){_._DumpException(e)}
+}).call(this,this.default_InstantbuyFrontendBuyflowPayframeUi);
+// Google Inc.

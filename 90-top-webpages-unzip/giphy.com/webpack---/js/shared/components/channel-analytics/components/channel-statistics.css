@@ -1,0 +1,25 @@
+exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css"), undefined);
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+
+// module
+exports.push([module.id, "._2cClAbKbAiagkCu_I083T{color:" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyGrey"] + ";font-family:interface;font-size:12px;font-weight:600;text-transform:none;margin-top:0}.I_vYMnjU8L4mWqve9kZwm{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.I_vYMnjU8L4mWqve9kZwm:nth-of-type(2){padding-left:1em}._217vMft1zQglzvRkxRzs0a{color:giphyCharcoal}.YnRHs5Q8L23tTm-yCvBf1{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}._1aoWpA1Qwq90k0vyyjU5NV,.YnRHs5Q8L23tTm-yCvBf1{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}._1aoWpA1Qwq90k0vyyjU5NV{position:relative}._3jhiRp-WOSS9nyGrA-6dL-{color:highlightGrey;font-family:interface;font-size:14px;line-height:24px;font-weight:700;padding-left:.4em;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}", ""]);
+
+// exports
+exports.locals = {
+	"typography": "\"shared/css/typography.css\"",
+	"colors": "'shared/css/colors.css'",
+	"mainTitleMobile": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["mainTitleMobile"] + "",
+	"smallAnalyticsNumber": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["smallAnalyticsNumber"] + "",
+	"mainTitle": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["mainTitle"] + "",
+	"largeAnalyticsNumber": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["largeAnalyticsNumber"] + "",
+	"textLink": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["textLink"] + "",
+	"giphyGrey": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyGrey"] + "",
+	"largeAnalyticsSubHeader": "_2cClAbKbAiagkCu_I083T",
+	"smallStatistic": "I_vYMnjU8L4mWqve9kZwm " + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["smallAnalyticsNumber"] + "",
+	"hiddenContent": "_217vMft1zQglzvRkxRzs0a",
+	"LargeStatistic": "YnRHs5Q8L23tTm-yCvBf1 " + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["largeAnalyticsNumber"] + "",
+	"subheaderContainer": "_1aoWpA1Qwq90k0vyyjU5NV",
+	"smallAnalyticsSubHeader": "_3jhiRp-WOSS9nyGrA-6dL-"
+};

@@ -1,0 +1,155 @@
+.colophon {
+    border-bottom: 1px solid $brand-pastel;
+    padding: 0 9px ($gs-baseline * 2);
+
+    @include mq(mobileLandscape) {
+        padding: 0 19px ($gs-baseline * 2);
+    }
+
+    @include mq(tablet) {
+        padding-bottom: $gs-baseline / 2;
+        border: 1px solid $brand-pastel;
+        border-top: 0;
+    }
+}
+
+.colophon__lists-container {
+    @include fs-textSans(5);
+    line-height: 1.2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.colophon__list {
+    @include clearfix();
+    list-style: none;
+    position: relative;
+    margin: 0;
+
+    @include mq($until: tablet) {
+        width: calc(50% - #{$gs-gutter / 2});
+
+        &:first-child,
+        &:nth-child(3) {
+            margin-left: 0;
+            margin-right: $gs-gutter;
+
+            &:before {
+                content: none;
+            }
+        }
+    }
+
+    @include mq(tablet) {
+        margin: 0 $gs-gutter $gs-baseline 0;
+        width: gs-span(2);
+
+        &:last-child {
+            width: gs-span(3) - 2px;
+        }
+    }
+
+    @include mq($from: tablet, $until: leftCol) {
+        &:first-child {
+            margin-left: 0;
+
+            &:before {
+                content: none;
+            }
+        }
+    }
+
+    @include mq(desktop) {
+        &:last-child {
+            width: gs-span(6) - 2px;
+        }
+    }
+
+    @include mq(leftCol) {
+        &:last-child {
+            width: gs-span(4);
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
+
+        .hide-support-messaging & > *,
+        .is-recent-contributor & > * {
+            display: none;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -$gs-gutter / 2;
+        width: 1px;
+        display: block;
+        background-color: $brand-pastel;
+
+        @include mq(tablet) {
+            bottom: $gs-baseline / 2;
+        }
+    }
+}
+
+.colophon__lists-container--foundation {
+    .colophon__list {
+        &:nth-child(1) {
+            flex: none;
+            width: 100%;
+            margin: ($gs-baseline / 2) 0 $gs-baseline;
+
+            @include mq(tablet) {
+                flex: 1;
+            }
+
+            &:before {
+                display: none;
+            }
+
+            .inline-guardian-foundation-logo__svg {
+                height: 95px;
+                width: 295px;
+            }
+        }
+
+        @include mq($until: tablet) {
+            &:nth-child(n+2) {
+                flex: 1;
+                margin: 0;
+                border-top: 1px solid $brand-pastel;
+                padding-left: ($gs-baseline / 2);
+            }
+
+            &:nth-child(2) {
+                border-right: 1px solid $brand-pastel;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            .cta-bar__message {
+                border: 0;
+            }
+        }
+    }
+}
+
+.colophon__item a {
+    color: $brightness-100;
+    display: inline-block;
+    padding: ($gs-baseline / 2) 0;
+
+    &:hover,
+    &:focus {
+        color: $highlight-main;
+        text-decoration: none;
+    }
+}

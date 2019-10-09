@@ -1,0 +1,21 @@
+exports = module.exports = require("../../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css"), undefined);
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+
+// module
+exports.push([module.id, "._3uDhfcprMHtey1Bw2ZABYR{border-bottom:2px solid " + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + ";padding:24px 0}._3uDhfcprMHtey1Bw2ZABYR ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;text-align:left;margin:0;padding-top:8px}._10wG-cfL1GmLBhUeF64DFE{text-align:left}._3Xo2eoV5Xd-_q03HkkrN0n{list-style:none;display:inline-block}._1UsI1wsdX5jERl_SifPFdn{padding:4px 0;font-weight:600}._1UsI1wsdX5jERl_SifPFdn:hover{color:" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyAqua"] + "}", ""]);
+
+// exports
+exports.locals = {
+	"typography": "'shared/css/typography.css'",
+	"sectionHeading": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["sectionHeading"] + "",
+	"listItem": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["listItem"] + "",
+	"colors": "'shared/css/colors.css'",
+	"giphyDarkGrey": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + "",
+	"giphyAqua": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyAqua"] + "",
+	"container": "_3uDhfcprMHtey1Bw2ZABYR",
+	"title": "_10wG-cfL1GmLBhUeF64DFE " + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["sectionHeading"] + "",
+	"tagListItemWrapper": "_3Xo2eoV5Xd-_q03HkkrN0n",
+	"tagListItem": "_1UsI1wsdX5jERl_SifPFdn " + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["listItem"] + ""
+};

@@ -1,0 +1,2 @@
+define(["require","exports","modules/core/i18n","modules/constants/trademark"],function(e,r,s,t){"use strict";Object.defineProperty(r,"__esModule",{value:!0}),r.getPlanTogglerContent=function(e){return void 0===e&&(e=!1),{monthly:s._("Billed monthly"),yearly:s._("Billed yearly"),headline:e?s._("Do more with %(trademark_businesss)s").format({trademark_businesss:t.TRADEMARK_BUSINESS}):s._("Find the %(trademark_businesss)s plan for you").format({trademark_businesss:t.TRADEMARK_BUSINESS})}}});
+//# sourceMappingURL=plan_toggler.min.js-vflwYNbJf.map

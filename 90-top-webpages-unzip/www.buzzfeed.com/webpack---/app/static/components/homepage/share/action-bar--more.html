@@ -1,0 +1,138 @@
+var nunjucks = require("nunjucks/browser/nunjucks-slim");
+var env;
+if (!nunjucks.currentEnv){
+	env = nunjucks.currentEnv = new nunjucks.Environment([], undefined);
+} else {
+	env = nunjucks.currentEnv;
+}
+var dependencies = nunjucks.webpackDependencies || (nunjucks.webpackDependencies = {});
+
+
+
+
+var shim = require("/usr/lib/node_modules/@buzzfeed/fe-build-tools/node_modules/@buzzfeed/nunjucks-loader/runtime-shim");
+
+
+(function() {(nunjucks.nunjucksPrecompiled = nunjucks.nunjucksPrecompiled || {})["app/static/components/homepage/share/action-bar--more.html"] = (function() {
+function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+var parentTemplate = null;
+output += "\n<div class=\"action-bar--more ";
+if(runtime.contextOrFrameLookup(context, frame, "position")) {
+output += "action-bar--position-";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "position"), env.opts.autoescape);
+output += " js-action-bar--position-";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "position"), env.opts.autoescape);
+;
+}
+output += "\"\n    data-bfa=\"@l:Share\"\n    data-module=\"action-bar-more\">\n  <script type=\"text/x-config\">\n    {\n      \"position\": \"";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "position"), env.opts.autoescape);
+output += "\",\n      \"cardId\": \"";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "id"), env.opts.autoescape);
+output += "\",\n      \"cardPosition\": \"";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "cardPosition"), env.opts.autoescape);
+output += "\"\n    }\n  </script>\n  ";
+frame = frame.push();
+var t_3 = runtime.contextOrFrameLookup(context, frame, "platforms");
+if(t_3) {var t_2 = t_3.length;
+for(var t_1=0; t_1 < t_3.length; t_1++) {
+var t_4 = t_3[t_1];
+frame.set("platform", t_4);
+frame.set("loop.index", t_1 + 1);
+frame.set("loop.index0", t_1);
+frame.set("loop.revindex", t_2 - t_1);
+frame.set("loop.revindex0", t_2 - t_1 - 1);
+frame.set("loop.first", t_1 === 0);
+frame.set("loop.last", t_1 === t_2 - 1);
+frame.set("loop.length", t_2);
+output += "\n    <div class=\"js-action-bar--";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += " action-bar--";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += "\">\n      <a class=\"js-sharing-btn analyt-share-";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "position"), env.opts.autoescape);
+output += "-";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += " bfa-share-btn sharing-btn sharing-btn--c-";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += "\n      button button--icon button--";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += " xs-relative xs-mb1 xs-col-12\"\n      ";
+if(runtime.memberLookup((t_4),"target")) {
+output += "target=\"";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"target"), env.opts.autoescape);
+output += "\"";
+;
+}
+output += "\n      href=\"";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"shareUrl"), env.opts.autoescape);
+output += "\"\n      title=\"Share this on ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += "\"\n      data-bfa-network=\"";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += "\"  \n      data-bfa=\"@a:Share; @d:";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += "; @e:{p:";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "cardPosition"), env.opts.autoescape);
+output += "}; @o:{ ";
+if(runtime.memberLookup((t_4),"isVideo")) {
+output += "dimension3";
+;
+}
+else {
+output += "dimension2";
+;
+}
+output += ":";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"id"), env.opts.autoescape);
+output += ",dimension4:";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"contentTitle"), env.opts.autoescape);
+output += "}\"\n      data-type=\"";
+if(runtime.memberLookup((t_4),"type")) {
+output += runtime.suppressValue(runtime.memberLookup((t_4),"type"), env.opts.autoescape);
+;
+}
+else {
+output += "sharing-button";
+;
+}
+output += "\"\n      ";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "anchorAttributes"), env.opts.autoescape);
+output += ">\n\n        <svg>\n          <title>Share on ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += "</title>\n          Share on ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += " ";
+output += "\n          <use xlink:href=\"#";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += "\"></use>\n        </svg>\n\n        <span class=\"sharing-btn__text\">";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name"), env.opts.autoescape);
+output += "</span>\n      </a>\n    </div>\n  ";
+;
+}
+}
+frame = frame.pop();
+output += "\n</div>\n";
+if(parentTemplate) {
+parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
+} else {
+cb(null, output);
+}
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+
+})();
+})();
+
+
+
+module.exports = shim(nunjucks, env, nunjucks.nunjucksPrecompiled["app/static/components/homepage/share/action-bar--more.html"] , dependencies)

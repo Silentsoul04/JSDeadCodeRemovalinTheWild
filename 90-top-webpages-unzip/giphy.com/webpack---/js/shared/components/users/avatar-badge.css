@@ -1,0 +1,23 @@
+exports = module.exports = require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/breakpoints.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!./username-badge.css"), undefined);
+
+// module
+exports.push([module.id, "._2i4LUydBEBkjQXHJpbzkg8{font-size:16px;-ms-flex-align:stretch;width:100%}._2i4LUydBEBkjQXHJpbzkg8,.Ae5Gw5X2QjfrxxGeMYT2H{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-webkit-align-items:stretch;align-items:stretch}.Ae5Gw5X2QjfrxxGeMYT2H{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-flow:column nowrap;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:stretch;text-align:left;overflow:hidden}._3DiZ8MrB6UjtRTb29k-zhM{font-size:1.125em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:left}._3X2KSzdvKhAJqFwx32b8jg{position:relative;padding-right:20px}._3d-sAXwzxxGiCIp-2MJly6{display:inline;max-width:109px;font-size:14px}@media " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/breakpoints.css").locals["desktop"] + "{._3d-sAXwzxxGiCIp-2MJly6{display:inline-block}}._3q3_VjSjjdu5nqo0XqK0E{display:inline-block;position:relative;left:4px;top:4px}@media " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/breakpoints.css").locals["desktop"] + "{._3q3_VjSjjdu5nqo0XqK0E{display:inline-block;top:0}}", ""]);
+
+// exports
+exports.locals = {
+	"typography": "'shared/css/typography.css'",
+	"gifTitleMobile": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["gifTitleMobile"] + "",
+	"bodyBold": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["bodyBold"] + "",
+	"breakpoints": "'shared/css/breakpoints.css'",
+	"desktop": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/breakpoints.css").locals["desktop"] + "",
+	"container": "_2i4LUydBEBkjQXHJpbzkg8",
+	"profileInfo": "Ae5Gw5X2QjfrxxGeMYT2H",
+	"title": "_3DiZ8MrB6UjtRTb29k-zhM " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["bodyBold"] + "",
+	"usernameWrapper": "_3X2KSzdvKhAJqFwx32b8jg",
+	"usernameStyle": "_3d-sAXwzxxGiCIp-2MJly6 " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!./username-badge.css").locals["username"] + "",
+	"verifiedBadgeWrapper": "_3q3_VjSjjdu5nqo0XqK0E"
+};

@@ -1,0 +1,2 @@
+define(["require","exports","modules/core/uri"],function(e,r,t){"use strict";Object.defineProperty(r,"__esModule",{value:!0}),r.url=function(e,r){var u=new t.URI({scheme:"https",path:e});return r&&u.updateQuery(r.queryName,r.queryParam),u.toString()}});
+//# sourceMappingURL=url.min.js-vflkJS1T2.map

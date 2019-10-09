@@ -1,0 +1,24 @@
+exports = module.exports = require("../../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css"), undefined);
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css"), undefined);
+
+// module
+exports.push([module.id, "._3XxUscFeFe6i-6HWC4XQjd{border-bottom:2px solid " + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + ";padding:24px 0 4px}._3XxUscFeFe6i-6HWC4XQjd ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;text-align:left;margin:0}._2d307HIbw8FhSNGy7vhMvw{text-align:left;margin-bottom:20px}.Ny5B9yJbElcPujvYOewUG{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin-bottom:20px}._1Ae1T1_5TnU-TtmIT2jFvT{width:40px;height:40px}._1bfUfIAMzf5P95XyES2s-H{margin-left:15px;color:" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + ";font-family:" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css").locals["bodyFont"] + ";font-size:16px;font-weight:900;letter-spacing:.01em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}", ""]);
+
+// exports
+exports.locals = {
+	"typography": "'shared/css/typography.css'",
+	"sectionHeading": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["sectionHeading"] + "",
+	"colors": "'shared/css/colors.css'",
+	"giphyDarkGrey": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + "",
+	"giphyWhite": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + "",
+	"fonts": "'shared/css/fonts.css'",
+	"bodyFont": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css").locals["bodyFont"] + "",
+	"container": "_3XxUscFeFe6i-6HWC4XQjd",
+	"title": "_2d307HIbw8FhSNGy7vhMvw " + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["sectionHeading"] + "",
+	"channelItem": "Ny5B9yJbElcPujvYOewUG",
+	"avatar": "_1Ae1T1_5TnU-TtmIT2jFvT",
+	"name": "_1bfUfIAMzf5P95XyES2s-H"
+};

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>NAVER</title>
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/tveta/libs/assets/css/pc/main/min/timeboard.min.css?20181108" />
+<script type="text/javascript" src="https://ssl.pstatic.net/tveta/libs/assets/js/pc/main/min/pc.veta.core.min.js?20170421"></script>
+</head>
+<body onload="initAd()">
+	<div id="da_timeboard">
+		<div class="content">
+			<div id="addiv" class="ad">
+				<a href="https://nv.veta.naver.com/fxclick?eu=EU10000120&calp=-&oj=bbC87fref323VyLQuD3ZS59Xeraxar35DLdB12plObzLgBBDFlX8RobdkqNS1hCX82ZkWcB%2Fq72DcIlMluOpUbGA2f8TuGn6keORQnJviI7ZeaCDknBtyA&ac=7947063&src=4059309&br=2999320&evtcd=P901&x_ti=837&tb=&oid=&sid1=&sid2=&rk=4f229cd51193e5fd873cb2747c4bd5cb&eltts=0igGltAZ52EF5ZKnTJ1KmQ%3D%3D&lu=&brs=Y&" id="ac_banner_a" target="_blank">
+					<img src="https://ssl.pstatic.net/tveta/libs/1249/1249571/f63fdaebf6dc42026f26_20191008172257323.jpg" width="740" height="120" title="" alt="[광고]한글날 한정! 스피킹맥스 1년 무제한 + 에어팟2 388,000원이 아닌 하루910원. 밤12시 종료. 본 혜택은 이후에도 동일하게 적용 될 수 있음." border="0" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	document.domain = "naver.com";
+
+	function initAd() {
+		// ACK IMP
+		new Nimp(["https://nv.veta.naver.com/fxview?eu=EU10000120&calp=-&oj=bbC87fref323VyLQuD3ZS59Xeraxar35DLdB12plObzLgBBDFlX8RobdkqNS1hCX82ZkWcB%2Fq72DcIlMluOpUbGA2f8TuGn6keORQnJviI7ZeaCDknBtyA&ac=7947063&src=4059309&evtcd=P100&x_ti=837&tb=&oid=&sid1=&sid2=&rk=4f229cd51193e5fd873cb2747c4bd5cb&eltts=0igGltAZ52EF5ZKnTJ1KmQ%3D%3D&brs=Y&&eid=V800"]).log(1);
+
+		initAltForImage();
+	}
+
+	function initAltForImage() {
+		// DA Alternative - Create Access Layer
+		var accessLayer = document.createElement('div');
+		accessLayer.setAttribute('id', 'da_access');
+		accessLayer.style.cssText = 'position:absolute;top:50%;left:50%;width:154px;height:58px;margin:-29px 0 0 -77px;background:url(https://ssl.pstatic.net/tveta/libs/res/www/common/info/da_access.png)';
+		accessLayer.style.display = "none";
+		var oAdDiv = document.getElementById("ac_banner_a");
+		oAdDiv.appendChild(accessLayer);
+
+		// DA Alternative - Focus Action
+		var altLink = document.getElementById("ac_banner_a");
+		var bMousedown = false;
+		altLink.onmousedown = function() {
+			bMousedown = true;
+		};
+		altLink.onfocus = function() {
+			if (!bMousedown) {
+				accessLayer.style.display = "block";
+			}
+		};
+		altLink.onblur = function() {
+			accessLayer.style.display = "none";
+		};
+	}
+	</script>
+</body>
+</html>

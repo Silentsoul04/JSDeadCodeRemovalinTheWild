@@ -1,0 +1,18 @@
+exports = module.exports = require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!../../css/colors.css"), undefined);
+
+// module
+exports.push([module.id, "._1XhyootnxV0MSLEfGvpiMI{background:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!../../css/colors.css").locals["giphyDarkGrey"] + ";color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!../../css/colors.css").locals["giphyWhite"] + ";display:inline-block;position:relative;vertical-align:top;z-index:1;page-break-inside:avoid;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid}._1kSeK1T_MPxbQ6AlrFXReb{cursor:pointer;display:inline-block;line-height:25px;position:relative;text-align:center;vertical-align:top;z-index:2;-webkit-transition:color .2s ease-in-out .2s;transition:color .2s ease-in-out .2s}._2vziaf-1tLV7QTMefGwZ4R{color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!../../css/colors.css").locals["giphyDarkGrey"] + "}._1XhyootnxV0MSLEfGvpiMI i{font-size:8px;top:-1px;position:relative}._2RiVqbxjlU8WkIzkokSuPm{height:100%;left:0;position:absolute;top:0;width:50%;z-index:1;-webkit-transition:all .5s cubic-bezier(.68,-.55,.265,1.55);transition:all .5s cubic-bezier(.68,-.55,.265,1.55)}._2OqXcIbPZkwSGfk2TuOVrr ._2RiVqbxjlU8WkIzkokSuPm{left:50%}", ""]);
+
+// exports
+exports.locals = {
+	"colors": "'../../css/colors.css'",
+	"giphyWhite": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!../../css/colors.css").locals["giphyWhite"] + "",
+	"giphyDarkGrey": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!../../css/colors.css").locals["giphyDarkGrey"] + "",
+	"container": "_1XhyootnxV0MSLEfGvpiMI",
+	"containerOff": "_2OqXcIbPZkwSGfk2TuOVrr _1XhyootnxV0MSLEfGvpiMI",
+	"icon": "_1kSeK1T_MPxbQ6AlrFXReb",
+	"iconOn": "_2vziaf-1tLV7QTMefGwZ4R _1kSeK1T_MPxbQ6AlrFXReb",
+	"toggleBackground": "_2RiVqbxjlU8WkIzkokSuPm"
+};

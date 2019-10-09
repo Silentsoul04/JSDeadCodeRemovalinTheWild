@@ -1,0 +1,196 @@
+/* ==========================================================================
+   Content API component
+   ========================================================================== */
+
+@mixin c-capi-leftCol {
+    .commercial__body {
+        padding-top: $gs-baseline;
+    }
+}
+
+.fc-container--paid-content {
+    .linkslist__action:visited,
+    .fc-item__link:visited,
+    .fc-item__standfirst,
+    .item__link:visited,
+    .item__link:visited .item__title,
+    // Story-package overrides
+    .fc-container--story-package .fc-item__standfirst,
+    .fc-container--story-package .fc-item__link:visited {
+        color: $brightness-46;
+    }
+
+    .tone-media--item {
+        .linkslist__action:visited,
+        .fc-item__link:visited,
+        .fc-item__standfirst,
+        .item__link:visited,
+        .item__link:visited .item__title {
+            color: #ffffff;
+        }
+    }
+
+    .fc-item__header,
+    .fc-item__title,
+    .fc-item__standfirst,
+    .fc-item--list-compact,
+    .item__title,
+    .linkslist__action,
+    .fc-sublink__title {
+        @include f-textSans;
+    }
+}
+
+.fc-container--paid-content {
+    background-color: $brightness-97;
+
+    .fc-container__inner {
+
+        padding-top: $gs-baseline/2;
+    }
+
+    .fc-container__header__title {
+        color: $brightness-7;
+
+        .fc-container__header__link {
+            color: $brand-main;
+
+            &:hover {
+                color: $sport-bright;
+            }
+        }
+    }
+
+    .tone-news--item.fc-item {
+        background: transparent;
+    }
+
+    .fc-item__container {
+        &:before {
+            display: none;
+        }
+    }
+}
+
+
+.paid-content {
+
+    .fc-item--list-compact--media {
+        border-color: $brightness-60;
+    }
+
+    .fc-container--first .fc-container__header__title,
+    .fc-container .fc-container__inner,
+    .fc-container .facia-container__inner {
+        border-top-color: $brightness-60;
+    }
+
+    .fc-container__header__title {
+        @include f-textSans;
+        font-weight: 400;
+    }
+
+    .tone-news--item.fc-item,
+    .tone-media--item {
+        background-color: $brightness-86;
+        border-top: 0;
+    }
+
+    .fc-container--story-package .tone-news--item.fc-item {
+        // This is to override an !important background colour in story-package items
+        background-color: $brightness-86 !important;
+    }
+
+    .tone-media--item {
+        .u-faux-block-link--hover {
+            background-color: $brightness-93;
+
+            .u-faux-block-link__overlay {
+                color: $brightness-7;
+            }
+        }
+
+        .fc-item__standfirst,
+        .fc-item__kicker,
+        .fc-item__link:visited {
+            color: $brightness-7;
+        }
+    }
+
+    // Override story-package hover colours
+    .fc-container--story-package .fc-item .u-faux-block-link--hover {
+        background-color: $brightness-93;
+    }
+
+    .headline-list__item:before {
+        background-color: $brightness-7;
+    }
+
+    .headline-list__count,
+    .headline-list__link:hover .headline-list__count {
+        color: $brightness-7;
+    }
+
+    .fc-item__title .inline-video-icon,
+    .fc-item__title .inline-camera {
+        fill: $brightness-7;
+    }
+
+    .fc-slice__item+.fc-slice__item:before {
+        border-left-color: $brightness-86;
+    }
+
+    .fc-item__container {
+        &:before {
+            display: block;
+            background: $labs-main;
+        }
+    }
+
+    .fc-item__title {
+        color: $brightness-20;
+    }
+
+    .tone-news--item .fc-item__kicker {
+        color: $brightness-7;
+    }
+
+    .fc-item__kicker:after {
+        color: #a0a1a2;
+    }
+
+    .fc-item__meta {
+        color: $brightness-46;
+    }
+
+    &.fc-container--sponsored {
+        background-color: unset;
+    }
+
+    &.tonal--tone-media .tonal__standfirst a {
+        color: $brightness-7;
+    }
+
+    &.tonal--tone-media .tonal__standfirst {
+        .bullet:before,
+        ul>li:before {
+            background-color: $brightness-46;
+        }
+    }
+
+    &.tonal--tone-media {
+        .submeta__section-labels .submeta__link {
+            color: $brightness-7;
+        }
+    }
+
+    .badge--alt {
+        border-color: $brightness-46;
+    }
+
+    .bullet {
+        &:before {
+            background-color: $brightness-60;
+        }
+    }
+}

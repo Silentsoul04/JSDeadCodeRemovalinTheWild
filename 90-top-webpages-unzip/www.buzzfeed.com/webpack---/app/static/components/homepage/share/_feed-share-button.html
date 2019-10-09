@@ -1,0 +1,106 @@
+var nunjucks = require("nunjucks/browser/nunjucks-slim");
+var env;
+if (!nunjucks.currentEnv){
+	env = nunjucks.currentEnv = new nunjucks.Environment([], undefined);
+} else {
+	env = nunjucks.currentEnv;
+}
+var dependencies = nunjucks.webpackDependencies || (nunjucks.webpackDependencies = {});
+
+
+
+
+var shim = require("/usr/lib/node_modules/@buzzfeed/fe-build-tools/node_modules/@buzzfeed/nunjucks-loader/runtime-shim");
+
+
+(function() {(nunjucks.nunjucksPrecompiled = nunjucks.nunjucksPrecompiled || {})["app/static/components/homepage/share/_feed-share-button.html"] = (function() {
+function root(env, context, frame, runtime, cb) {
+var lineno = null;
+var colno = null;
+var output = "";
+try {
+var parentTemplate = null;
+output += "\n<a class=\"button button--small button--icon ";
+if(runtime.contextOrFrameLookup(context, frame, "isMore")) {
+output += "button--transparent link-gray";
+;
+}
+else {
+output += "button--";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"name"), env.opts.autoescape);
+;
+}
+output += "\"\n   ";
+if(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"target")) {
+output += "target=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"target"), env.opts.autoescape);
+output += "\"";
+;
+}
+output += "\n   href=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"shareUrl"), env.opts.autoescape);
+output += "\"\n   title=\"Share this on ";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"name"), env.opts.autoescape);
+output += "\"\n   data-bfa-network=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"name"), env.opts.autoescape);
+output += "\"\n   data-bfa=\"@a:click:feed-module";
+if(runtime.contextOrFrameLookup(context, frame, "isMore")) {
+output += "-share-sheet";
+;
+}
+output += "; @d:";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"name"), env.opts.autoescape);
+output += "; @e:{p:";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"cardPosition"), env.opts.autoescape);
+output += "} @o:{ ";
+if(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"isVideo")) {
+output += "dimension3";
+;
+}
+else {
+output += "dimension2a";
+;
+}
+output += ":";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"id"), env.opts.autoescape);
+output += ",dimension4:";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"contentTitle"), env.opts.autoescape);
+output += "}\"\n   data-type=\"sharing-button\"\n    ";
+output += runtime.suppressValue(env.getFilter("safe").call(context, runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"anchorAttributes")), env.opts.autoescape);
+output += ">\n    <svg>\n        <title>Share on ";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"name"), env.opts.autoescape);
+output += "</title>\n        Share on ";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"name"), env.opts.autoescape);
+output += " ";
+output += "\n        <use xlink:href=\"#";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"name"), env.opts.autoescape);
+output += "\"></use>\n    </svg>\n    ";
+if(runtime.contextOrFrameLookup(context, frame, "isMore")) {
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"name"), env.opts.autoescape);
+;
+}
+else {
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "platform")),"display_name"), env.opts.autoescape);
+;
+}
+output += "\n</a>\n";
+if(parentTemplate) {
+parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
+} else {
+cb(null, output);
+}
+;
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+return {
+root: root
+};
+
+})();
+})();
+
+
+
+module.exports = shim(nunjucks, env, nunjucks.nunjucksPrecompiled["app/static/components/homepage/share/_feed-share-button.html"] , dependencies)

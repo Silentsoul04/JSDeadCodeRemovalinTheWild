@@ -1,0 +1,2 @@
+define(["require","exports","external/lodash","modules/clean/react/business/bermuda/data/reducer","modules/clean/redux/store","modules/clean/redux/namespaces"],function(e,r,t,s,n,u){"use strict";Object.defineProperty(r,"__esModule",{value:!0}),r.getStoreForBusiness=t.once(function(){var e;return n.getStoreAndRegisterReducers((e={},e[u.BUSINESS_NAMESPACE_KEY]=s.getContentReducer,e))})});
+//# sourceMappingURL=store.min.js-vflPsk2NQ.map

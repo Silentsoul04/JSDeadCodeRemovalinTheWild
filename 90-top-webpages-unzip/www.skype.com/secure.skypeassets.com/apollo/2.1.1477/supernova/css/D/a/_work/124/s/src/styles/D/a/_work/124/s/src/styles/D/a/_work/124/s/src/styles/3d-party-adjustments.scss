@@ -1,0 +1,9 @@
+// Switch component (http://react-components.int.skype.net/?path=/story/switch--switch)
+.switch .slider {
+  box-sizing: initial;
+}
+
+.slider::before {
+  left: 2px;
+  position: absolute;
+}

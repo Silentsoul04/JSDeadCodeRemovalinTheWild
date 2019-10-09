@@ -1,0 +1,12 @@
+exports = module.exports = require("../../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.id, "._3KHzBNaGhyLrIR1rFMyT57{position:relative}._1g3SoRKKk_hOwFlXA-BKQh{width:100%}", ""]);
+
+// exports
+exports.locals = {
+	"embed": "_3KHzBNaGhyLrIR1rFMyT57",
+	"inputs": "_1g3SoRKKk_hOwFlXA-BKQh"
+};

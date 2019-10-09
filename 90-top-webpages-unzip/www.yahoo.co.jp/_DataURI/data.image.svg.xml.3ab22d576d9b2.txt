@@ -1,0 +1,1 @@
+data:image/svg+xml;charset=utf-8,%3Csvg width='5' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 3L0 6V0z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E

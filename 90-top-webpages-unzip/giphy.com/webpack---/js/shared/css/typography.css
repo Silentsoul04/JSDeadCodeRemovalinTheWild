@@ -1,0 +1,36 @@
+exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./colors.css"), undefined);
+exports.i(require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css"), undefined);
+exports.i(require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./grid.css"), undefined);
+
+// module
+exports.push([module.id, ".uJdphkbFHp9j5ivdfFwvN{color:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./colors.css").locals["giphyWhite"] + ";font-family:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["titleFont"] + ";font-size:36px;line-height:1.45}._1UbU0EXP_gcdw9xlUyYe7J{color:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./colors.css").locals["giphyGrey"] + ";font-family:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["bodyFont"] + "}.M2OyGQjcGAg8RMSllWxmS{font-size:14px;font-weight:700;margin:0}.I0Nlu9aGNhQrGhoVqgnmb{font-family:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["bodyFont"] + ";font-size:26px;font-weight:700;line-height:26px;margin-bottom:20px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.hixhBm_CVhg_Lf-GUgONp{font-family:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["bodyFont"] + ";font-weight:900}._1KuKUOaTOA-MDxUbnxAF0-{color:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./colors.css").locals["giphyGrey"] + ";font-size:14px}._1KuKUOaTOA-MDxUbnxAF0-,._2iGPTI9MpgOPh2XqpjCPZR{font-family:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["bodyFont"] + ";letter-spacing:.01em;text-transform:capitalize;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:600}._2iGPTI9MpgOPh2XqpjCPZR{color:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./colors.css").locals["giphyWhite"] + ";font-size:16px}._3mawTCDdc9pzyJmfXAz2-5{font-size:16px;font-weight:600}._3mawTCDdc9pzyJmfXAz2-5,._3qg_ORMGZkkidw79zbxKqI{color:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./colors.css").locals["giphyWhite"] + ";font-family:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["titleFont"] + ";letter-spacing:.01em;text-transform:capitalize;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}._3qg_ORMGZkkidw79zbxKqI{font-size:22px}._2jxrZQMKAxsDueGegMhQFw{font-family:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["titleFont"] + ";font-size:18px;text-transform:capitalize}._395dgvcmay9k8mvaocFZY1{color:inherit;font-size:inherit;font-weight:600;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}._395dgvcmay9k8mvaocFZY1:active,._395dgvcmay9k8mvaocFZY1:hover{color:inherit}.EvFhGj7N2cVKIUdOG2Y-{font-family:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["bodyFont"] + ";color:giphyLightGrey;font-size:12px;line-height:30px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}._1Cc0sWakN1Ot3lndSp8qQe{color:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./colors.css").locals["giphyGrey"] + ";display:inline-block;font-size:14px;margin:2px 8px 0 " + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./grid.css").locals["gridSpacing"] + ";vertical-align:middle}._6KVLqLFJPCKywabAmvtu1{font-size:14px;height:28px;line-height:26px;padding:0 10px}._6KVLqLFJPCKywabAmvtu1,._24FzDJPN-XRYjYbFAR25Py{color:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./colors.css").locals["giphyWhite"] + ";font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}._24FzDJPN-XRYjYbFAR25Py{font-style:italic;font-size:15px;line-height:32px;letter-spacing:.04em}.boOdq56Kau2ekdNVx8leC{font-family:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["bodyFont"] + ";height:26px;font-size:14px;font-weight:700;letter-spacing:.01em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}", ""]);
+
+// exports
+exports.locals = {
+	"colors": "'./colors.css'",
+	"giphyWhite": "" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./colors.css").locals["giphyWhite"] + "",
+	"giphyGrey": "" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./colors.css").locals["giphyGrey"] + "",
+	"fonts": "'./fonts.css'",
+	"bodyFont": "" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["bodyFont"] + "",
+	"titleFont": "" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./fonts.css").locals["titleFont"] + "",
+	"grid": "'./grid.css'",
+	"gridSpacing": "" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!./grid.css").locals["gridSpacing"] + "",
+	"mainTitle": "uJdphkbFHp9j5ivdfFwvN",
+	"bodyCopy": "_1UbU0EXP_gcdw9xlUyYe7J",
+	"usernameTitle": "M2OyGQjcGAg8RMSllWxmS _1UbU0EXP_gcdw9xlUyYe7J",
+	"mainTitleMobile": "I0Nlu9aGNhQrGhoVqgnmb uJdphkbFHp9j5ivdfFwvN",
+	"bodyBold": "hixhBm_CVhg_Lf-GUgONp",
+	"sectionHeading": "_1KuKUOaTOA-MDxUbnxAF0-",
+	"sectionHeadingLarge": "_2iGPTI9MpgOPh2XqpjCPZR",
+	"smallAnalyticsNumber": "_3mawTCDdc9pzyJmfXAz2-5",
+	"largeAnalyticsNumber": "_3qg_ORMGZkkidw79zbxKqI",
+	"gifTitleMobile": "_2jxrZQMKAxsDueGegMhQFw _2iGPTI9MpgOPh2XqpjCPZR",
+	"textLink": "_395dgvcmay9k8mvaocFZY1",
+	"caption": "EvFhGj7N2cVKIUdOG2Y-",
+	"autoPlayLabel": "_1Cc0sWakN1Ot3lndSp8qQe",
+	"itemLabel": "_6KVLqLFJPCKywabAmvtu1",
+	"listItem": "_24FzDJPN-XRYjYbFAR25Py",
+	"searchType": "boOdq56Kau2ekdNVx8leC"
+};

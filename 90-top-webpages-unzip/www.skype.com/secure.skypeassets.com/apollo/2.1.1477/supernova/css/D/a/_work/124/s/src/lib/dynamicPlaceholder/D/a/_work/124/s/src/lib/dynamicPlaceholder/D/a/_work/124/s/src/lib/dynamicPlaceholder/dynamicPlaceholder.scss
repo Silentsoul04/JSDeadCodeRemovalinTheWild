@@ -1,0 +1,45 @@
+@import '../../styles/animations/easing';
+@import '../../styles/theme/colors';
+
+.supernova-dynamic-placeholder {
+  height: 100%;
+  width: 100%;
+
+  * {
+    color: rgba(0, 0, 0, 0) !important;
+  }
+
+  * > img,
+  * > p,
+  * > h1,
+  * > h2,
+  * > h3,
+  * > h4,
+  * > a,
+  * > button {
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+    border-color: transparent;
+    background: #f6f7f8;
+    background-image: -webkit-linear-gradient(left, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 900px 100%;
+    z-index: -1;
+    animation: placeHolderShimmer 2.5s linear infinite forwards;
+
+    &::before {
+      content: 'Lorem ipsum';
+    }
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -900px 0;
+  }
+
+  100% {
+    background-position: 900px 0;
+  }
+}

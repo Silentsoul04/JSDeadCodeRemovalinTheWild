@@ -1,0 +1,24 @@
+exports = module.exports = require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css"), undefined);
+
+// module
+exports.push([module.id, "@-webkit-keyframes _36LYN0VYI9tA6xwdypugbY{0%{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}@keyframes _36LYN0VYI9tA6xwdypugbY{0%{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}@-webkit-keyframes _3iN4SuT6M9MsNeKsTT3PbQ{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes _3iN4SuT6M9MsNeKsTT3PbQ{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:none;transform:none}}.qHattxseVBFgafsGMXWfg{display:inline-block;padding:0 " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css").locals["gridSpacing"] + ";background-color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + ";border-radius:20px;margin:0 8px 8px 0;line-height:38px;height:40px;overflow:visible;-webkit-animation-name:_3iN4SuT6M9MsNeKsTT3PbQ;animation-name:_3iN4SuT6M9MsNeKsTT3PbQ;-webkit-animation-duration:1s;animation-duration:1s}.qHattxseVBFgafsGMXWfg:active{opacity:.8}.qHattxseVBFgafsGMXWfg:hover{color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyAqua"] + "}._2_bl36Vkz6wBFj7n6DIUQP{display:none;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:_36LYN0VYI9tA6xwdypugbY;animation-name:_36LYN0VYI9tA6xwdypugbY}._27zOZRTX_QHrDk1ECyWgdY{margin:0;font-size:15px;text-transform:lowercase}", ""]);
+
+// exports
+exports.locals = {
+	"colors": "'shared/css/colors.css'",
+	"giphyDarkGrey": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + "",
+	"giphyAqua": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyAqua"] + "",
+	"typography": "'shared/css/typography.css'",
+	"listItem": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["listItem"] + "",
+	"grid": "'shared/css/grid.css'",
+	"gridSpacing": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css").locals["gridSpacing"] + "",
+	"pill": "qHattxseVBFgafsGMXWfg " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["listItem"] + "",
+	"fadeInUp": "_3iN4SuT6M9MsNeKsTT3PbQ",
+	"hide": "_2_bl36Vkz6wBFj7n6DIUQP",
+	"fadeOutUp": "_36LYN0VYI9tA6xwdypugbY",
+	"tag": "_27zOZRTX_QHrDk1ECyWgdY"
+};

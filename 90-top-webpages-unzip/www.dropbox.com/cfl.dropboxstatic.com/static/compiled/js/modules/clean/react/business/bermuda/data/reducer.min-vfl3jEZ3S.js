@@ -1,0 +1,2 @@
+define(["require","exports","tslib"],function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={animationPause:!1,customer:"design-it",planType:"yearly"};t.getContentReducer=function(e,t){void 0===e&&(e=a);var r=t.data,i=t.type;if(!r)return e;switch(i){case"BUSINESS/SET_SELECTED_CUSTOMER":return n.__assign({},e,{animationPause:r.animationPause,customer:r.customer});case"BUSINESS/SET_PLAN_TYPE":return n.__assign({},e,{planType:r.planType});default:return e}}});
+//# sourceMappingURL=reducer.min.js-vflBl8GFp.map

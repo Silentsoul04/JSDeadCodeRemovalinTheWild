@@ -1,0 +1,15 @@
+exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!../app.css"), undefined);
+
+// module
+exports.push([module.id, "._2T9Y48EMwSh3hc0XOcE6uM{padding:30px 0}._2W7zBPyLawC16IjDCmIVwO{margin:0 auto 30px;max-width:250px}.w64WvKGwmao4PCeqPYz2x{height:180px;margin:0 auto 10px;width:320px}.w64WvKGwmao4PCeqPYz2x iframe{height:100%!important;width:100%!important}", ""]);
+
+// exports
+exports.locals = {
+	"app": "\"../app.css\"",
+	"appTitle": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!../app.css").locals["appTitle"] + "",
+	"appVideo": "_2T9Y48EMwSh3hc0XOcE6uM",
+	"appVideoTitle": "_2W7zBPyLawC16IjDCmIVwO " + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!../app.css").locals["appTitle"] + "",
+	"appVideoEmbed": "w64WvKGwmao4PCeqPYz2x"
+};

@@ -1,0 +1,24 @@
+exports = module.exports = require("../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.id, "._33n4j4MBAyFTldds13l8JL{height:330px;margin:0 auto 40px;position:relative;width:365px;-webkit-perspective:1000px;perspective:1000px}._2jiBuDtydQqHgQGVgZ2LZQ{background:#000;border-radius:2px;overflow:hidden;position:absolute}.nC7noVP9e-qzMwqHKg3DY{background-position:50%;background-repeat:no-repeat;height:100%;width:100%}._30ccKNxjRwD9T0qwKi8gSO{background-size:contain}._2O15SPTweL8Q4WX-SE4XUA{background-size:cover}._28tMEXnSx2ZKiC95dHCSQ0{background:url(\"/static/img/app_landing/phone.svg\") no-repeat 100%;background-size:auto 100%}._3nyCAdRyPHHLjW945xlYAn{background:url(\"/static/img/app_landing/computer.svg\") no-repeat 100%;background-size:auto 100%}._15Tylxtq_mgZ8s3mBhF5w_{height:278px;right:163px;top:55px;width:158px;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotateX(33deg) rotateY(3deg) rotate(-24deg) skewX(5deg) skewY(3deg);transform:rotateX(33deg) rotateY(3deg) rotate(-24deg) skewX(5deg) skewY(3deg)}.NxghsKzM6arzNZGdtZ4TQ{height:218px;right:81px;top:28px;width:322px;-webkit-transform-origin:100% 0;transform-origin:100% 0;-webkit-transform:rotateX(4deg) rotateY(-43deg) rotate(-8deg) skewX(-14deg) skewY(5deg);transform:rotateX(4deg) rotateY(-43deg) rotate(-8deg) skewX(-14deg) skewY(5deg)}.wciEzyndZkQOb8D-uhUFG,.wciEzyndZkQOb8D-uhUFG ._30ccKNxjRwD9T0qwKi8gSO{-webkit-transform:scaleX(-1);transform:scaleX(-1)}", ""]);
+
+// exports
+exports.locals = {
+	"screenshotWrapper": "_33n4j4MBAyFTldds13l8JL",
+	"screenshot": "_2jiBuDtydQqHgQGVgZ2LZQ",
+	"screenshotImage": "nC7noVP9e-qzMwqHKg3DY",
+	"phoneScreenshotImage": "_30ccKNxjRwD9T0qwKi8gSO nC7noVP9e-qzMwqHKg3DY",
+	"desktopScreenshotImage": "_2O15SPTweL8Q4WX-SE4XUA nC7noVP9e-qzMwqHKg3DY",
+	"phoneWrapper": "_28tMEXnSx2ZKiC95dHCSQ0 _33n4j4MBAyFTldds13l8JL",
+	"desktopWrapper": "_3nyCAdRyPHHLjW945xlYAn _33n4j4MBAyFTldds13l8JL",
+	"phoneScreenshot": "_15Tylxtq_mgZ8s3mBhF5w_ _2jiBuDtydQqHgQGVgZ2LZQ",
+	"desktopScreenshot": "NxghsKzM6arzNZGdtZ4TQ _2jiBuDtydQqHgQGVgZ2LZQ",
+	"odd": "wciEzyndZkQOb8D-uhUFG",
+	"phoneWrapperEven": "x61FOO4-b1gfn8b87GKZX _28tMEXnSx2ZKiC95dHCSQ0 _33n4j4MBAyFTldds13l8JL",
+	"desktopWrapperOdd": "_203F-eKQEHqFApMYoubG7n _3nyCAdRyPHHLjW945xlYAn _33n4j4MBAyFTldds13l8JL",
+	"phoneWrapperOdd": "DFvQYmzFJzbtBwjgQQZ7C _28tMEXnSx2ZKiC95dHCSQ0 _33n4j4MBAyFTldds13l8JL wciEzyndZkQOb8D-uhUFG",
+	"desktopWrapperEven": "_3M4tYPEce2PpmbDvnftpYD _3nyCAdRyPHHLjW945xlYAn _33n4j4MBAyFTldds13l8JL wciEzyndZkQOb8D-uhUFG"
+};

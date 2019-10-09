@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/nav-backtotop</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="21.3745 8 18.55 10.179 33.3235 28 18.55 45.82 21.3745 48 37.954 28.001 37.954 27.999"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/nav-backtotop" transform="translate(28.000000, 28.000000) scale(-1, -1) rotate(90.000000) translate(-28.000000, -28.000000) ">
+            <rect id="Rectangle" fill="#D8D8D8" x="0" y="0" width="56" height="56"></rect>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Page-1" fill="#000000" xlink:href="#path-1"></use>
+            <g id="color" mask="url(#mask-2)" fill="#FFFFFF">
+                <g transform="translate(7.000000, 8.000000)" id="Rectangle-4">
+                    <rect x="0" y="0" width="42" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

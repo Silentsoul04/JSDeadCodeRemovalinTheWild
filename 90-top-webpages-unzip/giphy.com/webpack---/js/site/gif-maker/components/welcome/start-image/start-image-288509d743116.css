@@ -1,0 +1,16 @@
+exports = module.exports = require("../../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.id, "._2UgA51KRovVJJXk79gSFL6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}._38Tnt9xpcpi3XxsImBO-V9{text-transform:uppercase;font-weight:700;font-size:14px;cursor:pointer}._29w7CuZR4HFDAWR0IXK0MK{font-size:11px}._2hAQl8HAz5K9HqPOh5MIAh,._29w7CuZR4HFDAWR0IXK0MK{vertical-align:middle;margin-right:4px;height:13px}._2hAQl8HAz5K9HqPOh5MIAh{font-size:13px}._3j8oL1PgnZ8ixU006NlhNP{padding-right:12px}._3wAABND1ke9DX1kGVtyI0I{padding-left:10px}", ""]);
+
+// exports
+exports.locals = {
+	"startImageFooter": "_2UgA51KRovVJJXk79gSFL6",
+	"footerItem": "_38Tnt9xpcpi3XxsImBO-V9",
+	"startImageBackArrow": "_29w7CuZR4HFDAWR0IXK0MK ss-icon ss-navigateleft",
+	"startImageShuffleIcon": "_2hAQl8HAz5K9HqPOh5MIAh ss-icon ss-shuffle",
+	"startImageShuffleButton": "_3j8oL1PgnZ8ixU006NlhNP _38Tnt9xpcpi3XxsImBO-V9",
+	"backToWelcomeButton": "_3wAABND1ke9DX1kGVtyI0I _38Tnt9xpcpi3XxsImBO-V9"
+};

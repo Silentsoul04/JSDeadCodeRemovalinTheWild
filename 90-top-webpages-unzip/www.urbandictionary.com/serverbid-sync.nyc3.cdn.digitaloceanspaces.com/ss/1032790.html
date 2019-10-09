@@ -1,0 +1,76 @@
+<html>
+    <body>
+        <script>
+         (function() {
+             var pixelUrls = ["https://ib.adnxs.com/getuid?https%3A%2F%2Fe.serverbid.com%2Fudb%2F9969%2Fsync%2Fi.gif%3FpartnerId%3D28%26userId%3D%24UID", "https://pixel.advertising.com/ups/56621/occ", "https://ssum-sec.casalemedia.com/usermatchredir?s=185073&cb=https%3A%2F%2Fe.serverbid.com%2Fudb%2F9969%2Fsync%2Fi.gif%3FpartnerId%3D1%26userId%3D", "https://bttrack.com/pixel/cookiesync?source=a0ae337b-1bd0-4e75-ada7-a2993da64737&secure=1"];
+
+             var DAYS                = 24 * 60 * 60 * 1000;
+             var SMARTSYNC_CALLBACK  = 'serverbidCallBids';
+             var SYNC_COOKIE_TTL     = 0.75 * DAYS;
+             var SYNC_COOKIE         = 'sb_ss';
+
+             var pixelsInFlight      = [];
+             var inSecure            = window.location.protocol.indexOf('s') < 0;
+
+             var SCRIPT_VERSION      = "31";
+
+             function createPixel(src) {
+                 var p = document.createElement('img');
+                 p.setAttribute("height", "0px");
+                 p.setAttribute("width", "0px");
+                 p.setAttribute("border", "0");
+                 p.setAttribute("style", "position:absolute;");
+                 p.onerror=function() { return this.style.display = "none"; };
+                 p.setAttribute("src", src);
+                 document.body.appendChild(p);
+             }
+
+             function getCookie(name) {
+                 var value = "; " + document.cookie;
+                 var parts = value.split("; " + name + "=");
+                 if (parts.length == 2) return parts.pop().split(";").shift();
+             }
+
+             function setCookie(c_name, value, exdays) {
+                 var exdate = new Date();
+                 exdate.setDate(exdate.getDate() + exdays);
+                 var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+                 document.cookie = c_name + "=" + c_value;
+             }
+
+             function createCookie() {
+                 var current_version = getCookie(SYNC_COOKIE) || "0";
+                 if (current_version != SCRIPT_VERSION) {
+                     var date = new Date();
+                     date.setTime(date.getTime() + SYNC_COOKIE_TTL);
+                     return (document.cookie = SYNC_COOKIE + "=" + SCRIPT_VERSION +"; expires=" + date.toUTCString() + "; path=/" || 1);
+                 }
+             }
+             function createPixels() {
+                 for (var i=0; i<pixelUrls.length; i++) {
+                     var pixelUrl = pixelUrls[i];
+                     if (inSecure || pixelUrl.match(/^https:/)) {
+                         createPixel(pixelUrl);
+                     }
+                 }
+                 var openx_frame = document.createElement('iframe');
+                 openx_frame.style.display = "none";
+                 openx_frame.src = "https://gift-connect-d.openx.net/w/1.0/cm?id=fd531c74-f5ed-4e60-8874-939fb2acafa1&r=https%3A%2F%2Fe.serverbid.com%2Fudb%2F9969%2Fsync%2Fi.gif%3FpartnerId%3D19%26userId%3D";
+                 document.body.appendChild(openx_frame);
+
+             }
+
+             if (createCookie()) {
+                 createPixels();
+             } else if (window[SMARTSYNC_CALLBACK]) {
+                 window[SMARTSYNC_CALLBACK]();
+             }
+             var rubicon = document.createElement('iframe');
+             rubicon.style.display = "none";
+             rubicon.src = "https://secure-assets.rubiconproject.com/utils/xapi/multi-sync.html?p=17632&endpoint=us-east";
+             document.body.appendChild(rubicon);
+
+         })();
+        </script>
+    </body>
+</html>

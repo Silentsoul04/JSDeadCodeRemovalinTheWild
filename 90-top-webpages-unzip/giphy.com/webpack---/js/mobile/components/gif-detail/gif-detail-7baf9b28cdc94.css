@@ -1,0 +1,26 @@
+exports = module.exports = require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!./../../shared/constants.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+
+// module
+exports.push([module.id, "._13efx22B171vmL5NX_gJ90{position:relative;display:block}._1xfx-KONMTY2K_oJ5IzXxy{background-color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyPurple"] + ";height:67px;width:67px;position:absolute;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-size:33px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:-webkit-transform 1s ease-in;transition:-webkit-transform 1s ease-in;transition:transform 1s ease-in;transition:transform 1s ease-in,-webkit-transform 1s ease-in}.mHzFmT36l-rumW49GMMBu{left:-67px}._1-7ablYlxGnC9b69ux4K-a{padding-top:7px}._1lNQwFv1D1PmepxBLQ9G85{padding-right:5px}._3B-MPqk65A7kxUG3NcWZrX{right:-67px}._3L-FLoea0m4xTeqZCHtuiF{padding-left:5px}._2Yy6EwTk3gmXJDuxToPUqV{margin-bottom:10px;position:relative;overflow:hidden}._2Yy6EwTk3gmXJDuxToPUqV img{-webkit-touch-callout:default}._1CT5Y0zZyL7TYoY1fih4P1{background-color:transparent!important;background-image:url(\"/static/img/backgrounds/bg-tile-dark.png\")}._1CT5Y0zZyL7TYoY1fih4P1 img{background-color:inherit!important}", ""]);
+
+// exports
+exports.locals = {
+	"colors": "'shared/css/colors.css'",
+	"constants": "'./../../shared/constants.css'",
+	"margin": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!./../../shared/constants.css").locals["margin"] + "",
+	"giphyPurple": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyPurple"] + "",
+	"swipeButtonSize": "67px",
+	"maxGifHeight": "610px",
+	"gifContainer": "_13efx22B171vmL5NX_gJ90",
+	"swipe": "_1xfx-KONMTY2K_oJ5IzXxy",
+	"leftArrow": "mHzFmT36l-rumW49GMMBu _1xfx-KONMTY2K_oJ5IzXxy",
+	"iconAlign": "_1-7ablYlxGnC9b69ux4K-a",
+	"leftArrowIcon": "_1lNQwFv1D1PmepxBLQ9G85 ss-navigateleft _1-7ablYlxGnC9b69ux4K-a",
+	"rightArrow": "_3B-MPqk65A7kxUG3NcWZrX _1xfx-KONMTY2K_oJ5IzXxy",
+	"rightArrowIcon": "_3L-FLoea0m4xTeqZCHtuiF ss-navigateright _1-7ablYlxGnC9b69ux4K-a",
+	"media": "_2Yy6EwTk3gmXJDuxToPUqV",
+	"sticker": "_1CT5Y0zZyL7TYoY1fih4P1 _2Yy6EwTk3gmXJDuxToPUqV"
+};

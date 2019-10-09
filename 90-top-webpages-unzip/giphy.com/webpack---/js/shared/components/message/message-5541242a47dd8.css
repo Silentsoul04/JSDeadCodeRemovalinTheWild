@@ -1,0 +1,28 @@
+exports = module.exports = require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/buttons.css"), undefined);
+
+// module
+exports.push([module.id, "._2Pfcp3pBsZSzI0pIzXLPTX{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;background:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["dimColor"] + ";display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}._3MAq4XoHYFQKxPAM0vludN{height:100%;left:0;position:fixed;top:0;width:100%}._3f-REDxRTllxO81JpMXHK3{background:transparent;max-height:300px;max-width:600px;width:100%;height:100%}._3f-REDxRTllxO81JpMXHK3 h3{text-align:center}._3f-REDxRTllxO81JpMXHK3 .hzlagwSiJtcH-89JDdeew{-webkit-animation:apy0r66Et4EGe0Kr1akA4 .3s ease-out;animation:apy0r66Et4EGe0Kr1akA4 .3s ease-out}.hzlagwSiJtcH-89JDdeew{background:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + ";-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-box-flex:0;-webkit-flex:0;-ms-flex:0;flex:0;padding:50px;text-align:center}._2ajPjVHQ0IMyh0-LUGjkah{font-size:22px;margin-bottom:8px}._2l1kyaOlMmj2M6qZTeaQGI{font-size:16px;font-weight:400;margin:0 0 35px;text-transform:none}._4EfksgaoqBriSY5DIQJdI{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0 auto 10px;width:250px}.tc8zwittnm-U0-kjOXRhn{background-color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["secondaryCTA"] + ";margin-right:15px;width:100%}._1poqgbg9KuM23NjRUrscMG{background-color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyRed"] + ";width:100%}@-webkit-keyframes apy0r66Et4EGe0Kr1akA4{0%{opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px)}to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes apy0r66Et4EGe0Kr1akA4{0%{opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px)}to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}}", ""]);
+
+// exports
+exports.locals = {
+	"mainTitle": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["mainTitle"] + "",
+	"dimColor": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["dimColor"] + "",
+	"giphyRed": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyRed"] + "",
+	"secondaryCTA": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["secondaryCTA"] + "",
+	"giphyDarkGrey": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + "",
+	"button": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/buttons.css").locals["button"] + "",
+	"container": "_2Pfcp3pBsZSzI0pIzXLPTX",
+	"fixedContainer": "_3MAq4XoHYFQKxPAM0vludN _2Pfcp3pBsZSzI0pIzXLPTX",
+	"modalContainer": "_3f-REDxRTllxO81JpMXHK3 _2Pfcp3pBsZSzI0pIzXLPTX",
+	"inner": "hzlagwSiJtcH-89JDdeew",
+	"messageIn": "apy0r66Et4EGe0Kr1akA4",
+	"title": "_2ajPjVHQ0IMyh0-LUGjkah " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["mainTitle"] + "",
+	"subtitle": "_2l1kyaOlMmj2M6qZTeaQGI",
+	"buttons": "_4EfksgaoqBriSY5DIQJdI",
+	"cancel": "tc8zwittnm-U0-kjOXRhn " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/buttons.css").locals["button"] + "",
+	"confirm": "_1poqgbg9KuM23NjRUrscMG " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/buttons.css").locals["button"] + ""
+};

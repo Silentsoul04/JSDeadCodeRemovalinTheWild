@@ -1,0 +1,2 @@
+export const TAG_LIMIT = 20
+export const GOOGLE_RECAPTCHA_KEY = '6LdLAasUAAAAAJIGrMFJ9wvf1UXIibLjHyeCZgH3'

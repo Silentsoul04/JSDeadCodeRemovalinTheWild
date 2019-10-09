@@ -1,0 +1,14 @@
+exports = module.exports = require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/animated-social.css"), undefined);
+
+// module
+exports.push([module.id, ".l5my5hy8R0nH3NlheeeUV{float:right;height:34px;overflow:hidden;position:relative;width:34px;margin-left:-1px;margin-right:4px;margin-top:-2px}", ""]);
+
+// exports
+exports.locals = {
+	"favorite": "l5my5hy8R0nH3NlheeeUV",
+	"favoriteActive": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/animated-social.css").locals["favoriteActive"] + "",
+	"favoriteIcon": "_3_Iqv2eF8FuK3joSjURmOO " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/animated-social.css").locals["favorite"] + "",
+	"favoriteIconActive": "_1_cwJiJLy366TYHJ0ZojUn " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/animated-social.css").locals["favoriteActive"] + ""
+};

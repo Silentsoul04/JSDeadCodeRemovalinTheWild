@@ -1,0 +1,12 @@
+exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.id, "", ""]);
+
+// exports
+exports.locals = {
+	"bodyFont": "interface, Helvetica Neue, helvetica, sans-serif",
+	"titleFont": "nexablack, sans-serif"
+};

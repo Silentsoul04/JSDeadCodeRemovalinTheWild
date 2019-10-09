@@ -1,0 +1,18 @@
+exports = module.exports = require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css"), undefined);
+
+// module
+exports.push([module.id, ".s2eNl1Ha4kRM_1vtg8mtH{text-transform:none;margin:15px 0 10px;text-align:left}._3ISacmZ9eEJhJj-D5jHP9F{text-align:left}._25dVOvNBgX-lK66eOWR_f0{overflow-y:hidden;max-height:90px}", ""]);
+
+// exports
+exports.locals = {
+	"colors": "'shared/css/colors.css'",
+	"giphyDarkGrey": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyDarkGrey"] + "",
+	"typography": "'shared/css/typography.css'",
+	"sectionHeading": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["sectionHeading"] + "",
+	"title": "s2eNl1Ha4kRM_1vtg8mtH " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["sectionHeading"] + "",
+	"fullContainer": "_3ISacmZ9eEJhJj-D5jHP9F",
+	"truncatedContainer": "_25dVOvNBgX-lK66eOWR_f0 _3ISacmZ9eEJhJj-D5jHP9F"
+};
