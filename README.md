@@ -1,4 +1,4 @@
-# JSDeadCodeRemovalinTheWild
+# JSDeadCodeRemovalinTheWild (with different settings)
 
 | #  | Webpage | Redirect | Login  | 0 | 1 | 2 | 3 |
 | ------------------------------------ |:---:| :---:| :---:| :---: | :---: | :---:|:---:|
@@ -49,13 +49,31 @@
 | 45 | www.google.co.in| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
 | 46 | www.google.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
 | 47 | www.google.com.hk| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
-
-
-
-| 48 | www.ebay.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
-| 49 | www.ebay.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
-| 50 | www.ebay.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
-
+| 48 | www.imdb.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 49 | www.indeed.nl | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
+| 50 | www.instagram.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 51 | www.linkedin.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 52 | www.medicalnewstoday.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 53 | www.naver.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 54 | www.nih.gov | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 55 | www.nytimes.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 56 | www.office.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 57 | www.okezone.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 58 | www.pinterest.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 59 | www.qq.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 60 | www.reddit.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 61 | www.sina.com.cn | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 62 | www.sohu.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 63 | www.tmall.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 64 | www.tumblr.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 65 | www.twitch.tv | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 66 | www.urbandictionary.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 67 | www.w3.org | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 68 | www.walmart.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 69 | www.whatsapp.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 70 | www.wikipedia.org | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 71 | www.yahoo.co.jp | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 72 |www.youtube.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
 
 # JSDeadCodeRemovalinTheWild
 
