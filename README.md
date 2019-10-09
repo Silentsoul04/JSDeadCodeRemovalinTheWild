@@ -2,6 +2,43 @@
 
 | #  | Webpage | Redirect | Login  | 0 | 1 | 2 | 3 |
 | ------------------------------------ |:---:| :---:| :---:| :---: | :---: | :---:|:---:|
+| 1  | apache.org | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | 
+| 2  | aws.amazon.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | 
+| 3  | ds.alipay.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | 
+| 4  | edition.cnn.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | 
+| 5  | en.gravatar.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | 
+| 6  | europa.eu | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 7  | flickr.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: | 
+| 8  | giphy.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: | 
+| 9  | github.com  | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 10 | goo.gl | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 11 | imgur.com| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 12 | m.360.cn | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 13 | m.jd.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 14 | m.xinhuanet.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 15 | medium.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 16 | nl.godaddy.com| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 17 | quizlet.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 18 | soundcloud.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 19 | sourceforge.net | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 20 | stackexchange.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 21 | stackoverflow.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 22 | t.co | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 23 | twitter.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 24 | vimeo.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 25 | vk.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 26 | wordpress.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 27 | wordpress.org | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 28 | world.taobao.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 29 | www.adobe.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 30 | www.aliexpress.com| :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+
+
+
+# JSDeadCodeRemovalinTheWild
+
+| #  | Webpage | Redirect | Login  | 0 | 1 | 2 | 3 |
+| ------------------------------------ |:---:| :---:| :---:| :---: | :---: | :---:|:---:|
 | 1  | m.360.cn | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | 
 | 2  | m.intl.taobao.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | 
 | 3  | m.sohu.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | 
