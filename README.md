@@ -1,17 +1,22 @@
 # JSDeadCodeRemovalinTheWild
 
-
-| Webpage | Redirect | Login  | 0 | 1 | 2 | 3 |
-| ------------------------------------ |:---:| :---:| :---:| :---: | :---: | :---:|
-| m.youtube.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
-| www.amazon.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
-| www.apple.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
-| www.baidu.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
-| www.linkedin.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
-| www.tmall.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
-| www.wikipedia.org | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
-| www.yahoo.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
-| xw.qq.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| #  | Webpage | Redirect | Login  | 0 | 1 | 2 | 3 |
+| ------------------------------------ |:---:| :---:| :---:| :---: | :---: | :---:|:---:|
+| 1  | m.360.cn | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | 
+| 2  | m.intl.taobao.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | 
+| 3  | m.sohu.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | 
+| 4  | m.yelp.nl | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | 
+| 5  | m.youtube.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
+| 6  | www.adobe.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 7  | www.apple.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: | 
+| 8  | www.baidu.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
+| 9  | wwww.bing.com  | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 10 | www.fandom.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 11 | www.linkedin.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 12 | www.reddit.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 13 | www.tmall.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
+| 14 | www.yahoo.com | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |  :x: |
+| 15 | xw.qq.com | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |  :x: |
 
 
 ## Analyse www.linkdin.com
