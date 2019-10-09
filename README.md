@@ -1,4 +1,4 @@
-# JSDeadCodeRemovalinTheWild (with different settings)
+# JSDeadCodeRemovalinTheWild (with different resource saver settings)
 
 | #  | Webpage | Redirect | Login  | 0 | 1 | 2 | 3 |
 | ------------------------------------ |:---:| :---:| :---:| :---: | :---: | :---:|:---:|
