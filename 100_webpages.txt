@@ -19,14 +19,14 @@ https://www.pinterest.com/
 https://www.blogger.com/about/?r=1-null_user
 https://www.360.cn/
 https://www.bing.com/
-https://www.doubleclick.net
+https://www.doubleclick.net/
 https://www.reddit.com/
 https://www.msn.com/nl-nl/
 https://www.weibo.com/overseas
-https://www.sina.com.cn
+https://www.sina.com.cn/
 https://wordpress.com/
 https://www.jd.com/
-https://www.fandom.com
+https://www.fandom.com/
 https://vimeo.com/
 https://www.youtube.com/?feature=youtu.be
 https://aws.amazon.com/
@@ -67,7 +67,7 @@ https://www.icloud.com/
 https://products.office.com/nl-nl/home?ms.url=office365com&rtc=1
 http://apache.org/
 https://medium.com/
-https://www.bbc.com
+https://www.bbc.com/
 https://www.theguardian.com/international
 https://www.w3.org/
 https://www.aliexpress.com/
