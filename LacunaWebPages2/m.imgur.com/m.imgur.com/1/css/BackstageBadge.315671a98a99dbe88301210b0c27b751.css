@@ -1,0 +1,15 @@
+.BackstageBadge {
+    display: block;
+    position: fixed;
+    right: 20px;
+    bottom: 75px;
+    border-radius: 6px;
+    padding: 5px;
+    color: #fff;
+    background-color: #b22222;
+    z-index: 10000
+}
+
+.BackstageBadge:hover {
+    text-decoration: underline
+}

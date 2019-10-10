@@ -1,0 +1,1 @@
+<div id="lang-guess">WordPress is ook beschikbaar in <a href='https://nl.wordpress.org/'>Nederlands</a> (ook <a href='https://de.wordpress.org/'>Deutsch</a>, <a href='https://fr.wordpress.org/'>Français</a>).</div>

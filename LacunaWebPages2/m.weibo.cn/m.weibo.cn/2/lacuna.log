@@ -1,0 +1,28 @@
+{
+    "runDate": "2019-10-10T14:10:08.862Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "overseas.html",
+        "destination": "lacunaWebPages2/m.weibo.cn/m.weibo.cn/2",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 2,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages2/m.weibo.cn/m.weibo.cn/2"
+    },
+    "graphStats": {
+        "connectedNodes": 0,
+        "disconnectedNodes": 0,
+        "nodes": 0,
+        "files": 0
+    },
+    "deadFunctions": [],
+    "aliveFunctions": [],
+    "allFunctions": [],
+    "affectedFiles": []
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>icon_report</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon_report" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="report" transform="translate(2.000000, 2.000000)">
+            <rect id="frame" x="0" y="0" width="36" height="36"></rect>
+            <g id="icon" transform="translate(3.000000, 1.500000)" fill="#333333">
+                <path d="M21,27.87885 L21,25.49985 C21,24.67335 21.6735,23.99985 22.5,23.99985 L24.879,23.99985 L21,27.87885 Z M3,29.99985 L3,2.99985 L27,2.99985 L27,20.99985 L22.5,20.99985 C20.019,20.99985 18,23.01885 18,25.49985 L18,29.99985 L3,29.99985 Z M3,-0.00015 C1.3455,-0.00015 0,1.34685 0,2.99985 L0,29.99985 C0,31.65585 1.3455,32.99985 3,32.99985 L18,32.99985 C19.2285,32.99985 20.7525,32.36985 21.621,31.49985 L28.5,24.62085 C29.37,23.75235 30,22.22835 30,20.99985 L30,2.99985 C30,1.34685 28.6545,-0.00015 27,-0.00015 L3,-0.00015 Z" id="Fill"></path>
+                <polygon id="Fill" points="6 24 15 24 15 21 6 21"></polygon>
+                <polygon id="Fill" points="24 15 18 15 18 18 24 18"></polygon>
+                <polygon id="Fill" points="24 9 18 9 18 12 24 12"></polygon>
+                <path d="M6,18 C6,15.2385 7.7385,13.5 10.5,13.5 C13.2615,13.5 15,15.2385 15,18 L6,18 Z" id="Fill"></path>
+                <path d="M10.5,12 C8.844,12 7.5,10.656 7.5,9 C7.5,7.344 8.844,6 10.5,6 C12.156,6 13.5,7.344 13.5,9 C13.5,10.656 12.156,12 10.5,12 Z" id="Fill"></path>
+            </g>
+        </g>
+    </g>
+</svg>

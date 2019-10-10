@@ -1,0 +1,30 @@
+
+            window._coss_cgi_recovery = {
+                "pgportal": ["tpl", "callback"],
+                "newsfeed": ["count", "callback", "offset", "source", "item", "recpos"],
+                "floorv2": ["proids", "filterfloors", "totals", "intervals", "recpos", "callback"],
+                "brandshangou": ["aid", "offset", "count", "itemnum", "showtype", "callback", "topskuid", "topactid", "matchactid", "filterclass", "matchclass"],
+                "categoryentry": ["callback", "projectid", "total", "interval", "ids", "totals", "intervals"],
+                "pingou": ["id", "offset", "shopids", "cgid", "callback", "count", "topcateid", "topcount", "pagetype", "cgid1s", "cgid2s", "cgid3s", "recpos", "pretime"],
+                "smart": ["callback", "id", "offset", "count", "cgid1s", "cgid2s", "cgid3s", "reqtype", "pagtype", "matchproperty", "filterproperty", "recpos"],
+                "pinlike": ["callback", "offset", "count", "recpos"],
+                "secondkill": ["actid", "offset", "count", "cgid", "poolid", "callback", "tpl", "pretime", "venderid", "classtype", "history", "sorttype", "recpos", "starttime", "endtime"],
+                "brandsecondkill": ["actid", "count", "itemnum", "topbrandid", "callback", "offset", "fieldstart", "fieldend", "pretime"],
+                "findgoods": ["tabid", "page", "callback", "client", "clientVersion", "id"],
+                "topic": ["sceneid", "topn", "count", "callback", "topicid", "itemnum", "offset", "c1", "c2", "c3", "recpos"],
+                "rocket": ["sceneid", "typeid", "pageindex", "pagesize", "category", "category_filter", "aid_filter"],
+                "autorank": ["cgids", "offset", "count", "callback", "cate1", "cate2", "cate3", "rankcount", "skucount", "rankid", "property", "recpos"],
+                "wxportal": ["tpl"],
+                "ranklist": ["rids", "callback", "sn", "rt", "st", "cl"],
+                "batchkeyword": ["pcs", "callback", "cgid1", "cgid2", "cgid3"],
+                "brandsale": ["aid", "offset", "count", "topad", "callback", "itemnum", "itemstyle"],
+                "reclike": ["pi", "pc", "callback", "mid", "recpos"],
+                "focusbi": ["gids", "pc", "callback", "pcs"],
+                "entryicon": ["pcs", "callback", "recpos"],
+                "keyword": ["ruleid", "pi", "pc", "callback", "cgid1", "cgid2", "cgid3", "pcs"],
+                "sqportal": ["tpl"],
+                "mportal": ["tabid", "actid", "ptype", "pi", "pc", "pcs", "gbyarea", "cgid", "areaid", "sorttype", "level", "parent", "minimg", "callback", "tpl", "pretime", "exclarea", "options", "showtype", "btime", "etime", "eday", "sday", "groundid"],
+                "martv3": ["id", "offset", "shopids", "pretime", "cgid", "callback", "count", "pagetype", "cgid1s", "cgid2s", "cgid3s", "recpos", "matchproperty"],
+                "hiddenword": ["callback", "projectid", "total"]
+            }
+        

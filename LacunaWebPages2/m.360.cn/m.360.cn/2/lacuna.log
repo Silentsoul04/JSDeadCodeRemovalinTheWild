@@ -1,0 +1,28 @@
+{
+    "runDate": "2019-10-10T14:05:45.468Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages2/m.360.cn/m.360.cn/2",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 2,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages2/m.360.cn/m.360.cn/2"
+    },
+    "graphStats": {
+        "connectedNodes": 0,
+        "disconnectedNodes": 0,
+        "nodes": 0,
+        "files": 0
+    },
+    "deadFunctions": [],
+    "aliveFunctions": [],
+    "allFunctions": [],
+    "affectedFiles": []
+}

@@ -1,0 +1,3 @@
+
+        window.archive_setup = []
+    

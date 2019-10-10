@@ -1,0 +1,44 @@
+{
+    "runDate": "2019-10-10T14:15:26.516Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages2/nl.godaddy.com/nl.godaddy.com/3",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 3,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages2/nl.godaddy.com/nl.godaddy.com/3"
+    },
+    "graphStats": {
+        "connectedNodes": 1,
+        "disconnectedNodes": 0,
+        "nodes": 0,
+        "files": 1
+    },
+    "deadFunctions": [],
+    "aliveFunctions": [
+        {
+            "file": "index.html",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ],
+    "allFunctions": [],
+    "affectedFiles": [
+        {
+            "file": "index.html",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ]
+}

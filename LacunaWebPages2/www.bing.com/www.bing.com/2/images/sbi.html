@@ -1,0 +1,965 @@
+<style type="text/css">
+    #b_header .hassbi #sbiarea,
+    #sbox .hassbi #sbiarea,
+    #sbBoxCnt .hassbi #sbiarea,
+    #sboxCont .hassbi #sbiarea {
+        width: 36px;
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+        height: 36px;
+        background: #fff;
+        z-index: 4
+    }
+
+    .as_on #b_header .hassbi #sbiarea,
+    .as_on #sbox .hassbi #sbiarea,
+    .as_on #sbBoxCnt .hassbi #sbiarea {
+        display: none
+    }
+
+    #sbox .hassbi #sbiarea {
+        right: 45px;
+        top: 5px
+    }
+
+    #b_header .hassbi #sbiarea {
+        right: 40px;
+        top: 2px
+    }
+
+    #b_header .hassbi .b_searchboxSubmitWrapper #sbiarea {
+        top: 3px
+    }
+
+    #sbBoxCnt .hassbi #sbiarea {
+        right: 40px;
+        top: 3px;
+        padding: 0
+    }
+
+    #sboxCont .hassbi #sbiarea {
+        height: 34px;
+        width: 34px;
+        right: 40px;
+        top: 1px;
+        padding: 0 2px
+    }
+
+    #sboxCont .hassbi .hasText #sbiarea {
+        display: none
+    }
+
+    #sbBoxCnt .hassbi #sb_form_q {
+        padding-right: 98px
+    }
+
+    #sboxCont .hassbi #sb_form_q,
+    #sboxCont .hassbi .hasText #sb_form_q {
+        padding-right: 0;
+        margin-right: 0
+    }
+
+    .hassbi #sw_clx {
+        right: 68px;
+        background-color: #fff;
+        padding: 0 15px;
+        flex: none;
+        position: absolute;
+        z-index: 4
+    }
+
+    .as_on .hassbi #sw_clx {
+        right: 44px
+    }
+
+    .as_on #sbBoxCnt .hassbi #clrX {
+        right: 53px
+    }
+
+    #sbox .hassbi #sw_clx {
+        right: 81px;
+        padding: 12px
+    }
+
+    #sboxCont .hassbi .hasText #sw_clx {
+        right: 0;
+        top: 10px
+    }
+
+    body .b_searchboxSubmitWrapper {
+        min-width: initial;
+        flex: none
+    }
+
+    #sbiarea {
+        display: none
+    }
+
+    #sbi_b {
+        margin: 8px
+    }
+
+    #sbicom {
+        position: absolute;
+        display: block
+    }
+
+    #sb_sbip::before {
+        display: none
+    }
+
+    #sb_sbip::after {
+        display: none
+    }
+
+    #sb_sbi {
+        cursor: pointer;
+        display: inline-block;
+        height: 36px;
+        width: 36px
+    }
+
+    #sbiconfirm {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .6);
+        z-index: 1000
+    }
+
+    #sbiconfirm[shdlg] {
+        display: block
+    }
+
+    #sbiconfirmdialog {
+        background-color: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 8px 8px 0 0
+    }
+
+    #confirmtitle {
+        text-align: center;
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 28px;
+        color: #111
+    }
+
+    #confirmsubtitle {
+        text-align: center;
+        width: 287px;
+        margin: auto;
+        font-size: 14px;
+        line-height: 18px;
+        padding-top: 8px;
+        color: #444
+    }
+
+    .confirmbtn {
+        text-align: center;
+        height: 50px;
+        width: 287px;
+        font-size: 16px;
+        line-height: 50px;
+        border-radius: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer
+    }
+
+    .confirmbtn#confirmyesbtn {
+        margin-top: 24px;
+        margin-bottom: 12px;
+        color: #fff;
+        background-color: #00809d
+    }
+
+    .confirmbtn#confirmnobtn {
+        color: #444;
+        background-color: #f9f9f9;
+        border: 1px solid #ececec
+    }
+
+    #confirmdescription {
+        text-align: center;
+        font-size: 12px;
+        line-height: 16px;
+        width: 287px;
+        margin: 24px auto;
+        color: #666
+    }
+
+    #confirmclose {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 56px;
+        height: 56px
+    }
+
+    #confirmcloseimg {
+        width: 16px;
+        height: 16px;
+        margin: 20px
+    }
+
+    html[noscroll] {
+        overflow: hidden;
+        overflow-y: hidden;
+        position: fixed
+    }
+
+    .hassbi .b_searchboxForm .b_searchbox {
+        margin-right: 10px;
+        padding-right: 25px;
+        box-sizing: border-box
+    }
+
+    .sbidialog {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #333;
+        z-index: 1001
+    }
+
+    .sbidialog[shdlg] {
+        display: block
+    }
+
+    .sbipane {
+        padding: 20px;
+        background: #fff;
+        position: fixed;
+        z-index: 1001;
+        border-radius: 4px 4px 0 0;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 2px 3px 0 rgba(0, 0, 0, .1);
+        font-family: arial;
+        font-size: 13px;
+        line-height: 17px;
+        color: #444;
+        left: 0;
+        right: 0;
+        bottom: 0
+    }
+
+    .sbiclsbtn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 1
+    }
+
+    .sbitit {
+        font-size: 20px;
+        font-family: segoe UI;
+        line-height: 24px;
+        color: #111;
+        text-align: center
+    }
+
+    .sbisubtit {
+        text-align: center
+    }
+
+    .normalzone {
+        margin-top: 20px
+    }
+
+    .pastearea,
+    .photopn,
+    .dropzone {
+        width: 45%;
+        height: 40px;
+        display: inline-block;
+        background: #f9f9f9;
+        border: 1px solid #ececec;
+        line-height: 40px;
+        vertical-align: middle;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden
+    }
+
+    .pastearea {
+        width: 100%;
+        height: 42px;
+        margin-top: 20px;
+        box-sizing: border-box
+    }
+
+    .pastearea[psting] .pstpn {
+        display: none
+    }
+
+    .imgpst {
+        width: 100%;
+        border: none;
+        height: 40px;
+        padding: 0 8px;
+        box-sizing: border-box;
+        display: none
+    }
+
+    .pastearea[psting] .imgpst {
+        display: block
+    }
+
+    .photopn {
+        float: left
+    }
+
+    .sbidialog .psticon,
+    .sbidialog .tpicon {
+        margin-right: 8px;
+        vertical-align: -2px
+    }
+
+    .dropzone {
+        float: right
+    }
+
+    .dptext {
+        display: none
+    }
+
+    .sbidialog[dropping] .normalzone,
+    .sbidialog[dropping] .dpnmpn {
+        display: none
+    }
+
+    .sbidialog[dropping] .dpintext {
+        display: inline-block;
+        font-size: 24px;
+        color: #919191;
+        font-family: 'Segoe UI'
+    }
+
+    .sbidialog[dropping] .dropzone {
+        padding: 27px 0;
+        line-height: 100px;
+        background: #f5f5f5
+    }
+
+    .brtext {
+        color: #007daa;
+        margin-left: 4px;
+        cursor: pointer
+    }
+
+    .dpintext {
+        display: none
+    }
+
+    .fileinput {
+        display: none
+    }
+
+    .actpn {
+        border-top: 1px solid #ececec;
+        height: 45px;
+        color: #007daa;
+        background: #f9f9f9;
+        line-height: 45px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 20px -20px -20px;
+        padding: 0 20px;
+        border-radius: 0 0 4px 4px
+    }
+
+    .camcontent {
+        height: 100%
+    }
+
+    .cambtn {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        margin: auto
+    }
+
+    .webvideo {
+        display: block;
+        background-color: #222;
+        width: 100%;
+        height: calc(100% - 115px);
+        transition: height 1s
+    }
+
+    .sbi_form,
+    .sbi_form_ph,
+    .sbi_dmlnk {
+        display: none
+    }
+
+    #bottomcontainer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 115px;
+        background-color: #333;
+        color: #fff;
+        z-index: 1002
+    }
+
+    .barsection {
+        display: block;
+        float: left;
+        width: 33.33%;
+        text-align: center
+    }
+
+    #barspace {
+        height: 9px
+    }
+
+    #barbtns {
+        height: 84px
+    }
+
+    #barbtns .barsection {
+        height: 84px
+    }
+
+    .baricon {
+        width: 23px;
+        height: 23px;
+        margin-top: 20px;
+        margin-bottom: 5px
+    }
+
+    .baricon.cambtn,
+    .baricon.explorebtn {
+        width: 40px;
+        height: 40px;
+        margin-top: 8px;
+        margin-bottom: 0
+    }
+
+    .bartitle {
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px
+    }
+
+    #barline {
+        height: 1px;
+        background-color: #919191;
+        border: 1px solid #ddd
+    }
+
+    #barinfo {
+        height: 30px;
+        line-height: 30px;
+        font-size: 8px;
+        text-align: center
+    }
+
+    #camcontent {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%
+    }
+
+    #webvideo {
+        width: 100%;
+        height: 100%
+    }
+
+    .closebtndiv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        z-index: 1
+    }
+
+    #closebtnimg {
+        width: 20px;
+        height: 20px;
+        margin: 15px
+    }
+
+    .closeexpdiv {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        width: 50px;
+        height: 50px
+    }
+
+    #closeexpimg {
+        width: 14px;
+        height: 14px;
+        margin: 18px
+    }
+
+    #vs_samples {
+        width: 309px;
+        margin: auto
+    }
+
+    #vs_samples .vs_sample_img.rms_img {
+        width: 95px;
+        height: 95px;
+        border-radius: 4px
+    }
+
+    #vs_samples .vs_sample_img_link {
+        display: inline-block;
+        vertical-align: top;
+        width: 95px;
+        height: 95px;
+        margin: 4px
+    }
+
+    #vs_samples .vs_search_icon {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        bottom: 26px;
+        left: 68px
+    }
+
+    .explorediv {
+        width: 100%;
+        position: absolute;
+        bottom: 112px;
+        display: none
+    }
+
+    .explorediv.show {
+        display: block
+    }
+
+    .explorepanel {
+        width: 90%;
+        margin: auto;
+        padding: 20px 0 14px 0;
+        border-radius: 6px;
+        background-color: #fff
+    }
+
+    #exploretitle {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #111;
+        letter-spacing: .2px
+    }
+
+    #exploresubtitle {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 4px;
+        margin-bottom: 16px;
+        color: #444
+    }
+
+    #explorehint {
+        display: none;
+        text-align: center;
+        font-size: 12px;
+        margin-top: 16px;
+        margin-bottom: 4px;
+        color: #444
+    }
+
+    #explorehintseparator {
+        margin: 0 20px 16px 20px
+    }
+
+    .sbidialog[nowebcam] .explorediv #explorehint,
+    .sbidialog[diswebcam] .explorediv #explorehint {
+        display: block
+    }
+
+    .sbidialog[nowebcam] .explorediv .closeexpdiv,
+    .sbidialog[diswebcam] .explorediv .closeexpdiv {
+        display: none
+    }
+
+    .popuptrianglediv {
+        float: right;
+        height: 15px;
+        position: relative;
+        bottom: 1px
+    }
+
+    .popuptrianglediv.exploretriangle {
+        width: 33.33%
+    }
+
+    .popuptriangle {
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 12px solid #fff;
+        margin: auto
+    }
+
+    .popupinnertriangle {
+        width: 0;
+        height: 0;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-top: 11px solid #fff;
+        position: relative;
+        top: -12px;
+        left: -11px
+    }
+
+    .cammsgdiv {
+        display: none;
+        position: relative;
+        bottom: 195px;
+        width: 160px;
+        margin: auto;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 16px;
+        border-radius: 6px;
+        background-color: #fff;
+        color: #444
+    }
+
+    .cammsgdiv.show {
+        display: block
+    }
+
+    .sbidialog[nowebcam] .cambtn,
+    .sbidialog[diswebcam] .cambtn {
+        display: none
+    }
+
+    .sbidialog[nowebcam] .barsection,
+    .sbidialog[diswebcam] .barsection {
+        width: 50%
+    }
+
+    .sbidialog[nowebcam] .popuptrianglediv.exploretriangle,
+    .sbidialog[diswebcam] .popuptrianglediv.exploretriangle {
+        width: 50%
+    }
+
+    .loadingdiv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none
+    }
+
+    .loadingdiv.show {
+        display: block
+    }
+
+    .loadingdiv #loadingimg {
+        position: absolute;
+        top: calc(50% - 16px);
+        left: calc(50% - 16px);
+        width: 32px;
+        height: 32px
+    }
+
+    @media(max-width:353px) {
+        .explorepanel {
+            width: 320px
+        }
+    }
+
+    @media(max-height:360px) {
+        div.explorepanel {
+            padding: 7px 0 1px
+        }
+        div#exploretitle {
+            font-size: 16px;
+            line-height: 18px
+        }
+        div#exploresubtitle {
+            margin-bottom: 6px
+        }
+        div#explorehint {
+            margin-top: 6px
+        }
+        hr#explorehintseparator {
+            margin: 0 20px 6px
+        }
+    }
+
+    @media(max-height:478px) and (min-width:568px) {
+        div.explorepanel {
+            position: relative;
+            width: 523px;
+            padding: 12px 0 4px 0
+        }
+        #vs_samples {
+            width: 515px
+        }
+        #vs_samples .vs_sample_img_link:nth-child(n+6) {
+            display: none
+        }
+        hr#explorehintseparator {
+            margin: 0 20px 6px
+        }
+        .closeexpdiv {
+            right: 0
+        }
+    }
+
+    @media(max-height:478px) and (min-width:671px) {
+        div.explorepanel {
+            position: relative;
+            width: 626px;
+            padding: 12px 0 4px 0
+        }
+        #vs_samples {
+            width: 618px
+        }
+        #vs_samples .vs_sample_img_link:nth-child(n+6) {
+            display: inline-block
+        }
+        hr#explorehintseparator {
+            margin: 0 20px 6px
+        }
+        .closeexpdiv {
+            right: 0
+        }
+    }
+
+    @media(min-width:600px) and (min-height:600px) {
+        div.explorepanel {
+            width: 338px;
+            position: relative;
+            left: 25%
+        }
+        .closeexpdiv {
+            right: 0
+        }
+    }
+</style>
+<div id="sbiarea" data-priority="2" data-idprefix="sb" data-ptn="Homepage">
+    <div id="sb_sbip" data-sbtip="Search using an image">
+        <div id="sb_sbi" tabindex="0" role="button" aria-label="Search using an image"><img callerAnswer="MultimediaComponents" id="sbi_b" class=" rms_img" role="none" width="20" height="20" src="/rs/3Q/jx/ic/2473a156/8f252c2b.svg" /></div>
+    </div><a id="sb_sbi_dmlnk" class="sbi_dmlnk" aria-hidden="true" href="/images" h="ID=SERP.5077,5031.1"></a>
+    <div id="sbiconfirm" data-priority="2">
+        <div id="sbiconfirmdialog">
+            <div id="confirmtitle">Visual Search</div>
+            <div id="confirmsubtitle">To search with an image, you'll need to allow Bing access to your camera</div>
+            <div id="confirmyesbtn" class="confirmbtn" role="button">Continue</div>
+            <div id="confirmnobtn" class="confirmbtn" role="button">Maybe later</div>
+            <div id="confirmdescription">The photos you provide may be used to improve Bing image processing services</div>
+            <div id="confirmclose"><img callerAnswer="MultimediaComponents" id="confirmcloseimg" height="16" width="16" alt="Close" class="rms_img" src="/rs/3Q/g6/ic/96b02243/a62adc22.svg" /></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    //<![CDATA[
+    _w.mmLog = function(n, t) {
+        var r = mmLogUrl(n, t),
+            u = "sendBeacon",
+            i = !0,
+            f, e;
+        if (navigator && navigator[u]) try {
+            f = navigator[u](r, "");
+            i = !f
+        } catch (o) {
+            i = !0
+        }
+        return i && (e = new Image, e.src = r), !0
+    };
+    _w.mmLogUrl = function(n, t) {
+        t = t || _G.IG;
+        var i = ["/fd/ls/ls.gif?IG=", t, "&Type=Event.ClientInst&DATA=", n, "&log=UserEvent"];
+        return i.join("")
+    };
+    var SbiUtil;
+    (function(n) {
+        function e(t, i) {
+            var s = "",
+                u, r, o;
+            if (i && (u = n.ge(i, "sbi_dmlnk"), r = u && u.getAttribute("h"), r))
+                if (t == "CI.Drop" || t == "CI.Paste") typeof si_T == "function" && si_T(r);
+                else if (t == "CI.Click") {
+                var f = null,
+                    e = null,
+                    h = r.match(/ID=[a-zA-Z0-9\.]+,[0-9]+\.[0-9]+/);
+                h && (o = h[0].substr(3).split(","), e = o[0], f = o[1]);
+                f && e && (s = [',"AppNS":"', e, '","K":"', f, '"'].join(""))
+            }
+            return s
+        }
+
+        function o(n) {
+            var u = null,
+                r, i, t;
+            if (n && n.length > 1 && location.search && location.search.length > 1)
+                for (r = n.toLowerCase() + "=", i = location.search.substr(1).toLowerCase().split("&"), t = 0; t < i.length; t++)
+                    if (i[t].indexOf(r) == 0) {
+                        u = i[t].replace(r, "");
+                        break
+                    }
+            return u
+        }
+
+        function s(n) {
+            var i = "",
+                r, t;
+            return n && n.length > 1 && location.search && location.search.length > 1 && (r = n.toLowerCase().split(","), t = location.search.substr(1).toLowerCase().split("&"), r.forEach(function(n) {
+                for (var r = 0; r < t.length; r++)
+                    if (t[r].indexOf(n + "=") == 0) {
+                        i += "&" + t[r];
+                        break
+                    }
+            })), i
+        }
+
+        function h(n, t) {
+            var s, h, f, e, o;
+            if (!t) return n;
+            var u = n,
+                i = {},
+                r = n.indexOf("?");
+            r != -1 && (u = n.substr(0, r + 1), s = n.substr(r + 1), h = s.split("&"), h.forEach(function(n) {
+                var t = n.split("="),
+                    r;
+                t && t.length == 2 && (r = t[0].toLowerCase(), i[r] === undefined && (i[r] = t[1]))
+            }));
+            t && (f = t.split("&"), f && f.forEach(function(n) {
+                var t = n.split("="),
+                    r;
+                t && t.length == 2 && (r = t[0].toLowerCase(), i[r] = t[1])
+            }));
+            e = r != -1 ? u : u + "?";
+            for (o in i) e += "&" + o + "=" + i[o];
+            return e
+        }
+        var i = "sbi-hi-src",
+            r = "sbi-addparams",
+            u = "click",
+            f = "keypress",
+            t = null;
+        n.ge = function(n, t) {
+            return _ge(n + "_" + t)
+        };
+        n.gid = function(n) {
+            return n && n.getAttribute("data-idprefix")
+        };
+        n.pd = function(n) {
+            n && (n.stopPropagation(), n.preventDefault())
+        };
+        n.ise = function(n) {
+            return n ? n.which == 13 || n.keyCode == 13 : !1
+        };
+        n.gaurl = function(n) {
+            return t = t || sj_ce("a"), t.href = n, t.href
+        };
+        n.gimg = function(t) {
+            if (t) {
+                var r = t.getAttribute(i);
+                return r ? n.gaurl(r) : t.src
+            }
+            return ""
+        };
+        n.gaps = function(n) {
+            return n ? n.getAttribute(r) : null
+        };
+        n.oncop = function(t, i) {
+            t && i && (t.addEventListener(u, i), t.addEventListener(f, function(t) {
+                n.ise(t) && i(t)
+            }))
+        };
+        n.rph = function(n) {
+            return n ? n.replace(/([?&])[a-z]+=%[A-Z]+%/g, "$1").replace(/([?&])&+/g, "$1") : ""
+        };
+        n.le = function(n, t, i, r) {
+            if (typeof mmLog != "undefined") {
+                var u = e(n, r);
+                mmLog('{"T":"' + n + '","Component":"SearchByImage","Name":"' + t + '","Txt":"' + (i || "") + '","TS":' + sb_gt() + u + "}")
+            }
+        };
+        n.getParamValue = o;
+        n.getPassThroughParams = s;
+        n.overrideWithAdditionalParams = h
+    })(SbiUtil || (SbiUtil = {}));
+    var MSBIComWBCam;
+    (function(n) {
+        function t() {
+            function d(n, t) {
+                window.location.href = t !== null ? "/camera?ptn=" + t + "&rtpu=" + encodeURIComponent(window.location.href) : "/camera?rtpu=" + encodeURIComponent(window.location.href);
+                u("CI.Open", "SBICom", "Open");
+                SbiUtil.pd(n)
+            }
+
+            function u(n, t, i) {
+                SbiUtil.le(n, t, i, g)
+            }
+            var l = "sbi",
+                a = "cfdlg",
+                i = "shdlg",
+                v = "hsevt",
+                f = "CI.Click",
+                s = "SBIConfirmDialog",
+                y = _ge("sb_form"),
+                t = _ge("sbiarea"),
+                e = _ge("sb_sbi"),
+                r = _ge("sb_form_go") || _ge("sbBtn"),
+                n = _ge("sbiconfirm"),
+                p = _ge("confirmyesbtn"),
+                w = _ge("confirmnobtn"),
+                b = _ge("confirmclose"),
+                g = SbiUtil.gid(t),
+                o = !n,
+                k, h, c;
+            if (o || (k = sj_cook && sj_cook.get ? sj_cook.get(l, a) : null, o = !!k), y && y.classList.add("hassbi"), e && !e.getAttribute(v)) {
+                t && r && r.parentElement && !r.parentElement.contains(t) && r.parentElement.insertBefore(t, r);
+                h = t && t.getAttribute("data-ptn");
+                SbiUtil.oncop(e, function(t) {
+                    u(f, "SBIImageWrapper", "Open");
+                    o ? d(t, h) : (n.setAttribute(i, ""), document.body.appendChild(n), SbiUtil.pd(t))
+                });
+                if (n && p && w && b) {
+                    SbiUtil.oncop(p, function(t) {
+                        sj_cook.set(l, a, "1", !0, "/");
+                        o = !0;
+                        n.removeAttribute(i);
+                        u(f, s, "Yes");
+                        d(t, h)
+                    });
+                    SbiUtil.oncop(w, function() {
+                        n.removeAttribute(i);
+                        u(f, s, "No")
+                    });
+                    c = function() {
+                        n.hasAttribute(i) && (n.removeAttribute(i), u(f, s, "Close"))
+                    };
+                    SbiUtil.oncop(b, c);
+                    _d.addEventListener("click", c)
+                }
+                e.setAttribute(v, "1")
+            }
+        }
+        n.init = t
+    })(MSBIComWBCam || (MSBIComWBCam = {}));
+    MSBIComWBCam.init();
+    //]]>
+</script>

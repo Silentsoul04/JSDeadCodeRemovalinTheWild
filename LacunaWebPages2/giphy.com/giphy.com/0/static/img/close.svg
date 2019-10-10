@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M24.4,5 L5,24 L24.4,5 Z M13.2708224,14.5 L4.30029687,5.71443372 C3.90572603,5.32799835 3.89913092,4.69486772 4.28556628,4.30029687 C4.67200165,3.90572603 5.30513228,3.89913092 5.69970313,4.28556628 L14.7,13.10029 L23.7002969,4.28556628 C24.0948677,3.89913092 24.7279984,3.90572603 25.1144337,4.30029687 C25.5008691,4.69486772 25.494274,5.32799835 25.0997031,5.71443372 L16.1291776,14.5 L25.0997031,23.2855663 C25.494274,23.6720016 25.5008691,24.3051323 25.1144337,24.6997031 C24.7279984,25.094274 24.0948677,25.1008691 23.7002969,24.7144337 L14.7,15.89971 L5.69970313,24.7144337 C5.30513228,25.1008691 4.67200165,25.094274 4.28556628,24.6997031 C3.89913092,24.3051323 3.90572603,23.6720016 4.30029687,23.2855663 L13.2708224,14.5 Z" id="path-1"></path>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/close">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="colors/primary/_master" mask="url(#mask-2)">
+                <g id="colors/primary/white"></g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,3 @@
+
+                window.vimeo = window.vimeo || {};
+            

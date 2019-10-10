@@ -1,0 +1,2 @@
+/* JS Code that was found on HTML events */
+switchKnowTab(1);return false;;switchKnowTab(2);return false;;switchKnowTab(3);return false;;switchKnowTab(4);return false;;switchKnowTab(5);return false;;SwitchNewsTag_1('ph_',1,3);SwitchNewsTag_1('ph_',2,3);SwitchNewsTag_1('ph_',3,3);
