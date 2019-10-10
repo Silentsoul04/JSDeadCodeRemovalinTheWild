@@ -1,0 +1,16 @@
+exports=module.exports=require("../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/font-families.css"), undefined);
+// module
+exports.push([module.id, "@keyframes fade-in-2jNO3Nfr{0%{opacity:0}to{opacity:1}}.overlay-2W4aB9fH{top:0;height:100%;width:100%;background:transparent;border:none;margin:0;padding:0}.gradient-2LUX6eMH,.overlay-2W4aB9fH{position:absolute;right:0;bottom:0;left:0;z-index:100}.gradient-2LUX6eMH{opacity:0;animation:fade-in-2jNO3Nfr .3s ease-out forwards;height:120px;background:linear-gradient(rgba(0,0,0,.0001),rgba(0,0,0,.6));display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:end;justify-content:flex-end}.unclickedWrapper-3F3QydAk{-ms-flex-pack:justify;justify-content:space-between}.clickedWrapper-TMXE0gDk,.unclickedWrapper-3F3QydAk{height:20px;padding:20px;width:calc(100% - 40px);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.clickedWrapper-TMXE0gDk{position:absolute;bottom:0;left:0;right:0;opacity:0;z-index:100;animation:fade-in-2jNO3Nfr .3s ease-out forwards;-ms-flex-pack:end;justify-content:flex-end}.unmuteCta-2f3m8t22{color:#fff;font-size:14px;line-height:16px;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.volume-38evEEO4{margin-right:10px}.volume-38evEEO4 svg{fill:#fff}.volume-38evEEO4 svg path{stroke:#fff}.liveBadge-1TOnbpM_{position:relative}", ""]);
+// exports
+exports.locals= {
+    "overlay": "overlay-2W4aB9fH", "gradient": "gradient-2LUX6eMH", "fade-in": "fade-in-2jNO3Nfr", "unclickedWrapper": "unclickedWrapper-3F3QydAk", "clickedWrapper": "clickedWrapper-TMXE0gDk", "unmuteCta": "unmuteCta-2f3m8t22 " + require("-!../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/font-families.css").locals["franklin"] + "", "volume": "volume-38evEEO4", "liveBadge": "liveBadge-1TOnbpM_"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/live-autoplay-overlay/component/styles.css
+// module id = 300
+// module chunks = 5

@@ -1,0 +1,1 @@
+No Content: webpack:///./src/app/reducers/xpromo/pill/index.js

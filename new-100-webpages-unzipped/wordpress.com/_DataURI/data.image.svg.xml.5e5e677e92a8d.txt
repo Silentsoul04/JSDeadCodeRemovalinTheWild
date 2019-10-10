@@ -1,0 +1,1 @@
+data:image/svg+xml,%3Csvg width='9' height='9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 0v1h1.795L2.38 5.915l.705.705L8 1.705V3.5h1V0H5.5zM8 8H1V1h3V0H1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V5H8v3z' fill='%236b99ae' fill-rule='nonzero'/%3E%3C/svg%3E

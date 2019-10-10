@@ -1,0 +1,16 @@
+exports=module.exports=require("../../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css"), undefined);
+// module
+exports.push([module.id, ".headlineDefaults-oYzpCBUp{overflow:hidden;text-overflow:ellipsis;display:block;-ms-flex:100%;flex:100%;font-weight:700}.multiLineTruncation--2fxRo8r{display:-webkit-box!important;-webkit-line-clamp:2}.singleLineTruncation-3lKmm_WX{white-space:nowrap}.headline-xs-1zdNJOh8,.headline-xxs-2S-_l6Sf{font-size:19px!important;line-height:22px!important}.headline-s-3xK8HfT7{font-size:21px!important;line-height:25px!important}.headline-m-3CDThtmW{font-size:24px!important;line-height:28px!important}.headline-l-1YyfqTAo,.headline-xl-o5YAITK6,.headline-xxl-2lWbiJE2{font-size:30px!important;line-height:33px!important}.headline-xs-1zdNJOh8.singleLineTruncation-3lKmm_WX,.headline-xxs-2S-_l6Sf.singleLineTruncation-3lKmm_WX{max-width:calc(100% - 50px)}.headline-m-3CDThtmW.singleLineTruncation-3lKmm_WX,.headline-s-3xK8HfT7.singleLineTruncation-3lKmm_WX{max-width:calc(100% - 60px)}.headline-l-1YyfqTAo.singleLineTruncation-3lKmm_WX,.headline-xl-o5YAITK6.singleLineTruncation-3lKmm_WX,.headline-xxl-2lWbiJE2.singleLineTruncation-3lKmm_WX{max-width:calc(100% - 80px)}", ""]);
+// exports
+exports.locals= {
+    "headlineDefaults": "headlineDefaults-oYzpCBUp " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["headline"] + "", "multiLineTruncation": "multiLineTruncation--2fxRo8r", "singleLineTruncation": "singleLineTruncation-3lKmm_WX", "headline-xxs": "headline-xxs-2S-_l6Sf headlineDefaults-oYzpCBUp " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["headline"] + "", "headline-xs": "headline-xs-1zdNJOh8 headlineDefaults-oYzpCBUp " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["headline"] + "", "headline-s": "headline-s-3xK8HfT7 headlineDefaults-oYzpCBUp " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["headline"] + "", "headline-m": "headline-m-3CDThtmW headlineDefaults-oYzpCBUp " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["headline"] + "", "headline-l": "headline-l-1YyfqTAo headlineDefaults-oYzpCBUp " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["headline"] + "", "headline-xl": "headline-xl-o5YAITK6 headlineDefaults-oYzpCBUp " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["headline"] + "", "headline-xxl": "headline-xxl-2lWbiJE2 headlineDefaults-oYzpCBUp " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["headline"] + ""
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/cover/component/desktop-default/headline/styles.css
+// module id = 427
+// module chunks = 1

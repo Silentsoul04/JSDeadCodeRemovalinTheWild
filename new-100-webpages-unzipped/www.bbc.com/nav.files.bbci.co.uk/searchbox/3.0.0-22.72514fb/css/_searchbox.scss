@@ -1,0 +1,168 @@
+
+.orb-nav-search {
+  $orb-color-grey: #cccccc;
+  $orb-color-orb-input: #333333;
+  $orb-color-orb-input-focus: #999999;
+
+  float: right;
+
+  button {
+    padding: 0;
+  }
+
+  .orb-search__button {
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    text-indent: -999px;
+    display: block;
+    line-height: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+    width: 20px;
+    height: 20px;
+
+    .n-no-svg &{
+      width: 32px;
+      height: 24px;
+    }
+  }
+
+  a.orb-search__button {
+    border-right: 1px solid $orb-color-grey;
+  }
+
+  img {
+    padding-top: 0.15em;
+    padding-right: 2px;
+  }
+  form {
+    display: none;
+    padding: 0.615em 0 0.539em 8px;
+
+    div {
+      width: 200px;
+      height: 1.846em;
+      min-height: 24px;
+    }
+  }
+
+  label {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  #orb-search-q {
+    border: none;
+    background: none;
+    height: 1.846em;
+    min-height: 24px;
+    font-weight: bold;
+
+    width: 162px;
+    float: left;
+    padding: 0 0 0 6px;
+    color: $orb-color-orb-input;
+    font-weight: bold;
+
+    &::placeholder {
+      color: $orb-color-orb-input;
+      font-weight: bold;
+    }
+
+    &:focus::placeholder {
+      color: $orb-color-orb-input-focus;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+      img {
+          padding-top: 1px;
+          padding-right: 0;
+      }
+      
+      a.orb-search__button {
+          display: none;
+      }
+      
+      form {
+          display: block;
+      }
+      
+      .orb-search__button {
+          width: 32px;
+          height: 24px;
+      }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .b-pw-1280 {
+    .orb-nav-search {
+      form {
+        padding-left: 16px;
+          div {
+            width: 180px;
+          }
+      }
+
+      #orb-search-q {
+        width: 142px;
+      }
+    }
+  }
+}
+
+#searchbox-panel {
+  background-color: #18B;
+}
+
+#searchbox {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 866px;
+  height: 48px;
+  font-family: Arial, Helvetica, freesans, sans-serif; // to prevent worldservice conflicts
+  font-size: 40px;
+}
+
+*[dir=rtl] {
+  .orb-nav-search {
+    $orb-color-grey: #cccccc;
+    float: left;
+
+    button {
+      padding: 4px 7px 3px 8px;
+    }
+
+    a.orb-search__button {
+      border-left: 1px solid $orb-color-grey;
+      border-right: none;
+    }
+
+    img {
+      padding-left: 2px;
+    }
+
+    form {
+      padding: 0.615em 8px 0.539em 0;
+    }
+
+    #orb-search-q {
+      float: right;
+      padding: 0 6px 0 0;
+    }
+
+    @media screen and (min-width: 600px) {
+      img {
+        padding-left: 0;
+      }
+    }
+  }
+}

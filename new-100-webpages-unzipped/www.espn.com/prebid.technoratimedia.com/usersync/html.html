@@ -1,0 +1,75 @@
+<html>
+
+<body>
+    <script type="application/javascript">
+        //<![CDATA[
+        /*header*/
+        (function(d, w) {
+            var TN8 = w.TN8 = (w.TN8 || {}),
+                s;
+            if (!TN8.lq) {
+                TN8.lq = TN8.lq || [];
+                s = d.createElement('script');
+                s.src = w.location.protocol + "//ad-cdn.technoratimedia.com/lib.js";
+                d.head.appendChild(s);
+            }
+        }(document, window));
+        TN8.lq.push(function() {
+
+            if (window.varPixel108 == undefined) {
+                window.varPixel108 = 1;
+                /*Lotame*/
+                var syncLtWindow;
+                try {
+                    if (window.top.document) {
+                        syncLtWindow = window.top;
+                    }
+                } catch (err) {
+                    syncLtWindow = window;
+                }
+                if (!syncLtWindow.syncLtFired) {
+                    syncLtWindow.syncLtFired = true;
+                    window.TM_LOTEM_ONLOAD = function() {
+                        var domainRegex = /([a-zA-Z0-9_-]+)\.([a-zA-Z]+)\/(([a-zA-Z0-9_-]+)(\/([a-zA-Z0-9_-]+))?)?/
+                        var matches = domainRegex.exec('https:\/\/www.espn.com\/');
+                        var applyTemplate = function(template) {
+                            return template.replace(/\$(\d+)/g, function(c, m) {
+                                return matches[m] === undefined ? c : matches[m];
+                            });
+                        };
+                        _cc12247.runOptimus = false;
+                        if (matches && matches.length > 1 && matches[1]) {
+                            _cc12247.add("int", applyTemplate("$1 : Total Site Traffic"));
+                        }
+                        if (matches && matches.length > 4 && matches[4]) {
+                            _cc12247.add("int", applyTemplate("$1 : Site Section : $4"));
+                        }
+                        if (matches && matches.length > 6 && matches[6]) {
+                            _cc12247.add("int", applyTemplate("$1 : Site Section : $4 : $6"));
+                        }
+                        _cc12247.bcp();
+                    }
+                    document.write('<scr' + 'ipt type="text/javascript" src="//tags.crwdcntrl.net/c/12247/cc.js?ns=_cc12247" id="LOTCC_12247" onload="TM_LOTEM_ONLOAD()"></scr' + 'ipt>');
+                }
+            }
+        });
+        /*footer*/
+        setTimeout(function() {
+            TN8.lq.push(function() {
+                var mpos = TN8.viewability.getMoat();
+                var apos = TN8.viewability.getAceView();
+                TN8.tag.dropPixel(window.location.protocol + '//uat-net.technoratimedia.com/pixel?rid=12458080285593921&id=9&mpos=' + mpos + '&apos=' + apos);
+            });
+        }, 2000);
+        if (!document.getElementById('tn8UserSync')) {
+            TN8.lq.push(function() {
+                TN8.tag.dropIFPixel(window.location.protocol + '//ad-cdn.technoratimedia.com/html/usersync.html');
+            });
+        }
+        /*end footer*/
+
+        //]]>
+    </script>
+</body>
+
+</html>

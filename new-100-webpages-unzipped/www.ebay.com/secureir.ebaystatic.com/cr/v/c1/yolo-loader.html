@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>eBay Yolo Login</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .google-inserted-frame {
+            position: static !important;
+            width: calc(100% - 18px);
+            margin: -18px 0 0 0;
+        }
+    </style>
+    <script>
+        function getOrDefault(data, key, defaultValue) {
+            if (data.hasOwnProperty(key)) {
+                return data[key];
+            }
+            return defaultValue;
+        }
+
+        function parseQueryParams() {
+            try {
+                return JSON.parse('{"' + decodeURI(location.search.substring(1)).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+            } catch (e) {
+                return {};
+            }
+        }
+    </script>
+    <script>
+        const DEFAULT_PRIVACY = "https://pages.ebay.com/help/policies/privacy-policy.html";
+        const DEFAULT_TOS = "https://pages.ebay.com/help/policies/user-agreement.html";
+        const DEFAULT_HELP = "https://pages.ebay.com/help/home";
+        const qs = parseQueryParams();
+        const device = getOrDefault(qs, 'd', 'd');
+        const CONFIG = {
+            supportedAuthMethods: [
+                'https://accounts.google.com'
+            ],
+            supportedIdTokenProviders: [{
+                uri: 'https://accounts.google.com',
+                clientId: '1077078376996-tiuoaddhjh4ch2h4dnokcu4uq3576n9g.apps.googleusercontent.com'
+            }]
+        };
+
+        function announceToParent(data) {
+            data['type'] = '_yolo';
+            parent.postMessage(data, '*');
+        }
+
+        function observer() {
+            const bodyObserver = new MutationObserver(processMutationList);
+
+            function processMutationList(mutationList) {
+                mutationList.forEach(checkAllNodesForMutation)
+            }
+
+            function checkAllNodesForMutation(mutation) {
+                mutation.addedNodes.forEach(checkAndAddMutation);
+            }
+
+            function checkAndAddMutation(node) {
+                if (node.nodeName === 'IFRAME' && node.src.includes('smartlock.google.com/iframe/')) {
+                    bodyObserver.disconnect();
+                    node.classList.add('google-inserted-frame');
+                    addAttributeObserver(node);
+                }
+            }
+
+            function addAttributeObserver(node) {
+                new MutationObserver(function(iframeMutationsList) {
+                    let height = parseInt(iframeMutationsList[0].target.style.height);
+                    announceToParent({
+                        yoloHeight: height
+                    });
+                }).observe(node, {
+                    attributes: true
+                });
+            }
+
+            return bodyObserver;
+        }
+
+        function setUrls() {
+
+            const privacyUrl = getOrDefault(qs, 'privacy') ?
+                decodeURIComponent(getOrDefault(qs, 'privacy')) : DEFAULT_PRIVACY;
+            const tosUrl = getOrDefault(qs, 'tos') ?
+                decodeURIComponent(getOrDefault(qs, 'tos')) : DEFAULT_TOS;
+            try {
+                localStorage.setItem('yolo', JSON.stringify({
+                    privacy: privacyUrl || DEFAULT_PRIVACY,
+                    tos: tosUrl || DEFAULT_TOS
+                }))
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        window.onGoogleYoloLoad = function initializeYolo(yolo) {
+            const yoloRenderModel = (device === "d") ? "navPopout" : "bottomSheet";
+            yolo.setTimeouts(6000);
+            yolo.setRenderMode(yoloRenderModel);
+            observer().observe(document.body, {
+                childList: true
+            });
+            yolo.hint(CONFIG).then(
+                (yoloSuccess) => (announceToParent({
+                    yoloSuccess
+                })),
+                (yoloError) => (announceToParent({
+                    yoloError
+                }))
+            );
+        };
+    </script>
+</head>
+
+<body>
+</body>
+<script src='https://smartlock.google.com/client'></script>
+<script>
+    setUrls();
+</script>
+
+</html>

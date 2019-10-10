@@ -1,0 +1,12 @@
+exports=module.exports=require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css"), undefined);
+// module
+exports.push([module.id, "._1pIQAcXulmGf9nKFEKOLAM{background:rgba(0,0,0,.4);color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + ";padding:30px 20px;position:relative;text-align:center}._2ocB2knFN5OQzRn7azyY_l{font-family:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css").locals["titleFont"] + ";margin-bottom:8px}._2WxF5qozRr2mAFb5U9nFRu{font-size:14px;margin:0}._2WxF5qozRr2mAFb5U9nFRu a{display:inline-block;margin:0 8px;opacity:.8}", ""]);
+// exports
+exports.locals= {
+    "giphyWhite": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + "", "titleFont": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css").locals["titleFont"] + "", "container": "_1pIQAcXulmGf9nKFEKOLAM", "copyright": "_2ocB2knFN5OQzRn7azyY_l", "tosLinks": "_2WxF5qozRr2mAFb5U9nFRu"
+}
+
+;

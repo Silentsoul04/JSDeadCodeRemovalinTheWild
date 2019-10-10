@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "roboto";
+    src: url(https://cdn.okezone.com/underwood/fonts/roboto-regular-webfont.woff2) format("woff2"), url(https://cdn.okezone.com/underwood/fonts/roboto-regular-webfont.woff) format("woff"), url(https://cdn.okezone.com/underwood/fonts/roboto-regular-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(https://cdn.okezone.com/underwood/fonts/roboto-medium-webfont.woff2) format("woff2"), url(https://cdn.okezone.com/underwood/fonts/roboto-medium-webfont.woff) format("woff"), url(https://cdn.okezone.com/underwood/fonts/roboto-medium-webfont.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(https://cdn.okezone.com/underwood/fonts/roboto-bold-webfont.woff2) format("woff2"), url(https://cdn.okezone.com/underwood/fonts/roboto-bold-webfont.woff) format("woff"), url(https://cdn.okezone.com/underwood/fonts/roboto-bold-webfont.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal
+}
+
+.widget-wrap.widpad {
+    padding: 10px 10px 15px 10px
+}
+
+.widget-wrap.bortop-default {
+    border-top: 3px solid #b7374f
+}
+
+.metube-widget .imgnya {
+    position: relative;
+    width: 111px;
+    height: 63px;
+    float: left;
+    background-size: cover;
+    background-position: center
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.widget-title {
+    margin: 0 0 10px 0;
+    display: block;
+    position: relative;
+    font-weight: 400
+}
+
+.widget-title a {
+    color: #333;
+    color: #333;
+    font-size: 14px;
+    font-family: "roboto";
+    text-decoration: none;
+    display: block;
+    line-height: 19px;
+    letter-spacing: .004em
+}
+
+.vidlist-row :hover {
+    opacity: .8
+}
+
+.vidlist-row {
+    display: block;
+    clear: both;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e8e8e8;
+    height: 73px;
+    overflow: hidden
+}
+
+.metube-widget .imgnya {
+    margin-right: 10px;
+    position: relative;
+    width: 111px;
+    height: 63px;
+    float: left;
+    background-size: cover;
+    background-position: center
+}
+
+.metube .vidlist-img-ctn {
+    display: block;
+    width: 40%;
+    float: left;
+    position: relative
+}
+
+.fvd-overlay {
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto
+}
+
+.metube-widget .imgnya .iconvidi {
+    position: absolute;
+    z-index: 210;
+    background-image: url(https://cdn.okezone.com/ramadan/2018/img/sprites3-1.png);
+    width: 30px;
+    height: 30px;
+    background-position: -115px -7px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.metube .vidlist-text {
+    display: block;
+    float: left;
+    width: 57%;
+    margin-left: 3%;
+    overflow: hidden;
+    max-height: 66px
+}
+
+.vidlist-text {
+    padding-top: 3px
+}
+
+.widget-title a img.metube-widgetimg {
+    width: 100%
+}

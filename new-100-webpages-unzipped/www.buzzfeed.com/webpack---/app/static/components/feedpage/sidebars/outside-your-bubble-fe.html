@@ -1,0 +1,25 @@
+var nunjucks = require("nunjucks/browser/nunjucks-slim"); var env; if (!nunjucks.currentEnv){ env = nunjucks.currentEnv = new nunjucks.Environment([], undefined); } else { env = nunjucks.currentEnv; } var dependencies = nunjucks.webpackDependencies ||
+(nunjucks.webpackDependencies = {}); var shim = require("/usr/lib/node_modules/@buzzfeed/fe-build-tools/node_modules/@buzzfeed/nunjucks-loader/runtime-shim"); (function() {(nunjucks.nunjucksPrecompiled = nunjucks.nunjucksPrecompiled || {})["app/static/components/feedpage/sidebars/outside-your-bubble-fe.html"]
+= (function() { function root(env, context, frame, runtime, cb) { var lineno = null; var colno = null; var output = ""; try { var parentTemplate = null; output += "
+<div class=\ "rounded-top card-border site-component-widget news-header--"; output +=r
+    untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "color"), env.opts.autoescape); output +=" " ; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "containerClasses"), env.opts.autoescape); output +="\" data-bfa=\
+    "@l:Feed\" role=\ "section\" aria-label=\ "Outside Your Bubble\">\n
+    <div class=\ "xs-pt1 xs-pb2 xs-text-center text-white fill-gray-darker\">\n <span class=\ "slab xs-text-2\"> Outside Your Bubble</span>\n <svg viewBox=\ "0 0 500 500\" class=\ "outside-your-bubble__header-icon\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#bubble\"></use></svg>\n <span class=\
+            "xs-text-5 xs-inline-block xs-px2\">Read what people are saying about this story</span>\n </div>\n
+    <div class=\ "card sidebar-card xs-relative xs-border-top-none xs-mb2 xs-p2 clearfix\">\n
+        <div>\n "; if(runtime.contextOrFrameLookup(context, frame, "buzz")) { output += "\n <a href=\ ""; output +=r untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "buzz")), "url"), env.opts.autoescape); output +=r
+                untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "buzz")), "params"), env.opts.autoescape); output +="\" class=\ "sidebar__link xs-block link-gray\"\n ";
+output += runtime.suppressValue(env.getFilter("safe ").call(context, env.getFilter("bfaFeedTagger ").call(context, runtime.contextOrFrameLookup(context, frame, "buzz "),runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "buzz ")),"unitType
+                "),runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "buzz ")),"unit "))), env.opts.autoescape);
+output += "\n>\n            <img src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "buzz")),"image"), env.opts.autoescape);
+output += "?output-format=auto&output-quality=auto&resize=625:*\" width=\"100%\" class=\"";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "imgClass"), env.opts.autoescape);
+output += "\" alt=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "buzz")),"image_alt_text"), env.opts.autoescape);
+output += "\" />\n            <p class=\"slab xs-text-2 xs-block xs-mb1\">\n              ";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "buzz")),"name"), env.opts.autoescape);
+output += "\n            </p>\n          </a>\n "; ; } output += "\n </div>\n\n
+        <p class=\ "xs-mt1 xs-text-5 text-gray-lightest\">\n <a href=\ "https://www.buzzfeed.com/bensmith/helping-you-see-outside-your-bubble\" class=\ "bold\">\n          Learn more about Outside Your <span class=\"xs-inline-block nowrap\">Bubble\n          <svg class=\"outside-your-bubble__link-arrow\">\n            <use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#arrow-right\"></use>\n          </svg></span>\n        </a>\n
+            </p>\n</div>\n"; if(parentTemplate) { parentTemplate.rootRenderFunc(env, context, frame, runtime, cb); } else { cb(null, output); } ; } catch (e) { cb(runtime.handleError(e, lineno, colno)); } } return { root: root }; })(); })(); module.exports
+    = shim(nunjucks, env, nunjucks.nunjucksPrecompiled["app/static/components/feedpage/sidebars/outside-your-bubble-fe.html"] , dependencies)

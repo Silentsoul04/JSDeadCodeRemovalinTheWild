@@ -1,0 +1,61 @@
+.bbccookies-banner {
+    background-color: #323232
+}
+
+.bbccookies-banner .orb-banner-title {
+    color: #fff
+}
+
+.bbccookies-banner .orb-banner-content {
+    color: #bebebe
+}
+
+.bbccookies-banner .orb-banner-content a {
+    color: #f6a21d;
+    text-decoration: none
+}
+
+.bbccookies-banner .orb-banner-content a:hover {
+    color: #fff;
+    text-decoration: none
+}
+
+.bbccookies-banner .orb-banner-options a,
+.bbccookies-banner .orb-banner-options button {
+    color: #f6a21d
+}
+
+.bbccookies-banner .orb-banner-options a,
+.bbccookies-banner .orb-banner-options button {
+    text-align: left;
+    background-image: url(../img/bbccookies/cookie_prompt_sprite.png);
+    padding: 0 0 0 24px
+}
+
+.bbccookies-banner .orb-banner-options:hover {
+    text-decoration: none
+}
+
+.bbccookies-banner button {
+    width: 100%;
+    background-position: 0 -254px;
+    line-height: 1em;
+    height: auto;
+    font-size: 1.39em
+}
+
+#bbcprivacy-more :hover,
+#bbccookies-settings :hover {
+    background-position: 1px -62px
+}
+
+#bbccookies-settings a,
+#bbcprivacy-more a {
+    background-position: 1px 1px
+}
+
+.bbccookies-banner li a:hover,
+.bbccookies-banner li button:hover {
+    background-position: 0 -317px;
+    color: #fff
+}

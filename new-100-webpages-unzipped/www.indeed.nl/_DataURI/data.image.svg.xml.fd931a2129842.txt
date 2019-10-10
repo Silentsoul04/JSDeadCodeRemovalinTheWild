@@ -1,0 +1,1 @@
+data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22.09 22.09'%3e%3ctitle%3eicon_functional-search%3c/title%3e%3cpath d='M22.09 20.74l-5.23-5.23a9.5 9.5 0 1 0-1.35 1.35l5.23 5.23zM9.5 17A7.5 7.5 0 1 1 17 9.5 7.51 7.51 0 0 1 9.5 17z' data-name='Layer 1'/%3e%3c/svg%3e

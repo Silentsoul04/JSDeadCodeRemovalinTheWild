@@ -1,0 +1,32 @@
+//@flow
+import ServiceResult from '../../common/base-service-result';
+import KalturaMediaEntry from './kaltura-media-entry';
+
+export default class KalturaMediaEntries extends ServiceResult {
+    /**
+     * @member - The entries
+     * @type {Array<KalturaMediaEntry>}
+     */
+    entries: Array < KalturaMediaEntry > ;
+
+    /**
+     * @constructor
+     * @param {Object} responseObj The json response
+     */
+    constructor(responseObj: Object) {
+        super(responseObj);
+        if (!this.hasError) {
+            this.entries = [];
+            responseObj.map(entry => this.entries.push(new KalturaMediaEntry(entry)));
+        }
+    }
+}
+
+
+
+// WEBPACK FOOTER //
+// ./k-provider/ovp/response-types/kaltura-media-entries.js
+
+
+// WEBPACK FOOTER //
+// providers/k-provider/ovp/response-types/kaltura-media-entries.js

@@ -1,0 +1,52 @@
+@import '../breakpoints/mixins';
+
+.supernova-bubble {
+  position: relative;
+  border: 1px solid $color-gray-300;
+  border-radius: 0 20px 20px 20px;
+  min-height: auto;
+  overflow: hidden;
+  padding: 40px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+
+  &.no-min-height {
+    height: 100%;
+    min-height: auto;
+  }
+
+  @include respond-to(lg) {
+    min-height: 450px;
+  }
+}
+
+.supernova-bubble-note {
+  font-size: 15px;
+  font-weight: 500;
+
+  * {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &.note-alert {
+    font-weight: 700;
+    color: $color-orange;
+  }
+}
+
+.supernova-link {
+  cursor: pointer;
+  font-weight: 500;
+  width: fit-content;
+  display: inline-block;
+
+  .linkCta {
+    font-weight: 500;
+  }
+}
+
+.supernova-small-text {
+  line-height: 1.8em;
+}

@@ -1,0 +1,49 @@
+module.exports = function anonymous(locals, filters, escape, rethrow) { escape = escape || function(html) { return String(html).replace(/&/g, "&amp;").replace(/
+</g, "&lt;").replace(/>/g, "&gt;").replace(/'/g, "&#39;").replace(/"/g, "&quot;"); }; var __stack = { lineno: 1, input: '
+<div>\n
+    <div class="vhs-player-header-background"></div>\n
+    <div data-id="<%=media.id%>" class="vhs-player-header vhs-pause-slate vhs-top-banner">\n
+        <div class="vhs-video-title">\n <a href="https://www.nytimes.com/video" target="_blank" class="vhs-times-logo vhs-icon-times-video-logo vhs-anchor-button <%=logoClasses%>" aria-label="Times Video" title="Times Video"></a>\n
+            <% if (!media.byline) { titleClasses += \' vhs-no-byline\' } %>\n
+                <div class="vhs-video-title-wrapper <%=titleClasses%>">\n\n
+                    <% if (!linkUrl || (isOnSite && media.isEmbeddedOnly)) { %>\n
+                        <p class="vhs-data">
+                            <%=media.headline%>
+                        </p>\n
+                        <% } else { %>\n
+                            <p class="vhs-data"> <a href="<%= linkUrl %>?action=click&amp;gtype=vhs&amp;version=vhs-heading&amp;module=vhs&amp;region=title-area" <% if (!isOnSite) { %> target="_blank" <% } %> > <%=media.headline%> </a> </p>\n
+                            <% } %>\n\n <span class="vhs-byline">\n                  <span><%=media.byline%></span>\n </span>\n </div>\n </div>\n
+        <% if (showShareTools) { %>\n
+            <div class="vhs-tools <%=shareClasses%>" data-vhs-et-module="video-player-share" data-vhs-et-region="playback-share">\n
+                <div class="vhs-social">\n <button class="vhs-share-item vhs-icon-facebook" alt="facebook" data-share-name="facebook" data-vhs-et-name="share-facebook" title="Share on Facebook" aria-label="Share on Facebook"></button>\n <button class="vhs-share-item vhs-icon-twitter"
+                        alt="twitter" data-share-name="twitter" data-vhs-et-name="share-twitter" title="Share on Twitter" aria-label="Share on Twitter"></button>\n </div>\n
+                <% if (showEmbedShare) { %>\n
+                    <div class="vhs-embed">\n <button class="vhs-icon-embed" alt="embed" data-share-name="embed" data-vhs-et-name="share-embed" title="Share Link" aria-label="Share Link"></button>\n </div>\n
+                    <% } %>\n </div>\n
+            <% } %>\n </div>\n</div>\n', filename: "." }; function rethrow(err, str, filename, lineno) { var lines = str.split("\n"), start = Math.max(lineno - 3, 0), end = Math.min(lines.length, lineno + 3); var context = lines.slice(start, end).map(function(line,
+i) { var curr = i + start + 1; return (curr == lineno ? " >> " : " ") + curr + "| " + line; }).join("\n"); err.path = filename; err.message = (filename || "ejs") + ":" + lineno + "\n" + context + "\n\n" + err.message; throw err; } try { var buf = [];
+with (locals || {}) { (function() { buf.push('
+<div>\n
+    <div class="vhs-player-header-background"></div>\n
+    <div data-id="', escape((__stack.lineno = 3, media.id)), '" class="vhs-player-header vhs-pause-slate vhs-top-banner">\n
+        <div class="vhs-video-title">\n <a href="https://www.nytimes.com/video" target="_blank" class="vhs-times-logo vhs-icon-times-video-logo vhs-anchor-button ', escape((__stack.lineno = 5, logoClasses)), '" aria-label="Times Video" title="Times Video"></a>\n '); __stack.lineno
+            = 6; if (!media.byline) { titleClasses += " vhs-no-byline"; } buf.push('\n
+            <div class="vhs-video-title-wrapper ', escape((__stack.lineno = 7, titleClasses)), '">\n\n '); __stack.lineno = 9; if (!linkUrl || isOnSite && media.isEmbeddedOnly) { buf.push('\n
+                <p class="vhs-data"> ', escape((__stack.lineno = 10, media.headline)), " </p>\n "); __stack.lineno = 11; } else { buf.push('\n
+                <p class="vhs-data"> <a href="', escape((__stack.lineno = 12, linkUrl)), '?action=click&amp;gtype=vhs&amp;version=vhs-heading&amp;module=vhs&amp;region=title-area" ');
+                    __stack.lineno = 12;
+                    if (!isOnSite) {
+                        buf.push(' target="_blank" ');
+                        __stack.lineno = 12;
+                    }
+                    buf.push(" > ", escape((__stack.lineno = 12, media.headline)), " </a> </p>\n              ");
+                    __stack.lineno = 13;
+                }
+                buf.push('\n\n <span class="vhs-byline">\n <span>', escape((__stack.lineno = 16, media.byline)), "</span>\n </span>\n </div>\n </div>\n "); __stack.lineno = 20; if (showShareTools) { buf.push('\n
+        <div class="vhs-tools ', escape((__stack.lineno = 21, shareClasses)), '"
+            data-vhs-et-module="video-player-share" data-vhs-et-region="playback-share">\n
+            <div class="vhs-social">\n <button class="vhs-share-item vhs-icon-facebook" alt="facebook" data-share-name="facebook" data-vhs-et-name="share-facebook" title="Share on Facebook" aria-label="Share on Facebook"></button>\n <button class="vhs-share-item vhs-icon-twitter"
+                    alt="twitter" data-share-name="twitter" data-vhs-et-name="share-twitter" title="Share on Twitter" aria-label="Share on Twitter"></button>\n </div>\n '); __stack.lineno = 26; if (showEmbedShare) { buf.push('\n
+            <div class="vhs-embed">\n <button class="vhs-icon-embed" alt="embed" data-share-name="embed" data-vhs-et-name="share-embed" title="Share Link" aria-label="Share Link"></button>\n </div>\n '); __stack.lineno = 30; } buf.push("\n </div>\n "); __stack.lineno = 32;
+        } buf.push("\n </div>\n</div>\n"); })(); } return buf.join(""); } catch (err) { rethrow(err, __stack.input, __stack.filename, __stack.lineno); } } ////////////////// // WEBPACK FOOTER // ./src/plugins/controls-overlay/template.html // module id
+= 268 // module chunks = 5

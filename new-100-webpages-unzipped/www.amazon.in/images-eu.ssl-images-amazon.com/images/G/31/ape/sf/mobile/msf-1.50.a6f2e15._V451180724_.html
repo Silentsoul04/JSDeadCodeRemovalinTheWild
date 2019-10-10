@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- APE SafeFrame v1.50.a6f2e15 -- 2019-10-03T17:20:04+0000 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="public" />
+    <meta name="ROBOTS" content="NOINDEX" />
+    <meta name="ROBOTS" content="NOFOLLOW" />
+    <meta name="ROBOTS" content="NOARCHIVE" />
+    <meta name="ROBOTS" content="NOSNIPPET" />
+    <meta name="ROBOTS" content="NOODP " />
+    <title></title>
+    <style type="text/css">
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        ! function a(i, s, c) {
+            function l(t, e) {
+                if (!s[t]) {
+                    if (!i[t]) {
+                        var n = "function" == typeof require && require;
+                        if (!e && n) return n(t, !0);
+                        if (d) return d(t, !0);
+                        var r = new Error("Cannot find module '" + t + "'");
+                        throw r.code = "MODULE_NOT_FOUND", r
+                    }
+                    var o = s[t] = {
+                        exports: {}
+                    };
+                    i[t][0].call(o.exports, function(e) {
+                        return l(i[t][1][e] || e)
+                    }, o, o.exports, a, i, s, c)
+                }
+                return s[t].exports
+            }
+            for (var d = "function" == typeof require && require, e = 0; e < c.length; e++) l(c[e]);
+            return l
+        }({
+            1: [function(e, t, n) {
+                var r = e("./lib/replace"),
+                    o = e("./lib/getSlotPlaceholder");
+                t.exports.replace = r, t.exports.getSlotPlaceholder = o
+            }, {
+                "./lib/getSlotPlaceholder": 2,
+                "./lib/replace": 4
+            }],
+            2: [function(e, t, n) {
+                var s = e("./globals"),
+                    c = "data-val";
+                t.exports = function(e, t, n) {
+                    var r = s.getDocument(),
+                        o = [e, n, t].join("_"),
+                        a = r.getElementById("ape_" + o + "_placement_ClickTracking");
+                    if (!(a && a.hasAttribute && "function" == typeof a.hasAttribute && a.hasAttribute(c) && a.getAttribute && "function" == typeof a.getAttribute)) return "";
+                    var i = a.getAttribute(c);
+                    return "string" != typeof i ? "" : i
+                }
+            }, {
+                "./globals": 3
+            }],
+            3: [function(e, t, n) {
+                t.exports.getDocument = function() {
+                    return document
+                }
+            }, {}],
+            4: [function(e, t, n) {
+                var o = "&pd_rd_plhdr=t",
+                    a = /(&amp;|\?){1}pd_rd_plhdr=t(&amp;|'|&quot;){1}/g,
+                    i = /(&|\?){1}pd_rd_plhdr=t(&|'|"|\\"|\\'){1}/g;
+                t.exports = function(e, t) {
+                    var n = t,
+                        r = e;
+                    "string" != typeof e || e === o ? r = "" : (r.startsWith("&") && (r = r.replace(/^&+/, "")), r.endsWith("&") && (r = r.replace(/&+$/, "")));
+                    try {
+                        return "" === r ? n.replace(new RegExp("\\bpd_rd_plhdr=t&"), "").replace(new RegExp(o + "\\b"), "").replace(new RegExp("\\?pd_rd_plhdr=t\\b"), "") : n.replace(i, "$1" + r + "$2").replace(a, "$1" + r.replace(/&/g, "&amp;") + "$2")
+                    } catch (e) {
+                        return t
+                    }
+                }
+            }, {}],
+            5: [function(n, e, t) {
+                function r(e, t) {
+                    "undefined" != typeof console && console.error && console.error(e, t)
+                }
+                e.exports.messenger = new function(o, e, t) {
+                    var g = this,
+                        m = n("../../components/sfCounters"),
+                        l = m.AD_LOAD_COUNTERS,
+                        d = n("../../components/pixel").firePixel,
+                        u = {};
+                    this.client = o || {}, this.options = e || {}, this.msgListeners = t || {}, this.tagRenderFlow = function() {
+                        g.options && g.options.adCreativeMetaData && g.options.adCreativeMetaData.adProgramId && g.options.adCreativeMetaData.adCreativeId ? (g.client.addCsmTag("adrender"), g.client.addCsmTag("adrender", "creativeid:" + g.options.adCreativeMetaData.adCreativeId), g.client.addCsmTag("adrender", "programid:" + g.options.adCreativeMetaData.adProgramId)) : g.client.addCsmTag("noadrender")
+                    }, this.produceClientAPIs = function(e) {
+                        function s(e, t, n, r) {
+                            return function() {
+                                try {
+                                    return n && g.sendMessage("logAPIInvocation", {
+                                        apiName: t,
+                                        apiParams: arguments
+                                    }), e.apply(this, arguments)
+                                } catch (e) {
+                                    return "function" == typeof r && r("API Call Failed", e), null
+                                }
+                            }
+                        }
+                        g.client = function e(t, n) {
+                            var r = {};
+                            for (var o in t)
+                                if (t.hasOwnProperty(o)) {
+                                    var a = t[o],
+                                        i = n ? n + "." + o : o;
+                                    "function" == typeof a ? r[o] = new s(a, i) : a.hasOwnProperty("apiFunc") ? r[o] = new s(a.apiFunc, i, a.logInvocation) : "object" == typeof a && (r[o] = e(a, i))
+                                }
+                            return r
+                        }(e, "")
+                    }, this.sendMessage = function(e, t) {
+                        if (g.options !== {}) {
+                            var n = {
+                                command: e,
+                                arid: g.options.arid,
+                                data: t || {}
+                            };
+                            try {
+                                parent.postMessage(JSON.stringify(n), g.options.hostDomain)
+                            } catch (e) {
+                                r("Post Message unsupported ", e)
+                            }
+                        }
+                    }, this.receiveMessage = function(t) {
+                        if (g.options !== {} && g.client !== {}) {
+                            var e;
+                            try {
+                                if (e = JSON.parse(t.data), t.origin !== g.options.hostDomain || "object" != typeof e.data) throw "Invalid Message"
+                            } catch (e) {
+                                var n = "Received Error: " + t.data;
+                                return void g.client.logError(n, e)
+                            }
+                            try {
+                                g.options.debug && "undefined" != typeof console && console.log("SF Message received ", t);
+                                for (var r = e.command ? e.command.split(".") : [], o = g.client[r[0]], a = 1; a < r.length && o; a++) o = o[r[a]];
+                                if ("customMessage" === e.command) {
+                                    var i = e.data.key,
+                                        s = e.data.data;
+                                    if ("function" == typeof g.msgListeners[i]) try {
+                                        g.msgListeners[i](s)
+                                    } catch (e) {
+                                        g.client.logError("Custom Message Listener Error", e)
+                                    }
+                                } else o && o(e.data)
+                            } catch (e) {
+                                return void g.client.logError("Error with " + JSON.parse(t.data).command, e)
+                            }
+                        }
+                    };
+                    var p = function(e, t, n) {
+                        return e + t + JSON.stringify(n)
+                    };
+                    this.fireImpressionPixel = function(e) {
+                        if (g.options !== {} && g.client !== {})
+                            if (e) {
+                                var t = p(g.options.aaxInstrPixelUrl, "nii/", {
+                                    ni: !0
+                                });
+                                d(g.client, t, "ape_ni_impression", l.UNSERVED_IMP)
+                            } else d(g.client, g.options.aaxImpPixelUrl, "ape_impression", l.IMP)
+                    }, this.fireViewablePixels = function(i, s, e, c) {
+                        if (g.options !== {} && o !== {} && g.options.aaxInstrPixelUrl && e) {
+                            for (var t = function(e) {
+                                    var t, n, r = e.p,
+                                        o = e.t,
+                                        a = e.def;
+                                    !u[a].viewed && (n = r, (t = i) && (n <= 100 * t && 0 !== n || n < 100 * t && 0 === n)) ? u[a].timeout || (u[a].timeout = setTimeout(function() {
+                                        u[a].viewed = !0,
+                                            function(e) {
+                                                s.v = e, s.ptv = void 0 !== g.options.aPageStart ? (Date.now() - g.options.aPageStart) / 1e3 : 0, s.ttv = void 0 !== g.options.adStartTime ? (Date.now() - g.options.adStartTime) / 1e3 : 0, c && (s.niv = !0);
+                                                var t, n = {};
+                                                n.viewableInfo = s, n.aaxInstrPixelUrl = g.options.aaxInstrPixelUrl, n.viewablePercentage = i, c ? (t = p(g.options.aaxInstrPixelUrl, "niv/", s), d(g.client, t, "ape_ni_viewability_" + e.def, l.UNSERVED_VIEWABILITY, e.def, n)) : (t = p(g.options.aaxInstrPixelUrl, "v/", s), d(g.client, t, "ape_viewability_" + e.def, l.VIEWABILITY, e.def, n))
+                                            }(e)
+                                    }, 1e3 * o)) : u[a].timeout && (clearTimeout(u[a].timeout), u[a].timeout = null)
+                                }, n = 0; n < e.length; n++) {
+                                var r = e[n].def;
+                                r && (u[r] = u[r] || {}, u[r].viewed = void 0 !== u[r].viewed && u[r].viewed, u[r].timeout = void 0 === u[r].timeout ? null : u[r].timeout)
+                            }
+                            for (n = 0; n < e.length; n++) t(e[n])
+                        }
+                    }, this.handleNoAdContent = function() {
+                        g.options.isNoInventory = !0, g.tagRenderFlow(), g.fireImpressionPixel(g.options.isNoInventory), g.sendMessage("enableNoInventoryViewabilityTrackerAndInvokeFallback")
+                    };
+                    var v = function(e, t, n, r, o, a) {
+                        window[n] = t, window[o] = r, a(["<scr", "ipt type='text/javascript', src='", e, "', onerror='", o + "()", "'></scr", "ipt>"].join(""))
+                    };
+                    this.createXspRequest = function(e, n, r, t, o) {
+                        var a, i, s = m.AD_FETCH_COUNTERS,
+                            c = g.client.handleFallbackBehavior,
+                            l = g.client.countMetric,
+                            d = g.client.logError,
+                            u = g.client.sendAdBarTrace;
+                        l(s.REQUEST_START, 1);
+                        try {
+                            var p = "aax_xsp_render_ad",
+                                f = (a = p, -1 === (i = e.replace(/getAd/, "getAdj")).indexOf("?") ? i + "?callback=" + a : i + "&callback=" + a);
+                            u("aaxCall", {
+                                jsonpUrl: f,
+                                XSPCallSetupComplete: !0
+                            }), v(f, function(e) {
+                                var t = {
+                                    callBackReceived: !0
+                                };
+                                if (t.errFallback = c.name, e && 0 !== Object.keys(e).length) switch (t.adContent = e, t.status = e.status, e.status) {
+                                    case "punt":
+                                        l(s.PUNT_RETURNED, 1), n.aaxInstrPixelUrl = e.instrPixelURL, r(), t.aaxReturnedPunt = !0, u("aaxCall", t);
+                                        break;
+                                    case "error":
+                                        l(s.ERROR_RETURNED, 1), c(), t.aaxReturnedError = !0, u("aaxCall", t);
+                                        break;
+                                    default:
+                                        try {
+                                            n.aaxImpPixelUrl = e.impPixelURL, n.aaxInstrPixelUrl = e.instrPixelURL, n.htmlContent = e.creative, n && n.adFeedbackInfo && (n.adFeedbackInfo.adProgramId = e.programId), n && n.adCreativeMetaData && (n.adCreativeMetaData.adProgramId = e.programId, n.adCreativeMetaData.adImpressionId = e.impPixelURL, n.adCreativeMetaData.adCreativeId = e.creativeId, n.adCreativeMetaData.adId = e.adId), t.aaxReturnedContent = !0, u("aaxCall", t), o(n.htmlContent), l(s.RENDERED_AD, 1)
+                                        } catch (e) {
+                                            c(), l(s.RENDER_ERROR, 1), t.error = "renderError", u("aaxCall", t)
+                                        }
+                                } else l(s.EMPTY_RESPONSE, 1), c(), t.error = "emptyAAXResponse", u("aaxCall", t)
+                            }, p, function() {
+                                l(s.HTTP_ERROR, 1), d("Failed to Fetch Ad From AAX."), u("aaxCall", {
+                                    error: "httpError"
+                                }), c()
+                            }, "fetch_error_handler", t)
+                        } catch (e) {
+                            l(s.EXCEPTION, 1), d("Failed to create JSONP call."), u("aaxCall", {
+                                error: "failedToCreateJSONP"
+                            }), c(), u("aaxCall", {
+                                JSONPCreationException: {
+                                    exception: e
+                                }
+                            })
+                        }
+                    }, this.createXGetAdRequest = function(e, t, n, r) {
+                        v(e, function(e) {
+                            e && void 0 !== e.html && e.html ? r(e.html) : t()
+                        }, "aax_render_ad", t, "fallback", n)
+                    }
+                }, e.exports.localErrorLog = r, e.exports.isSecure = function(e) {
+                    return /^https/.test(e)
+                }, e.exports.replaceWithSecure = function(e) {
+                    return e ? e.replace(/^http:/, "https:") : e
+                }, e.exports.isOnAmazon = function(e) {
+                    return /\.amazon\.(com?\.)?[a-z]{2,4}(:.*)?$/i.test(e)
+                }
+            }, {
+                "../../components/pixel": 7,
+                "../../components/sfCounters": 9
+            }],
+            6: [function(L, e, t) {
+                window.MSFClient = function(e, n) {
+                    var o = L("@apejs/click-tracking"),
+                        t = L("../components/sfCounters"),
+                        r = L("../components/util"),
+                        a = L("../components/sfAPI"),
+                        i = L("./messenger/sfMsgHandler"),
+                        s = i.messenger,
+                        c = i.localErrorLog,
+                        l = i.isSecure,
+                        d = i.replaceWithSecure,
+                        u = i.isOnAmazon,
+                        p = s.fireImpressionPixel,
+                        f = s.handleNoAdContent,
+                        g = r.decodeBase64,
+                        m = s.createXspRequest,
+                        v = s.createXGetAdRequest,
+                        h = t.AD_LOAD_COUNTERS,
+                        E = e.$sf = a.produce();
+
+                    function x() {
+                        e.$sf = E
+                    }
+                    var I = n.open,
+                        y = "function" == typeof I.apply ? function() {
+                            return I.apply(n, arguments)
+                        } : function() {
+                            return Function.apply.call(I, n, arguments)
+                        },
+                        C = n.write,
+                        w = "function" == typeof C.apply ? function() {
+                            return C.apply(n, arguments)
+                        } : function() {
+                            return Function.apply.call(C, n, arguments)
+                        };
+                    n.open = function(e, t) {
+                        y(e, t), x()
+                    }, r.disableCookieAccess(), n.write = M;
+                    var A = !1;
+
+                    function R() {
+                        A || (A = !0, s.client.sendCsmLatencyMetric("ld"))
+                    }
+                    var b = !1;
+
+                    function T() {
+                        r.ensureMessageListener(s.receiveMessage);
+                        var e = {};
+                        b ? e.firstInvocation = !1 : (e.firstInvocation = !0, b = !0, s.sendMessage("advertisementText"), setTimeout(p, s.options.adPixelDelay || 0), e.adPixelDelay = s.options.adPixelDelay, s.sendMessage("enableViewabilityTracker"), s.client.countMetric(h.CREATIVE_WRITTEN, 1)), r.addListener(n, "touchstart", {}), s.client.sendAdBarTrace("doneFunction", e)
+                    }
+                    r.ensureMessageListener(s.receiveMessage);
+                    try {
+                        s.options = JSON.parse(e.name)
+                    } catch (e) {
+                        c("Could not parse name ", e)
+                    }
+                    var P = {
+                        sendAdBarTrace: function(e, t) {
+                            s.sendMessage("sendAdBarTrace", {
+                                field: e,
+                                traceInfo: t
+                            })
+                        },
+                        resizeCreativeWrapper: function(e) {
+                            var t = n.getElementById(s.options.slot + "_creativeWrapper");
+                            null !== t && (t.style.height = e.height, t.style.width = e.width)
+                        },
+                        changeSize: function(e, t) {
+                            s.sendMessage("changeSize", {
+                                width: e,
+                                height: t
+                            })
+                        },
+                        collapseSlot: function() {
+                            s.sendMessage("collapseSlot")
+                        },
+                        handleFallbackBehavior: function() {
+                            s.client.collapseSlot()
+                        },
+                        logError: function(e, t) {
+                            s.sendMessage("logError", {
+                                message: e,
+                                error: t
+                            })
+                        },
+                        registerCustomMessageListener: function(e, t) {
+                            s.msgListeners[e] = t
+                        },
+                        getPlacementInfo: function() {
+                            var e = {};
+                            return e.pageType = s.options.pageType, e.slotName = s.options.slotName, e.subPageType = s.options.subPageType, e
+                        },
+                        getUserAgentInfo: function() {
+                            return s.options.userAgent
+                        },
+                        getDocumentCookie: {
+                            apiFunc: function() {
+                                return s.options.cookie
+                            },
+                            logInvocation: !(e.name = "")
+                        },
+                        embedScript: {
+                            apiFunc: function(e, t) {
+                                s.sendMessage("embedScript", {
+                                    src: e,
+                                    charset: t
+                                })
+                            },
+                            logInvocation: !0
+                        },
+                        isOnAmazon: function() {
+                            return u(s.options.hostDomain)
+                        },
+                        mash: {
+                            isAUIAvailable: function() {
+                                return s.options.isAUIAvailable
+                            },
+                            openInExternalBrowser: {
+                                execute: function(e, t, n) {
+                                    P.mash.openInExternalBrowser.successCallback = t, P.mash.openInExternalBrowser.failCallback = n, s.sendMessage("openInExternalBrowser", e)
+                                },
+                                update: function(e) {
+                                    void 0 === e.value ? P.mash.openInExternalBrowser.successCallback && P.mash.openInExternalBrowser.successCallback() : P.mash.openInExternalBrowser.failCallback && P.mash.openInExternalBrowser.failCallback(e.value)
+                                }
+                            },
+                            launchIntentURL: {
+                                execute: function(e, t, n) {
+                                    P.mash.launchIntentURL.successCallback = t, P.mash.launchIntentURL.failCallback = n, s.sendMessage("launchIntentURL", e)
+                                },
+                                update: function(e) {
+                                    void 0 === e.errorMsg ? P.mash.launchIntentURL.successCallback && P.mash.launchIntentURL.successCallback() : P.mash.launchIntentURL.failCallback && P.mash.launchIntentURL.failCallback(e.errorMsg)
+                                }
+                            }
+                        },
+                        sendCsmLatencyMetric: function(e, t) {
+                            s.sendMessage("sendCsmLatencyMetric", {
+                                metric: e,
+                                metricMsg: t,
+                                timestamp: r.now()
+                            })
+                        },
+                        countMetric: function(e, t) {
+                            s.sendMessage("countMetric", {
+                                metricMsg: e,
+                                value: t
+                            })
+                        },
+                        addCsmTag: function(e, t) {
+                            s.sendMessage("addCsmTag", {
+                                tag: e,
+                                msg: t
+                            })
+                        },
+                        fireViewableLatencyMetrics: function() {
+                            s.sendMessage("fireViewableLatencyMetrics", {
+                                adLoadedTimestamp: r.now()
+                            })
+                        },
+                        customMessage: function(e, t) {
+                            s.sendMessage("customMessage", {
+                                key: e,
+                                body: t
+                            })
+                        },
+                        notifyWhenVisible: function() {
+                            s.sendMessage("notifyWhenVisible")
+                        },
+                        updateViewability: function(e) {
+                            if (a.update(e), s.options.aaxInstrPixelUrl) {
+                                var t = E.ext.geom();
+                                s.fireViewablePixels(t && t.self && t.self.iv, e.payload, e.viewabilityStandards, s.options.isNoInventory)
+                            }
+                        },
+                        sendAdInfo: function(e) {
+                            e && s.sendMessage("getAdInfo", {
+                                mobileAdsInfo: e
+                            })
+                        },
+                        getUserConnectionInfo: {
+                            apiFunc: function() {
+                                return s.options.userConnectionInfo
+                            },
+                            logInvocation: !0
+                        },
+                        onPageEvent: {
+                            execute: {
+                                apiFunc: function(e, t) {
+                                    P.onPageEvent.callback = t, s.sendMessage("onPageEvent", {
+                                        eventName: e
+                                    })
+                                },
+                                logInvocation: !0
+                            },
+                            update: function() {
+                                "function" == typeof P.onPageEvent.callback && P.onPageEvent.callback()
+                            }
+                        },
+                        getToofanPredictions: {
+                            apiFunc: function() {
+                                return s.options.toofanPredictionInfo
+                            },
+                            logInvocation: !0
+                        }
+                    };
+
+                    function M(e) {
+                        s.client.countMetric(h.RENDER_START, 1);
+                        var t = {};
+                        t.readyState = n.readyState, s.client.sendAdBarTrace("renderHtmlContentStart", t), "complete" === n.readyState && n.open(), w(e), x(), n.close(), r.addWindowListener("load", R), r.addWindowListener("load", s.client.fireViewableLatencyMetrics), setTimeout(T, 0), s.client.countMetric(h.RENDER_END, 1), t.readyState = n.readyState, s.client.sendAdBarTrace("renderHtmlContentEnd", t)
+                    }
+                    s.produceClientAPIs(P), s.client.sendCsmLatencyMetric("be"), s.client.countMetric(h.IFRAME_INIT, 1), s.options.disableResizeFunc || s.sendMessage("resizeSafeFrameAd");
+                    var _ = function(e) {
+                        s.tagRenderFlow();
+                        var t = e;
+                        if (s.options.creativeWrapperDivEncoded) {
+                            var n = g(s.options.creativeWrapperDivEncoded),
+                                r = n.lastIndexOf("</div>");
+                            t = [n.slice(0, r), e, n.slice(r)].join("")
+                        }
+                        s.options.clickTracking && (t = o.replace(s.options.clickTracking, t)), s.options.enablePrerenderLogic ? (s.client.registerCustomMessageListener("readyToRender", function(e) {
+                            e === s.options.arid && M(t)
+                        }), s.client.notifyWhenVisible()) : M(t)
+                    };
+                    e.writeAdHandler = null;
+                    var S = {};
+                    if (S.serverSide = s.options.serverSideFetchAd, "true" === s.options.serverSideFetchAd)
+                        if (s.options.htmlContentEncoded) {
+                            var D = g(s.options.htmlContentEncoded);
+                            S.htmlContent = D, e.writeAdHandler = function() {
+                                _(D)
+                            }
+                        } else f(), S.noAdContent = !0;
+                    else {
+                        var U = l(s.options.hostDomain) ? d(s.options.src) : s.options.src;
+                        (S.adSource = U) && -1 !== U.indexOf("x/getad") ? (e.writeAdHandler = function() {
+                            v(U, s.client.collapseSlot, w, _)
+                        }, S.isXsp = !1) : (e.writeAdHandler = function() {
+                            m(U, s.options, f, w, _)
+                        }, S.isXsp = !0)
+                    }
+                    return s.client.sendAdBarTrace("adRenderFlow", S), s.client
+                }(window, document), "function" == typeof window.writeAdHandler && window.writeAdHandler()
+            }, {
+                "../components/sfAPI": 8,
+                "../components/sfCounters": 9,
+                "../components/util": 10,
+                "./messenger/sfMsgHandler": 5,
+                "@apejs/click-tracking": 1
+            }],
+            7: [function(e, t, n) {
+                var i = function(e, t, n) {
+                    var r = e + t;
+                    return n && (r += "_" + n), r
+                };
+                t.exports.firePixel = function(t, n, e, r, o, a) {
+                    if (t && n && "string" == typeof n && !(n.length <= 0) && e && "string" == typeof e) try {
+                        ! function(e, t, n, r, o) {
+                            if (null === document.getElementById(t) && "string" == typeof e && 0 < e.length) {
+                                var a = document.createElement("img");
+                                a.id = t, a.src = e, a.style.display = "none", a.onload = r, a.onerror = o, n.appendChild(a)
+                            }
+                        }(n, e, document.getElementsByTagName("body")[0], function() {
+                            t.countMetric(i(r, "loaded", o), 1), t.sendAdBarTrace("pixels", {
+                                loaded: {
+                                    pixelUrl: n,
+                                    additionalTrace: a
+                                }
+                            })
+                        }, function() {
+                            t.countMetric(i(r, "error", o), 1), t.sendAdBarTrace("pixels", {
+                                error: {
+                                    pixelUrl: n,
+                                    additionalTrace: a
+                                }
+                            })
+                        }), t.countMetric(i(r, "fired", o), 1), t.sendAdBarTrace("pixels", {
+                            fired: {
+                                pixelUrl: n,
+                                additionalTrace: a
+                            }
+                        })
+                    } catch (e) {
+                        t.logError("Error firing pixels: " + n, e)
+                    }
+                }
+            }, {}],
+            8: [function(e, t, n) {
+                var r = null,
+                    o = null,
+                    a = {
+                        ext: {}
+                    };
+                a.ext.inViewPercentage = function() {
+                    return r = r || 0, Math.round(100 * r)
+                }, a.ext.geom = function() {
+                    return o = o || {}
+                }, t.exports.produce = function() {
+                    return a
+                }, t.exports.update = function(e) {
+                    null === (r = e && e.geom && e.geom.self.iv) && delete a.ext.inViewPercentage, null === (o = e && e.geom) && delete a.ext.geom
+                }
+            }, {}],
+            9: [function(e, t, n) {
+                t.exports.AD_LOAD_COUNTERS = {
+                    IFRAME_INIT: "adload:iframeinitialized",
+                    RENDER_START: "adload:renderstart",
+                    RENDER_END: "adload:renderend",
+                    CREATIVE_WRITTEN: "adload:creativewritten",
+                    IMP: "adload:impression",
+                    UNSERVED_IMP: "adload:unservedimpression",
+                    VIEWABILITY: "adload:viewability",
+                    UNSERVED_VIEWABILITY: "adload:unservedviewability"
+                }, t.exports.AD_FETCH_COUNTERS = {
+                    REQUEST_START: "adfetch:request",
+                    PUNT_RETURNED: "adfetch:punt",
+                    ERROR_RETURNED: "adfetch:error",
+                    EMPTY_RESPONSE: "adfetch:noad",
+                    RENDERED_AD: "adfetch:renderad",
+                    RENDER_ERROR: "adfetch:rendererror",
+                    HTTP_ERROR: "adfetch:httperror",
+                    EXCEPTION: "adfetch:exception"
+                }
+            }, {}],
+            10: [function(e, u, t) {
+                /*
+                    @license
+                    Underscore.js 1.8.3
+                    http://underscorejs.org
+                    (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+                    Underscore may be freely distributed under the MIT license.
+                */
+                var r = function() {
+                    return window.P && window.P.AUI_BUILD_DATE
+                };
+                u.exports.throttle = function(n, r, o) {
+                    var a, i, s, c = null,
+                        l = 0;
+                    o || (o = {});
+                    var d = function() {
+                        l = !1 === o.leading ? 0 : u.exports.now(), c = null, s = n.apply(a, i), c || (a = i = null)
+                    };
+                    return function() {
+                        var e = u.exports.now();
+                        l || !1 !== o.leading || (l = e);
+                        var t = r - (e - l);
+                        return a = this, i = arguments, t <= 0 || r < t ? (c && (clearTimeout(c), c = null), l = e, s = n.apply(a, i), c || (a = i = null)) : c || !1 === o.trailing || (c = setTimeout(d, t)), s
+                    }
+                }, u.exports.now = function() {
+                    return Date.now ? Date.now() : (new Date).getTime()
+                }, u.exports.addListener = function(e, t, n) {
+                    e.addEventListener ? e.addEventListener(t, n, !1) : window.attachEvent && e.attachEvent("on" + t, n)
+                }, u.exports.addWindowListener = function(e, t) {
+                    u.exports.addListener(window, e, t)
+                }, u.exports.removeWindowListener = function(e, t) {
+                    window.removeEventListener ? window.removeEventListener(e, t, !1) : window.detachEvent && window.detachEvent("on" + e, t)
+                }, u.exports.ensureMessageListener = function(e) {
+                    u.exports.removeWindowListener("message", e), u.exports.addWindowListener("message", e)
+                }, u.exports.decodeBase64 = function(e) {
+                    var t, n, r, o, a, i, s = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+                        c = "",
+                        l = 0;
+                    for (e = e.replace(/[^A-Za-z0-9\+\/\=]/g, ""); l < e.length;) t = s.indexOf(e.charAt(l++)) << 2 | (o = s.indexOf(e.charAt(l++))) >> 4, n = (15 & o) << 4 | (a = s.indexOf(e.charAt(l++))) >> 2, r = (3 & a) << 6 | (i = s.indexOf(e.charAt(l++))), c += String.fromCharCode(t), 64 != a && (c += String.fromCharCode(n)), 64 != i && (c += String.fromCharCode(r));
+                    return c = function(e) {
+                        for (var t = "", n = 0, r = 0, o = 0, a = 0; n < e.length;)(r = e.charCodeAt(n)) < 128 ? (t += String.fromCharCode(r), n++) : 191 < r && r < 224 ? (o = e.charCodeAt(n + 1), t += String.fromCharCode((31 & r) << 6 | 63 & o), n += 2) : (o = e.charCodeAt(n + 1), a = e.charCodeAt(n + 2), t += String.fromCharCode((15 & r) << 12 | (63 & o) << 6 | 63 & a), n += 3);
+                        return t
+                    }(c)
+                }, u.exports.createScript = function(e, t, n, r, o) {
+                    if (!document.getElementById(n)) {
+                        var a = document.createElement("script");
+                        return a.async = !0, a.setAttribute("crossorigin", "anonymous"), a.src = e, a.type = t, a.id = n, a.onerror = r, a.onload = o, a
+                    }
+                }, u.exports.isAUIAvailable = r, u.exports.safeFunctionWrapper = function(e, t, n) {
+                    return r() && "function" == typeof window.P.guardError ? P.guardError("APE-SafeFrame", e) : function() {
+                        try {
+                            e.apply(this, arguments)
+                        } catch (e) {
+                            "function" == typeof t && n && t(n, e)
+                        }
+                    }
+                }, u.exports.getCookie = function(e) {
+                    var t = e + "=";
+                    try {
+                        for (var n = decodeURIComponent(document.cookie).split(";"), r = 0; r < n.length; r++) {
+                            for (var o = n[r];
+                                " " == o.charAt(0);) o = o.substring(1);
+                            if (0 == o.indexOf(t)) return o.substring(t.length, o.length)
+                        }
+                    } catch (e) {}
+                    return ""
+                }, u.exports.disableCookieAccess = function() {
+                    try {
+                        Object && Object.defineProperty && "function" == typeof Object.defineProperty ? Object.defineProperty(document, "cookie", {
+                            get: function() {
+                                return ""
+                            },
+                            set: function() {}
+                        }) : (document.__defineGetter__("cookie", function() {
+                            return ""
+                        }), document.__defineSetter__("cookie", function() {}))
+                    } catch (e) {}
+                }, u.exports.setObjectStyles = function(e, t) {
+                    if (e && t)
+                        for (var n in t) e.style[n] = t[n];
+                    return e
+                }, u.exports.ABP_STATUS = {
+                    1: "Enabled",
+                    0: "NotEnabled",
+                    "-1": "Unknown"
+                }
+            }, {}]
+        }, {}, [6]);
+    </script>
+</body>
+
+</html>

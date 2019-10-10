@@ -1,0 +1,65 @@
+.cmp-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    display: none;
+
+    @include mq(mobileLandscape) {
+        transition: background-color;
+        transition-delay: .6s;
+        will-change: background-color;
+    }
+
+    &.cmp-iframe-ready {
+        display: block;
+    }
+
+    &.cmp-animate {
+        @include mq(mobileLandscape) {
+            background-color: rgba(#000000, .5);
+        }
+    }
+}
+
+.cmp-container {
+    z-index: 9999;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 576px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(0);
+    transition: transform .6s ease-in;
+    will-change: transform;
+
+    @include mq(mobileLandscape) {
+        width: 30%;
+        min-width: 480px;
+    }
+
+    .cmp-animate & {
+        transform: translateX(-100%);
+    }
+}
+
+.cmp-iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+// Prevent body scrolling behind overlay
+body.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+}

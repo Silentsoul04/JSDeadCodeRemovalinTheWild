@@ -1,0 +1,15 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+// module
+exports.push([module.id, ".fast-forward-1n4gVyU7 svg{fill:#000;transition:fill .25s,transform .3s}.desktop-26D1Ay63.fast-forward-1n4gVyU7:focus svg,.desktop-26D1Ay63.fast-forward-1n4gVyU7:hover svg{fill:rgba(0,0,0,.8)}.light-cqABIdh9.fast-forward-1n4gVyU7 svg{fill:#fff}.desktop-26D1Ay63.light-cqABIdh9.fast-forward-1n4gVyU7:focus svg,.desktop-26D1Ay63.light-cqABIdh9.fast-forward-1n4gVyU7:hover svg{fill:hsla(0,0%,100%,.8)}.fast-forward-1n4gVyU7{width:31px;height:31px}.fast-forward-1n4gVyU7 svg{width:30px;height:30px}.fast-forward-1n4gVyU7:disabled svg{fill:rgba(68,68,68,.2)}.light-cqABIdh9.fast-forward-1n4gVyU7:disabled svg{fill:hsla(0,0%,100%,.2)}.desktop-26D1Ay63.fast-forward-1n4gVyU7:disabled svg{fill:rgba(68,68,68,.2)}.desktop-26D1Ay63.light-cqABIdh9.fast-forward-1n4gVyU7:disabled svg{fill:hsla(0,0%,100%,.2)}", ""]);
+// exports
+exports.locals= {
+    "fast-forward": "fast-forward-1n4gVyU7", "desktop": "desktop-26D1Ay63", "light": "light-cqABIdh9"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/audio-controls/componentV2/fast-forward-10-seconds/styles.css
+// module id = 190
+// module chunks = 5

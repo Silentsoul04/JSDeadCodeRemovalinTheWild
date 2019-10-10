@@ -1,0 +1,471 @@
+#inline-twister-experiment-container {
+    position: relative;
+    border-top: 5px solid #F3F3F3;
+    border-bottom: 5px solid #F3F3F3;
+    margin: 0 -1.4rem 1.3rem;
+    padding: 1.7rem 1.4rem;
+    pointer-events: all;
+    overflow: hidden
+}
+
+#inline-twister-experiment-container .inline-twister-btn>span {
+    background: 0 0;
+    box-shadow: none
+}
+
+#inline-twister-experiment-container .inline-twister-btn.a-button-selected>span:before {
+    border-top-color: transparent
+}
+
+#inline-twister-experiment-container .inline-twister-btn.a-button-selected:after {
+    border-top-color: transparent
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn.a-button-selected {
+    transition-property: none;
+    border: 1.5px solid #000
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn.slot-on {
+    min-width: 85px
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn .inline-twister-ts-pp {
+    font-size: 1.3rem;
+    margin-top: 1.1rem;
+    white-space: normal;
+    min-width: 40px
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn .a-button-inner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn input {
+    padding-bottom: 1px
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn .inline-twister-text>span {
+    margin-bottom: -4px
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn .inline-twister-truncate-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-width: 194px;
+    white-space: normal;
+    max-height: 40px
+}
+
+#inline-twister-experiment-container .inline-twister-btn.a-button-selected {
+    box-shadow: none
+}
+
+#inline-twister-experiment-container .inline-twister-btn.a-button-selected::before {
+    background-color: transparent
+}
+
+#inline-twister-experiment-container .inline-twister-btn {
+    box-shadow: none;
+    margin: 0;
+    position: relative
+}
+
+#inline-twister-experiment-container .inline-twister-scroller {
+    position: relative;
+    margin: 0 -1.4rem;
+    padding: 0 1.4rem;
+    width: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch
+}
+
+#inline-twister-experiment-container .inline-twister-text-swatch ul {
+    margin-bottom: 0rem !important;
+    display: flex
+}
+
+#inline-twister-experiment-container .inline-twister-text-swatch ul .mod-inline-ts-listitem {
+    flex: 0 0 auto;
+    min-width: 60px;
+    max-width: 230px
+}
+
+#inline-twister-experiment-container .inline-twister-text-swatch ul .mod-inline-ts-listitem .inline-twister-btn {
+    height: 100%;
+    width: 100%
+}
+
+#inline-twister-experiment-container .inline-twister-image-swatch ul {
+    display: flex
+}
+
+#inline-twister-experiment-container .defaultSlotUnavailable {
+    white-space: normal;
+    max-width: 80px;
+    margin: 0 auto
+}
+
+#inline-twister-experiment-container ul {
+    text-align: left
+}
+
+#inline-twister-experiment-container .inline-twister-image-swatch li {
+    margin-left: 5px
+}
+
+#inline-twister-experiment-container .inline-twister-text-swatch li {
+    margin-left: 10px
+}
+
+#inline-twister-experiment-container .mod-inline-ts-list .inline-twister-first-item {
+    order: -1;
+    margin-left: -6px
+}
+
+#inline-twister-experiment-container .mod-inline-ts-list li {
+    order: 0
+}
+
+#inline-twister-experiment-container .mod-inline-ts-list .inline-twister-last-item {
+    order: 3
+}
+
+#inline-twister-experiment-container .inline-twister-first-item span,
+#inline-twister-experiment-container .inline-twister-last-item span {
+    display: block;
+    width: 1px
+}
+
+.inline-twister-img-btn {
+    border-width: 0;
+    border-color: transparent
+}
+
+.inline-twister-img-btn .inline-twister-img {
+    padding: 0 5px;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border: 1px solid #C5C5C5;
+    border-radius: 50%;
+    position: relative;
+    background-color: rgba(210, 210, 210, .25)
+}
+
+.inline-twister-img-btn .inline-twister-img .inline-twister-img-not-available {
+    position: absolute;
+    white-space: normal;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem
+}
+
+.inline-twister-img-btn.a-button-unavailable .inline-twister-img {
+    border: 1px dashed #969696;
+    opacity: .5
+}
+
+.inline-twister-img-btn.a-button-selected .inline-twister-img {
+    border: 2px solid #000
+}
+
+.inline-twister-img-btn.a-button-selected .inline-twister-img::before {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border: 2px solid #fff
+}
+
+.inline-twister-img-btn img {
+    transform: translateY(5px) scale(1.7)
+}
+
+.inline-twister-img-btn input {
+    padding: 0
+}
+
+.inline-twister-img-btn input+span {
+    width: 80px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0
+}
+
+.inline-twister-img-btn .inline-twister-ts-pp {
+    font-size: 1.1rem;
+    margin-top: 1.1rem;
+    white-space: normal
+}
+
+.inline-twister-txt-btn.a-button-unavailable {
+    background: #F8F8F8
+}
+
+.inline-twister-dim-title {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.inline-twister-row:first-child {
+    margin-top: 0
+}
+
+.inline-twister-row {
+    margin-top: 21px
+}
+
+.inline-twister-row label:only-child {
+    margin-bottom: 0 !important
+}
+
+.inline-twister-overlay-on {
+    border-radius: 50%;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(210, 210, 210, .25);
+    top: 0;
+    left: 0;
+    z-index: 1
+}
+
+.inline-twister-overlay-off {
+    display: none
+}
+
+#twisterAvailability {
+    display: inline-block;
+    max-width: 80px
+}
+
+#twisterAvailability.availability-alert {
+    position: static;
+    white-space: normal;
+    font-weight: 400;
+    line-height: 1.35 !important
+}
+
+#twisterAvailability.availability-hidden {
+    display: none
+}
+
+.inline-twister-swatch-price {
+    font-weight: 400
+}
+
+.inline-twister-dim-required {
+    animation-name: title-tilt;
+    animation-duration: 1s;
+    animation-timing-function: linear
+}
+
+.inline-twister-dim-required.inline-twister-dim-required-delay {
+    animation-delay: 250ms
+}
+
+.inline-twister-dim-required span {
+    color: #B12704 !important
+}
+
+#inline-twister-experiment-container.shell-on {
+    pointer-events: none
+}
+
+#inline-twister-experiment-container.shell-on .inline-twister-txt-btn {
+    border: 1px solid #9AA2A6
+}
+
+#inline-twister-experiment-container.shell-on .inline-twister-txt-btn.a-button-unavailable {
+    background: #fff
+}
+
+#inline-twister-experiment-container.shell-on .inline-twister-img-btn.a-button-selected .inline-twister-img {
+    border: 1px solid #C5C5C5
+}
+
+#inline-twister-experiment-container.shell-on .inline-twister-img-btn.a-button-selected .inline-twister-img::before {
+    border: 0
+}
+
+#inline-twister-experiment-container.shell-on .inline-twister-img-btn.a-button-unavailable .inline-twister-img {
+    border: 1px solid #C5C5C5;
+    opacity: 1
+}
+
+#inline-twister-experiment-container.shell-on .inline-twister-dim-title {
+    text-overflow: unset
+}
+
+#inline-twister-experiment-container.shell-on .inline-twister-dim-title-value {
+    visibility: hidden
+}
+
+#inline-twister-experiment-container.shell-on .defaultSlotUnavailable {
+    position: relative
+}
+
+#inline-twister-experiment-container.shell-on .defaultSlotUnavailable .loading-unavailable {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff
+}
+
+#inline-twister-experiment-container.shell-on .defaultSlotUnavailable .loading-unavailable div {
+    margin: 3px 0 6px;
+    height: 8px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAABCAIAAACJ2epRAAAAcElEQVQ4y43UNxKAQAxDUe5/R+KSc+xpodDXvgt4xrKVpH8ZyrXCKVGlBVRrjdOiTuvRoI3OhGZt0Va0OTs6tFO7Itzag24Hhp7ocGBRWwSICfKdI8BR2ZscUO90CB7Q/m+NggOdU0aArstR5nwL+QW2FB7+RcGzTAAAAABJRU5ErkJggg==);
+    -webkit-animation: loading 1s linear infinite reverse;
+    -moz-animation: loading 1s linear infinite reverse;
+    -ms-animation: loading 1s linear infinite reverse;
+    -o-animation: loading 1s linear infinite reverse;
+    animation: loading 1s linear infinite reverse
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn:not(.slot-on) {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn .label-only.loading-indicator+.inline-twister-text {
+    visibility: hidden
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn .label-only.loading-indicator {
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    padding: 0 1.6rem 0 1.7rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn .label-only.loading-indicator div {
+    height: 100%
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn.slot-on .label-only.loading-indicator {
+    top: auto;
+    transform: none
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn .inline-twister-ts-pp .loading-indicator {
+    padding: 5px 0
+}
+
+#inline-twister-experiment-container .inline-twister-txt-btn .loading-indicator div {
+    height: 10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAABCAIAAACJ2epRAAAAcElEQVQ4y43UNxKAQAxDUe5/R+KSc+xpodDXvgt4xrKVpH8ZyrXCKVGlBVRrjdOiTuvRoI3OhGZt0Va0OTs6tFO7Itzag24Hhp7ocGBRWwSICfKdI8BR2ZscUO90CB7Q/m+NggOdU0aArstR5nwL+QW2FB7+RcGzTAAAAABJRU5ErkJggg==);
+    -webkit-animation: loading 1s linear infinite reverse;
+    -moz-animation: loading 1s linear infinite reverse;
+    -ms-animation: loading 1s linear infinite reverse;
+    -o-animation: loading 1s linear infinite reverse;
+    animation: loading 1s linear infinite reverse
+}
+
+#inline-twister-experiment-container .inline-twister-img-btn .loading-indicator,
+#inline-twister-experiment-container .loading-indicator-btf {
+    padding: 3px 0
+}
+
+#inline-twister-experiment-container .inline-twister-img-btn .loading-indicator div,
+#inline-twister-experiment-container .loading-indicator-btf div {
+    height: 8px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAABCAIAAACJ2epRAAAAcElEQVQ4y43UNxKAQAxDUe5/R+KSc+xpodDXvgt4xrKVpH8ZyrXCKVGlBVRrjdOiTuvRoI3OhGZt0Va0OTs6tFO7Itzag24Hhp7ocGBRWwSICfKdI8BR2ZscUO90CB7Q/m+NggOdU0aArstR5nwL+QW2FB7+RcGzTAAAAABJRU5ErkJggg==);
+    -webkit-animation: loading 1s linear infinite reverse;
+    -moz-animation: loading 1s linear infinite reverse;
+    -ms-animation: loading 1s linear infinite reverse;
+    -o-animation: loading 1s linear infinite reverse;
+    animation: loading 1s linear infinite reverse
+}
+
+#inline-twister-experiment-container .inline-twister-img .loading-indicator,
+#inline-twister-experiment-container .loading-indicator-btf {
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: opacity .5s ease-in;
+    -moz-transition: opacity .5s ease-in;
+    -o-transition: opacity .5s ease-in;
+    transition: opacity .5s ease-in
+}
+
+#inline-twister-experiment-container .inline-twister-img .loading-indicator~.inline-twister-img-el,
+#inline-twister-experiment-container .loading-indicator-btf~.inline-twister-img-el {
+    visibility: hidden
+}
+
+#inline-twister-experiment-container .inline-twister-img .loading-indicator div,
+#inline-twister-experiment-container .loading-indicator-btf div {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%
+}
+
+#inline-twister-experiment-container .inline-twister-img .loading-indicator.hide-loading,
+#inline-twister-experiment-container .loading-indicator-btf.hide-loading {
+    opacity: 0
+}
+
+#inline-twister-experiment-container .inline-twister-img .loading-indicator.hide-loading~.inline-twister-img-el,
+#inline-twister-experiment-container .loading-indicator-btf.hide-loading~.inline-twister-img-el {
+    visibility: visible
+}
+
+#inline-twister-experiment-container .js-auto-select-start .inline-twister-btn.a-button-selected.a-button-unavailable::before,
+#inline-twister-experiment-container .js-auto-select-start .inline-twister-btn.a-button-selected::before {
+    background-color: #000
+}
+
+#inline-twister-experiment-container .js-auto-select .inline-twister-btn.a-button-selected.a-button-unavailable::before,
+#inline-twister-experiment-container .js-auto-select .inline-twister-btn.a-button-selected::before {
+    -webkit-animation: autoselection-background 2s;
+    -moz-animation: autoselection-background 2s;
+    -ms-animation: autoselection-background 2s;
+    -o-animation: autoselection-background 2s;
+    animation: autoselection-background 2s
+}
+
+@keyframes title-tilt {
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate3d(10px, 0, 0)
+    }
+    100%,
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate3d(0, 0, 0)
+    }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.875" height="34.406" viewBox="0 0 30.875 34.406">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: red;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="person_plus_bg" class="cls-1" d="M105.921,58.763h30.855V93.144H105.921V58.763Z" transform="translate(-105.906 -58.75)"/>
+</svg>

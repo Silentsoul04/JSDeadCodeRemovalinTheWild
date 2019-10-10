@@ -1,0 +1,1546 @@
+{
+  "tests" : [
+    {
+      "name" : "2019-08-16_post_pause_one_off",
+      "isOn" : true,
+      "locations" : [
+      ],
+      "tagIds" : [
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : false,
+      "userCohort" : "PostAskPauseSingleContributors",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "control",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism that’s open and independent. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "variant_1",
+          "heading" : "Since you’re still here…",
+          "paragraphs" : [
+            "… we would like to thank you for your support. Contributors, like you, make The Guardian’s work possible. Your contributions – however big or however small – protect our editorial independence and mean we can keep delivering quality, investigative journalism. Your continued support ensures all our reporting remains open for everyone around the world.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "Thank you for your support, and we hope you’ll consider contributing again. Every reader contribution is so valuable for our future."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "variant_2",
+          "heading" : "Contributors like you…",
+          "paragraphs" : [
+            "… make The Guardian’s work possible. Thank you for your support. Your contributions – however big or however small – protect our editorial independence and mean we can keep delivering quality, investigative journalism. Your continued support ensures all our reporting remains open for everyone around the world.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "Thank you for your support, and we hope you’ll consider contributing again. Every reader contribution is so valuable for our future."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-09-26_contribs_epiccopy_US_Impeachment",
+      "isOn" : true,
+      "locations" : [
+        "UnitedStates"
+      ],
+      "tagIds" : [
+        "us-news/trump-impeachment-inquiry"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : true,
+      "maxViews" : {
+        "maxViewsCount" : 4,
+        "maxViewsDays" : 30,
+        "minDaysBetweenViews" : 0
+      },
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "Control",
+          "heading" : "Since you're here...",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v1_impeachment",
+          "heading" : "As the Trump impeachment inquiry progresses…",
+          "paragraphs" : [
+            "… The Guardian offers clarity at this critical moment in American history. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-10-08_contrib_global_epiccopy_the-polluters",
+      "isOn" : true,
+      "locations" : [
+      ],
+      "tagIds" : [
+        "environment/series/the-polluters",
+        "environment/environment",
+        "environment/the-forgotten-climate-change-crises",
+        "environment/drought",
+        "environment/endangered-habitats",
+        "environment/endangeredspecies",
+        "environment/climate-change",
+        "environment/activism",
+        "environment/climate-change",
+        "science/scienceofclimatechange",
+        "environment/renewableenergy",
+        "environment/renewableenergy",
+        "environment/series/our-wide-brown-land",
+        "environment/extinction-rebellion",
+        " us-news/series/toxic-america",
+        "us-news/series/cancer-town",
+        "us-news/series/united-states-of-plastic"
+      ],
+      "sections" : [
+        "environment"
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : true,
+      "maxViews" : {
+        "maxViewsCount" : 4,
+        "maxViewsDays" : 30,
+        "minDaysBetweenViews" : 0
+      },
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "control",
+          "heading" : "As the crisis escalates…",
+          "paragraphs" : [
+            "… in our natural world, we refuse to turn away from the climate catastrophe and species extinction. For The Guardian, reporting on the environment is a priority. We give reporting on climate, nature and pollution the prominence it deserves, stories which often go unreported by others in the media. At this pivotal time for our species and our planet, we are determined to inform readers about threats, consequences and solutions based on scientific facts, not political prejudice or business interests.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v1_the-polluters",
+          "heading" : "As the crisis escalates...",
+          "paragraphs" : [
+            "… in our natural world, we refuse to turn away from the climate catastrophe and species extinction. For The Guardian, reporting on the environment is a priority. We give reporting on climate, nature and pollution the prominence it deserves, stories which often go unreported by others in the media. We undertake months-long investigations, like <strong><a href=\"https://www.theguardian.com/environment/series/the-polluters\">The polluters</a></strong>, and will not shy away from interrogating powerful business interests. At this pivotal time for our species and our planet, we are determined to inform readers about threats, consequences and solutions based on scientific facts, not political prejudice or commercial interests.",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable.",
+            ""
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-10-03_contribs_US_epic_electiontwenty2",
+      "isOn" : true,
+      "locations" : [
+        "UnitedStates"
+      ],
+      "tagIds" : [
+        "us-news/us-elections-2020"
+      ],
+      "sections" : [
+        ""
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : false,
+      "maxViews" : {
+        "maxViewsCount" : 4,
+        "maxViewsDays" : 30,
+        "minDaysBetweenViews" : 0
+      },
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "Control",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "V1_Overview",
+          "heading" : "The 2020 presidential election…",
+          "paragraphs" : [
+            "… will be a critical test for the United States — and for journalism. Free from commercial and political pressure, The Guardian will offer an international and independent perspective guided by progressive ideals. With reporters in the United States and in bureaus around the world, The Guardian offers a unique voice and outsider perspective. ",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "V2_Issues",
+          "heading" : "The 2020 presidential election…",
+          "paragraphs" : [
+            "… will be a critical test for the United States -- and for journalism. We will devote specific resources to issues that we hold dear: women's reproductive rights, the suppression of votes amongst poorer communities and people of colour, the climate crisis, and racial justice. Putting extravagant — and often untrue — claims from the White House into context will also be front and center of our coverage.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-10-09_contribs_epiccopy_brexit_round6",
+      "isOn" : true,
+      "locations" : [
+        "GBPCountries"
+      ],
+      "tagIds" : [
+        "politics/eu-referendum"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : false,
+      "maxViews" : {
+        "maxViewsCount" : 4,
+        "maxViewsDays" : 30,
+        "minDaysBetweenViews" : 0
+      },
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "control",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v1_brexit_deadline_approaches",
+          "heading" : "As the Brexit deadline approaches…",
+          "paragraphs" : [
+            "… The Guardian offers clarity at this critical moment in UK history. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-09-07_contribs_US_epic_gunviolence",
+      "isOn" : true,
+      "locations" : [
+        "UnitedStates"
+      ],
+      "tagIds" : [
+        "world/gun-crime",
+        "us-news/gun-control"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : false,
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "Control",
+          "heading" : "We are committed…",
+          "paragraphs" : [
+            "<strong>… to in-depth reporting on gun violence</strong> in America and looking at the causes and potential solutions all-year-round, not only in the aftermath of mass shootings and other tragedies. At the Guardian, we explore opportunities for change - and new ideas for reducing violence. We report on the connections between gun violence and related social factors, including mental health, inequality, policy, laws and firearms access. As a global publication with a dedicated US presence, the Guardian offers a unique mix of perspectives and voices. We challenge the misleading talking points and dangerous assumptions - on both sides of the debate - that have undermined efforts to address America's gun violence crisis. By keeping the issue of gun violence in the public eye, we can help bring about meaningful change.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-10-04-contribs_US_epic_globalcopy",
+      "isOn" : true,
+      "locations" : [
+        "UnitedStates"
+      ],
+      "tagIds" : [
+        ""
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : false,
+      "maxViews" : {
+        "maxViewsCount" : 4,
+        "maxViewsDays" : 30,
+        "minDaysBetweenViews" : 0
+      },
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "Control",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "V1_GlobalJournalism",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative, and global journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v2_OutsiderPerspective",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "With reporters in the United States and in bureaus around the world, The Guardian offers a unique voice and outsider perspective. The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-05-22_contribs_epic_reproductive_rights",
+      "isOn" : true,
+      "locations" : [
+      ],
+      "tagIds" : [
+        "us-news/planned-parenthood",
+        "us-news/roe-v-wade",
+        "world/abortion",
+        "society/reproductive-rights"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : true,
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "control",
+          "heading" : "Since you're here...",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting our independent, investigative reporting than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford.",
+            "",
+            "The Guardian is editorially independent, meaning we set our own agenda. Our journalism is free from commercial bias and not influenced by billionaire owners, politicians or shareholders. No one edits our editor. No one steers our opinion. This is important as it enables us to give a voice to those less heard, challenge the powerful and hold them to account. It’s what makes us different to so many others in the media, at a time when factual, honest reporting is critical.",
+            "",
+            "Every contribution we receive from readers like you, big or small, goes directly into funding our journalism. This support enables us to keep working as we do – but we must maintain and build on it for every year to come."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v1_womens_rights",
+          "heading" : "With women’s rights…",
+          "paragraphs" : [
+            "… under attack, The Guardian is committed to reporting on this issue with rigour and will continue to dispel the myths that distort the abortion debate. We see the right-to-choose as fundamental to women’s health and human rights – one that is under serious threat for the first time in generations. We are determined to deliver the facts and explore the bigger picture surrounding women’s ability to make decisions about their own lives.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative reporting than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford.",
+            "",
+            "The Guardian is editorially independent, meaning we set our own agenda. Our journalism is free from commercial bias and not influenced by billionaire owners, politicians or shareholders. No one edits our editor. No one steers our opinion. This is important as it enables us to give a voice to those less heard, challenge the powerful and hold them to account. It’s what makes us different to so many others in the media, at a time when factual, honest reporting is critical.",
+            "",
+            "<strong>Support journalism that supports equal rights.</strong> Every contribution we receive from readers like you, big or small, goes directly into funding our reporting."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v2_healthcare",
+          "heading" : "Reproductive freedom…",
+          "paragraphs" : [
+            "… is a basic human right. The Guardian is committed to reporting with rigour for women around the world, who all deserve equal access to reliable, quality healthcare. The vulnerable will be those who suffer most in the war on women we can see unfolding. We’ll deliver the facts and dispel the misinformation surrounding abortion legislation – that, among many devastating consequences, could force women to take dangerous measures to end a pregnancy.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative reporting than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford.",
+            "",
+            "The Guardian is editorially independent, meaning we set our own agenda. Our journalism is free from commercial bias and not influenced by billionaire owners, politicians or shareholders. No one edits our editor. No one steers our opinion. This is important as it enables us to give a voice to those less heard, challenge the powerful and hold them to account. It’s what makes us different to so many others in the media, at a time when factual, honest reporting is critical.",
+            "",
+            "<strong>Support journalism that supports equal rights.</strong> Every contribution we receive from readers like you, big or small, goes directly into funding our reporting."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-09-13_contribs_aus_epic_independ",
+      "isOn" : true,
+      "locations" : [
+      ],
+      "tagIds" : [
+        "australia-news/australian-politics",
+        "australia-news/australian-election-2019",
+        "australia-news/bill-shorten",
+        "australia-news/labor-party",
+        "australia-news/liberal-party",
+        "business/australia-economy",
+        "australia-news/coalition",
+        "australia-news/scott-morrison",
+        "australia-news/bill-shorten",
+        "australia-news/australian-greens",
+        "australia-news/richard-di-natale",
+        "business/adani-group",
+        "environment/carmichael-coalmine",
+        "australia-news/tax-australia",
+        "australia-news/josh-frydenberg",
+        "australia-news/series/fair-go",
+        "australia-news/welfare-in-australia",
+        "australia-news/cory-bernardi",
+        "australia-news/national-party",
+        "australia-news/michael-mccormack",
+        "australia-news/mark-latham",
+        "australia-news/pauline-hanson",
+        "australia-news/tony-abbott",
+        "australia-news/zali-steggall",
+        "australia-news/health",
+        "australia-news/paul-keating2",
+        "australia-news/kevin-rudd",
+        "world/julia-gillard",
+        "australia-news/barnaby-joyce",
+        "australia-news/murray-darling-basin",
+        "australia-news/australian-immigration-and-asylum"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : true,
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "Control",
+          "heading" : "Australia's media...",
+          "paragraphs" : [
+            "… has never been more concentrated, at a time when clear, factual reporting is so desperately needed. Guardian Australia will hold the new Coalition government to account and continue to report on the escalating climate emergency. We are editorially independent, free from commercial and political bias – this means we can promise to keep delivering quality journalism without favour or interference.",
+            "",
+            "More people are reading and supporting our independent, investigative reporting than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford.",
+            "",
+            "The Guardian is editorially independent, meaning we set our own agenda. Our journalism is free from commercial bias and not influenced by billionaire owners, politicians or shareholders. No one edits our editor. No one steers our opinion. This is important as it enables us to give a voice to those less heard, challenge the powerful and hold them to account. It’s what makes us different to so many others in the media, at a time when factual, honest reporting is critical.",
+            "",
+            "Every contribution we receive from readers like you, big or small, goes directly into funding our journalism. This support enables us to keep working as we do – but we must maintain and build on it for every year to come."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v1_dont_answer",
+          "heading" : "Australia's media...",
+          "paragraphs" : [
+            "… has never been more concentrated, at a time when clear, factual reporting is so important. Unlike our competitors, we don’t answer to shareholders or a billionaire owner, meaning we are free from commercial influence. Guardian Australia is the only major, truly independent news source in one of the most concentrated news markets in the world. This means we can continue to hold power to account, and keep delivering quality journalism without favour or interference.",
+            "",
+            "In these uncertain times, Australians need an independent news source they can trust. No one edits our editor. No one steers our opinion. This is important as it enables us to give a voice to those less heard, challenge the powerful and hold them to account. It’s what makes us different to so many others in the media, at a time when factual, honest reporting is critical.",
+            "",
+            "More people are reading and supporting our investigative reporting than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism open and accessible to all, regardless of where they live or what they can afford.",
+            "",
+            "Every contribution we receive from readers like you, big or small, goes directly into funding our journalism. This support enables us to keep working as we do – but we must maintain and build on it for every year to come."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v3_media_freedom",
+          "heading" : "Australia's media...",
+          "paragraphs" : [
+            "… has never been more concentrated, at a time when clear, factual reporting is so important. With media freedom under threat, the support we receive from you, our readers, helps protect our independence for the future. We are free from commercial and political influence – this means we can continue to hold power to account, and keep delivering quality journalism without favour or interference.",
+            "",
+            "In these uncertain times, Australians need an independent news source they can trust. No one edits our editor. No one steers our opinion. This is important as it enables us to give a voice to those less heard, challenge the powerful and hold them to account. It’s what makes us different to so many others in the media, at a time when factual, honest reporting is critical.",
+            "",
+            "More people are reading and supporting our investigative reporting than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism open and accessible to all, regardless of where they live or what they can afford.",
+            "",
+            "Every contribution we receive from readers like you, big or small, goes directly into funding our journalism. This support enables us to keep working as we do – but we must maintain and build on it for every year to come."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-03-29_contribs_global_epic_copy_alwaysask",
+      "isOn" : true,
+      "locations" : [
+      ],
+      "tagIds" : [
+        "membership/membership",
+        "media/theguardian",
+        "us-news/series/guns-and-lies",
+        "global-development/series/exploitation-in-focus"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : true,
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "AlwaysAsk",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism that’s open and independent. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "acquisitions_epic_brexit__liveblog",
+      "isOn" : true,
+      "locations" : [
+        "GBPCountries"
+      ],
+      "tagIds" : [
+        "politics/eu-referendum"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+        "sport",
+        "football"
+      ],
+      "alwaysAsk" : false,
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : true,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "control",
+          "heading" : "",
+          "paragraphs" : [
+            "Unlike many news organisations, we chose an approach that means all our reporting is free and available for everyone. We need your support to keep delivering quality journalism, to maintain our openness and to protect our independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "For as little as %%CURRENCY_SYMBOL%%1 you can support us – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : ""
+        },
+        {
+          "name" : "brexit",
+          "heading" : "",
+          "paragraphs" : [
+            "With UK politics in chaos, The Guardian is here to help guide you through whatever lies ahead. Unlike many news organisations, we chose an approach that means all our reporting is free and available for everyone. We need your support to keep delivering quality journalism, to maintain our openness and to protect our independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "For as little as %%CURRENCY_SYMBOL%%1 you can support us – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : ""
+        }
+      ],
+      "highPriority" : false,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "acquisitions_epic__liveblog",
+      "isOn" : true,
+      "locations" : [
+      ],
+      "tagIds" : [
+        "tone/minutebyminute"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+        "sport",
+        "football"
+      ],
+      "alwaysAsk" : false,
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : true,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "control",
+          "heading" : "",
+          "paragraphs" : [
+            "Unlike many news organisations, we chose an approach that means all our reporting is free and available for everyone. We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "For as little as %%CURRENCY_SYMBOL%%1 you can support us – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : ""
+        }
+      ],
+      "highPriority" : false,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "acquisitions-epic__thank_you",
+      "isOn" : true,
+      "locations" : [
+      ],
+      "tagIds" : [
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : false,
+      "maxViews" : {
+        "maxViewsCount" : 1,
+        "maxViewsDays" : 365,
+        "minDaysBetweenViews" : 30
+      },
+      "userCohort" : "AllExistingSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "control",
+          "heading" : "Thank you for your support",
+          "paragraphs" : [
+            "More than one million readers from around the world, like you, have supported The Guardian's independent, investigative journalism. Every contribution, big or small, is so valuable and means we can keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality, to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Reader support protects our editorial independence – meaning we can set our own agenda and voice our own opinions, free from any commercial or political bias. It also ensures we can keep all of our journalism free and available for everyone, regardless of where they live or what they can afford.",
+            "",
+            "With your help, we will continue to deliver quality journalism, remaining open to all and safeguarding our independence. Thank you again for your ongoing support."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : ""
+        }
+      ],
+      "highPriority" : false,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-09-20_contribs_climateweek_control",
+      "isOn" : false,
+      "locations" : [
+        "GBPCountries",
+        "UnitedStates",
+        "EURCountries",
+        "International",
+        "Canada"
+      ],
+      "tagIds" : [
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : false,
+      "maxViews" : {
+        "maxViewsCount" : 4,
+        "maxViewsDays" : 30,
+        "minDaysBetweenViews" : 0
+      },
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "control",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism that’s open and independent. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v1_climate_strike",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. As the climate crisis escalates, The Guardian is standing alongside those taking part in this week’s global climate strike. The climate emergency is the defining issue of our times, and we are committed to being truthful, resolute and undeterred in pursuing our journalism.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our reporting accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism that’s open and independent. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : false,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-09-012_contribs_US_epic_electiontwenty",
+      "isOn" : false,
+      "locations" : [
+        "UnitedStates"
+      ],
+      "tagIds" : [
+        "us-news/us-elections-2020"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : false,
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "Control",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v1_election",
+          "heading" : "The 2020 presidential election…",
+          "paragraphs" : [
+            "… will be a critical test for the United States — and for journalism. Free from commercial and political pressure, The Guardian will offer an international and independent perspective guided by progressive ideals. With reporters in the United States and in bureaus around the world, The Guardian offers a unique voice and outsider perspective. ",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v2_issues",
+          "heading" : "Covering the 2020 issues…",
+          "paragraphs" : [
+            "… that really matter is what will drive our political reporting over the course of the presidential election. We will devote specific resources to issues that we hold dear: women's reproductive rights, the suppression of votes amongst poorer communities and people of colour, the climate crisis, and racial justice. Putting extravagant — and often untrue — claims from the White House into context will also be front and center of our coverage.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : false,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "acquisitions_epic_climatestrike__liveblog",
+      "isOn" : false,
+      "locations" : [
+      ],
+      "tagIds" : [
+        "environment/environment"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+        "sport",
+        "football"
+      ],
+      "alwaysAsk" : false,
+      "maxViews" : {
+        "maxViewsCount" : 4,
+        "maxViewsDays" : 30,
+        "minDaysBetweenViews" : 0
+      },
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "control",
+          "heading" : "",
+          "paragraphs" : [
+            "Unlike many news organisations, we chose an approach that means all our reporting is free and available for everyone. We need your support to keep delivering quality journalism, to maintain our openness and to protect our independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "For as little as %%CURRENCY_SYMBOL%%1 you can support us – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : ""
+        },
+        {
+          "name" : "climate-strike",
+          "heading" : "",
+          "paragraphs" : [
+            "As people make a stand on the escalating climate crisis in this week’s global climate strike, The Guardian is joining them – to demand climate justice for everyone and an end to the age of fossil fuels. And we are joining forces with more than 250 other news organisations to increase climate coverage in the media ahead of Monday’s UN climate summit. "
+          ],
+          "highlightedText" : "We need your support to keep delivering quality journalism that’s editorially independent and open for all. You can support The Guardian from as little as  %%CURRENCY_SYMBOL%%1 – and it only takes a minute. ",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : ""
+        }
+      ],
+      "highPriority" : false,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-09-20_contribs_UKROW_epic_environ_strike",
+      "isOn" : false,
+      "locations" : [
+        "GBPCountries",
+        "EURCountries",
+        "International",
+        "Canada"
+      ],
+      "tagIds" : [
+        "environment/environment",
+        "environment/the-forgotten-climate-change-crises",
+        "environment/drought",
+        "environment/endangered-habitats",
+        "environment/endangeredspecies",
+        "environment/climate-change",
+        "environment/activism",
+        "environment/climate-change",
+        "science/scienceofclimatechange",
+        "environment/renewableenergy",
+        "environment/renewableenergy",
+        "environment/series/our-wide-brown-land",
+        "environment/extinction-rebellion",
+        " us-news/series/toxic-america",
+        "us-news/series/cancer-town",
+        "us-news/series/united-states-of-plastic"
+      ],
+      "sections" : [
+        "environment"
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : true,
+      "maxViews" : {
+        "maxViewsCount" : 4,
+        "maxViewsDays" : 30,
+        "minDaysBetweenViews" : 0
+      },
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "control",
+          "heading" : "As the crisis escalates…",
+          "paragraphs" : [
+            "… in our natural world, we refuse to turn away from the climate catastrophe and species extinction. For The Guardian, reporting on the environment is a priority. We give reporting on climate, nature and pollution the prominence it deserves. At this pivotal time for our species and our planet, we are determined to inform readers about threats, consequences and solutions based on scientific facts, not political prejudice or business interests.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism that’s open and independent. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v1_keep_escalate",
+          "heading" : "As the climate crisis escalates…",
+          "paragraphs" : [
+            "… The Guardian is standing alongside those taking part in this week’s global climate strike. The climate emergency is the defining issue of our times, and The Guardian is committed to being truthful, resolute and undeterred in pursuing our journalism. We give reporting on climate, nature and pollution the prominence it demands. At this pivotal time for our species and our planet, we are determined to inform readers about threats, consequences and solutions based on scientific facts, not political prejudice or business interests.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism that’s open and independent. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v2_make_a_stand",
+          "heading" : "As people around the world make a stand …",
+          "paragraphs" : [
+            "… on the escalating climate crisis in this week’s global climate strike, The Guardian is joining them. The climate emergency is the defining issue of our times, and The Guardian is committed to being truthful, resolute and undeterred in pursuing our journalism. We give reporting on climate, nature and pollution the prominence it demands. At this pivotal time for our species and our planet, we are determined to inform readers about threats, consequences and solutions based on scientific facts, not political prejudice or business interests.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism that’s open and independent. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-09-05_contribs_brexit_round5",
+      "isOn" : false,
+      "locations" : [
+        "GBPCountries"
+      ],
+      "tagIds" : [
+        "politics/eu-referendum"
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : false,
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "Control",
+          "heading" : "Since you’re here…",
+          "paragraphs" : [
+            "… we have a small favour to ask. More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism that’s open and independent. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v1_chaos",
+          "heading" : "With UK politics in chaos...",
+          "paragraphs" : [
+            "... The Guardian is here to help guide you through whatever lies ahead.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            " Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism that’s open and independent. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : false,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-10_contribs_environment-pledge-moment_global_epic_hook",
+      "isOn" : false,
+      "locations" : [
+        "AUDCountries",
+        "Canada",
+        "EURCountries",
+        "NZDCountries",
+        "GBPCountries",
+        "UnitedStates",
+        "International"
+      ],
+      "tagIds" : [
+      ],
+      "sections" : [
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : true,
+      "maxViews" : {
+        "maxViewsCount" : 4,
+        "maxViewsDays" : 30,
+        "minDaysBetweenViews" : 0
+      },
+      "userCohort" : "Everyone",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "crisis-escalates",
+          "heading" : "As the climate crisis escalates…",
+          "paragraphs" : [
+            "… The Guardian will not stay quiet. This is our pledge: we will continue to give global heating, wildlife extinction and pollution the urgent attention and prominence they demand. The Guardian recognises the climate emergency as the defining issue of our times.",
+            "",
+            "Our independence means we are free to investigate and challenge inaction by those in power around the world. We will inform our readers about threats to our environment based on scientific facts, not on commercial or political interests. And we have made an important change to our style guide to ensure the language we use accurately describes the urgent environmental catastrophes facing the world.",
+            "",
+            "The Guardian believes that the problems we face on the climate crisis are structural and that fundamental societal change is needed. We will keep reporting on the efforts of individuals and communities around the world who are fearlessly taking a stand for future generations and the preservation of our planet – and to inspire hope.",
+            "",
+            "The Guardian made a choice: to keep our journalism open to all. We do not have a paywall because we believe everyone deserves access to factual information, regardless of where they live or what they can afford.",
+            "",
+            "We hope you will consider supporting The Guardian’s open, independent reporting today. Every contribution from our readers, however big or small, is so valuable. "
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "not-quiet",
+          "heading" : "We will not stay quiet…",
+          "paragraphs" : [
+            "… on the escalating climate crisis. This is our pledge: we will continue to give global heating, wildlife extinction and pollution the urgent attention and prominence they demand. The Guardian recognises the climate emergency as the defining issue of our times.",
+            "",
+            "Our independence means we are free to investigate and challenge inaction by those in power around the world. We will inform our readers about threats to our environment based on scientific facts, not on commercial or political interests. And we have made an important change to our style guide to ensure the language we use accurately describes the urgent environmental catastrophes facing the world.",
+            "",
+            "The Guardian believes that the problems we face on the climate crisis are structural and that fundamental societal change is needed. We will keep reporting on the efforts of individuals and communities around the world who are fearlessly taking a stand for future generations and the preservation of our planet – and to inspire hope.",
+            "",
+            "The Guardian made a choice: to keep our journalism open to all. We do not have a paywall because we believe everyone deserves access to factual information, regardless of where they live or what they can afford.",
+            "",
+            "We hope you will consider supporting The Guardian’s open, independent reporting today. Every contribution from our readers, however big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "some-news",
+          "heading" : "We have some news…",
+          "paragraphs" : [
+            "… about how we will respond to the escalating climate crisis – we will not stay quiet.. This is our pledge: we will continue to give global heating, wildlife extinction and pollution the urgent attention and prominence they demand. The Guardian recognises the climate emergency as the defining issue of our times.",
+            "",
+            "Our independence means we are free to investigate and challenge inaction by those in power around the world. We will inform our readers about threats to our environment based on scientific facts, not on commercial or political interests. And we have made an important change to our style guide to ensure the language we use accurately describes the urgent environmental catastrophes facing the world.",
+            "",
+            "The Guardian believes that the problems we face on the climate crisis are structural and that fundamental societal change is needed. We will keep reporting on the efforts of individuals and communities around the world who are fearlessly taking a stand for future generations and the preservation of our planet – and to inspire hope.",
+            "",
+            "The Guardian made a choice: to keep our journalism open to all. We do not have a paywall because we believe everyone deserves access to factual information, regardless of where they live or what they can afford.",
+            "",
+            "We hope you will consider supporting The Guardian’s open, independent reporting today. Every contribution from our readers, however big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : true,
+      "useLocalViewLog" : false
+    },
+    {
+      "name" : "2019-09-16_contribs_US_epic_climateweek",
+      "isOn" : false,
+      "locations" : [
+        "UnitedStates"
+      ],
+      "tagIds" : [
+        "environment/environment",
+        "environment/the-forgotten-climate-change-crises",
+        "environment/drought",
+        "environment/endangered-habitats",
+        "environment/endangeredspecies",
+        "environment/climate-change",
+        "environment/activism",
+        "environment/climate-change",
+        "science/scienceofclimatechange",
+        "environment/renewableenergy",
+        "environment/renewableenergy",
+        "environment/series/our-wide-brown-land",
+        "environment/extinction-rebellion",
+        " us-news/series/toxic-america",
+        "us-news/series/cancer-town",
+        "us-news/series/united-states-of-plastic"
+      ],
+      "sections" : [
+        "environment"
+      ],
+      "excludedTagIds" : [
+      ],
+      "excludedSections" : [
+      ],
+      "alwaysAsk" : true,
+      "userCohort" : "AllNonSupporters",
+      "isLiveBlog" : false,
+      "hasCountryName" : false,
+      "variants" : [
+        {
+          "name" : "Control",
+          "heading" : "As the crisis escalates…",
+          "paragraphs" : [
+            "… in our natural world, we refuse to turn away from the climate catastrophe and species extinction. For The Guardian, reporting on the environment is a priority. We give reporting on climate, nature and pollution the prominence it deserves, stories which often go unreported by others in the media. At this pivotal time for our species and our planet, we are determined to inform readers about threats, consequences and solutions based on scientific facts, not political prejudice or business interests.",
+            "",
+            "More people are reading and supporting The Guardian’s independent, investigative journalism than ever before. And unlike many news organisations, we have chosen an approach that allows us to keep our journalism accessible to all, regardless of where they live or what they can afford. But we need your ongoing support to keep working as we do.",
+            "",
+            "The Guardian will engage with the most critical issues of our time – from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "We need your support to keep delivering quality journalism, to maintain our openness and to protect our precious independence. Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v1_critical",
+          "heading" : "There’s no story more critical…",
+          "paragraphs" : [
+            "… than the climate crisis. That’s why at the Guardian, we cover environmental degradation, pollution and species extinction as a matter of priority, keeping it front and center daily. ",
+            "",
+            "<strong>We’re urging other media organizations to make the same commitment and help focus public attention on this global emergency.</strong> In the run-up to a major UN climate summit on September 23rd, The Guardian is joining forces with more than 250 news organizations from around the world as part of Covering Climate Now. ",
+            "",
+            "This is a groundbreaking initiative to increase nationwide media coverage of the climate emergency. We will be sharing a portion of our climate coverage with partners in the network in the hope that news organizations without dedicated environment desks will have the opportunity to provide in-depth reporting on this issue. By increasing the reach of our climate coverage, our goal is to spark action from our leaders, inspire citizens, and point to systematic change.",
+            "",
+            "But we need your ongoing support to keep delivering quality journalism on our climate and the many other critical issues we cover, from widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.",
+            "",
+            "Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        },
+        {
+          "name" : "v2_escalates",
+          "heading" : "As the crisis escalates…",
+          "paragraphs" : [
+            "… The Guardian is committed to keeping the story front and center daily, giving issues of environmental degradation, pollution and species extinction the prominence they deserve.  ",
+            "",
+            "<strong>We’re urging other media organizations to make the same commitment and help focus public attention on this global emergency.</strong> In the run-up to a major UN climate summit on September 23rd, The Guardian is joining forces with more than 250 news organizations from around the world as part of Covering Climate Now.  ",
+            "",
+            "This is a groundbreaking initiative to increase nationwide media coverage of the climate emergency. We will be sharing a portion of our climate coverage with partners in the network, in the hope that news organizations without dedicated environment desks will have the opportunity to provide in-depth reporting on this issue. By increasing the reach of our climate coverage, our goal is to spark action from our leaders, inspire citizens, and point to systematic change. ",
+            "",
+            "But we need your ongoing support to keep delivering quality journalism on the climate crisis – and the many other critical  issues we cover, from widespread inequality to the influence of big tech on our lives.  At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart. ",
+            "",
+            "Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power. ",
+            "",
+            "Every reader contribution, big or small, is so valuable."
+          ],
+          "highlightedText" : "Support The Guardian from as little as %%CURRENCY_SYMBOL%%1 – and it only takes a minute. Thank you.",
+          "footer" : "",
+          "showTicker" : false,
+          "backgroundImageUrl" : "",
+          "cta" : {
+            "text" : "Support The Guardian",
+            "baseUrl" : "https://support.theguardian.com/contribute"
+          }
+        }
+      ],
+      "highPriority" : false,
+      "useLocalViewLog" : false
+    }
+  ]
+}

@@ -1,0 +1,659 @@
+.playkit-overlay-action-play-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.playkit-player:not(.playkit-hover) .playkit-overlay-action-play-button.playkit-is-playing .playkit-overlay-play-button .playkit-icon {
+    opacity: 0
+}
+
+.playkit-overlay-action-play-button button.playkit-overlay-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 144px;
+    height: 144px;
+    margin: -72px 0 0 -72px;
+    border: 0;
+    background: transparent
+}
+
+.playkit-overlay-action-play-button button.playkit-overlay-play-button:not(.playkit-clicked):focus {
+    outline: 1px solid #00cbff
+}
+
+.playkit-overlay-action-play-button button.playkit-overlay-play-button .playkit-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: 400ms opacity
+}
+
+.playkit-overlay-action-play-button button.playkit-overlay-play-button .playkit-icon-play {
+    /*! NOOP - used to define style.iconPlay */
+}
+
+.playkit-overlay-action-play-button button.playkit-overlay-play-button .playkit-icon-pause {
+    /*! NOOP - used to define style.iconPause */
+}
+
+.disneyVideo.hide-controls .playkit-pre-playback-play-button,
+.disneyVideo.hide-controls .playkit-bottom-bar,
+.disneyVideo.hide-controls .playkit-overlay-action .playkit-icon {
+    display: none
+}
+
+.disneyVideo .playkit-spinner span:nth-child(odd) {
+    background-color: #e4e4e4 !important
+}
+
+.disneyVideo .playkit-spinner span:nth-child(even) {
+    background-color: #fff !important
+}
+
+.disneyVideo .playkit-bottom-bar .playkit-icon {
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/icons-sprite-383f584245d1.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 48px
+}
+
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-play,
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-pause {
+    left: 0;
+    bottom: 0;
+    position: absolute
+}
+
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-play,
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-start-over {
+    background-position: 0 -224px
+}
+
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-pause {
+    background-position: 0 -168px
+}
+
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-volume-base {
+    display: none
+}
+
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-volume-mute {
+    background-position: 0 -112px
+}
+
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-volume-waves {
+    background-position: 0 -56px
+}
+
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-language {
+    background-position: 0 0
+}
+
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-maximize,
+.disneyVideo .playkit-bottom-bar .playkit-icon.playkit-icon-minimize {
+    background-position: 0 -280px
+}
+
+.disneyVideo .playkit-dropdown-menu.playkit-bottom {
+    top: auto;
+    bottom: 100%
+}
+
+.disneyVideo .playkit-player:not(.playkit-touch) .playkit-control-button-container.playkit-control-fullscreen .playkit-control-button:hover {
+    transform: none
+}
+
+.disneyVideo .playkit-pre-playback-play-overlay .playkit-pre-playback-play-button,
+.disneyVideo .playkit-pre-playback-play-overlay .playkit-pre-playback-play-button:hover {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-align: center
+}
+
+.disneyVideo .playkit-pre-playback-play-overlay .playkit-pre-playback-play-button .playkit-icon-play,
+.disneyVideo .playkit-pre-playback-play-overlay .playkit-pre-playback-play-button .playkit-icon.playkit-icon-start-over {
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/icon_largeplay-bc9b4fb407f9.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 96px;
+    height: 96px;
+    padding: 0;
+    opacity: 0.8;
+    transition: opacity .4s linear
+}
+
+.disneyVideo .playkit-pre-playback-play-overlay .playkit-pre-playback-play-button .playkit-icon-play:hover,
+.disneyVideo .playkit-pre-playback-play-overlay .playkit-pre-playback-play-button .playkit-icon.playkit-icon-start-over:hover {
+    opacity: 1
+}
+
+.disneyVideo .playkit-pre-playback:focus {
+    border: 4px solid #66ccff
+}
+
+.disneyVideo button[aria-label="Rewind"],
+.disneyVideo button[aria-label="Settings"] {
+    display: none !important
+}
+
+.disneyVideo .btn.icon-share {
+    right: 0;
+    top: 0;
+    width: 40px;
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/icons-sprite-383f584245d1.svg);
+    background-position: 0 -505px
+}
+
+.disneyVideo .btn.icon-logo {
+    right: 80px;
+    bottom: 0;
+    width: 92px;
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/disney-logo-f95f84cb1464.svg)
+}
+
+.disneyVideo .btn.icon-logo.alignRight {
+    right: 40px
+}
+
+.disneyVideo .btn.icon-logo,
+.disneyVideo .btn.icon-share {
+    display: none;
+    outline: none;
+    opacity: 0.85;
+    border: 0;
+    position: absolute;
+    height: 48px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    z-index: 10
+}
+
+.disneyVideo .btn.icon-logo:hover,
+.disneyVideo .btn.icon-share:hover {
+    opacity: 1
+}
+
+.disneyVideo .btn.icon-logo:focus,
+.disneyVideo .btn.icon-share:focus {
+    outline: #66ccff auto 5px !important;
+    outline-offset: -2px
+}
+
+.disneyVideo .video-title,
+.disneyVideo .title-action,
+.disneyVideo .promo-action {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .4s, opacity .4s linear
+}
+
+.disneyVideo .video-title {
+    font-family: "AvenirNext-Regular", Helvetica, sans-serif;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 0.04em;
+    padding-right: 36px;
+    padding-left: 16px;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 12px;
+    left: 0;
+    text-align: left
+}
+
+.disneyVideo .title-action,
+.disneyVideo .promo-action {
+    position: absolute;
+    left: 14px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    border: none;
+    padding: 4px 8px
+}
+
+.disneyVideo .title-action a,
+.disneyVideo .promo-action a {
+    display: flex;
+    align-items: center;
+    color: #fff !important;
+    font-family: "AvenirNext-Regular", Helvetica, sans-serif;
+    font-size: 0.75rem;
+    text-decoration: none;
+    line-height: 16px
+}
+
+.disneyVideo .title-action a:hover,
+.disneyVideo .promo-action a:hover {
+    color: #fff;
+    opacity: 1
+}
+
+.disneyVideo .title-action a .cta-title,
+.disneyVideo .promo-action a .cta-title {
+    opacity: 0.9
+}
+
+.disneyVideo .title-action {
+    top: 36px
+}
+
+.disneyVideo .title-action .cta-image {
+    width: 17px;
+    height: 17px;
+    margin-right: 6px;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.disneyVideo .promo-action {
+    top: 66px
+}
+
+.disneyVideo .playkit-player.playkit-ad-break .title-action,
+.disneyVideo .playkit-player.playkit-ad-break .promo-action {
+    display: none
+}
+
+.disneyVideo .playkit-player.playkit-ad-break .playkit-bottom-bar .playkit-left-controls,
+.disneyVideo .playkit-player.playkit-ad-break .playkit-bottom-bar .playkit-right-controls {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s
+}
+
+.disneyVideo .playkit-player.playkit-ad-break.playkit-hover .playkit-left-controls,
+.disneyVideo .playkit-player.playkit-ad-break.playkit-hover .playkit-right-controls {
+    visibility: visible;
+    opacity: 1
+}
+
+.disneyVideo .playkit-hover.playkit-ad-break .btn.icon-logo,
+.disneyVideo .playkit-hover.playkit-ad-break .btn.icon-share,
+.disneyVideo .playkit-state-paused.playkit-ad-break .btn.icon-logo,
+.disneyVideo .playkit-state-paused.playkit-ad-break .btn.icon-share {
+    display: none
+}
+
+.disneyVideo .playkit-hover.playkit-ad-break .video-title,
+.disneyVideo .playkit-state-paused.playkit-ad-break .video-title {
+    visibility: visible;
+    opacity: 1
+}
+
+.disneyVideo .playkit-hover.playkit-ad-break.playkit-hover .video-title,
+.disneyVideo .playkit-hover.playkit-ad-break.playkit-state-paused .video-title,
+.disneyVideo .playkit-state-paused.playkit-ad-break.playkit-hover .video-title,
+.disneyVideo .playkit-state-paused.playkit-ad-break.playkit-state-paused .video-title {
+    visibility: hidden;
+    opacity: 0
+}
+
+.disneyVideo .playkit-hover .btn.icon-logo,
+.disneyVideo .playkit-hover .btn.icon-share,
+.disneyVideo .playkit-state-paused .btn.icon-logo,
+.disneyVideo .playkit-state-paused .btn.icon-share {
+    display: block
+}
+
+.disneyVideo .playkit-hover .video-title,
+.disneyVideo .playkit-hover .title-action,
+.disneyVideo .playkit-hover .promo-action,
+.disneyVideo .playkit-state-paused .video-title,
+.disneyVideo .playkit-state-paused .title-action,
+.disneyVideo .playkit-state-paused .promo-action {
+    visibility: visible;
+    opacity: 1
+}
+
+.disneyVideo .playkit-hover .playkit-overlay-action,
+.disneyVideo .playkit-state-paused .playkit-overlay-action {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, transparent 60%, rgba(0, 0, 0, 0.8) 100%)
+}
+
+.disneyVideo .playkit-overlay-play .playkit-icon {
+    display: none
+}
+
+.disneyVideo .playkit-hover.playkit-overlay-active .btn.icon-logo,
+.disneyVideo .playkit-hover.playkit-overlay-active .btn.icon-share,
+.disneyVideo .playkit-state-paused.playkit-overlay-active .btn.icon-logo,
+.disneyVideo .playkit-state-paused.playkit-overlay-active .btn.icon-share {
+    display: none
+}
+
+.disneyVideo .playkit-volume-control {
+    position: absolute !important;
+    left: 40px
+}
+
+.disneyVideo .playkit-volume-control-bar {
+    visibility: hidden
+}
+
+.disneyVideo .playkit-control-button-container.playkit-control-play-pause .playkit-control-button {
+    transition: none
+}
+
+.disneyVideo .playkit-player.playkit-size-sm:not(.playkit-state-idle) .playkit-bottom-bar .playkit-playback-controls,
+.disneyVideo .playkit-player.playkit-touch:not(.playkit-state-idle) .playkit-bottom-bar .playkit-playback-controls {
+    display: inline-block
+}
+
+.disneyVideo .playkit-player.playkit-size-sm:not(.playkit-state-idle) .playkit-player-gui>.playkit-playback-controls,
+.disneyVideo .playkit-player.playkit-size-sm:not(.playkit-state-idle).playkit-hover .playkit-player-gui>.playkit-playback-controls,
+.disneyVideo .playkit-player.playkit-touch:not(.playkit-state-idle) .playkit-player-gui>.playkit-playback-controls,
+.disneyVideo .playkit-player.playkit-touch:not(.playkit-state-idle).playkit-hover .playkit-player-gui>.playkit-playback-controls {
+    display: none
+}
+
+.disneyVideo .playkit-player.playkit-size-sm .playkit-overlay-action.playkit-in .playkit-icon,
+.disneyVideo .playkit-player.playkit-touch .playkit-overlay-action.playkit-in .playkit-icon {
+    animation: playkit-overlayActionIconIn 300ms linear forwards
+}
+
+.disneyVideo .playkit-player.playkit-size-sm.playkit-size-xs .playkit-left-controls .playkit-control-button-container,
+.disneyVideo .playkit-player.playkit-size-sm.playkit-size-ty .playkit-left-controls .playkit-control-button-container,
+.disneyVideo .playkit-player.playkit-touch.playkit-size-xs .playkit-left-controls .playkit-control-button-container,
+.disneyVideo .playkit-player.playkit-touch.playkit-size-ty .playkit-left-controls .playkit-control-button-container {
+    display: block
+}
+
+.disneyVideo .playkit-player.playkit-size-sm .playkit-bottom-bar {
+    padding: 0 8px
+}
+
+.disneyVideo .playkit-player.playkit-size-sm .playkit-control-button-container.playkit-control-play-pause {
+    display: inline-block
+}
+
+.disneyVideo .playkit-player.playkit-hover.playkit-ad-break .playkit-seek-bar {
+    bottom: 45px
+}
+
+.disneyVideo .playkit-player .playkit-control-play-pause,
+.disneyVideo .playkit-player .playkit-control-button,
+.disneyVideo .playkit-player .playkit-control-button i {
+    width: 40px;
+    height: 48px
+}
+
+.disneyVideo .playkit-player .playkit-ad-notice {
+    position: relative;
+    top: 3px;
+    left: 3px;
+    background: #f5a623;
+    color: #fff;
+    padding: 3px 0.75rem;
+    border-radius: 100px;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px
+}
+
+.disneyVideo .playkit-player .playkit-bottom-bar {
+    padding: 0 8px
+}
+
+.disneyVideo .playkit-player .playkit-bottom-bar .playkit-control-button-container {
+    margin: 0
+}
+
+.disneyVideo .playkit-player .playkit-bottom-bar .playkit-control-button-container.playkit-volume-control {
+    margin: 0 -3px
+}
+
+.disneyVideo .playkit-player .playkit-bottom-bar .playkit-control-button-container.playkit-volume-control .playkit-icon-volume-waves {
+    transition: none;
+    transform: none
+}
+
+.disneyVideo .playkit-player .playkit-bottom-bar .playkit-control-button-container.playkit-control-fullscreen,
+.disneyVideo .playkit-player .playkit-bottom-bar .playkit-control-button-container .playkit-control-button {
+    margin-right: -6px !important
+}
+
+.disneyVideo .playkit-player .playkit-bottom-bar .playkit-control-button-container.playkit-control-fullscreen:focus,
+.disneyVideo .playkit-player .playkit-bottom-bar .playkit-control-button-container .playkit-control-button:focus {
+    outline: 1px solid #00cbff
+}
+
+.disneyVideo .playkit-player .playkit-bottom-bar .playkit-left-controls {
+    float: none;
+    position: absolute;
+    margin-left: -6px
+}
+
+.disneyVideo .playkit-player .playkit-time-display {
+    font-family: "AvenirNext-Regular", Helvetica, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    margin: 8px 40px;
+    padding: 0
+}
+
+.disneyVideo .playkit-player .playkit-time-display span {
+    vertical-align: middle
+}
+
+.disneyVideo .playkit-player .playkit-seek-bar {
+    bottom: -4px
+}
+
+.disneyVideo .playkit-player .playkit-seek-bar.playkit-ad-break {
+    position: absolute;
+    width: 98%;
+    bottom: -6px;
+    transition: all 0.3s
+}
+
+.disneyVideo .playkit-player .playkit-seek-bar.playkit-ad-break .playkit-progress-bar .playkit-progress {
+    background-color: #f9a71b
+}
+
+.disneyVideo .playkit-player .playkit-seek-bar .playkit-progress-bar {
+    background: rgba(255, 255, 255, 0.3);
+    height: 2px !important
+}
+
+.disneyVideo .playkit-player .playkit-seek-bar .playkit-progress-bar .playkit-progress {
+    background-color: #fff;
+    padding: 0 7px
+}
+
+.disneyVideo .playkit-player .playkit-seek-bar .playkit-progress-bar .playkit-buffered {
+    background: #fff;
+    opacity: 0.3
+}
+
+.disneyVideo .playkit-player .playkit-seek-bar .playkit-progress-bar .playkit-scrubber {
+    display: block;
+    transform: none;
+    right: 0
+}
+
+.disneyVideo .tooltips {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 20px
+}
+
+.disneyVideo .tooltips.top {
+    top: 37px;
+    z-index: 0
+}
+
+.disneyVideo .tooltips.top span {
+    right: 8px
+}
+
+.disneyVideo .tooltips.bottom {
+    bottom: 56px;
+    z-index: 9
+}
+
+.disneyVideo .tooltips.visible {
+    opacity: 1;
+    visibility: visible
+}
+
+.disneyVideo .tooltips span {
+    position: absolute;
+    width: auto;
+    height: 24px;
+    padding: 0 16px;
+    border-radius: 3px;
+    background-color: black;
+    color: #fff;
+    font-family: "AvenirNext-Regular", Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    visibility: hidden;
+    opacity: 0
+}
+
+.disneyVideo .tooltips span.visible {
+    opacity: 1;
+    visibility: visible
+}
+
+.disneyVideo .tooltips span.logo-tooltip {
+    right: 52px
+}
+
+.disneyVideo .tooltips span.maximize-tooltip,
+.disneyVideo .tooltips span.minimize-tooltip {
+    right: 7px
+}
+
+.disneyVideo .tooltips span.language-tooltip {
+    right: 20px
+}
+
+.disneyVideo .tooltips .play-tooltip,
+.disneyVideo .tooltips .pause-tooltip {
+    left: 5px
+}
+
+.disneyVideo .tooltips .unmute-tooltip,
+.disneyVideo .tooltips .mute-tooltip {
+    left: 30px
+}
+
+.disneyVideo div.videoAdUiTitle.ellipsisText {
+    display: inline-block;
+    font-family: "AvenirNext-Regular", Helvetica, sans-serif;
+    font-size: 0.875rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    padding: 9px 0 0 16px;
+    color: #fff;
+    transition: opacity 100ms;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 8px;
+    left: 0;
+    text-align: left
+}
+
+.disneyVideo .videoAdUiAttributionContainer {
+    display: none
+}
+
+.disneyVideo .playkit-touch .playkit-control-button-container.playkit-control-play-pause {
+    display: block
+}
+
+.disneyVideo .playkit-touch .video-title,
+.disneyVideo .playkit-touch .title-action,
+.disneyVideo .playkit-touch .promo-action {
+    font-size: 0.687rem
+}
+
+.disneyVideo .playkit-touch .title-action,
+.disneyVideo .playkit-touch .promo-action {
+    left: 16px
+}
+
+.disneyVideo .playkit-touch .title-action a,
+.disneyVideo .playkit-touch .promo-action a {
+    font-size: 0.687rem
+}
+
+.disneyVideo .playkit-touch .title-action a .cta-title,
+.disneyVideo .playkit-touch .promo-action a .cta-title {
+    opacity: 1
+}
+
+.disneyVideo .playkit-touch .title-action {
+    top: 31px
+}
+
+.disneyVideo .playkit-touch .title-action .cta-image {
+    margin-right: 3px
+}
+
+.disneyVideo .playkit-touch .promo-action {
+    top: 60px
+}
+
+.disneyVideo .playkit-touch .playkit-time-display {
+    font-size: 0.625rem
+}
+
+.disneyVideo .playkit-touch .playkit-time-display span {
+    top: 9px
+}
+
+.disneyVideo .playkit-touch .btn.icon-logo {
+    bottom: -2px;
+    width: 82px;
+    background-size: contain
+}
+
+.disneyVideo .playkit-unmute-button-container {
+    display: none
+}
+
+.disneyVideo .playkit-unmute-button-container .playkit-icon-volume-base {
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/icons-sprite-383f584245d1.svg);
+    background-size: auto;
+    background-position: 0 -112px;
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.disneyVideo .playkit-unmute-button-container .playkit-icon-volume-mute {
+    display: none
+}

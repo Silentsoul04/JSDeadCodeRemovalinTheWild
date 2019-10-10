@@ -1,0 +1,91 @@
+@import "../../styles/theme/gradients.scss";
+
+.user-badge-component {
+  @extend %gradient-blue;
+
+  min-height: 450px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  padding: 40px;
+}
+
+// Override Margins
+.user-badge-full-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.user-badge-email {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+// Avatar & Placeholder
+.user-badge-avatar,
+.user-badge-profile-image .image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  background-color: rgba(43, 44, 51, 0.6);
+
+  &.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-component {
+    user-select: none;
+    font-size: 92px;
+  }
+}
+
+// Text and Icon
+.user-badge-change-password {
+  margin-top: 40px;
+  justify-content: center;
+  // display: block;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.lock {
+    .icon-component {
+      // top: 5px;
+      font-size: 24px;
+      position: relative;
+    }
+  }
+}
+
+// Edit Icon
+.user-badge-icon {
+  font-size: 24px;
+
+  &.edit {
+    display: none;
+
+    a {
+      padding: 10px;
+
+      &:hover {
+        background: #2b2c33;
+        border-radius: 100px;
+        color: white;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: inline-block;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+  }
+}

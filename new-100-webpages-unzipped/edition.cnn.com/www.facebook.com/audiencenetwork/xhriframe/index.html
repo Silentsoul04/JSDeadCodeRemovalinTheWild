@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        ;
+        try {
+            document.domain = 'facebook.com';
+        } catch (_) {};
+    </script>
+</head>
+
+<body class="mini_iframe">
+    <script>
+        "use strict";
+
+        function getTime() {
+            return +new Date()
+        }
+        window.pluginJsStart = getTime();
+        (function() {
+            var a, b = "no_referrer_link",
+                c = "5.5.web",
+                d = [/^https?:\/\/itunes\.apple\.com\/([^\/]+\/)?app\//, /^market:\/\/details/],
+                e = /^https:\/\/([a-z0-9]+\.)*facebook.com\/audience_network\/client_event\//i,
+                f = 0,
+                g = 10,
+                h = 11,
+                i = 12,
+                j = (a = {}, a[f] = "ADNW_CLICK", a[g] = "ADNW_FAST_CLICK", a[h] = "ADNW_TWO_STEP_CLICK", a[i] = "ADNW_TWO_STEP_CANCEL_CLICK", a),
+                k = null,
+                l = function(a) {
+                    var b = [];
+                    Object.keys(a).sort().forEach(function(c) {
+                        var d = a[c];
+                        if (d === void 0) return;
+                        if (d === null) {
+                            b.push(c);
+                            return
+                        }
+                        b.push(encodeURIComponent(c) + "=" + encodeURIComponent(d))
+                    });
+                    return b.join("&")
+                },
+                m = function(a, b) {
+                    return a + (a.indexOf("?") !== -1 ? "&" : "?") + (typeof b === "string" ? b : l(b))
+                },
+                n = function(a, b) {
+                    var c = new XMLHttpRequest();
+                    c.open("GET", a, !0);
+                    var d = !1;
+                    c.onreadystatechange = function() {
+                        c.readyState >= 2 && c.status && (b && !d && (d = !0, b()))
+                    };
+                    c.send()
+                },
+                o = function(a, b, d) {
+                    b === void 0 && (b = "ADNW_ADERROR");
+                    var e = "/audience_network/client_event",
+                        f = k && k.placementId,
+                        g = f ? f.split("_")[0] : 0;
+                    f = f ? f.split("_")[1] : 0;
+                    b = {
+                        cb: getTime(),
+                        event_name: b,
+                        ad_pivot_type: "audience_network_mobile_web",
+                        sdk_version: c,
+                        app_id: g,
+                        publisher_id: f,
+                        error_message: a
+                    };
+                    d != void 0 && d.length > 0 && (b.error_stack_trace = d.substring(0, 500));
+                    n(m(e, b))
+                },
+                p = function(a, b) {
+                    B([{
+                        type: "bounce",
+                        key: a.key,
+                        top_domain: z(),
+                        payload: {
+                            leave_time_ms: b.params.leaveTime,
+                            back_time_ms: b.params.backTime
+                        }
+                    }])
+                },
+                q = function(a, b) {
+                    B([{
+                        type: "xout",
+                        key: a.key,
+                        top_domain: z(),
+                        payload: {
+                            type: b.params.type,
+                            option: b.params.reason
+                        }
+                    }])
+                },
+                r = function(a, b) {
+                    b = b.params.payload;
+                    b != null && B([{
+                        type: "client",
+                        key: a.key,
+                        top_domain: z(),
+                        payload: b
+                    }])
+                },
+                s = function(a) {
+                    B([{
+                        type: "recirc",
+                        req_id: a.params.reqId,
+                        unit_id: a.params.unitId,
+                        top_domain: z(),
+                        payload: a.params.payload
+                    }])
+                },
+                t = function(a, b) {
+                    B([{
+                        type: "perf",
+                        key: a.key,
+                        top_domain: z(),
+                        payload: b.params.payload
+                    }])
+                };
+            window.addEventListener("error", function(a) {
+                if (a.error) o(a.error.message, "ADNW_ADERROR", a.error.stack);
+                else {
+                    var b = a.filename + ":" + a.lineno + ":" + a.colno;
+                    o(a.message, "ADNW_ADERROR", b)
+                }
+            });
+            var u = function(a, b) {
+                    B(a, b)
+                },
+                v = function(a) {
+                    var b = a.indexOf("://") + 3;
+                    b = b === -1 ? 0 : b;
+                    var c = a.indexOf("/", b);
+                    return c === -1 ? a.substring(b) : a.substring(b, c)
+                },
+                w = function(a) {
+                    var b = /^https?:\/\/www\.google(\.com?)?.\w{2,3}$/;
+                    return !!a.match(b)
+                },
+                x = function(a) {
+                    return a.endsWith("cdn.ampproject.org")
+                },
+                y = function() {
+                    var a = location.ancestorOrigins || [],
+                        b = a[a.length - 1] || location.origin;
+                    a = a[a.length - 2] || location.origin;
+                    if (w(b) && x(a)) return a;
+                    else return b
+                },
+                z = function() {
+                    return v(y())
+                },
+                A = {},
+                B = function(a, b) {
+                    var c = !1,
+                        d = new XMLHttpRequest();
+                    d.open("POST", location.origin + "/adnw_mweb_logging/", !0);
+                    d.setRequestHeader("Content-Type", "application/json");
+                    d.onreadystatechange = function() {
+                        d.readyState >= 2 && d.status && (b && !c && (c = !0, b()))
+                    };
+                    d.send(JSON.stringify(a))
+                },
+                C = function(a, b) {
+                    B([{
+                        type: "imp",
+                        key: a.key,
+                        top_domain: z(),
+                        payload: b.params.payload
+                    }])
+                },
+                D = function(a, b) {
+                    B([{
+                        type: "video",
+                        key: a.key,
+                        top_domain: z(),
+                        payload: b.params.payload
+                    }])
+                },
+                E = function(a, b) {
+                    B([{
+                        type: "moat_sivt",
+                        key: a.key,
+                        top_domain: z(),
+                        payload: b.params.payload
+                    }, {
+                        type: "client",
+                        key: a.key,
+                        top_domain: z(),
+                        payload: {
+                            event_name: "ADNW_MOAT_SIVT"
+                        }
+                    }])
+                },
+                F = function(a) {
+                    for (var b = 0; b < d.length; b++) {
+                        var c = d[b];
+                        if (a.match(c)) return !0
+                    }
+                    return !1
+                },
+                G = function(a) {
+                    var c = document.getElementById(b);
+                    c.href = a;
+                    c.click()
+                },
+                H = function(a, b) {
+                    parent.postMessage({
+                        name: "iframeLoaded",
+                        data: {
+                            result: b ? "valid" : "invalid"
+                        }
+                    }, b ? a : "*")
+                },
+                I = function(a, b) {
+                    a.clickUrl = "", parent.postMessage({
+                        name: "xhrLoaded",
+                        data: a
+                    }, b)
+                },
+                J = function(a) {
+                    return a && e.test(a) ? a : null
+                },
+                K = function(a, b, c, d) {
+                    if (A[a]) return A[a];
+                    b = {
+                        key: a,
+                        features: b,
+                        clientEventUrl: J(d),
+                        clickUrl: c || "",
+                        loadTime: getTime(),
+                        urlRequestInFlight: !1
+                    };
+                    A[a] = b;
+                    return b
+                },
+                L = function(a, b) {
+                    var c = !1;
+                    b.clickParams && (c = b.clickParams.clknutab);
+                    var d = b.action != null ? b.action : f,
+                        e = getTime();
+                    e = {
+                        name: "client_event",
+                        params: {
+                            key: a.key,
+                            payload: {
+                                event_name: j[d],
+                                error_message: String(e - a.loadTime),
+                                error_stack_trace: b.adElementType,
+                                video_duration: b.videoDuration,
+                                video_playback_time: b.videoPlaybackTime
+                            }
+                        }
+                    };
+                    var g = {
+                        type: d,
+                        time: b.clickParams.clktm,
+                        delay: b.clickParams.clkdel,
+                        pos: b.pos
+                    };
+                    b.recircUnitId != null && (g.recirc_unit_id = b.recircUnitId);
+                    b = [{
+                        type: "clk",
+                        key: a.key,
+                        top_domain: z(),
+                        payload: g
+                    }, {
+                        type: "client",
+                        key: a.key,
+                        top_domain: z(),
+                        payload: e.params.payload
+                    }];
+                    F(a.clickUrl) ? (u(b), d === f && G(a.clickUrl)) : c ? u(b) : u(b, function() {
+                        d === f && G(a.clickUrl)
+                    })
+                },
+                M = function(a) {
+                    if (!a.data.params) return !1;
+                    return (a.data.params.key == null || a.data.params.key === "") && (a.data.params.reqId == null || a.data.params.reqId === "") ? !1 : !0
+                },
+                N = function() {
+                    window.addEventListener("message", function(a) {
+                        if (!a || !a.data || !a.data.name) return;
+                        if (a.data.name === "signal") {
+                            a.data.params && a.data.params.signalUrl && n(a.data.params.signalUrl);
+                            return
+                        }
+                        var b = M(a);
+                        if (!b) return;
+                        switch (a.data.name) {
+                            case "init":
+                                b = a.data;
+                                var c = b.params.features || {},
+                                    d = b.params.clickUrl;
+                                K(a.data.params.key, c, d, b.params.clientEventUrl || "");
+                                (d == null || d == "") && o("Empty click URL from ad response init");
+                                break;
+                            case "client_event":
+                                c = A[a.data.params.key];
+                                r(c, a.data);
+                                break;
+                            case "impress":
+                                b = A[a.data.params.key];
+                                C(b, a.data);
+                                break;
+                            case "moat_sivt":
+                                d = A[a.data.params.key];
+                                E(d, a.data);
+                                break;
+                            case "bounce":
+                                c = A[a.data.params.key];
+                                b = a.data;
+                                p(c, b);
+                                break;
+                            case "xout":
+                                d = A[a.data.params.key];
+                                c = a.data;
+                                q(d, c);
+                                break;
+                            case "recirc":
+                                b = a.data;
+                                s(b);
+                                break;
+                            case "perf":
+                                d = A[a.data.params.key];
+                                c = a.data;
+                                t(d, c);
+                                break;
+                            case "video":
+                                b = A[a.data.params.key];
+                                D(b, a.data);
+                                break;
+                            case "click":
+                                d = a.data;
+                                c = A[a.data.params.key];
+                                if (!c) break;
+                                b = d.params.clickParams;
+                                a = {
+                                    action: d.params.action,
+                                    adElementType: d.params.adElementType,
+                                    clickParams: {
+                                        clkdel: b.clkdel,
+                                        clktm: b.clktm,
+                                        clknutab: b.clknutab,
+                                        touch: b.touch,
+                                        vp: b.vp
+                                    },
+                                    href: d.params.href,
+                                    pos: d.params.pos,
+                                    videoDuration: d.params.videoDuration || 0,
+                                    videoPlaybackTime: d.params.videoPlaybackTime || 0
+                                };
+                                L(c, a);
+                                break
+                        }
+                    }, !1)
+                };
+            window.validateAllOriginsAreTheSame = function() {
+                var a = location.ancestorOrigins,
+                    b = !0;
+                if (!a || a.length < 1) b = !1;
+                else {
+                    var c = a[0];
+                    [].forEach.call(a, function(a) {
+                        a !== c && (b = !1)
+                    })
+                }
+                b && N();
+                H(y(), b)
+            };
+            window.validateTopDomain = function(a, b, c, d) {
+                k = b;
+                b || o("No ad data passed to iframe", "ADNW_WARNING");
+                a = a != null && location.ancestorOrigins ? z() === a : d;
+                if (a) {
+                    if (b.success) {
+                        d = [];
+                        b.keys ? d = b.keys : d.push(b.key);
+                        for (var e = 0; e < d.length; e++) {
+                            var f;
+                            b.nativeAds ? f = b.nativeAds[e].href : (b.nativeAd || o("No nativeAd passed to iframe", "ADNW_WARNING"), f = b.nativeAd.href);
+                            K(d[e], b.features || {}, f, b.clientEventURL)
+                        }
+                    }
+                    I(b, c);
+                    N()
+                } else I({}, c);
+                H(c, a)
+            };
+            window.clearFbObjects = function() {
+                A = {}
+            };
+            window.getFbObject = function(a) {
+                return A[a]
+            }
+        })();
+        validateTopDomain("edition.cnn.com", {
+            "success": true,
+            "placementId": "237317506634007_237318673300557",
+            "nativeCarouselAds": null,
+            "topDomain": "edition.cnn.com",
+            "clientEventURL": "https:\/\/www.facebook.com\/audience_network\/client_event\/?app_id=237317506634007&publisher_id=237318673300557&request_id=6849d346-296d-487d-a314-a94f210db903&sdk_version=5.5.web&user_os=3&ad_pivot_type=audience_network_mobile_web",
+            "unifiedLoggingURL": "https:\/\/www.facebook.com\/adnw_mweb_logging\/",
+            "serverDuration": 807,
+            "creativeMarkup": {
+                "raw": "\u003Cstyle>.fbANRoot{height:250px;width:300px;}.adnwMRectRoot{background-color:#fff;font-family:-apple-system, roboto, 'Helvetica Neue', sans-serif;font-size:14px;font-weight:600;height:250px;line-height:16px;position:relative;-webkit-tap-highlight-color:rgba(255, 255, 255, 0);text-align:left;width:300px;}.adnwMRectRoot:active .adnwMRectCallToAction{border:1px solid #4080ff;transform:scale3d(1.1, 1.1, 1.1);}.adnwMRectRoot .fbAdLink{cursor:pointer;display:block;text-align:center;text-decoration:none;}.fbAdMediaCenter{bottom:0;left:0;margin:10px 25\u0025;position:absolute;right:0;top:0;}.adnwMRectMedia{height:157px;width:300px;}.adnwMRectBody{color:#4b4f56;height:60px;margin:0;overflow:hidden;text-align:left;text-overflow:ellipsis;white-space:nowrap;}.adnwMRectBody .fbAdBody{-webkit-box-orient:vertical;display:-webkit-box;font-weight:normal;-webkit-line-clamp:2;line-height:17px;overflow:hidden;white-space:normal;}.adnwMRectRoot .fbAdTitle{margin-bottom:3px;}.adnwMRectRoot .adnwMRectWords{margin:6px 4px;}.fbAdNoCallToAction .adnwMRectCallToAction{display:none;}.adnwMRectRoot .adnwMRectCallToAction{border:1px solid white;border-radius:5px;color:#4080ff;display:inline-block;font-weight:600;margin-top:1px;padding:6px 10px;text-align:center;text-decoration:none;text-transform:uppercase;transition:transform .3s, border .1s;}.adnwMRectCallToAction>img{height:16px;margin-left:4px;vertical-align:middle;width:16px;}.adnwMRectCallToAction .fbAdCallToAction{vertical-align:middle;}.adnwMRectTitle{overflow:hidden;text-overflow:ellipsis;}\u003C\/style>\u003Cdiv class=\"fbANRoot\">\u003Cdiv class=\"adnwMRectRoot\">\u003Ca class=\"fbAdLink\">\u003Cdiv class=\"adnwMRectMedia fbAdMedia\">\u003Cdiv class=\"fbAdMediaCenter\">\u003C\/div>\u003C\/div>\u003Cdiv class=\"adnwMRectBody\">\u003Cdiv class=\"adnwMRectWords\">\u003Cdiv class=\"adnwMRectTitle fbAdTitle\">\u003C\/div>\u003Cdiv class=\"fbAdBody\">\u003C\/div>\u003C\/div>\u003C\/div>\u003Cdiv class=\"adnwMRectCallToAction\">\u003Cspan class=\"fbAdCallToAction\">\u003C\/span>\u003Cimg class=\"img\" src=\"https:\/\/static.xx.fbcdn.net\/rsrc.php\/v3\/ye\/r\/3FpBEbSIHSf.png\" alt=\"\" width=\"32\" height=\"32\" \/>\u003C\/div>\u003C\/a>\u003C\/div>\u003C\/div>",
+                "dfp": false,
+                "resize_media_view": false,
+                "use_carousel_stitch": true,
+                "min_aspect_ratio": 1,
+                "video": {
+                    "controls": "clickthrough",
+                    "endCard": "none",
+                    "pauseCard": "play_button"
+                }
+            },
+            "creativeMarkupBackup": null,
+            "features": {
+                "inlineXOut": true,
+                "appIDHashed": "8b16bd233d681e3805a3d36f0f9122ffb1f3677998f9c0bcaf70b6642e4989ad",
+                "clickOpenNewTab": true,
+                "useCtaFallback": true,
+                "fullwidthMinAspectRatio": 1,
+                "skipRecircClickEvent": true,
+                "pubSideLogging": true,
+                "videoMrcImpression": true,
+                "logPerformanceStats": true,
+                "playWhenMostlyVisible": true,
+                "useClientSideCarouselCollage": true,
+                "useLargeCarousel": true,
+                "fwResizeGKs": {
+                    "off_screen_10": true,
+                    "inline_resize_parent": false,
+                    "iframe_resize_parent": true
+                },
+                "minClickDelayImpression": 1000
+            },
+            "xout": {
+                "ad_removed": "Ad removed",
+                "ad_report_flow_type": "standard",
+                "dislike_option": 8,
+                "finished_description": "Thanks, your feedback helps us do better.",
+                "finished_hide_ad": "Ad hidden",
+                "finished_report_ad": "Ad reported",
+                "hide_ad": "Hide Ad",
+                "hide_ad_description": "Mark ad as irrelevant",
+                "hide_ad_follow_up_heading": "Help us understand what is happening. Why don't you want to see this?",
+                "hide_ad_follow_up_heading_ad_specific": "Why don't you want to see this ad?",
+                "hide_ad_follow_up_heading_integration_specific": "Is there an issue with how this ad works?",
+                "hide_ad_options": [{
+                    "title": "Irrelevant",
+                    "option_type": 30
+                }, {
+                    "title": "Repetitive",
+                    "option_type": 31
+                }, {
+                    "title": "Offensive",
+                    "option_type": 242
+                }],
+                "manage_ad_preferences": "Manage ad preferences",
+                "manage_ad_preferences_uri": "https:\/\/m.facebook.com\/settings\/ads\/",
+                "report_ad": "Report Ad",
+                "report_ad_description": "Mark ad as offensive or inappropriate",
+                "report_ad_follow_up_heading": "Help us understand what's happening. Why don't you want to see this?",
+                "report_ad_options": [{
+                    "title": "Sexually inappropriate",
+                    "option_type": 28
+                }, {
+                    "title": "Illegal",
+                    "option_type": 101
+                }, {
+                    "title": "Offensive",
+                    "option_type": 27
+                }, {
+                    "title": "Misleading",
+                    "option_type": 26
+                }, {
+                    "title": "Disagreeable",
+                    "option_type": 102
+                }, {
+                    "title": "Spam",
+                    "option_type": 87
+                }, {
+                    "title": "Other",
+                    "option_type": 32
+                }],
+                "report_experience": "Report Experience",
+                "report_experience_description": "Report issue with how ads appear",
+                "report_experience_follow_up_heading": "Help us understand what is happening. How would you describe this ad experience?",
+                "report_experience_options": [],
+                "why_am_i_seeing_this": "Why am I seeing this?",
+                "follow_up_report": 242,
+                "report_experience_option": 326
+            },
+            "nativeAd": {
+                "adBody": "Voor mensen met een ernstige bloedziekte kan een stamceldonatie de laatste kans op...",
+                "adCallToAction": "Learn More",
+                "adChoicesHref": "https:\/\/m.facebook.com\/ads\/audience_network\/?mweb_key=5eb2ed33-828b-4db9-b234-ff0c1072d609",
+                "adChoicesIcon": "https:\/\/static.xx.fbcdn.net\/rsrc.php\/v3\/ye\/r\/rarNT4TsFVA.png",
+                "adChoicesXOutIcon": "https:\/\/static.xx.fbcdn.net\/rsrc.php\/v3\/yD\/r\/fjSLAKkhQ_c.png",
+                "adIcon": "https:\/\/external-ams4-1.xx.fbcdn.net\/safe_image.php?d=AQCora8p3I3uCPn4&w=128&h=128&url=https\u00253A\u00252F\u00252Fscontent-ams4-1.xx.fbcdn.net\u00252Fv\u00252Ft1.0-1\u00252F12654338_1285533644807141_1709305001452271306_n.png\u00253F_nc_oc\u00253DAQliRqhuKopdrx3Igjem8UJ1hCZvavrGIj0cL3X0a67RKV3yGJRTVYOn9vk4lQk4kYM\u002526_nc_ht\u00253Dscontent-ams4-1.xx\u002526oh\u00253D719c9b60a4c04c2d5fd7dcaa7c7679b2\u002526oe\u00253D5E360699&crop&upscale=1&ext=jpg&_nc_hash=AQC2d9XO8poDW5Gr",
+                "adImage": "https:\/\/external-ams4-1.xx.fbcdn.net\/safe_image.php?d=AQAnXnE2O-GmZ0lJ&w=796&h=416&url=https\u00253A\u00252F\u00252Fwww.facebook.com\u00252Fads\u00252Fimage\u00252F\u00253Fd\u00253DAQKGFaUbNrO-WY0Cqyy6iKwxBMQrTCpjQlFKIIG4QMhQFuVIje3oRI6_nQNStJP_ctyqzY4CVnf9x2GP9aXdnLR_h0nFuae1wmvrT8ryote1eeVfaKE3OeVTB7qklg21j1h5MEk-By9LLy9STPF8b7_1&cfs=1&ext=jpg&_nc_hash=AQATGE8KZY7-fdSg",
+                "adImageAspectRatio": 1.9134615384615,
+                "adSocialContext": "STAMCELWIJZER.NL",
+                "adSubtitle": "Stichting Matchis",
+                "adTitle": "Doe de test!",
+                "adVideo": null,
+                "hasSound": null,
+                "href": "http:\/\/www.stamcelwijzer.nl\/?utm_source=Zuiver_Media&utm_medium=Facebook&utm_campaign=Stamcelwijzer&utm_content=GV_4_1"
+            },
+            "requestId": "6849d346-296d-487d-a314-a94f210db903",
+            "key": "5eb2ed33-828b-4db9-b234-ff0c1072d609",
+            "placementIndex": 0
+        }, "https:\/\/tpc.googlesyndication.com", false);
+    </script><a id="no_referrer_link" target="_top" rel="noreferrer"></a></body>
+
+</html>

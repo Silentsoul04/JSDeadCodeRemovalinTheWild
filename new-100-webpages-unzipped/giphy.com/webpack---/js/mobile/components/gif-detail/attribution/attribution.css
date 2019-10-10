@@ -1,0 +1,11 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/components/users/public-user.css"), undefined);
+// module
+exports.push([module.id, "._3UzZfRk9liAE-jffEQo6Xd{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;overflow:hidden;height:" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/components/users/public-user.css").locals["avatarSize"] + ";position:relative;width:100%}._3PSoSef5eKgcbXiPxhx6OD{height:100%;position:absolute;left:0;top:0;width:100%}._1_FCiAEZqoqZSADE69YzRl{top:100%}._3D4SDeecBV2JLF3JQiPfAO{bottom:100%;top:auto}", ""]);
+// exports
+exports.locals= {
+    "avatarSize": "" + require("-!../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../node_modules/postcss-loader/lib/index.js!shared/components/users/public-user.css").locals["avatarSize"] + "", "container": "_3UzZfRk9liAE-jffEQo6Xd", "wrapper": "_3PSoSef5eKgcbXiPxhx6OD", "user": "_1HnpjjyFk5SVLbafGMqmlp _3PSoSef5eKgcbXiPxhx6OD", "nextUser": "_1_FCiAEZqoqZSADE69YzRl _1HnpjjyFk5SVLbafGMqmlp _3PSoSef5eKgcbXiPxhx6OD", "previousUser": "_3D4SDeecBV2JLF3JQiPfAO _1HnpjjyFk5SVLbafGMqmlp _3PSoSef5eKgcbXiPxhx6OD"
+}
+
+;

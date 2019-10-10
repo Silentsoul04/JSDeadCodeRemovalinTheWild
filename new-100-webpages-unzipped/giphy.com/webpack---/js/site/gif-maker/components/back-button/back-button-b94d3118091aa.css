@@ -1,0 +1,11 @@
+var escape=require("../../../../../node_modules/css-loader/lib/url/escape.js");
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+// module
+exports.push([module.id, "._1nASZ7ymB-Yph4auoEvEHS{position:absolute;top:30px;left:0;-webkit-transition:opacity 50ms ease-out,-webkit-transform .3s ease-out;transition:opacity 50ms ease-out,-webkit-transform .3s ease-out;transition:transform .3s ease-out,opacity 50ms ease-out;transition:transform .3s ease-out,opacity 50ms ease-out,-webkit-transform .3s ease-out;opacity:1;cursor:pointer}._3uT7kR09RcyEN0C-Hbo9On{opacity:0;pointer-events:none}._2cO9PI9OCJSzYCbca0ewFK{background:url(" + escape(require("../../img/back_button.svg")) + ") no-repeat;width:11px;height:18px;display:block}", ""]);
+// exports
+exports.locals= {
+    "backButton": "_1nASZ7ymB-Yph4auoEvEHS", "backButtonFade": "_3uT7kR09RcyEN0C-Hbo9On _1nASZ7ymB-Yph4auoEvEHS", "leftArrowIcon": "_2cO9PI9OCJSzYCbca0ewFK"
+}
+
+;

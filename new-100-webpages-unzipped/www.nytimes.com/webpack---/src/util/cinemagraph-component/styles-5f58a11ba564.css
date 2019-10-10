@@ -1,0 +1,15 @@
+exports=module.exports=require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+// module
+exports.push([module.id, ".container-WMpnM74F{position:absolute;width:100%;height:100%;top:0;left:0}", ""]);
+// exports
+exports.locals= {
+    "container": "container-WMpnM74F"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/util/cinemagraph-component/styles.css
+// module id = 425
+// module chunks = 1

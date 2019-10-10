@@ -1,0 +1,244 @@
+{"/21783347309/espn.com/frontpage/index":["html",0,0,null,0,0,0,1,0,null,null,null,null,[["ID=217c545dbc4ca0bd:T=1570706014:S=ALNI_MYGTzTq5nxDm1sm9vrGfsZVuEqTKw",1633778014,"/","espn.com"]],null,null,null,null,null,null,null,null,null,null,null,0,null,null,null,null,null,null,"ChOAAfaVj6-nv13RAtVLqevbyvpo","CJOFnvDHkeUCFdgW4AodkaQJyw",null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1"]}
+{"/21783347309/espn.com/frontpage/index":["html",1,0,null,1,1,1,0,0,null,null,null,1,null,[138271411242],[5075907490],[4729836645],[2534695438],null,null,null,null,null,null,null,0,null,null,null,null,null,null,"CkYIouew9BJCBdiogLMBeAGAAfaVj6-nv13oAaqY-YyDBIICGa380JJR-JrZklG9j8GXUeaawZdRs4C9l1HRAoHBsByMV7hM","CJWFnvDHkeUCFdgW4AodkaQJyw",null,null,null,null,null,null,null,null,null,null,null,null,null,null,"2"]}
+<!doctype html>
+<html>
+
+<head>
+    <script>
+        var inDapIF = true,
+            inGptIF = true;
+    </script>
+</head>
+
+<body leftMargin="0" topMargin="0" marginwidth="0" marginheight="0">
+    <div style="display:inline">
+        <div id="overcap" style="display:none;"></div>\n\n
+        <script>
+            \
+            n
+            var maxOverCapTries = 50,
+                \n curOverCapTries = 0,
+                \n publishCloseEvent = (function() {\
+                    n\ n
+                    var par = (typeof parent !== 'undefined') ? parent : {},
+                        \n jquery = par.jQuery,
+                        \n fitt = par.fitt;\
+                    n\ n
+                    function jqueryPublish() {\
+                        n
+                        if (jquery === "undefined") {\
+                            n setTimeout(jqueryPublish, 800);\
+                            n
+                        } else {\
+                            n
+                            try {
+                                jquery.publish('ad.overlay.close')
+                            } catch (e) {}\
+                            n
+                        }\
+                        n
+                    }\
+                    n\ n
+                    function fittPublish() {\
+                        n
+                        try {
+                            fitt.emitter.emit('ad.overlay.close');
+                        } catch (e) {}\
+                        n
+                    }\
+                    n\ n /* return noop if neither available */ \ n
+                    return ((jquery) ? jqueryPublish : (fitt) ? fittPublish : function() {});\
+                    n
+                })();\
+            n\ n
+            function handleImageEvents() {\
+                n
+                var me = this;\
+                n
+                if (me) {\
+                    n me.onerror = me.onload = null;\
+                    n
+                }\
+                n
+            }\
+            n
+        </script>\n
+        <script language="javascript" type="text/javascript" src="https://secure.espncdn.com/ad/doubleclick/hanfordCap.js"></script> \n\n
+        <script>
+            \
+            n
+            function overCap() {\
+                n
+                var capValue, img;\
+                n\ n
+                if (typeof checkSetCapping === 'function') {\
+                    n
+                    try {\
+                        n capValue = checkSetCapping('get', '138271411242', '');\
+                        n
+                    } catch (e) {\
+                        n capValue = '';\
+                        n
+                    }\
+                    n
+                    if (!capValue) {\
+                        n
+                        try {\
+                            n checkSetCapping('set', '138271411242', '');\
+                            n
+                        } catch (e) {}\
+                        n\ n img = new Image();\
+                        n img.onerror = \n img.onload = handleImageEvents;\
+                        n img.src = 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsvIMTGr07WAqZcbw2Q3IQebSGYi95W0e2Z5lBSgJ33HRWcOaGsmqaceL3DmLdpp9JTu2wc5E2msnbXDJIdrPRDvPp9ZOA53-RqYcFFBhq70kdvh4v29I18IOvt2Tf7sQz9tVRnDc7beurigfWXVZH0qWDO1awknnZd84UG81lomAAfB8b9ZNr4MAi7qYDTMn17slJmwfKwwte3YCarZIEcPTsye-gDiUdB13xSOv9rXQyAVQTWhcE5U0cPEqsYKoz7HCxrpMBV_N4B_hoiw04fIfOw_&sig=Cg0ArKJSzIs9exoZS-ZLEAE&urlfix=1&adurl=https://secure.espncdn.com/ad/blank.gif';\
+                        n
+                    }\
+                    n\ n
+                } else {\
+                    n curOverCapTries++;\
+                    n
+                    if (curOverCapTries < maxOverCapTries) {\
+                        n setTimeout(overCap, 100);\
+                        n
+                    }\
+                    n
+                }\
+                n
+            }\
+            n overCap();\
+            n publishCloseEvent();\
+            n
+        </script>\n\n\n
+        <!-- START TEMP WRAPPER --->\n
+        <!-- BING wrapper -->\n
+        <script>
+            (function(w, d, t, r, u) {
+                var f, n, i;
+                w[u] = w[u] || [], f = function() {
+                    var o = {
+                        ti: "5996176"
+                    };
+                    o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
+                }, n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function() {
+                    var s = this.readyState;
+                    s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
+                }, i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
+            })(window, document, "script", "//bat.bing.com/bat.js", "uetq");
+        </script><noscript><img src="//bat.bing.com/action/0?ti=5996176&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>\n\n
+        <!-- Facebook Pixel Code 1 -->\n
+        <script>
+            \
+            n! function(f, b, e, v, n, t, s)\ n {
+                if (f.fbq) return;
+                n = f.fbq = function() {
+                    n.callMethod ? \n n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };\
+                n
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';\
+                n n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;\
+                n t.src = v;
+                s = b.getElementsByTagName(e)[0];\
+                n s.parentNode.insertBefore(t, s)
+            }(window, document, 'script', \n 'https://connect.facebook.net/en_US/fbevents.js');\
+            n fbq('init', '426863384401723');\
+            n fbq('track', 'PageView');\
+            n
+        </script>\n<noscript><img height="1" width="1" style="display:none"\n  src="https://www.facebook.com/tr?id=426863384401723&ev=PageView&noscript=1"\n/></noscript>\n
+        <!-- End Facebook Pixel Code 1 -->\n\n
+        <!-- Facebook Pixel Code 2 -->\n
+        <script>
+            \
+            n! function(f, b, e, v, n, t, s)\ n {
+                if (f.fbq) return;
+                n = f.fbq = function() {
+                    n.callMethod ? \n n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };\
+                n
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';\
+                n n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;\
+                n t.src = v;
+                s = b.getElementsByTagName(e)[0];\
+                n s.parentNode.insertBefore(t, s)
+            }(window, document, 'script', \n 'https://connect.facebook.net/en_US/fbevents.js');\
+            n fbq('init', '504412503408123');\
+            n fbq('track', 'PageView');\
+            n
+        </script>\n<noscript><img height="1" width="1" style="display:none"\n  src="https://www.facebook.com/tr?id=504412503408123&ev=PageView&noscript=1"\n/></noscript>\n
+        <!-- End Facebook Pixel Code 2 -->\n\n
+        <!-- Global site tag (gtag.js) - Google AdWords: 817714641 -->\n
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-817714641"></script>\n
+        <script>
+            \
+            n window.dataLayer = window.dataLayer || [];\
+            n
+            function gtag() {
+                dataLayer.push(arguments);
+            }\
+            n gtag('js', new Date());\
+            n\ n gtag('config', 'AW-817714641');\
+            n
+        </script>\n\n
+        <!-- Twitter universal website tag code -->\n
+        <script>
+            \
+            n! function(e, t, n, s, u, a) {
+                e.twq || (s = e.twq = function() {
+                    s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);\
+                    n
+                }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '//static.ads-twitter.com/uwt.js', \na = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+            }(window, document, 'script');\
+            n // Insert Twitter Pixel ID and Standard Event data below\ntwq('init','nz459');\ntwq('track','PageView');\n
+        </script>\n
+        <!-- End Twitter universal website tag code -->\n\n
+        <!-- Yahoo Gemini wrapper -->\n
+        <script type="application/javascript">
+            (function(w, d, t, r, u) {
+                w[u] = w[u] || [];
+                w[u].push({
+                    'projectId': '10000',
+                    'properties': {
+                        'pixelId': '10048624'
+                    }
+                });
+                var s = d.createElement(t);
+                s.src = r;
+                s.async = true;
+                s.onload = s.onreadystatechange = function() {
+                    var y, rs = this.readyState,
+                        c = w[u];
+                    if (rs && rs != "complete" && rs != "loaded") {
+                        return
+                    }
+                    try {
+                        y = YAHOO.ywa.I13N.fireBeacon;
+                        w[u] = [];
+                        w[u].push = function(p) {
+                            y([p])
+                        };
+                        y(c)
+                    } catch (e) {}
+                };
+                var scr = d.getElementsByTagName(t)[0],
+                    par = scr.parentNode;
+                par.insertBefore(s, scr)
+            })(window, document, "script", "https://s.yimg.com/wi/ytc.js", "dotq");
+        </script>
+    </div>
+    <script>
+        if (window.top && window.top.postMessage) {
+            window.top.postMessage('{"key_value":[{"key":"qid","value":"CJWFnvDHkeUCFdgW4AodkaQJyw"}],"googMsgType":"adpnt"}', '*');
+        }
+    </script>
+    <div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB4SURBVBjTbZABDoAwCAO7H/T/rzXS0oERZxbiUWqB/zoq9FEHsL7yPWS6IqAH6QTRKNOFPrmxtDXZ2iccppMU+fGNsJja1EsN1AL/okfkvTWLrsJdYMWR0TbCvq9v9AZrjwQhda7MPGM+CdoxF72EV3a2zZ3g1QUeY3AF3PUKRkkAAAAASUVORK5CYII=') !important;"></div>
+</body>
+
+</html>

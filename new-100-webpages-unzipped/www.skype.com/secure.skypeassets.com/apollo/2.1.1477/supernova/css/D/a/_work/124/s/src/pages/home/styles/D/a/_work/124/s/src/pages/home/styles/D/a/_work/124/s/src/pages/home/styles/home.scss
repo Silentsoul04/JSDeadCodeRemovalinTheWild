@@ -1,0 +1,35 @@
+@import '../../../styles/breakpoints/mixins';
+@import '../../../styles/theme/colors';
+
+.oko-banner {
+  height: 100%;
+  width: 100%;
+  background-color: $color-gray-100;
+  flex-direction: row-reverse;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+}
+
+.home-subscription-promo {
+  background-color: $color-gray-100;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 0;
+
+  .home-subscription-col-device {
+    padding-bottom: 0;
+    justify-content: flex-end;
+  }
+
+  .home-subscription-device {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+}

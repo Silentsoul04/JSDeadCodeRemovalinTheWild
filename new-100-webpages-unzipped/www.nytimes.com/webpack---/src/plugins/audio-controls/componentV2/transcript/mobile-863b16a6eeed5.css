@@ -1,0 +1,16 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/font-families.css"), undefined);
+// module
+exports.push([module.id, ".tbutton-2ImyFaYh{margin-top:5px!important;background:transparent;height:45px;width:140px;color:#fff;border:1px solid!important;border-radius:4px;box-sizing:border-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;justify-content:center;-ms-flex-item-align:center;align-self:center;-ms-flex-align:center;align-items:center;transition:.3s ease}.tbuttonLightTheme-zIxNr9tF.tbutton-2ImyFaYh{border-color:transparent!important;background:rgba(0,0,0,.1)!important}.tbuttonDarkTheme-LLvkyali.tbutton-2ImyFaYh{border-color:#000!important}.tbutton-2ImyFaYh:hover{border:1px solid #fff;background:rgba(0,0,0,.1)}.tbutton-2ImyFaYh:focus{border:1px solid #fff;background:rgba(0,0,0,.25)}.textSpan-2kL-cL-J{font-weight:700;font-size:14px;line-height:20px;margin-left:15px}.tbuttonLightTheme-zIxNr9tF .textSpan-2kL-cL-J{color:#fff}.tbuttonDarkTheme-LLvkyali .textSpan-2kL-cL-J{color:#000}.buttonContentContainer-IuVEKET8{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;margin:auto 15px}", ""]);
+// exports
+exports.locals= {
+    "tbutton": "tbutton-2ImyFaYh", "tbuttonLightTheme": "tbuttonLightTheme-zIxNr9tF", "tbuttonDarkTheme": "tbuttonDarkTheme-LLvkyali", "textSpan": "textSpan-2kL-cL-J " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/font-families.css").locals["franklin"] + "", "buttonContentContainer": "buttonContentContainer-IuVEKET8"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/audio-controls/componentV2/transcript/mobile.css
+// module id = 214
+// module chunks = 5

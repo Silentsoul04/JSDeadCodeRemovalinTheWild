@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> iNews Portal - Home </title>
+    <link href="https://static.inews.id/css/mix-desk.min.css" rel="stylesheet">
+    <link rel="manifest" href="https://img.inews.id/files/img/fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://img.inews.id/files/img/fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff"> </head>
+
+<body>
+    <div class="widget-rightside widget-rightside-list">
+        <div style="padding:10px;border-bottom: 3px solid #b7374f;"> <a href="https://www.inews.id" target="_blank"> <img src="https://img.inews.id/files/img/logo-kanal/logo-inews@1x.png" class="img-responsive" style="max-height:25px;" alt="Inews Logo" title="Inews Logo"> </a> </div>
+        <div class="widget-right-list">
+            <div class="widget-header">
+                <div class="widget-header-cont" style="border-bottom: 1px solid #c9c9c9;font-weight: 700;margin-top:-10px;"> <a href="https://www.inews.id/otomotif/mobil/perluas-jaringan-mazda-bangun-dealer-ke-11-di-jabodetabek" target="_blank" title="Perluas Jaringan, Mazda Bangun Dealer Ke-11 di Jabodetabek" style="font-size:14px;"> <strong>Perluas Jaringan, Mazda Bangun Dealer Ke-11 di Jabodetabek</strong> </a>                    </div>
+            </div>
+            <div class="widget-header">
+                <div class="widget-header-cont" style="border-bottom: 1px solid #c9c9c9;font-weight: 700;margin-top:-10px;"> <a href="https://www.inews.id/daerah/sumut/pria-penusuk-wiranto-sudah-2-tahun-tinggalkan-medan-karena-rumahnya-terkena-proyek-tol" target="_blank" title="Pria Penusuk Wiranto Sudah 2 Tahun Tinggalkan Medan karena Rumahnya Terkena Proyek Tol"
+                        style="font-size:14px;"> <strong>Pria Penusuk Wiranto Sudah 2 Tahun Tinggalkan Medan karena Rumahnya Terkena Proyek Tol</strong> </a> </div>
+            </div>
+            <div class="widget-header">
+                <div class="widget-header-cont" style="border-bottom: 1px solid #c9c9c9;font-weight: 700;margin-top:-10px;"> <a href="https://www.inews.id/daerah/regional/kabar-duka-penerjun-payung-pertama-tni-au-imanuel-nuhan-wafat" target="_blank" title="Kabar Duka, Penerjun Payung Pertama TNI AU Imanuel Nuhan Wafat" style="font-size:14px;"> <strong>Kabar Duka, Penerjun Payung Pertama TNI AU Imanuel Nuhan Wafat</strong> </a>                    </div>
+            </div>
+            <div class="widget-header">
+                <div class="widget-header-cont" style="border-bottom: 1px solid #c9c9c9;font-weight: 700;margin-top:-10px;"> <a href="https://www.inews.id/sport/soccer/dikabarkan-berseteru-dengan-zidane-bale-saya-hanya-ingin-bermain-sepak-bola" target="_blank" title="Dikabarkan Berseteru dengan Zidane, Bale: Saya hanya Ingin Bermain Sepak Bola" style="font-size:14px;"> <strong>Dikabarkan Berseteru dengan Zidane, Bale: Saya hanya Ingin Bermain Sepak Bola</strong> </a>                    </div>
+            </div>
+            <div class="widget-header">
+                <div class="widget-header-cont" style="border-bottom: 1px solid #c9c9c9;font-weight: 700;margin-top:-10px;"> <a href="https://www.inews.id/travel/belanja/keseruan-festival-belanja-online-ada-diskon-70-untuk-brand-perawatan-kulit" target="_blank" title="Keseruan Festival Belanja Online, Ada Diskon 70% untuk Brand Perawatan Kulit" style="font-size:14px;"> <strong>Keseruan Festival Belanja Online, Ada Diskon 70% untuk Brand Perawatan Kulit</strong> </a>                    </div>
+            </div>
+        </div>
+        <div style="background-color:#e0e0e0;color:#db6060;" class="text-center"> <a href="https://www.inews.id" style="text-decoration: none;" target="_blank">more</a> </div>
+        <div class="clearfix"></div>
+    </div>
+    <script>
+        function href(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+    <script src="https://static.inews.id/js/mix-desk.min.js"></script>
+    <script>
+        $(' a').click(function() {
+            var href = $(this);
+            var href2 = $(this)[0].pathname.split('/');
+            var cat = href.attr('cat');
+            if (!cat) {
+                cat = href2[1];
+            }
+            var act = href.attr('act');
+            if (!act) {
+                act = href2[2];
+            }
+            var lbl = href.attr('lbl');
+            if (!lbl) {
+                lbl = href2[href2.length - 1];
+            }
+            ga('send', 'event', cat, act, lbl);
+        });
+    </script>
+</body>
+
+</html>

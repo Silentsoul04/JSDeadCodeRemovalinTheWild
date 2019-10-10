@@ -1,0 +1,1 @@
+data:image/svg+xml;utf8,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M8.7 8l3.155 3.154a.496.496 0 0 1-.701.7L8 8.702l-3.154 3.154a.496.496 0 0 1-.7-.701L7.298 8 4.145 4.846a.496.496 0 0 1 .701-.7L8 7.298l3.154-3.154a.496.496 0 1 1 .7.701L8.702 8z" fill="%23D8DDE9" fill-rule="nonzero"/></svg>

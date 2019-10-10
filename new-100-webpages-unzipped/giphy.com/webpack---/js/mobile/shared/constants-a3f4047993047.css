@@ -1,0 +1,10 @@
+exports=module.exports=require("../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+// module
+exports.push([module.id, "", ""]);
+// exports
+exports.locals= {
+    "margin": "6px", "searchHeight": "44px", "bodyContentMargin": "12px", "sectionMargin": "24px", "blockHeight": "44px", "headerIndex": "10", "headerHeight": "40px", "smallFont": "12px"
+}
+
+;

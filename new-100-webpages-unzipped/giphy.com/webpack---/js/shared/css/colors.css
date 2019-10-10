@@ -1,0 +1,10 @@
+exports=module.exports=require("../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+// module
+exports.push([module.id, "", ""]);
+// exports
+exports.locals= {
+    "giphyBlue": "#00ccff", "giphyGreen": "#00ff99", "giphyPurple": "#9933ff", "giphyYellow": "#fff35c", "giphyRed": "#ff6666", "giphyPink": "#e646b6", "giphyAqua": "#00E6CC", "giphyLightBlue": "#00cdff", "giphyIceBlue": "#cff", "giphyIndigo": "#6157FF", "giphyCornflower": "#3191FF", "giphyDarkPurple": "#4C197F", "giphyWhite": "#fff", "giphyWhiteSmoke": "#ececec", "giphyVeryLightGrey": "#F7F7F7", "highlightGrey": "#D8D8D8", "giphyLightGrey": "#a6a6a6", "giphyMediumLightGrey": "#5C5C5C", "giphyGrey": "#b2b2b2", "giphyWarmGrey": "#9b9b9b", "giphyDarkGrey": "#212121", "giphyCharcoal": "#4A4A4A", "giphyDarkCharcoal": "#3e3e3e", "giphyNewBlack": "#121212", "giphyBlack": "#000", "facebookColor": "#3894fc", "twitterColor": "#00ccff", "pinterestColor": "#e54cb5", "tumblrColor": "#529ecc", "instagramColor": "#c23c8d", "redditColor": "#fc6669", "errorColor": "#ff6666", "deleteColor": "#ff6666", "primaryCTA": "#6157FF", "primaryCTADisabled": "#3e3e3e", "secondaryCTA": "#4A4A4A", "dividerColor": "rgba(155, 155, 155, .15)", "dimColor": "rgba(0, 0, 0, 0.9)", "channelSelectorGrey": "#3e3e3e", "creationUploadColor": "#fff35c", "creationGifMakerColor": "#00ff99", "creationSlideshowColor": "#ff6666", "creationCaptionColor": "#00ccff", "timedProgressBarColor": "#00ff99", "creationCancelColor": "#2C2C2C", "storyGreen": "#00D37F", "storyYellow": "#D4CA4D", "inputPlaceholderColor": "#999"
+}
+
+;

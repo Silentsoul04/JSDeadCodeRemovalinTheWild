@@ -1,0 +1,17 @@
+exports=module.exports=require("../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/z-index.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/font-families.css"), undefined);
+// module
+exports.push([module.id, ".container-1RqsFxwC{position:absolute;width:100%;height:100%;top:0;left:0}.transitionDefaults-3wbfsVrE{transition-duration:.3s;transition-timing-function:ease}.poster-1GxPgOMO{background-repeat:no-repeat;cursor:pointer}.playIcon-1WeOHz88{width:16px;height:16px;background-image:url(" + require("./img/play.svg") + ");background-size:cover;margin-right:10px}.centerIconCircle-Sq7GSEil,.playIcon-1WeOHz88{background-position:50%;background-repeat:no-repeat;border:none;background-color:transparent;padding:0}.centerIconCircle-Sq7GSEil{width:50px;height:50px;background-image:url(" + require("./img/play-round-center.svg") + ");background-size:contain;margin:0 auto;position:relative;bottom:calc(47% - 50px)}.centerIcon--vhs-xxs-laYAGIT6{bottom:calc(14% - 26px)!important;transform:scale(.8)}.durationBase-2s1jCUCO{font-size:14px;line-height:14px;font-weight:600;color:#e2e2e2}.duration-3ztEVqW8{position:relative;top:2px}.headline-1ay9DQJg{font-size:22px;line-height:24px;color:#f7f7f7}.compassIcon-1uisBKac{background-image:url(" + require("./img/compass.svg") + ");background-position:50%;background-size:cover;background-repeat:no-repeat;background-color:transparent}", ""]);
+// exports
+exports.locals= {
+    "container": "container-1RqsFxwC", "transitionDefaults": "transitionDefaults-3wbfsVrE", "poster": "poster-1GxPgOMO " + require("-!../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/z-index.css").locals["poster-plugin-z-index"] + "", "playIcon": "playIcon-1WeOHz88", "centerIconCircle": "centerIconCircle-Sq7GSEil", "centerIcon--vhs-xxs": "centerIcon--vhs-xxs-laYAGIT6", "durationBase": "durationBase-2s1jCUCO " + require("-!../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/font-families.css").locals["franklin"] + "", "duration": "duration-3ztEVqW8 durationBase-2s1jCUCO " + require("-!../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/font-families.css").locals["franklin"] + "", "headline": "headline-1ay9DQJg " + require("-!../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/font-families.css").locals["cheltenham"] + "", "compassIcon": "compassIcon-1uisBKac"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/cover/component/styles.css
+// module id = 457
+// module chunks = 1

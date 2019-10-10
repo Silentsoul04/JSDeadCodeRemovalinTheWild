@@ -1,0 +1,16 @@
+exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".vhs-plugin-browser-not-supported{position:absolute;z-index:50;background:#000;width:100%;height:100%;top:0;left:0;display:none}.vhs-plugin-browser-not-supported .vhs-plugin-browser-not-supported-message{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);text-align:center}.vhs-plugin-browser-not-supported .vhs-plugin-browser-not-supported-message .vhs-icon-alert{color:#fff;font-size:30px;margin-right:20px;vertical-align:middle}.vhs-plugin-browser-not-supported .vhs-plugin-browser-not-supported-message p{text-align:left;font-family:arial,helvetica,sans-serif;font-weight:400;font-size:13px;color:#fff;display:inline-block;margin:0;vertical-align:middle}.vhs-s .vhs-plugin-browser-not-supported .vhs-plugin-browser-not-supported-message p,.vhs-xs .vhs-plugin-browser-not-supported .vhs-plugin-browser-not-supported-message p,.vhs-xxs .vhs-plugin-browser-not-supported .vhs-plugin-browser-not-supported-message p{margin-top:15px;text-align:center;display:block}", ""]);
+
+// exports
+
+
+
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/plugins/browser-not-supported/styles.scss
+// module id = 240
+// module chunks = 5

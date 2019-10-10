@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=300,height=250">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+        var clickTag = "http://www.godaddy.com";
+    </script>
+    <script>
+        var G_AD_SETUP = {
+            "width": 300,
+            "height": 250,
+            "size": "300x250",
+            "locale": "nl_nl",
+            "vkey": "300x250_nl_nl"
+        };
+    </script>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
+    <script>
+        /*! modernizr 3.3.1 (Custom Build) | MIT *
+         * http://modernizr.com/download/?-cssanimations-setclasses !*/
+        ! function(e, n, t) {
+            function r(e, n) {
+                return typeof e === n
+            }
+
+            function o() {
+                var e, n, t, o, s, i, a;
+                for (var l in C)
+                    if (C.hasOwnProperty(l)) {
+                        if (e = [], n = C[l], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length))
+                            for (t = 0; t < n.options.aliases.length; t++) e.push(n.options.aliases[t].toLowerCase());
+                        for (o = r(n.fn, "function") ? n.fn() : n.fn, s = 0; s < e.length; s++) i = e[s], a = i.split("."), 1 === a.length ? Modernizr[a[0]] = o : (!Modernizr[a[0]] || Modernizr[a[0]] instanceof Boolean || (Modernizr[a[0]] = new Boolean(Modernizr[a[0]])), Modernizr[a[0]][a[1]] = o), g.push((o ? "" : "no-") + a.join("-"))
+                    }
+            }
+
+            function s(e) {
+                var n = _.className,
+                    t = Modernizr._config.classPrefix || "";
+                if (S && (n = n.baseVal), Modernizr._config.enableJSClass) {
+                    var r = new RegExp("(^|\\s)" + t + "no-js(\\s|$)");
+                    n = n.replace(r, "$1" + t + "js$2")
+                }
+                Modernizr._config.enableClasses && (n += " " + t + e.join(" " + t), S ? _.className.baseVal = n : _.className = n)
+            }
+
+            function i(e, n) {
+                return !!~("" + e).indexOf(n)
+            }
+
+            function a() {
+                return "function" != typeof n.createElement ? n.createElement(arguments[0]) : S ? n.createElementNS.call(n, "http://www.w3.org/2000/svg", arguments[0]) : n.createElement.apply(n, arguments)
+            }
+
+            function l(e) {
+                return e.replace(/([a-z])-([a-z])/g, function(e, n, t) {
+                    return n + t.toUpperCase()
+                }).replace(/^-/, "")
+            }
+
+            function f(e, n) {
+                return function() {
+                    return e.apply(n, arguments)
+                }
+            }
+
+            function u(e, n, t) {
+                var o;
+                for (var s in e)
+                    if (e[s] in n) return t === !1 ? e[s] : (o = n[e[s]], r(o, "function") ? f(o, t || n) : o);
+                return !1
+            }
+
+            function d(e) {
+                return e.replace(/([A-Z])/g, function(e, n) {
+                    return "-" + n.toLowerCase()
+                }).replace(/^ms-/, "-ms-")
+            }
+
+            function c() {
+                var e = n.body;
+                return e || (e = a(S ? "svg" : "body"), e.fake = !0), e
+            }
+
+            function p(e, t, r, o) {
+                var s, i, l, f, u = "modernizr",
+                    d = a("div"),
+                    p = c();
+                if (parseInt(r, 10))
+                    for (; r--;) l = a("div"), l.id = o ? o[r] : u + (r + 1), d.appendChild(l);
+                return s = a("style"), s.type = "text/css", s.id = "s" + u, (p.fake ? p : d).appendChild(s), p.appendChild(d), s.styleSheet ? s.styleSheet.cssText = e : s.appendChild(n.createTextNode(e)), d.id = u, p.fake && (p.style.background = "", p.style.overflow = "hidden", f = _.style.overflow, _.style.overflow = "hidden", _.appendChild(p)), i = t(d, e), p.fake ? (p.parentNode.removeChild(p), _.style.overflow = f, _.offsetHeight) : d.parentNode.removeChild(d), !!i
+            }
+
+            function m(n, r) {
+                var o = n.length;
+                if ("CSS" in e && "supports" in e.CSS) {
+                    for (; o--;)
+                        if (e.CSS.supports(d(n[o]), r)) return !0;
+                    return !1
+                }
+                if ("CSSSupportsRule" in e) {
+                    for (var s = []; o--;) s.push("(" + d(n[o]) + ":" + r + ")");
+                    return s = s.join(" or "), p("@supports (" + s + ") { #modernizr { position: absolute; } }", function(e) {
+                        return "absolute" == getComputedStyle(e, null).position
+                    })
+                }
+                return t
+            }
+
+            function h(e, n, o, s) {
+                function f() {
+                    d && (delete P.style, delete P.modElem)
+                }
+                if (s = r(s, "undefined") ? !1 : s, !r(o, "undefined")) {
+                    var u = m(e, o);
+                    if (!r(u, "undefined")) return u
+                }
+                for (var d, c, p, h, v, y = ["modernizr", "tspan"]; !P.style;) d = !0, P.modElem = a(y.shift()), P.style = P.modElem.style;
+                for (p = e.length, c = 0; p > c; c++)
+                    if (h = e[c], v = P.style[h], i(h, "-") && (h = l(h)), P.style[h] !== t) {
+                        if (s || r(o, "undefined")) return f(), "pfx" == n ? h : !0;
+                        try {
+                            P.style[h] = o
+                        } catch (g) {}
+                        if (P.style[h] != v) return f(), "pfx" == n ? h : !0
+                    }
+                return f(), !1
+            }
+
+            function v(e, n, t, o, s) {
+                var i = e.charAt(0).toUpperCase() + e.slice(1),
+                    a = (e + " " + b.join(i + " ") + i).split(" ");
+                return r(n, "string") || r(n, "undefined") ? h(a, n, o, s) : (a = (e + " " + E.join(i + " ") + i).split(" "), u(a, n, t))
+            }
+
+            function y(e, n, r) {
+                return v(e, t, t, n, r)
+            }
+            var g = [],
+                C = [],
+                w = {
+                    _version: "3.3.1",
+                    _config: {
+                        classPrefix: "",
+                        enableClasses: !0,
+                        enableJSClass: !0,
+                        usePrefixes: !0
+                    },
+                    _q: [],
+                    on: function(e, n) {
+                        var t = this;
+                        setTimeout(function() {
+                            n(t[e])
+                        }, 0)
+                    },
+                    addTest: function(e, n, t) {
+                        C.push({
+                            name: e,
+                            fn: n,
+                            options: t
+                        })
+                    },
+                    addAsyncTest: function(e) {
+                        C.push({
+                            name: null,
+                            fn: e
+                        })
+                    }
+                },
+                Modernizr = function() {};
+            Modernizr.prototype = w, Modernizr = new Modernizr;
+            var _ = n.documentElement,
+                S = "svg" === _.nodeName.toLowerCase(),
+                x = "Moz O ms Webkit",
+                b = w._config.usePrefixes ? x.split(" ") : [];
+            w._cssomPrefixes = b;
+            var E = w._config.usePrefixes ? x.toLowerCase().split(" ") : [];
+            w._domPrefixes = E;
+            var N = {
+                elem: a("modernizr")
+            };
+            Modernizr._q.push(function() {
+                delete N.elem
+            });
+            var P = {
+                style: N.elem.style
+            };
+            Modernizr._q.unshift(function() {
+                delete P.style
+            }), w.testAllProps = v, w.testAllProps = y, Modernizr.addTest("cssanimations", y("animationName", "a", !0)), o(), s(g), delete w.addTest, delete w.addAsyncTest;
+            for (var z = 0; z < Modernizr._q.length; z++) Modernizr._q[z]();
+            e.Modernizr = Modernizr
+        }(window, document);
+
+
+        // Initialize Enabler - DoubleClick referrs to this as the most
+        // important piece of code in your banner. If it's not here
+        // you don't have a DoubleClick ad
+        window.onload = function() {
+            if (Enabler.isInitialized()) {
+                init();
+            } else {
+                Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+            }
+        }
+
+
+        // init() will only be run once the Enabler is initialized
+        function init() {
+            // Enabler provides ways for us to check status of the page
+            // First, we'll check to be sure the page is loadedd
+            if (Enabler.isPageLoaded()) {
+                // the page is loaded, now call the page load handler
+                pageLoadedHandler();
+            } else {
+                Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, pageLoadedHandler);
+            }
+        }
+
+        function pageLoadedHandler() {
+            // we only want to run the ad if it's visible to the user
+            // and the Enabler let's us check if it is visible with the
+            // Enabler.isVisible property
+            if (Enabler.isVisible()) {
+                adVisibilityHandler();
+            } else {
+                Enabler.addEventListener(studio.events.StudioEvent.VISIBLE,
+                    adVisibilityHandler);
+            }
+        }
+
+        // This _politeLoad function will load any number of
+        // JS files using the Enabler's built in loadScript
+        // function then it will issue a call back when done
+        // Where did it come from?
+        // http://greensock.com/forums/topic/12147-polite-loading-gsap-into-a-dc-html5-banner/
+        //
+        function _politeLoad(urls, onComplete) {
+            var l = urls.length,
+                loaded = 0,
+                checkProgress = function() {
+                    if (++loaded === l && onComplete) {
+                        onComplete();
+                    }
+                },
+                i;
+            for (i = 0; i < l; i++) {
+                Enabler.loadScript(urls[i], checkProgress);
+            }
+        }
+
+        function adVisibilityHandler() {
+            // The ad is actual in a visible area, now we can
+            // finally start the banner
+
+            /*
+
+            You can import files anyway you want, like from the Greensock CDN
+            https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js
+            https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TimelineLite.min.js
+            https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/easing/EasePack.min.js
+            https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js
+
+            Google now hosts a copy of TweenMax. We use it only on Google served ads though.
+            https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.20.0_d360d9a082ccc13b1a1a9b153f86b378_min.js
+
+            What are the other Google hosted libraries? See here:
+            https://support.google.com/richmedia/answer/6307288?hl=en
+
+            PreloadJS from the CreateJS is a common one we use:
+            https://s0.2mdn.net/ads/studio/cached_libs/preloadjs_0.6.2_d7b96570d4552592ae479162e546cb25_min.js
+            */
+
+            // we'll feed these into the _politeLoad helper function
+            // and give it a callback, bannerInit which lives in the script.js file
+
+            _politeLoad([
+                'https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.20.0_d360d9a082ccc13b1a1a9b153f86b378_min.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js',
+                'js/scripts.js'
+            ], function() {
+                bannerInit();
+            });
+
+
+            // The ad lives in the container_ad div. At the top of this
+            // page, it was made invisible, now we can change the opacity
+            // to 100% and be sure it's set to display as a block level element
+            document.getElementById("container_ad").style.opacity = 1;
+            document.getElementById("container_ad").style.display = "block";
+            //      bannerInit();
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TimelineLite.min.js"></script>
+
+    <link rel="stylesheet" href="css/GDSherpa-Bold-trim.css" />
+    <link rel="stylesheet" href="css/GDBoing-Black-trim.css" />
+    <link rel="stylesheet" href="css/GDBoing-Black-trim.css" />
+    <link rel="stylesheet" href="css/GDSherpa-Bold-trim.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script type="text/javascript">
+        (function() {
+            var relegateNavigation = '';
+            var handleClickTagMessage = function(e) {
+                try {
+                    var eventData = JSON.parse(e.data);
+                } catch (err) {
+                    return;
+                }
+                if (eventData.isInitClickTag) {
+                    if (eventData.clickTags) {
+                        for (var i = 0; i < eventData.clickTags.length; i++) {
+                            var clkTag = eventData.clickTags[i];
+                            window[clkTag.name] = clkTag.url;
+                        }
+                    } else if (eventData.clickTag) {
+                        window.clickTag = eventData.clickTag;
+                    }
+                    relegateNavigation = eventData.relegateNavigation;
+                }
+            };
+
+            if (open.call) {
+                window.open = function(open) {
+                    return function(url, name, features) {
+                        if (relegateNavigation === 'parent') {
+                            var message = {
+                                'clickTag': url,
+                                'isPostClickTag': true
+                            };
+                            parent.postMessage(JSON.stringify(message), '*');
+                        } else {
+                            var args = [url, name];
+                            if (features) {
+                                args.push(features);
+                            }
+                            open.apply(window, args);
+                        }
+                    };
+                }(window.open);
+            }
+
+            if (window.addEventListener) {
+                window.addEventListener(
+                    'message', handleClickTagMessage, false);
+            } else {
+                window.attachEvent('onmessage', handleClickTagMessage);
+            }
+        })();
+    </script>
+</head>
+
+<body class="animations">
+
+    <div id="container_ad">
+        <div id="content_ad" class="full-container">
+            <div class="background frame-container">
+                <div class="frame-1 frame">
+                    <img class="bgimg" src="img/bg1_300x250.jpg" />
+
+
+
+                </div>
+                <div class="frame-2 frame">
+                    <img class="bgimg" src="img/bg2_300x250.jpg" />
+
+
+
+                </div>
+                <div class="frame-3 frame"></div>
+            </div>
+            <div class="middleground frame-container">
+                <svg id="svg_mg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 300 250" xml:space="preserve">
+    <path id="svg_f1" d="M301,186.5L-1 99.9 -1 251 301 251 z"></path>
+    <path id="svg_f2" d="M-1,251L301 251 301 99.9 -1 186.5 z"></path>
+    <path id="svg_f3" d="M301,-3.5L-1 -90.1 -1 251 301 251 z"></path>
+</svg>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="foreground frame-container">
+                <div class="frame-1 frame">
+                    <div class="textholder">
+                        <div class="line1 text"><span>Jij</span> <span>hebt</span> <span>het</span> <span>talent.</span></div>
+                    </div>
+                </div>
+                <div class="frame-2 frame">
+                    <div class="textholder">
+                        <div class="line1 text"><span>Wij</span> <span>hebben</span> <span>de</span> <span>tools.</span></div>
+                    </div>
+                </div>
+                <div class="frame-3 frame">
+                    <div class="content">
+                        <div class="textbox-head">
+                            <div class="text">
+                                <div class="stripe"></div>
+                                <span>Gebruik</span> <span>alles</span> <span>wat</span> <span>je</span> <span>nodig</span> <span>hebt</span> <span>om</span> <span>je</span> <span>ideeën</span> <span>te</span> <span>realiseren.</span>
+                            </div>
+                        </div>
+                        <div class="textbox-mid">
+                            <div class="text">
+                                <div class="f3b"><span>Domeinen,</span> <span>websites</span> <span>en</span> <span>marketingtools.</span></div>
+                                <div class="f3c"></div>
+                                <div class="f3d"></div>
+                            </div>
+                        </div>
+                        <div class="textbox-foot">
+                            <div class="button-wrapper">
+                                <button class="sherpa"><span>Meer</span> <span>info</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <svg id="gd_logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 374 82" xml:space="preserve">
+<path id="gd_logo_1" class="st1" d="M53.2,52.7c-5,6.9-13.2,9.2-20.5,9.2c-16.8,0-29.2-12.5-29.2-29.9C3.5,15.3,16.9,2,34.4,2
+    c13,0,23.4,5.5,28.1,16c0.6,1.2,1,3.2-2.5,3.8l-9.2,1.6c-2.1,0.4-3.3-1-3.7-1.6c-2.7-3.7-7.1-6.2-12.4-6.2
+    c-9.2,0-15.7,7-15.7,16.3c0,10.3,7.4,16.3,15.5,16.3c5.4,0,9.8-2,12.7-5.8h-8.1c-1.2,0-2.1-0.9-2.1-2v-7.7c0-1.1,0.9-2,2.1-2h24.7
+    c1.2,0,2.1,0.9,2.1,2v25.8c0,1.1-0.9,2-2.1,2h-8.6c-1.2,0-2.1-0.9-2.1-2V52.7z" />
+
+<path id="gd_logo_2" class="st1" d="M113.2,40.5c0,11.9-10.1,21.4-22.6,21.4s-22.6-9.5-22.6-21.4c0-12,10.1-21.6,22.6-21.6S113.2,28.5,113.2,40.5
+     M98.8,40.4c0-4.6-3.6-8.4-8.3-8.4s-8.3,3.8-8.3,8.4c0,4.6,3.6,8.3,8.3,8.3S98.8,45,98.8,40.4" />
+<path id="gd_logo_3" class="st1" d="M173.8,31.8c0,17.1-12.1,28.8-29.1,28.8h-24.6c-1.2,0-2.1-0.9-2.1-2V5.2c0-1.1,0.9-2,2.1-2h24.6
+    C161.7,3.3,173.8,14.7,173.8,31.8 M158.2,31.8c0-8-5.6-15-13.9-15h-11.5v30.3h11.5C152.6,47.1,158.2,39.8,158.2,31.8" />
+<path id="gd_logo_4" class="st1" d="M195.7,18.8c4.9,0,8.8,1.8,10.5,4.3V22c0-1.1,0.9-1.9,1.9-1.9h10.3c1.1,0,1.9,0.8,1.9,1.9v36.8
+    c0,1.1-0.8,1.9-1.9,1.9h-10.3c-1.1,0-1.9-0.8-1.9-1.9v-1.2c-1.7,2.5-5.7,4.3-10.6,4.3c-10.4,0-20.4-8.3-20.4-21.6
+    S185.3,18.8,195.7,18.8 M197.8,48.7c4.6,0,8.3-3.8,8.3-8.4s-3.6-8.4-8.3-8.4c-4.6,0-8.3,3.8-8.3,8.4S193.2,48.7,197.8,48.7" />
+<path id="gd_logo_5" class="st1" d="M242.4,18.8c5,0,8.9,1.9,10.7,4.1V5.2c0-1.1,0.9-1.9,1.9-1.9h10.5c1.1,0,1.9,0.8,1.9,1.9v53.6
+    c0,1.1-0.8,1.9-1.9,1.9h-10.3c-1.1,0-1.9-0.8-1.9-1.9v-1.2c-2.1,2.5-5.7,4.3-10.6,4.3c-10.4,0-20.4-8.3-20.4-21.6
+    S232.1,18.8,242.4,18.8 M244.8,48.7c4.6,0,8.3-3.8,8.3-8.4s-3.6-8.4-8.3-8.4c-4.6,0-8.3,3.8-8.3,8.4S240.2,48.7,244.8,48.7" />
+<path id="gd_logo_6" class="st1" d="M289.4,18.8c5,0,8.9,1.9,10.7,4.1V5.2c0-1.1,0.9-1.9,1.9-1.9h10.5c1.1,0,1.9,0.8,1.9,1.9v53.6
+    c0,1.1-0.8,1.9-1.9,1.9h-10.3c-1.1,0-1.9-0.8-1.9-1.9v-1.2c-2.1,2.5-5.7,4.3-10.6,4.3c-10.4,0-20.4-8.3-20.4-21.6
+    S279.1,18.8,289.4,18.8 M291.9,48.7c4.6,0,8.3-3.8,8.3-8.4s-3.6-8.4-8.3-8.4s-8.3,3.8-8.3,8.4S287.2,48.7,291.9,48.7" />
+<path id="gd_logo_7" class="st1" d="M348.9,66.5c-2.6,8.6-8.6,13.4-18,13.4c-5.1,0-10.1-1.7-13.3-4.5c-0.5-0.5-0.8-1.1-0.8-1.7
+    c0-0.5,0.2-1.1,0.7-1.7l3.9-5.9c0.6-0.8,1.5-0.9,1.7-0.9c0.9,0,1.3,0.2,2.1,0.8c1.2,0.8,2.9,1.8,4.8,1.8c1.6,0,3.7-0.7,4.5-3.1
+    l1.3-4.1h-6.3c-1.3,0-2.1-0.9-2.5-2l-10.5-35.4c-0.2-0.9-0.3-1.4-0.3-1.7c0-0.8,0.6-1.5,1.7-1.5h12.4c1.1,0,1.7,1,2,2l6.9,25.4
+    h0.5l5.5-25.4c0.2-1,0.9-2,2-2h12.6c1.2,0,1.7,0.7,1.7,1.5c0,0.3-0.1,0.8-0.3,1.7L348.9,66.5z" />
+
+
+<path id="gd_logo_8" class="st1" d="M362.7,15.7c-0.4-0.4-0.8-0.9-1-1.5c-0.2-0.6-0.3-1.1-0.3-1.7c0-0.6,0.1-1.2,0.3-1.7c0.2-0.6,0.6-1,1-1.5
+    c0.4-0.4,0.9-0.7,1.5-1c0.6-0.2,1.1-0.3,1.8-0.3c0.6,0,1.2,0.1,1.8,0.3c0.6,0.2,1,0.5,1.5,1c0.4,0.4,0.8,0.9,1,1.5
+    c0.2,0.6,0.3,1.1,0.3,1.7c0,0.6-0.1,1.2-0.3,1.7c-0.2,0.6-0.6,1-1,1.5c-0.4,0.4-0.9,0.7-1.5,1c-0.6,0.2-1.1,0.3-1.8,0.3
+    c-0.6,0-1.2-0.1-1.8-0.3C363.6,16.5,363.2,16.1,362.7,15.7z M366,16.2c1,0,1.9-0.4,2.6-1.1c0.7-0.7,1.1-1.6,1.1-2.6
+    c0-1-0.4-1.9-1.1-2.6c-0.7-0.7-1.6-1.1-2.6-1.1c-1,0-1.9,0.4-2.6,1.1c-0.7,0.7-1.1,1.6-1.1,2.6s0.4,1.9,1.1,2.6
+    C364.1,15.9,364.9,16.2,366,16.2z M365,15.2h-0.9c0,0-0.1,0-0.1-0.1c0,0-0.1-0.1-0.1-0.1v-5c0,0,0-0.1,0.1-0.1s0.1-0.1,0.1-0.1h2
+    c0.6,0,1.1,0.2,1.5,0.5c0.4,0.3,0.6,0.8,0.6,1.3c0,0.3-0.1,0.6-0.3,0.9c-0.2,0.3-0.4,0.5-0.7,0.6l1.1,1.8c0,0.1,0.1,0.1,0,0.2
+    c0,0.1-0.1,0.1-0.2,0.1h-0.9c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1-0.1-0.2-0.2l-1-1.6h-0.7V15c0,0,0,0.1-0.1,0.1
+    C365.1,15.2,365.1,15.2,365,15.2z M366.8,11.6c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.1-0.3-0.2-0.6-0.2h-0.9v1.4h0.9
+    c0.2,0,0.4-0.1,0.6-0.2C366.8,12,366.8,11.8,366.8,11.6z" />
+
+</svg>
+                </div>
+            </div>
+        </div>
+        <button id="background_exit_ad"></button>
+        <a href="#" onclick="reload()" id="reloader">
+<svg class="restarter" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M67.4,12.1C49.8,4.3,29.9,9.7,18.3,23.8l-2.2-9.9c-0.4-2.3-2.7-3.7-4.8-3.2C9,11,7.6,13.3,8.1,15.5l4.3,20.1
+	c0,0,0.7,4.1,4.3,3.2l20.1-4.3c0.7-0.1,1.4-0.4,1.9-0.8c1.1-0.9,1.8-2.5,1.3-4c-0.4-2.3-2.7-3.7-4.8-3.2l-10.5,2.1
+	c9.2-11,25.1-15.1,38.9-9C80.3,27,87.9,46.6,80.4,63.3c-3.6,8-10.1,14.3-18.4,17.4s-17.3,3-25.4-0.6S22.3,70,19.2,61.7
+	c-0.8-2.2-3.3-3.2-5.5-2.4c-1.8,1-2.8,3.4-2,5.6c4.1,10.4,11.8,18.5,21.9,23s21.4,4.8,31.9,0.9c4.5-1.8,8.5-4.1,12-7.1
+	c4.7-4,8.5-9.1,10.9-14.8C97.7,45.9,88.3,21.2,67.4,12.1z" />
+</svg>
+            </a>
+    </div>
+
+
+</body>
+
+</html>

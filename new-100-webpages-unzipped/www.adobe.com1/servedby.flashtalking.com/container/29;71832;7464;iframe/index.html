@@ -1,0 +1,16 @@
+<html>
+
+<body>
+    <script type="text/javascript">
+        //1
+        (function() {
+            var a = location,
+                b = (location.href.match(/g=([^&]{14})/) || ["", ""])[1];
+            if (b && 0 === document.referrer.indexOf(a.protocol + "//" + a.host)) try {
+                parent.window.ftGGenCallback(b)
+            } catch (c) {}
+        })();
+    </script>
+</body>
+
+</html>

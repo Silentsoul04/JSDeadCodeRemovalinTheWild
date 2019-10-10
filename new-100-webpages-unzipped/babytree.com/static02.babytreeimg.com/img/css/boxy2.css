@@ -1,0 +1,209 @@
+.boxy-wrapper {
+    position: absolute;
+}
+
+.boxy-wrapper.fixed {
+    position: fixed;
+}
+
+.boxy-modal-blackout {
+    position: absolute;
+    background-color: black;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.boxy-wrapper {
+    empty-cells: show;
+}
+
+.boxy-wrapper .top-left1 {
+    width: 20px;
+    height: 17px;
+    padding: 0;
+    background: url('/img/reg_v3/reg_boxy_nw1.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_nw1.png');
+}
+
+.boxy-wrapper .top-left2 {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: url('/img/reg_v3/reg_boxy_nw2.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_nw2.png');
+}
+
+.boxy-wrapper .top-right1 {
+    width: 20px;
+    height: 17px;
+    padding: 0;
+    background: url('/img/reg_v3/reg_boxy_ne1.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_ne1.png');
+}
+
+.boxy-wrapper .top-right2 {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: url('/img/reg_v3/reg_boxy_ne2.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_ne2.png');
+}
+
+.boxy-wrapper .bottom-right {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: url('/img/reg_v3/reg_boxy_se.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_se.png');
+}
+
+.boxy-wrapper .bottom-left {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: url('/img/reg_v3/reg_boxy_sw.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_sw.png');
+}
+
+.boxy-wrapper .tbar-left {
+    width: 20px;
+    height: 32px;
+    padding: 0;
+    background: url('/img/reg_v3/reg_boxy_tw.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_tw.png');
+}
+
+.boxy-wrapper .tbar-right {
+    width: 20px;
+    height: 32px;
+    padding: 0;
+    background: url('/img/reg_v3/reg_boxy_te.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_te.png');
+}
+
+.boxy-wrapper .top1 {
+    height: 17px;
+    background: url('/img/reg_v3/reg_boxy_n1.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_n1.png', sizingMethod='scale');
+}
+
+.boxy-wrapper .top2 {
+    height: 20px;
+    background: url('/img/reg_v3/reg_boxy_n2.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_n2.png', sizingMethod='scale');
+}
+
+.boxy-wrapper .tbar {
+    background: url('/img/reg_v3/reg_boxy_t.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_t.png', sizingMethod='scale');
+}
+
+.boxy-wrapper .bottom {
+    background: url('/img/reg_v3/reg_boxy_s.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_s.png', sizingMethod='scale');
+}
+
+.boxy-wrapper .left {
+    background: url('/img/reg_v3/reg_boxy_w.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_w.png', sizingMethod='scale');
+}
+
+.boxy-wrapper .right {
+    background: url('/img/reg_v3/reg_boxy_e.png');
+    #background: none;
+    #filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_e.png', sizingMethod='scale');
+}
+
+.boxy-wrapper .title-bar {
+    padding: 0 0 5px 5px;
+    position: relative;
+}
+
+.boxy-wrapper .title-bar.dragging {
+    cursor: move;
+}
+
+.boxy-wrapper .title-bar h2 {
+    font-size: 14px;
+    color: #666;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+.boxy-wrapper .title-bar .close {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.boxy-inner {
+    padding: 0;
+    background-color: #FFF;
+}
+
+.boxy-wrapper .question {
+    width: 350px;
+    min-height: 200px;
+    #height: auto !important;
+    #height: 200px;
+    line-height: 170%;
+    font-size: 12px;
+    background-color: #FFF;
+}
+
+.boxy-wrapper .answers {
+    display: block;
+    text-align: right;
+    height: 25px;
+    padding: 0 15px 15px 15px;
+    margin: 0;
+}
+
+.boxy-wrapper .answers input {
+    padding: 0px 6px;
+}
+
+.boxy-wrapper .question .boxy-input-text {
+    padding: 2px 6px;
+    height: 16px;
+}
+
+.boxy-wrapper .question .boxy-input-btn {
+    padding: 0px 6px;
+}
+
+.mid_content {
+    overflow: auto;
+    overflow-x: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+.boxy_question {
+    padding: 15px 15px 0 15px;
+    #height: auto !important;
+    #height: 200px;
+}
+
+#pop_question {
+    font-size: 14px;
+    color: #666;
+}

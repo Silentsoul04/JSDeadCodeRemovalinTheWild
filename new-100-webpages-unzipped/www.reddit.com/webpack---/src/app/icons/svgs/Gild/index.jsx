@@ -1,0 +1,1 @@
+No Content: webpack:///./src/app/icons/svgs/Gild/index.jsx

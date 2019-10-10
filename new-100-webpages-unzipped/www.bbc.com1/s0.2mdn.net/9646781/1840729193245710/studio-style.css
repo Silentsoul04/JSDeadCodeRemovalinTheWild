@@ -1,0 +1,135 @@
+.click {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    top: 0px;
+}
+
+.background {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(30, 30, 30);
+}
+
+.networkShapesHolder {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(255, 213, 47);
+}
+
+.shapes {
+    position: absolute;
+    width: 468px;
+    height: 239px;
+    left: -84px;
+    top: -102px;
+}
+
+.shapeGroup1 {
+    position: absolute;
+    width: 202px;
+    height: 190px;
+    left: 0px;
+    top: 0px;
+}
+
+.shapeGroup2 {
+    position: absolute;
+    width: 87px;
+    height: 83px;
+    left: 115px;
+    top: 107px;
+}
+
+.shape4_container {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 64px;
+    top: 60px;
+    background: transparent;
+}
+
+.shape3_container {
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    left: 0px;
+    top: 0px;
+    background: transparent;
+}
+
+.shape1_container {
+    position: absolute;
+    width: 154px;
+    height: 120px;
+    left: 0px;
+    top: 0px;
+    background: transparent;
+}
+
+.shape2_container {
+    position: absolute;
+    width: 108px;
+    height: 104px;
+    left: 360px;
+    top: 135px;
+    background: transparent;
+}
+
+.copyContainer {
+    position: absolute;
+    width: 299px;
+    height: 250px;
+    left: 1px;
+    top: 0px;
+    background: url(26.svg);
+    background-repeat: no-repeat;
+    background-size: 299px, 250px;
+}
+
+.productImage {
+    position: absolute;
+    width: 66px;
+    height: 130px;
+    left: 152px;
+    top: 22px;
+    background: url(50.svg);
+    background-repeat: no-repeat;
+    background-size: 66px, 130px;
+}
+
+.cta {
+    position: absolute;
+    width: 114px;
+    height: 39px;
+    left: 13px;
+    top: 191px;
+    background: url(36.svg);
+    background-repeat: no-repeat;
+    background-size: 114px, 39px;
+}
+
+.logo {
+    position: absolute;
+    width: 64px;
+    height: 30px;
+    left: 223px;
+    top: 207px;
+}
+
+.fallback {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;
+}

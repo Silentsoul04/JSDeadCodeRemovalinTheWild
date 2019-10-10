@@ -1,0 +1,53 @@
+var nunjucks = require("nunjucks/browser/nunjucks-slim"); var env; if (!nunjucks.currentEnv){ env = nunjucks.currentEnv = new nunjucks.Environment([], undefined); } else { env = nunjucks.currentEnv; } var dependencies = nunjucks.webpackDependencies ||
+(nunjucks.webpackDependencies = {}); var shim = require("/usr/lib/node_modules/@buzzfeed/fe-build-tools/node_modules/@buzzfeed/nunjucks-loader/runtime-shim"); (function() {(nunjucks.nunjucksPrecompiled = nunjucks.nunjucksPrecompiled || {})["app/static/components/homepage/ads/_feed-card-ad-share.html"]
+= (function() { function root(env, context, frame, runtime, cb) { var lineno = null; var colno = null; var output = ""; try { var parentTemplate = null; output += "\n
+<div class=\ "clearfix xs-relative card-share--right\" data-bfa=\ "@l:Share;\">\n
+    <div class=\ "action-bar-desktop xs-inline-block\" data-module=\ "action-bar-desktop\">\n
+        <script type=\ "text/x-config\">\n {\n \"position\": \"top\",\n \"fAd\": \"1\",\n \"cardId\": "; output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "cardId"), env.opts.autoescape); output += "\n }\n </script>\n "; frame = frame.push(); var t_3 = runtime.contextOrFrameLookup(context,
+        frame, "platforms"); if(t_3) {var t_2 = t_3.length; for(var t_1=0; t_1 < t_3.length; t_1++) { var t_4=t _3[t_1]; frame.set( "platform", t_4); frame.set( "loop.index", t_1 + 1); frame.set( "loop.index0", t_1); frame.set( "loop.revindex", t_2 -
+            t_1); frame.set( "loop.revindex0", t_2 - t_1 - 1); frame.set( "loop.first", t_1===0 ); frame.set( "loop.last", t_1===t _2 - 1); frame.set( "loop.length", t_2); output +="\n          <div class=\" action-bar__item action-bar-- ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name "), env.opts.autoescape);
+output += " js-action-bar-- ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name "), env.opts.autoescape);
+output += "\ ">\n            <a class=\"xs-mr1 button button--transparent button--small button--icon ";
+if(runtime.contextOrFrameLookup(context, frame, "isMore ")) {
+output += "link-gray ";
+;
+}
+else {
+output += "button-- ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name "), env.opts.autoescape);
+;
+}
+output += "\ "\n               "; if(runtime.memberLookup((t_4), "target")) { output +="target=\" ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"target "), env.opts.autoescape);
+output += "\ ""; ; } output +="\n               href=\" ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"shareUrl "), env.opts.autoescape);
+output += "\ "\n               title=\"Share this on ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name "), env.opts.autoescape);
+output += "\ "\n               data-bfa-network=\" ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name "), env.opts.autoescape);
+output += "\ "\n               data-bfa=\"@a:click:feed-module-share-sheet; @d: ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name "), env.opts.autoescape);
+output += "; @o:{dimension2: ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"id "), env.opts.autoescape);
+output += ",dimension3: ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"id "), env.opts.autoescape);
+output += ",dimension4: ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"contentTitle "), env.opts.autoescape);
+if(runtime.contextOrFrameLookup(context, frame, "videoSrc ")) {
+output += ",dimension6: ";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "videoSrc "), env.opts.autoescape);
+;
+}
+output += "\ "\n               data-type=\"sharing-button\ "\n                "; output +=r untime.suppressValue(env.getFilter( "safe").call(context, runtime.memberLookup((t_4), "anchorAttributes")), env.opts.autoescape); output +=">\n                <svg>\n                    <title>Share on "
+            ; output +=r untime.suppressValue(runtime.memberLookup((t_4), "name"), env.opts.autoescape); output +="</title>\n                    Share on " ; output +=r untime.suppressValue(runtime.memberLookup((t_4), "name"), env.opts.autoescape); output
+            +=" " ; output +="\n                    <use xlink:href=\" # ";
+output += runtime.suppressValue(runtime.memberLookup((t_4),"name "), env.opts.autoescape);
+output += "\ "></use>\n                </svg>\n                "; if(runtime.contextOrFrameLookup(context, frame, "isMore")) { output +=r untime.suppressValue(runtime.memberLookup((t_4), "name"), env.opts.autoescape); ; } else { output +=r untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context,
+            frame, "i18n")), "SHARE"), env.opts.autoescape); ; } output +="\n            </a>\n          </div>\n        " ; ; } } frame=f rame.pop(); output +="\n    </div>\n    <div class=\" xs-inline-block xs-relative action-bar__item action-bar--more
+            js-action-bar--more js-unsupported\ " data-module=\"action-bar-more\ ">\n        <script type=\"text/x-config\ ">\n          {\n              \"position\ ": \"more\ ",\n              \"fAd\ ": \"1\ ",\n              \"cardId\ ": "; output +=r
+            untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "cardId"), env.opts.autoescape); output +="\n          }\n        </script>\n        <a href=\" javascript:;\ " data-type=\"more-button\ " class=\"more-button\ " data-bfa=\"@a:open-share-sheet;\
+            ">\n            <svg class=\"xs-relative share-icon\ " width=\"512\ " height=\"512\ " viewBox=\"0 0 512 512\ " >\n                <title>Share on</title>\n                Share on "; output +="\n                <use xlink:href=\" #share-more-icon\
+            "></use>\n            </svg>\n        </a>\n    </div>\n</div>\n"; if(parentTemplate) { parentTemplate.rootRenderFunc(env, context, frame, runtime, cb); } else { cb(null, output); } ; } catch (e) { cb(runtime.handleError(e, lineno, colno)); } } return { root: root }; })(); })(); module.exports=s him(nunjucks,
+            env, nunjucks.nunjucksPrecompiled[ "app/static/components/homepage/ads/_feed-card-ad-share.html"] , dependencies)

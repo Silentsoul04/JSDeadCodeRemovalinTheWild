@@ -1,0 +1,529 @@
+.click {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    left: 15px;
+    top: 291px;
+    cursor: pointer;
+    background: url(369.svg);
+    background-repeat: no-repeat;
+    background-size: 7px, 7px;
+}
+
+.click_container {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    top: 0px;
+}
+
+.bg {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.sliderContainer {
+    position: absolute;
+    width: 268px;
+    height: 96px;
+    left: 18px;
+    top: 93px;
+}
+
+.slider {
+    position: absolute;
+    width: 268px;
+    height: 96px;
+    left: 0px;
+    top: 0px;
+}
+
+.slide {
+    position: absolute;
+    width: 268px;
+    height: 96px;
+    left: 0px;
+    top: 0px;
+}
+
+.car_image {
+    position: absolute;
+    width: 180px;
+    height: 96px;
+    left: 88px;
+    top: 0px;
+    background: url(376.svg);
+    background-repeat: no-repeat;
+    background-size: 180px, 96px;
+}
+
+.car_title {
+    position: absolute;
+    width: 151px;
+    height: 88px;
+    left: 0px;
+    top: 5px;
+    letter-spacing: -0.001em;
+    text-align: left;
+    font-size: 30px;
+    line-height: 36px;
+    color: rgba(0, 30, 80, 1);
+    white-space: pre-wrap;
+    font-family: 'Volkswagen Head Bold';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cta_container {
+    position: absolute;
+    width: 78px;
+    height: 10px;
+    left: 16px;
+    top: 199px;
+}
+
+.cta {
+    position: absolute;
+    width: 155px;
+    height: 30px;
+    left: 0px;
+    top: -9px;
+    letter-spacing: -0.001em;
+    text-align: left;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(0, 30, 80, 1);
+    white-space: pre-wrap;
+    font-family: 'Volkswagen Head Regular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    position: absolute;
+    width: 259px;
+    height: 17px;
+    left: 16px;
+    top: 14px;
+}
+
+.mainTitle {
+    position: absolute;
+    width: 275px;
+    height: 34px;
+    left: 1px;
+    top: -14px;
+    letter-spacing: -0.001em;
+    text-align: left;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(0, 30, 80, 1);
+    white-space: pre-wrap;
+    font-family: 'Volkswagen Head Bold';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo_container {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 16px;
+    top: 138px;
+    background: transparent;
+}
+
+.logoRetina_container {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 16px;
+    top: 125px;
+    background: transparent;
+}
+
+.draggable {
+    position: absolute;
+    width: 300px;
+    height: 84px;
+    left: 0px;
+    top: 105px;
+    background: url(516.svg);
+    background-repeat: no-repeat;
+    background-size: 300px, 84px;
+}
+
+.form {
+    position: absolute;
+    width: 266px;
+    height: 51px;
+    left: 16px;
+    top: 42px;
+}
+
+.person {
+    position: absolute;
+    width: 121px;
+    height: 34px;
+    left: 0px;
+    top: 17px;
+}
+
+.person_bg_container {
+    position: absolute;
+    width: 121px;
+    height: 34px;
+    left: 0px;
+    top: 0px;
+    background: transparent;
+}
+
+.person_minus {
+    position: absolute;
+    width: 31px;
+    height: 34px;
+    left: 0px;
+    top: 0px;
+}
+
+.person_minus_bg {
+    position: absolute;
+    width: 31px;
+    height: 34px;
+    left: 0px;
+    top: 0px;
+    background: url(540.svg);
+    background-repeat: no-repeat;
+    background-size: 31px, 34px;
+}
+
+.person_minus_icon_container {
+    position: absolute;
+    width: 13px;
+    height: 3px;
+    left: 9px;
+    top: 17px;
+    background: transparent;
+}
+
+.person_plus {
+    position: absolute;
+    width: 31px;
+    height: 34px;
+    left: 90px;
+    top: 0px;
+}
+
+.person_plus_bg {
+    position: absolute;
+    width: 31px;
+    height: 34px;
+    left: 0px;
+    top: 0px;
+    background: url(541.svg);
+    background-repeat: no-repeat;
+    background-size: 31px, 34px;
+}
+
+.person_plus_icon_container {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: 9px;
+    top: 11px;
+    background: transparent;
+}
+
+.person_icons {
+    position: absolute;
+    width: 55px;
+    height: 27px;
+    left: 33px;
+    top: 4px;
+}
+
+.person_shape_container {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 7px;
+    top: 0px;
+    background: transparent;
+}
+
+.person_shape_1_container {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 21px;
+    top: 0px;
+    background: transparent;
+}
+
+.person_shape_2_container {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 35px;
+    top: 0px;
+    background: transparent;
+}
+
+.person_shape_6_container {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 0px;
+    top: 15px;
+    background: transparent;
+}
+
+.person_shape_5_container {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 14px;
+    top: 15px;
+    background: transparent;
+}
+
+.person_shape_4_container {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 28px;
+    top: 15px;
+    background: transparent;
+}
+
+.person_shape_3_container {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 42px;
+    top: 15px;
+    background: transparent;
+}
+
+.person_container_copy {
+    position: absolute;
+    width: 142px;
+    height: 25px;
+    left: 0px;
+    top: -2px;
+    letter-spacing: -0.001em;
+    text-align: left;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 30, 80, 1);
+    white-space: pre-wrap;
+    font-family: 'Volkswagen Head Regular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body {
+    position: absolute;
+    width: 121px;
+    height: 34px;
+    left: 145px;
+    top: 17px;
+}
+
+.body_bg_container {
+    position: absolute;
+    width: 121px;
+    height: 34px;
+    left: 0px;
+    top: 0px;
+    background: transparent;
+}
+
+.body_next {
+    position: absolute;
+    width: 31px;
+    height: 34px;
+    left: 90px;
+    top: 0px;
+}
+
+.body_next_bg {
+    position: absolute;
+    width: 31px;
+    height: 34px;
+    left: 0px;
+    top: 0px;
+    background: url(551.svg);
+    background-repeat: no-repeat;
+    background-size: 31px, 34px;
+}
+
+.body_next_arrow_container {
+    position: absolute;
+    width: 11px;
+    height: 14px;
+    left: 11px;
+    top: 10px;
+    background: transparent;
+}
+
+.body_previous {
+    position: absolute;
+    width: 31px;
+    height: 34px;
+    left: 0px;
+    top: 0px;
+}
+
+.body_previous_bg {
+    position: absolute;
+    width: 31px;
+    height: 34px;
+    left: 0px;
+    top: 0px;
+    background: url(550.svg);
+    background-repeat: no-repeat;
+    background-size: 31px, 34px;
+}
+
+.body_previous_arrow_container {
+    position: absolute;
+    width: 11px;
+    height: 14px;
+    left: 11px;
+    top: 10px;
+    background: transparent;
+}
+
+.body_icon_copy1 {
+    position: absolute;
+    width: 24px;
+    height: 10px;
+    left: 49px;
+    top: 11px;
+}
+
+.body_copy {
+    position: absolute;
+    width: 60px;
+    height: 12px;
+    left: -18px;
+    top: -2px;
+    letter-spacing: -0.001em;
+    text-align: center;
+    font-size: 13px;
+    line-height: 15px;
+    color: rgba(0, 30, 80, 1);
+    white-space: pre-wrap;
+    font-family: 'Volkswagen Head Bold';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body_container_copy {
+    position: absolute;
+    width: 142px;
+    height: 27px;
+    left: 146px;
+    top: -2px;
+    letter-spacing: -0.001em;
+    text-align: left;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 30, 80, 1);
+    white-space: pre-wrap;
+    font-family: 'Volkswagen Head Regular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.previous {
+    position: absolute;
+    width: 36px;
+    height: 48px;
+    left: 225px;
+    top: 189px;
+}
+
+.previous_bg {
+    position: absolute;
+    width: 36px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+    background: url(429.svg);
+    background-repeat: no-repeat;
+    background-size: 36px, 48px;
+}
+
+.previous_arrow_container {
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    left: 14px;
+    top: 14px;
+    background: transparent;
+}
+
+.next {
+    position: absolute;
+    width: 36px;
+    height: 48px;
+    left: 261px;
+    top: 189px;
+}
+
+.next_bg {
+    position: absolute;
+    width: 36px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+    background: url(433.svg);
+    background-repeat: no-repeat;
+    background-size: 36px, 48px;
+}
+
+.next_arrow_container {
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    left: 7px;
+    top: 14px;
+    background: transparent;
+}
+
+.safeZone {
+    position: absolute;
+    width: 266px;
+    height: 217px;
+    left: 16px;
+    top: 16px;
+    background: url(523.svg);
+    background-repeat: no-repeat;
+    background-size: 266px, 217px;
+}
+
+.fallback {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.rectangle_300x250 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    top: 0px;
+    background-repeat: no-repeat;
+    background-size: 300px, 250px;
+}

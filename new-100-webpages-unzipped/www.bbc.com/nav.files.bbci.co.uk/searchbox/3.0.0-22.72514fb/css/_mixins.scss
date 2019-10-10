@@ -1,0 +1,58 @@
+@mixin inputTheme ($orb-color-form-bg) {
+    .orb-nav-search {
+      form {
+        div {
+          background: $orb-color-form-bg;
+        }
+      }
+    }
+    // this covers orb and orbits difference in the layout
+    &.orb-nav-active, .orb-nav-active {
+      form {
+        div {
+          background: #e4e4e4;
+        }
+      }
+    }
+  @include iconTheme(dark);
+}
+
+// only for screens < 600
+@mixin borderTheme ($border-color, $border-fallback:"") {
+  .orb-nav-search {
+      a {
+          border-color: #{$border-fallback};
+          border-color: $border-color;
+      }
+  }
+ &.orb-nav-active, .orb-nav-active {
+   .orb-nav-search {
+     a {
+        border-right-color: #cccccc;
+     }
+   }
+ }
+}
+
+// only for screens < 600
+@mixin iconTheme ($icon) {
+  .orb-nav-search {
+      .orb-search__button {
+        @if ($ie8) {
+          background-image: url("../img/orb-search-" + $icon + ".png");
+        } @else {
+          background-image: url("../img/gel-icon-search-" + $icon + ".svg");
+        }
+      }
+  }
+  // this covers orb and orbits difference in the layout
+  &.orb-nav-active, .orb-nav-active {
+      .orb-search__button {
+        @if ($ie8) {
+          background-image: url("../img/orb-search-dark.png");
+        } @else {
+          background-image: url("../img/gel-icon-search-dark.svg");
+        }
+      }
+    }
+}

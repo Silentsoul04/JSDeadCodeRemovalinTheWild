@@ -1,0 +1,362 @@
+.mobile-upsell {
+    display: none;
+    font-family: sans-serif;
+    font-size: 15px
+}
+
+.mobile-upsell.banner {
+    background-color: #ffffff;
+    color: #000;
+    max-height: 80px;
+    padding: 10px;
+    position: relative;
+    z-index: 1000
+}
+
+.mobile-upsell.banner .upsell-banner-body {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px
+}
+
+.mobile-upsell.banner .upsell-banner-body .accept {
+    -ms-flex-item-align: center;
+    align-self: center;
+    background-color: #0277bd;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: .75rem
+}
+
+.mobile-upsell.banner .ad-background-rating {
+    background: url(/images/G/01/imdb/images/mobile/AppUpsell/stars-grey-2989920164._V_.png) no-repeat;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    height: 12px;
+    position: absolute;
+    top: 25px;
+    width: 70px
+}
+
+.mobile-upsell.banner .ad-rating {
+    background: url(/images/G/01/imdb/images/mobile/AppUpsell/stars-yellow-3481091897._V_.png) no-repeat;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    height: 12px;
+    position: absolute;
+    top: 0px;
+    width: 60px
+}
+
+.mobile-upsell.banner label {
+    font-size: 11px
+}
+
+.mobile-upsell.banner img.ad-logo {
+    margin-left: 8px;
+    width: 60px
+}
+
+@media all and (min-width: 360px) {
+    .mobile-upsell.banner .btn-default.accept {
+        background-color: #0277bd;
+        color: #ffffff;
+        margin-top: -16px;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        font-size: 16px;
+        width: 45vw
+    }
+    .mobile-upsell.banner .ad-title {
+        display: inline-block;
+        float: left;
+        font-size: 14px;
+        font-weight: bold;
+        width: 44%;
+        position: absolute;
+        top: 5px
+    }
+    .mobile-upsell.banner .ad-price {
+        color: #7e7e7e;
+        display: inline-block;
+        float: left;
+        font-size: 13px;
+        position: absolute;
+        top: 40px;
+        width: 44%
+    }
+}
+
+@media all and (max-width: 360px) {
+    .mobile-upsell.banner .btn-default.accept {
+        background-color: #0277bd;
+        color: #ffffff;
+        position: absolute;
+        right: 0px;
+        margin-top: -16px;
+        top: 50%;
+        font-size: 12px;
+        font-size: 4vw
+    }
+    .mobile-upsell.banner .ad-title {
+        display: inline-block;
+        float: left;
+        font-size: 12px;
+        font-size: 4vw;
+        font-weight: bold;
+        width: 44%;
+        position: absolute;
+        top: 5px
+    }
+    .mobile-upsell.banner .ad-price {
+        color: #7e7e7e;
+        display: inline-block;
+        float: left;
+        font-size: 9px;
+        font-size: 3vw;
+        position: absolute;
+        top: 40px;
+        width: 44%
+    }
+}
+
+.mobile-upsell.banner .btn-default.dismiss {
+    background: none;
+    border: none;
+    color: #bbb;
+    float: left;
+    font-size: 3em;
+    margin-right: 8px;
+    padding: 0
+}
+
+.mobile-upsell.banner .ad-close {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.mobile-upsell.interstitial {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(/images/G/01/imdb/images/mobile/AppUpsell/appUpsellBackground-3328019906._V_.png);
+    display: none;
+    color: #ffffff;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 2500;
+    width: 100%;
+    height: 100%
+}
+
+.mobile-upsell.interstitial .body {
+    width: 80%;
+    margin: 0 auto
+}
+
+.mobile-upsell.interstitial .text-title {
+    font-size: x-large;
+    line-height: normal;
+    line-height: 8vmin;
+    margin: 5%;
+    text-align: center
+}
+
+.mobile-upsell.interstitial .image-description {
+    background-image: url(/images/G/01/imdb/images/mobile/AppUpsell/appUpsellNexus-3653148663._V_.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 99999px;
+    width: 80%;
+    margin: auto
+}
+
+.mobile-upsell.interstitial .google-badge {
+    background-image: url(/images/G/01/imdb/images/mobile/AppUpsell/googlePlayBadge-1576164323._V_.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 48%;
+    max-width: 200px;
+    margin: 15% auto -10% auto
+}
+
+.mobile-upsell.interstitial .btn-default.accept {
+    background-color: #0277bd;
+    border-color: #0277bd;
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    letter-spacing: 0.3vw;
+    width: 80%;
+    max-width: 480px;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-top: 2vmin
+}
+
+.mobile-upsell.interstitial .btn-default.dismiss {
+    background: url(/images/G/01/imdb/images/mobile/AppUpsell/appUpsellClose-3234350132._V_.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 5%;
+    width: 5%;
+    height: 5vmin;
+    width: 5vmin;
+    margin: 5% 0px 0px 5%;
+    border: none
+}
+
+.mobile-upsell.interstitial .gradient {
+    background-image: url(/images/G/01/imdb/images/mobile/AppUpsell/appUpsellGradient-113293068._V_.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+@media all and (orientation: landscape) {
+    .mobile-upsell.interstitial .information {
+        float: left;
+        width: 40%;
+        height: 100%;
+        position: absolute
+    }
+    .mobile-upsell.interstitial .google-badge {
+        width: 45%
+    }
+    .mobile-upsell.interstitial .image-description {
+        width: 50%;
+        float: right;
+        margin-right: -5%
+    }
+    .mobile-upsell.interstitial .btn-default.accept {
+        width: 30%;
+        margin: 0px 0px 2% 15%;
+        padding-top: 1%;
+        padding-top: 1.5vmin
+    }
+}
+
+@media all and (min-height: 850px) and (orientation: portrait) {
+    .mobile-upsell.interstitial .information {
+        width: 80%;
+        height: 50%;
+        position: absolute
+    }
+    .mobile-upsell.interstitial .text-title {
+        font-size: 40px;
+        font-size: 5vw;
+        text-align: center
+    }
+    .mobile-upsell.interstitial .image-description {
+        height: 100%;
+        width: 80%;
+        max-width: none;
+        margin: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0
+    }
+    .mobile-upsell.interstitial .image-frame {
+        height: 100%;
+        width: 80%;
+        padding-bottom: 100%;
+        margin: 50% auto auto auto;
+        position: absolute;
+        left: 0;
+        right: 0
+    }
+    .mobile-upsell.interstitial .google-badge {
+        height: 100%;
+        width: 48%;
+        max-width: none;
+        margin: 40% auto auto auto;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0
+    }
+    .mobile-upsell.interstitial .btn-default.accept {
+        font-size: 30px;
+        font-size: 4vw;
+        max-width: none;
+        padding-top: 1.5%;
+        padding-top: 1.5vmin
+    }
+}
+
+@media all and (min-height: 1900px) and (orientation: portrait) {
+    .mobile-upsell.interstitial .text-title {
+        font-size: 80px;
+        font-size: 5vw
+    }
+    .mobile-upsell.interstitial .btn-default.accept {
+        font-size: 50px;
+        font-size: 4vw
+    }
+}
+
+@media all and (min-height: 750px) and (orientation: landscape) {
+    .mobile-upsell.interstitial .information {
+        float: left;
+        width: 40%;
+        height: 100%;
+        position: absolute
+    }
+    .mobile-upsell.interstitial .text-title {
+        font-size: 40px;
+        font-size: 5vmin;
+        line-height: 150%;
+        line-height: 8vmin
+    }
+    .mobile-upsell.interstitial .google-badge {
+        height: 100%;
+        width: 45%;
+        max-width: none;
+        margin: 75% auto auto auto;
+        margin: 45vmin auto auto auto;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0
+    }
+    .mobile-upsell.interstitial .btn-default.accept {
+        width: 30%;
+        max-width: none;
+        font-size: 25px;
+        font-size: 2vw;
+        padding-top: 1.5%;
+        padding-top: 1.5vmin
+    }
+}
+
+@media all and (min-height: 1500px) and (orientation: landscape) {
+    .mobile-upsell.interstitial .text-title {
+        font-size: 80px;
+        font-size: 5vmin
+    }
+    .mobile-upsell.interstitial .btn-default.accept {
+        font-size: 40px;
+        font-size: 2vw
+    }
+}

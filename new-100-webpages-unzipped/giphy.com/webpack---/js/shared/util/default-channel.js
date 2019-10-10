@@ -1,0 +1,35 @@
+const DEFAULT_CHANNEL = {
+    id: null,
+    slug: '',
+    display_name: '',
+    description: '',
+    is_private: false,
+    parent: null,
+    type: 'community',
+    user: {
+        id: null,
+        username: null,
+        about_bio: '',
+        banner_image: null,
+        avatar: '',
+        display_name: '',
+        twitter: '',
+        facebook: '',
+        instagram: '',
+        is_public: true,
+        primary_site: null,
+        tumblr_site: null,
+    },
+    featured_gif: {
+        id: null,
+        image_url: null,
+    },
+    tags: [],
+    syncable_tags: [],
+    live_since_datetime: null,
+    live_until_datetime: null,
+    banner_image: null,
+    meta_description: null,
+}
+
+export default DEFAULT_CHANNEL

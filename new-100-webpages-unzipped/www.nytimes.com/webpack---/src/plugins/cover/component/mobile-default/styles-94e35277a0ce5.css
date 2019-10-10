@@ -1,0 +1,16 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css"), undefined);
+// module
+exports.push([module.id, ".poster-2C8ENWhQ{background-size:cover;background-position:50%}", ""]);
+// exports
+exports.locals= {
+    "container": "container-1Dg9nK6E", "poster": "poster-2C8ENWhQ " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["poster"] + "", "playIcon": "playIcon-2SRnWyz5 " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["playIcon"] + "", "centerIconCircle": "centerIconCircle-1vlfgjC2 " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["centerIconCircle"] + "", "centerIcon--vhs-xxs": "centerIcon--vhs-xxs-27xVtjas " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["centerIcon--vhs-xxs"] + "", "duration": "duration-16R4PCah " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["duration"] + "", "headline": "headline-3AqiZbHO " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["headline"] + ""
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/cover/component/mobile-default/styles.css
+// module id = 446
+// module chunks = 1

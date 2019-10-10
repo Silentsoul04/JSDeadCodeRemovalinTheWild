@@ -1,0 +1,12 @@
+exports=module.exports=require("../../../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!../../welcome.css"), undefined);
+exports.i(require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!./button.css"), undefined);
+// module
+exports.push([module.id, "._3YLVfsnRmpUZHZzEyojh3Q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin:45px 0}.j3ZkkES3lfSM8rG_fCRrf{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;margin-right:60px}._12zoHzadp77m44B87JOr5Q{margin:0 30px;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0}", ""]);
+// exports
+exports.locals= {
+    "welcome": "\"../../welcome.css\"", "subtitle": "" + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!../../welcome.css").locals["subtitle"] + "", "text": "" + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!../../welcome.css").locals["text"] + "", "button": "\"./button.css\"", "iconPhoto": "_2W0FaZ53ehiVwL3RNRHXMi _12zoHzadp77m44B87JOr5Q " + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!./button.css").locals["iconPhoto"] + "", "iconDrag": "_3dOyPW99sfW8iaCJ2t6NEG _12zoHzadp77m44B87JOr5Q " + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!./button.css").locals["iconDrag"] + "", "iconBrowse": "_1blnHn6I63FTlqCgpUl7-Y _12zoHzadp77m44B87JOr5Q " + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!./button.css").locals["iconBrowse"] + "", "iconVideo": "_2huPu7vTYZQM8qbB-4t_dh _12zoHzadp77m44B87JOr5Q " + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!./button.css").locals["iconVideo"] + "", "container": "_3YLVfsnRmpUZHZzEyojh3Q", "copyContainer": "j3ZkkES3lfSM8rG_fCRrf", "icon": "_12zoHzadp77m44B87JOr5Q"
+}
+
+;

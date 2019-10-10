@@ -1,0 +1,12 @@
+exports=module.exports=require("../../../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!../../welcome.css"), undefined);
+exports.i(require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!./button.css"), undefined);
+// module
+exports.push([module.id, "._4V-m8sUc4D1gdt2LQV9b9{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;text-align:center;margin:25px 35px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}._1O2XHZWTWDmSUUXCjHHi9o{margin-bottom:10px}", ""]);
+// exports
+exports.locals= {
+    "welcome": "\"../../welcome.css\"", "subtitle": "" + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!../../welcome.css").locals["subtitle"] + "", "text": "" + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!../../welcome.css").locals["text"] + "", "button": "\"./button.css\"", "iconPhoto": "jSTAGUzRgwN_FTep7C6TF _1O2XHZWTWDmSUUXCjHHi9o " + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!./button.css").locals["iconPhoto"] + "", "iconVideo": "_183SF2vxYvHDZkJZDTN6u3 _1O2XHZWTWDmSUUXCjHHi9o " + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!./button.css").locals["iconVideo"] + "", "container": "_4V-m8sUc4D1gdt2LQV9b9", "icon": "_1O2XHZWTWDmSUUXCjHHi9o"
+}
+
+;

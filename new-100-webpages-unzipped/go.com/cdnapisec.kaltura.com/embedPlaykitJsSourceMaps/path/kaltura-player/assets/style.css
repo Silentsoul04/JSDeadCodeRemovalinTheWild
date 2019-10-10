@@ -1,0 +1,10 @@
+exports=module.exports=require("../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+// module
+exports.push([module.id, ".kaltura-player-container {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  background-color: #000;\n  outline: none;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-tap-highlight-color: transparent;\n}\n", ""]);
+// exports
+//////////////////
+// WEBPACK FOOTER
+// ../node_modules/css-loader!./assets/style.css
+// module id = 372
+// module chunks = 0

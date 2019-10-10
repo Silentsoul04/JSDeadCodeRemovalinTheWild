@@ -1,0 +1,1 @@
+No Content: webpack:///./src/app/components/MenuIcon/index.jsx

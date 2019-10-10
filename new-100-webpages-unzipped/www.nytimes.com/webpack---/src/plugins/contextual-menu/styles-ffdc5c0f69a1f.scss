@@ -1,0 +1,16 @@
+exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".vhs-plugin-contextual-menu{position:absolute;top:0;left:0;z-index:80;background-color:#fff;width:230px;-webkit-border-radius:5px;-khtml-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;margin:0;padding:0;overflow:hidden;-webkit-box-shadow:0 5px 14px rgba(0,0,0,.3);-khtml-box-shadow:0 5px 14px rgba(0,0,0,.3);-moz-box-shadow:0 5px 14px rgba(0,0,0,.3);-ms-box-shadow:0 5px 14px rgba(0,0,0,.3);-o-box-shadow:0 5px 14px rgba(0,0,0,.3);box-shadow:0 5px 14px rgba(0,0,0,.3)}.vhs-plugin-contextual-menu li{background:none;list-style-type:none;margin:0;padding:8px 12px;border-bottom:1px solid #eaeaea;color:#b3b3b3;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;cursor:default;font-family:franklin,nyt-franklin,Arial,helvetica,sans-serif;font-size:12px;font-weight:400}.vhs-plugin-contextual-menu li.active{color:gray;cursor:pointer}.vhs-plugin-contextual-menu li.active:hover{color:#000;background-color:#f0f0f0}.vhs-plugin-contextual-menu li.version{font-size:11px;padding:12px}.vhs-plugin-contextual-menu li:last-child{border-bottom:none}", ""]);
+
+// exports
+
+
+
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/plugins/contextual-menu/styles.scss
+// module id = 259
+// module chunks = 5

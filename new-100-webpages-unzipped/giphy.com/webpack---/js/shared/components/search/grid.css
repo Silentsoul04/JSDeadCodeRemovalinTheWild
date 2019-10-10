@@ -1,0 +1,13 @@
+exports=module.exports=require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css"), undefined);
+// module
+exports.push([module.id, "._3Rk-bEWGMEWneVsv7_KwZS{clear:both;position:relative;width:100%}._2yxCGVa7__COsBHmU9N7k1{background:url(\"/static/img/loader-spaceship.gif\") no-repeat bottom;height:50px;width:100%;-webkit-transform:translateZ(0);transform:translateZ(0)}", ""]);
+// exports
+exports.locals= {
+    "gridSpacing": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/grid.css").locals["gridSpacing"] + "", "giphyPurple": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyPurple"] + "", "giphyGreen": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyGreen"] + "", "giphyWhite": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + "", "titleFont": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/fonts.css").locals["titleFont"] + "", "grid": "_3Rk-bEWGMEWneVsv7_KwZS", "loader": "_2yxCGVa7__COsBHmU9N7k1"
+}
+
+;

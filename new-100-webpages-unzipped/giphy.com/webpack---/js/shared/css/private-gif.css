@@ -1,0 +1,11 @@
+exports=module.exports=require("../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+// module
+exports.push([module.id, "._1n7u0O26sWo5Q6wdVn6YYb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;z-index:1;width:100%;height:100%;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:rgba(0,0,0,.5);left:0;top:0}._2TxsiH3_7cFkKKrcqYV21N{color:" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyRed"] + ";font-size:28px}", ""]);
+// exports
+exports.locals= {
+    "colors": "\"shared/css/colors.css\"", "giphyRed": "" + require("-!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyRed"] + "", "privateOverlay": "_1n7u0O26sWo5Q6wdVn6YYb", "privateIcon": "_2TxsiH3_7cFkKKrcqYV21N ss-icon ss-lock"
+}
+
+;

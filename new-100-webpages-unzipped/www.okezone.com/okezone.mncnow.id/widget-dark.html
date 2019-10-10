@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MNC Now</title>
+    <meta name="title" content="MNC Now Movies">
+    <meta name="keywords" content="okezone, layar tancap, mncnow, mnc now, sinetron, now, tonton film, ftv, film indonesia, free, ott, broadcast, mnc">
+    <meta name="description" content="Nonton ratusan film pilihan dari Indonesia, Hollywood dan Asia. Film lepas, series, sinetron, drakor dan animasi hanya di MNC Now">
+    <meta name="google-site-verification" content="MU1SEKOh4hqPEsvAbaq6jq517rVPPMu3oC3gVJGuu7U" />
+    <meta name="author" content="MNCNow.id">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- no cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111351533-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111351533-1');
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        .main-container {
+            width: 100%;
+            height: 622px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            background-color: #1d1d1d;
+        }
+
+        .container {
+            position: relative;
+            width: 81.2px;
+            max-width: 81.2px;
+            margin-right: 2.5px;
+            margin-left: 2.5px;
+            opacity: 0.7;
+        }
+
+        .img-cover {
+            /* width: 81.2px; */
+            width: 100%;
+            height: 100%;
+            /* height: 121.8px; */
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+
+        .img-cover::before {
+            /* background-image: linear-gradient(to bottom, transparent 20%, black 100%);
+    box-shadow: 0px 10px 20px -5px rgba(0,0,0,.8);  */
+            background: rgba(0, 0, 255, 0.5);
+        }
+
+        .img-logo {
+            margin-top: 9.2px;
+            margin-bottom: 5px;
+            width: 102.7px;
+            height: 27.8px;
+        }
+
+        .container-banner {
+            position: relative;
+            width: 260.6px;
+            max-width: 260.6px;
+            margin-right: 2.5px;
+            margin-left: 2.5px;
+            opacity: 0.7;
+        }
+
+        .img-banner {
+            /* position: relative; */
+            width: 100%;
+            /* height: 162.4px; */
+            /* z-index: 1; */
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+
+        .container-banner .img-banner {
+            width: 100%;
+            height: auto;
+        }
+
+        .container-banner .btnplay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            opacity: 1;
+        }
+
+        .btnplay {
+            width: 25px;
+            height: 25px;
+        }
+
+        .btnplay-bottom {
+            width: 25px;
+            height: 25px;
+        }
+
+        .container .img-cover {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container .btnplay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            opacity: 1;
+        }
+
+        .container .btnplay-bottom {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 30%);
+            -ms-transform: translate(-50%, 30%);
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            opacity: 1;
+        }
+
+        .container:hover .btnplay {
+            opacity: 1;
+        }
+
+        .container:hover .btnplay-bottom {
+            opacity: 1;
+        }
+
+        .container-banner:hover .btnplay {
+            opacity: 1;
+        }
+
+        .container:hover {
+            opacity: 1;
+        }
+
+        .container-banner:hover {
+            opacity: 1;
+        }
+
+        @media (min-width:320px) {
+            .container-banner {
+                width: 315px;
+                max-width: 315px;
+            }
+            .container {
+                width: 81px;
+                max-width: 81px;
+                /* height: 90px; */
+                /* max-height: 121.8px;
+        height: 121.8px; */
+            }
+        }
+
+        @media (min-width:480px) {
+            .container-banner {
+                width: 260.6px;
+                max-width: 260.6px;
+            }
+            .container {
+                width: 81px;
+                max-width: 81px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="flex-container">
+            <div><img src="img/group1283/Group-1283.png" class="img-logo"></img>
+            </div>
+        </div>
+        <div class="flex-container">
+            <!-- <a id="link-banner" href="https://mncnow.okezone.com/play/211-di-balik-98"> -->
+            <a id="link-banner" href="https://mncnow.okezone.com/play/6946-preman-pensiun-the-movie" target="_blank">
+                <div class="container-banner">
+                    <div> <img id="movie-banner" src="https://static.mncnow.id/images/vod/e54d516a-547.jpg" class="img-banner"></img>
+                    </div>
+                    <div> <img src="https://okezone.mncnow.id/img/group1283/Ellipse-Play.svg" class="btnplay"></img>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="flex-container">
+            <div class="container">
+                <a id="link-01" href="https://mncnow.okezone.com/play/7011-skakmat-fighting" target="_blank">
+                    <div><img id="movie-01" src="https://static.mncnow.id/images/vod/c74d091e-e67.png" class="img-cover"></div>
+                    <div><img src="https://okezone.mncnow.id/img/group1283/Ellipse-Play.svg" class="btnplay"></div>
+                </a>
+            </div>
+            <div class="container">
+                <a id="link-02" href="https://mncnow.okezone.com/play/6997-shutter" target="_blank">
+                    <div><img id="movie-02" src="https://static.mncnow.id/images/vod/d4141efe-93d.png" class="img-cover"></div>
+                    <div><img src="https://okezone.mncnow.id/img/group1283/Ellipse-Play.svg" class="btnplay"></div>
+                </a>
+            </div>
+            <div class="container">
+                <a id="link-03" href="https://mncnow.okezone.com/play/6996-mood-booster---adegan-pesawat-terbang" target="_blank">
+                    <div><img id="movie-03" src="https://static.mncnow.id/images/vod/165e7b78-3c7.png" class="img-cover"></div>
+                    <div><img src="https://okezone.mncnow.id/img/group1283/Ellipse-Play.svg" class="btnplay"></div>
+                </a>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="container">
+                <a id="link-04" href="https://mncnow.okezone.com/play/7020-tvn" target="_blank">
+                    <div><img id="movie-04" src="https://static.mncnow.id/images/vod/6ef828bb-227.jpg" class="img-cover"></div>
+                    <div><img src="https://okezone.mncnow.id/img/group1283/Ellipse-Play.svg" class="btnplay"></div>
+                </a>
+            </div>
+            <div class="container">
+                <a id="link-05" href="https://mncnow.okezone.com/play/7016-thrill" target="_blank">
+                    <div><img id="movie-05" src="https://static.mncnow.id/images/vod/d80912a2-8b1.jpg" class="img-cover"></div>
+                    <div><img src="https://okezone.mncnow.id/img/group1283/Ellipse-Play.svg" class="btnplay"></div>
+                </a>
+            </div>
+            <div class="container">
+                <a id="link-06" href="https://mncnow.okezone.com/play/7021-zee" target="_blank">
+                    <div><img id="movie-06" src="https://static.mncnow.id/images/vod/5928f19b-448.jpg" class="img-cover"></div>
+                    <div><img src="https://okezone.mncnow.id/img/group1283/Ellipse-Play.svg" class="btnplay"></div>
+                </a>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="container">
+                <a id="link-07" href="https://mncnow.okezone.com/play/7022-the-heirs" target="_blank">
+                    <div><img id="movie-07" src="https://static.mncnow.id/images/vod/f7e4316f-a9e.jpg" class="img-cover"></div>
+                    <div><img src="https://okezone.mncnow.id/img/group1283/Ellipse-Play.svg" class="btnplay"></div>
+                </a>
+            </div>
+            <div class="container">
+                <a id="link-08" href="https://mncnow.okezone.com/play/3125-roman-picisan-eps-1" target="_blank">
+                    <div><img id="movie-08" src="https://static.mncnow.id/images/vod/663d2801-9b3.jpg" class="img-cover"></div>
+                    <div><img src="https://okezone.mncnow.id/img/group1283/Ellipse-Play.svg" class="btnplay"></div>
+                </a>
+            </div>
+            <div class="container">
+                <a id="link-09" href="https://mncnow.okezone.com/play/7023-birth-of-beauty" target="_blank">
+                    <div><img id="movie-09" src="https://static.mncnow.id/images/vod/49224a8a-2e8.jpg" class="img-cover"></div>
+                    <div><img src="https://okezone.mncnow.id/img/group1283/Ellipse-Play.svg" class="btnplay"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // document.getElementById( 'yourcontainer' ).innerHTML = images;
+    // document.getElementById('contact_link').href = 'new url';
+
+    //assign link to okezone
+    document.getElementById('link-banner').href = 'https://mncnow.okezone.com/play/6946-preman-pensiun-the-movie';
+
+    document.getElementById('link-01').href = 'https://mncnow.okezone.com/play/600-me-vs-mami';
+    document.getElementById('link-02').href = 'https://mncnow.okezone.com/play/6986-rompis';
+    document.getElementById('link-03').href = 'https://mncnow.okezone.com/play/606-skakmat';
+
+    document.getElementById('link-04').href = 'https://mncnow.okezone.com/play/456-yakuza-apocalypse';
+    document.getElementById('link-05').href = 'https://mncnow.okezone.com/play/1083-vehicle-19';
+    document.getElementById('link-06').href = 'https://mncnow.okezone.com/play/283-dumb-and-dumber-to';
+
+    document.getElementById('link-07').href = 'https://mncnow.okezone.com/play/355-the-best-of-me';
+    document.getElementById('link-08').href = 'https://mncnow.okezone.com/play/311-shutter-311';
+    document.getElementById('link-09').href = 'https://mncnow.okezone.com/play/794-single-lady';
+
+    // assign image place holder for movie
+    document.getElementById('movie-banner').src = 'https://static.mncnow.id/images/vod/e54d516a-547.jpg';
+
+    document.getElementById('movie-01').src = 'https://static.mncnow.id/images/vod/97b88e2f-14d.jpg';
+    document.getElementById('movie-02').src = 'https://static.mncnow.id/images/vod/a3c9954d-133.jpg';
+    document.getElementById('movie-03').src = 'https://static.mncnow.id/images/vod/f4f537ec-b62.jpg';
+
+    document.getElementById('movie-04').src = 'https://static.mncnow.id/images/vod/add47f94-a7c.jpg';
+    document.getElementById('movie-05').src = 'https://static.mncnow.id/images/vod/77f335c7-ab5.jpg';
+    document.getElementById('movie-06').src = 'https://static.mncnow.id/images/vod/f7bc8af6-1fa.jpg';
+
+    document.getElementById('movie-07').src = 'https://static.mncnow.id/images/vod/872e80fa-e28.jpg';
+    document.getElementById('movie-08').src = 'https://static.mncnow.id/images/vod/5d33a4b3-038.jpg';
+    document.getElementById('movie-09').src = 'https://static.mncnow.id/images/vod/e98c5ff1-3c7.jpg';
+</script>
+
+</html>

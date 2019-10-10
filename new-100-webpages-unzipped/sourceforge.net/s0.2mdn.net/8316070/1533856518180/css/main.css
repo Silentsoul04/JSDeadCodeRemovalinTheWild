@@ -1,0 +1,372 @@
+#background_exit_ad {
+    background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7") 0 0 repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    z-index: 400;
+    border: none;
+}
+
+#background_exit_ad:hover button {
+    background: #145FA9;
+}
+
+#reloader {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 15px;
+    height: 15px;
+    z-index: 500;
+    opacity: 0;
+}
+
+#reloader .restarter {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+}
+
+sup {
+    vertical-align: text-top;
+    font-size: 0.5em;
+    position: absolute;
+    line-height: 1em;
+    top: 0.2em;
+    right: 0px;
+}
+
+body {
+    margin: 0px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.1em;
+}
+
+body,
+body td {
+    font-family: wf_gd_boing_black;
+    font-weight: 400;
+    font-size: 26px;
+    color: #ffffff;
+}
+
+body .sherpa,
+body td.sherpa,
+body td .sherpa,
+body button.sherpa,
+body button .sherpa {
+    font-family: wf_gd_sherpa_bold;
+}
+
+body .boing,
+body td.boing,
+body td .boing,
+body button.boing,
+body button .boing {
+    font-family: wf_gd_boing_black;
+}
+
+.logo {
+    position: absolute;
+    right: 26px;
+    bottom: 26px;
+    width: 84px;
+    height: 18.48px;
+    opacity: 1;
+    z-index: 100;
+}
+
+.logo #gd_logo {
+    fill: white;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.logo #gd_logo path {
+    opacity: 0;
+}
+
+#container_ad {
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+
+#container_ad .full-container {
+    /*
+    	border:1px solid #555;
+*/
+}
+
+.frame-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 250px;
+}
+
+.frame-container .text span {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    float: left;
+    margin-right: 0.26em;
+}
+
+.frame-container .text span:last-child {
+    margin-right: 0;
+}
+
+.frame-container .text span.supered {
+    padding-right: 0.26em;
+}
+
+.frame-container.background .bgimg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 250px;
+}
+
+.frame-container.background .frame-1 {
+    z-index: 1;
+}
+
+.frame-container.background .frame-2 {
+    z-index: 3;
+}
+
+.frame-container.background .frame-3 {
+    z-index: 5;
+}
+
+.frame-container .frame {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.frame-container.middleground {
+    opacity: 0;
+    z-index: 10;
+}
+
+.frame-container.middleground #svg_mg {
+    display: block;
+    margin: 0;
+    width: 300px;
+    height: 250px;
+    fill: #1976D2;
+}
+
+.frame-container.middleground #svg_f2,
+.frame-container.middleground #svg_f3 {
+    visibility: hidden;
+}
+
+.frame-container.middleground .overlay svg {
+    display: block;
+    margin: 0;
+    position: absolute;
+    bottom: 0px;
+    width: 300px;
+    height: 250px;
+    fill: #1976D2;
+}
+
+.frame-container.foreground {
+    z-index: 20;
+}
+
+.frame-container.foreground .textholder {
+    position: absolute;
+    bottom: 14px;
+    left: 26px;
+    width: 266px;
+}
+
+.frame-container.foreground .frame-1 .text span:nth-child(0) {
+    clear: both;
+}
+
+.frame-container.foreground .frame-1 .text span:nth-child(0) {
+    clear: both;
+}
+
+.frame-container.foreground .frame-2 .text span:nth-child(0) {
+    clear: both;
+}
+
+.frame-container.foreground .frame-2 .text span:nth-child(0) {
+    clear: both;
+}
+
+.frame-container.foreground .frame-3 {
+    line-height: 1.1em;
+}
+
+.frame-container.foreground .frame-3 .content {
+    display: table;
+    table-layout: fixed;
+    position: absolute;
+    left: 26px;
+    top: 26px;
+    width: 248px;
+    height: 198px;
+}
+
+.frame-container.foreground .frame-3 .textbox-head {
+    display: table-row;
+    height: 1px;
+}
+
+.frame-container.foreground .frame-3 .textbox-head .stripe {
+    background: #ffffff;
+    width: 3px;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.frame-container.foreground .frame-3 .textbox-head .text {
+    padding-left: 14px;
+    display: table-cell;
+    position: relative;
+    font-size: 24px;
+    font-family: wf_gd_sherpa_bold;
+    line-height: 1.05em;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid {
+    display: table-row;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid .text {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.1em;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid .f3b,
+.frame-container.foreground .frame-3 .textbox-mid .f3c,
+.frame-container.foreground .frame-3 .textbox-mid .f3d {
+    display: inline;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid .f3c {
+    display: none;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid .f3d {
+    display: none;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid .f3b {
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid .f3c {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    margin-left: -0.25em;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid .f3c span.supered {
+    padding-right: 0.6em;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid .f3c span.supered sup {
+    top: 0px;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid .f3d {
+    display: block;
+    clear: both;
+    margin-top: 0.25em;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.frame-container.foreground .frame-3 .textbox-mid sup {
+    font-size: 0.6em;
+}
+
+.frame-container.foreground .frame-3 .textbox-foot {
+    display: table-row;
+    height: 1px;
+}
+
+.frame-container.foreground .frame-3 .textbox-foot .button-wrapper {
+    display: table-cell;
+}
+
+.frame-container.foreground .frame-3 .textbox-foot .button-wrapper button {
+    color: #fff;
+    background: #1976D2;
+    border-radius: 4px;
+    border: none;
+    font-weight: 400;
+    padding: 0.5em 0.5em;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.frame-container.foreground .frame-3 .textbox-foot .button-wrapper button:hover {
+    background: #145FA9;
+}
+
+body .frame-container.foreground .frame-3 .textbox-foot .button-wrapper button {
+    max-width: 150px;
+}
+
+body .frame-container.foreground .frame-3 .textbox-head .stripe {
+    display: none;
+}
+
+body .frame-container.foreground .frame-3 .textbox-head .text {
+    font-family: wf_gd_boing_black;
+    padding: 0;
+}
+
+body .frame-container.foreground .frame-3 .textbox-mid .f3b {
+    font-family: wf_gd_sherpa_bold;
+    border-left: 3px solid #ffffff;
+    padding-left: 14px;
+    margin-top: 14px;
+}
+
+body .frame-container.foreground .frame-3 .textbox-foot .button-wrapper button {
+    background: #02C54C;
+}
+
+body .frame-container.foreground .frame-1 .textholder .text span:nth-of-type(3) {
+    clear: both;
+}
+
+body .frame-container.foreground .frame-2 .textholder .text span:nth-of-type(3) {
+    clear: both;
+}

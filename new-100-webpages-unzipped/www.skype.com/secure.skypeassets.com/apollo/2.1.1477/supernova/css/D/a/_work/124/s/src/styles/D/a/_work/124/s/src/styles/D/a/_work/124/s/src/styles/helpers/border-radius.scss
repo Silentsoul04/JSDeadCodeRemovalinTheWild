@@ -1,0 +1,19 @@
+.supernova-border-radius {
+  border-radius: 20px;
+
+  &.no-right-top {
+    border-top-right-radius: 0;
+  }
+
+  &.no-right-bottom {
+    border-bottom-right-radius: 0;
+  }
+
+  &.no-left-bottom {
+    border-bottom-left-radius: 0;
+  }
+
+  &.no-left-top {
+    border-top-left-radius: 0;
+  }
+}

@@ -1,0 +1,78 @@
+.zeus-rebrand-hero {
+    background-color: #0d2f81;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    position: relative
+}
+
+@media (min-width: 801px) {
+    .zeus-rebrand-hero {
+        min-height: 90vh;
+        padding-top: 140px
+    }
+}
+
+@media (min-width: 1025px) {
+    .zeus-rebrand-hero {
+        padding-top: 130px
+    }
+}
+
+@media (min-width: 1025px) {
+    .zeus-rebrand-hero__eyebrow {
+        font-size: 25px;
+        line-height: 32px
+    }
+}
+
+.zeus-rebrand-hero__headline {
+    font-size: 40px;
+    line-height: 46px
+}
+
+@media (min-width: 801px) {
+    .zeus-rebrand-hero__headline {
+        font-size: 50px;
+        line-height: 60px
+    }
+}
+
+@media (min-width: 1025px) {
+    .zeus-rebrand-hero__headline {
+        font-size: 71px;
+        line-height: 79px;
+        letter-spacing: -1px
+    }
+}
+
+@media (min-width: 1025px) {
+    .zeus-rebrand-hero__cta {
+        display: none
+    }
+}
+
+.zeus-rebrand-hero__waypoint {
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-50%);
+    overflow: hidden
+}
+
+@media (min-width: 1025px) {
+    .zeus-rebrand-hero__aspect-box .arbor-aspect-box {
+        padding-top: 5.69767% !important
+    }
+}
+
+@media (min-width: 1025px) and (min-height: 750px) {
+    .zeus-rebrand-hero__aspect-box .arbor-aspect-box {
+        padding-top: 11.39535% !important
+    }
+}
+
+@media (min-width: 1025px) and (min-height: 800px) {
+    .zeus-rebrand-hero__aspect-box .arbor-aspect-box {
+        padding-top: 22.7907% !important
+    }
+}

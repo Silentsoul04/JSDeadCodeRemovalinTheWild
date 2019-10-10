@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>down</title>
+    <desc>Created with Sketch.</desc>
+    <g id="v0.5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header" transform="translate(-733.000000, -36.000000)">
+            <g id="menu" transform="translate(692.000000, 30.000000)">
+                <g id="down" transform="translate(40.000000, 2.000000)">
+                    <rect id="frame" x="0" y="0" width="12" height="12"></rect>
+                    <polygon id="triangle" fill="#777777" points="1 4 6 10 11 4"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,1 @@
+data:image/svg+xml;charset=utf8,%3Csvg width='24' height='18' viewBox='0 0 24 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23FFDA3E' d='M0 18h24V0H0z'/%3E%3Cpath fill='%23FC0' d='M12 4.4L0 18h24z'/%3E%3Cpath d='M24 0L13.25 10.678c-.7.696-1.8.696-2.5 0L0 0h24z' fill='%23F33'/%3E%3C/g%3E%3C/svg%3E

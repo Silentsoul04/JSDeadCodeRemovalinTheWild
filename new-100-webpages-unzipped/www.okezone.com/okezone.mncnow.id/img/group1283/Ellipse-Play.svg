@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="59" viewBox="0 0 60 59">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}.cls-2,.cls-4{fill:none}.cls-2{stroke:#fff;stroke-width:2px}.cls-3{stroke:none}.cls-5{filter:url(#Ellipse_5)}.cls-6{filter:url(#Path_20)}
+        </style>
+        <filter id="Path_20" width="31.482" height="37.316" x="15.745" y="11.227" filterUnits="userSpaceOnUse">
+            <feOffset dx="1" dy="1"/>
+            <feGaussianBlur result="blur" stdDeviation="2.5"/>
+            <feFlood flood-opacity=".702"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Ellipse_5" width="60" height="59" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dx="1" dy="1"/>
+            <feGaussianBlur result="blur-2" stdDeviation="2.5"/>
+            <feFlood flood-opacity=".702"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Group_1284" data-name="Group 1284">
+        <g class="cls-6">
+            <path id="Path_20-2" d="M-13837.513 1096.643l15.688 10.877-16.482 11.439v-22.316z" class="cls-1" data-name="Path 20" transform="translate(13860.55 -1078.92)"/>
+        </g>
+        <g class="cls-5">
+            <g id="Ellipse_5-2" class="cls-2" data-name="Ellipse 5" transform="translate(6.5 6.5)">
+                <ellipse cx="22.5" cy="22" class="cls-3" rx="22.5" ry="22"/>
+                <ellipse cx="22.5" cy="22" class="cls-4" rx="21.5" ry="21"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
+    <meta content="width=300,height=250" name="ad.size" />
+    <meta content="LemonPI Studio 1.53.0" name="generator" />
+    <title>Your LemonPI Creative</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+    <link href="./studio-style.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./style.css" media="all" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        (function() {
+            var MAX_URL_PARAM_LENGTH = 34;
+            var CLICK_X_URL_KEY = 'nx';
+            var CLICK_Y_URL_KEY = 'ny';
+            var CREATIVE_DIMENSIONS_KEY = 'dim';
+            var AD_URL_PARAM = '&adurl=';
+
+            var relegateNavigation = '';
+            var urlParamMap = {};
+
+            urlParamMap[CLICK_X_URL_KEY] = null;
+            urlParamMap[CLICK_Y_URL_KEY] = null;
+            urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+            var handleClickTagMessage = function(e) {
+                try {
+                    var eventData = JSON.parse(e.data);
+                } catch (err) {
+                    return;
+                }
+                if (eventData.isInitClickTag) {
+                    if (eventData.clickTags) {
+                        for (var i = 0; i < eventData.clickTags.length; i++) {
+                            var clkTag = eventData.clickTags[i];
+                            window[clkTag.name] = clkTag.url;
+                        }
+                    } else if (eventData.clickTag) {
+                        window.clickTag = eventData.clickTag;
+                    }
+                    relegateNavigation = eventData.relegateNavigation;
+                }
+            };
+
+            var storeClickCoordinates = function(e) {
+                urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+                urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+            };
+
+            var getCreativeDimensions = function() {
+                return window.innerWidth + 'x' + window.innerHeight;
+            }
+
+            var getExitClickParams = function(e) {
+                urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+                var exitParams = '';
+                for (var key in urlParamMap) {
+                    exitParams += '&' + key + '=';
+                    if (urlParamMap[key] !== null) {
+                        exitParams += urlParamMap[key];
+                    }
+                }
+                return exitParams;
+            }
+
+            var appendExitClickParams = function(url) {
+                var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+                var paramsToBeAdded = getExitClickParams();
+                if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+                    url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+                        url.substr(adUrlIndex);
+                };
+                return url;
+            };
+
+            if (open.call) {
+                window.open = function(open) {
+                    return function(url, name, features) {
+                        url = appendExitClickParams(url);
+                        if (relegateNavigation === 'parent') {
+                            var message = {
+                                'clickTag': url,
+                                'isPostClickTag': true
+                            };
+                            parent.postMessage(JSON.stringify(message), '*');
+                        } else {
+                            var args = [url, name];
+                            if (features) {
+                                args.push(features);
+                            }
+                            open.apply(window, args);
+                        }
+                    };
+                }(window.open);
+            }
+
+            if (window.addEventListener) {
+                window.addEventListener(
+                    'message', handleClickTagMessage, false);
+                window.addEventListener('mousedown', storeClickCoordinates, true);
+            } else {
+                window.attachEvent('onmessage', handleClickTagMessage);
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <script>
+        window.lemonpiConfig = {
+            "defaultContentURL": "https://creative-content.lemonpi.io/default-content/384/1202-949",
+            "exportContent": {
+                "headlineBig": {
+                    "type": "text",
+                    "value": "false"
+                },
+                "ctaCopy": {
+                    "type": "text",
+                    "value": "Bestel nu"
+                },
+                "sublineTwo": {
+                    "type": "text",
+                    "value": "EMPTY"
+                },
+                "sublineOne": {
+                    "type": "text",
+                    "value": "Verdient het netwerk van Nederland"
+                },
+                "headline": {
+                    "type": "text",
+                    "value": "De nieuwe<br><b>iPhone 11</b><br>voor de zaak"
+                },
+                "clickUrl": {
+                    "type": "click",
+                    "value": "https://www.kpn.com/iphone"
+                },
+                "productImage": {
+                    "type": "image",
+                    "value": "__lemonpi_export_assets__/productImage.png"
+                },
+                "sublineThree": {
+                    "type": "text",
+                    "value": "EMPTY"
+                },
+                "copyStyling": {
+                    "type": "text",
+                    "value": "{  \n    \"headlineTop\":\"102\",\n   \"headlineLeft\":\"13\",\n    \"sublineTop\":\"174\",\n    \"sublineLeft\":\"13\"\n}"
+                },
+                "logo": {
+                    "type": "image",
+                    "value": "__lemonpi_export_assets__/logo.svg"
+                },
+                "fallback": {
+                    "type": "image",
+                    "value": "__lemonpi_export_assets__/fallback.jpg"
+                },
+                "productImageStyling": {
+                    "type": "text",
+                    "value": "{  \n    \"productWidth\":\"118\",\n   \"productHeight\":\"157\",\n   \"productTop\":\"15\",\n   \"productLeft\":\"150\"\n}"
+                },
+                "tagging": {
+                    "type": "click-tracker",
+                    "value": "https://www.kpn.com?out=(:landing_url:)"
+                }
+            },
+            "interactionHandlerUrl": "https://d.lemonpi.io/track/event?e=LEMONPI%25EVENTDATA",
+            "logProxyUrl": "https://log.lemonpi.io/log",
+            "lemonpiCookiesUrl": "https://d.lemonpi.io/request-cookies",
+            "creativeId": 949,
+            "dynamicContentURL": "https://d.lemonpi.io/a/384/content/1202-4046",
+            "adsetId": 1202,
+            "adserver": {
+                "code": "google-cm"
+            }
+        };
+    </script>
+    <script>
+        var clickTag1 = "";
+        var clickTag2 = "";
+    </script>
+    <!-- Creative's content -->
+    <div id="content">
+        <div id="creative_container" style="display: none; width: 300px; height: 250px; position: relative; overflow: hidden;">
+            <div class="click" data-placeholder="clickUrl" id="click">
+                <div class="background" id="background">
+                </div>
+                <div class="networkShapesHolder" id="networkShapesHolder">
+                </div>
+                <div class="shapes" id="shapes">
+                    <div class="shapeGroup1" id="shapeGroup1">
+                        <div class="shapeGroup2" id="shapeGroup2">
+                            <div class="shape4_container shape_container" id="shape4_container"><svg height="22.531" viewbox="0 0 22.563 22.531" width="22.563" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#shape4{
+                                fill: #22cc23;
+                              }
+                            #shape4_container &gt; svg{
+                                          overflow: visible;
+                                          position: relative;
+                                          display: block;
+                                          
+                                        }</style>
+</defs>
+<circle class="shape" cx="11.281" cy="11.266" id="shape4" r="11.281"></circle>
+</svg></div>
+                            <div class="shape3_container shape_container" id="shape3_container"><svg height="77" viewbox="0 0 77.094 77" width="77.094" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#shape3{
+                                fill: #22cc23;
+                              }
+                            #shape3_container &gt; svg{
+                                          overflow: visible;
+                                          position: relative;
+                                          display: block;
+                                          
+                                        }</style>
+</defs>
+<circle class="shape" cx="38.547" cy="38.5" id="shape3" r="38.547"></circle>
+</svg></div>
+                        </div>
+                        <div class="shape1_container shape_container" id="shape1_container"><svg height="120.031" viewbox="0 0 154.219 120.031" width="154.219" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#shape1{
+                              fill: #22cc23;
+                              fill-rule: evenodd;
+                            }
+                          #shape1_container &gt; svg{
+                                        overflow: visible;
+                                        position: relative;
+                                        display: block;
+                                        
+                                      }</style>
+</defs>
+<path class="shape" d="M-60.912-16c0.426,0.185,71.685,31.164,72.117,31.322C35.253,24.081,56.854,10.549,65.88-10.1c8.994-20.575,4.5-46.895-18.409-57.71-0.487-.23-71.619-31.105-72.117-31.322C-45.533-108.2-70.9-94.584-80.114-73.506S-81.8-25.074-60.912-16Z" id="shape1" transform="translate(84 102)"></path>
+</svg></div>
+                    </div>
+                    <div class="shape2_container shape_container" id="shape2_container"><svg height="104" viewbox="0 0 108.031 104" width="108.031" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#shape2{
+                            fill: #22cc23;
+                            fill-rule: evenodd;
+                          }
+                        #shape2_container &gt; svg{
+                                      overflow: visible;
+                                      position: relative;
+                                      display: block;
+                                      
+                                    }</style>
+</defs>
+<path class="shape" d="M286.259,88.44c0.265,0.242,44.6,40.791,44.868,41.023,13.015,11.128,32.44,9.7,44.235-3.041a31.588,31.588,0,0,0-.633-44.063c-0.3-.293-44.558-40.739-44.868-41.022a32.227,32.227,0,0,0-45.33,2.04A31.751,31.751,0,0,0,286.259,88.44Z" id="shape2" transform="translate(-275.969 -33)"></path>
+</svg></div>
+                </div>
+                <div class="copyContainer" id="copyContainer">
+                </div>
+                <div class="productImage" id="productImage">
+                </div>
+                <div class="cta" id="cta">
+                </div>
+                <div class="logo" data-placeholder="logo" id="logo">
+                </div>
+                <div class="fallback" data-fallback="" data-placeholder="fallback" id="fallback" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://creative-libraries.lemonpi.io/v1/lemonpi.js"></script>
+    <!-- Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Creative's script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+function a(g){var c=document.createElement("script");c.src="https://mrb.upapi.net/code?w="+g+"&upapi=true";c.async="true";(document.body||document.head||document.documentElement).appendChild(c)} var b={"greatist.com":"5666670710358016","healthline.com":"5645449998368768","medicalnewstoday.com":"5756528992714752"},d=!1,e=window.location.hostname;0===e.indexOf("www.")&&(e=e.replace("www.",""));
+if(e&&e in b)a(b[e]),d=!0;else for(var f in b)if(-1<document.location.hostname.indexOf(f)){a(b[f]);d=!0;break}d||((new Image).src="//mrb.upapi.net/l?event=unknownDomain&domain=" +e);

@@ -1,0 +1,12 @@
+var escape=require("../../../../../../../node_modules/css-loader/lib/url/escape.js");
+exports=module.exports=require("../../../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!../../welcome.css"), undefined);
+// module
+exports.push([module.id, ".E7MmoWHbAvqvzvnIMFpFs{width:54px;height:43px;background:url(" + escape(require("../../../../img/photo-input.svg")) + ") no-repeat}._224Cv1jy0zvsfLRb8eZFLb{width:44px;height:50px;background:url(" + escape(require("../../../../img/video-input.svg")) + ") no-repeat}._3Qlbx10Qo_xZnzHhBS8v1I{width:54px;height:55px;background:url(" + escape(require("../../../../img/upload-browse.svg")) + ") no-repeat}._1rMjtWt2gscbygElN_KZ9G{width:48px;height:55px;background:url(" + escape(require("../../../../img/upload-drag.svg")) + ") no-repeat}._4UJ2ALzpYIRRzBxNUCC8{width:44px;height:50px;background:url(\"/static/img/upload-copy.svg\") no-repeat}", ""]);
+// exports
+exports.locals= {
+    "welcome": "\"../../welcome.css\"", "subtitle": "_1e9cF82E_XOOhUcD0D99oU " + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!../../welcome.css").locals["subtitle"] + "", "secondary": "" + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!../../welcome.css").locals["secondary"] + "", "description": "hoT2Z_jzcFSJ0NDL9_leX " + require("-!../../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../../node_modules/postcss-loader/lib/index.js!../../welcome.css").locals["secondary"] + "", "iconPhoto": "E7MmoWHbAvqvzvnIMFpFs", "iconVideo": "_224Cv1jy0zvsfLRb8eZFLb", "iconBrowse": "_3Qlbx10Qo_xZnzHhBS8v1I", "iconDrag": "_1rMjtWt2gscbygElN_KZ9G", "iconCopyAndPaste": "_4UJ2ALzpYIRRzBxNUCC8"
+}
+
+;

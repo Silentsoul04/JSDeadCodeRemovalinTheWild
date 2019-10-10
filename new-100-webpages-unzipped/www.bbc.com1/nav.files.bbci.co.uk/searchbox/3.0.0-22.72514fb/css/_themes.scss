@@ -1,0 +1,92 @@
+@import 'mixins';
+
+$orb-color-form-bg-dark-theme:  #ffffff;
+$orb-color-form-bg-light-theme:  #e4e4e4;
+
+// default, no theme is applied
+@include inputTheme($orb-color-form-bg-light-theme); //ccc - border - do we need this?
+
+.b-header--black--white {
+    @include inputTheme($orb-color-form-bg-dark-theme);
+}
+
+.b-header--grey--white {
+    @include inputTheme($orb-color-form-bg-dark-theme);
+}
+
+.b-header--dark-grey--grey {
+    @include inputTheme($orb-color-form-bg-dark-theme);
+}
+
+.b-header--semitransparent-dark--white {
+    @include inputTheme($orb-color-form-bg-dark-theme);
+}
+
+.b-header--semitransparent-medium--white {
+    @include inputTheme($orb-color-form-bg-dark-theme);
+}
+
+.b-header--semitransparent-light--white {
+    @include inputTheme($orb-color-form-bg-dark-theme);
+}
+
+.b-header--transparent--dark-grey {
+    @include inputTheme($orb-color-form-bg-dark-theme);
+}
+
+.b-header--transparent--white {
+    @include inputTheme($orb-color-form-bg-dark-theme);
+}
+
+.b-header--white--black {
+    @include inputTheme($orb-color-form-bg-light-theme);
+}
+
+ @media screen and (max-width: 600px) {
+
+    .b-header--black--white {
+        @include iconTheme(light);
+        @include borderTheme(#666);
+    }
+
+    .b-header--grey--white {
+        @include iconTheme(light);
+        @include borderTheme(#949494);
+    }
+
+    .b-header--dark-grey--grey {
+        @include iconTheme(light);
+        @include borderTheme(#333);
+    }
+
+    .b-header--semitransparent-dark--white {
+        @include iconTheme(light);
+        @include borderTheme(rgba(255, 255, 255, 0.4),#949494);
+    }
+
+    .b-header--semitransparent-medium--white {
+        @include iconTheme(light);
+        @include borderTheme(rgba(255, 255, 255, 0.4), #949494);
+    }
+
+    .b-header--semitransparent-light--white {
+        @include iconTheme(light);
+        @include borderTheme(rgba(255, 255, 255, 0.4), #949494);
+    }
+
+    .b-header--transparent--dark-grey {
+        @include iconTheme(dark);
+        @include borderTheme(rgba(0, 0, 0, 0.3), #888888);
+    }
+
+    .b-header--transparent--white {
+        @include iconTheme(light);
+        @include borderTheme(rgba(204, 204, 204, 0.3), #888888);
+    }
+
+    .b-header--white--black {
+        @include iconTheme(dark);
+        @include borderTheme(#ccc);
+    }
+ }
+

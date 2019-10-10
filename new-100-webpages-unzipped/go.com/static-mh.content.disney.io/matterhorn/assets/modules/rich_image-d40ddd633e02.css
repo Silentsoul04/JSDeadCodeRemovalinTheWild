@@ -1,0 +1,129 @@
+.module.rich_image,
+.module.rich_image .bound {
+    font-size: 0;
+    line-height: 0
+}
+
+.module.rich_image img.relative:not(.no-src) {
+    width: 100%;
+    height: auto
+}
+
+.module.rich_image a {
+    display: block
+}
+
+.module.rich_image a:focus {
+    outline: 2px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -4px
+}
+
+.module.rich_image_abandon_cart,
+.module.rich_image_abandon_cart .bound {
+    font-size: 0;
+    line-height: 0
+}
+
+.module.rich_image_abandon_cart.hidden {
+    display: none
+}
+
+.module.rich_image_abandon_cart img {
+    width: 100%;
+    height: auto
+}
+
+.module.rich_image_abandon_cart a {
+    display: block
+}
+
+.module.rich_image_abandon_cart a:focus {
+    outline: 2px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -4px
+}
+
+.module.rich_image_abandon_cart .dismiss-contain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: auto
+}
+
+@media screen and (max-width: 679px) {
+    .module.rich_image_abandon_cart .dismiss-contain {
+        width: 40px
+    }
+}
+
+.module.rich_image_abandon_cart .dismiss-contain span {
+    display: inline-block;
+    position: relative
+}
+
+@media screen and (max-width: 679px) {
+    .module.rich_image_abandon_cart .dismiss-contain span {
+        display: none
+    }
+}
+
+.module.rich_image_abandon_cart .dismiss {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-left: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    line-height: 1em;
+    background-color: rgba(27, 61, 125, 0.15);
+    margin: 0;
+    padding: 0 9px 0 12px;
+    cursor: pointer
+}
+
+@media screen and (max-width: 679px) {
+    .module.rich_image_abandon_cart .dismiss {
+        background-position: center;
+        background-size: 27px;
+        padding: 0
+    }
+}
+
+.module.rich_image_abandon_cart .dismiss:after {
+    content: "";
+    display: inline-block;
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/modules/rich_image/x-cd11885e5431.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 17px;
+    width: 16px;
+    margin-left: 5px;
+    transition: transform 400ms
+}
+
+@media screen and (max-width: 679px) {
+    .module.rich_image_abandon_cart .dismiss:after {
+        margin: 12px;
+        display: flex;
+        justify-content: center
+    }
+}
+
+.module.rich_image_abandon_cart .dismiss:hover {
+    background-color: rgba(27, 61, 125, 0.4)
+}
+
+.module.rich_image_abandon_cart .dismiss:hover:after {
+    transform: scale(1.4)
+}
+
+.module.rich_image_abandon_cart .dismiss:active {
+    background-color: rgba(27, 61, 125, 0.6)
+}

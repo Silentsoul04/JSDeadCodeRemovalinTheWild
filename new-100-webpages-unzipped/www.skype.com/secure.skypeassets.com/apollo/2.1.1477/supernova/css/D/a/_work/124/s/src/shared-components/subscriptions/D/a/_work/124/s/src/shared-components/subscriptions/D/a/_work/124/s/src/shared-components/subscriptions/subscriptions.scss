@@ -1,0 +1,65 @@
+@import "../../styles/animations/easing.scss";
+@import "../../styles/theme/colors.scss";
+
+.subscriptions-component {
+  min-height: auto;
+  height: 100%;
+}
+
+.subscription-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .supernova-column {
+    overflow: visible;
+  }
+}
+
+.subscriptions-list {
+  width: 100%;
+  display: block;
+
+  li {
+    padding-bottom: 10px;
+    display: block;
+    width: 100%;
+  }
+}
+
+.subscription-item-time-left {
+  margin-bottom: 0;
+}
+
+// Progress bar
+.supernova-subscription-progress-bar {
+  border-radius: 5px;
+  width: 100%;
+  background: $color-gray-300;
+  height: 10px;
+  margin: 5px 0;
+}
+
+.supernova-subscription-progress {
+  border-radius: 5px;
+  height: 100%;
+  animation: progress-bar 2.5s $easing-skype-expo-out;
+
+  &.progress-red {
+    background: $color-error;
+  }
+
+  &.progress-yellow {
+    background: $color-warning;
+  }
+
+  &.progress-green {
+    background: $color-success;
+  }
+}
+
+@keyframes progress-bar {
+  0% {
+    width: 0;
+  }
+}

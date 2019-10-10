@@ -1,0 +1,16 @@
+exports=module.exports=require("../../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css"), undefined);
+// module
+exports.push([module.id, ".headline-2VqjHhqr{overflow:hidden;text-overflow:ellipsis}.multiLineTruncation-1K04-YHP{display:-webkit-box;-webkit-line-clamp:2}.singleLineTruncation-2nbjWLW7{white-space:nowrap}", ""]);
+// exports
+exports.locals= {
+    "headline": "headline-2VqjHhqr " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["headline"] + "", "multiLineTruncation": "multiLineTruncation-1K04-YHP", "singleLineTruncation": "singleLineTruncation-2nbjWLW7"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/cover/component/mobile-default/headline/styles.css
+// module id = 448
+// module chunks = 1

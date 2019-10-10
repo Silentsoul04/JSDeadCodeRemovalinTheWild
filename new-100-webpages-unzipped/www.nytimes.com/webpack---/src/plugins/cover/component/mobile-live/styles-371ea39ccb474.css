@@ -1,0 +1,16 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css"), undefined);
+// module
+exports.push([module.id, ".poster-35RUTeVe{background-size:cover;background-position:50%}.liveText-2yfBeFCE{color:red!important}", ""]);
+// exports
+exports.locals= {
+    "container": "container-1PLESNAP", "poster": "poster-35RUTeVe " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["poster"] + "", "playIcon": "playIcon-2WVa5Mlr " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["playIcon"] + "", "centerIconCircle": "centerIconCircle-3tmgTWTq " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["centerIconCircle"] + "", "centerIcon--vhs-xxs": "centerIcon--vhs-xxs-db6QN4qp " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["centerIcon--vhs-xxs"] + "", "liveText": "liveText-2yfBeFCE " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["duration"] + "", "headline": "headline-u0Ek7mKd " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["headline"] + ""
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/cover/component/mobile-live/styles.css
+// module id = 454
+// module chunks = 1

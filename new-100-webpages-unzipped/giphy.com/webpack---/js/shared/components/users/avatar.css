@@ -1,0 +1,10 @@
+exports=module.exports=require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+// module
+exports.push([module.id, "._38SOpMLQw5kklyvDVg3LA5{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.sHWDHJHWZ_qN-i70BHB-5{width:45px;height:45px;-o-object-fit:cover;object-fit:cover;margin-right:12px}", ""]);
+// exports
+exports.locals= {
+    "avatar": "_38SOpMLQw5kklyvDVg3LA5", "avatarImage": "sHWDHJHWZ_qN-i70BHB-5"
+}
+
+;

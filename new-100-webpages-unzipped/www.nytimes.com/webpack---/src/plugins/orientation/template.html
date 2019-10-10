@@ -1,0 +1,21 @@
+module.exports = function anonymous(locals, filters, escape, rethrow) { escape = escape || function(html) { return String(html).replace(/&/g, "&amp;").replace(/
+</g, "&lt;").replace(/>/g, "&gt;").replace(/'/g, "&#39;").replace(/"/g, "&quot;"); }; var __stack = { lineno: 1, input: '
+<div class="vhs-plugin-orientation">\n
+    <% if (use360Cover) { %>\n
+        <div class="vhs-plugin-orientation-onboarding">\n <span><%=onboardingText%></span>\n </div>\n
+        <% } %>\n
+            <div\n class="vhs-plugin-orientation-icon" \n tabindex="0" \n title="Orentation" \n aria-label="Use the arrow keys to explore" \n>\n
+                <div class="vhs-plugin-orientation-rotator">\n
+                    <div class="vhs-plugin-orientation-clipper">\n
+                        <div class="vhs-plugin-orientation-fov"></div>\n </div>\n
+                    <div class="vhs-plugin-orientation-eyes"></div>\n </div>\n </div>\n</div>\n', filename: "." }; function rethrow(err, str, filename, lineno) { var lines = str.split("\n"), start = Math.max(lineno - 3, 0), end = Math.min(lines.length, lineno + 3); var context = lines.slice(start,
+end).map(function(line, i) { var curr = i + start + 1; return (curr == lineno ? " >> " : " ") + curr + "| " + line; }).join("\n"); err.path = filename; err.message = (filename || "ejs") + ":" + lineno + "\n" + context + "\n\n" + err.message; throw err;
+} try { var buf = []; with (locals || {}) { (function() { buf.push('
+<div class="vhs-plugin-orientation">\n '); __stack.lineno = 2; if (use360Cover) { buf.push('\n
+    <div class="vhs-plugin-orientation-onboarding">\n <span>', escape((__stack.lineno = 4, onboardingText)), "</span>\n </div>\n "); __stack.lineno = 6; } buf.push('\n
+    <div\n class="vhs-plugin-orientation-icon" \n tabindex="0" \n title="Orentation" \n aria-label="Use the arrow keys to explore" \n>\n
+        <div class="vhs-plugin-orientation-rotator">\n
+            <div class="vhs-plugin-orientation-clipper">\n
+                <div class="vhs-plugin-orientation-fov"></div>\n </div>\n
+            <div class="vhs-plugin-orientation-eyes"></div>\n </div>\n </div>\n</div>\n'); })(); } return buf.join(""); } catch (err) { rethrow(err, __stack.input, __stack.filename, __stack.lineno); } } ////////////////// // WEBPACK FOOTER // ./src/plugins/orientation/template.html // module
+id = 310 // module chunks = 5

@@ -1,0 +1,3 @@
+(function webpackUniversalModuleDefinition(root, factory) { if(typeof exports === 'object' && typeof module === 'object') module.exports = factory(require("@playkit-js/playkit-js"), require("hls.js")); else if(typeof define === 'function' && define.amd)
+define(["playkit-js", "hls.js"], factory); else if(typeof exports === 'object') exports["hls"] = factory(require("@playkit-js/playkit-js"), require("hls.js")); else root["playkit"] = root["playkit"] || {}, root["playkit"]["hls"] = factory(root["playkit"]["core"],
+root["Hls"]); })(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__) { return // WEBPACK FOOTER // // webpack/universalModuleDefinition // WEBPACK FOOTER // // hls/webpack/universalModuleDefinition

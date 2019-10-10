@@ -1,0 +1,15 @@
+exports=module.exports=require("../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+// module
+exports.push([module.id, ".franklin-38Xdz447{font-family:franklin,nyt-franklin,Arial,helvetica,sans-serif}.karnak-11z5eGyu{font-family:karnak,nyt-karnak,nyt-karnak-display-130124}.cheltenham-1_CZp9RG{font-family:cheltenham,nyt-cheltenham,Georgia,Times New Roman,times,serif}.cheltenhamCond-NEL2jekX{font-family:nyt-cheltenham-cond,cheltenham,nyt-cheltenham,Georgia,Times New Roman,times,serif}", ""]);
+// exports
+exports.locals= {
+    "franklin": "franklin-38Xdz447", "karnak": "karnak-11z5eGyu", "cheltenham": "cheltenham-1_CZp9RG", "cheltenhamCond": "cheltenhamCond-NEL2jekX"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./src/stylesheet/font-families.css
+// module id = 10
+// module chunks = 5

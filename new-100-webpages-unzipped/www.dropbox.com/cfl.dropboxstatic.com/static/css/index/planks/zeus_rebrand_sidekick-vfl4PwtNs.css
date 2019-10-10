@@ -1,0 +1,24 @@
+.sidekick-headline .sidekick-headline__text {
+    font-size: 25px;
+    line-height: 32px
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+    .sidekick-section .sidekick-section__heading {
+        margin-bottom: 40px
+    }
+}
+
+@media (min-width: 801px) {
+    .sidekick-section .sidekick-section__heading {
+        font-size: 40px;
+        line-height: 46px
+    }
+}
+
+@media (max-width: 800px) {
+    .sidekick-section .sidekick-section__heading {
+        font-size: 32px;
+        line-height: 38px
+    }
+}

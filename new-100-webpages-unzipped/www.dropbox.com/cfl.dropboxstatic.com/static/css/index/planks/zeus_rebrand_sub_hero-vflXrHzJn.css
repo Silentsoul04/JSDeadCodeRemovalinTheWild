@@ -1,0 +1,30 @@
+.zeus-rebrand-sub-hero {
+    position: relative
+}
+
+@media (min-width: 1025px) {
+    .zeus-rebrand-sub-hero__image .arbor-aspect-box {
+        padding-top: 119.30233% !important
+    }
+}
+
+@media (min-width: 1025px) and (min-height: 750px) {
+    .zeus-rebrand-sub-hero__image .arbor-aspect-box {
+        padding-top: 113.60465% !important
+    }
+}
+
+@media (min-width: 1025px) and (min-height: 800px) {
+    .zeus-rebrand-sub-hero__image .arbor-aspect-box {
+        padding-top: 102.2093% !important
+    }
+}
+
+.zeus-rebrand-sub-hero__image .arbor-aspect-box__child {
+    overflow: visible;
+    align-items: flex-end
+}
+
+.zeus-rebrand-sub-hero__image .arbor-aspect-box__child img {
+    flex-shrink: 0
+}

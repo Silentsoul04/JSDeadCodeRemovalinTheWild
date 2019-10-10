@@ -1,0 +1,207 @@
+// =============================================================================
+// Global variables
+// =============================================================================
+
+// Be careful of Sass variable scope
+// Note: Sass 3.3.0 adds Local and local vars
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables
+
+
+// Browser support
+// =============================================================================
+
+$old-ie:      false !default;
+$svg-support: true !default;
+$browser-supports-columns: not $old-ie !default;
+$browser-supports-flexbox: true !default;
+$guss-rem-baseline: 16px;
+
+
+// Layout dimensions
+// =============================================================================
+
+$inArticleInlineImgWidth: 114px;
+$headerHeight: 36px;
+
+@import 'pasteup/palette/src';
+@import 'pasteup/grid-system/src';
+
+$right-column:     gs-span(4);
+$left-column:      gs-span(2); // Grows to 3 columns on wide viewports
+$left-column-wide: gs-span(3);
+
+// Breakpoints
+// =============================================================================
+
+// Add breakpoints and tweakpoints here
+// To add custom breakpoints directly inside of a component,
+// see https://github.com/guardian/sass-mq#adding-custom-breakpoints
+
+// Name your breakpoints in a way that creates a ubiquitous language
+// across team members. It will improve communication between
+// stakeholders, designers, developers, and testers.
+
+// NB. If these change, please update:
+//   javascripts/utils/detect.js
+//   common/app/layout/Breakpoint.scala
+
+$mq-breakpoints: (
+    mobile:          gs-span(4)  + $gs-gutter,   // 320px
+    mobileMedium:    gs-span(5)  - $gs-gutter,   // 360px
+    mobileLandscape: gs-span(6)  + $gs-gutter,   // 480px
+    phablet:         gs-span(8)  + $gs-gutter*2, // 660px
+    tablet:          gs-span(9)  + $gs-gutter*2, // 740px
+    desktop:         gs-span(12) + $gs-gutter*2, // 980px
+    leftCol:         gs-span(14) + $gs-gutter*2, // 1140px
+    wide:            gs-span(16) + $gs-gutter*2, // 1300px
+);
+
+// Show the current breakpoint in the top right corner of the viewport:
+// see https://github.com/guardian/sass-mq#seeing-the-currently-active-breakpoint
+// Uncomment to activate during development
+// $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, leftCol, wide);
+
+
+// Guss defaults overrides
+// =============================================================================
+$guss-column-rule: none;
+
+
+// Brand  ======================================================================
+$brand-dark:             #041f4a;
+$brand-main:             #052962;
+$brand-pastel:           #506991;
+
+// Neutrals ====================================================================
+$brightness-7:           #121212;
+$brightness-20:          #333333;
+$brightness-46:          #767676;
+$brightness-60:          #999999;
+$brightness-86:          #dcdcdc;
+$brightness-93:          #ededed;
+$brightness-97:          #f6f6f6;
+$brightness-100:         #ffffff;
+
+
+// Highlight (yellow) ==========================================================
+$highlight-dark:         #ffbb50;
+$highlight-main:         #ffe500;
+
+
+// Pillars =====================================================================
+// News (red)
+$news-dark:              #ab0613;
+$news-main:              #c70000;
+$news-bright:            #ff4e36;
+$news-pastel:            #ffbac8;
+$news-faded:             #fff4f2;
+
+// Opinion (orange)
+$opinion-dark:           #bd5318;
+$opinion-main:           #e05e00;
+$opinion-bright:         #ff7f0f;
+$opinion-pastel:         #f9b376;
+$opinion-faded:          #fef9f5;
+
+// Sport (blue)
+$sport-dark:             #005689;
+$sport-main:             #0084c6;
+$sport-bright:           #00b2ff;
+$sport-pastel:           #90dcff;
+$sport-faded:            #f1f8fc;
+
+// Culture (brown)
+$culture-dark:           #6b5840;
+$culture-main:           #a1845c;
+$culture-bright:         #eacca0;
+$culture-pastel:         #e7d4b9;
+$culture-faded:          #fbf6ef;
+
+// Lifestyle (magenta)
+$lifestyle-dark:         #7d0068;
+$lifestyle-main:         #bb3b80;
+$lifestyle-bright:       #ffabdb;
+$lifestyle-pastel:       #fec8d3;
+$lifestyle-faded:        #feeef7;
+
+
+// Greens ======================================================================
+$green-dark:             #236925;
+$green-bold:             #3db540;
+$green-light:            #29b05f;
+
+
+// Paid for ====================================================================
+$labs-dark:              #65a897;
+$labs-main:              #69d1ca;
+
+
+// Special report ==============================================================
+$special-report-dark:    #3f464a;
+
+
+// Social icons ================================================================
+$social-facebook:        #3067a3;
+$social-twitter:         #03b3ee;
+$social-whatsapp:        #59cb3f;
+$social-linkedin:        #0071a1;
+$social-pinterest:       #b9252c;
+$social-messenger:       #0084ff;
+
+
+$garnett-small-button-size: 30px;
+$garnett-medium-button-size: 42px;
+$garnett-large-button-size: 50px;
+$garnett-x-large-button-size: 60px;
+
+$garnett-small-button-icon: 14px;
+$garnett-medium-button-icon: 16px;
+$garnett-large-button-icon: 20px;
+$garnett-x-large-button-icon: 24px;
+
+
+// MPU
+// =============================================================================
+$mpu-original-width: 300px;
+$mpu-original-height: 250px;
+$mpu-align-offset: 20px; // Align bottom of ad with text on desktop
+$mpu-ad-label-height: $gs-baseline*2;
+$mpu-skyscraper-width: 160px;
+
+// leaderboard
+// =============================================================================
+$leaderboard-width: 728px;
+$leaderboard-height: 90px;
+
+
+// Dimensions
+// =============================================================================
+$action-icon-width: 23px;
+$action-icon-rightspace: 7px;
+$content-top-padding: $gs-baseline / 1.5;
+
+
+// Available image widths
+// these should match the ones in common/modules/ui/images.js
+// =============================================================================
+$available-image-widths: 140px, 220px, 300px, 460px, 620px, 700px, 860px, 940px, 1430px, 1920px;
+
+
+// Other variables common to many partials
+// =============================================================================
+$popup-toggle-arrow-size: 4px;
+
+
+// z-index
+// =============================================================================
+$zindex-ui: 1000;      // UI elements
+$zindex-ads: 1010;     // Ads
+$zindex-content: 1015; // Modals and overlays inside content
+$zindex-sticky: 1020;  // Sticky header
+$zindex-modal: 1030;   // Search modal
+$zindex-overlay: 1050; // Overlays
+$zindex-notifications-permissions-warning: 1060; //Chrome Live Blog notifications
+$zindex-main-menu: 1070; // New header navigation dropdown
+$zindex-sticky-top-banner: 1080;  // Sticky header
+$zindex-popover: 1090; // Breaking news
+$zindex-lightbox: 1100; // Lightbox

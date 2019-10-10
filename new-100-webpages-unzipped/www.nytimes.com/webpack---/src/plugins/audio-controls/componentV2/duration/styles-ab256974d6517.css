@@ -1,0 +1,16 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/font-families.css"), undefined);
+// module
+exports.push([module.id, "@keyframes fadeIn-1wn-5f_4{0%{opacity:0}to{opacity:1}}.duration-1KbmuqXI{font-size:14px;color:#000;text-align:right;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;opacity:0;animation:fadeIn-1wn-5f_4 .4s ease-in .1s forwards}.light-3wwYDxOi.duration-1KbmuqXI{color:#fff}.duration-1KbmuqXI.duration--placeholder-v5SftPO0{font-weight:600;animation:none;opacity:1}", ""]);
+// exports
+exports.locals= {
+    "duration": "duration-1KbmuqXI " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!src/stylesheet/font-families.css").locals["franklin"] + "", "fadeIn": "fadeIn-1wn-5f_4", "light": "light-3wwYDxOi", "duration--placeholder": "duration--placeholder-v5SftPO0"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/audio-controls/componentV2/duration/styles.css
+// module id = 182
+// module chunks = 5

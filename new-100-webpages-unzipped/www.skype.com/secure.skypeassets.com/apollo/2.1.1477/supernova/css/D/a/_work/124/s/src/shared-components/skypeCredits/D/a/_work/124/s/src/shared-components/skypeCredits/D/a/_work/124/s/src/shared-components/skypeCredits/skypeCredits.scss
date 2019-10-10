@@ -1,0 +1,45 @@
+.supernova-skype-credits-component {
+  h3,
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  .icon-component {
+    display: inline-block;
+    padding-left: 5px;
+  }
+}
+
+.skype-credits-recharge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.supernova-credit-buttons {
+  .button-component {
+    align-self: center;
+  }
+}
+
+.supernova-skype-credits-balance {
+  .linkCta {
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+.skype-credits-auto-recharge-button a {
+  display: block;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+}

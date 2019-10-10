@@ -1,0 +1,22 @@
+module.exports = "
+<%if (data.hasContainer) {%>
+    <div class=\ "creative--fabric-v1-bg-container\">
+        <%}%>\n
+            <%if (data.showLabel) {%>\n
+                <div class=\ "ad-slot__label creative--fabric-v1__label fc-container--layout-front\">\n
+                    <div class=\ "fc-container__inner\">Advertisement</div>\n</div>\n
+                <%}%>\n
+                    <div id=\ "<%= data.id %>\" class=\ "creative--fabric-v1 l-side-margins hide-until-tablet\" style=\
+                        "\n    background-color: <%=data.backgroundColor%>;\n    background-image: url(<%=data.backgroundImage%>);\n    background-position: <%=data.backgroundPosition%>;\n    background-repeat: <%=data.backgroundRepeat%>;\n\">\n
+                        <%if (data.scrollbg) {%>
+                            <%=data.scrollbg%>
+                                <%}%>\n <a href=\ "<%=data.clickMacro%><%=data.link%>\" target=\ "_blank\">\n        <div class=\"gs-container\">\n            <%=data.video%>\n            <div class=\"fabric-v1_layer fabric-v1_layer1\" style=\"\n            background-image: url(<%=data.layerOneBGImage%>);\n            background-position: <%=data.layerOneBGPosition%>;\n        \"></div>\n            <div class=\"fabric-v1_layer fabric-v1_layer2\" style=\"\n            background-image: url(<%=data.layerTwoBGImage%>);\n            background-position: <%=data.layerTwoBGPosition%>;\n        \"></div>\n            <div class=\"fabric-v1_layer fabric-v1_layer3\" style=\"\n            background-image: url(<%=data.layerThreeBGImage%>);\n            background-position: <%=data.layerThreeBGPosition%>;\n        \"></div>\n        </div>\n    </a>\n</div>\n
+                    <div
+                        class=\ "creative--fabric-v1 l-side-margins mobile-only\" style=\
+                        "\n    background-color: <%=data.backgroundColor%>;\n    background-image: url(<%=data.backgroundImageM%>);\n    background-position: <%=data.backgroundPositionM%>;\n    background-repeat: <%=data.backgroundRepeatM%>;\n\">\n
+                        <%if (data.scrollbg) {%>
+                            <%=data.scrollbg%>
+                                <%}%>\n <a href=\ "<%=data.link%>\" target=\ "_blank\">\n        <div class=\"gs-container\">\n            <div class=\"fabric-v1_layer fabric-v1_layer1\" style=\"\n            background-image: url(<%=data.layerOneBGImageM%>);\n            background-position: <%=data.layerOneBGPositionM%>;\n        \"></div>\n            <div class=\"fabric-v1_layer fabric-v1_layer1\" style=\"\n            background-image: url(<%=data.layerTwoBGImageM%>);\n            background-position: <%=data.layerTwoBGPositionM%>;\n        \"></div>\n            <div class=\"fabric-v1_layer fabric-v1_layer1\" style=\"\n            background-image: url(<%=data.layerThreeBGImageM%>);\n            background-position: <%=data.layerThreeBGPositionM%>;\n        \"></div>\n        </div>\n    </a>\n</div>\n
+    <%if (data.hasContainer) {%>
+        </div>
+        <%}%>\n"

@@ -1,0 +1,15 @@
+
+{
+	"errId":"",
+	"errMsg":"",
+    "cartJson": {
+    	"resultCode":"0",   
+	    "cartInfo":{
+		    "Num":"0",	    
+		    "type":"4"
+		    
+	    },
+	    "code":"0"
+	}
+}
+

@@ -1,0 +1,59 @@
+module.exports = function anonymous(locals, filters, escape, rethrow) { escape = escape || function(html) { return String(html).replace(/&/g, "&amp;").replace(/
+</g, "&lt;").replace(/>/g, "&gt;").replace(/'/g, "&#39;").replace(/"/g, "&quot;"); }; var __stack = { lineno: 1, input: '
+<div class="vhs-plugin-controls-wrapper">\n
+    <div class="vhs-plugin-controls-gradient"></div>\n
+    <div\n class="\n      vhs-plugin-controls\n      vhs-controls-no-overlay\n      vhs-controls-no-touch\n      vhs-controls-hidden\n    " \n style="display: none;" \n role="region" \n aria-label="video control bar" \n>\n
+        <div class="vhs-plugin-controls-play-container">\n
+            <button\n class="vhs-plugin-controls-play vhs-icon-play" \n title="Play Video" \n aria-label="Play Video" \n>\n </button>\n </div>\n
+        <div class="vhs-plugin-controls-message-container">\n
+            <div class="vhs-plugin-controls-ad-label">Advertisement</div>\n
+            <div class="vhs-plugin-controls-live-label">\n
+                <div class="vhs-plugin-controls-live-circle"></div>LIVE\n </div>\n </div>\n
+        <div class="vhs-plugin-controls-progress">\n
+            <div class="vhs-plugin-controls-current-time" aria-hidden="true">00:00</div>\n
+            <div class="vhs-plugin-controls-progress-timeline">\n
+                <div\n class="vhs-plugin-controls-progress-slider" \n tabindex="0" \n role="slider" \n title="Seek" \n aria-label="Seek" \n aria-valuemin="0" \n aria-valuemax="0" \n aria-valuenow="0" \n aria-valuetext="0:00 of 0:00" \n>\n <span class="vhs-plugin-controls-progress-buffer"></span>\n <span class="vhs-plugin-controls-progress-scrubber"></span>\n <span class="vhs-plugin-controls-progress-time"></span>\n
+                    <span\n class="\n              vhs-plugin-controls-progress-marker\n              vhs-icon-circle"
+                        \n>\n </span>\n </div>\n </div>\n
+        <div class="vhs-plugin-controls-duration" aria-hidden="true">00:00</div>\n </div>\n
+<div class="vhs-plugin-controls-options-container">\n
+    <button\n class="\n          vhs-plugin-controls-option\n          vhs-plugin-controls-cc\n          vhs-icon-cc-disabled\n          vhs-icon-cc-off" \n title="Turn On Closed Captions" \n aria-label="Turn On Closed Captions" \n>\n </button>\n
+        <button\n class="\n          vhs-plugin-controls-option\n          vhs-plugin-controls-hd\n          vhs-icon-hd-off" \n title="Turn HD On" \n aria-label="Turn HD On" \n>\n </button>\n
+            <div\n class="\n          vhs-plugin-controls-option\n          vhs-plugin-controls-volume-container" \n>\n
+                <button\n class="\n            vhs-plugin-controls-volume\n            vhs-icon-volume-on" \n title="Mute" \n aria-label="Mute" \n>\n </button>\n
+                    <div class="vhs-plugin-controls-volume-slider-container">\n
+                        <div class="vhs-plugin-controls-volume-slider-track">\n
+                            <div class="vhs-plugin-controls-volume-slider-fill"></div>\n </div>\n <input\n class="vhs-plugin-controls-volume-slider" \n type="range" \n min="0" \n value="100" \n max="100" \n step="10" \n aria-valuemin="0" \n aria-valuemax="100" \n aria-valuenow="100" \n title="Adjust Volume"
+                            \n aria-label="Adjust Volume" \n />\n </div>\n </div>\n
+<button\n class="\n          vhs-plugin-controls-option\n          vhs-plugin-controls-fullscreen\n          vhs-icon-resize-full" \n title="Enter Fullscreen" \n aria-label="Enter Fullscreen"
+    \n>\n </button>\n </div>\n </div>\n</div>\n', filename: "." }; function rethrow(err, str, filename, lineno) { var lines = str.split("\n"), start = Math.max(lineno - 3, 0), end = Math.min(lines.length, lineno + 3); var context = lines.slice(start, end).map(function(line,
+    i) { var curr = i + start + 1; return (curr == lineno ? " >> " : " ") + curr + "| " + line; }).join("\n"); err.path = filename; err.message = (filename || "ejs") + ":" + lineno + "\n" + context + "\n\n" + err.message; throw err; } try { var buf =
+    []; with (locals || {}) { (function() { buf.push('
+    <div class="vhs-plugin-controls-wrapper">\n
+        <div class="vhs-plugin-controls-gradient"></div>\n
+        <div\n class="\n      vhs-plugin-controls\n      vhs-controls-no-overlay\n      vhs-controls-no-touch\n      vhs-controls-hidden\n    " \n style="display: none;" \n role="region" \n aria-label="video control bar" \n>\n
+            <div class="vhs-plugin-controls-play-container">\n
+                <button\n class="vhs-plugin-controls-play vhs-icon-play" \n title="Play Video" \n aria-label="Play Video" \n>\n </button>\n </div>\n
+            <div class="vhs-plugin-controls-message-container">\n
+                <div class="vhs-plugin-controls-ad-label">Advertisement</div>\n
+                <div class="vhs-plugin-controls-live-label">\n
+                    <div class="vhs-plugin-controls-live-circle"></div>LIVE\n </div>\n </div>\n
+            <div class="vhs-plugin-controls-progress">\n
+                <div class="vhs-plugin-controls-current-time" aria-hidden="true">00:00</div>\n
+                <div class="vhs-plugin-controls-progress-timeline">\n
+                    <div\n class="vhs-plugin-controls-progress-slider" \n tabindex="0" \n role="slider" \n title="Seek" \n aria-label="Seek" \n aria-valuemin="0" \n aria-valuemax="0" \n aria-valuenow="0" \n aria-valuetext="0:00 of 0:00" \n>\n <span class="vhs-plugin-controls-progress-buffer"></span>\n <span class="vhs-plugin-controls-progress-scrubber"></span>\n <span class="vhs-plugin-controls-progress-time"></span>\n
+                        <span\n class="\n              vhs-plugin-controls-progress-marker\n              vhs-icon-circle"
+                            \n>\n </span>\n </div>\n </div>\n
+            <div class="vhs-plugin-controls-duration" aria-hidden="true">00:00</div>\n </div>\n
+    <div class="vhs-plugin-controls-options-container">\n
+        <button\n class="\n          vhs-plugin-controls-option\n          vhs-plugin-controls-cc\n          vhs-icon-cc-disabled\n          vhs-icon-cc-off" \n title="Turn On Closed Captions" \n aria-label="Turn On Closed Captions" \n>\n </button>\n
+            <button\n class="\n          vhs-plugin-controls-option\n          vhs-plugin-controls-hd\n          vhs-icon-hd-off" \n title="Turn HD On" \n aria-label="Turn HD On" \n>\n </button>\n
+                <div\n class="\n          vhs-plugin-controls-option\n          vhs-plugin-controls-volume-container" \n>\n
+                    <button\n class="\n            vhs-plugin-controls-volume\n            vhs-icon-volume-on" \n title="Mute" \n aria-label="Mute" \n>\n </button>\n
+                        <div class="vhs-plugin-controls-volume-slider-container">\n
+                            <div class="vhs-plugin-controls-volume-slider-track">\n
+                                <div class="vhs-plugin-controls-volume-slider-fill"></div>\n </div>\n <input\n class="vhs-plugin-controls-volume-slider" \n type="range" \n min="0" \n value="100" \n max="100" \n step="10" \n aria-valuemin="0" \n aria-valuemax="100" \n aria-valuenow="100" \n title="Adjust Volume"
+                                \n aria-label="Adjust Volume" \n />\n </div>\n </div>\n
+    <button\n class="\n          vhs-plugin-controls-option\n          vhs-plugin-controls-fullscreen\n          vhs-icon-resize-full" \n title="Enter Fullscreen" \n aria-label="Enter Fullscreen"
+        \n>\n </button>\n </div>\n </div>\n</div>\n'); })(); } return buf.join(""); } catch (err) { rethrow(err, __stack.input, __stack.filename, __stack.lineno); } } ////////////////// // WEBPACK FOOTER // ./src/plugins/controls/template.html // module id =
+        262 // module chunks = 5

@@ -1,0 +1,1337 @@
+.module.empty_takeover {
+    display: none
+}
+
+.module.hero {
+    position: relative
+}
+
+.module.hero .slides li {
+    box-sizing: border-box
+}
+
+.module.hero .branding {
+    position: relative
+}
+
+.module.hero .branding .scaler {
+    padding-top: 56.5%
+}
+
+.module.hero .branding .overlay {
+    display: none
+}
+
+.module.hero .branding .left-overlay img {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.module.hero .branding .right-overlay img {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.module.hero .branding .background img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%
+}
+
+.module.hero .branding .video-box {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.module.hero .breakframe .scaler {
+    padding-top: 68.8%
+}
+
+.module.hero .content {
+    position: absolute;
+    top: 9.4%;
+    max-width: 512px;
+    text-align: center
+}
+
+.module.hero .content .video-container {
+    position: relative;
+    width: 100%
+}
+
+.module.hero .content .video-container .scaler {
+    padding-top: 56.25%
+}
+
+.module.hero .content .video-container .video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid #fff
+}
+
+.module.hero .content .logo img {
+    width: 100%
+}
+
+.module.hero .content a {
+    display: inline-block;
+    margin: 34px 10px 0;
+    padding: 9px 20px 8px
+}
+
+.module.hero .content.right {
+    right: 8.6%
+}
+
+.module.hero .content.left {
+    left: 8.6%
+}
+
+.module.hero .content.center {
+    right: 25%
+}
+
+.module.minihero,
+.module.channel_hero {
+    margin-bottom: 0;
+    padding-bottom: 36px
+}
+
+.module.minihero .branding,
+.module.channel_hero .branding {
+    position: relative
+}
+
+.module.minihero .branding .scaler,
+.module.channel_hero .branding .scaler {
+    padding-top: 53%
+}
+
+.module.minihero .branding .background img,
+.module.channel_hero .branding .background img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%
+}
+
+.module.minihero .branding .next,
+.module.minihero .branding .prev,
+.module.channel_hero .branding .next,
+.module.channel_hero .branding .prev {
+    top: 57%
+}
+
+.module.channel_hero {
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+.module.channel_hero a {
+    cursor: default
+}
+
+.module.channel_hero .dots {
+    display: none
+}
+
+.module.channel_hero h2.channel_section {
+    display: none
+}
+
+.module.channel_hero .channel_mini_hero {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 20px;
+    padding-right: 20px;
+    display: block;
+    width: 50%
+}
+
+.module.channel_hero .channel_mini_hero .featured_channel_img {
+    top: 0px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    display: block
+}
+
+.module.channel_hero .channel_mini_hero .featured_channel_img img {
+    width: 100%
+}
+
+.module.channel_hero .channel_mini_hero .featured_channel_img p {
+    vertical-align: top;
+    margin-top: 12px;
+    font-weight: 600;
+    line-height: 1.19;
+    font-size: 0.9em
+}
+
+.module.channel_hero .channel_mini_hero .featured_channel {
+    padding: 8px;
+    font-size: 1em;
+    margin-top: 12px;
+    background-color: #f7f7f7;
+    color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.module.channel_hero .channel_mini_hero .featured_channel img {
+    width: 25%;
+    vertical-align: top
+}
+
+.module.channel_hero .channel_mini_hero .featured_channel p {
+    width: 69%;
+    padding-left: 8px;
+    vertical-align: top;
+    margin-top: -2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block
+}
+
+.module.channel_hero.light .channel_mini_hero .featured_channel_img p {
+    color: #fff
+}
+
+.module.channel_hero.dark .channel_mini_hero .featured_channel_img p {
+    color: rgba(0, 0, 0, 0.9)
+}
+
+.module.channel_hero.cds .cds_box.hastxt {
+    display: block
+}
+
+.module.channel_hero.cds .cds_box.notxt {
+    display: none
+}
+
+@-moz-keyframes intro {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7)
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        transform: scale(1.02)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes intro {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7)
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        transform: scale(1.02)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@-ms-keyframes intro {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7)
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        transform: scale(1.02)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .module.hero .branding .scaler {
+        padding-top: 32.8%
+    }
+    .module.hero .content {
+        width: 48%
+    }
+    .module.hero .content .video-container {
+        -moz-animation: intro 500ms ease forwards;
+        -ms-animation: intro 500ms ease forwards;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8)
+    }
+    .module.hero .breakframe .dots {
+        margin-top: -40px
+    }
+    .module.hero .breakframe .scaler {
+        padding-top: 47.9%
+    }
+    .module.channel_hero h2.channel_section {
+        position: absolute;
+        bottom: 9px;
+        padding-left: 18px;
+        font-size: 3em;
+        font-weight: 700;
+        color: #fff;
+        text-shadow: rgba(0, 0, 0, 0.6) 0 1px 3px;
+        display: block
+    }
+    .module.channel_hero .channel_mini_hero {
+        right: 60px;
+        width: 33%;
+        display: block;
+        top: auto;
+        bottom: 0;
+        padding-bottom: 20px;
+        padding-top: 0px
+    }
+    .module.channel_hero .channel_mini_hero .featured_channel_img p {
+        margin-top: 15px;
+        font-size: 1em
+    }
+    .module.channel_hero .channel_mini_hero .featured_channel_img img {
+        width: 88%
+    }
+    .module.channel_hero .channel_mini_hero .featured_channel {
+        display: block;
+        margin-top: 20px;
+        font-size: 0.9em
+    }
+    .module.channel_hero .channel_mini_hero .no_desc_box,
+    .module.channel_hero .channel_mini_hero .cds_box {
+        height: 96px
+    }
+    .module.channel_hero .branding .scaler {
+        padding-top: 31.24%
+    }
+    .module.channel_hero .channel_mini_hero {
+        right: 60px;
+        padding-right: 0px
+    }
+    .module.channel_hero .channel_mini_hero .featured_channel_img p {
+        font-size: 0.9em
+    }
+    .module.channel_hero .channel_mini_hero .featured_channel {
+        font-size: 0.78em
+    }
+    .module.channel_hero .channel_mini_hero .no_desc_box,
+    .module.channel_hero .channel_mini_hero .cds_box {
+        height: 62px
+    }
+    .module.channel_hero .channel_mini_hero .cds_box {
+        display: none
+    }
+    .module.channel_hero .branding .scaler {
+        padding-top: 31.25%
+    }
+    .module.channel_hero .next,
+    .module.channel_hero .prev {
+        top: 57%
+    }
+    .module.channel_hero.cds .cds_box {
+        display: block
+    }
+    .module.channel_hero.cds .featured_link {
+        display: none
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .module.hero .content {
+        width: 60%
+    }
+    .module.hero .branding .overlay {
+        display: block
+    }
+    .module.channel_hero h2.channel_section {
+        position: absolute;
+        bottom: 9px;
+        padding-left: 18px;
+        font-size: 3em;
+        font-weight: 700;
+        color: #fff;
+        text-shadow: rgba(0, 0, 0, 0.6) 0 1px 3px;
+        display: block
+    }
+    .module.channel_hero .channel_mini_hero {
+        right: 60px;
+        width: 33%;
+        display: block;
+        top: auto;
+        bottom: 0;
+        padding-bottom: 20px;
+        padding-top: 0px
+    }
+    .module.channel_hero .channel_mini_hero .featured_channel_img p {
+        margin-top: 15px;
+        font-size: 1em
+    }
+    .module.channel_hero .channel_mini_hero .featured_channel_img img {
+        width: 88%
+    }
+    .module.channel_hero .channel_mini_hero .featured_channel {
+        display: block;
+        margin-top: 20px;
+        font-size: 0.9em
+    }
+    .module.channel_hero .channel_mini_hero .no_desc_box,
+    .module.channel_hero .channel_mini_hero .cds_box {
+        height: 96px
+    }
+}
+
+.module.hero_universal,
+.module.rich_media,
+.module.channel_hero,
+.module.minihero {
+    position: relative;
+    margin-bottom: 0;
+    z-index: 10;
+    width: 100%;
+    overflow: visible
+}
+
+.module.hero_universal .carousel,
+.module.rich_media .carousel,
+.module.channel_hero .carousel,
+.module.minihero .carousel {
+    overflow: hidden
+}
+
+.module.hero_universal .carousel .slides li,
+.module.rich_media .carousel .slides li,
+.module.channel_hero .carousel .slides li,
+.module.minihero .carousel .slides li {
+    position: relative;
+    box-sizing: border-box
+}
+
+.module.hero_universal .carousel .slides li .branding,
+.module.rich_media .carousel .slides li .branding,
+.module.channel_hero .carousel .slides li .branding,
+.module.minihero .carousel .slides li .branding {
+    position: relative;
+    width: 100%;
+    overflow: hidden
+}
+
+.module.hero_universal .carousel .slides li .branding .scaler,
+.module.rich_media .carousel .slides li .branding .scaler,
+.module.channel_hero .carousel .slides li .branding .scaler,
+.module.minihero .carousel .slides li .branding .scaler {
+    padding-top: 50%
+}
+
+.module.hero_universal .carousel .slides li .branding .overlay,
+.module.rich_media .carousel .slides li .branding .overlay,
+.module.channel_hero .carousel .slides li .branding .overlay,
+.module.minihero .carousel .slides li .branding .overlay {
+    display: none
+}
+
+.module.hero_universal .carousel .slides li .branding .left-overlay img,
+.module.hero_universal .carousel .slides li .branding .right-overlay img,
+.module.rich_media .carousel .slides li .branding .left-overlay img,
+.module.rich_media .carousel .slides li .branding .right-overlay img,
+.module.channel_hero .carousel .slides li .branding .left-overlay img,
+.module.channel_hero .carousel .slides li .branding .right-overlay img,
+.module.minihero .carousel .slides li .branding .left-overlay img,
+.module.minihero .carousel .slides li .branding .right-overlay img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    overflow: hidden
+}
+
+.module.hero_universal .carousel .slides li .branding .left-overlay img,
+.module.rich_media .carousel .slides li .branding .left-overlay img,
+.module.channel_hero .carousel .slides li .branding .left-overlay img,
+.module.minihero .carousel .slides li .branding .left-overlay img {
+    right: 100%
+}
+
+.module.hero_universal .carousel .slides li .branding .right-overlay img,
+.module.rich_media .carousel .slides li .branding .right-overlay img,
+.module.channel_hero .carousel .slides li .branding .right-overlay img,
+.module.minihero .carousel .slides li .branding .right-overlay img {
+    left: 100%
+}
+
+.module.hero_universal .carousel .slides li .branding .background img,
+.module.rich_media .carousel .slides li .branding .background img,
+.module.channel_hero .carousel .slides li .branding .background img,
+.module.minihero .carousel .slides li .branding .background img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%
+}
+
+.module.hero_universal .carousel .slides li .branding .video-wrapper,
+.module.rich_media .carousel .slides li .branding .video-wrapper,
+.module.channel_hero .carousel .slides li .branding .video-wrapper,
+.module.minihero .carousel .slides li .branding .video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.module.hero_universal .carousel .slides li .branding .video-wrapper video,
+.module.rich_media .carousel .slides li .branding .video-wrapper video,
+.module.channel_hero .carousel .slides li .branding .video-wrapper video,
+.module.minihero .carousel .slides li .branding .video-wrapper video {
+    width: 100%;
+    display: none
+}
+
+.module.hero_universal .carousel .slides li .branding .video-wrapper .replay-button-box,
+.module.rich_media .carousel .slides li .branding .video-wrapper .replay-button-box,
+.module.channel_hero .carousel .slides li .branding .video-wrapper .replay-button-box,
+.module.minihero .carousel .slides li .branding .video-wrapper .replay-button-box {
+    opacity: 0
+}
+
+.module.hero_universal .carousel .slides li .content,
+.module.rich_media .carousel .slides li .content,
+.module.channel_hero .carousel .slides li .content,
+.module.minihero .carousel .slides li .content {
+    z-index: 1;
+    position: absolute;
+    width: 48%;
+    color: #fff;
+    bottom: 28px
+}
+
+.module.hero_universal .carousel .slides li .content h2,
+.module.hero_universal .carousel .slides li .content h3,
+.module.rich_media .carousel .slides li .content h2,
+.module.rich_media .carousel .slides li .content h3,
+.module.channel_hero .carousel .slides li .content h2,
+.module.channel_hero .carousel .slides li .content h3,
+.module.minihero .carousel .slides li .content h2,
+.module.minihero .carousel .slides li .content h3 {
+    color: #fff
+}
+
+.module.hero_universal .carousel .slides li .content h2.dark,
+.module.hero_universal .carousel .slides li .content h3.dark,
+.module.rich_media .carousel .slides li .content h2.dark,
+.module.rich_media .carousel .slides li .content h3.dark,
+.module.channel_hero .carousel .slides li .content h2.dark,
+.module.channel_hero .carousel .slides li .content h3.dark,
+.module.minihero .carousel .slides li .content h2.dark,
+.module.minihero .carousel .slides li .content h3.dark {
+    color: #000
+}
+
+.module.hero_universal .carousel .slides li .content h2,
+.module.rich_media .carousel .slides li .content h2,
+.module.channel_hero .carousel .slides li .content h2,
+.module.minihero .carousel .slides li .content h2 {
+    font-weight: 700;
+    letter-spacing: -0.02em
+}
+
+.module.hero_universal .carousel .slides li .content .button,
+.module.rich_media .carousel .slides li .content .button,
+.module.channel_hero .carousel .slides li .content .button,
+.module.minihero .carousel .slides li .content .button {
+    display: none
+}
+
+.module.hero_universal .carousel .slides li .content .logo img,
+.module.rich_media .carousel .slides li .content .logo img,
+.module.channel_hero .carousel .slides li .content .logo img,
+.module.minihero .carousel .slides li .content .logo img {
+    width: 100%
+}
+
+.module.hero_universal .carousel .slides li .content .logo h2,
+.module.rich_media .carousel .slides li .content .logo h2,
+.module.channel_hero .carousel .slides li .content .logo h2,
+.module.minihero .carousel .slides li .content .logo h2 {
+    font-size: 1.2em;
+    line-height: 1em
+}
+
+.module.hero_universal .carousel .slides li .content .logo h3,
+.module.rich_media .carousel .slides li .content .logo h3,
+.module.channel_hero .carousel .slides li .content .logo h3,
+.module.minihero .carousel .slides li .content .logo h3 {
+    font-size: 0.8em;
+    margin-top: 6px
+}
+
+.module.hero_universal .carousel .slides li .content .logo .heading,
+.module.rich_media .carousel .slides li .content .logo .heading,
+.module.channel_hero .carousel .slides li .content .logo .heading,
+.module.minihero .carousel .slides li .content .logo .heading {
+    font-size: 1.1em
+}
+
+.module.hero_universal .carousel .slides li .content a,
+.module.rich_media .carousel .slides li .content a,
+.module.channel_hero .carousel .slides li .content a,
+.module.minihero .carousel .slides li .content a {
+    display: block
+}
+
+.module.hero_universal .carousel .slides li .content.right,
+.module.rich_media .carousel .slides li .content.right,
+.module.channel_hero .carousel .slides li .content.right,
+.module.minihero .carousel .slides li .content.right {
+    right: 16px;
+    text-align: right
+}
+
+.module.hero_universal .carousel .slides li .content.right a,
+.module.rich_media .carousel .slides li .content.right a,
+.module.channel_hero .carousel .slides li .content.right a,
+.module.minihero .carousel .slides li .content.right a {
+    margin: 20px 0 0 8px
+}
+
+.module.hero_universal .carousel .slides li .content.left,
+.module.rich_media .carousel .slides li .content.left,
+.module.channel_hero .carousel .slides li .content.left,
+.module.minihero .carousel .slides li .content.left {
+    left: 16px;
+    text-align: left
+}
+
+.module.hero_universal .carousel .slides li .content.center,
+.module.rich_media .carousel .slides li .content.center,
+.module.channel_hero .carousel .slides li .content.center,
+.module.minihero .carousel .slides li .content.center {
+    right: 25%
+}
+
+.module.hero_universal .carousel .dots,
+.module.rich_media .carousel .dots,
+.module.channel_hero .carousel .dots,
+.module.minihero .carousel .dots {
+    margin-top: 0;
+    bottom: 4px;
+    z-index: 3
+}
+
+.module.hero_universal .carousel .dots .dot,
+.module.rich_media .carousel .dots .dot,
+.module.channel_hero .carousel .dots .dot,
+.module.minihero .carousel .dots .dot {
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    margin: 0 4px;
+    width: 10px;
+    height: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3);
+    -webkit-transition: background 0.33s;
+    -moz-transition: background 0.33s;
+    transition: background 0.33s
+}
+
+.module.hero_universal .carousel .dots .dot.active,
+.module.rich_media .carousel .dots .dot.active,
+.module.channel_hero .carousel .dots .dot.active,
+.module.minihero .carousel .dots .dot.active {
+    background: white
+}
+
+.module.hero_universal .carousel.identity .slides,
+.module.hero_universal .carousel.identity .dots,
+.module.rich_media .carousel.identity .slides,
+.module.rich_media .carousel.identity .dots,
+.module.channel_hero .carousel.identity .slides,
+.module.channel_hero .carousel.identity .dots,
+.module.minihero .carousel.identity .slides,
+.module.minihero .carousel.identity .dots {
+    display: none
+}
+
+.module.hero_universal .carousel.identity.no-thumbs .slides,
+.module.hero_universal .carousel.identity.no-thumbs .dots,
+.module.rich_media .carousel.identity.no-thumbs .slides,
+.module.rich_media .carousel.identity.no-thumbs .dots,
+.module.channel_hero .carousel.identity.no-thumbs .slides,
+.module.channel_hero .carousel.identity.no-thumbs .dots,
+.module.minihero .carousel.identity.no-thumbs .slides,
+.module.minihero .carousel.identity.no-thumbs .dots {
+    display: block
+}
+
+.module.hero_universal .carousel.identity.no-thumbs+.personality-details,
+.module.rich_media .carousel.identity.no-thumbs+.personality-details,
+.module.channel_hero .carousel.identity.no-thumbs+.personality-details,
+.module.minihero .carousel.identity.no-thumbs+.personality-details {
+    display: none
+}
+
+.module.hero_universal .personality-details,
+.module.rich_media .personality-details,
+.module.channel_hero .personality-details,
+.module.minihero .personality-details {
+    box-sizing: border-box;
+    background-color: #333;
+    padding: 20px 40px 32px;
+    bottom: 0;
+    width: 100%;
+    z-index: 2
+}
+
+.module.hero_universal .personality-details h1,
+.module.rich_media .personality-details h1,
+.module.channel_hero .personality-details h1,
+.module.minihero .personality-details h1 {
+    font-size: 1.75em;
+    line-height: 1.2em;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+    margin-bottom: 8px
+}
+
+.module.hero_universal .personality-details .desc,
+.module.rich_media .personality-details .desc,
+.module.channel_hero .personality-details .desc,
+.module.minihero .personality-details .desc {
+    color: #fff;
+    width: auto;
+    display: block;
+    font-size: 1em;
+    line-height: 1.5em
+}
+
+.module.hero_universal .personality-details .headshot,
+.module.rich_media .personality-details .headshot,
+.module.channel_hero .personality-details .headshot,
+.module.minihero .personality-details .headshot {
+    position: relative;
+    display: block;
+    margin: 16px 0
+}
+
+.module.hero_universal .personality-details .personality-box,
+.module.rich_media .personality-details .personality-box,
+.module.channel_hero .personality-details .personality-box,
+.module.minihero .personality-details .personality-box {
+    margin: 0 auto;
+    max-width: 320px
+}
+
+.module.hero_universal .personality-details .personality-box .aspect,
+.module.rich_media .personality-details .personality-box .aspect,
+.module.channel_hero .personality-details .personality-box .aspect,
+.module.minihero .personality-details .personality-box .aspect {
+    position: relative;
+    display: block
+}
+
+.module.hero_universal .personality-details .personality-box .aspect img,
+.module.rich_media .personality-details .personality-box .aspect img,
+.module.channel_hero .personality-details .personality-box .aspect img,
+.module.minihero .personality-details .personality-box .aspect img {
+    width: 100%;
+    left: 0
+}
+
+.module.hero_universal .personality-details .personality-box .aspect:before,
+.module.rich_media .personality-details .personality-box .aspect:before,
+.module.channel_hero .personality-details .personality-box .aspect:before,
+.module.minihero .personality-details .personality-box .aspect:before {
+    display: none
+}
+
+.module.rich_media .carousel .slides li .branding .scaler {
+    padding-top: 69.375%
+}
+
+@-webkit-keyframes intro {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.7)
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(1.02)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1)
+    }
+}
+
+@-moz-keyframes intro {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(0.7)
+    }
+    80% {
+        opacity: 1;
+        -moz-transform: scale(1.02)
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: scale(1)
+    }
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7)
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        transform: scale(1.02)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .module.hero_universal .carousel .slides li .content .logo h2,
+    .module.rich_media .carousel .slides li .content .logo h2,
+    .module.channel_hero .carousel .slides li .content .logo h2,
+    .module.minihero .carousel .slides li .content .logo h2 {
+        font-size: 1.4em
+    }
+    .module.hero_universal .carousel .slides li .content .logo h3,
+    .module.rich_media .carousel .slides li .content .logo h3,
+    .module.channel_hero .carousel .slides li .content .logo h3,
+    .module.minihero .carousel .slides li .content .logo h3 {
+        font-size: 0.85em
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .module.hero_universal .carousel .slides li .content,
+    .module.rich_media .carousel .slides li .content,
+    .module.channel_hero .carousel .slides li .content,
+    .module.minihero .carousel .slides li .content {
+        bottom: 32px
+    }
+    .module.hero_universal .carousel .slides li .content.left,
+    .module.rich_media .carousel .slides li .content.left,
+    .module.channel_hero .carousel .slides li .content.left,
+    .module.minihero .carousel .slides li .content.left {
+        left: 32px
+    }
+    .module.hero_universal .carousel .slides li .content.right,
+    .module.rich_media .carousel .slides li .content.right,
+    .module.channel_hero .carousel .slides li .content.right,
+    .module.minihero .carousel .slides li .content.right {
+        right: 32px
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .module.hero .branding .scaler,
+    .module.hero_slider .branding .scaler {
+        padding-top: 32.8%
+    }
+    .module.hero .content,
+    .module.hero_slider .content {
+        width: 46%;
+        top: 32px
+    }
+    .module.hero .content .video-container,
+    .module.hero_slider .content .video-container {
+        -webkit-animation: intro 500ms ease forwards;
+        -moz-animation: intro 500ms ease forwards;
+        animation: intro 500ms ease forwards;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8)
+    }
+    .module.hero .content a,
+    .module.hero_slider .content a {
+        padding: 0;
+        margin: 0
+    }
+    .module.hero .breakframe .dots,
+    .module.hero_slider .breakframe .dots {
+        margin-top: -40px
+    }
+    .module.hero .breakframe .scaler,
+    .module.hero_slider .breakframe .scaler {
+        padding-top: 47.9%
+    }
+    .module.hero_universal .carousel .slides li .branding,
+    .module.rich_media .carousel .slides li .branding,
+    .module.channel_hero .carousel .slides li .branding,
+    .module.minihero .carousel .slides li .branding {
+        overflow: visible
+    }
+    .module.hero_universal .carousel .slides li .branding .scaler,
+    .module.rich_media .carousel .slides li .branding .scaler,
+    .module.channel_hero .carousel .slides li .branding .scaler,
+    .module.minihero .carousel .slides li .branding .scaler {
+        padding-top: 31.25%
+    }
+    .module.hero_universal .carousel .slides li .branding .video-wrapper video,
+    .module.rich_media .carousel .slides li .branding .video-wrapper video,
+    .module.channel_hero .carousel .slides li .branding .video-wrapper video,
+    .module.minihero .carousel .slides li .branding .video-wrapper video {
+        display: block
+    }
+    .module.hero_universal .carousel .slides li .branding .video-wrapper.looping .replay-button-box,
+    .module.rich_media .carousel .slides li .branding .video-wrapper.looping .replay-button-box,
+    .module.channel_hero .carousel .slides li .branding .video-wrapper.looping .replay-button-box,
+    .module.minihero .carousel .slides li .branding .video-wrapper.looping .replay-button-box {
+        opacity: 0
+    }
+    .module.hero_universal .carousel .slides li .branding .video-wrapper.single-play .replay-button-box,
+    .module.rich_media .carousel .slides li .branding .video-wrapper.single-play .replay-button-box,
+    .module.channel_hero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box,
+    .module.minihero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box {
+        -webkit-transition: opacity 0.5s;
+        -moz-transition: opacity 0.5s;
+        transition: opacity 0.5s
+    }
+    .module.hero_universal .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay,
+    .module.rich_media .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay,
+    .module.channel_hero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay,
+    .module.minihero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay {
+        background-image: url(https://static-mh.content.disney.io/matterhorn/assets/utility/replay_btn-6ada8bca1ef5.png);
+        background-size: 27px 27px;
+        background-position: 46px 0;
+        background-repeat: no-repeat;
+        box-shadow: none;
+        opacity: 0.7;
+        height: 28px;
+        border: none;
+        color: #fff;
+        padding: 14px 24px 12px 2px;
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        font-size: 1em;
+        font-weight: 600;
+        -webkit-transition: opacity 0.5s;
+        -moz-transition: opacity 0.5s;
+        transition: opacity 0.5s
+    }
+}
+
+@media only screen and (min-width: 680px) and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (min-width: 680px) and (min--moz-device-pixel-ratio: 1.3),
+only screen and (min-width: 680px) and (-o-min-device-pixel-ratio: 1.3 / 1),
+only screen and (min-width: 680px) and (min-resolution: 125dpi),
+only screen and (min-width: 680px) and (min-resolution: 1.3dppx) {
+    .module.hero_universal .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay,
+    .module.rich_media .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay,
+    .module.channel_hero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay,
+    .module.minihero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay {
+        background-image: url(https://static-mh.content.disney.io/matterhorn/assets/utility/replay_btn@2x-89b30264f46f.png)
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .module.hero_universal .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay:hover,
+    .module.rich_media .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay:hover,
+    .module.channel_hero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay:hover,
+    .module.minihero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box .button.replay:hover {
+        opacity: 1
+    }
+    .module.hero_universal .carousel .slides li .branding .video-wrapper.single-play .replay-button-box.dark-theme .button.replay,
+    .module.rich_media .carousel .slides li .branding .video-wrapper.single-play .replay-button-box.dark-theme .button.replay,
+    .module.channel_hero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box.dark-theme .button.replay,
+    .module.minihero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box.dark-theme .button.replay {
+        color: #222;
+        background-image: url(https://static-mh.content.disney.io/matterhorn/assets/utility/replay_btn_dark-9a2ec0b35720.png);
+        background-size: 27px 27px
+    }
+}
+
+@media only screen and (min-width: 680px) and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (min-width: 680px) and (min--moz-device-pixel-ratio: 1.3),
+only screen and (min-width: 680px) and (-o-min-device-pixel-ratio: 1.3 / 1),
+only screen and (min-width: 680px) and (min-resolution: 125dpi),
+only screen and (min-width: 680px) and (min-resolution: 1.3dppx) {
+    .module.hero_universal .carousel .slides li .branding .video-wrapper.single-play .replay-button-box.dark-theme .button.replay,
+    .module.rich_media .carousel .slides li .branding .video-wrapper.single-play .replay-button-box.dark-theme .button.replay,
+    .module.channel_hero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box.dark-theme .button.replay,
+    .module.minihero .carousel .slides li .branding .video-wrapper.single-play .replay-button-box.dark-theme .button.replay {
+        background-image: url(https://static-mh.content.disney.io/matterhorn/assets/utility/replay_btn_dark@2x-7916e4e98b1b.png)
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .module.hero_universal .carousel .slides li .branding .video-wrapper .replay-button-box.right .button.replay,
+    .module.rich_media .carousel .slides li .branding .video-wrapper .replay-button-box.right .button.replay,
+    .module.channel_hero .carousel .slides li .branding .video-wrapper .replay-button-box.right .button.replay,
+    .module.minihero .carousel .slides li .branding .video-wrapper .replay-button-box.right .button.replay {
+        left: 10px;
+        right: auto
+    }
+    .module.hero_universal .carousel .slides li .content,
+    .module.rich_media .carousel .slides li .content,
+    .module.channel_hero .carousel .slides li .content,
+    .module.minihero .carousel .slides li .content {
+        width: 36%;
+        bottom: 32px
+    }
+    .module.hero_universal .carousel .slides li .content h2,
+    .module.rich_media .carousel .slides li .content h2,
+    .module.channel_hero .carousel .slides li .content h2,
+    .module.minihero .carousel .slides li .content h2 {
+        font-size: 1.6em
+    }
+    .module.hero_universal .carousel .slides li .content h3,
+    .module.rich_media .carousel .slides li .content h3,
+    .module.channel_hero .carousel .slides li .content h3,
+    .module.minihero .carousel .slides li .content h3 {
+        margin-top: 10px
+    }
+    .module.hero_universal .carousel .slides li .content a,
+    .module.rich_media .carousel .slides li .content a,
+    .module.channel_hero .carousel .slides li .content a,
+    .module.minihero .carousel .slides li .content a {
+        padding: 0;
+        margin: 0
+    }
+    .module.hero_universal .carousel .slides li .content .button,
+    .module.rich_media .carousel .slides li .content .button,
+    .module.channel_hero .carousel .slides li .content .button,
+    .module.minihero .carousel .slides li .content .button {
+        display: inline-block;
+        padding: 8px 20px;
+        margin-top: 16px
+    }
+    .module.hero_universal .carousel .slides li .content .logo h2,
+    .module.rich_media .carousel .slides li .content .logo h2,
+    .module.channel_hero .carousel .slides li .content .logo h2,
+    .module.minihero .carousel .slides li .content .logo h2 {
+        font-size: 1.6em;
+        line-height: 1.2em
+    }
+    .module.hero_universal .carousel .slides li .content .logo h3,
+    .module.rich_media .carousel .slides li .content .logo h3,
+    .module.channel_hero .carousel .slides li .content .logo h3,
+    .module.minihero .carousel .slides li .content .logo h3 {
+        font-size: 1em
+    }
+    .module.hero_universal .carousel .slides li .content .logo .button,
+    .module.rich_media .carousel .slides li .content .logo .button,
+    .module.channel_hero .carousel .slides li .content .logo .button,
+    .module.minihero .carousel .slides li .content .logo .button {
+        margin-top: 16px
+    }
+    .module.hero_universal .carousel .slides li .content.right,
+    .module.rich_media .carousel .slides li .content.right,
+    .module.channel_hero .carousel .slides li .content.right,
+    .module.minihero .carousel .slides li .content.right {
+        right: 48px
+    }
+    .module.hero_universal .carousel .slides li .content.left,
+    .module.rich_media .carousel .slides li .content.left,
+    .module.channel_hero .carousel .slides li .content.left,
+    .module.minihero .carousel .slides li .content.left {
+        left: 48px
+    }
+    .module.hero_universal .carousel .slides li.finished .video-wrapper.single-play .replay-button-box,
+    .module.rich_media .carousel .slides li.finished .video-wrapper.single-play .replay-button-box,
+    .module.channel_hero .carousel .slides li.finished .video-wrapper.single-play .replay-button-box,
+    .module.minihero .carousel .slides li.finished .video-wrapper.single-play .replay-button-box {
+        opacity: 1;
+        -webkit-transition: opacity 1s 1s;
+        -moz-transition: opacity 1s 1s;
+        transition: opacity 1s 1s
+    }
+    .module.hero_universal .carousel .slides li.finished .content,
+    .module.rich_media .carousel .slides li.finished .content,
+    .module.channel_hero .carousel .slides li.finished .content,
+    .module.minihero .carousel .slides li.finished .content {
+        opacity: 1;
+        -webkit-transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        transition: opacity 1s
+    }
+    .module.hero_universal .carousel .dots,
+    .module.rich_media .carousel .dots,
+    .module.channel_hero .carousel .dots,
+    .module.minihero .carousel .dots {
+        bottom: 8px
+    }
+    .module.hero_universal .carousel .dots .dot,
+    .module.rich_media .carousel .dots .dot,
+    .module.channel_hero .carousel .dots .dot,
+    .module.minihero .carousel .dots .dot {
+        margin: 0 6px;
+        width: 12px;
+        height: 12px
+    }
+    .module.hero_universal .carousel.identity .slides,
+    .module.hero_universal .carousel.identity .dots,
+    .module.rich_media .carousel.identity .slides,
+    .module.rich_media .carousel.identity .dots,
+    .module.channel_hero .carousel.identity .slides,
+    .module.channel_hero .carousel.identity .dots,
+    .module.minihero .carousel.identity .slides,
+    .module.minihero .carousel.identity .dots {
+        display: block
+    }
+    .module.hero_universal .carousel.identity.no-thumbs+.personality-details,
+    .module.rich_media .carousel.identity.no-thumbs+.personality-details,
+    .module.channel_hero .carousel.identity.no-thumbs+.personality-details,
+    .module.minihero .carousel.identity.no-thumbs+.personality-details {
+        display: block
+    }
+    .module.hero_universal .personality-details,
+    .module.rich_media .personality-details,
+    .module.channel_hero .personality-details,
+    .module.minihero .personality-details {
+        position: absolute;
+        width: 50%;
+        display: block;
+        background-color: transparent !important
+    }
+    .module.hero_universal .personality-details h1,
+    .module.rich_media .personality-details h1,
+    .module.channel_hero .personality-details h1,
+    .module.minihero .personality-details h1 {
+        font-size: 1.7em;
+        text-align: left
+    }
+    [dir="rtl"] .module.hero_universal .personality-details h1,
+    [dir="rtl"] .module.rich_media .personality-details h1,
+    [dir="rtl"] .module.channel_hero .personality-details h1,
+    [dir="rtl"] .module.minihero .personality-details h1 {
+        text-align: right
+    }
+    .module.hero_universal .personality-details .desc,
+    .module.rich_media .personality-details .desc,
+    .module.channel_hero .personality-details .desc,
+    .module.minihero .personality-details .desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        display: -webkit-box
+    }
+    .module.hero_universal .personality-details .headshot,
+    .module.rich_media .personality-details .headshot,
+    .module.channel_hero .personality-details .headshot,
+    .module.minihero .personality-details .headshot {
+        display: none
+    }
+    .module.hero_universal .personality-details.dark h1,
+    .module.hero_universal .personality-details.dark .desc,
+    .module.rich_media .personality-details.dark h1,
+    .module.rich_media .personality-details.dark .desc,
+    .module.channel_hero .personality-details.dark h1,
+    .module.channel_hero .personality-details.dark .desc,
+    .module.minihero .personality-details.dark h1,
+    .module.minihero .personality-details.dark .desc {
+        color: #000;
+        text-shadow: none
+    }
+    .module.hero_universal .personality-details.light h1,
+    .module.hero_universal .personality-details.light .desc,
+    .module.rich_media .personality-details.light h1,
+    .module.rich_media .personality-details.light .desc,
+    .module.channel_hero .personality-details.light h1,
+    .module.channel_hero .personality-details.light .desc,
+    .module.minihero .personality-details.light h1,
+    .module.minihero .personality-details.light .desc {
+        color: #fff
+    }
+    .module.hero_universal .personality-details.left,
+    .module.rich_media .personality-details.left,
+    .module.channel_hero .personality-details.left,
+    .module.minihero .personality-details.left {
+        padding: 0 0 32px 40px;
+        left: 0;
+        bottom: 0
+    }
+    .module.hero_universal .personality-details.right,
+    .module.rich_media .personality-details.right,
+    .module.channel_hero .personality-details.right,
+    .module.minihero .personality-details.right {
+        padding: 0 48px 32px 0;
+        right: 0;
+        top: auto;
+        bottom: 0
+    }
+    .module.hero_universal .personality-details.rag_right,
+    .module.rich_media .personality-details.rag_right,
+    .module.channel_hero .personality-details.rag_right,
+    .module.minihero .personality-details.rag_right {
+        text-align: right
+    }
+    .module.hero_universal .personality-details.rag_right h1,
+    .module.rich_media .personality-details.rag_right h1,
+    .module.channel_hero .personality-details.rag_right h1,
+    .module.minihero .personality-details.rag_right h1 {
+        text-align: right
+    }
+    .module.hero_universal .carousel.standard .slides li .branding .scaler,
+    .module.rich_media .carousel.standard .slides li .branding .scaler,
+    .module.channel_hero .carousel.standard .slides li .branding .scaler,
+    .module.minihero .carousel.standard .slides li .branding .scaler {
+        padding-top: 31.25%
+    }
+    .module.hero_universal .carousel.small .slides li .branding .scaler,
+    .module.rich_media .carousel.small .slides li .branding .scaler,
+    .module.channel_hero .carousel.small .slides li .branding .scaler,
+    .module.minihero .carousel.small .slides li .branding .scaler {
+        padding-top: 19.53125%
+    }
+    .module.hero_universal .carousel.oversized .slides li .branding .scaler,
+    .module.rich_media .carousel.oversized .slides li .branding .scaler,
+    .module.channel_hero .carousel.oversized .slides li .branding .scaler,
+    .module.minihero .carousel.oversized .slides li .branding .scaler {
+        padding-top: 43.26172%
+    }
+    .module.rich_media .carousel .slides li .branding .scaler {
+        padding-top: 43.16406%
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .module.hero_universal .carousel .slides li .content,
+    .module.rich_media .carousel .slides li .content {
+        width: 35%
+    }
+    .module.hero_universal .carousel .slides li .branding .content,
+    .module.rich_media .carousel .slides li .branding .content {
+        opacity: 1;
+        width: 60%;
+        top: 9.4%
+    }
+    .module.hero_universal .carousel.universal .slides li .content,
+    .module.rich_media .carousel.universal .slides li .content {
+        bottom: 36px
+    }
+    .module.hero_universal .carousel.universal .slides li .content h2,
+    .module.rich_media .carousel.universal .slides li .content h2 {
+        font-size: 2.1em
+    }
+    .module.hero_universal .carousel.universal .slides li .content.right,
+    .module.rich_media .carousel.universal .slides li .content.right {
+        right: 60px
+    }
+    .module.hero_universal .carousel.universal .slides li .content.right a.button,
+    .module.rich_media .carousel.universal .slides li .content.right a.button {
+        margin: 20px 0 0 8px
+    }
+    .module.hero_universal .carousel.universal .slides li .content.left,
+    .module.rich_media .carousel.universal .slides li .content.left {
+        left: 60px
+    }
+    .module.hero_universal .carousel.universal .slides li .content.left a.button,
+    .module.rich_media .carousel.universal .slides li .content.left a.button {
+        margin: 20px 8px 0 0
+    }
+    .module.hero_universal .personality-details h1,
+    .module.rich_media .personality-details h1 {
+        font-size: 2.6em
+    }
+}
+
+@media screen and (max-width: 679px) {
+    .module.hero_universal .personality-details h1 {
+        color: #fff !important
+    }
+    .module.hero_universal .personality-details .desc {
+        color: rgba(255, 255, 255, 0.86) !important
+    }
+    .module.hero_universal .personality-details .aspect {
+        overflow: hidden;
+        border-radius: 6px
+    }
+}
+
+.no-js .module.hero_universal .carousel .slides li {
+    display: none
+}
+
+.no-js .module.hero_universal .carousel .slides li:first-of-type {
+    display: block
+}

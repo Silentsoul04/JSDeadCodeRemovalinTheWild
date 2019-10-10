@@ -1,0 +1,16 @@
+exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, "@keyframes spin{to{transform:rotate(1turn)}}.vhs-buffering-container{z-index:6;cursor:wait}.vhs-buffering-container,.vhs-buffering-spinner{position:absolute;margin:auto;top:0;left:0;right:0;bottom:0}.vhs-buffering-spinner{width:5em;height:5em;text-indent:999em;animation:spin 1s infinite steps(8);font-size:8px}.vhs-buffering-spinner:after,.vhs-buffering-spinner:before,.vhs-buffering-spinner>div:after,.vhs-buffering-spinner>div:before{content:\"\";position:absolute;top:0;left:2.25em;width:.5em;height:1.5em;border-radius:.2em;background:#eee;box-shadow:0 3.5em #eee;transform-origin:50% 2.5em}.vhs-buffering-spinner:before{background:#555}.vhs-buffering-spinner:after{transform:rotate(-45deg);background:#777}.vhs-buffering-spinner>div:before{transform:rotate(-90deg);background:#999}.vhs-buffering-spinner>div:after{transform:rotate(-135deg);background:#bbb}", ""]);
+
+// exports
+
+
+
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/plugins/buffering/styles.scss
+// module id = 245
+// module chunks = 5

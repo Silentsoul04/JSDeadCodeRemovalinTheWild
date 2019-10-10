@@ -1,0 +1,8 @@
+var adContent = '';
+adContent += '<!-- AdPlacement : ipemeahomepagewfpad -->' + '\n';
+adContent += '<!-- Oath SSP BannerAd DspId:0, SeatId:10826, DspCrId:passback-2803 -->' + '\n';
+adContent += '<i' + 'mg src="https://eu-central-1.onemobile.yahoo.com/admax/adEvent.do?tidi=770829463&amp;sitepid=222522&amp;posi=926398&amp;grp=%3F%3F%3F&amp;nl=1570704638953&amp;rts=1570704638837&amp;pix=1&amp;et=1&amp;a=26e37fea070a406394dab7cbf2638839&amp;m=aXAtMTAtMjItMTE4LTMx&amp;b=MTA4MjY7RU1FQSAtIEFkWCBQYXNzYmFjazs_Pz87Ozs7Oy0xOzE1NzA2OTk4MDA.&amp;uid=y-Ula1RKl1l21.KceATiQG82wwJM7P&amp;tsrctype=2&amp;xdi=RDgyMHxMR3w2LjB8MQ..&amp;xoi=MHxOTEQ.&amp;brxdPublisherId=29284317533&amp;brxdSiteId=38111058&amp;brxdSectionId=251157193&amp;dety=5" style="display:none;width:1px;height:1px;border:0;" width="1" height="1" alt=""/>' + '\n';
+adContent += '<scr' + 'ipt async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></scr' + 'ipt> <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-7382640443023261" data-ad-slot="5465372253/8856654813"> </ins><scr' + 'ipt>        var pageURL = window.location.hostname == \'s.yimg.com\' ? document.referrer.toString() : window.location.toString();        document.getElementsByClassName("adsbygoogle")[0].setAttribute("data-page-url", pageURL);        (adsbygoogle = window.adsbygoogle || []).push({});</scr' + 'ipt>' + '\n';
+adContent += '<scr' + 'ipt type="text/javascript" src="https://ads.yahoo.com/get-user-id?ver=2&n=29657&ts=1570704638&sig=355ad5fd47d821b9&gdpr=1&gdpr_consent="></scr' + 'ipt>' + '\n';
+adContent += '<!-- Ads by - Optimized by AdMax from NEXAGE - Thursday, October 10, 2019 6:50:38 AM EDT -->' + '\n';
+document.write(adContent);

@@ -1,0 +1,1 @@
+data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2220px%22%20height%3D%2220px%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20stroke%3D%22%23FFF%22%3E%3Cline%20x1%3D%223%22%20y1%3D%223%22%20x2%3D%2210%22%20y2%3D%2210%22%2F%3E%3Cline%20x1%3D%2210%22%20y1%3D%223%22%20x2%3D%223%22%20y2%3D%2210%22%2F%3E%3C%2Fsvg%3E

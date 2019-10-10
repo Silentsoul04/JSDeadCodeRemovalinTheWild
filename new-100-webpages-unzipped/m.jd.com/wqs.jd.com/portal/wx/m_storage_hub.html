@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>m storage hub</title>
+    <script type="text/javascript" src="//wq.360buyimg.com/js/common/dest/m.xstorage.hub.min.js?t=201809051000"></script>
+</head>
+
+<body>
+    <script>
+        CrossStorageHub.init([{
+                origin: /:\/\/([^.]*\.)?m\.jd\.com$/,
+                allow: ['get', 'set', 'del']
+            },
+            {
+                origin: /:\/\/mitem\.jd\.hk$/,
+                allow: ['get', 'set', 'del']
+            },
+            {
+                origin: /:\/\/m\.yiyaojd\.com$/,
+                allow: ['get', 'set', 'del']
+            },
+            {
+                origin: /:\/\/wqs?\.jd\.com$/,
+                allow: ['get', 'set', 'del']
+            }
+        ]);
+    </script>
+</body>
+
+</html>

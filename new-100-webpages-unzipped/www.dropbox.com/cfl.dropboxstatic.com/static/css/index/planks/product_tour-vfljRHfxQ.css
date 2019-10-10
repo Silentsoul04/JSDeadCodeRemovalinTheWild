@@ -1,0 +1,166 @@
+.product-tour-rule {
+    width: 100%;
+    opacity: 0.5
+}
+
+.product-tour-image__item--scale-down img {
+    transform: scale(0.91)
+}
+
+@media (max-width: 800px) {
+    .product-tour-sticky-nav__container {
+        display: none
+    }
+}
+
+@media (min-width: 801px) {
+    .product-tour__transition {
+        width: 100%;
+        transition: all 1s ease-out
+    }
+    .product-tour__transition--init {
+        opacity: 0
+    }
+    .product-tour__transition--headline-init {
+        transform: translateY(100px)
+    }
+    .product-tour__transition--sticky-nav-init {
+        transform: translateY(50px)
+    }
+    .product-tour__transition--image-init {
+        transform: translateY(30px)
+    }
+    .product-tour__transition--sticky-nav {
+        transition-delay: 0.3s
+    }
+    .product-tour__transition--image {
+        transition-delay: 1s;
+        transition-duration: 0.5s
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+    .product-tour-headline .product-tour-headline__text {
+        font-size: 32px;
+        line-height: 38px
+    }
+}
+
+@media (min-width: 801px) {
+    .product-tour-description .product-tour-description__heading {
+        padding-top: 10px
+    }
+}
+
+@media (min-width: 801px) and (min-width: 1025px) {
+    .product-tour-description .product-tour-description__heading {
+        font-size: 25px;
+        line-height: 32px
+    }
+}
+
+@media (min-width: 801px) {
+    .product-tour-sticky-nav__container {
+        position: -webkit-sticky;
+        position: sticky
+    }
+    .product-tour-sticky-nav__item {
+        margin-top: 20px;
+        cursor: pointer;
+        transition: opacity 0.25s ease-out
+    }
+    .product-tour-sticky-nav__item--active,
+    .product-tour-sticky-nav__item:hover {
+        opacity: 1
+    }
+    .product-tour-sticky-nav__item--inactive {
+        opacity: 0.5
+    }
+    .product-tour-sticky-nav-scroll__container {
+        position: absolute;
+        left: -22px;
+        top: 0
+    }
+    .product-tour-sticky-nav-scroll__bar {
+        transform-origin: top;
+        height: 156px;
+        width: 2px;
+        border-radius: 1px;
+        background-color: #ffe7aa
+    }
+    .product-tour-image__page-content {
+        padding-top: 90px;
+        margin-top: -90px;
+        height: 100vh;
+        min-height: 670px;
+        max-height: 1000px
+    }
+    .product-tour-image__item>img {
+        max-width: 100%;
+        max-height: 100%
+    }
+    .product-tour-image__description {
+        display: none
+    }
+}
+
+.product-tour__section--internet-explorer .product-tour-image__container {
+    width: 100%;
+    margin-right: 0
+}
+
+.product-tour__section--internet-explorer .product-tour-image__page-align {
+    margin-top: 10px;
+    min-height: 730px;
+    max-height: 850px
+}
+
+@media (min-width: 801px) {
+    .product-tour__section--internet-explorer .product-tour-image__page-inner-container>.arbor-grid-container__usable-area {
+        flex-direction: row-reverse
+    }
+}
+
+.product-tour__section--internet-explorer .product-tour-image__description {
+    display: flex
+}
+
+@media (min-width: 801px) {
+    .product-tour__section--internet-explorer .product-tour-image__description {
+        width: 33.33333%;
+        margin-left: 8.33333%;
+        margin-right: 4.16667%
+    }
+}
+
+@media (min-width: 1025px) {
+    .product-tour__section--internet-explorer .product-tour-image__description {
+        width: 25%
+    }
+}
+
+.product-tour__section--internet-explorer .product-tour-image__item {
+    height: auto
+}
+
+@media (min-width: 801px) {
+    .product-tour__section--internet-explorer .product-tour-image__item {
+        width: 45.83333%;
+        margin-right: 8.33333%
+    }
+}
+
+@media (min-width: 1025px) {
+    .product-tour__section--internet-explorer .product-tour-image__item {
+        width: 54.16667%
+    }
+}
+
+.product-tour__section--internet-explorer .product-tour-sticky-nav__container {
+    display: none;
+    width: 0
+}
+
+.product-tour__section--internet-explorer .product-tour-rule__container {
+    margin-top: 75px
+}

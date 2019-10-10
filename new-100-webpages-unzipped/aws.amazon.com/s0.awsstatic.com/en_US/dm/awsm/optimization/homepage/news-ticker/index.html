@@ -1,0 +1,29 @@
+<div class="awsm">
+    <div class="lb-data-attr-wrapper data-attr-wrapper" data-da-so-category="news-ticker" data-da-so-url="hp" data-da-so-version="homepage" data-da-so-language="en" data-da-so-name="homepage" data-da-type="so" data-da-so-type="viewport">
+        <div class="lb-small-v-margin lb-tiny-hide lb-small-show m-news-ticker" style="margin-bottom:0px;" data-directory-id="newsticker" data-lb-comp="news-ticker" data-mapping="{&quot;newsItem&quot;:&quot;newsItem&quot;}" data-interval="6000" data-sort_ascending="false"
+            data-limit="6" data-order_by="dateUpdated">
+            <div class="lb-row lb-row-max-large lb-collapse">
+                <div class="m-news-ticker-lbl lb-tiny-24 lb-small-6">
+                    <span>AWS Customer News</span>
+                </div>
+                <div class="m-news-ticker-items lb-tiny-24 lb-small-18">
+                    <ul class="m-news-ticker-items-container"></ul>
+                    <div class="m-close" role="button"></div>
+                </div>
+            </div>
+            <script type="text/x-handlebars-template">
+                {{#each items}}
+                <li>
+                    <div>
+                        {{cleanText mappedFields.newsItem}} {{#ifIsAbsoluteUrl mappedFields.linkUrl}}
+                        <a href="{{mappedFields.linkUrl}}">
+                {{cleanText mappedFields.linkText}}
+                <i class="icon-angle-double-right"></i>
+              </a> {{/ifIsAbsoluteUrl}}
+                    </div>
+                </li>
+                {{/each}}
+            </script>
+        </div>
+    </div>
+</div>

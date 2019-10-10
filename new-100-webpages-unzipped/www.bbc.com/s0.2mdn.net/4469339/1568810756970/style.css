@@ -1,0 +1,78 @@
+#cta {
+    background: #001E50;
+    color: #ffffff;
+    width: auto;
+    height: auto;
+    padding: 14px 36px;
+    white-space: nowrap;
+    transition: background .3s ease, color 0.3s ease;
+}
+
+#cta:hover {
+    background: #0040C5;
+    color: #ffffff;
+    transition: background .3s ease, color 0.3s ease;
+}
+
+#creative_container {
+    border: 1px solid #001E50;
+}
+
+#click_container,
+#person_container_copy,
+#body_container_copy {
+    cursor: pointer;
+}
+
+#next_bg,
+#previous_bg,
+.person_minus_bg,
+.person_plus_bg,
+.body_previous_bg,
+.body_next_bg {
+    display: none;
+}
+
+.car_image {
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+}
+
+#person_icon {
+    transition: all 0.2s;
+    background-repeat: repeat-x;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mainTitle,
+.cta_copy {
+    top: 50%;
+    transform: translateY(-35%);
+    overflow: visible;
+}
+
+.car_title {
+    width: 55%;
+    line-height: 1.5em;
+}
+
+.body_bg_container,
+.person_bg_container {
+    width: 137px;
+    height: 39px;
+}
+
+.safeZone,
+.logoRetina_container {
+    display: none;
+}
+
+.mainTitle {
+    letter-spacing: -0.3px;
+}
+
+svg {
+    transform-origin: 50% 50%;
+}

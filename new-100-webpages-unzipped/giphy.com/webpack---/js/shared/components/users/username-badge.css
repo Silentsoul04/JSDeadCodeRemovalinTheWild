@@ -1,0 +1,12 @@
+exports=module.exports=require("../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css"), undefined);
+exports.i(require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css"), undefined);
+// module
+exports.push([module.id, "._3iT_S1Bu6kxI1LHLf1zf3r{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;max-width:100%}._4P63NI68ltZ-kREBhiXwl{-webkit-transition:color .25s ease;transition:color .25s ease;display:inline-block;margin-left:-1px;margin-right:4px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}._4P63NI68ltZ-kREBhiXwl:hover{color:" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + "}", ""]);
+// exports
+exports.locals= {
+    "typography": "'shared/css/typography.css'", "usernameTitle": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["usernameTitle"] + "", "colors": "'shared/css/colors.css'", "giphyWhite": "" + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/colors.css").locals["giphyWhite"] + "", "usernameWrapper": "_3iT_S1Bu6kxI1LHLf1zf3r", "username": "_4P63NI68ltZ-kREBhiXwl " + require("-!../../../../node_modules/css-loader/index.js??ref--8-1!../../../../node_modules/postcss-loader/lib/index.js!shared/css/typography.css").locals["usernameTitle"] + ""
+}
+
+;

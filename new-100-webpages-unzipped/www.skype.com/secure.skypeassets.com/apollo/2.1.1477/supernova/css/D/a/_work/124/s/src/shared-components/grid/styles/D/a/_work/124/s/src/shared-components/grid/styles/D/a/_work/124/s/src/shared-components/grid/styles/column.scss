@@ -1,0 +1,31 @@
+@import '../../../styles/breakpoints/mixins';
+
+.supernova-column {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-basis: 100%;
+  overflow: hidden;
+  padding: 10px 15px;
+  min-height: 50px;
+
+  @include respond-to-max(lg) {
+    flex: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  // On breakpoint for tablets/mobile screens is set up default width for supernova-bubbles, and change of padding and positioning for supernova row - columns.
+  .supernova-row {
+    .supernova-column {
+      padding: 10px;
+      align-items: center;
+
+      .supernova-bubble {
+        width: 100%;
+      }
+    }
+  }
+}

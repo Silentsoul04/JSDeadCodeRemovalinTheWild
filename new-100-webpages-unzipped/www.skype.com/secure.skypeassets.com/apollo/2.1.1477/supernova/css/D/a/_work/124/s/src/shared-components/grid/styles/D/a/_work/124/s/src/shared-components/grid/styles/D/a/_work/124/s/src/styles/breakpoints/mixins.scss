@@ -1,0 +1,36 @@
+@import "./constants";
+
+@mixin respond-to($breakpoint, $fallback: null) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint) + 1px}) {
+      @content;
+    }
+
+    @if $fallback {
+      $fallback-class: "noMediaQueries";
+
+      .#{$fallback-class} #{if(&, "&", "")} {
+        @content;
+      }
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// respond-to defining styles for max width
+@mixin respond-to-max($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

@@ -1,0 +1,8 @@
+module.exports = function anonymous(locals, filters, escape, rethrow) { escape = escape || function(html) { return String(html).replace(/&/g, "&amp;").replace(/
+</g, "&lt;").replace(/>/g, "&gt;").replace(/'/g, "&#39;").replace(/"/g, "&quot;"); }; var __stack = { lineno: 1, input: '
+<iframe\n title="<%= title %>" \n width="480" \n height="321" \n frameborder="0" \n scrolling="no" \n allowfullscreen="true" \n marginheight="0" \n marginwidth="0"
+    \n id="<%= id %>" \n src="<%= src %>">\n</iframe>\n', filename: "." }; function rethrow(err, str, filename, lineno) { var lines = str.split("\n"), start = Math.max(lineno - 3, 0), end = Math.min(lines.length, lineno + 3); var context = lines.slice(start, end).map(function(line, i) { var curr
+    = i + start + 1; return (curr == lineno ? " >> " : " ") + curr + "| " + line; }).join("\n"); err.path = filename; err.message = (filename || "ejs") + ":" + lineno + "\n" + context + "\n\n" + err.message; throw err; } try { var buf = []; with (locals
+    || {}) { (function() { buf.push('
+    <iframe\n title="', escape((__stack.lineno = 2, title)), '" \n width="480" \n height="321" \n frameborder="0" \n scrolling="no" \n allowfullscreen="true" \n marginheight="0" \n marginwidth="0" \n id="', escape((__stack.lineno = 10, id)), '" \n src="', escape((__stack.lineno = 11, src)), '">\n</iframe>\n'); })(); } return buf.join(""); } catch (err) { rethrow(err, __stack.input, __stack.filename, __stack.lineno); } } ////////////////// // WEBPACK FOOTER // ./src/plugins/copy-slate/embed-code-template.html // module id = 273 // module
+        chunks = 5

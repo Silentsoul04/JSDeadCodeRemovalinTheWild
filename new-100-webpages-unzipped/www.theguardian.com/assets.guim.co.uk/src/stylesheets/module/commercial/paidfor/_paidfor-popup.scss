@@ -1,0 +1,34 @@
+.popup--paidfor {
+    background: $brightness-7;
+    box-shadow: none;
+    left: -$gs-gutter / 2;
+    top: $gs-baseline * 4;
+    padding: $gs-baseline $gs-gutter;
+    color: $brightness-100;
+    width: gs-span(3);
+    border-radius: $gs-baseline / 4;
+    z-index: $zindex-main-menu;
+
+    &,
+    h3 {
+        @include fs-textSans(3);
+    }
+}
+
+.popup--paidfor__title {
+    display: block;
+    margin: 0 0 $gs-baseline;
+}
+
+a.popup--paidfor__link {
+    color: $labs-main;
+    display: block;
+
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+        fill: $labs-main;
+        height: 20px;
+        width: 20px;
+    }
+}

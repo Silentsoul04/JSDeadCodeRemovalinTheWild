@@ -1,0 +1,76 @@
+var nunjucks = require("nunjucks/browser/nunjucks-slim"); var env; if (!nunjucks.currentEnv){ env = nunjucks.currentEnv = new nunjucks.Environment([], undefined); } else { env = nunjucks.currentEnv; } var dependencies = nunjucks.webpackDependencies ||
+(nunjucks.webpackDependencies = {}); dependencies["@buzzfeed/buzzblocks/components/svg/icons/arrow-right.html"] = require( "@buzzfeed/buzzblocks/components/svg/icons/arrow-right.html" ); dependencies["components/shopping/good-deals/svg/swap-icon.html"]
+= require( "components/shopping/good-deals/svg/swap-icon.html" ); dependencies["components/shopping/good-deals/particle-explode.html"] = require( "components/shopping/good-deals/particle-explode.html" ); var shim = require("/usr/lib/node_modules/@buzzfeed/fe-build-tools/node_modules/@buzzfeed/nunjucks-loader/runtime-shim");
+(function() {(nunjucks.nunjucksPrecompiled = nunjucks.nunjucksPrecompiled || {})["app/static/components/shopping/good-deals/deal.html"] = (function() { function root(env, context, frame, runtime, cb) { var lineno = null; var colno = null; var output =
+""; try { var parentTemplate = null; output += "
+<div class=\ "good-deals__deal sm-pt2 sm-px1 sm-p3 xs-relative\">\n
+    <div class=\ "good-deals__wrapper\">\n
+        <div class=\ "xs-text-6 xs-pb2 xs-pt3 sm-pt0\">FYI: BuzzFeed may collect a share of sales or other compensation from the links on this page.</div>\n <img class=\ "rounded good-deals__img\" alt=\ ""; output +=r untime.suppressValue(env.getFilter( "safe").call(context, runtime.contextOrFrameLookup(context,
+            frame, "title")), env.opts.autoescape); output +="\" src=\ ""; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "image"), env.opts.autoescape); output +="\">\n "; if(runtime.contextOrFrameLookup(context, frame, "price"))
+        { output += "
+        <div class=\ "good-deals__price\">"; output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "price"), env.opts.autoescape); output += "</div>"; ; } output += "\n
+        <div class=\ "xs-pt05 sm-pt1 xs-text-4 xs-pb1 sm-pb0\">"; output += runtime.suppressValue(env.getFilter("safe").call(context, runtime.contextOrFrameLookup(context, frame, "dek")), env.opts.autoescape); output += "</div>\n <a class=\ "text-purple\" href=\ ""; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context,
+            frame, "link_to_post"), env.opts.autoescape); output +="\" data-bfa=\ "@a:post;@d:df;\">Read more in the post\n      ";
+var t_1;
+t_1 = "svg-5 xs-ml05 svg-purple";
+frame.set("arrow_right_class", t_1, true);
+if(frame.topLevel) {
+context.setVariable("arrow_right_class", t_1);
+}
+if(frame.topLevel) {
+context.addExport("arrow_right_class", t_1);
+}
+output += "\n      ";
+var tasks = [];
+tasks.push(
+function(callback) {
+env.getTemplate("@buzzfeed/buzzblocks/components/svg/icons/arrow-right.html", false, "app/static/components/shopping/good-deals/deal.html", null, function(t_4,t_2) {
+if(t_4) { cb(t_4); return; }
+callback(null,t_2);});
+});
+tasks.push(
+function(template, callback){
+template.render(context.getVariables(), frame, function(t_5,t_3) {
+if(t_5) { cb(t_5); return; }
+callback(null,t_3);});
+});
+tasks.push(
+function(result, callback){
+output += result;
+callback(null);
+});
+env.waterfall(tasks, function(){
+output += "\n    </a>\n </div>\n <button class=\ "button--good-deal xs-col-12 xs-mt3 xs-mb3 sm-mb0\" data-bfa=\ "@a:link;@d:df;\" data-type=\ "show-deal\">\n    ";
+var t_6;
+t_6 = "svg-5 xs-ml05 svg-white";
+frame.set("swap_icon_class", t_6, true);
+if(frame.topLevel) {
+context.setVariable("swap_icon_class", t_6);
+}
+if(frame.topLevel) {
+context.addExport("swap_icon_class", t_6);
+}
+output += "\n    ";
+var tasks = [];
+tasks.push(
+function(callback) {
+env.getTemplate("components/shopping/good-deals/svg/swap-icon.html", false, "app/static/components/shopping/good-deals/deal.html", null, function(t_9,t_7) {
+if(t_9) { cb(t_9); return; }
+callback(null,t_7);});
+});
+tasks.push(
+function(template, callback){
+template.render(context.getVariables(), frame, function(t_10,t_8) {
+if(t_10) { cb(t_10); return; }
+callback(null,t_8);});
+});
+tasks.push(
+function(result, callback){
+output += result;
+callback(null);
+});
+env.waterfall(tasks, function(){
+output += "\n    Show me another deal!\n  </button>\n "; var tasks = []; tasks.push( function(callback) { env.getTemplate("components/shopping/good-deals/particle-explode.html", false, "app/static/components/shopping/good-deals/deal.html", null, function(t_13,t_11)
+    { if(t_13) { cb(t_13); return; } callback(null,t_11);}); }); tasks.push( function(template, callback){ template.render(context.getVariables(), frame, function(t_14,t_12) { if(t_14) { cb(t_14); return; } callback(null,t_12);}); }); tasks.push( function(result,
+    callback){ output += result; callback(null); }); env.waterfall(tasks, function(){ output += "\n</div>\n"; if(parentTemplate) { parentTemplate.rootRenderFunc(env, context, frame, runtime, cb); } else { cb(null, output); } })})}); } catch (e) { cb(runtime.handleError(e,
+lineno, colno)); } } return { root: root }; })(); })(); module.exports = shim(nunjucks, env, nunjucks.nunjucksPrecompiled["app/static/components/shopping/good-deals/deal.html"] , dependencies)

@@ -1,0 +1,17 @@
+var nunjucks = require("nunjucks/browser/nunjucks-slim"); var env; if (!nunjucks.currentEnv){ env = nunjucks.currentEnv = new nunjucks.Environment([], undefined); } else { env = nunjucks.currentEnv; } var dependencies = nunjucks.webpackDependencies ||
+(nunjucks.webpackDependencies = {}); var shim = require("/usr/lib/node_modules/@buzzfeed/fe-build-tools/node_modules/@buzzfeed/nunjucks-loader/runtime-shim"); (function() {(nunjucks.nunjucksPrecompiled = nunjucks.nunjucksPrecompiled || {})["app/static/components/homepage/modal-dialog/modal-dialog.html"]
+= (function() { function root(env, context, frame, runtime, cb) { var lineno = null; var colno = null; var output = ""; try { var parentTemplate = null; output += "
+<div class=\ "modal__overlay js-modal__overlay\n     modal\n     "; if(runtime.contextOrFrameLookup(context,
+    frame, "modifier")) { output +="modal__overlay--" ; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "modifier"), env.opts.autoescape); output +=" js-modal__overlay--" ; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context,
+    frame, "modifier"), env.opts.autoescape); ; } output +="\">\n
+    <div class=\ "modal__content js-modal__content xs-col-12 "; if(runtime.contextOrFrameLookup(context, frame, "modifier")) { output +="modal--" ; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "modifier"), env.opts.autoescape);
+        output +=" js-modal--" ; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "modifier"), env.opts.autoescape); ; } output +="\">\n "; output += "\n <a class=\ "modal__close js-modal__button-close\">\n      <svg viewbox=\"0 0 512 512\" class=\"modal__button-close__svg modal__close-icon\">\n        <title>";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "i18n")),"CLOSE_THIS_MODAL"), env.opts.autoescape);
+output += "</title>\n        ";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "i18n")),"CLOSE_THIS_MODAL"), env.opts.autoescape);
+output += " ";
+output += "\n        <use xlink:href=\"#close\"></use>\n      </svg>\n    </a>\n\n "; if(runtime.contextOrFrameLookup(context, frame, "header")) { output += "\n
+        <div class=\ "js-modal__header\">\n
+            <h2 class=\ "modal__header__text js-modal__header__text bold xs-mb2\">"; output += runtime.suppressValue(env.getFilter("safe").call(context, runtime.contextOrFrameLookup(context, frame, "header")), env.opts.autoescape); output += "</h2>\n </div>\n "; ; } output += "\n\n "; output += "\n "; output += runtime.suppressValue(env.getFilter("safe").call(context,
+        runtime.contextOrFrameLookup(context, frame, "content")), env.opts.autoescape); output += "\n </div>\n</div>\n"; if(parentTemplate) { parentTemplate.rootRenderFunc(env, context, frame, runtime, cb); } else { cb(null, output); } ; } catch (e) {
+cb(runtime.handleError(e, lineno, colno)); } } return { root: root }; })(); })(); module.exports = shim(nunjucks, env, nunjucks.nunjucksPrecompiled["app/static/components/homepage/modal-dialog/modal-dialog.html"] , dependencies)

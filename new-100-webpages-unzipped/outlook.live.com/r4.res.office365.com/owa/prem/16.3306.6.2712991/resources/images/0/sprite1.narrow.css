@@ -1,0 +1,454 @@
+.image-adchoices_icon-png {
+    background: url('adchoices_icon.png');
+    width: 12px;
+    height: 12px
+}
+
+.image-olk_logo_white_cropped-png {
+    background: url('olk_logo_white_cropped.png');
+    width: 265px;
+    height: 310px
+}
+
+.image-owa_brand-png {
+    background: url('owa_brand.png');
+    width: 160px;
+    height: 30px
+}
+
+.image-readingpane_recipientwell_callout-png {
+    background: url('readingpane_recipientwell_callout.png');
+    width: 370px;
+    height: 245px
+}
+
+.image-loading_blackbg-gif {
+    background: url('loading_blackbg.gif');
+    width: 16px;
+    height: 16px
+}
+
+.image-loading_whitebg-gif {
+    background: url('loading_whitebg.gif');
+    width: 16px;
+    height: 16px
+}
+
+.image-thinking16_blue-gif {
+    background: url('thinking16_blue.gif');
+    width: 16px;
+    height: 16px
+}
+
+.image-thinking16_grey-gif {
+    background: url('thinking16_grey.gif');
+    width: 16px;
+    height: 16px
+}
+
+.image-thinking16_white-gif {
+    background: url('thinking16_white.gif');
+    width: 16px;
+    height: 16px
+}
+
+.image-thinking24-gif {
+    background: url('thinking24.gif');
+    width: 24px;
+    height: 24px
+}
+
+.image-thinking32_blue-gif {
+    background: url('thinking32_blue.gif');
+    width: 32px;
+    height: 32px
+}
+
+.image-thinking32_grey-gif {
+    background: url('thinking32_grey.gif');
+    width: 32px;
+    height: 32px
+}
+
+.image-thinking32_white-gif {
+    background: url('thinking32_white.gif');
+    width: 32px;
+    height: 32px
+}
+
+.image-r_jpg-png {
+    width: 75px;
+    height: 75px;
+    background: url('sprite1.narrow.png') -0 -0
+}
+
+.image-swipe_notclutter_p-png {
+    width: 40px;
+    height: 40px;
+    background: url('sprite1.narrow.png') -77px -0
+}
+
+.image-clutter_delete_all-png {
+    width: 32px;
+    height: 32px;
+    background: url('sprite1.narrow.png') -119px -0
+}
+
+.image-clutter_delete_all_p-png {
+    width: 32px;
+    height: 32px;
+    background: url('sprite1.narrow.png') -153px -0
+}
+
+.image-swipe_selection-png {
+    width: 28px;
+    height: 31px;
+    background: url('sprite1.narrow.png') -187px -0
+}
+
+.image-office_logo_white_small-png {
+    width: 81px;
+    height: 26px;
+    background: url('sprite1.narrow.png') -217px -0
+}
+
+.image-dc-gdoc-png {
+    width: 20px;
+    height: 20px;
+    background: url('sprite1.narrow.png') -300px -0
+}
+
+.image-dc-gsheet-png {
+    width: 20px;
+    height: 20px;
+    background: url('sprite1.narrow.png') -322px -0
+}
+
+.image-dc-gslide-png {
+    width: 20px;
+    height: 20px;
+    background: url('sprite1.narrow.png') -344px -0
+}
+
+.image-swipe_notclutter-png {
+    width: 20px;
+    height: 20px;
+    background: url('sprite1.narrow.png') -366px -0
+}
+
+.image-fberror4-png {
+    width: 18px;
+    height: 18px;
+    background: url('sprite1.narrow.png') -388px -0
+}
+
+.image-googerror2-png {
+    width: 18px;
+    height: 18px;
+    background: url('sprite1.narrow.png') -408px -0
+}
+
+.image-lierror2-png {
+    width: 18px;
+    height: 18px;
+    background: url('sprite1.narrow.png') -428px -0
+}
+
+.image-sinweerror2-png {
+    width: 18px;
+    height: 18px;
+    background: url('sprite1.narrow.png') -448px -0
+}
+
+.image-twitrerror2-png {
+    width: 18px;
+    height: 18px;
+    background: url('sprite1.narrow.png') -468px -0
+}
+
+.image-yhooerror2-png {
+    width: 18px;
+    height: 18px;
+    background: url('sprite1.narrow.png') -488px -0
+}
+
+.image-abchactive1-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -508px -0
+}
+
+.image-chevrons_down-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -526px -0
+}
+
+.image-close_p-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -544px -0
+}
+
+.image-dc-accdb-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -562px -0
+}
+
+.image-dc-aspx-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -580px -0
+}
+
+.image-dc-bmp-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -300px -22px
+}
+
+.image-dc-docx-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -318px -22px
+}
+
+.image-dc-exe-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -336px -22px
+}
+
+.image-dc-generic-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -354px -22px
+}
+
+.image-dc-gif-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -372px -22px
+}
+
+.image-dc-jpg-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -390px -22px
+}
+
+.image-dc-lync-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -408px -22px
+}
+
+.image-dc-mpg-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -426px -22px
+}
+
+.image-dc-msg-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -444px -22px
+}
+
+.image-dc-msg_attachment-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -462px -22px
+}
+
+.image-dc-one-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -480px -22px
+}
+
+.image-dc-pblsh-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -498px -22px
+}
+
+.image-dc-pdf-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -516px -22px
+}
+
+.image-dc-png-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -534px -22px
+}
+
+.image-dc-pptx-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -552px -22px
+}
+
+.image-dc-rpmsg-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -570px -22px
+}
+
+.image-dc-txt-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -300px -40px
+}
+
+.image-dc-vsd-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -318px -40px
+}
+
+.image-dc-wv-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -336px -40px
+}
+
+.image-dc-xlsx-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -354px -40px
+}
+
+.image-dc-zip-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -372px -40px
+}
+
+.image-event_accepted-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -390px -40px
+}
+
+.image-event_declined-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -408px -40px
+}
+
+.image-event_tentative-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -426px -40px
+}
+
+.image-fbactive4-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -444px -40px
+}
+
+.image-googactive2-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -462px -40px
+}
+
+.image-liactive-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -480px -40px
+}
+
+.image-response_approve-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -498px -40px
+}
+
+.image-response_reject-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -516px -40px
+}
+
+.image-response_request-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -534px -40px
+}
+
+.image-sinweactive-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -552px -40px
+}
+
+.image-skypeactive2-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -570px -40px
+}
+
+.image-twitractive2-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -300px -58px
+}
+
+.image-voicemail_irm-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -318px -58px
+}
+
+.image-yhooactive2-png {
+    width: 16px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -336px -58px
+}
+
+.image-task_reoccurring-png {
+    width: 15px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -354px -58px
+}
+
+.image-task-png {
+    width: 14px;
+    height: 16px;
+    background: url('sprite1.narrow.png') -371px -58px
+}
+
+.image-miniatures_o365-png {
+    width: 95px;
+    height: 15px;
+    background: url('sprite1.narrow.png') -387px -58px
+}
+
+.image-triangle_down_small-png {
+    width: 12px;
+    height: 12px;
+    background: url('sprite1.narrow.png') -484px -58px
+}
+
+.image-clear1x1-gif {
+    width: 1px;
+    height: 1px;
+    background: url('sprite1.narrow.png') -498px -58px
+}
+
+.csimg {
+    padding: 0;
+    border: none;
+    background-repeat: no-repeat;
+    -webkit-touch-callout: none
+}
+
+span.csimg {
+    -ms-high-contrast-adjust: none
+}

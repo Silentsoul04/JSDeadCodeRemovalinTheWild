@@ -1,0 +1,11 @@
+exports=module.exports=require("../../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css"), undefined);
+// module
+exports.push([module.id, ".vYPFfP41Kq3mokfiwdE3{padding:20px;text-align:left;margin-top:30px}._2x66CEzXOAAxXB_TJVs40l{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}._1OsFOXfjRuqoOZw93CggC1{background:" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css").locals["sectionBackground"] + ";margin-right:10px;position:relative;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}._1OsFOXfjRuqoOZw93CggC1:hover{background:" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css").locals["sectionBackgroundActive"] + "}._1OsFOXfjRuqoOZw93CggC1:last-child{margin-right:0}._1OsFOXfjRuqoOZw93CggC1:first-child:before{content:\"\";top:-6px;left:-6px;right:-6px;bottom:-6px;position:absolute;opacity:.5;border:2px dashed #fff}._1OsFOXfjRuqoOZw93CggC1:not(:first-child):before{content:\"\";top:-6px;left:-4px;right:-6px;bottom:-6px;position:absolute;opacity:.5;border-bottom:2px dashed #fff;border-top:2px dashed #fff;border-right:2px dashed #fff}._1OsFOXfjRuqoOZw93CggC1 input[type=file]{height:100%;left:0;opacity:0;position:absolute;top:0;width:100%}", ""]);
+// exports
+exports.locals= {
+    "welcome": "'../welcome.css'", "subtitle": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css").locals["subtitle"] + "", "sectionBackground": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css").locals["sectionBackground"] + "", "sectionBackgroundActive": "" + require("-!../../../../../../node_modules/css-loader/index.js??ref--8-1!../../../../../../node_modules/postcss-loader/lib/index.js!../welcome.css").locals["sectionBackgroundActive"] + "", "filePortal": "vYPFfP41Kq3mokfiwdE3", "fileContainer": "_2x66CEzXOAAxXB_TJVs40l", "fileButton": "_1OsFOXfjRuqoOZw93CggC1"
+}
+
+;

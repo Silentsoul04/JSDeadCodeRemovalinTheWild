@@ -1,0 +1,16 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css"), undefined);
+// module
+exports.push([module.id, ".poster-Jd0qBvAs{background-size:cover;background-position:50%}.metadataDefaults-2JKB5mX0{position:relative;max-width:100%;width:100%}.metadataLarge-1PdulcnS{top:6px}", ""]);
+// exports
+exports.locals= {
+    "container": "container-2Uw6tagV", "poster": "poster-Jd0qBvAs " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["poster"] + "", "metadataDefaults": "metadataDefaults-2JKB5mX0", "metadataLarge": "metadataLarge-1PdulcnS metadataDefaults-2JKB5mX0"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/cover/component/desktop-default/styles.css
+// module id = 434
+// module chunks = 1

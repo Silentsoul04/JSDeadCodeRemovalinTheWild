@@ -1,0 +1,15 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+// module
+exports.push([module.id, ".scrubberContainer-2XZF30sW{position:absolute;left:0;z-index:4;height:100%;opacity:1;transform:scale(1);transform-origin:center left;transition:opacity .15s ease-out,transform .15s ease-out}.scrubberContainer-2XZF30sW.scrubberContainerHide-TLLR8ECo{opacity:0;transform:scale(.1);transition:opacity .15s ease-in,transform .15s ease-in}.center-Qlqp5Oml{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;height:100%;width:100%}.timeline-3LLjVTNY{-ms-flex-positive:1;flex-grow:1;cursor:pointer;position:relative;height:40px;transition:transform .4s ease-out;transform-origin:right;transform:scaleX(1)}.timeline-3LLjVTNY.timeline--placeholder-3cElzEnh{cursor:inherit}.timeline__progress-INtfpWxh{width:0;height:2px;margin:19px 0;position:absolute;background:#000;z-index:3}.light-YClmtHjp .timeline__progress-INtfpWxh{background:#fff}.timeline__buffered-1djBwGjR{width:0;height:2px;margin:19px 0;position:absolute;background:rgba(0,0,0,.2);z-index:2}.light-YClmtHjp .timeline__buffered-1djBwGjR{background:hsla(0,0%,100%,.4)}.timeline__duration-1b3zy6d8{width:100%;height:2px;margin:19px 0;position:absolute;background:rgba(0,0,0,.1);z-index:1}.light-YClmtHjp .timeline__duration-1b3zy6d8{background:hsla(0,0%,100%,.2)}.animate-o5UsncvZ{transition:all .8s ease!important}.timeline__slider-3d0_xGYi:focus{height:2px;width:100%;outline:1px solid #4a90e2;outline-offset:1px}", ""]);
+// exports
+exports.locals= {
+    "scrubberContainer": "scrubberContainer-2XZF30sW", "scrubberContainerHide": "scrubberContainerHide-TLLR8ECo", "center": "center-Qlqp5Oml", "timeline": "timeline-3LLjVTNY", "timeline--placeholder": "timeline--placeholder-3cElzEnh", "timeline__progress": "timeline__progress-INtfpWxh", "light": "light-YClmtHjp", "timeline__buffered": "timeline__buffered-1djBwGjR", "timeline__duration": "timeline__duration-1b3zy6d8", "animate": "animate-o5UsncvZ", "timeline__slider": "timeline__slider-3d0_xGYi"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/audio-controls/componentV2/timeline/styles.css
+// module id = 204
+// module chunks = 5

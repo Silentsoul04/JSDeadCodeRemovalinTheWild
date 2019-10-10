@@ -1,0 +1,43 @@
+{
+    "loginState" :      0,
+	"kepler":
+	{	
+        "kepler_data":null,
+        "kepler_param":null
+	},
+	"downAppConfigData": {"downloadAppContentBtn":"立即打开","downloadAppContentBtnStyle":"","downloadAppContentDown":"新人领188元红包","downloadAppContentDownStyle":"","downloadAppContentUP":"打开京东App购物","downloadAppContentUpStyle":"","downloadAppImg":"//img11.360buyimg.com/jdphoto/s640x100_jfs/t25471/63/982804166/2377/f8f633b9/5b850e48Nfd4e116b.png","downloadApplogo":"//img11.360buyimg.com/jdphoto/s80x80_jfs/t27847/91/107794072/6854/14716732/5b850ecaN644d2983.png"}, 
+	
+	
+	"carouselDownAppConfigData" :{"slides":[{"openBtn":{"txt":"立即打开","pingData":{"eventId":"MDownLoadFloatTop_OpenC","eventParas":"","eventLevel":""}},"ad":"打开京东App，购物更轻松","appLogo":"//img11.360buyimg.com/jdphoto/s80x80_jfs/t27847/91/107794072/6854/14716732/5b850ecaN644d2983.png"}],"styleScheme":1},
+	
+	"downAppUrl" :      "https://wqs.jd.com/downloadApp/downloadAppIOSMPage.html",
+	"data"       :
+    [   
+        
+        {   
+            "compent":       "AROUSAL_APP",
+            "display":       true,
+            "isSpportUL":     true,
+            "msf_type":      "auto",
+            "openAppParam":  null
+        }
+        
+    ], 
+	"cooldown":          {"ad2":0,"adod":0,"auto":21600000,"pcauto":0},
+	"shieldingLayer":
+	{
+		"newPeople_Layer":  null,
+		"pcScan_Layer":     null
+	},
+	"isOpenWechat":         1,
+	"coolDownTimeUtil":     {},
+	"downLoadPageSchema":  "o",
+	"wxDownloadSchema":    "o",
+	
+	"openSendOutUrl":       0,
+	"ua":                   {"appDownCloseIntervalTime":0,"appDownOpenIntervalTime":0,"closeUaMoreKeys":[],"autoCloseOs":[],"autoCloseBrowser":[],"autoCloseOsAndBrowser":[]},
+	"mediaConfigData":      {"stepTimesLifeTime":3600},
+	"isNewUser"  :          0,
+	"wechetSchemeSw":       0,
+	"imkFrontGray":         {"compressConfigGray":1,"encodeGray":1,"fixedSideLayerGray":0,"iosAppId":1,"iosEncodeGray":1}
+}

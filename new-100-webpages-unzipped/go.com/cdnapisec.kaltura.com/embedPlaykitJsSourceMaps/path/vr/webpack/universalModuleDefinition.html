@@ -1,0 +1,3 @@
+(function webpackUniversalModuleDefinition(root, factory) { if(typeof exports === 'object' && typeof module === 'object') module.exports = factory(require("playkit-js")); else if(typeof define === 'function' && define.amd) define("vr", ["playkit-js"],
+factory); else if(typeof exports === 'object') exports["vr"] = factory(require("playkit-js")); else root["KalturaPlayer"] = root["KalturaPlayer"] || {}, root["KalturaPlayer"]["plugins"] = root["KalturaPlayer"]["plugins"] || {}, root["KalturaPlayer"]["plugins"]["vr"]
+= factory(root["KalturaPlayer"]["core"]); })(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__) { return // WEBPACK FOOTER // // webpack/universalModuleDefinition

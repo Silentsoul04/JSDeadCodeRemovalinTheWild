@@ -1,0 +1,1461 @@
+@font-face {
+    font-family: AvenirNext-Regular;
+    font-weight: normal;
+    font-style: normal;
+    src: url("https://static-mh.content.disney.io/matterhorn/assets/AvenirNext-Regular-e1d3b592f63b.eot?#iefix") format("embedded-opentype"), url("https://static-mh.content.disney.io/matterhorn/assets/AvenirNext-Regular-a17c827d23b2.woff") format("woff"), url("https://static-mh.content.disney.io/matterhorn/assets/AvenirNext-Regular-7c6fbea20b5d.ttf") format("truetype"), url("https://static-mh.content.disney.io/matterhorn/assets/AvenirNext-Regular-01e3a6469806.svg#AvenirNext-Regular") format("svg")
+}
+
+.no-transition,
+.no-transition div,
+.no-transition span {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: all 0 none !important;
+    transition: none !important
+}
+
+.disneyVideo.blue-button-skin button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer
+}
+
+.disneyVideo.blue-button-skin button:focus {
+    outline: none
+}
+
+.disneyVideo.blue-button-skin button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+.skin-disabled.disneyVideo.blue-button-skin {
+    display: none !important
+}
+
+.skin-disabled.disneyVideo.blue-button-skin .play-control {
+    display: none !important
+}
+
+.skin-disabled.disneyVideo.blue-button-skin .side-controls {
+    display: none !important
+}
+
+.skin-disabled.disneyVideo.blue-button-skin .progress-control {
+    display: none !important
+}
+
+.is-active.disneyVideo.blue-button-skin .play-control .play-button,
+.is-active.disneyVideo.blue-button-skin .side-controls {
+    opacity: 1
+}
+
+.is-active.disneyVideo.blue-button-skin .progress-control {
+    bottom: 0
+}
+
+.is-active-ad.is-paused-ad.disneyVideo.blue-button-skin .play-control .play-button {
+    opacity: 1
+}
+
+.is-active-ad.disneyVideo.blue-button-skin .side-controls {
+    opacity: 1
+}
+
+.is-active-ad.disneyVideo.blue-button-skin .side-controls .square-control.fullscreen-button,
+.is-active-ad.disneyVideo.blue-button-skin .side-controls .square-control.cc-button {
+    opacity: 0
+}
+
+.is-playing.disneyVideo.blue-button-skin .play-control .play-button:before {
+    display: inline-block;
+    content: "";
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/pause@2x-ff0e97138132.png) no-repeat 0 0;
+    background-size: 100%;
+    width: 100%;
+    height: 100%
+}
+
+.is-full-screen.disneyVideo.blue-button-skin .side-controls .square-control.fullscreen-button .square-button:before {
+    display: inline-block;
+    content: "";
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/fullScreen_on-834342eda60a.png) no-repeat 0 0;
+    background-size: 65%;
+    background-position: center center;
+    width: 100%;
+    height: 100%
+}
+
+.is-full-screen.disneyVideo.blue-button-skin .adCountdown {
+    font-size: 1.5em;
+    top: 10rem;
+    left: 10rem
+}
+
+.disneyVideo.blue-button-skin .play-control {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 7%;
+    width: 20%
+}
+
+.disneyVideo.blue-button-skin .play-control:before {
+    content: "";
+    display: block;
+    padding-top: 100%
+}
+
+.disneyVideo.blue-button-skin .play-control .play-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    opacity: 0;
+    border: 0 solid white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s
+}
+
+.disneyVideo.blue-button-skin .play-control .play-button:before {
+    display: inline-block;
+    content: "";
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/play@2x-761b00f875cf.png) no-repeat 0 0;
+    background-size: 100%;
+    width: 100%;
+    height: 100%
+}
+
+.disneyVideo.blue-button-skin .side-controls {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 9%;
+    opacity: 0
+}
+
+.disneyVideo.blue-button-skin .side-controls.no-captions {
+    top: 30%
+}
+
+.disneyVideo.blue-button-skin .side-controls.no-captions .square-control.cc-button {
+    display: none
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control {
+    position: absolute;
+    width: 100%
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control:before {
+    content: "";
+    display: block;
+    padding-top: 100%
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control.volume-button {
+    margin-top: 0%
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control.volume-button.is-muted .square-button:before {
+    display: inline-block;
+    content: "";
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/volume_off-f0b52c196068.png) no-repeat 0 0;
+    background-size: 65%;
+    background-position: center center;
+    width: 100%;
+    height: 100%
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control.volume-button .square-button:before {
+    display: inline-block;
+    content: "";
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/volume_on-3095180aadc1.png) no-repeat 0 0;
+    background-size: 65%;
+    background-position: center center;
+    width: 100%;
+    height: 100%
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control.fullscreen-button {
+    margin-top: 135%
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control.fullscreen-button .square-button:before {
+    display: inline-block;
+    content: "";
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/fullScreen_off-31c77c14a41c.png) no-repeat 0 0;
+    background-size: 65%;
+    background-position: center center;
+    width: 100%;
+    height: 100%
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control.cc-button {
+    margin-top: 270%
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control.cc-button.is-showing-captions .square-button:before {
+    display: inline-block;
+    content: "";
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/ccButtonOff-67630cbaf856.png) no-repeat 0 0;
+    background-size: 65%;
+    background-position: center center;
+    width: 100%;
+    height: 100%
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control.cc-button .square-button:before {
+    display: inline-block;
+    content: "";
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/ccButtonOn-30cd21b2085b.png) no-repeat 0 0;
+    background-size: 65%;
+    background-position: center center;
+    width: 100%;
+    height: 100%
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control .square-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0 solid white;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    border-radius: 25%;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s
+}
+
+.disneyVideo.blue-button-skin .progress-control {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 1.5em;
+    bottom: -1.25em;
+    overflow: hidden;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s
+}
+
+.disneyVideo.blue-button-skin .progress-holder {
+    height: 100%
+}
+
+.disneyVideo.blue-button-skin .progress-holder .play-progress,
+.disneyVideo.blue-button-skin .progress-holder .load-progress {
+    position: absolute;
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    left: 0;
+    top: 0;
+    transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition: width 1.2s;
+    -webkit-transition: width 1.2s;
+    -moz-transition: width 1.2s;
+    -o-transition: width 1.2s
+}
+
+.disneyVideo.blue-button-skin .progress-holder .play-progress {
+    background-color: #3087ff
+}
+
+.disneyVideo.blue-button-skin .progress-holder .play-progress span:before {
+    content: "";
+    display: block;
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/video/scrubberControls-1ed4e11949bd.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    width: 2.5em;
+    height: 2.5em;
+    position: absolute;
+    bottom: -0.5em;
+    right: -0.5em;
+    cursor: pointer
+}
+
+.disneyVideo.blue-button-skin .seek-handle {
+    width: 1.5em;
+    height: 100%
+}
+
+.disneyVideo.blue-button-skin .seek-handle:before {
+    padding-top: 0.1em
+}
+
+.disneyVideo.blue-button-skin .duration-time-display {
+    font-size: 0.9em;
+    position: absolute;
+    top: 0.25em;
+    right: 0.5em;
+    pointer-events: none
+}
+
+.disneyVideo.blue-button-skin .current-time-display {
+    font-size: 0.9em;
+    position: absolute;
+    top: 0.25em;
+    left: 0.25em;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition: left 1.2s;
+    -moz-transition: left 1.2s;
+    -o-transition: left 1.2s;
+    transition: left 1.2s;
+    pointer-events: none
+}
+
+.disneyVideo.blue-button-skin .adCountdown {
+    font-size: 0.95em;
+    position: absolute;
+    top: 16%;
+    left: 8%;
+    pointer-events: none
+}
+
+.disneyVideo.blue-button-skin .play-control .play-button {
+    background-color: rgba(48, 135, 255, 0.5)
+}
+
+.disneyVideo.blue-button-skin .play-control .play-button:hover,
+.disneyVideo.blue-button-skin .play-control .play-button.hover {
+    background-color: #3087ff
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control .square-button {
+    background-color: rgba(51, 51, 51, 0.5)
+}
+
+.disneyVideo.blue-button-skin .side-controls .square-control .square-button:hover,
+.disneyVideo.blue-button-skin .side-controls .square-control .square-button.hover {
+    background-color: #333333
+}
+
+.disneyVideo.blue-button-skin .progress-holder {
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+.disneyVideo.blue-button-skin .progress-holder .play-progress {
+    background-color: #3087ff
+}
+
+.disneyVideo.blue-button-skin .progress-holder .load-progress {
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.disneyVideo.blue-button-skin .progress-holder .load-progress div {
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+.disneyVideo.blue-button-skin .duration-time-display {
+    color: black
+}
+
+.disneyVideo.blue-button-skin .current-time-display {
+    color: white
+}
+
+.disneyVideo.blue-button-skin .adCountdown {
+    color: black
+}
+
+.disneyVideo.poster .overlay {
+    display: block
+}
+
+.disneyVideo.poster:before {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: -webkit-linear-gradient(bottom, rgba(1, 5, 15, 0.65), rgba(1, 5, 15, 0) 4em);
+    background: linear-gradient(to top, rgba(1, 5, 15, 0.65), rgba(1, 5, 15, 0) 4em)
+}
+
+.poster {
+    cursor: pointer
+}
+
+.poster .details h3 {
+    font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif !important
+}
+
+.poster .duration p {
+    font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif !important
+}
+
+.badgeImage {
+    width: 224px;
+    height: 92px
+}
+
+.badgeImage .badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 20%
+}
+
+div .player-container {
+    width: 100%;
+    height: 100%
+}
+
+.disneyVideo {
+    background-color: #000
+}
+
+.disneyVideo video {
+    width: 100% !important;
+    height: 100% !important;
+    visibility: visible !important;
+    background-color: #000
+}
+
+.disneyVideo.poster .details {
+    display: block
+}
+
+.disneyVideo .adsContainer {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.disneyVideo .details {
+    display: none;
+    position: absolute;
+    bottom: 6px;
+    left: 8px;
+    z-index: 99
+}
+
+.disneyVideo .details h3 {
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 0 10px
+}
+
+.disneyVideo .posterClick {
+    z-index: 1
+}
+
+.disneyVideo .videoPoster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%
+}
+
+.disneyVideo .videoPoster.cover {
+    background-size: cover
+}
+
+.disneyVideo .videoPoster.contain {
+    background-size: contain
+}
+
+.disneyVideo .player_error {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(#333, #111);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.25em;
+    border: 1px solid #000;
+    border-top: 1px solid #555;
+    height: 50%;
+    margin: 10%;
+    text-align: center;
+    padding: 16px 24px 24px
+}
+
+.disneyVideo .player_error a {
+    color: #1786eb;
+    text-decoration: none;
+    transition: color 125ms ease 0s
+}
+
+.disneyVideo .hide {
+    -webkit-transform: translateX(-2048px)
+}
+
+.disneyVideo .captionator-cue-canvas {
+    pointer-events: none
+}
+
+.disneyVideo div.playButton {
+    width: 100%;
+    height: 100%;
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/play_button_off_272px-66044d549e50.png) 5% center no-repeat;
+    background-size: 20%
+}
+
+.disneyVideo div.playButton:hover {
+    width: 100%;
+    height: 100%;
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/play_button_on_272px-f9b972b22ef1.png) 5% center no-repeat;
+    background-size: 20%
+}
+
+.disneyVideo div.posterControls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 54px;
+    cursor: pointer
+}
+
+.disneyVideo div.posterControls button.posterPlayButton {
+    position: absolute;
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/icon_largeplay-bc9b4fb407f9.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 96px;
+    height: 96px;
+    border: 0;
+    outline: none;
+    padding: 0;
+    margin: -48px 0 -16px -48px;
+    opacity: 0.8
+}
+
+.disneyVideo .captionator-cue-canvas {
+    pointer-events: none
+}
+
+.disneyVideo div.volumeButton {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 35%;
+    right: 5%;
+    border-radius: 4px;
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/volume_on-3095180aadc1.png) 95% center no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: 100%;
+    opacity: 0.5
+}
+
+.disneyVideo div.volumeButton:hover {
+    opacity: 1
+}
+
+.disneyVideo div.volumeButton.off {
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/volume_off-f0b52c196068.png) 95% center no-repeat;
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+.disneyVideo div.ccButton.off {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/ccButtonOff-67630cbaf856.png) 95% center no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+    top: 60%;
+    right: 5%
+}
+
+.disneyVideo div.ccButton.off:hover {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/ccButtonOff-67630cbaf856.png) 95% center no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    top: 60%;
+    right: 5%
+}
+
+.disneyVideo div.ccButton.on {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/ccButtonOn-30cd21b2085b.png) 95% center no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+    top: 60%;
+    right: 5%
+}
+
+.disneyVideo div.ccButton.on:hover {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(https://static-mh.content.disney.io/matterhorn/assets/video/ccButtonOn-30cd21b2085b.png) 95% center no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    top: 60%;
+    right: 5%
+}
+
+.disneyVideo .overlay {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.disneyVideo .ccoverlay {
+    position: absolute;
+    width: 100%;
+    height: 92%
+}
+
+.disneyVideo .adHeader {
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    z-index: 100;
+    background: #f5a623;
+    color: white;
+    padding: 3px 12px;
+    border-radius: 100px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px
+}
+
+.disneyVideo .tooltips {
+    position: absolute;
+    bottom: 67px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 101
+}
+
+.disneyVideo .tooltips.visible {
+    opacity: 1;
+    visibility: visible
+}
+
+.disneyVideo .tooltips .playTooltip,
+.disneyVideo .tooltips .pauseTooltip,
+.disneyVideo .tooltips .unmuteTooltip,
+.disneyVideo .tooltips .muteTooltip {
+    position: absolute;
+    width: auto;
+    height: 24px;
+    padding: 0 16px;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif;
+    font-size: 0.75em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    visibility: hidden;
+    opacity: 0
+}
+
+.disneyVideo .tooltips .playTooltip.visible,
+.disneyVideo .tooltips .pauseTooltip.visible,
+.disneyVideo .tooltips .unmuteTooltip.visible,
+.disneyVideo .tooltips .muteTooltip.visible {
+    opacity: 1;
+    visibility: visible
+}
+
+.disneyVideo .tooltips .playTooltip,
+.disneyVideo .tooltips .pauseTooltip {
+    left: 5px
+}
+
+.disneyVideo .tooltips .unmuteTooltip,
+.disneyVideo .tooltips .muteTooltip {
+    left: 40px
+}
+
+.disneyVideo div.adControls {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%
+}
+
+.disneyVideo div.adControls button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer
+}
+
+.disneyVideo div.adControls button:focus {
+    outline: none
+}
+
+.disneyVideo div.adControls button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+.disneyVideo div.adControls.is-active-ad .adPlayControls,
+.disneyVideo div.adControls.is-active-ad .volume-button,
+.disneyVideo div.adControls.is-active-ad .adTimer {
+    opacity: 1;
+    z-index: 2
+}
+
+.disneyVideo div.adControls.is-active-ad .scrubber {
+    bottom: 53px
+}
+
+.disneyVideo div.adControls .adPlayControls,
+.disneyVideo div.adControls .volume-button,
+.disneyVideo div.adControls .adTimer {
+    opacity: 0
+}
+
+.disneyVideo div.adControls .scrubber {
+    bottom: 0;
+    width: 98.6%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    left: 8px;
+    z-index: 2;
+    transition: all 0.3s
+}
+
+.disneyVideo div.adControls .scrubber .ui-slider-range {
+    background-color: #f5a623;
+    height: 2px
+}
+
+.disneyVideo .adClickTarget {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    z-index: 1
+}
+
+.disneyVideo .adClickTarget.desktop {
+    left: 0
+}
+
+.disneyVideo .adClickTarget.mobile {
+    right: 0;
+    width: 100px;
+    height: 50px;
+    -webkit-tap-highlight-color: transparent
+}
+
+.disneyVideo .adOverlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    background: transparent;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 50%, transparent 60%, rgba(0, 0, 0, 0.8) 100%);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out
+}
+
+.disneyVideo .adOverlay.active {
+    opacity: 1;
+    visibility: visible
+}
+
+.disneyVideo div.adSkipButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    overflow: hidden;
+    background: #000;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer
+}
+
+.disneyVideo .largeAdPlayTarget {
+    background-size: 100%;
+    background: transparent no-repeat center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 103;
+    top: 50px;
+    left: 0;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer
+}
+
+.disneyVideo .adPlayControls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: opacity 0.3s
+}
+
+.disneyVideo .adPlayControls .adPlayButton {
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/icons-sprite-383f584245d1.svg);
+    background-position: 0 -168px;
+    background-repeat: no-repeat;
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 48px;
+    bottom: 0
+}
+
+.disneyVideo .adPlayControls .adPlayButton.paused {
+    background-position: 0 -224px
+}
+
+.disneyVideo .adPlayControls .adPlayButton:hover,
+.disneyVideo .adPlayControls .adPlayButton:focus {
+    background-color: transparent;
+    opacity: 0.95
+}
+
+.disneyVideo .square-control {
+    position: absolute
+}
+
+.disneyVideo .square-control.volume-button {
+    background-repeat: no-repeat;
+    position: absolute;
+    cursor: pointer;
+    left: 40px;
+    bottom: 0;
+    width: 40px;
+    height: 48px;
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/icons-sprite-383f584245d1.svg);
+    background-position: 0 -56px;
+    transition: opacity 0.3s
+}
+
+.disneyVideo .square-control.volume-button.is-muted {
+    background-position: 0 -112px
+}
+
+.disneyVideo .square-control .square-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0 solid white;
+    border-radius: 25%;
+    transition: all 0.3s
+}
+
+.disneyVideo .adTimer {
+    font-family: "AvenirNext-Regular", Helvetica, sans-serif !important;
+    font-size: 0.75em;
+    position: absolute;
+    bottom: 16px;
+    left: 74px;
+    width: 100px;
+    pointer-events: none;
+    top: auto;
+    padding-left: 0;
+    opacity: 1;
+    text-align: center;
+    transition: opacity 0.3s;
+    color: white
+}
+
+.disneyVideo .adSkipButton h3 {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-weight: 900 !important
+}
+
+.disneyVideo .duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100
+}
+
+.disneyVideo .duration p {
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0
+}
+
+@media screen and (min-width: 680px) {
+    .disneyVideo div.adSkipButton {
+        top: 20px;
+        left: 20px;
+        padding: 5px 13px
+    }
+    .disneyVideo .player_error {
+        font-size: 1.275em
+    }
+    .badgeImage .badge {
+        width: 18%
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .disneyVideo .adHeader {
+        top: 0;
+        left: 0
+    }
+    .disneyVideo div.adControls .scrubber {
+        width: 98%
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .disneyVideo div.adSkipButton {
+        top: 20px;
+        left: 20px;
+        padding: 5px 13px
+    }
+    .disneyVideo .player_error {
+        font-size: 1.275em
+    }
+}
+
+#video_wrapper .scaler {
+    padding-top: 56.25%
+}
+
+#embed_wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background: #000
+}
+
+#embed_wrapper .scaler {
+    padding-top: 56.25%
+}
+
+#frame,
+.player,
+.card {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden
+}
+
+#frame .orphan p,
+.player .orphan p,
+.card .orphan p {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    background-color: #333;
+    background-image: -webkit-linear-gradient(#333, #111);
+    background-image: linear-gradient(#333, #111);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 0.875em;
+    font-weight: 700;
+    line-height: 1.25em;
+    border: 1px solid #000;
+    border-top: 1px solid #666;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 13%;
+    padding: 24px 24px 24px
+}
+
+.player .player_error {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    background-color: #333;
+    background-image: -webkit-linear-gradient(#333, #111);
+    background-image: linear-gradient(#333, #111);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.25em;
+    border: 1px solid #000;
+    border-top: 1px solid #666;
+    height: 50%;
+    margin: 10%;
+    text-align: center;
+    padding: 16px 24px 24px
+}
+
+.player .player_error a {
+    color: #1786eb;
+    text-decoration: none;
+    transition: color 125ms ease 0s
+}
+
+.player .details h3 {
+    color: #fff !important
+}
+
+.player .playButton {
+    -webkit-transition: background-image 150ms;
+    -moz-transition: background-image 150ms;
+    transition: background-image 150ms
+}
+
+.skin-override-junior .player .playButton:hover {
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/junior/play_button_on-84c83344e6fe.png);
+    background-size: 20%
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (min--moz-device-pixel-ratio: 1.3),
+only screen and (-o-min-device-pixel-ratio: 1.3 / 1),
+only screen and (min-resolution: 125dpi),
+only screen and (min-resolution: 1.3dppx) {
+    .skin-override-junior .player .playButton:hover {
+        background-image: url(https://static-mh.content.disney.io/matterhorn/assets/junior/play_button_on@2x-95174b8c3015.png)
+    }
+}
+
+.card {
+    background-color: #1c1e1f;
+    background-image: -webkit-linear-gradient(#1c1e1f, #404548);
+    background-image: linear-gradient(#1c1e1f, #404548);
+    background: #2b3134;
+    -webkit-transition: -webkit-transform 250ms ease-in, visibility 0ms 250ms;
+    -moz-transition: -moz-transform 250ms ease-in, visibility 0ms 250ms;
+    -ms-transition: -ms-transform 250ms ease-in, visibility 0ms 250ms;
+    -o-transition: -o-transform 250ms ease-in, visibility 0ms 250ms;
+    transition: transform 250ms ease-in, visibility 0ms 250ms;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: hidden;
+    display: none
+}
+
+.card .card_header .btn_replay,
+.card .card_header .btn_next,
+.card.embed .card_header .btn_watch {
+    cursor: pointer;
+    color: #fff !important;
+    line-height: 44px;
+    font-weight: 400;
+    border: 1px solid #1b2022;
+    margin: 0 auto;
+    top: 44px;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: baseline;
+    -webkit-transition-property: -webkit-transform, box-shadow;
+    -moz-transition-property: -moz-transform, box-shadow;
+    transition-property: transform, box-shadow;
+    -webkit-transition-duration: 25ms;
+    -moz-transition-duration: 25ms;
+    transition-duration: 25ms
+}
+
+.card.visible {
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1), visibility 0ms;
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.15), visibility 0ms;
+    -moz-transition: -moz-transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.15), visibility 0ms;
+    -ms-transition: -ms-transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.15), visibility 0ms;
+    -o-transition: -o-transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.15), visibility 0ms;
+    transition: transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.15), visibility 0ms;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible
+}
+
+.card .item .entity-container:not(.title-overlay) .entity-details {
+    display: none
+}
+
+.card .suggested ul {
+    padding: 44px 48px 0
+}
+
+.card .suggested ul li {
+    display: inline-block;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    width: 33%;
+    padding: 12px;
+    float: left
+}
+
+.card .suggested ul li .thumb-box h4 {
+    display: none
+}
+
+.card .suggested ul li .duplicate-title {
+    display: none
+}
+
+.card .suggested ul li.priority .thumb-box:before {
+    content: "";
+    display: block;
+    width: 78px;
+    height: 78px;
+    margin-top: 0;
+    right: -4px;
+    z-index: 9999;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 78px 78px;
+    background-position: right;
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/video/banner_next-53794999d300.png)
+}
+
+.card .card_header {
+    display: block;
+    height: 140px;
+    color: #fff;
+    width: auto;
+    background-color: #23292b;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.1)
+}
+
+.card .card_header p {
+    color: #fff
+}
+
+.card .card_header .countdown_intro {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 1em;
+    vertical-align: baseline;
+    line-height: normal
+}
+
+.card .card_header .countdown_intro .countdown {
+    display: block;
+    clear: both;
+    font-size: 3.75em;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: baseline
+}
+
+.card .card_header .countdown_intro .autoplay {
+    cursor: pointer;
+    font-size: 0.750em;
+    background-color: #485053;
+    padding: 4px 12px;
+    border-radius: 20px
+}
+
+.card .card_header .countdown_intro .autoplay:hover {
+    background-color: #50595c
+}
+
+.card .card_header .btn_replay,
+.card .card_header .btn_next {
+    font-size: 1em;
+    text-align: center;
+    width: 200px;
+    height: 44px
+}
+
+.card .card_header .btn_replay {
+    position: absolute;
+    left: 60px
+}
+
+.card .card_header .btn_replay:before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/utility/replay_btn-6ada8bca1ef5.png);
+    background-size: 16px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (min--moz-device-pixel-ratio: 1.3),
+only screen and (-o-min-device-pixel-ratio: 1.3 / 1),
+only screen and (min-resolution: 125dpi),
+only screen and (min-resolution: 1.3dppx) {
+    .card .card_header .btn_replay:before {
+        background-image: url(https://static-mh.content.disney.io/matterhorn/assets/utility/replay_btn@2x-89b30264f46f.png)
+    }
+}
+
+.card .card_header .btn_next {
+    position: absolute;
+    right: 60px
+}
+
+.card.embed .suggested ul {
+    padding: 0 70px
+}
+
+.card.embed .suggested ul li {
+    padding: 6px;
+    width: 50%
+}
+
+.card.embed h3.overlay-title {
+    font-size: 0.75em;
+    width: 80%
+}
+
+.card.embed time {
+    font-size: 0.75em;
+    color: rgba(255, 255, 255, 0.6)
+}
+
+.card.embed .card_header {
+    height: 48px;
+    background-color: #1b2022
+}
+
+.card.embed .card_header .btn_replay {
+    position: static;
+    left: 0;
+    width: 130px
+}
+
+.card.embed .card_header .btn_replay:before {
+    background-size: 80%
+}
+
+.card.embed .card_header .btn_watch {
+    width: 150px;
+    height: 41px;
+    padding-top: 3px;
+    font-size: 0.9em;
+    text-align: left;
+    float: right
+}
+
+.card.embed .card_header .btn_watch:after {
+    content: "";
+    display: inline-block;
+    width: 85px;
+    height: 33px;
+    position: absolute;
+    top: 8px;
+    background-position: right;
+    background-image: url(https://static-mh.content.disney.io/matterhorn/assets/logos/nav_logo-89193ebe6563.png);
+    background-size: 68px auto;
+    background-repeat: no-repeat
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (min--moz-device-pixel-ratio: 1.3),
+only screen and (-o-min-device-pixel-ratio: 1.3 / 1),
+only screen and (min-resolution: 125dpi),
+only screen and (min-resolution: 1.3dppx) {
+    .card.embed .card_header .btn_watch:after {
+        background-image: url(https://static-mh.content.disney.io/matterhorn/assets/logos/nav_logo@2x-25d10ad375dd.png)
+    }
+}
+
+.card.watch .card_header {
+    background-color: #485053;
+    background-image: -webkit-linear-gradient(#485053, #2b3033);
+    background-image: linear-gradient(#485053, #2b3033)
+}
+
+.card.watch .card_header .btn_replay,
+.card.watch .card_header .btn_next {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    background-color: #1b2022
+}
+
+.card.watch .card_header .btn_replay {
+    background-image: -webkit-linear-gradient(#485053, #2b3033);
+    background-image: linear-gradient(#485053, #2b3033)
+}
+
+.card.watch .card_header .btn_replay:hover {
+    background-image: -webkit-linear-gradient(#535c5f, #3d4448);
+    background-image: linear-gradient(#535c5f, #3d4448)
+}
+
+.card.watch .card_header .btn_replay:active {
+    background-image: -webkit-linear-gradient(#485053, #2b3033);
+    background-image: linear-gradient(#485053, #2b3033);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+.card.watch .card_header .btn_next {
+    background-image: -webkit-linear-gradient(#398ff2, #2975c2);
+    background-image: linear-gradient(#398ff2, #2975c2)
+}
+
+.card.watch .card_header .btn_next:hover {
+    background-image: -webkit-linear-gradient(#5dabff, #3189e3);
+    background-image: linear-gradient(#5dabff, #3189e3)
+}
+
+.card.watch .card_header .btn_next:active {
+    background-image: -webkit-linear-gradient(#398ff2, #2975c2);
+    background-image: linear-gradient(#398ff2, #2975c2);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+#purchase {
+    padding-bottom: 8px
+}
+
+.player .player_error {
+    font-size: 1.275em
+}
+
+#frame .orphan {
+    font-size: 1.275em;
+    margin-top: 23%
+}
+
+.card {
+    display: block
+}
+
+.card.embed .card_header .btn_watch:after {
+    right: 18px
+}
+
+.player .player_error {
+    font-size: 1.275em
+}
+
+#frame .orphan {
+    font-size: 1.275em;
+    margin-top: 25%
+}
+
+.card .suggested ul {
+    padding: 44px 60px 0
+}
+
+.card .card_header {
+    height: 140px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 2px 20px transparent, 0 1px 0 rgba(255, 255, 255, 0.1)
+}
+
+.card .card_header .btn_replay {
+    left: 60px
+}
+
+.card .card_header .btn_next {
+    right: 60px
+}
+
+.card.embed h3.overlay-title {
+    font-size: 0.75em;
+    width: 80%
+}
+
+.card.embed time {
+    font-size: 0.75em;
+    color: rgba(255, 255, 255, 0.86)
+}
+
+.card.embed .card_header {
+    height: 45px
+}
+
+.card.embed .card_header .btn_replay {
+    width: 130px;
+    height: 44px
+}
+
+.card.embed .card_header .btn_replay {
+    float: left;
+    text-align: left;
+    padding-left: 40px
+}
+
+.card.embed .card_header .btn_watch {
+    padding-right: 90px;
+    text-align: right;
+    float: right
+}
+
+.card.watch .card_header .btn_replay,
+.card.watch .card_header .btn_next {
+    background-color: #1b2022
+}

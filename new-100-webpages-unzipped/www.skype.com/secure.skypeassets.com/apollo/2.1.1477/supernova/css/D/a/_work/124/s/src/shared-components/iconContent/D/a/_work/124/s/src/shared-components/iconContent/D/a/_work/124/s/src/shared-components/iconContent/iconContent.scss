@@ -1,0 +1,30 @@
+.supernova-text-content {
+  .icon-component {
+    font-size: 35px;
+
+    &.icon-content {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+  }
+
+  li {
+    margin-top: 15px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.supernova-text-content-title {
+  padding-right: 20px;
+}
+
+.supernova-text-content-txt {
+  p {
+    line-height: 1.8em;
+    font-size: 100%;
+  }
+}

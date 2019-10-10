@@ -1,0 +1,288 @@
+/*[/img/js/boxy2.js]*/ function RegBoxy(element, options) { this.options = jQuery.extend({}, RegBoxy.DEFAULTS, options || {}); this.boxy = jQuery(this.options.titlebar?RegBoxy.WRAPPER1:RegBoxy.WRAPPER2); jQuery.data(this.boxy[0], 'boxy', this); this.visible
+= false; if (this.options.modal) { this.options = jQuery.extend(this.options, {center: true, draggable: false}); } // options.actuator == DOM element that opened this boxy // association will be automatically deleted when this boxy is remove()d if (this.options.actuator)
+{ jQuery.data(this.options.actuator, 'active.boxy', this); } this.setContent(element || "
+<div></div>"); this._setupTitleBar(); this.boxy.css('display', 'none').prependTo(document.body); this.toTop(); if (this.options.fixed) { if (jQuery.browser.msie && jQuery.browser.version
+< 7) { this.options.fixed=f alse; // IE6 doesn 't support fixed positioning
+        } else {
+            this.boxy.addClass('fixed ');
+        }
+    }
+    
+    if (this.options.center && RegBoxy._u(this.options.x, this.options.y)) {
+        this.center();
+    } else {
+        this.moveTo(
+            RegBoxy._u(this.options.x) ? this.options.x : RegBoxy.DEFAULT_X,
+            RegBoxy._u(this.options.y) ? this.options.y : RegBoxy.DEFAULT_Y
+        );
+    }
+    
+    if (this.options.show) this.show();
+
+};
+
+RegBoxy.EF = function() {};
+
+jQuery.extend(RegBoxy, {
+    
+    WRAPPER1:   "<table cellspacing='0 ' cellpadding='0 ' border='0 ' class='boxy-wrapper '>" +
+                "<tr><td class='top-left1 '></td><td class='top1 '></td><td class='top-right1 '></td></tr>" +
+                "<tr><td class='tbar-left '></td><td class='tbar '></td><td class='tbar-right '></td></tr>" +
+                "<tr><td class='left '></td><td class='boxy-inner '></td><td class='right '></td></tr>" +
+                "<tr><td class='bottom-left '></td><td class='bottom '></td><td class='bottom-right '></td></tr>" +
+                "</table>",
+    WRAPPER2:   "<table cellspacing='0 ' cellpadding='0 ' border='0 ' class='boxy-wrapper '>" +
+                "<tr><td class='top-left2 '></td><td class='top2 '></td><td class='top-right2 '></td></tr>" +
+                "<tr><td class='left '></td><td class='boxy-inner '></td><td class='right '></td></tr>" +
+                "<tr><td class='bottom-left '></td><td class='bottom '></td><td class='bottom-right '></td></tr>" +
+                "</table>",
+   
+    DEFAULTS: {
+        title:                  null,           // titlebar text.
+        titlebar:               true,           // display titlebar?
+		closeable:              true,           // display close link in titlebar?
+        draggable:              false,           // can this dialog be dragged?
+        clone:                  false,          // clone content prior to insertion into dialog?
+        actuator:               null,           // element which opened this dialog
+        center:                 true,           // center dialog in viewport?
+        show:                   true,           // show dialog immediately?
+        modal:                  false,          // make dialog modal?
+        fixed:                  true,           // use fixed positioning, if supported? absolute positioning used otherwise
+        closeText:              '[关闭] ',      // text to use for default close link
+        unloadOnHide:           false,          // should this dialog be removed from the DOM after being hidden?
+        clickToFront:           false,          // bring dialog to foreground on any click (not just titlebar)?
+        behaviours:             RegBoxy.EF,        // function used to apply behaviours to all content embedded in dialog.
+        afterDrop:              RegBoxy.EF,        // callback fired after dialog is dropped. executes in context of RegBoxy instance.
+        afterShow:              RegBoxy.EF,        // callback fired after dialog becomes visible. executes in context of RegBoxy instance.
+        afterHide:              RegBoxy.EF,        // callback fired after dialog is hidden. executed in context of RegBoxy instance.
+        beforeUnload:           RegBoxy.EF         // callback fired after dialog is unloaded. executed in context of RegBoxy instance.
+    },
+    
+    DEFAULT_X:          50,
+    DEFAULT_Y:          50,
+    zIndex:             1337,
+    dragConfigured:     false, // only set up one drag handler for all boxys
+    resizeConfigured:   false,
+    dragging:           null,
+    
+    // load a URL and display in boxy
+    // url - url to load
+    // options keys (any not listed below are passed to boxy constructor)
+    //   type: HTTP method, default: GET
+    //   cache: cache retrieved content? default: false
+    //   filter: jQuery selector used to filter remote content
+    load: function(url, options) {
+        
+        options = options || {};
+        
+        var ajax = {
+            url: url, type: 'GET ', dataType: 'html ', cache: false, success: function(html) {
+                html = jQuery(html);
+                if (options.filter) html = jQuery(options.filter, html);
+                new RegBoxy(html, options);
+            }
+        };
+        
+        jQuery.each(['type ', 'cache '], function() {
+            if (this in options) {
+                ajax[this] = options[this];
+                delete options[this];
+            }
+        });
+        
+        jQuery.ajax(ajax);
+        
+    },
+    
+    // allows you to get a handle to the containing boxy instance of any element
+    // e.g. <a href='# ' onclick='alert(RegBoxy.get(this)); '>inspect!</a>.
+    // this returns the actual instance of the boxy 'class ', not just a DOM element.
+    // RegBoxy.get(this).hide() would be valid, for instance.
+    get: function(ele) {
+        var p = jQuery(ele).parents('.boxy-wrapper ');
+        return p.length ? jQuery.data(p[0], 'boxy ') : null;
+    },
+    
+    // returns the boxy instance which has been linked to a given element via the
+    // 'actuator ' constructor option.
+    linkedTo: function(ele) {
+        return jQuery.data(ele, 'active.boxy ');
+    },
+    
+    // displays an alert box with a given message, calling optional callback
+    // after dismissal.
+    alert: function(message, callback, options) {
+        return RegBoxy.ask(message, ['确定 '], callback, options);
+    },
+    
+    // displays an alert box with a given message, calling after callback iff
+    // user selects OK.
+    confirm: function(message, after, options) {
+        return RegBoxy.ask(message, ['确定 ', '取消 '], function(response) {
+            if (response == '确定 ') after();
+        }, options);
+    },
+    
+    // asks a question with multiple responses presented as buttons
+    // selected item is returned to a callback method.
+    // answers may be either an array or a hash. if it's an array, the // the callback will received the selected value. if it 's a hash,
+    // you'll get the corresponding key. ask: function(question, answers, callback, options) { options=j Query.extend({modal: true, closeable: false}, options || {}, {show: true, unloadOnHide: true}); var body=j Query( '<div></div>').append(jQuery(
+    '<div class="question"></div>').html(question)); // ick var map={ }, answerStrings=[ ]; if (answers instanceof Array) { for (var i=0 ; i < answers.length; i++) { map[answers[i]]=a nswers[i]; answerStrings.push(answers[i]); } } else { for (var k in answers) { map[answers[k]]=k ; answerStrings.push(answers[k]);
+    } } var buttons=j Query( '<form class="answers"></form>'); buttons.html(jQuery.map(answerStrings, function(v) { return "<input type='button' value='" + v + "' />"; }).join( ' ')); jQuery( 'input[type=button]', buttons).click(function() { var clicked=t
+    his; RegBoxy.get(this).hide(function() { if (callback) callback(map[clicked.value]); }); }); body.append(buttons); new RegBoxy(body, options); }, // returns true if a modal boxy is visible, false otherwise isModalVisible: function() { return jQuery(
+    '.boxy-modal-blackout').length> 0; }, _u: function() { for (var i = 0; i
+    < arguments.length; i++) if (typeof arguments[i] !='undefined' ) return false; return true; }, _handleResize: function(evt) { jQuery( '.boxy-modal-blackout').css( 'display', 'none').css({ width: jQuery(window).width(),
+        height: jQuery(document).height() }).css( 'display', 'block'); }, _handleDrag: function(evt) { var d; if (d=R egBoxy.dragging) { d[0].boxy.css({left: evt.pageX - d[1], top: evt.pageY - d[2]}); } }, _nextZ: function() { return RegBoxy.zIndex++; },
+        _viewport: function() { var d=d ocument.documentElement, b=d ocument.body, w=w indow; return jQuery.extend( jQuery.browser.msie ? { left: b.scrollLeft || d.scrollLeft, top: b.scrollTop || d.scrollTop } : { left: w.pageXOffset, top: w.pageYOffset },
+        !RegBoxy._u(w.innerWidth) ? { width: w.innerWidth, height: w.innerHeight } : (!RegBoxy._u(d) && !RegBoxy._u(d.clientWidth) && d.clientWidth !=0 ? { width: d.clientWidth, height: d.clientHeight } : { width: b.clientWidth, height: b.clientHeight })
+        ); } }); RegBoxy.prototype={ // Returns the size of this boxy instance without displaying it. // Do not use this method if boxy is already visible, use getSize() instead. estimateSize: function() { this.boxy.css({visibility: 'hidden', display:
+        'block'}); var dims=t his.getSize(); this.boxy.css( 'display', 'none').css( 'visibility', 'visible'); return dims; }, // Returns the dimensions of the entire boxy dialog as [width,height] getSize: function() { return [this.boxy.width(), this.boxy.height()];
+        }, // Returns the dimensions of the content region as [width,height] getContentSize: function() { var c=t his.getContent(); return [c.width(), c.height()]; }, // Returns the position of this dialog as [x,y] getPosition: function() { var b=t his.boxy[0];
+        return [b.offsetLeft, b.offsetTop]; }, // Returns the center point of this dialog as [x,y] getCenter: function() { var p=t his.getPosition(); var s=t his.getSize(); return [Math.floor(p[0] + s[0] / 2), Math.floor(p[1] + s[1] / 2)]; }, // Returns a
+        jQuery object wrapping the inner boxy region. // Not much reason to use this, you 're probably more interested in getContent()
+    getInner: function() {
+        return jQuery('.boxy-inner ', this.boxy);
+    },
+
+    getTitleBar: function() {
+        return jQuery('.tbar ', this.boxy);
+    },
+    
+    // Returns a jQuery object wrapping the boxy content region.
+    // This is the user-editable content area (i.e. excludes titlebar)
+    getContent: function() {
+        return jQuery('.boxy-content ', this.boxy);
+    },
+    
+    // Replace dialog content
+    setContent: function(newContent) {
+        newContent = jQuery(newContent).css({display: 'block '}).addClass('boxy-content ');
+        if (this.options.clone) newContent = newContent.clone(true);
+        this.getContent().remove();
+        this.getInner().append(newContent);
+        this._setupDefaultBehaviours(newContent);
+        this.options.behaviours.call(this, newContent);
+        return this;
+    },
+    
+    // Move this dialog to some position, funnily enough
+    moveTo: function(x, y) {
+        this.moveToX(x).moveToY(y);
+        return this;
+    },
+    
+    // Move this dialog (x-coord only)
+    moveToX: function(x) {
+        if (typeof x == 'number ') this.boxy.css({left: x});
+        else this.centerX();
+        return this;
+    },
+    
+    // Move this dialog (y-coord only)
+    moveToY: function(y) {
+        if (typeof y == 'number ') this.boxy.css({top: y});
+        else this.centerY();
+        return this;
+    },
+    
+    // Move this dialog so that it is centered at (x,y)
+    centerAt: function(x, y) {
+        var s = this[this.visible ? 'getSize ' : 'estimateSize ']();
+        if (typeof x == 'number ') this.moveToX(x - s[0] / 2);
+        if (typeof y == 'number ') this.moveToY(y - s[1] / 2);
+        return this;
+    },
+    
+    centerAtX: function(x) {
+        return this.centerAt(x, null);
+    },
+    
+    centerAtY: function(y) {
+        return this.centerAt(null, y);
+    },
+    
+    // Center this dialog in the viewport
+    // axis is optional, can be 'x ', 'y '.
+    center: function(axis) {
+        var v = RegBoxy._viewport();
+        var o = this.options.fixed ? [0, 0] : [v.left, v.top];
+        if (!axis || axis == 'x ') this.centerAt(o[0] + v.width / 2, null);
+        if (!axis || axis == 'y ') this.centerAt(null, o[1] + v.height / 2);
+        return this;
+    },
+    
+    // Center this dialog in the viewport (x-coord only)
+    centerX: function() {
+        return this.center('x ');
+    },
+    
+    // Center this dialog in the viewport (y-coord only)
+    centerY: function() {
+        return this.center('y ');
+    },
+    
+    // Resize the content region to a specific size
+    resize: function(width, height, after) {
+        if (!this.visible) return;
+        var bounds = this._getBoundsForResize(width, height);
+        this.boxy.css({left: bounds[0], top: bounds[1]});
+        this.getContent().css({width: bounds[2], height: bounds[3]});
+        if (after) after(this);
+        return this;
+    },
+    
+    // Tween the content region to a specific size
+    tween: function(width, height, after) {
+        if (!this.visible) return;
+        var bounds = this._getBoundsForResize(width, height);
+        var self = this;
+        this.boxy.stop().animate({left: bounds[0], top: bounds[1]});
+        this.getContent().stop().animate({width: bounds[2], height: bounds[3]}, function() {
+            if (after) after(self);
+        });
+        return this;
+    },
+    
+    // Returns true if this dialog is visible, false otherwise
+    isVisible: function() {
+        return this.visible;    
+    },
+    
+    // Make this boxy instance visible
+    show: function() {
+        if (this.visible) return;
+        if (this.options.modal) {
+            var self = this;
+            if (!RegBoxy.resizeConfigured) {
+                RegBoxy.resizeConfigured = true;
+                jQuery(window).resize(function() { RegBoxy._handleResize(); });
+            }
+            this.modalBlackout = jQuery('<div class="boxy-modal-blackout">
+        </div>') .css({zIndex: RegBoxy._nextZ(), opacity: 0.3, FILTER: "progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#99000000', EndColorStr='#90000000')\\0/", backgroundColor: "transparent\\0/", width: jQuery(window).width(), height:
+        jQuery(document).height()}) .appendTo(document.body); this.toTop(); if (this.options.closeable) { jQuery(document.body).bind('keypress.boxy', function(evt) { var key = evt.which || evt.keyCode; if (key == 27) { self.hide(); jQuery(document.body).unbind('keypress.boxy');
+        } }); } } this.boxy.stop().show(); this.visible = true; this._fire('afterShow'); return this; }, // Hide this boxy instance hide: function(after) { if (!this.visible) return; if (this.options.modal) { jQuery(document.body).unbind('keypress.boxy');
+        this.modalBlackout.animate({opacity: 0}, function() { jQuery(this).remove(); }); } this.boxy.stop().css({display: 'none'}); this.visible = false; this._fire('afterHide'); if (after) after(this); if (this.options.unloadOnHide) this.unload(); return
+        this; }, toggle: function() { this[this.visible ? 'hide' : 'show'](); return this; }, hideAndUnload: function(after) { this.options.unloadOnHide = true; this.hide(after); return this; }, unload: function() { this._fire('beforeUnload'); this.boxy.remove();
+        if (this.options.actuator) { jQuery.data(this.options.actuator, 'active.boxy', false); } }, // Move this dialog box above all other boxy instances toTop: function() { this.boxy.css({zIndex: RegBoxy._nextZ()}); return this; }, // Returns the title
+        of this dialog getTitle: function() { return jQuery('.title-bar h2', this.boxy).html(); }, // Sets the title of this dialog setTitle: function(t) { jQuery('.title-bar h2', this.boxy).html(t); return this; }, // // Don't touch these privates _getBoundsForResize:
+        function(width, height) { var csize = this.getContentSize(); var delta = [width - csize[0], height - csize[1]]; var p = this.getPosition(); return [Math.max(p[0] - delta[0] / 2, 0), Math.max(p[1] - delta[1] / 2, 0), width, height]; }, _setupTitleBar:
+        function() { if (this.options.title) { var self = this; var tb = jQuery("
+        <div class='title-bar'></div>").html("
+        <h2>" + this.options.title + "</h2>"); if (this.options.closeable) { tb.append(jQuery("
+        <img src='http://img01.babytreeimg.com/img/reg_v3/reg_boxy_close.gif' class='close' />")); } if (this.options.draggable) { tb[0].onselectstart = function() { return false; } tb[0].unselectable = 'on'; tb[0].style.MozUserSelect = 'none'; if (!RegBoxy.dragConfigured)
+        { jQuery(document).mousemove(RegBoxy._handleDrag); RegBoxy.dragConfigured = true; } tb.mousedown(function(evt) { self.toTop(); RegBoxy.dragging = [self, evt.pageX - self.boxy[0].offsetLeft, evt.pageY - self.boxy[0].offsetTop]; jQuery(this).addClass('dragging');
+        }).mouseup(function() { jQuery(this).removeClass('dragging'); RegBoxy.dragging = null; self._fire('afterDrop'); }); } this.getTitleBar().prepend(tb); this._setupDefaultBehaviours(tb); } }, _setupDefaultBehaviours: function(root) { var self = this;
+        if (this.options.clickToFront) { root.click(function() { self.toTop(); }); } root.closest('.boxy-content, .tbar').delegate('.close', 'click', function () { self.hide(); return false; }).delegate('.close', 'mousedown', function (evt) { evt.stopPropagation();
+        }); /* jQuery('.close', root).click(function() { self.hide(); return false; }).mousedown(function(evt) { evt.stopPropagation(); }); */ }, _fire: function(event) { this.options[event].call(this); } }; function boxy2_init(show_titlebar){ boxy2=new
+        function(){ var reg_hide_select=function(){ var f=navigator.appVersion.split("MSIE"); var g=parseFloat(f[1]); if(g>=5.5 && g
+        <=6){ jQuery( "select").css({visibility: "hidden"}); } jQuery( "#pop_question select").css({visibility: "visible"}); };
+            var reg_show_select=function(){ var f=navigator.appVersion.split( "MSIE"); var g=parseFloat(f[1]); if(g>=5.5 && g
+            <=6){ jQuery( "select").css({visibility: "visible"}); } }; //不知道4096神马意思 //this.container=new RegBoxy( "",{title: "提示",show:false,closable:true,fixed:false,modal:(jQuery.browser.msie && jQuery(document).height()>4096)?false:true,titlebar:show_titlebar?true:false,afterShow:reg_hide_select,afterHide:reg_show_select}); this.container=new RegBoxy("",{title:"提示",show:false,closable:true,fixed:false,modal:true,titlebar:show_titlebar?true:false,afterShow:reg_hide_select,afterHide:reg_show_select});
+                this.pop=function(question, width, height) { if(width && height){ height=Math.min(height,jQuery(window).height()-110); var wrapper1 = jQuery('
+                <div class="mid_content"></div>').css({width:width+"px",height:height+"px"}); var wrapper2 = jQuery('
+                <div class="boxy_question"></div>'); question = wrapper1.html(wrapper2.html(question)); var body = jQuery('
+                <div class="question" id="pop_question"></div>').css({width:width+"px",height:height+"px"}); if(height
+                <200){ body.css({ "min-height": "0px"}); } } else{ var body=j Query( '<div></div>').append(jQuery( '<div class="question boxy_question" id="pop_question"></div>')); } this.container.setContent(body); if(jQuery( "body").css( "position")=="relative" ){
+                // jQuery( "body").css({position: "static"}); body_relative=true; } jQuery( "#pop_question").html(question); this.container.show(); this.container.center(); } this.title=function(t){ this.container.setTitle(t); } this.hide=function(){
+                    btns=null; this.container.hide(); if(jQuery( "body").css( "position")=="static" && typeof(body_relative)!="undefined" && body_relative){ jQuery( "body").css({position: "relative"}); } } this.alert=function(text){ this.title( "提示"); this.pop(text);
+                    } this.resize=function(w,h){ jQuery( "#pop_question").css({width:w+ "px",height:Math.min(h,jQuery(window).height()-110)+ "px"}); this.container.center(); } this.center=function(){ this.container.center(); } }; }

@@ -1,0 +1,33 @@
+var nunjucks = require("nunjucks/browser/nunjucks-slim"); var env; if (!nunjucks.currentEnv){ env = nunjucks.currentEnv = new nunjucks.Environment([], undefined); } else { env = nunjucks.currentEnv; } var dependencies = nunjucks.webpackDependencies ||
+(nunjucks.webpackDependencies = {}); var shim = require("/usr/lib/node_modules/@buzzfeed/fe-build-tools/node_modules/@buzzfeed/nunjucks-loader/runtime-shim"); (function() {(nunjucks.nunjucksPrecompiled = nunjucks.nunjucksPrecompiled || {})["app/static/components/quizzes/partials/_xs-multiple-textitem.html"]
+= (function() { function root(env, context, frame, runtime, cb) { var lineno = null; var colno = null; var output = ""; try { var parentTemplate = null; output += "
+<div class=\ "js-carousel-item package-carousel-item xs-float-left\">\n <a href=\ ""; output +=r untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "config")), "webRoot"), env.opts.autoescape); output +=r untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context,
+        frame, "item")), "link"), env.opts.autoescape); output +="?origin=shp\" class=\ "package-carousel-item__link xs-block xs-mr2 fill-white link-gray\"\n data-bfa=\ "@a:post|package|"; output +=r untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context,
+        frame, "item")), "number"), env.opts.autoescape); output +="; @o:{dimension2:" ; output +=r untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "item")), "id"), env.opts.autoescape); output +=",dimension4:" ; output
+        +=r untime.suppressValue(env.getFilter( "escape").call(context, runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "item")), "title")), env.opts.autoescape); output +="}; @d:" ; if(runtime.contextOrFrameLookup(context, frame,
+        "package_type")) { output +=r untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "package_type"), env.opts.autoescape); ; } else { output +=r untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "item")),
+        "number"), env.opts.autoescape); ; } output +="; @e:{type:package,obj_id:" ; output +=r untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "item")), "id"), env.opts.autoescape); output +=",obj_type:post,p:" ; output +=r
+        untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "position"), env.opts.autoescape); output +=",sub_p:" ; output +=r untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "item")), "number"), env.opts.autoescape);
+        output +=",post_category:" ; output +=r untime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "item")), "category"), env.opts.autoescape); output +=",data_source:" ; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context,
+        frame, "data_source"), env.opts.autoescape); output +=",treatment:" ; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "treatment"), env.opts.autoescape); output +=",sub_unit:" ; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context,
+        frame, "sub_unit"), env.opts.autoescape); output +=",unit_name:" ; output +=r untime.suppressValue(runtime.contextOrFrameLookup(context, frame, "unit_name"), env.opts.autoescape); output +="}\" data-bfa-impressions=\ "true\">\n\n      <div class=\"wire-frame__img xs-mb1 card__image card__image--small\">\n        <img\n          alt=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "item")),"image_alt_text"), env.opts.autoescape);
+output += "\"\n          ";
+if(runtime.contextOrFrameLookup(context, frame, "is_progressive_image_loading")) {
+output += "\n          src=\"";
+output += runtime.suppressValue(env.getFilter("safe").call(context, runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "utils")),"transGif1x1Base64")), env.opts.autoescape);
+output += "\"\n          class=\"js-progressive-image\"\n          data-src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "item")),"image_dblwide"), env.opts.autoescape);
+output += "\"\n          data-resize=\"300:*\"\n          ";
+;
+}
+else {
+output += "\n          src=\"";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "item")),"image_dblwide"), env.opts.autoescape);
+output += "?output-format=auto&output-quality=auto&resize=300:*\"\n          ";
+;
+}
+output += "\n          />\n      </div>\n    <h3 class=\"xs-text-5 xs-mb05 bold\">";
+output += runtime.suppressValue(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "item")),"title"), env.opts.autoescape);
+output += "</h3>\n  </a>\n</div>\n"; if(parentTemplate) { parentTemplate.rootRenderFunc(env, context, frame, runtime, cb); } else { cb(null, output); } ; } catch (e) { cb(runtime.handleError(e, lineno, colno)); } } return { root: root }; })(); })(); module.exports
+= shim(nunjucks, env, nunjucks.nunjucksPrecompiled["app/static/components/quizzes/partials/_xs-multiple-textitem.html"] , dependencies)

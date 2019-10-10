@@ -1,0 +1,16 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css"), undefined);
+// module
+exports.push([module.id, ".compassIconBase-2OjkHPR1{position:absolute;bottom:1px;right:0}.compassIcon-xs-2kihFm3w,.compassIcon-xxs-23gq-xpc{width:30px;height:30px}.compassIcon-m-1hQKtg9e,.compassIcon-s-15Q6PhOt{width:40px;height:40px}.compassIcon-l-1jp3HG1E,.compassIcon-xl-be8TPZxc,.compassIcon-xxl-26aI9liZ{width:60px;height:60px}", ""]);
+// exports
+exports.locals= {
+    "container": "container-2Qog_GpN", "compassIconBase": "compassIconBase-2OjkHPR1 " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["compassIcon"] + "", "compassIcon-xxs": "compassIcon-xxs-23gq-xpc compassIconBase-2OjkHPR1 " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["compassIcon"] + "", "compassIcon-xs": "compassIcon-xs-2kihFm3w compassIconBase-2OjkHPR1 " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["compassIcon"] + "", "compassIcon-s": "compassIcon-s-15Q6PhOt compassIconBase-2OjkHPR1 " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["compassIcon"] + "", "compassIcon-m": "compassIcon-m-1hQKtg9e compassIconBase-2OjkHPR1 " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["compassIcon"] + "", "compassIcon-l": "compassIcon-l-1jp3HG1E compassIconBase-2OjkHPR1 " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["compassIcon"] + "", "compassIcon-xl": "compassIcon-xl-be8TPZxc compassIconBase-2OjkHPR1 " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["compassIcon"] + "", "compassIcon-xxl": "compassIcon-xxl-26aI9liZ compassIconBase-2OjkHPR1 " + require("-!../../../../../node_modules/css-loader/index.js??ref--3-1!../styles.css").locals["compassIcon"] + ""
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/cover/component/desktop-360/styles.css
+// module id = 437
+// module chunks = 1

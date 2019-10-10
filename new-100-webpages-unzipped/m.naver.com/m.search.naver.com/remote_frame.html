@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+    <title>CrossStorage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+</head>
+
+<body>
+    <script type="text/javascript">
+        document.domain = "naver.com";
+    </script>
+    <script type="text/javascript" src="https://ssl.pstatic.net/sstatic/au/s/mobile/_search/remoteStorageAPI/nhn.mobile.RemoteStorageAPI_131105.js"></script>
+    <script type="text/javascript">
+        var oStorage = new nhn.mobile.RemoteFrameStorage({
+            receiverOption: {
+                bCheckDomain: false,
+                aWhiteDomainList: []
+            }
+        }).load();
+    </script>
+    <script type="text/javascript">
+        if (window.addEventListener) {
+            window.addEventListener("load", function() {
+                setTimeout(function() {
+                    var e = document.createElement("script");
+                    e.src = "remote_frame_preloader.js";
+                    document.getElementsByTagName("head")[0].appendChild(e)
+                }, 200)
+            }, false)
+        }
+    </script>
+</body>
+
+</html>

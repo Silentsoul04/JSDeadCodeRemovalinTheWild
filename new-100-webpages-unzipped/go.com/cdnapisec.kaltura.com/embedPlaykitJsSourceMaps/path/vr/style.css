@@ -1,0 +1,10 @@
+exports=module.exports=require("../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+// module
+exports.push([module.id, ".playkit-vr-video {\n  display: none;\n}\n\n.playkit-vr-canvas {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  margin: auto;\n  width: 100%;\n}\n", ""]);
+// exports
+//////////////////
+// WEBPACK FOOTER
+// ../node_modules/css-loader!./style.css
+// module id = 8
+// module chunks = 0

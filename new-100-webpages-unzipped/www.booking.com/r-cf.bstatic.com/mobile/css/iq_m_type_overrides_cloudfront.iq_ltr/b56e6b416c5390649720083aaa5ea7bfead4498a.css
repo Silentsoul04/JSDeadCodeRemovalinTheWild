@@ -1,0 +1,382 @@
+body {
+    font-size: 14px;
+    line-height: 1.42857142857143em
+}
+
+input,
+button,
+select,
+textarea {
+    font-size: inherit;
+    line-height: inherit
+}
+
+button {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400 !important;
+    font-weight: 500 !important
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 1.33333333333333em;
+    font-weight: 700 !important
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 1.4em;
+    font-weight: 700 !important
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 700 !important
+}
+
+h4 {
+    font-size: 14px;
+    line-height: 1.42857142857143em;
+    font-weight: 700 !important
+}
+
+h5,
+h6 {
+    font-size: 14px;
+    line-height: 1.42857142857143em;
+    font-weight: 500 !important
+}
+
+#language_currency_selector .side_menu_box {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 700 !important
+}
+
+.section_title h3,
+.lp-header__title,
+.landingpage_image.lp_city_header_new_design .landingpage_image_inner .promotion_data .citylink,
+.qr-smiles__rating,
+.citylink {
+    font-size: 32px;
+    line-height: 1.25em;
+    font-weight: 700 !important
+}
+
+.primary_cta.m_bigger_search_button,
+.index #form_search_h1 {
+    font-size: 24px;
+    line-height: 1.33333333333333em;
+    font-weight: 700 !important
+}
+
+.m-hprt-below-price--container,
+.section_title p,
+.landingpage_image.lp_city_header_new_design .landingpage_image_inner .promotion_data .hotelcount,
+.room .price,
+.full_page_map_header,
+.scoreGradient,
+.destination-guide,
+.sr-card__price-cheapest,
+.destination_copuntry_flag,
+.db-card--header--title,
+.sr-card__price-block {
+    font-size: 20px;
+    line-height: 1.4em;
+    font-weight: 700 !important
+}
+
+.lp-prop-highlights__heading,
+.in_and_around_tabs__header,
+.dates-container--check-in--date,
+.dates-container--check-out--date,
+a.review-score-badge,
+span.review-score-badge,
+a.review-score-widget__text,
+span.review-score-widget__text,
+.bui-banner__title,
+.hotel_details__fulltext .u-color\:bright_blue:first-child,
+.primary_cta,
+a.primary_cta,
+.bigbluebutton,
+.m_hp_rt_room_card__title,
+.room__title-group-rec,
+.hotel_details__review-word,
+.input_destination,
+.searchbox_dest,
+.sr-header--title--text,
+.primary_cta.small.rt_select_btn,
+.m-rewards-survey__title,
+.c-old-town-banner__container .c-old-town-banner__header,
+.searchbox--radio-group--item,
+.searchbox_redesign .m_cal_date_string,
+.searchbox_redesign #ci_date_text,
+.searchbox_redesign #co_date_text,
+.searchbox_redesign .group_search select,
+.rent-property-title,
+.raf-entry .raf-entry__title,
+.viewed_list h4,
+.m-banner__content__title,
+.sr_simple_card_hotel_name,
+.similar_destination .destination_title,
+.index-usp h3,
+.lp-usp h3,
+.maps_iw_small .maps_iw_price_element .maps_iw_price__price {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 700 !important
+}
+
+.alertify-log-show .abandoned-cart-growl-container+.alertify-log-close-button,
+.sh-cards__title,
+.city-promotions__title,
+.sh-carousel__title,
+.sh-cards__title,
+.m-section__sheet-title,
+.m-section__sheet-title,
+.m-section__title,
+.ge-discountfrube,
+.langselectformlist,
+.currList,
+.site-nav--link,
+a.site-nav--link {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400 !important
+}
+
+.sr-card__name,
+.breakfast_included--constructive,
+.current .svg-marker-label {
+    font-size: 14px;
+    line-height: 1.42857142857143em;
+    font-weight: 700 !important
+}
+
+ul#m_tabs li a,
+table#m_tabs td a,
+.sr_simple_card_price_includes.sr_make_the_price_stand_out-urgency,
+.sr_last_minute_drop__body {
+    font-size: 14px;
+    line-height: 1.42857142857143em;
+    font-weight: 500 !important
+}
+
+.c-score-bar__title,
+.sr_simple_card_price_includes,
+#srList .prd-taxes-and-fees-under-price,
+.m-banner__content__text,
+.room .roomInfo,
+.mid-year-banner__container .bui-banner__text,
+.hp-hotel_details,
+.m-section__minimal-dropdown-trigger,
+.breadcrumb__h-element,
+.m_lp_breadcrumb,
+.m_hp_rt_room_card__policies-container .room_cell_subtitle,
+.hotel_details__banner,
+.sr-card__price-block,
+.room_cell_subtitle_conditions,
+.searchbox_purpose,
+.hotel_details__review-cta,
+.db-card.db-card__room,
+.hotel_details__facility-redesign li,
+.m_sr_dod__reduced,
+.m_sr-dod__time_remaining,
+.sr-controls__item,
+.wl_item_name,
+.wl_item_count,
+.searchbox--radio-group--label,
+.cross-product-bar__link,
+.cross-product-bar__link:link,
+.sr-header--group--item,
+.dual_cal_label,
+.searchbox_redesign .group_options_label--text,
+.maps_iw_small .maps_iw_price_element .maps_iw_price__rackrate,
+.maps_iw_small .maps_iw_price_element .maps_iw_soldout {
+    font-size: 14px;
+    line-height: 1.42857142857143em;
+    font-weight: 400 !important
+}
+
+.text-pin__text,
+.sr_simple_card_price_from,
+.sr-filters--tag--extra,
+.just-booked-badge,
+.hp-property-type-badge,
+.sr_simple_card--deal,
+.maps_iw_small .maps_iw_price_element .maps_iw_search_config,
+.maps_iw_message,
+.maps_iw_small .maps_iw_price_element .maps_iw_policy {
+    font-size: 12px;
+    line-height: 1.5em;
+    font-weight: 400 !important
+}
+
+.hp_price_marker .text-pin__container .text-pin__text {
+    font-weight: 500 !important
+}
+
+.sr-header--group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+ul#m_tabs li a,
+table#m_tabs td a {
+    line-height: 28px
+}
+
+.sr-header--group--item,
+.sr-header--title--text {
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.sr_svg__header_item,
+.sr-svg--header_icon_search {
+    top: auto
+}
+
+.nights-in-header {
+    margin-left: 4px
+}
+
+.urgency_message_x_people {
+    padding: 4px
+}
+
+.sr-controls__item>svg {
+    height: 12px;
+    width: 12px;
+    margin-left: 4px
+}
+
+.m_sr-dod__time_remaining,
+.m_sr-dod__title-content {
+    line-height: 24px !important
+}
+
+.m_hp_header_quick_book__higher .primary_cta {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400 !important;
+    font-weight: 500 !important
+}
+
+span.sr_make_the_price_stand_out-fc.sr_simple_card_price_includes--text {
+    font-size: 14px;
+    line-height: 1.42857142857143em;
+    font-weight: 400 !important;
+    color: #0ab21b
+}
+
+.alertify-log-show .alertify-log-close-button {
+    font-size: 27px
+}
+
+.a.review-score-badge,
+span.review-score-badge {
+    line-height: 40px
+}
+
+.sr-filters--title {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 700 !important;
+    color: #383838
+}
+
+.continue-booking__property-with-rooms .continue-booking__property-cta {
+    padding: 8px 16px
+}
+
+.m_hp_rt_plus_minus_secondary .m_rt_fullpage__plus-minus-copy {
+    line-height: 22px
+}
+
+.hp-property-type-badge {
+    vertical-align: middle
+}
+
+.sh-cards__item-title,
+.banner-ios .appacq-banner-rating-wrap h2,
+.banner-android .appacq-banner-rating-wrap h2 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700
+}
+
+.bb-rates-badge--mdot .bb-rates-badge__main,
+.bb-rates-badge--mdot-sr .bb-rates-badge__main {
+    font-size: 10px
+}
+
+.bb-rates-badge--mdot .bb-rates-badge__icon,
+.bb-rates-badge--mdot-sr .bb-rates-badge__icon {
+    font-size: 9px
+}
+
+.m-badge__business,
+.bb-rates-badge--mdot,
+.bb-rates-badge--mdot-sr,
+.bb-rates-badge--mdot .bb-rates-badge__main,
+.bb-rates-badge--mdot-sr .bb-rates-badge__main,
+.bb-rates-badge--mdot .bb-rates-badge__icon,
+.bb-rates-badge--mdot-sr .bb-rates-badge__icon {
+    line-height: 1
+}
+
+.sr-rooms-selector__icon {
+    top: 12px;
+    right: 8px
+}
+
+.ge-freebiefrube,
+.ge-discountfrube,
+.ge-fullfrube,
+.ge-rtl-freebiefrube,
+.ge-rtl-discountfrube,
+.ge-rtl-fullfrube {
+    font-size: 16px;
+    top: -1px;
+    width: 55px !important
+}
+
+.ge-module-frube--mdot,
+.ge-module-frube--mdot .jq_tooltip {
+    height: 17px
+}
+
+.ge-module-frube--mdot .jq_tooltip {
+    line-height: 1.5em
+}
+
+.maps_iw_attribute__review-score {
+    font-size: 11px;
+    line-height: 17px
+}
+
+.maps_iw_attribute__review-wording {
+    font-size: 11px;
+    line-height: 1
+}
+
+.text-pin__text,
+.svg-marker-label {
+    font-size: 12px;
+    line-height: 1
+}

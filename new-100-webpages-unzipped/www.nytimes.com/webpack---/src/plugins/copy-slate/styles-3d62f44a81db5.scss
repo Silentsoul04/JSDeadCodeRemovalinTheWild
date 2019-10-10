@@ -1,0 +1,16 @@
+exports = module.exports = require("../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.id, ".vhs-copy-slate{position:absolute;top:0;right:0;bottom:0;left:0;z-index:60;background:rgba(0,0,0,.8)}.vhs-copy-slate .vhs-copy-slate-close-button{box-sizing:content-box;display:block;font-size:20px;font-style:normal;line-height:1;color:#fff;position:absolute;top:-10px;right:-10px;width:35px;height:35px;margin:15px;cursor:pointer;opacity:.8;-moz-transition:opacity .3s ease-in-out;-o-transition:opacity .3s ease-in-out;-webkit-transition:opacity .3s ease-in-out;transition:opacity .3s ease-in-out}.vhs-copy-slate .vhs-copy-slate-close-button .vhs-copy-slate-close-button-x{margin:5px}.vhs-copy-slate .vhs-copy-slate-close-button:focus,.vhs-copy-slate .vhs-copy-slate-close-button:hover{opacity:1}.vhs-copy-slate .vhs-copy-slate-close-button:focus{outline:1px solid #4a90e2;outline-offset:1px}.vhs-copy-slate .vhs-copy-slate-center-container{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;padding:20px;height:110px;width:65%;max-width:500px;overflow:hidden}.vhs-copy-slate .vhs-copy-slate-center-container h4{margin:0 0 10px;padding:0;font-family:franklin,nyt-franklin,Arial,helvetica,sans-serif;font-size:14px;font-weight:700;color:#fff}.vhs-copy-slate .vhs-copy-slate-center-container p{font-family:franklin,nyt-franklin,Arial,helvetica,sans-serif;font-size:14px;font-weight:500;color:#fff}.vhs-copy-slate .vhs-copy-slate-center-container .vhs-embed-form-container{position:relative}.vhs-copy-slate .vhs-copy-slate-center-container .vhs-embed-form-container input{width:100%;height:auto;box-sizing:border-box;margin:0;padding:10px;border-radius:3px;border:2px solid #fff;overflow:hidden;font-family:franklin,nyt-franklin,Arial,helvetica,sans-serif;font-size:12px;font-weight:400;color:#000}.vhs-copy-slate .vhs-copy-slate-center-container .vhs-embed-form-container input:focus{outline:none;border-color:#44cafc}.vhs-copy-slate .vhs-copy-slate-center-container .vhs-embed-form-container:after{content:\"\";position:absolute;right:3px;top:3px;height:80%;width:70%;border-radius:3px;background-image:-webkit-linear-gradient(right,#fff,hsla(0,0%,100%,0));background-image:-moz-linear-gradient(right,#fff,hsla(0,0%,100%,0));background-image:-ms-linear-gradient(right,#fff,hsla(0,0%,100%,0));background-image:-o-linear-gradient(right,#fff,hsla(0,0%,100%,0));background-image:linear-gradient(right,#fff,hsla(0,0%,100%,0));filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr=\"#FFFFFFFF\",EndColorStr=\"#00FFFFFF\");pointer-events:none}", ""]);
+
+// exports
+
+
+
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/plugins/copy-slate/styles.scss
+// module id = 275
+// module chunks = 5

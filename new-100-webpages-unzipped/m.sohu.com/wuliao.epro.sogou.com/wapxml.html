@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta content="text/html; charset=GBK" http-equiv="Content-Type">
+    <title>sohu_info_flow</title>
+    <style type="text/css">
+        html {
+            color: #000;
+            background-color: transparent
+        }
+
+        body,
+        dd,
+        div,
+        dl,
+        dt,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        img,
+        input,
+        li,
+        ol,
+        p,
+        td,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size-adjust: none;
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            word-break: break-all;
+            word-wrap: break-word
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 400
+        }
+
+        li,
+        ol,
+        ul {
+            list-style-type: none
+        }
+
+        input {
+            outline: 0
+        }
+
+        img {
+            border: 0
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        table {
+            border-collapse: collapse
+        }
+
+        .ad_logo {
+            text-decoration: none;
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            bottom: 1px;
+            right: 0;
+            z-index: 9999
+        }
+
+        .ad_logo_s {
+            height: 9pt;
+            width: 9pt;
+            background: url(//img03.sogoucdn.com/app/a/100200019/1423040167.png) no-repeat left top;
+            background-position: center;
+            background-size: 100%, 100%
+        }
+
+        body {
+            font-family: PingFang SC, Arial, \\5fae\8F6F\96c5\9ED1, \\5b8b\4F53, simsun, sans-serif
+        }
+
+        a,
+        a:hover,
+        a:visited {
+            text-decoration: none;
+            color: #2b2b2b
+        }
+
+        .wrapper {
+            height: 2.12586rem
+        }
+
+        .wrapper,
+        .wrapper .url {
+            display: block;
+            position: relative
+        }
+
+        .wrapper .url {
+            overflow: hidden
+        }
+
+        .logo {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #a4a4a4;
+            border: 1px solid #d7d7d7;
+            text-align: center
+        }
+
+        [data-dpr="1"] .logo {
+            width: 27px;
+            height: 15px;
+            line-height: 15px;
+            font-size: 11px;
+            border-radius: 2px
+        }
+
+        [data-dpr="2"] .logo {
+            width: 54px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 22px;
+            border-radius: 4px
+        }
+
+        [data-dpr="3"] .logo {
+            width: 81px;
+            height: 45px;
+            line-height: 45px;
+            font-size: 33px;
+            border-radius: 6px
+        }
+
+        .desc {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden
+        }
+
+        [data-dpr="1"] .desc {
+            font-size: 17px;
+            max-height: 44px;
+            line-height: 23px
+        }
+
+        [data-dpr="2"] .desc {
+            font-size: 34px;
+            max-height: 88px;
+            line-height: 46px
+        }
+
+        [data-dpr="3"] .desc {
+            font-size: 51px;
+            max-height: 99pt;
+            line-height: 69px
+        }
+
+        .pic {
+            position: relative;
+            float: right;
+            width: 3.27586rem;
+            height: 2.12586rem;
+            margin-left: .34483rem
+        }
+
+        .pic img {
+            width: 100%;
+            height: 100%
+        }
+    </style>
+    <script>
+        ! function e(t, r, i) {
+            function n(o, l) {
+                if (!r[o]) {
+                    if (!t[o]) {
+                        var s = "function" == typeof require && require;
+                        if (!l && s) return s(o, !0);
+                        if (a) return a(o, !0);
+                        var m = new Error("Cannot find module '" + o + "'");
+                        throw m.code = "MODULE_NOT_FOUND", m
+                    }
+                    var u = r[o] = {
+                        exports: {}
+                    };
+                    t[o][0].call(u.exports, function(e) {
+                        var r = t[o][1][e];
+                        return n(r ? r : e)
+                    }, u, u.exports, e, t, r, i)
+                }
+                return r[o].exports
+            }
+            for (var a = "function" == typeof require && require, o = 0; o < i.length; o++) n(i[o]);
+            return n
+        }({
+            1: [function(e, t, r) {
+                "use strict";
+                ! function(e, t) {
+                    function r() {
+                        var t = a.getBoundingClientRect().width,
+                            r = t / 10;
+                        a.style.fontSize = r + "px", u.rem = e.rem = r
+                    }
+                    var i, n = e.document,
+                        a = n.documentElement,
+                        o = n.querySelector('meta[name="viewport"]'),
+                        l = n.querySelector('meta[name="flexible"]'),
+                        s = 0,
+                        m = 0,
+                        u = t.flexible || (t.flexible = {});
+                    if (o) {
+                        console.warn("将根据已有的meta标签来设置缩放比例");
+                        var c = o.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
+                        c && (m = parseFloat(c[1]), s = parseInt(1 / m))
+                    } else if (l) {
+                        var d = l.getAttribute("content");
+                        if (d) {
+                            var p = d.match(/initial\-dpr=([\d\.]+)/),
+                                f = d.match(/maximum\-dpr=([\d\.]+)/);
+                            p && (s = parseFloat(p[1]), m = parseFloat((1 / s).toFixed(2))), f && (s = parseFloat(f[1]), m = parseFloat((1 / s).toFixed(2)))
+                        }
+                    }
+                    if (!s && !m) {
+                        var v = (e.navigator.appVersion.match(/android/gi), e.navigator.appVersion.match(/iphone/gi)),
+                            h = e.devicePixelRatio;
+                        s = v ? h >= 3 && (!s || s >= 3) ? 3 : h >= 2 && (!s || s >= 2) ? 2 : 1 : 1, m = 1 / s
+                    }
+                    if (a.setAttribute("data-dpr", s), !o)
+                        if (o = n.createElement("meta"), o.setAttribute("name", "viewport"), o.setAttribute("content", "initial-scale=" + m + ", maximum-scale=" + m + ", minimum-scale=" + m + ", user-scalable=no"), a.firstElementChild) a.firstElementChild.appendChild(o);
+                        else {
+                            var x = n.createElement("div");
+                            x.appendChild(o), n.write(x.innerHTML)
+                        }
+                    e.addEventListener("resize", function() {
+                        clearTimeout(i), i = setTimeout(r, 300)
+                    }, !1), e.addEventListener("pageshow", function(e) {
+                        e.persisted && (clearTimeout(i), i = setTimeout(r, 300))
+                    }, !1), "complete" === n.readyState ? n.body.style.fontSize = 12 * s + "px" : n.addEventListener("DOMContentLoaded", function(e) {
+                        n.body.style.fontSize = 12 * s + "px"
+                    }, !1), r(), u.dpr = e.dpr = s, u.refreshRem = r, u.rem2px = function(e) {
+                        var t = parseFloat(e) * this.rem;
+                        return "string" == typeof e && e.match(/rem$/) && (t += "px"), t
+                    }, u.px2rem = function(e) {
+                        var t = parseFloat(e) / this.rem;
+                        return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
+                    }
+                }(window, window.lib || (window.lib = {}))
+            }, {}]
+        }, {}, [1]);
+    </script>
+</head>
+
+<body marginwidth="0" marginheight="0">
+    <div id="div_ad" class="wrapper">
+        <a class="url" href="https://service.epro.sogou.com/skwd?p=YnU9NTAzMDAmcGlkPXNvZ291LXdhcHMtMDc3N2FjZmY3YzlhYjM0NSZwcGlkPXNvaHV3YXBfMSZwdmlkPWY5ZjIwNzVhY2E4MjkwZTUmdHM9MTU3MDcwNDcwNyZpZD05NzU1NzUmZGlkPTM2ODY5NTEmZmlkPTI3NjE4JnNpZD0yNzYxOCZzZT0xOSZleGQ9czoxO2g6MDsyOzE7NzA4Ozk7MDs5OTA3NTIyNjYwNzY2OTQwMzQzOzY0OzI7MyZxdWVyeT0lRTQlQjglOEIlRTUlQTUlQjYlRTclOUElODQlRTglOTQlQUMlRTglOEYlOUMmZmc9MTQwMiwxNjAzLDgwMDEsODEyMSw4MjA5LDg0NzIsODgxNSw4OTAxLDg1MCwzMzEyLDM1MDIsMzg2NCwzOTMxJmNoZWF0PTAmdWlwPTEmaHM9MSZiY19leHA9MTQ5NDA1NzAxOSZiY19zdHlsZT0xJm1sPTIwJnJrbnVtPTEwJmltZWk9JmJjX3Bvcz01JmJjX25wb3M9MiZ3YmNfY2w9MCZzPWU3OTQ1YWFhAA%3D%3D&url=http%3A%2F%2Fm.sohu.com%2F%3Fpvid%3D000115_3w_index%26jump%3Dfront"
+            target="_blank">
+            <div class="pic"> <img src="//img01.sogoucdn.com/app/a/200630/65bbb7c430f4e97fc6e3c704b1aa8620"> </div>
+            <div class="desc">下奶的蔬菜这个方法既方便又实用</div>
+            <div id="logo" href="http://union.sogou.com/?" target="_blank" class="logo">广告</div>
+        </a>
+    </div>
+    <script>
+    </script>
+    <script>
+        ! function(t) {
+            function n(o) {
+                if (r[o]) return r[o].exports;
+                var e = r[o] = {
+                    exports: {},
+                    id: o,
+                    loaded: !1
+                };
+                return t[o].call(e.exports, e, e.exports, n), e.loaded = !0, e.exports
+            }
+            var r = {};
+            return n.m = t, n.c = r, n.p = "", n(0)
+        }([function(t, n, r) {
+            t.exports = r(1)
+        }, function(t, n, r) {
+            "use strict";
+            r(2), r(8)
+        }, function(t, n) {}, , , , , , function(t, n, r) {
+            "use strict";
+            r(9)
+        }, function(t, n) {
+            "use strict"
+        }]);
+    </script>
+    <script type="text/javascript">
+        var BS = screen.width + "," + screen.height;
+    </script>
+    <script type="text/javascript" src="//theta.sogoucdn.com/wap/js/anticheat-min.js"></script>
+</body>
+
+</html>

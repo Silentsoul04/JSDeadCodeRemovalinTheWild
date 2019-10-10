@@ -1,0 +1,16 @@
+exports=module.exports=require("../../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+exports.i(require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css"), undefined);
+// module
+exports.push([module.id, ".duration-1Xkx0vaO{margin-bottom:7px;display:block}.duration-l-2wuOwnGy,.duration-m-1PwCTUsC,.duration-s-1MM_0KdS,.duration-xl-3rhGRwS-,.duration-xs-3Vbddrcv,.duration-xxl-2rZoWLcS,.duration-xxs-28nqxpux{font-size:13px!important;line-height:13px!important}", ""]);
+// exports
+exports.locals= {
+    "duration": "duration-1Xkx0vaO " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["durationBase"] + "", "duration-xxs": "duration-xxs-28nqxpux duration-1Xkx0vaO " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["durationBase"] + "", "duration-xs": "duration-xs-3Vbddrcv duration-1Xkx0vaO " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["durationBase"] + "", "duration-s": "duration-s-1MM_0KdS duration-1Xkx0vaO " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["durationBase"] + "", "duration-m": "duration-m-1PwCTUsC duration-1Xkx0vaO " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["durationBase"] + "", "duration-l": "duration-l-2wuOwnGy duration-1Xkx0vaO " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["durationBase"] + "", "duration-xl": "duration-xl-3rhGRwS- duration-1Xkx0vaO " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["durationBase"] + "", "duration-xxl": "duration-xxl-2rZoWLcS duration-1Xkx0vaO " + require("-!../../../../../../node_modules/css-loader/index.js??ref--3-1!../../styles.css").locals["durationBase"] + ""
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/cover/component/desktop-default/duration/styles.css
+// module id = 429
+// module chunks = 1

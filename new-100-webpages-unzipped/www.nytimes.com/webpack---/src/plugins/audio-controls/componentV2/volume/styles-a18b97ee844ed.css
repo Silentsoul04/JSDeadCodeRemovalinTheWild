@@ -1,0 +1,15 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+// module
+exports.push([module.id, ".volume-3wAVEk2E{width:24px;height:24px;-ms-flex-negative:0;flex-shrink:0}.volume-3wAVEk2E svg{fill:#000;transition:fill .25s,transform .3s}.desktop-16oCRyps.volume-3wAVEk2E:focus svg,.desktop-16oCRyps.volume-3wAVEk2E:hover svg{fill:rgba(0,0,0,.8)}.light-Bp6-HUNX.volume-3wAVEk2E svg{fill:#fff}.desktop-16oCRyps.light-Bp6-HUNX.volume-3wAVEk2E:focus svg,.desktop-16oCRyps.light-Bp6-HUNX.volume-3wAVEk2E:hover svg{fill:hsla(0,0%,100%,.8)}.volume-3wAVEk2E:disabled svg{fill:rgba(68,68,68,.2)}.light-Bp6-HUNX.volume-3wAVEk2E:disabled svg{fill:hsla(0,0%,100%,.2)}.desktop-16oCRyps.volume-3wAVEk2E:disabled svg{fill:rgba(68,68,68,.2)}.desktop-16oCRyps.light-Bp6-HUNX.volume-3wAVEk2E:disabled svg{fill:hsla(0,0%,100%,.2)}", ""]);
+// exports
+exports.locals= {
+    "volume": "volume-3wAVEk2E", "desktop": "desktop-16oCRyps", "light": "light-Bp6-HUNX"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/audio-controls/componentV2/volume/styles.css
+// module id = 208
+// module chunks = 5

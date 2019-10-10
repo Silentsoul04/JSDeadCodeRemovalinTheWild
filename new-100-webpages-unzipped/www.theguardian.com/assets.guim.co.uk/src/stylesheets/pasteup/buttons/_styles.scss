@@ -1,0 +1,274 @@
+@import 'src';
+
+.button {
+    @include fs-textSans(2);
+    @include button-height($base-size * 5);
+    @include button-colour(
+        $sport-bright,
+        #ffffff,
+        $sport-dark
+    );
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 1000px;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+
+    .i-left {
+        margin-right: 0;
+        float: left;
+    }
+    .i-right {
+        margin-left: 0;
+        float: right;
+    }
+}
+
+.button--primary {
+    @include button-colour(
+        $brand-main,
+        #ffffff
+    );
+
+    @include button-hover-colour(
+        darken($brand-main, 10%)
+    );
+}
+
+.button--primary-inverse {
+    @include button-colour(
+        transparent,
+        $sport-dark,
+        $sport-dark
+    );
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $sport-dark;
+        color: #ffffff;
+    }
+}
+
+.button--secondary {
+    @include button-colour(
+        $brightness-97,
+        $brightness-7
+    );
+
+    @include button-hover-colour(
+        darken($brightness-97, 10%)
+    );
+}
+
+.button--tertiary {
+    @include button-colour(
+        transparent,
+        $brightness-7,
+        $brightness-86
+    );
+
+    @include button-hover-colour(
+        transparent,
+        darken($brightness-86, 10%)
+    );
+}
+
+.button--tone-media {
+    @include button-colour(
+        $brightness-20,
+        $brightness-86
+    );
+
+    @include button-hover-colour(
+        darken($brightness-20, 5%)
+    );
+}
+
+.button--tone-media-variant {
+    @include button-colour(
+        $brightness-7,
+        $brightness-86,
+        $brightness-46
+    );
+
+    @include button-hover-colour(
+        $brightness-7,
+        $brightness-86
+    );
+}
+
+.button--tone-news {
+    @include button-colour(
+        $brightness-97,
+        $sport-dark
+    );
+
+    @include button-hover-colour(
+        darken($brightness-97, 10%)
+    );
+}
+
+.button--tone-news-variant {
+    @include button-colour(
+        #ffffff,
+        $sport-dark,
+        $brightness-86
+    );
+
+    @include button-hover-colour(
+        #ffffff,
+        darken($brightness-86, 10%)
+    );
+}
+
+.button--tone-feature {
+    @include button-colour(
+        $brightness-97,
+        $lifestyle-dark
+    );
+
+    @include button-hover-colour(
+        darken($brightness-97, 10%)
+    );
+}
+
+.button--tone-feature-variant {
+    @include button-colour(
+        #ffffff,
+        $lifestyle-dark,
+        $brightness-86
+    );
+
+    @include button-hover-colour(
+        #ffffff,
+        darken($brightness-86, 10%)
+    );
+}
+
+.button--tone-comment {
+    @include button-colour(
+        $brightness-97,
+        $opinion-dark
+    );
+
+    @include button-hover-colour(
+        darken($brightness-97, 10%)
+    );
+}
+
+.button--tone-comment-variant {
+    @include button-colour(
+        #ffffff,
+        $opinion-dark,
+        $brightness-86
+    );
+
+    @include button-hover-colour(
+        #ffffff,
+        darken($brightness-86, 10%)
+    );
+}
+
+.button--tone-live {
+    @include button-colour(
+        $brightness-93,
+        $brightness-7
+    );
+
+    @include button-hover-colour(
+        darken($brightness-93, 10%)
+    );
+}
+
+.button--tone-live-variant {
+    @include button-colour(
+        $brightness-97,
+        $brightness-7,
+        $brightness-86
+    );
+
+    @include button-hover-colour(
+        $brightness-97,
+        darken($brightness-86, 10%)
+    );
+}
+
+.button--xlarge {
+    @include button-height(44px);
+}
+
+.button--large {
+    @include button-height($base-size * 6);
+
+    @include mq($from: desktop) {
+        line-height: ($base-size * 6) + 2;
+    }
+}
+
+.button--medium {
+    @include button-height($base-size * 5);
+
+    @include mq($from: desktop) {
+        line-height: ($base-size * 5) + 2px;
+    }
+}
+
+.button--small {
+    @include button-height($base-size * 4);
+    @include fs-textSans(1);
+    line-height: $gs-baseline * 2 - 2px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.button--xsmall {
+    @include button-height($base-size * 3);
+    @include fs-textSans(1);
+    line-height: ($base-size * 3) - 2px;
+    font-weight: bold;
+}
+
+$show-more-icon-size: $base-size * 3;
+$show-more-icon-spacing: $base-size + 1;
+
+.button--show-more {
+    position: relative;
+    padding-left: $show-more-icon-size + $show-more-icon-spacing * 2;
+
+    .i, svg {
+        width: $show-more-icon-size;
+        height: $show-more-icon-size;
+        vertical-align: middle;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: $show-more-icon-spacing;
+    }
+}
+
+.button--syndication-reprint {
+    @include button-colour(
+        transparent,
+        $brightness-46,
+        rgba($brightness-46, .3)
+    );
+
+    @include button-hover-colour(
+        transparent,
+        darken($brightness-46, 10%)
+    );
+}

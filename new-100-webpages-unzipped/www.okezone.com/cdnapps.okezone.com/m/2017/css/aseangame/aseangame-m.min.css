@@ -1,0 +1,1391 @@
+.asean2018 .widget-title .widget-asean {
+    background: #1b244c
+}
+
+.asean2018 .logonav .logo {
+    background-image: "https://cdnapps.okezone.com/m/2017/images//aseangames/logo/logo-okz-asian@2x.png"
+}
+
+.asean2018 .aseanwidget {
+    margin-top: 10px !important
+}
+
+.asean2018 .body2018 .widget-mobile.widget-trendingtop .trend-cont ul.list li a {
+    color: #fff
+}
+
+.asean2018 .body2018 .widget-mobile.widget-trendingtop-n .trend-cont ul.list li span {
+    color: #fff;
+    border: none
+}
+
+.asean2018 .body2018 .widget-mobile.widget-trendingtop-n .trend-cont ul.list a {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #fff
+}
+
+.asean2018 .body2018 .widget-mobile.widget-trendingtop-n .swiper-slide {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15);
+    border: 1px solid #d64a35;
+    border-radius: 2px
+}
+
+.asean2018 .body2018 .widget-rightside {
+    background-color: #1e2855 !important
+}
+
+.asean2018 .body2018 .widget-mobile.widget-trendingtop .swiper-slide {
+    font-size: 16px;
+    background: #fff;
+    width: 230px;
+    box-shadow: 2px 2px 2px 1px #f5f5f5;
+    border: 1px solid #f5f5f5;
+    padding: 0 10px
+}
+
+.asean2018 .widget-mobile.widget-beritalain {
+    padding-top: 10px
+}
+
+.asean2018 *,
+:after,
+:before {
+    box-sizing: inherit
+}
+
+.asean2018 .widget-trending--dark.widget-mobile.widget-trendingtop-n .swiper-slide {
+    background: #373b3a !important;
+    border: none !important
+}
+
+.asean2018 .okz-navlink {
+    color: #fff
+}
+
+.asean2018 .menu-okz-wrap {
+    background-color: #1e2855
+}
+
+.asean2018 .okz-navlink.active,
+.okz-navlink:hover {
+    border-bottom-color: #feda40
+}
+
+.asean2018 .widget-mobile .widget-title {
+    background-color: #1e2855 !important
+}
+
+.asean2018 .loadmoremendali {
+    padding-top: 10px;
+    text-align: center;
+    font-family: Assistant;
+    font-size: 14px
+}
+
+.asean2018 .btn {
+    background-color: #fed703;
+    border-radius: 7px
+}
+
+.asean2018 .flags {
+    height: 100%
+}
+
+.asean2018 .countryname {
+    text-align: left !important;
+    margin-left: 10px
+}
+
+.asean2018 .table-list {
+    margin-top: 10px
+}
+
+.asean2018 .list-medal {
+    font-family: overpass;
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto
+}
+
+.asean2018 .list-medal td,
+.list-medal th {
+    font-family: Overpass;
+    padding: 8px
+}
+
+.asean2018 .list-medal td {
+    text-align: center;
+    font-size: 12px;
+    height: 15px
+}
+
+.asean2018 .list-medal tr:nth-child(even) {
+    background-color: #ddd
+}
+
+.asean2018 .list-medal tr:hover {
+    background-color: #f2f2f2
+}
+
+.asean2018 .list-medal th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    background-color: #1e2855
+}
+
+.asean2018 .mendali {
+    text-align: center;
+    background-color: #b7b7b7 !important
+}
+
+.asean2018 .detail-tag .li a {
+    margin-left: 0
+}
+
+.asean2018 .detfoto {
+    background-image: url(banner.png);
+    height: 60px;
+    width: auto
+}
+
+.asean2018 .bannerag {
+    height: 60px;
+    opacity: .8;
+    background-color: #1e2855
+}
+
+.asean2018 .medalitag {
+    padding-top: 19px;
+    opacity: none;
+    height: 45px;
+    font-family: Overpass;
+    font-size: 20px;
+    text-align: center;
+    color: #fff
+}
+
+.asean2018 .bgc-default {
+    background-color: #1e2855 !important
+}
+
+.asean2018 .jadwallist {
+    margin-top: 25px
+}
+
+.asean2018 .jadwaltitle {
+    font-family: Overpass;
+    font-size: 16px;
+    font-style: bold;
+    width: 100%;
+    height: 35px;
+    padding-top: 10px;
+    padding-left: 15px;
+    background-color: #e2e2e2 !important
+}
+
+.asean2018 .fa-plus {
+    margin-right: 15px;
+    size: 3px
+}
+
+.asean2018 .jadwall {
+    font-family: overpass;
+    border-collapse: collapse;
+    width: 100%
+}
+
+.asean2018 .jadwall td,
+.jadwall th {
+    font-family: Overpass;
+    font-size: 12px;
+    padding-left: 20px;
+    height: 50px
+}
+
+.asean2018 .table-striped>tbody>tr:nth-child(odd)>td {
+    background-color: #d8d8d8
+}
+
+.asean2018 .body2018 .container {
+    padding: 0
+}
+
+.asean2018 .img-large {
+    width: 390px;
+    height: 144px
+}
+
+.asean2018 .title-large {
+    padding-top: 10px;
+    font-size: 14px
+}
+
+.asean2018 .timelarge {
+    position: absolute;
+    right: 22px;
+    top: 160px;
+    font-size: 10px;
+    font-family: Assistant;
+    color: #999
+}
+
+.asean2018 .historynews,
+.asean2018 .historynews.p {
+    font-family: Overpass;
+    font-size: 14px
+}
+
+.asean2018 .content-large {
+    margin: 5px
+}
+
+.asean2018 .table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 15px
+}
+
+.asean2018 .jadwal th {
+    font-weight: 700
+}
+
+.asean2018 .jadwall td {
+    height: 30px
+}
+
+.asean2018 .historyimage {
+    background-image: url(banner.png);
+    width: 250px;
+    height: 130px;
+    margin: 20px 20px 20px 70px
+}
+
+.asean2018 .historynews {
+    margin: 10px;
+    border-bottom: 1px solid #ccc
+}
+
+.asean2018 .history {
+    margin-top: 25px
+}
+
+.asean2018 .bgc-default,
+.asean2018 ul.nav-terpopuler li a {
+    background: #1e2855
+}
+
+.asean2018 .bortop-ASgame,
+.asean2018 .widget-rightside {
+    border-top: 3px solid #1e2855
+}
+
+.asean2018 .ASgame-sch-widget {
+    background: #fbfbfb
+}
+
+.asean2018 .ASgame-sch-widget .widget-title span {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #030303
+}
+
+.asean2018 .ASgame-sch-widget .widget-contentnya {
+    padding: 0 8px 10px
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content {
+    position: relative;
+    width: 100%;
+    height: auto
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .date {
+    position: relative;
+    margin: 0 0 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 800;
+    color: #030303
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    margin-top: -6px;
+    min-height: 200px;
+    list-style: none
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .resdfghj {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-10%);
+    font-size: 14px
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .ytuj {
+    position: absolute;
+    top: 3%;
+    left: 51%;
+    transform: translateX(-50%);
+    z-index: 5
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .ytuj .icon {
+    box-sizing: content-box;
+    border: 3px solid #d9d9d9;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #1e2855
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .iybgkjhs {
+    position: relative;
+    width: 100%;
+    min-height: 50px
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .iybgkjhs .aubch {
+    position: relative;
+    width: 50%;
+    float: left;
+    top: 10px;
+    min-height: 37px
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .iybgkjhs .aubch .retgrcdf {
+    font-size: 14px;
+    color: #0090ee;
+    text-align: center;
+    width: 100%;
+    float: right
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.left .iybgkjhs .aubch {
+    float: left
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.left .iybgkjhs .aubch .retgrcdf {
+    width: 100%;
+    float: right
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.right {
+    margin-left: 0;
+    border: 0
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.right .iybgkjhs .aubch {
+    float: right
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.right .iybgkjhs .aubch .retgrcdf {
+    width: 100%;
+    float: left
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv:first-of-type {
+    margin-top: 25px
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv:first-of-type .iybgkjhs .aubch {
+    top: 5px
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv:first-of-type .ytuj {
+    top: 0
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv:last-of-type {
+    min-height: 80px
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.tutup .ytuj {
+    top: auto;
+    bottom: -1px
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.tutup .ytuj .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #d9d9d9
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.active .ytuj .icon {
+    box-sizing: content-box;
+    border: 3px solid #ffd800
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.anggar .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/anggar.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.angkat_besi .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/angkat-besi.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.aquatic .ytuj .icon,
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.renang .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/aquatic.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.atletic .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/atletic.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.badminton .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/badminton.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.balap_sepeda .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/balap-sepeda.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.basket .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/basket.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.berkuda .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/berkuda.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.berlayar .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/berlayar.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.bisbol .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bisbol.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.bola_tangan .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bola-tangan.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.bola_voli .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bola-voli.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.bowling .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bowling.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.bridge .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bridge.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.dayung .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/dayung.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.golf .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/golf.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.gulat .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/gulat.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.hoki .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/hoki.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.jetski .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/jetski.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.judo .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/judo.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.kabaddi .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/kabaddi.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.kano_kayak .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/kano-kayak.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.karate .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/karate.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.martial_arts .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/martial-arts.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.menembak .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/menembak.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.modern_panthatlon .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/modern-panthatlon.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.panahan .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/panahan.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.panjat_tebing .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/panjat-tebing.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.paragliding .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/paragliding.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.roller_sport .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/roller-sport.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.rugby .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/rugby.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.senam .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/senam.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.sepak_bola .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/sepak-bola.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.sepak_takraw .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/sepak-takraw.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.squash .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/squash.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.taekwondo .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/taekwondo.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.tenis_meja .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/tenis-meja.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.tenis .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/tenis.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.tinju .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/tinju.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv.triathlon .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/triathlon.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .garis {
+    width: 2px;
+    background-color: #707070;
+    height: 100%;
+    position: absolute;
+    left: 51%;
+    top: 0;
+    transform: translateX(-50%)
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .resdfghj .tgbbhhkjhnjk {
+    position: relative;
+    width: 50%;
+    display: inline;
+    float: left
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .resdfghj .tgbbhhkjhnjk:first-of-type {
+    padding-right: 10px
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .resdfghj .tgbbhhkjhnjk:last-of-type {
+    padding-left: 10px
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .resdfghj .tgbbhhkjhnjk .yrt {
+    text-align: right;
+    padding: 0;
+    margin: 0
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .resdfghj .tgbbhhkjhnjk .yrt .cabol {
+    font-size: 14px;
+    color: #1e2855;
+    font-family: Overpass-SemiBold
+}
+
+.asean2018 .ASgame-sch-widget .ASgame-sch-widget__content .shdbhjn .utgchv .resdfghj .tgbbhhkjhnjk .yrt .tycabol {
+    font-size: 13px;
+    color: #242424;
+    font-family: Overpass
+}
+
+.asean2018 .perolehan-medali .widget-title.widget-asean {
+    color: #fff;
+    background: #1e2855;
+    padding: 10px 15px
+}
+
+.asean2018 .perolehan-medali .widget-title.widget-asean p {
+    margin: 0
+}
+
+.asean2018 .perolehan-medali .widget-title.widget-asean .widmore {
+    color: #fff
+}
+
+.asean2018 .perolehan-medali .widget-table__isi {
+    padding: 0 10px;
+    margin: 0 auto
+}
+
+.asean2018 .perolehan-medali .widget-table__isi table thead th {
+    border-top: 0;
+    padding: 4px;
+    text-align: center
+}
+
+.asean2018 .perolehan-medali .widget-table__isi table td {
+    font-family: Overpass;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2c2c2c;
+    padding: 7px
+}
+
+.asean2018 .perolehan-medali .widget-table__isi table td .flag-wrapz {
+    position: relative;
+    width: 26px;
+    height: 17px;
+    background: url(../images/indo.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .perolehan-medali .widget-table__isi table td .flag-wrapz.flag-korea {
+    background: url(../images/korea.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .widget-rightside.asian-history ul.widget-topikpopuler-content li a {
+    padding: 0
+}
+
+.asean2018 .Asiangamecalendar {
+    text-align: center
+}
+
+.asean2018 .Asiangamecalendar .htt {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: #1e2855;
+    margin-bottom: 5px
+}
+
+.asean2018 .Asiangamecalendar .tanggalan {
+    border-spacing: 0;
+    width: 100%
+}
+
+.asean2018 .Asiangamecalendar .tanggalan thead {
+    font-weight: 600;
+    text-transform: uppercase
+}
+
+.asean2018 .Asiangamecalendar .tanggalan thead td {
+    height: 44px;
+    line-height: 40px;
+    font-size: 13px
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-header .ac-matchName span,
+.asean2018 .Asiangamecalendar h2 {
+    font-family: Overpass;
+    font-size: 16px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal
+}
+
+.asean2018 .Asiangamecalendar .tanggalan thead td:nth-of-type(1) {
+    color: #1e2855;
+    background-color: #d0d6f0
+}
+
+.asean2018 .Asiangamecalendar .tanggalan thead td:nth-of-type(2) {
+    color: #1e2855;
+    background-color: #9ba5d6
+}
+
+.asean2018 .Asiangamecalendar .tanggalan thead td:nth-of-type(3) {
+    color: #1e2855;
+    background-color: #717db5
+}
+
+.asean2018 .Asiangamecalendar .tanggalan thead td:nth-of-type(4) {
+    color: #fff;
+    background-color: #4b578e
+}
+
+.asean2018 .Asiangamecalendar .tanggalan thead td:nth-of-type(5) {
+    color: #fff;
+    background-color: #2c3664
+}
+
+.asean2018 .Asiangamecalendar .tanggalan thead td:nth-of-type(6) {
+    color: #fff;
+    background-color: #111a40
+}
+
+.asean2018 .Asiangamecalendar .tanggalan thead td:nth-of-type(7) {
+    color: #fff;
+    background-color: #081031
+}
+
+.asean2018 .Asiangamecalendar .tanggalan tbody {
+    color: #7c8a95
+}
+
+.asean2018 .Asiangamecalendar .tanggalan tbody td.active,
+.asean2018 .Asiangamecalendar .tanggalan tbody td:hover {
+    background-color: #e1e1e1
+}
+
+.asean2018 .Asiangamecalendar .tanggalan td {
+    border: 1px solid #d3d3d3;
+    height: 72px;
+    line-height: 64px;
+    text-align: center;
+    display: inline-block;
+    width: 14.285714286%;
+    padding: 1px;
+    float: left
+}
+
+.asean2018 .Asiangamecalendar h2 {
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 60px;
+    color: #fff
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-header .ac-matchName {
+    position: relative;
+    display: inline-block;
+    float: left
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-header .ac-matchName span {
+    line-height: 50px;
+    text-align: left;
+    color: #1e2855;
+    text-transform: capitalize;
+    margin-left: 10px
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-header .btn-asg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    background: 0 0
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-header .btn-asg .ytuj {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    text-align: left;
+    background-color: #dbdbdb;
+    padding: 10px 10px 10px 40px
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-header .btn-asg .ytuj .angle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-header .btn-asg .ytuj .angle .fa.def {
+    font-size: 45px;
+    color: #666
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-header .btn-asg .ytuj .icon {
+    box-sizing: content-box;
+    border: 3px solid #d9d9d9;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #1e2855
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-header .btn.btn-asg {
+    background: 0 0
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-body {
+    padding: 0 35px;
+    background-color: #f5f5f5
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-body .match-event {
+    position: relative;
+    width: 100%
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-body .match-event tbody td,
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-body .match-event thead td {
+    width: 20%;
+    padding: 5px;
+    line-height: 64px;
+    border-top: 1px solid #d8d8d8;
+    font-size: 14px;
+    font-weight: 400;
+    color: #030303
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-body .match-event tbody td:nth-of-type(1) {
+    font-weight: 800
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-body .match-event tbody td:nth-of-type(2),
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-body .match-event tbody td:nth-of-type(3) {
+    font-weight: 700
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card .card-body .match-event thead td {
+    line-height: 35px;
+    border-top: 0;
+    font-weight: 300
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.anggar .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/anggar.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.angkat_besi .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/angkat-besi.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.aquatic .ytuj .icon,
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.renang .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/aquatic.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.atletic .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/atletic.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.badminton .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/badminton.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.balap_sepeda .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/balap-sepeda.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.basket .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/basket.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.berkuda .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/berkuda.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.berlayar .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/berlayar.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.bisbol .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bisbol.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.bola_tangan .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bola-tangan.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.bola_voli .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bola-voli.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.bowling .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bowling.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.bridge .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bridge.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.dayung .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/dayung.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.golf .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/golf.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.gulat .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/gulat.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.hoki .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/hoki.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.jetski .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/jetski.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.judo .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/judo.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.kabaddi .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/kabaddi.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.kano_kayak .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/kano-kayak.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.karate .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/karate.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.martial_arts .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/martial-arts.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.menembak .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/menembak.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.modern_panthatlon .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/modern-panthatlon.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.panahan .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/panahan.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.panjat_tebing .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/panjat-tebing.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.paragliding .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/paragliding.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.roller_sport .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/roller-sport.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.rugby .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/rugby.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.senam .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/senam.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.sepak_bola .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/sepak-bola.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.sepak_takraw .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/sepak-takraw.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.squash .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/squash.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.taekwondo .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/taekwondo.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.tenis_meja .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/tenis-meja.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.tenis .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/tenis.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.tinju .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/tinju.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .Asiangamecalendar .listJadwal .day-event .card.triathlon .ytuj .icon {
+    background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/triathlon.png) center no-repeat;
+    background-size: cover
+}
+
+.asean2018 .current-day {
+    background-color: #fff5bf;
+    color: #1e2855
+}
+
+.asean2018 .event {
+    cursor: pointer;
+    position: relative;
+    background-color: #e1e1e1
+}
+
+.asean2018 .btn-next,
+.asean2018 .btn-prev {
+    border: 2px solid #cbd1d2;
+    border-radius: 50%;
+    color: #cbd1d2;
+    height: 32px;
+    font-size: 22px;
+    line-height: 28px;
+    margin: -16px;
+    position: absolute;
+    top: 50%;
+    width: 32px
+}
+
+.asean2018 .btn-next:hover,
+.asean2018 .btn-prev:hover {
+    background: #cbd1d2;
+    color: #f9f9f9
+}
+
+.asean2018 .btn-prev {
+    left: 30px
+}
+
+.asean2018 .btn-next {
+    right: 35px
+}
+
+.asean2018 .listJadwal {
+    margin-top: 20px
+}
+
+.asean2018 .close {
+    color: #A4AAAB;
+    margin-top: -15px;
+    margin-right: 10px;
+    float: right
+}
+
+.asean2018 .day-event {
+    width: 100%;
+    display: none
+}
+
+.asean2018 .day-event p {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px
+}
+
+.asean2018 .day-event span {
+    font-size: 12px
+}
+
+.asean2018 .day-event button {
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+    background: #c0392b;
+    border: 0;
+    border-bottom: 2px solid #b53224;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #b53224;
+    box-shadow: inset 0 -2px #b53224
+}
+
+.asean2018 .check-btn {
+    width: 100%
+}
+
+.asean2018 input[type=checkbox] {
+    display: none
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:2 / 1),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min-resolution:192dpi),
+only screen and (min-resolution:2dppx) {
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.anggar .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/anggar@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.angkatbesi .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/angkat-besi@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.aquatic .ytuj .icon,
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.renang .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/aquatic@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.atletic .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/atletic@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.badminton .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/badminton@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.balapsepeda .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/balap-sepeda@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.basket .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/basket@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.berkuda .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/berkuda@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.berlayar .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/berlayar@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.bisbol .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bisbol@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.bolatangan .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bola-tangan@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.bolavoli .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bola-voli@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.bowling .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bowling@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.bridge .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/bridge@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.dayung .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/dayung@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.golf .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/golf@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.gulat .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/gulat@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.hoki .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/hoki@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.jetski .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/jetski@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.judo .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/judo@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.kabaddi .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/kabaddi@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.kanokayak .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/kano-kayak@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.karate .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/karate@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.martialarts .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/martial-arts@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.menembak .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/menembak@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.modernpanthatlon .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/modern-panthatlon@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.panahan .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/panahan@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.panjattebing .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/panjat-tebing@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.paragliding .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/paragliding@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.rollersport .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/roller-sport@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.rugby .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/rugby@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.senam .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/senam@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.sepakbola .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/sepak-bola@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.sepaktakraw .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/sepak-takraw@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.squash .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/squash@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.taekwondo .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/taekwondo@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.tenismeja .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/tenis-meja@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.tenis .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/tenis@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.tinju .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/tinju@3x.png) center no-repeat;
+        background-size: cover
+    }
+    .body2018 .ASgame-sch-widget .widget-contentnya .ASgame-sch-widget__content .shdbhjn .utgchv.triathlon .ytuj .icon {
+        background: url(https://cdn.okezone.com/underwood/revamp/2018/home/img/asiangame/triathlon@3x.png) center no-repeat;
+        background-size: cover
+    }
+}

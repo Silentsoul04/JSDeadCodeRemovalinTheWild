@@ -1,0 +1,66 @@
+.sb-checkbox-container {
+    display: table;
+    height: 60px;
+    width: 100%;
+    margin-top: -18px
+}
+
+.sb-checkbox-column {
+    display: table-cell;
+    table-layout: fixed;
+    width: 60px;
+    vertical-align: middle
+}
+
+.sb-checkbox-column.sb-bordered-box {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.sb-dead-space-column {
+    display: table-cell;
+    width: 13px
+}
+
+.sb-touch-link-column {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.sb-checkbox {
+    margin-left: 13px
+}
+
+.sb-bordered-box {
+    border: .1rem #ddd solid;
+    border-radius: .4rem
+}
+
+.sb-touch-link {
+    margin: 0;
+    border: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.sb-touch-link .a-box-inner {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent !important
+}
+
+.sb-touch-link-text {
+    display: table-cell;
+    height: 60px;
+    vertical-align: middle;
+    padding: 0;
+    height: 100%
+}
+
+.sb-section-bottom-padding {
+    padding-bottom: 1.3rem
+}

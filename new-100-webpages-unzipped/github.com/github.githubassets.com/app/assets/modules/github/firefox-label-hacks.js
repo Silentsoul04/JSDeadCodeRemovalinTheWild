@@ -1,0 +1,1 @@
+No Content: https://github.githubassets.com/app/assets/modules/github/firefox-label-hacks.js

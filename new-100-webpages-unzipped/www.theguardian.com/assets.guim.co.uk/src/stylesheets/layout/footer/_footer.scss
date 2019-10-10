@@ -1,0 +1,15 @@
+.l-footer {
+    padding: 0;
+    background: $c-footer-background;
+}
+
+.l-footer__secondary {
+    @include fs-textSans(1);
+    box-sizing: border-box;
+}
+
+.footer__pillars {
+    border: 1px solid $brand-pastel;
+    border-top: 0;
+    padding-bottom: $gs-baseline;
+}

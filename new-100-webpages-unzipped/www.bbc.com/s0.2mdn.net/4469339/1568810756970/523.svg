@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="266" height="217" viewBox="0 0 266 217">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: red;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <rect id="safeZone" class="cls-1" width="266" height="217"/>
+</svg>

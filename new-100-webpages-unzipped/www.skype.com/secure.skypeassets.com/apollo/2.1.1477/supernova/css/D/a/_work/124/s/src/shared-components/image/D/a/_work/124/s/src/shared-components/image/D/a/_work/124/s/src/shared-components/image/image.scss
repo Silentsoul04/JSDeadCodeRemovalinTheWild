@@ -1,0 +1,13 @@
+.image-component {
+  img {
+    max-width: 100%;
+  }
+
+  &.background {
+    .image {
+      display: inline-block;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}

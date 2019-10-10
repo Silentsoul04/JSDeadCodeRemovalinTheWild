@@ -1,0 +1,7 @@
+@import "./colors";
+
+.theme-dark {
+  *:not(.btn):not(span):not(input) {
+    color: $color-white;
+  }
+}

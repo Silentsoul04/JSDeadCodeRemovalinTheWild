@@ -1,0 +1,1 @@
+data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33'%3E%3Cpath d='M23 23.64V8H10.09c.2-.58.76-1 1.41-1h11c.83 0 1.5.67 1.5 1.5v16l-1-.86zM8.5 10h11c.83 0 1.5.67 1.5 1.5V28l-7-6-7 6V11.5c0-.83.67-1.5 1.5-1.5zM20 11.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v14.33l6-5.15 6 5.15V11.5z' fill='%23FFF'/%3E%3C/svg%3E

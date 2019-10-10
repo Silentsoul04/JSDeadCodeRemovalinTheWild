@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>NYT_FlexTemplates_Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <script>
+        EBModulesToLoad = ['Video', 'EBCMD'];
+    </script>
+    <!--StartOfInjectionAdKitModule-->
+    <script type="text/javascript">
+        (function() {
+            adkit = {
+                onReady: function(callback) {
+                    window.addEventListener('adkit-ready', callback);
+                }
+            };
+
+            var isAdKitLoaded = false;
+
+            var handler = function(event) {
+                if (!isAdKitLoaded && event.data) {
+                    var response;
+                    try {
+                        response = JSON.parse(event.data);
+
+                    } catch (e) {}
+                    if (response &&
+                        response.type === 'ebGetEnvironment' &&
+                        response.data instanceof Object &&
+                        response.data.paths &&
+                        response.data.paths.cachedScript) {
+                        isAdKitLoaded = true;
+                        adkit.environment = response.data;
+                        var parent = document.getElementsByTagName('head')[0] || document.documentElement;
+                        var script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        var source = response.data.paths.cachedScript + '/adkit/' + response.data.version + '/adkit.js';
+                        script.src = source.replace(/\/\/adkit/, '/adkit');
+                        parent.appendChild(script);
+                    }
+                }
+            };
+
+            if (!window.ebSafeFrame) {
+                window.addEventListener('message', handler, false);
+                parent.postMessage(JSON.stringify({
+                    type: 'ebGetEnvironment'
+                }), '*');
+            } else {
+                // ebSafeFrame is defined - we must be in a SafeFrame
+                // getAdKitData returns an equivalent argument in structure as were received with postmessage binding
+                handler(ebSafeFrame.getAdKitData());
+            }
+        })();
+    </script>
+    <!--EndOfInjectionAdKitModule-->
+    <!--RemoveAdKit-->
+    <!-- For this unit, for local testing, see function "initializeGlobalVariables" for instruction -->
+</head>
+
+<body>
+
+    <!-- Style tag id required for access by JS to dynamically add additional styles  -->
+    <style id="adStyles">
+        /* ------------------------------------------------------------ */
+
+        /* -----> RESET.CSS INCLUDED HERE TO REDUCE SERVER CALLS <----- */
+
+        /* ------------------------------------------------------------ */
+
+        html,
+        body,
+        div,
+        span,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        address,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        samp,
+        small,
+        strong,
+        sub,
+        sup,
+        var,
+        b,
+        i,
+        hr,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        figure,
+        figcaption,
+        hgroup,
+        menu,
+        footer,
+        header,
+        nav,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        article,
+        aside,
+        canvas,
+        figure,
+        figure img,
+        figcaption,
+        hgroup,
+        footer,
+        header,
+        nav,
+        section,
+        audio,
+        video {
+            display: block;
+        }
+
+        a img {
+            border: 0;
+        }
+
+        /* --------------------------------------------- */
+
+        /* -----> FONT IMPORTS PER REFERENCE FILE <----- */
+
+        /* --------------------------------------------- */
+
+        @import url(https://fast.fonts.net/t/1.css?apiType=ad&projectid=21dfec3a-67e2-4918-9142-bfaf8a92f03f);
+        @font-face {
+            font-family: "Proxima N W01 Reg";
+            src: url(https://apiadn.fonts.com/v2/fonts/subset?x=aEQPPHegxpcMofj1Jp1tYXKqiOi9p687nKTqLsOq73tJQoR0ctMtTzsiZt8wVkyywZljis6XqhTOA87xBh2gII4u354RCpSLWvyOsTpDWSwYqZebhMSWmmB1fRC4gv4mw%2bgNckgkXbWXsUdbthhC8DaHdyfU7SRnJWmmYlaPg8E%3d);
+            src: url(https://apiadn.fonts.com/v2/fonts/subset?x=aEQPPHegxpcMofj1Jp1tYXKqiOi9p687nKTqLsOq73tJQoR0ctMtTzsiZt8wVkyywZljis6XqhTOA87xBh2gII4u354RCpSLWvyOsTpDWSwYqZebhMSWmmB1fRC4gv4mw%2bgNckgkXbWXsUdbthhC8DaHdyfU7SRnJWmmYlaPg8E%3d#iefix) format("eot"), url(https://apiadn.fonts.com/v2/fonts/subset?x=bnlTGL%2flyERMvMB5KGT1XBXveOQr4%2f%2bsI8BXrDMbjKe%2fF%2fL%2bj0ydN4duUIuaJlKXIIeTW0CRI%2fxdcolu2oF2vGuxRdnwi3evMn0sJDUojwrNdOaEOnIGgnsirqykyQ5WF7nSFsayiEBjIUQedsS%2ftSfTxGgByozSb5GNszYPHG8%3d) format("woff2"), url(https://apiadn.fonts.com/v2/fonts/subset?x=7lOozVx17sBSzsSHZRAsBC1QzJejLKkoqlkZJJA7s5wDJrO6eUaNgLBUCc3UDRmiWlHxWEy%2bHKcjWobUn06eTgU7LoeE7jT8pPX35hzyd2hUVGY3c%2fV7UCJBagiDRKvps9xb6oxPVgoBNrCrFuuDCGuYWsPDI0cUA7DsHslAy6o%3d) format("woff"), url(https://apiadn.fonts.com/v2/fonts/subset?x=YdU1Gas3Kn1GLOFex%2fIYiPq%2fAYSzutipKMkVmBE2Aiv46sUG8HgSPatrkyifHCf7eJaVv1qkqX6BQCC8Sq3HcRN2tMuoqzgXV%2bBJ4wTSScRK9XVKhCeDCO2TGwwWiHBWJmJxF7X0timAIhkGq8v%2bDQvO02r3FUEnxmQpNDF0w%2fQ%3d) format("truetype")
+        }
+
+        @font-face {
+            font-family: "Proxima N W02 Bold";
+            src: url(https://apiadn.fonts.com/v2/fonts/subset?x=3m9sZXQqzMRmVlycd6e8QzKwa6vl4y002J4aBR1aKDSyu2Ocz0RsIiawLUEx5xq56KII8cd2WTai5kabaKAkw7oG4uv9a6fJ1gv533XGp3H9kzQik0Je2ND%2fvD%2bZVkl6kETg4NsfrV4NHWrsLDP5hiiYHLMFm2k3GpQboFeQcmU%3d);
+            src: url(https://apiadn.fonts.com/v2/fonts/subset?x=3m9sZXQqzMRmVlycd6e8QzKwa6vl4y002J4aBR1aKDSyu2Ocz0RsIiawLUEx5xq56KII8cd2WTai5kabaKAkw7oG4uv9a6fJ1gv533XGp3H9kzQik0Je2ND%2fvD%2bZVkl6kETg4NsfrV4NHWrsLDP5hiiYHLMFm2k3GpQboFeQcmU%3d#iefix) format("eot"), url(https://apiadn.fonts.com/v2/fonts/subset?x=1jA8a6kaT0NuM7%2bf3PrZlFxldvUathMnC%2f592lbImbxX%2bOOLy907FNTWTVYORp7aeZJX%2btakG%2f%2fq0iQx0DcUwTKZzUUBh4qngYv0%2fYfQFtZIqulpn%2bAo3nzeRj06oxR0Q%2fkhqK4Bf9x9V2Op18nDmDRhuvxT3Q1IZdk1FjfIpQk%3d) format("woff2"), url(https://apiadn.fonts.com/v2/fonts/subset?x=nzdUhcdHlj0pVBSBB89zTJ0%2fCPooMF5f5g8qZykOr91eS1u37i6ARGaTPm%2fj5Cq1AH6duCKKlhibgGZWaf3NzJ6jHFPFziUNo4fjXJqpJpRncwALwwvDbYPsJPEE9QGFigqBAmcOr8ev2E6jZZw7sIhuxg6xhyrf16kPX0b4jVY%3d) format("woff"), url(https://apiadn.fonts.com/v2/fonts/subset?x=KPD8T4ogq%2bRh4h2g11CLb%2b3Y%2fhJq8zFkyeIAzOe5sxmw1hm1gPgZXzeSGjeaBYPzKsAN4x9wHKYrI1EARYHn7zFO1EMrgMI%2fgV0BmmzJWxR2ILwhNs1lt%2b2Oyh1tFejS8rPCR5IjRxz8MOrmgtX3MV%2bK1RsAj0G3VrVZ2BEh9As%3d) format("truetype")
+        }
+
+        @font-face {
+            font-family: "Proxima N W02 Smbd";
+            src: url(https://apiadn.fonts.com/v2/fonts/subset?x=wt0z0ND%2fdjdWsmIUOO6vXq1qtPwCMYyUOGnyXvVBJ4eB%2f4iajAbNUvXJ13ifoOJCpMq28VCdpA1IcuurYjN5h9gemMTpvwhW8JlYNvNvdwyxpA1JJhvIgSEntpbeP9ydHsDLNL5lzqf5Wm3dURpTnx5ZFNVlS7%2bUCdOXz9WA84k%3d);
+            src: url(https://apiadn.fonts.com/v2/fonts/subset?x=wt0z0ND%2fdjdWsmIUOO6vXq1qtPwCMYyUOGnyXvVBJ4eB%2f4iajAbNUvXJ13ifoOJCpMq28VCdpA1IcuurYjN5h9gemMTpvwhW8JlYNvNvdwyxpA1JJhvIgSEntpbeP9ydHsDLNL5lzqf5Wm3dURpTnx5ZFNVlS7%2bUCdOXz9WA84k%3d#iefix) format("eot"), url(https://apiadn.fonts.com/v2/fonts/subset?x=u0tNb2sdJWaRi%2b4hqjxTTzB%2f8nmJQt%2fEcqOKtiV67VzasOTDgXCQ28zU9bRO5OVdCaAk7C5I8f7deeHeQaJVF%2fiWMjvuE%2bKVdtojR4VDuYjlNLbN3In%2beBBhYbXSyKtrOmnyG6lk2KMvgTYJ24bq1WHVqYmVb7FoOeD7I1LfGrw%3d) format("woff2"), url(https://apiadn.fonts.com/v2/fonts/subset?x=cXybx6EtjJgxMPFEs3rQmqRA6uTaSI2YrmI6040oS2qN3%2b6%2fhJvSMeO9IdbyhhWh5%2btjwBBYmxHZJCBx4ssg5FYCsr4WWtTWolGFbA6L%2fEqNXJrOnLSidhERjEKmkDvjHlA1Tx87zuqlLhgpEradmeTJ6bY0TXQ6IdTxR3vu6p4%3d) format("woff"), url(https://apiadn.fonts.com/v2/fonts/subset?x=PJsSGUv6%2fUtao1%2bt4ykLCOIhXuvQSsoAfnsxkh0ro3loHePTLvUYqPRKrFAo4DvV9MfRfkMbBmM4UVJ%2fGv8BmGAVOLM8GaKUG%2fKGKiKx5NzZItP1NM9na%2bxyBpSQlZl9LZ75ZLApPwXorbxxMQk6GOW%2fp3qGn6Nee0Cbu1kyhDg%3d) format("truetype")
+        }
+
+        @font-face {
+            font-family: 'NYTKarnak-Display';
+            src: url('https://storage.googleapis.com/nyt-ads-static-assets/ads/adsolutions/Marketing/Fonts/NYTKarnakDisplay1.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'NYTFranklinBold_2';
+            src: url('https://storage.googleapis.com/nyt-ads-static-assets/ads/adsolutions/Marketing/Fonts/NYTFranklinBold_2.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* ------------------------------------------------------------------- */
+
+        /* -----> BODY STYLE TO PREVENT FONT SCALLING ON MOBILE DEVICES <----- */
+
+        /* ------------------------------------------------------------------- */
+
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-text-size-adjust: none;
+            zoom: 100%;
+        }
+
+        /* --------------------- */
+
+        /* -----> GENERAL <----- */
+
+        /* --------------------- */
+
+        #adWrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            visibility: visible;
+            opacity: 100;
+        }
+
+        #adContainer {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background-color: #FFF;
+            cursor: pointer;
+            font-family: "Proxima N W01 Reg";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+            border: 1px solid #000;
+        }
+
+        /* ------------------------------- */
+
+        /* -----> MAIN CONTENT AREA <----- */
+
+        /* ------------------------------- */
+
+        #contentContainer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        /* -------------------- */
+
+        /* -----> MOBILE <----- */
+
+        /* -------------------- */
+
+        #mobileVideoAreaBgImg {
+            width: 100%;
+            max-width: 414px;
+            height: 100%;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #mobileLogo {
+            position: absolute;
+            margin: 15px;
+            width: auto;
+            height: 50px;
+            max-width: 130px;
+            max-height: 50px;
+        }
+
+        #mobileLogo img {
+            width: auto;
+            height: auto;
+            max-width: 130px;
+            max-height: 50px;
+        }
+
+        #mobileCopyContainer {
+            width: auto;
+            height: 0;
+            position: absolute;
+            bottom: 35px;
+            left: 67px;
+            margin: 0 15px 0 0;
+        }
+
+        #mobileCopy {
+            width: auto;
+            height: auto;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        #mobileHeadlineCopy {
+            color: #FFF;
+            /*placeholder*/
+            font-family: "NYTKarnak-Display";
+        }
+
+        #mobileDescriptorCopy {
+            color: #FFF;
+            /*placeholder*/
+            font-family: "NYTKarnak-Display";
+        }
+
+        #mobileCta {
+            width: auto;
+            max-width: 158px;
+            height: 30px;
+            max-height: 30px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            margin: 0 15px 15px 0;
+            border: 1px solid #FFF;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #FFF;
+            /*placeholder*/
+            text-align: center;
+            font-size: 13px;
+            line-height: 15px;
+            font-family: "NYTFranklinBold_2";
+            -webkit-transform: translateY(9999px);
+            transform: translateY(9999px);
+        }
+
+        #mobileCtaCopy {
+            padding: 0 11px 0 11px;
+        }
+
+        #mobileContentContainer {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            left: 0px;
+            background-color: none;
+            background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b4000000', GradientType=0);
+        }
+
+        /* --------------------- */
+
+        /* -----> DESKTOP <----- */
+
+        /* --------------------- */
+
+        #desktopContainer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            ;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        #desktopRightImg {
+            height: 100%;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #desktopVideoAreaBgImg {
+            height: 100%;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #desktopContentContainer {
+            height: 100%;
+            position: absolute;
+            ;
+            bottom: 0px;
+        }
+
+        #desktopLogo_A,
+        #desktopLogo_B {
+            position: absolute;
+            width: auto;
+            height: 45px;
+            max-height: 45px;
+            max-width: 145px;
+            z-index: 100;
+        }
+
+        #desktopLogo_A {
+            margin: 15px;
+        }
+
+        #desktopLogo_B {
+            margin: 15px;
+            top: 0px;
+        }
+
+        #desktopLogo_A img,
+        #desktopLogo_B img {
+            width: auto;
+            height: 45px;
+            max-height: 45px;
+            max-width: 145px;
+        }
+
+        #desktopCopyContainer_A,
+        #desktopCopyContainer_B {
+            width: auto;
+            height: auto;
+            position: absolute;
+            text-align: left;
+            left: 25px;
+        }
+
+        #desktopCopyContainer_A {
+            max-width: calc(100% - 225px);
+            bottom: 25px;
+        }
+
+        #desktopCopyContainer_B {
+            bottom: 77px;
+        }
+
+        #desktopHeadlineCopy_A,
+        #desktopHeadlineCopy_B {
+            width: auto;
+            height: auto;
+            text-align: left;
+            left: 25px;
+            color: #FFF;
+            /*placeholder*/
+            font-size: 27px;
+            line-height: 28px;
+            font-family: "Proxima N W02 Smbd";
+        }
+
+        #desktopDescriptorCopy_A,
+        #desktopDescriptorCopy_B {
+            width: auto;
+            height: auto;
+            text-align: left;
+            color: #FFF;
+            /*placeholder*/
+            line-height: 19px;
+            font-family: "Proxima N W01 Reg";
+            padding-top: 3px;
+        }
+
+        #desktopCta {
+            width: auto;
+            max-width: 198px;
+            height: 38px;
+            position: absolute;
+            bottom: 25px;
+            border: 1px solid #FFF;
+            color: #FFF;
+            /*placeholder*/
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            font-size: 15px;
+            line-height: 15px;
+            font-family: "Proxima N W02 Bold";
+            display: inline-block;
+            pointer-events: auto;
+            z-index: 100;
+        }
+
+        #desktopCtaCopy {
+            padding: 0px 14px;
+        }
+
+        /* -------------------- */
+
+        /* -----> SHARED <----- */
+
+        /* -------------------- */
+
+        .genClk {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .bgGrad {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            pointer-events: none;
+            background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+        }
+
+        .mobile .bgGrad {
+            height: 30%;
+        }
+
+        .desktop .bgGrad {
+            height: 80%;
+        }
+
+        /* -----> VIDEO STYLES <----- */
+
+        .video-container {
+            height: 100%;
+            position: absolute;
+            visibility: hidden;
+            background-color: #000;
+            overflow: hidden;
+            opacity: 0;
+            -webkit-transform: translateY(9999px);
+            transform: translateY(9999px);
+        }
+
+        .centered {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        video {
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .ios-center-video-controls video::-webkit-media-controls {
+            min-width: 0;
+        }
+
+        /* -----> VIDEO CONTROLS <----- */
+
+        .playBtn,
+        .pauseBtn,
+        .muteBtn,
+        .unmuteBtn {
+            width: 38px;
+            height: 38px;
+            position: absolute;
+            overflow: hidden;
+            /*    border: 1px solid #FFF;
+*/
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .muteBtn,
+        .unmuteBtn {
+            bottom: 0px;
+            left: 0px;
+            margin: 0 0 25px 75px;
+            background-size: 26px, 26px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .muteBtn {
+            background-image: url("images/soundOff.png");
+        }
+
+        .unmuteBtn {
+            background-image: url("images/soundOn.png");
+        }
+
+        .pauseBtn,
+        .muteBtn,
+        .unmuteBtn {
+            -webkit-transform: translateY(9999px);
+            transform: translateY(9999px);
+        }
+
+        .mobile .playBtn {
+            bottom: 0px;
+            left: 0px;
+            margin: 0 0 15px 15px;
+        }
+
+        .desktop .playBtn {
+            bottom: 50%;
+            left: 50%;
+            margin: 0 0 -20px -20px;
+        }
+
+        .mobile .pauseBtn {
+            bottom: 0px;
+            left: 0px;
+            margin: 0 0 15px 15px;
+        }
+
+        .mobile .muteBtn,
+        .mobile .unmuteBtn {
+            margin: 0 0 15px 65px;
+        }
+
+        .desktop .pauseBtn {
+            bottom: 0px;
+            left: 0px;
+            margin: 0 0 25px 25px;
+        }
+
+        .pauseBtnLineLeft,
+        .pauseBtnLineRight {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: #FFF;
+        }
+
+        .mobile .pauseBtnLineLeft,
+        .mobile .pauseBtnLineRight {
+            width: 6px;
+            height: 16px;
+            margin-top: -8px;
+        }
+
+        .desktop .pauseBtnLineLeft,
+        .desktop .pauseBtnLineRight {
+            width: 6px;
+            height: 16px;
+            margin-top: -8px;
+        }
+
+        .mobile .pauseBtnLineLeft {
+            margin-left: -8px;
+        }
+
+        .mobile .pauseBtnLineRight {
+            margin-left: 2px;
+        }
+
+        .desktop .pauseBtnLineLeft {
+            margin-left: -8px;
+        }
+
+        .desktop .pauseBtnLineRight {
+            margin-left: 2px;
+        }
+
+        .playBtnArrow {
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -8px;
+            margin-left: -5px;
+            border-top: 8px solid transparent;
+            border-left: 14px solid #FFF;
+            border-bottom: 8px solid transparent;
+        }
+
+        /* ------------------------------- */
+
+        /* -----> SHARED ANIMATIONS <----- */
+
+        /* ------------------------------- */
+
+        . @-webkit-keyframes moveOnStageFadeIn {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(9999px);
+                transform: translateY(9999px);
+            }
+            0.1% {
+                opacity: 0;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+        }
+
+        @keyFrames moveOnStageFadeIn {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(9999px);
+                transform: translateY(9999px);
+            }
+            0.1% {
+                opacity: 0;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+        }
+
+        @-webkit-keyframes fadeOutMoveOffStage {
+            0% {
+                opacity: 1;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+            99.9% {
+                opacity: 0;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translateY(9999px);
+                transform: translateY(9999px);
+            }
+        }
+
+        @keyFrames fadeOutMoveOffStage {
+            0% {
+                opacity: 1;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+            99.9% {
+                opacity: 0;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translateY(9999px);
+                transform: translateY(9999px);
+            }
+        }
+
+        /*---------------------------------------*/
+
+        /*-----> MEDIA QUERY SIZING STYLES <-----*/
+
+        /*---------------------------------------*/
+
+        /*-----> MOBILE SIZINGS <-----*/
+
+        /*----------------------------*/
+
+        /* Copy size adjustment mobile break points */
+
+        @media(min-width: 0px) and (max-width: 374px) {
+            /* -------------------------- */
+            /* -----> MOBILE  COPY <----- */
+            /* -------------------------- */
+            #mobileHeadlineCopy {
+                font-size: 23px;
+                line-height: 18px;
+            }
+            #mobileDescriptorCopy {
+                font-size: 14px;
+                line-height: 14px;
+                padding-top: 4px;
+            }
+        }
+
+        @media(min-width: 375px) and (max-width: 700px) {
+            /* -------------------------- */
+            /* -----> MOBILE  COPY <----- */
+            /* -------------------------- */
+            #mobileHeadlineCopy {
+                font-size: 23px;
+                line-height: 20px;
+            }
+            #mobileDescriptorCopy {
+                font-size: 16px;
+                line-height: 16px;
+                padding-top: 4px;
+            }
+        }
+
+        @media(min-width: 0px) and (max-width: 700px) {
+            /* --------------------------------------------------- */
+            /* -----> HEADER / ADVERTISEMENT INDICATOR AREA <----- */
+            /* --------------------------------------------------- */
+            #adContainer {
+                min-width: 320px;
+                max-width: 414px;
+                height: 380px;
+            }
+            /* ------------------------------- */
+            /* -----> MAIN CONTENT AREA <----- */
+            /* ------------------------------- */
+            #mobileVideoAreaBgImg,
+            #mobileContainer {
+                visibility: visible;
+            }
+            #desktopVideoAreaBgImg,
+            #desktopContainer {
+                visibility: hidden;
+            }
+            .video-container {
+                width: 100%;
+            }
+            #desktopContentContainer {
+                width: 700px;
+            }
+        }
+
+        /*-----> DESKTOP SIZINGS <-----*/
+
+        /*-----------------------------*/
+
+        /*-----> DESKTOP ALL BREAKPOINTS <-----*/
+
+        @media (max-width: 375px) and (min-width: 0px) {
+            .video-container {
+                width: 380px;
+            }
+        }
+
+        @media(min-width: 701px) {
+            /* --------------------- */
+            /* -----> GENERAL <----- */
+            /* --------------------- */
+            #adContainer {
+                height: 270px;
+                max-width: 1605px;
+            }
+            /* ------------------------------- */
+            /* -----> MAIN CONTENT AREA <----- */
+            /* ------------------------------- */
+            #mobileVideoAreaBgImg,
+            #mobileContainer {
+                visibility: hidden;
+            }
+            #desktopVideoAreaBgImg,
+            #desktopContainer {
+                visibility: visible;
+            }
+        }
+
+        /* ************************************************************************************************ */
+
+        /* ***** REMAINDER OF DESKTOP MEDIA QUERY STYLES ADDED DYNAMICALLY PER VIDEO ASPECT RATIO SET ***** */
+
+        /* ************************************************************************************************ */
+    </style>
+
+    <div id="adWrapper">
+        <div id="adContainer">
+            <div id="contentContainer">
+                <!-- MOBILE -->
+                <div id="mobileVideoAreaBgImg" class="mobile">
+                    <div class="bgGrad"></div>
+                    <div id="mobileContentContainer">
+                        <div class="genClk"></div>
+                    </div>
+                </div>
+                <!-- DESKTOP -->
+                <div id="desktopVideoAreaBgImg" class="desktop">
+                    <div class="bgGrad"></div>
+                    <div class="genClk"></div>
+                </div>
+                <!-- SHARED -->
+                <div id="video-container" class="video-container">
+                    <!-- DO NOT ADD VIDEO AND SRC TAGS -->
+                    <!-- VIDEO AND SRC TAGS AUTO ADDED VIA SCRIPT PER CONFIG OBJECT SETTINGS -->
+                </div>
+                <!-- MOBILE -->
+                <div id="mobileContainer" class="mobile">
+                    <div class="genClk"></div>
+                    <div id="mobileLogo">
+                        <img src="">
+                    </div>
+                    <div id="mobileCopyContainer">
+                        <div id="mobileCopy">
+                            <div id="mobileHeadlineCopy"></div>
+                            <div id="mobileDescriptorCopy"></div>
+                        </div>
+                    </div>
+                    <div id="mobileCta">
+                        <div id="mobileCtaCopy">PLACEHOLDER</div>
+                    </div>
+                    <div class="pauseBtn">
+                        <div class="pauseBtnLineLeft"></div>
+                        <div class="pauseBtnLineRight"></div>
+                    </div>
+                    <div class="playBtn">
+                        <div class="playBtnArrow"></div>
+                    </div>
+                    <div class="muteBtn"></div>
+                    <div class="unmuteBtn"></div>
+                </div>
+                <!-- DESKTOP -->
+                <div id="desktopContainer" class="desktop">
+                    <div class="genClk"></div>
+                    <div id="desktopRightImg">
+                        <div class="genClk"></div>
+                    </div>
+                    <div id="desktopContentContainer">
+                        <div class="genClk"></div>
+                        <div id="desktopLogo_A">
+                            <img src="">
+                        </div>
+                        <div id="desktopLogo_B">
+                            <img src="">
+                        </div>
+                        <div id="desktopCopyContainer_A">
+                            <div id="desktopHeadlineCopy_A"></div>
+                            <div id="desktopDescriptorCopy_A"></div>
+                        </div>
+                        <div id="desktopCopyContainer_B">
+                            <div id="desktopHeadlineCopy_B"></div>
+                            <div id="desktopDescriptorCopy_B"></div>
+                        </div>
+                        <div id="desktopCta">
+                            <div id="desktopCtaCopy">PLACEHOLDER</div>
+                        </div>
+                    </div>
+                    <div class="pauseBtn">
+                        <div class="pauseBtnLineLeft"></div>
+                        <div class="pauseBtnLineRight"></div>
+                    </div>
+                    <div class="playBtn">
+                        <div class="playBtnArrow"></div>
+                    </div>
+                    <div class="muteBtn"></div>
+                    <div class="unmuteBtn"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        /*------------------------*/
+        /*-----> VARIABLES  <-----*/
+        /*------------------------*/
+        var creativeId = "DeluxeBanner";
+        var creativeVersion = "1.1.1";
+        var lastModified = "2018-02-22";
+        var lastUploaded = "2018-02-22";
+        var templateVersion = "2.0.24";
+        var templateName = "cf_deluxe_banner_flex_frame_video_1x1_" + creativeVersion + "_6266"; // cf_[format_name]_[template_name]_[wxh]_version_BlockID
+        var scrollPos = {
+            x: undefined,
+            y: undefined
+        };
+        var adId, rnd, uid;
+
+        var isMobile = (/Mobi/i).test(navigator.userAgent);
+
+        /*-----> VIDEO VARS <-----*/
+        var videoContainer;
+        var video;
+        var videoTrackingModule;
+        var isIOS = (/iPhone|iPad|iPod/i).test(navigator.userAgent);
+        var isIE = (/MSIE/).test(navigator.userAgent) || ((navigator.appName == "Netscape") && (/Trident/).test(navigator.userAgent));
+        var videoIsPlaying = false;
+        var autoPlayMuted = false; // Used to differentiate between initial muted state and later UI muted states.
+        var UI_whileAutoPlay = false;
+
+        /*-----> SETTINGS VARS <-----*/
+        var desktopLayoutMinWidth = 700;
+        var mobileVideoIs1x1 = false;
+        var desktopVideoIs2point35x1 = false;
+
+        var isInView = null; // isInView will only be set to true/false when visibility data is being collected.  Leave null when not in use.
+        var custScriptMraidViewabilityListenerID = null;
+        var custScriptMraidViewabilityDataAvailable = null;
+
+        // Layout should not cchange when live
+        // Desktop hides the ad when the window is reduced but does not remove it.
+        // As a result mobile is detected skewing functionality.
+        // This var will capture the initla layout state for future use as opposed to testing at each step of functionality.
+        // In local testing mode this var is updated to the current layout post breakpoint for ease of testing both layouts simultaneously.
+        var initialActiveLayout = null;
+
+        /*------------------------------*/
+        /*-----> TEMPLATE CONFIG  <-----*/
+        /*------------------------------*/
+        var localPreview = false; // MUST ALWAYS REMAIN FALSE HERE - (Is set to true in function "initializeGlobalVariables" when local testing code is uncommented per instruction in function)
+        // ***-----> For this unit, for local testing, see function "initializeGlobalVariables" for instruction <-----***
+
+        var creativeConfigObj = {
+            // mobile primary image optimal size = 414x380. Images will be set to cover and stretched/cropped as required.
+            // desktop primary image optimal size = 955x270 for 16:9 aspect ratio video layout and 1100x270 for 2.35:1 aspect ratio video layout. Images will be set to cover and stretched/cropped as required.
+            // desktop secondary, aka right side, image optimal size = 600x270 for 16:9 aspect ratio video layout and 495x270 for 2.35:1 aspect ratio video layout. Images will be set to cover and stretched/cropped as required.
+            backgroundImageURL: {
+                mobile: {
+                    primary: "images/1x1.png"
+                },
+                desktop: {
+                    primary: "images/anamorphic.png",
+                    secondary: "images/anamorphic_right.png"
+                }
+            },
+
+            // Only the logo src URL and height are required.
+            // With will adjust as required to accomidate the height listed.
+            // Logo is set to a fixed 15px left and top padding as requested in creative specs.
+            logo: {
+                logoURL: "images/logo.png"
+            },
+
+            // headline = 2 lines max.
+            // description = 1 line max.  Will only display on desktop layout.
+            // If headline or description is not requred set to blank string or null.
+
+            // To add line breaks to the below copy please use " </br> " .
+            copy: {
+                mobile: {
+                    headline: {
+                        copy: "The truth is worth it.",
+                        color: "#FFF"
+                    },
+                    description: {
+                        copy: "",
+                        color: "#FFF"
+                    }
+                },
+                desktop: {
+                    headline: {
+                        copy: "Headline copy here, 2 lines max</br>Headline second line example",
+                        color: "#FFF"
+                    },
+                    description: {
+                        copy: "Descriptor copy here, 1 Line",
+                        color: "#FFF"
+                    }
+                }
+            },
+            // Mobile layout CTA will auto size in both width and height with a max width of the unit current width - 30px ( 15px padding from creative edges required per creative specs x2 ).
+            // Desktop layout CTA has a hardcoded height of 40px and a maximum width of 200px.
+            // Desktop layout CTA must never contain line breaks due to height constraints.
+            // If no CTA is requred set to blank string or null.
+
+            // To add line breaks to the below copy please use one or both of the following two identifiers, [D] and [M].
+            // [D] will be replaced with a linebreak in the desktop layout and a space in the mobile layout.
+            // Likewise [M] will be replaced with a linebreak in the mobile layout and a space in the desktop layout.
+            cta: {
+                copy: "<nobr>SUBSCRIBE TODAY</nobr>",
+                color: "#FFF",
+                borderColor: "#FFF"
+            },
+
+            // Video assets must include files for the following 3 encodings; mp4, ogv and webm
+            // aspectRatio - Mobile acceptable valuse are "1:1" or "16:9" - any other value will default to "16:9" creative behaviour.
+            // aspectRatio - Desktop acceptable valuse are "2.35:1" or "16:9" - any other value will default to "16:9" creative behaviour.
+            // srcURL - While the assets available must include mp4, ogv and webm, only one asset is required to be listed in srcURL for reference
+            // scrURL - File extension may be omitted or left in. EG: "videos/video_1x1" or "videos/video_1x1.mp4"
+            // autoPlay - Determines if the video should autoplay or not.  Acceptable values are true or false
+            // thirdPartyQuartileTrackingPxls - Unused third party tracking quartiles should be set to blank string or null.
+            // thirdPartyQuartileTrackingPxls - Each quartile will only fire once per video per layout.
+            video: {
+                mobile: {
+                    aspectRatio: "1:1",
+                    srcURL: "videos/1x1_Ex.mp4",
+                    autoPlay: false,
+                    thirdPartyQuartileTrackingPxls: {
+                        start: {
+                            pxl: ""
+                        },
+                        q1: {
+                            pxl: ""
+                        },
+                        q2: {
+                            pxl: ""
+                        },
+                        q3: {
+                            pxl: ""
+                        },
+                        complete: {
+                            pxl: ""
+                        }
+                    }
+                },
+                desktop: {
+                    aspectRatio: "2.35:1",
+                    srcURL: "videos/Anamorphic_Ex.mp4",
+                    autoPlay: true,
+                    thirdPartyQuartileTrackingPxls: {
+                        start: {
+                            pxl: ""
+                        },
+                        q1: {
+                            pxl: ""
+                        },
+                        q2: {
+                            pxl: ""
+                        },
+                        q3: {
+                            pxl: ""
+                        },
+                        complete: {
+                            pxl: ""
+                        }
+                    }
+                }
+            }
+        };
+        /*-----> END TEMPLATE CONFIG  <-----*/
+
+        /*----------------------------*/
+        /*-----> INITIALIZATION <-----*/
+        /*----------------------------*/
+        function checkIfAdKitReady(event) {
+            adkit.onReady(initializeCreative);
+        }
+
+        function initializeCreative(event) {
+            var viewportMeta = document.querySelector('meta[name="viewport"]');
+            viewportMeta.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0");
+
+            window.setTimeout(function(e) {
+                viewportMeta.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0");
+            }, 500);
+
+            //Workaround (from QB6573) for Async EB Load where Modernizr isn't properly initialized
+            typeof Modernizr == "object" && (Modernizr.touch = Modernizr.touch || "ontouchstart" in window);
+
+            EBG.pm.bind("sendCreativeId", function() {
+                eventManager.apply(this, arguments);
+            }, this);
+            EBG.pm.bind("eventCallback", function() {
+                eventManager.apply(this, arguments);
+            }, this);
+
+            initializeGlobalVariables();
+            setCreativeVersion();
+
+            //-->
+
+            // if local preview run creative right away as viewability data will not be checked.
+            // otherwise runCreative() will be called by chcekInitialVCDispatch() to make sure the proper method to attain viewability data is set and initial viewability data has been received prior to launching the creative.
+            if (localPreview === true) {
+                runCreative();
+            }
+        }
+
+        function runCreative() {
+            initialActiveLayout = getCurrentLayout();
+
+            setAdditionalDesktopLayoutMediaQueries();
+            setCreativeElements();
+
+            if (localPreview === true) {
+                enableLayoutBreakpointVideoUpdate();
+            }
+
+            addEventListeners();
+            positionCreativeElements();
+
+            window.setTimeout(function(e) {
+                document.getElementById("adWrapper").style.visibility = "visible";
+                document.getElementById("adWrapper").style.opacity = "1";
+                positionCreativeElements();
+            }, 250);
+        }
+
+        // This function adds the remaining media queries for the desktop layout per the selected aspect ratio.
+        // These styles are added in this manner to keep server calls to a minimum per the project specifications.
+        // Should alterations be required to the strings appended, simply view the creative in a browser and copy the appended styles between, but not including, the start and end comments.
+        // To recreate the JS string simply run 2 find and replace sequences in any text editor.  1) 4 spaces to \t  2) Line break to \r
+        // The string is edited with the \t and \r replaces to maintain proper style sheet indentation and overall formatting for ease of readability once appended.
+        // Creating a text node and appending an additional style sheet to the page was not used to keep all creative styles in the same location.
+        function setAdditionalDesktopLayoutMediaQueries() {
+            var beginComment = "\r/* ----------------------------------------------------------------------------- */\r/* -----> APPENDED DESKTOP ASPECT RATIO SPECIFIC MEDIA QUERY STYLES BEGIN <----- */\r/* ----------------------------------------------------------------------------- */\r";
+            var endComment = "\r/* --------------------------------------------------------------------------- */\r/* -----> APPENDED DESKTOP ASPECT RATIO SPECIFIC MEDIA QUERY STYLES END <----- */\r/* --------------------------------------------------------------------------- */\r";
+
+            var desktop_16x9_AspectRatio = "\r/*-----> DESKTOP BREAKPOINT ONE (SMALL - SINGLE CONTENT AREA) <-----*/\r@media(min-width: 701px) and (max-width: 720px){\r\t#desktopVideoAreaBgImg, .video-container{\r\t\twidth: 100%;\r\t}\r\r\t#desktopRightImg{\r\t\tvisibility: hidden;\r\t}\r\r\t#desktopContentContainer{\r\t\twidth: 100%;\r\t\tleft: 0px;\r\t\tbackground: -moz-linear-gradient(top, rgba(0,0,0,0) 20%, rgba(0,0,0,0.7) 100%);\r\t\tbackground: -webkit-linear-gradient(top, rgba(0,0,0,0) 20%,rgba(0,0,0,0.7) 100%);\r\t\tbackground: linear-gradient(to bottom, rgba(0,0,0,0) 20%,rgba(0,0,0,0.7) 100%);\r\t\tfilter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 );\r\t}\r\r\t#desktopLogo_A{\r\t\tvisibility: visible;\r\t}\r\t#desktopLogo_B{\r\t\tvisibility: hidden;\r\t}\r\r\t#desktopCopyContainer_A{\r\t\tvisibility: visible;\r\t}\r\t#desktopCopyContainer_B{\r\t\tvisibility: hidden;\r\t\tmax-width: 475px;\r\t}\r\r\t#desktopCta{\r\t\tright: 25px;\r\t}\r}\r\r/*-----> DESKTOP BREAKPOINT TWO (MEDIUM - TWO CONTENT AREAS) <-----*/\r@media(min-width: 721px) and (max-width: 1279px){\r\t#desktopVideoAreaBgImg, .video-container{\r\t\twidth: 480px;\r\t}\r\r\t.desktop .playBtn{\r\t\tbottom: 50%;\r\t\tleft: 240px;\r\t}\r\r\t#desktopRightImg{\r\t\tvisibility: hidden;\r\t}\r\r\t#desktopContentContainer{\r\t\twidth: calc(100% - 480px);\r\t\tleft: 480px;\r\t\tbackground-color: #111;\r\t}\r\r\t#desktopLogo_A{\r\t\tvisibility: hidden;\r\t}\r\t#desktopLogo_B{\r\t\tvisibility: visible;\r\t}\r\r\t#desktopCopyContainer_A{\r\t\tvisibility: hidden;\r\t}\r\t#desktopCopyContainer_B{\r\t\tvisibility: visible;\r\t\tmax-width: 475px;\r\t}\r\r\t#desktopCta{\r\t\tleft: 25px;\r\t}\r}\r\r/*-----> DESKTOP BREAKPOINT THREE (FULL SIZE - THREE CONTENT AREAS) <-----*/\r@media(min-width: 1280px){\r\t#desktopVideoAreaBgImg, .video-container{\r\t\twidth: 480px;\r\t}\r\r\t.desktop .playBtn{\r\t\tbottom: 50%;\r\t\tleft: 240px;\r\t}\r\r\t#desktopRightImg{\r\t\twidth: calc(100% - 1005px);\r\t\tvisibility: visible;\r\t}\r\r\t#desktopContentContainer{\r\t\twidth: 525px;\r\t\tleft: 480px;\r\t\tbackground-color: #111;\r\t}\r\r\t#desktopLogo_A{\r\t\tvisibility: hidden;\r\t}\r\t#desktopLogo_B{\r\t\tvisibility: visible;\r\t}\r\r\t#desktopCopyContainer_A{\r\t\tvisibility: hidden;\r\t}\r\t#desktopCopyContainer_B{\r\t\tvisibility: visible;\r\t\tmax-width: 475px;\r\t}\r\r\t#desktopCta{\r\t\tleft: 25px;\r\t}\r}\r";
+
+            var desktop_2point35x1_AspectRatio = "\r/*——> DESKTOP BREAKPOINT ONE (SMALL - SINGLE CONTENT AREA) <-----*/\r@media(min-width: 701px) and (max-width: 865px){\r\t#desktopVideoAreaBgImg, .video-container{\r\t\twidth: 100%;\r\t}\r\r\t#desktopRightImg{\r\t\tvisibility: hidden;\r\t}\r\r\t#desktopContentContainer{\r\t\twidth: 100%;\r\t\tleft: 0px;\r\t\tbackground: -moz-linear-gradient(top, rgba(0,0,0,0) 20%, rgba(0,0,0,0.7) 100%);\r\t\tbackground: -webkit-linear-gradient(top, rgba(0,0,0,0) 20%,rgba(0,0,0,0.7) 100%);\r\t\tbackground: linear-gradient(to bottom, rgba(0,0,0,0) 20%,rgba(0,0,0,0.7) 100%);\r\t\tfilter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 );\r\t}\r\r\t#desktopLogo_A{\r\t\tvisibility: visible;\r\t}\r\t#desktopLogo_B{\r\t\tvisibility: hidden;\r\t}\r\r\t#desktopCopyContainer_A{\r\t\tvisibility: visible;\r\t}\r\t#desktopCopyContainer_B{\r\t\tvisibility: hidden;\r\t\tmax-width: 415px;\r\t}\r\r\t#desktopCta{\r\t\tright: 25px;\r\t}\r}\r\r/*-----> DESKTOP BREAKPOINT TWO (MEDIUM - TWO CONTENT AREAS) <-----*/\r@media(min-width: 866px) and (max-width: 1439px){\r\t#desktopVideoAreaBgImg, .video-container{\r\t\twidth: 635px;\r\t}\r\r\t.desktop .playBtn{\r\t\tbottom: 50%;\r\t\tleft: 317px;\r\t}\r\r\t#desktopRightImg{\r\t\tvisibility: hidden;\r\t}\r\r\t#desktopContentContainer{\r\t\twidth: calc(100% - 635px);\r\t\tleft: 635px;\r\t\tbackground-color: #111;\r\t}\r\r\t#desktopLogo_A{\r\t\tvisibility: hidden;\r\t}\r\t#desktopLogo_B{\r\t\tvisibility: visible;\r\t}\r\r\t#desktopCopyContainer_A{\r\t\tvisibility: hidden;\r\t}\r\t#desktopCopyContainer_B{\r\t\tvisibility: visible;\r\t\tmax-width: 415px;\r\t}\r\r\t#desktopCta{\r\t\tleft: 25px;\r\t}\r}\r\r/*-----> DESKTOP BREAKPOINT THREE (FULL SIZE - THREE CONTENT AREAS) <-----*/\r@media(min-width: 1440px){\r\t#desktopVideoAreaBgImg, .video-container{\r\t\twidth: 635px;\r\t}\r\r\t.desktop .playBtn{\r\t\tbottom: 50%;\r\t\tleft: 317px;\r\t}\r\r\t#desktopRightImg{\r\t\twidth: calc(100% - 1110px);\r\t\tvisibility: visible;\r\t}\r\r\t#desktopContentContainer{\r\t\twidth: 475px;\r\t\tleft: 635px;\r\t\tbackground-color: #111;\r\t}\r\r\t#desktopLogo_A{\r\t\tvisibility: hidden;\r\t}\r\t#desktopLogo_B{\r\t\tvisibility: visible;\r\t}\r\r\t#desktopCopyContainer_A{\r\t\tvisibility: hidden;\r\t}\r\t#desktopCopyContainer_B{\r\t\tvisibility: visible;\r\t\tmax-width: 415px;\r\t}\r\r\t#desktopCta{\r\t\tleft: 25px;\r\t}\r}\r";
+
+            document.getElementById("adStyles").innerHTML += beginComment + ((creativeConfigObj.video.desktop.aspectRatio === "2.35:1") ? desktop_2point35x1_AspectRatio : desktop_16x9_AspectRatio) + endComment;
+        }
+
+        function initializeGlobalVariables() {
+            adId = EB._adConfig.adId;
+            rnd = EB._adConfig.rnd;
+            uid = EB._adConfig.uid;
+
+            // *********************************************************************** //
+            // ***** UNCOMMENT BELOW AND COMMENT OUT THE ABOVE FOR LOCAL TESTING ***** //
+            // *********************************************************************** //
+
+            //    localPreview = true;
+
+            //    adId = 00000000;
+            // rnd = Math.random().toString().substring(2);
+            // uid = adId + "_" + rnd;
+
+            //    EB.clickthrough = function(){
+            //        console.log("EB.clickthrough: ", arguments);
+            //    };
+            //    EB.userActionCounter = function(){
+            //        console.log("EB.userActionCounter: ", arguments);
+            //    };
+        }
+
+        /*-----------------------*/
+        /*-----> FUNCTIONS <-----*/
+        /*-----------------------*/
+
+        function getCurrentLayout() {
+            return (document.getElementById("adContainer").offsetWidth > desktopLayoutMinWidth) ? "desktop" : "mobile";
+        }
+
+        /*-----> SET UP <-----*/
+        function setCreativeElements() {
+            var activeLayout = initialActiveLayout;
+
+            if (isIOS) {
+                centerWebkitVideoControls();
+            }
+
+            videoContainer = document.getElementById("video-container");
+
+            mobileVideoIs1x1 = (creativeConfigObj.video.mobile.aspectRatio === "1:1") ? true : false;
+            desktopVideoIs2point35x1 = (creativeConfigObj.video.desktop.aspectRatio === "2.35:1") ? true : false;
+
+            setUpVideo(creativeConfigObj.video[activeLayout].srcURL, creativeConfigObj.video[activeLayout].aspectRatio);
+
+            //set background
+            document.getElementById("mobileVideoAreaBgImg").style.backgroundImage = "url(" + creativeConfigObj.backgroundImageURL.mobile.primary + ")";
+            document.getElementById("desktopVideoAreaBgImg").style.backgroundImage = "url(" + creativeConfigObj.backgroundImageURL.desktop.primary + ")";
+            document.getElementById("desktopRightImg").style.backgroundImage = "url(" + creativeConfigObj.backgroundImageURL.desktop.secondary + ")";
+
+            //set logo
+            document.getElementById("mobileLogo").getElementsByTagName("img")[0].src = document.getElementById("desktopLogo_A").getElementsByTagName("img")[0].src = document.getElementById("desktopLogo_B").getElementsByTagName("img")[0].src = creativeConfigObj.logo.logoURL;
+
+            //set CTA
+            document.getElementById("mobileCta").style.display = document.getElementById("desktopCta").style.display = "block";
+            if (creativeConfigObj.cta.color !== "" && creativeConfigObj.cta.color !== null) {
+                document.getElementById("mobileCtaCopy").style.color = document.getElementById("desktopCtaCopy").style.color = creativeConfigObj.cta.color;
+            }
+            if (creativeConfigObj.cta.borderColor !== "" && creativeConfigObj.cta.borderColor !== null) {
+                document.getElementById("mobileCta").style.borderColor = document.getElementById("desktopCta").style.borderColor = creativeConfigObj.cta.borderColor;
+            }
+            document.getElementById("mobileCtaCopy").innerHTML = creativeConfigObj.cta.copy;
+            document.getElementById("desktopCtaCopy").innerHTML = creativeConfigObj.cta.copy;
+
+            //set copy
+            document.getElementById("mobileHeadlineCopy").innerHTML = replaceLineBreakIndicators(creativeConfigObj.copy.mobile.headline.copy, "mobile");
+            document.getElementById("desktopHeadlineCopy_A").innerHTML = document.getElementById("desktopHeadlineCopy_B").innerHTML = replaceLineBreakIndicators(creativeConfigObj.copy.desktop.headline.copy, "desktop");
+            if (creativeConfigObj.copy.mobile.headline.color !== "" && creativeConfigObj.copy.mobile.headline.color !== null) {
+                document.getElementById("mobileHeadlineCopy").style.color = creativeConfigObj.copy.mobile.headline.color;
+            }
+            if (creativeConfigObj.copy.desktop.headline.color !== "" && creativeConfigObj.copy.desktop.headline.color !== null) {
+                document.getElementById("desktopHeadlineCopy_A").style.color = document.getElementById("desktopHeadlineCopy_B").style.color = creativeConfigObj.copy.desktop.headline.color;
+            }
+
+            // description copy
+            if (creativeConfigObj.copy.mobile.description.copy !== "" && creativeConfigObj.copy.mobile.description.copy !== null) {
+                document.getElementById("mobileDescriptorCopy").innerHTML = creativeConfigObj.copy.mobile.description.copy;
+                if (creativeConfigObj.copy.mobile.description.color !== "" && creativeConfigObj.copy.mobile.description.color !== null) {
+                    document.getElementById("mobileDescriptorCopy").style.color = creativeConfigObj.copy.mobile.description.color;
+                }
+            }
+            if (creativeConfigObj.copy.desktop.description.copy !== "" && creativeConfigObj.copy.desktop.description.copy !== null) {
+                document.getElementById("desktopDescriptorCopy_A").innerHTML = creativeConfigObj.copy.desktop.description.copy;
+                document.getElementById("desktopDescriptorCopy_B").innerHTML = creativeConfigObj.copy.desktop.description.copy;
+                if (creativeConfigObj.copy.desktop.description.color !== "" && creativeConfigObj.copy.desktop.description.color !== null) {
+                    document.getElementById("desktopDescriptorCopy_A").style.color = document.getElementById("desktopDescriptorCopy_B").style.color = creativeConfigObj.copy.desktop.description.color;
+                }
+            }
+        }
+
+        function setUpVideo(srcURL, aspectRatio) {
+
+            var activeLayout = initialActiveLayout;
+            var srcURL_NoFileExt = (srcURL.slice(-6).indexOf(".") === -1) ? srcURL : srcURL.substring(0, srcURL.lastIndexOf("."));
+            var setToAutoPlay = creativeConfigObj.video[activeLayout].autoPlay;
+            var trackingObj = creativeConfigObj.video[activeLayout].thirdPartyQuartileTrackingPxls;
+
+            // add / reset third party quartile tracking progress trackers
+            trackingObj.start.tracked = false;
+            trackingObj.q1.tracked = false;
+            trackingObj.q2.tracked = false;
+            trackingObj.q3.tracked = false;
+            trackingObj.complete.tracked = false;
+
+            document.getElementById("video-container").innerHTML = "<video id=\"video\" webkit-playsinline playsinline" + ((setToAutoPlay === true) ? " autoplay muted" : "") + "></video>";
+
+            video = document.getElementById("video");
+            videoTrackingModule = new EBG.VideoModule(video);
+
+            addVideoListeners(video);
+
+            // If video is autoplay set autoPlayMuted.  autoPlayMuted is used to differentiate between initial muted state and later UI muted states.
+            if (setToAutoPlay === true) {
+                autoPlayMuted = true;
+                addViewabilityListener();
+                video.addEventListener("play", onVideoAutoPlayFirstStart, false);
+                document.getElementById("contentContainer").addEventListener("mousedown", onUI_whileAutoPlay, false);
+
+                video.oncanplay = function() {
+                    video.play();
+                };
+            }
+
+            video.innerHTML += "<source src=\"" + srcURL_NoFileExt + ".mp4\" type=\"video/mp4\" />";
+            video.innerHTML += "<source src=\"" + srcURL_NoFileExt + ".webm\" type=\"video/webm\" />";
+            video.innerHTML += "<source src=\"" + srcURL_NoFileExt + ".ogg\" type=\"video/ogg\" />";
+            video.innerHTML += "Your browser does not support the <code>video</code> element.";
+
+            // This portion will set the video height on mobile 1:1 video only to auto in the smallest size of 320px only which will top align the video.
+            // All other mobile video aspect ratios and sizes to center.
+            // NOTE: Please note in Safari "Responsive Design Mode" the below will not reliably fire.  This is an issue with Safari "Responsive Design Mode" only and is a non-issue.
+            if (aspectRatio === "1:1") {
+                var videoAspectBreakpoint = window.matchMedia("(min-width: 0px) and (max-width: 320px)");
+                videoAspectBreakpoint.addListener(onVideoAspectBreakpointReached);
+
+                function onVideoAspectBreakpointReached(query) {
+                    if (creativeConfigObj.video.mobile.aspectRatio === "1:1") {
+                        if (query.matches) { // If media query matches string above assigned to test
+                            video.style.height = "auto";
+                        } else {
+                            video.style.height = "100%";
+                        }
+                    }
+                }
+
+                if (window.innerWidth <= 320) {
+                    video.style.height = "auto";
+                }
+            }
+        }
+
+        // This functionality is for ease of local testing / prewiew.
+        // When layout switches between desktop and mobile overwrite the current video tag,
+        // set global vars and creative state per the creativeConfigObj.video objects settings
+        // of the current layout to match the same state as if initial load in said layout.
+        // This should never happen in a live environment as a single implementation of the template
+        // will never be served to both environments with the same inpression.
+        function enableLayoutBreakpointVideoUpdate() {
+            var layoutBreakpoint = window.matchMedia("(min-width: 701px)");
+
+            layoutBreakpoint.addListener(onLayoutBreakpointReached);
+
+            function onLayoutBreakpointReached(query) {
+                pauseVideo();
+                removeViewabilityListener();
+
+                // added removeEventListener for timeupdate to avoid issue where post reset of
+                // video and video tracking vars a time update will at times pass through
+                // holding the old videos time causing accidental tracking to occur.
+                video.removeEventListener("timeupdate", thirdPartyQuartileTracking, false);
+
+                videoContainer.style.visibility = "hidden";
+
+                autoPlayMuted = false;
+                videoTrackingModule = null;
+
+
+                initialActiveLayout = getCurrentLayout();
+                setUpVideo(creativeConfigObj.video[getCurrentLayout()].srcURL, creativeConfigObj.video[getCurrentLayout()].aspectRatio);
+
+                window.setTimeout(function(e) {
+                    video.load();
+                }, 10);
+            }
+        }
+
+        function positionCreativeElements() {
+            verticalyAlignText(document.getElementById("mobileCtaCopy"));
+            verticalyAlignText(document.getElementById("desktopCtaCopy"));
+        }
+
+        function addEventListeners() {
+            document.getElementById("mobileCta").addEventListener("click", onCtaClk, false);
+            document.getElementById("mobileLogo").addEventListener("click", onLogoClk, false);
+            document.getElementById("mobileCopyContainer").addEventListener("click", onMessagingClk, false);
+
+            document.getElementById("desktopCta").addEventListener("click", onCtaClk, false);
+            document.getElementById("desktopLogo_A").addEventListener("click", onLogoClk, false);
+            document.getElementById("desktopLogo_B").addEventListener("click", onLogoClk, false);
+            document.getElementById("desktopCopyContainer_A").addEventListener("click", onMessagingClk, false);
+            document.getElementById("desktopCopyContainer_B").addEventListener("click", onMessagingClk, false);
+
+            var bgClks = document.getElementsByClassName("genClk");
+            for (var i = 0; i < bgClks.length; i++) {
+                bgClks[i].addEventListener("click", onBgClk, false);
+            }
+
+            var playBtns = document.getElementsByClassName("playBtn");
+            for (var i = 0; i < playBtns.length; i++) {
+                playBtns[i].addEventListener("click", onVideoPlayClk, false);
+            }
+
+            var pauseBtns = document.getElementsByClassName("pauseBtn");
+            for (var i = 0; i < pauseBtns.length; i++) {
+                pauseBtns[i].addEventListener("click", onVideoPauseClk, false);
+            }
+
+            if (creativeConfigObj.video.desktop.autoPlay === true) {
+                document.getElementById("desktopContainer").getElementsByClassName("unmuteBtn")[0].addEventListener("click", onVideoUnmuteClk, false);
+                document.getElementById("desktopContainer").getElementsByClassName("muteBtn")[0].addEventListener("click", onVideoMuteClk, false);
+            }
+            if (creativeConfigObj.video.mobile.autoPlay === true) {
+                document.getElementById("mobileContainer").getElementsByClassName("unmuteBtn")[0].addEventListener("click", onVideoUnmuteClk, false);
+                document.getElementById("mobileContainer").getElementsByClassName("muteBtn")[0].addEventListener("click", onVideoMuteClk, false);
+            }
+        }
+
+        function addVideoListeners(video) {
+            video.addEventListener("play", onVideoPlay, false);
+            video.addEventListener("pause", onVideoPause, false);
+
+            // IE does not fire a video pause on video ended as per spec and all other browsers.
+            // So if IE add listener for video ended.
+            // On video ended, if not in a puse state, fire pause.
+            // IE will not function as all other browsers and per spec.
+            if (isIE === true) {
+                video.addEventListener("ended", function() {
+                    if (video.paused === false) {
+                        video.pause();
+                    }
+                }, false);
+            }
+
+            video.addEventListener("play", thirdPartyQuartileTracking, false);
+            video.addEventListener("pause", thirdPartyQuartileTracking, false);
+            video.addEventListener("ended", thirdPartyQuartileTracking, false);
+            video.addEventListener("timeupdate", thirdPartyQuartileTracking, false);
+        }
+
+        function addViewabilityListener() {
+            if (custScriptMraidViewabilityDataAvailable === true) {
+                custScriptMraidViewabilityListenerID = addCustomScriptEventListener('viewabilityChange', onVisibilityUpdate);
+            } else {
+                EB.addEventListener(EBG.EventName.VISIBILITY, onVisibilityUpdate);
+            }
+        }
+
+        function removeViewabilityListener() {
+            if (custScriptMraidViewabilityDataAvailable === true) {
+                removeCustomScriptEventListener(custScriptMraidViewabilityListenerID);
+                custScriptMraidViewabilityListenerID = null;
+            } else {
+                EB.removeEventListener(EBG.EventName.VISIBILITY, onVisibilityUpdate);
+            }
+        }
+
+        function showVideoPlayState() {
+            var activeLayout = initialActiveLayout;
+
+            videoContainer.style.visibility = "visible";
+
+            moveOnStageFadeIn(videoContainer, document.getElementById("mobileCta"));
+
+            fadeOutMoveOffStage(document.getElementById("desktopCopyContainer_A"), document.getElementById("desktopLogo_A"), document.getElementById("mobileCopyContainer"));
+
+            if (creativeConfigObj.video[activeLayout].autoPlay === true) {
+                if (video.muted === false) {
+                    moveOnStageFadeIn(document.getElementById(activeLayout + "Container").getElementsByClassName("muteBtn")[0]);
+                } else {
+                    moveOnStageFadeIn(document.getElementById(activeLayout + "Container").getElementsByClassName("unmuteBtn")[0]);
+                }
+            }
+        }
+
+        function hideVideoPlayState() {
+            var activeLayout = initialActiveLayout;
+
+            moveOnStageFadeIn(document.getElementById("desktopCopyContainer_A"), document.getElementById("desktopLogo_A"), document.getElementById("mobileCopyContainer"));
+
+            fadeOutMoveOffStage(videoContainer, document.getElementById("mobileCta"));
+
+            if (creativeConfigObj.video[activeLayout].autoPlay === true) {
+                if (video.muted === false) {
+                    fadeOutMoveOffStage(document.getElementById(activeLayout + "Container").getElementsByClassName("muteBtn")[0]);
+                } else {
+                    fadeOutMoveOffStage(document.getElementById(activeLayout + "Container").getElementsByClassName("unmuteBtn")[0]);
+                }
+            }
+        }
+
+        function togglePlayPauseBtn() {
+            var pauseBtns = document.getElementsByClassName("pauseBtn");
+            var playBtns = document.getElementsByClassName("playBtn");
+
+            if (videoIsPlaying === true) {
+                for (var i = 0; i < playBtns.length; i++) {
+                    fadeOutMoveOffStage(playBtns[i]);
+                    moveOnStageFadeIn(pauseBtns[i]);
+                }
+            } else {
+                for (var i = 0; i < playBtns.length; i++) {
+                    fadeOutMoveOffStage(pauseBtns[i]);
+                    moveOnStageFadeIn(playBtns[i]);
+                }
+            }
+        }
+
+        function toggleMuteUnmuteBtn() {
+            var activeLayout = initialActiveLayout;
+
+            if (video.muted === false) {
+                fadeOutMoveOffStage(document.getElementById(activeLayout + "Container").getElementsByClassName("unmuteBtn")[0]);
+                moveOnStageFadeIn(document.getElementById(activeLayout + "Container").getElementsByClassName("muteBtn")[0]);
+            } else {
+                fadeOutMoveOffStage(document.getElementById(activeLayout + "Container").getElementsByClassName("muteBtn")[0]);
+                moveOnStageFadeIn(document.getElementById(activeLayout + "Container").getElementsByClassName("unmuteBtn")[0]);
+            }
+        }
+
+
+        /*-----> VIDEO FUNCTIONS <-----*/
+        function centerWebkitVideoControls() {
+            document.body.classList.add("ios-center-video-controls");
+        }
+
+        function pauseVideo() {
+            if (video && videoIsPlaying == true) {
+                video.pause();
+            }
+        }
+
+        function muteVideo() {
+            var activeLayout = initialActiveLayout;
+
+            video.muted = true;
+
+            if (creativeConfigObj.video[activeLayout].autoPlay === true) {
+                toggleMuteUnmuteBtn();
+            }
+        }
+
+        function unmuteVideo() {
+            var activeLayout = initialActiveLayout;
+
+            if (autoPlayMuted === true) {
+                autoPlayMuted = false;
+                removeViewabilityListener();
+            }
+            video.muted = false;
+
+            if (creativeConfigObj.video[activeLayout].autoPlay === true) {
+                toggleMuteUnmuteBtn();
+            }
+        }
+
+        function updateVideoStatePerCurrentViewability() {
+            if (isInView === true && videoIsPlaying === false && autoPlayMuted === true && UI_whileAutoPlay === false) {
+                video.play();
+            } else if (isInView === false && videoIsPlaying === true && autoPlayMuted === true && UI_whileAutoPlay === false) {
+                video.pause();
+            } else {
+                // For Testing
+            }
+        }
+
+
+        /*-----------------------------*/
+        /*-----> EVENT LISTENERS <-----*/
+        /*-----------------------------*/
+        function onUI_whileAutoPlay(e) {
+            UI_whileAutoPlay = true;
+            document.getElementById("contentContainer").removeEventListener("mousedown", onUI_whileAutoPlay, false);
+        }
+
+        function onVideoAutoPlayFirstStart(e) {
+            video.removeEventListener("play", onVideoAutoPlayFirstStart, false);
+            updateVideoStatePerCurrentViewability();
+        }
+
+        function onVisibilityUpdate(e) {
+            var lastState = isInView;
+
+            isInView = readVisibilityData(e);
+
+            if (isInView !== lastState) {
+                updateVideoStatePerCurrentViewability();
+            }
+        }
+
+        function readVisibilityData(data) {
+            var inView = null;
+
+            if (custScriptMraidViewabilityDataAvailable === true) {
+                inView = data.isViewable;
+            } else {
+                try {
+                    if (EB._visibilityData.percentage > 50) {
+                        inView = true;
+                    } else if (EB._visibilityData.percentage < 50) {
+                        inView = false;
+                    }
+                } catch (err) {
+                    //
+                }
+            }
+
+            return inView;
+        }
+
+        function onVideoPlayClk(e) {
+            if (autoPlayMuted === true) {
+                autoPlayMuted = false;
+                removeViewabilityListener();
+                unmuteVideo();
+            }
+            video.play();
+        }
+
+        function onVideoPauseClk(e) {
+            video.pause();
+        }
+
+        function onVideoMuteClk(e) {
+            muteVideo();
+        }
+
+        function onVideoUnmuteClk(e) {
+            unmuteVideo();
+        }
+
+        function onVideoPlay(e) {
+            videoIsPlaying = true;
+            togglePlayPauseBtn();
+            showVideoPlayState();
+        }
+
+        function onVideoPause(e) {
+            videoIsPlaying = false;
+            togglePlayPauseBtn();
+            hideVideoPlayState();
+        }
+
+        function thirdPartyQuartileTracking(e) {
+            var activeLayout = initialActiveLayout;
+            var currentTime = e.target.currentTime;
+            var totalTime = e.target.duration;
+            var percent = currentTime / totalTime * 100;
+
+            var pxlObj = creativeConfigObj.video[activeLayout].thirdPartyQuartileTrackingPxls;
+
+            switch (e.type) {
+                case "play":
+                    if (!pxlObj.start.tracked) {
+                        fireThirdPartyQuartilePxl(pxlObj.start);
+                    }
+                    break;
+                case "timeupdate":
+                    if (!pxlObj.q1.tracked && percent >= 25) {
+                        fireThirdPartyQuartilePxl(pxlObj.q1);
+                    } else if (!pxlObj.q2.tracked && percent >= 50) {
+                        fireThirdPartyQuartilePxl(pxlObj.q2);
+                    } else if (!pxlObj.q3.tracked && percent >= 75) {
+                        fireThirdPartyQuartilePxl(pxlObj.q3);
+                    }
+                    break;
+                case "ended":
+                    fireThirdPartyQuartilePxl(pxlObj.complete);
+
+                    resetThirdPartyQuartileTracking(pxlObj);
+                    break;
+                default:
+                    break;
+            }
+
+            function resetThirdPartyQuartileTracking(obj) {
+                obj.start.tracked = false;
+                obj.q1.tracked = false;
+                obj.q2.tracked = false;
+                obj.q3.tracked = false;
+                obj.complete.tracked = false;
+            }
+
+            function fireThirdPartyQuartilePxl(obj) {
+                obj.tracked = true;
+                if (obj.pxl !== "" && obj.pxl !== null) {
+                    fire1x1Pixel(obj.pxl);
+                }
+            }
+        }
+
+        /*-----> CLICK OUTS <-----*/
+        function onCtaClk(e) {
+            EB.clickthrough('CTA_Click');
+            pauseVideo();
+        }
+
+        function onLogoClk(e) {
+            EB.clickthrough('Logo_Click');
+            pauseVideo();
+        }
+
+        function onMessagingClk(e) {
+            EB.clickthrough('Messaging_Click');
+            pauseVideo();
+        }
+
+        function onBgClk(e) {
+            EB.clickthrough('Background_Click');
+            pauseVideo();
+        }
+
+        /*-------------------------------------------------------------*/
+        /*-----> CUSTOM SCRIPT EVENT LISTENER CALLBACK FUNCTIONS <-----*/
+        /*-------------------------------------------------------------*/
+        // Check initial, and possible only, dispatch of viewabilityChange custom event to
+        // set variable later used to determine the method to check viewability if required
+        // due to use of auto play in the template implementation.
+        function chcekInitialVCDispatch(e) {
+            removeCustomScriptEventListener(custScriptMraidViewabilityListenerID);
+
+            custScriptMraidViewabilityListenerID = null;
+            custScriptMraidViewabilityDataAvailable = e.isMRAID;
+            isInView = readVisibilityData(e);
+
+            // creative must be launched here when live to be sure data required from
+            // custom script event listener has been attained prior to launch.
+            runCreative();
+        }
+
+
+        /*------------------------------*/
+        /*-----> HELPER FUNCTIONS <-----*/
+        /*------------------------------*/
+        // Items must be on stage prior to being passed to this function for proper alignemnt
+        function verticalyAlignText(obj) {
+            var parentContainerHeight = obj.parentNode.offsetHeight;
+            var copyContainerHeight = obj.offsetHeight;
+            var pushMargin = (Math.floor((parentContainerHeight - copyContainerHeight) / 2)) + "px";
+
+            obj.style.marginTop = pushMargin;
+        }
+
+        function replaceLineBreakIndicators(copy, layout) {
+            if (layout === "mobile") {
+                copy = copy.replace(/\[M\]/g, "<br/>").replace(/\[D\]/g, " ");
+            } else {
+                copy = copy.replace(/\[D\]/g, "<br/>").replace(/\[M\]/g, " ");
+            }
+
+            return copy;
+        }
+
+        function moveOnStageFadeIn(arg) {
+            for (var i = 0; i < arguments.length; i++) {
+                arguments[i].style.WebkitAnimation = "moveOnStageFadeIn .25s ease forwards";
+                arguments[i].style.animation = "moveOnStageFadeIn .25s ease forwards";
+            }
+        }
+
+        function fadeOutMoveOffStage(arg) {
+            for (var i = 0; i < arguments.length; i++) {
+                arguments[i].style.WebkitAnimation = "fadeOutMoveOffStage .25s ease forwards";
+                arguments[i].style.animation = "fadeOutMoveOffStage .25s ease forwards";
+            }
+        }
+
+        function fire1x1Pixel(src) {
+            // Fire 3rd party tracking pixels only when live.
+            //
+            if (localPreview === false) {
+                var pixel = new Image();
+                pixel.src = src;
+            } else {
+                console.log("" + src);
+            }
+        }
+
+        /*------------------------------*/
+        /*-----> BASE FORMAT CODE <-----*/
+        /*------------------------------*/
+        /*******************
+        UTILITIES
+        *******************/
+        function setCreativeVersion() {
+            sendMessage("setCreativeVersion", {
+                creativeId: creativeId + " - " + templateName,
+                creativeVersion: creativeVersion,
+                creativeLastModified: lastModified,
+                uid: uid
+            });
+        }
+
+        function onPageScroll(event) {
+            // use scrollPos anywhere to know the current x/y coordinates.
+            scrollPos.x = event.scrollXPercent;
+            scrollPos.y = event.scrollYPercent;
+        }
+
+        /*********************************
+        HTML5 Event System - Do Not Modify
+        *********************************/
+        var listenerQueue;
+        var creativeIFrameId;
+
+        function sendMessage(type, data) {
+            //note: the message type we're sending is also the name of the function inside
+            //		the custom script's messageHandlers object, so the case must match.
+
+            if (!data.type) data.type = type;
+            EB._sendMessage(type, data);
+        }
+
+        function addCustomScriptEventListener(eventName, callback, interAd) {
+            listenerQueue = listenerQueue || {};
+            var data = {
+                uid: uid,
+                listenerId: Math.ceil(Math.random() * 1000000000),
+                eventName: eventName,
+                interAd: !!(interAd),
+                creativeIFrameId: creativeIFrameId
+            };
+            sendMessage("addCustomScriptEventListener", data);
+            data.callback = callback;
+            listenerQueue[data.listenerId] = data;
+            return data.listenerId;
+        }
+
+        function dispatchCustomScriptEvent(eventName, params) {
+            params = params || {};
+            params.uid = uid;
+            params.eventName = eventName;
+            params.creativeIFrameId = creativeIFrameId;
+            sendMessage("dispatchCustomScriptEvent", params);
+        }
+
+        function removeCustomScriptEventListener(listenerId) {
+            var params = {
+                uid: uid,
+                listenerId: listenerId,
+                creativeIFrameId: creativeIFrameId
+            };
+
+            sendMessage("removeCustomScriptEventListener", params);
+            if (listenerQueue[listenerId])
+                delete listenerQueue[listenerId];
+        }
+
+        function eventManager(event) {
+            var msg;
+
+            if (typeof event == "object" && event.data) {
+                msg = JSON.parse(event.data);
+
+            } else {
+                // this is safe frame.
+                msg = {
+                    type: event.type,
+                    data: event
+                };
+            }
+            if (msg.type && msg.data && (!uid || (msg.data.uid && msg.data.uid == uid))) {
+                switch (msg.type) {
+                    case "sendCreativeId":
+                        creativeIFrameId = msg.data.creativeIFrameId;
+
+                        addCustomScriptEventListener('pageScroll', onPageScroll);
+
+                        // For the NYT custom scripts;
+                        // MRAID viewability data will be passed in and only available via this listener.
+                        // This listener will be dispatched for the first time after the "setCreativeVersion" message in is sent by the creative.
+                        // The first dispatch of this listener will contain data listing if MRAID viewability data will be available for the serve.
+                        // If MRAID viewability data will not be available, which is the case in all mobile web serves, this listener will only dispatch once to inform the creative that MRAID viewability data is not available, by way of isMRAID having a value of false, otherwise it will continualy dispatch on MRAID viewability changes.
+                        // For those reasons we must subscribe to the listener before calling setCreativeVersion() to be sure to catch the initial and possibly only dispatch.
+                        custScriptMraidViewabilityListenerID = addCustomScriptEventListener('viewabilityChange', chcekInitialVCDispatch);
+
+                        sendMessage("dispatchScrollPos", {
+                            uid: uid
+                        });
+                        if (creativeContainerReady)
+                            creativeContainerReady();
+                        break;
+                    case "eventCallback": // Handle Callback
+                        var list = msg.data.listenerIds;
+                        var length = list.length;
+                        for (var i = 0; i < length; i++) {
+                            try {
+                                var t = listenerQueue[list[i]];
+                                if (!t) continue;
+                                t.callback(msg.data);
+                            } catch (e) {}
+                        }
+                        break;
+                }
+            }
+        }
+
+        // NOTE: The message listener below, and more importantly eventManager portion, have
+        //		 been commented out as the calls to the eventManager function are being pushed
+        //		 in via the 2 bindings to EGB.pm, as seen in the initializeCreative function.
+        //		 When the below was left in the code, while serving in MRAID, two calls per
+        //		 event were being received.  With the below removed all environments now
+        //		 receive only a single call per event.
+        //		 This commented out code was not deleted to avoid accidental addition back
+        //		 into the code by one not familiar with the template since it is boilerplate
+        //		 code for the base custom format.
+        // window.addEventListener("message", function() {
+        // 	try {
+        // 		eventManager.apply(this, arguments);
+        // 	} catch (e) {}
+        // }, false);
+
+        /*************************************
+        End HTML5 Event System - Do Not Modify
+        *************************************/
+
+        window.addEventListener("load", checkIfAdKitReady);
+    </script>
+
+</body>
+
+</html>

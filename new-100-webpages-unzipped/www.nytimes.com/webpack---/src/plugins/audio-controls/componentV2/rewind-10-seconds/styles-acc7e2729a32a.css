@@ -1,0 +1,15 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+// module
+exports.push([module.id, ".rewind-1eT0cMP0 svg{fill:#000;transition:fill .25s,transform .3s}.desktop-kltw0xL6.rewind-1eT0cMP0:focus svg,.desktop-kltw0xL6.rewind-1eT0cMP0:hover svg{fill:rgba(0,0,0,.8)}.light-266YVREc.rewind-1eT0cMP0 svg{fill:#fff}.desktop-kltw0xL6.light-266YVREc.rewind-1eT0cMP0:focus svg,.desktop-kltw0xL6.light-266YVREc.rewind-1eT0cMP0:hover svg{fill:hsla(0,0%,100%,.8)}.rewind-1eT0cMP0{width:31px;height:31px}.rewind-1eT0cMP0 svg{width:30px;height:30px}.rewind-1eT0cMP0:disabled svg{fill:rgba(68,68,68,.2)}.light-266YVREc.rewind-1eT0cMP0:disabled svg{fill:hsla(0,0%,100%,.2)}.desktop-kltw0xL6.rewind-1eT0cMP0:disabled svg{fill:rgba(68,68,68,.2)}.desktop-kltw0xL6.light-266YVREc.rewind-1eT0cMP0:disabled svg{fill:hsla(0,0%,100%,.2)}", ""]);
+// exports
+exports.locals= {
+    "rewind": "rewind-1eT0cMP0", "desktop": "desktop-kltw0xL6", "light": "light-266YVREc"
+}
+
+;
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/css-loader??ref--3-1!./node_modules/postcss-loader/lib??ref--3-2!./src/plugins/audio-controls/componentV2/rewind-10-seconds/styles.css
+// module id = 199
+// module chunks = 5

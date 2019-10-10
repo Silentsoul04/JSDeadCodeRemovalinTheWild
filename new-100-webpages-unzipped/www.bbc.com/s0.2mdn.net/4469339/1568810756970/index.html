@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
+    <meta content="width=300,height=250" name="ad.size" />
+    <meta content="4" name="lemonpi.version" />
+    <meta content="2" name="lemonpi.runtime.version" />
+    <meta content="LemonPI Studio 1.53.0" name="generator" />
+    <title>Your LemonPI Creative</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+    <!-- External stylesheets -->
+
+
+    <link href="./studio-style.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./style.css" media="all" rel="stylesheet" type="text/css" />
+    <style>
+        @font-face {
+            font-family: 'Volkswagen Head Bold';
+            src: url('VWHeadWeb-Bold.woff') format('woff'), url('VWHeadWeb-Bold.ttf') format('truetype');
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'Volkswagen Head Regular';
+            src: url('VWHeadWeb-Regular.woff') format('woff'), url('VWHeadWeb-Regular.ttf') format('truetype');
+        }
+    </style>
+    <script type="text/javascript">
+        (function() {
+            var MAX_URL_PARAM_LENGTH = 34;
+            var CLICK_X_URL_KEY = 'nx';
+            var CLICK_Y_URL_KEY = 'ny';
+            var CREATIVE_DIMENSIONS_KEY = 'dim';
+            var AD_URL_PARAM = '&adurl=';
+
+            var relegateNavigation = '';
+            var urlParamMap = {};
+
+            urlParamMap[CLICK_X_URL_KEY] = null;
+            urlParamMap[CLICK_Y_URL_KEY] = null;
+            urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+            var handleClickTagMessage = function(e) {
+                try {
+                    var eventData = JSON.parse(e.data);
+                } catch (err) {
+                    return;
+                }
+                if (eventData.isInitClickTag) {
+                    if (eventData.clickTags) {
+                        for (var i = 0; i < eventData.clickTags.length; i++) {
+                            var clkTag = eventData.clickTags[i];
+                            window[clkTag.name] = clkTag.url;
+                        }
+                    } else if (eventData.clickTag) {
+                        window.clickTag = eventData.clickTag;
+                    }
+                    relegateNavigation = eventData.relegateNavigation;
+                }
+            };
+
+            var storeClickCoordinates = function(e) {
+                urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+                urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+            };
+
+            var getCreativeDimensions = function() {
+                return window.innerWidth + 'x' + window.innerHeight;
+            }
+
+            var getExitClickParams = function(e) {
+                urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+                var exitParams = '';
+                for (var key in urlParamMap) {
+                    exitParams += '&' + key + '=';
+                    if (urlParamMap[key] !== null) {
+                        exitParams += urlParamMap[key];
+                    }
+                }
+                return exitParams;
+            }
+
+            var appendExitClickParams = function(url) {
+                var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+                var paramsToBeAdded = getExitClickParams();
+                if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+                    url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+                        url.substr(adUrlIndex);
+                };
+                return url;
+            };
+
+            if (open.call) {
+                window.open = function(open) {
+                    return function(url, name, features) {
+                        url = appendExitClickParams(url);
+                        if (relegateNavigation === 'parent') {
+                            var message = {
+                                'clickTag': url,
+                                'isPostClickTag': true
+                            };
+                            parent.postMessage(JSON.stringify(message), '*');
+                        } else {
+                            var args = [url, name];
+                            if (features) {
+                                args.push(features);
+                            }
+                            open.apply(window, args);
+                        }
+                    };
+                }(window.open);
+            }
+
+            if (window.addEventListener) {
+                window.addEventListener(
+                    'message', handleClickTagMessage, false);
+                window.addEventListener('mousedown', storeClickCoordinates, true);
+            } else {
+                window.attachEvent('onmessage', handleClickTagMessage);
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <script>
+        // required by DCM
+        var clickTag1 = '';
+        var clickTag2 = '';;
+    </script>
+    <script>
+        window.lemonpi = {
+            "clickTags": ["clickTag1", "clickTag2"],
+            "staticContentImpressionUrl": "https://d.lemonpi.io/a/112/view/15856-11353-76066",
+            "dynamicContentEnabled": true,
+            "clickTrackUrl": "",
+            "thirdPartyTrackerUrl": "",
+            "lemonpiClickUrl": "http://d.lemonpi.io/c/15856/v2/76066",
+            "dynamicContentUrl": "https://d.lemonpi.io/a/112/prop/0/get/15856-11353-76066",
+            "layerMetadata": {
+                "fallback": {
+                    "url": "https://www.volkswagen.nl/",
+                    "clickTagName": "clickTag1"
+                },
+                "click": {
+                    "url": "https://www.volkswagen.nl/",
+                    "clickTagName": "clickTag2"
+                }
+            },
+            "tagging": ""
+        };
+    </script>
+    <script src="//runtime.lemonpi.io/dcm-2.4.js"></script>
+    <script>
+        window.lemonpi.dynamicURLParameterMethods.push(function(callback) {
+            callback("default");
+        });;
+    </script>
+    <!-- Creative's content -->
+    <div id="content">
+        <div id="creative_container" style="display: none; width: 300px; height: 250px; position: relative; overflow: hidden;">
+            <div class="click" id="click">
+            </div>
+            <div class="click_container" id="click_container">
+                <div class="bg" id="bg">
+                </div>
+                <div class="sliderContainer" id="sliderContainer">
+                    <div class="slider" id="slider">
+                        <div class="slide" id="slide">
+                            <div class="car_image" id="car_image">
+                            </div>
+                            <div class="car_title" id="car_title">T-Roc</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta_container" id="cta_container">
+                    <div class="cta" id="cta">Ontdek ‘m nu</div>
+                </div>
+                <div class="header" id="header">
+                    <div class="mainTitle" id="mainTitle">Volkswagen - Voor ieder wat wils<br /></div>
+                </div>
+                <div class="logo_container" id="logo_container"><svg height="35" viewbox="0 0 35 35" width="35" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#logo{
+                  fill: #001e50;
+                  fill-rule: evenodd;
+                }
+              #logo_container &gt; svg{
+                            overflow: visible;
+                            position: relative;
+                            display: block;
+                            
+                          }</style>
+</defs>
+<path class="" d="M33.5,171.387A15.939,15.939,0,0,1,17.662,155.5a15.515,15.515,0,0,1,1-5.548L27.927,168.6a0.623,0.623,0,0,0,.562.439,0.614,0.614,0,0,0,.562-0.439l4.253-9.557a0.2,0.2,0,1,1,.391,0l4.253,9.557a0.615,0.615,0,0,0,.562.439,0.624,0.624,0,0,0,.562-0.439l9.263-18.649a15.515,15.515,0,0,1,1,5.548A15.939,15.939,0,0,1,33.5,171.387Zm0-19.48a0.264,0.264,0,0,1-.2-0.2l-4.986-11.195a15.3,15.3,0,0,1,10.363,0L33.7,151.712A0.264,0.264,0,0,1,33.5,151.907Zm-5.059,11.487a0.262,0.262,0,0,1-.2-0.195L20.18,146.946a16.371,16.371,0,0,1,5.695-5.353L31.667,154.5a0.409,0.409,0,0,0,.44.293h2.786a0.409,0.409,0,0,0,.44-0.293l5.792-12.9a16.37,16.37,0,0,1,5.7,5.353L38.755,163.2a0.2,0.2,0,0,1-.391,0l-3.031-6.941a0.409,0.409,0,0,0-.44-0.294H32.107a0.408,0.408,0,0,0-.44.294L28.636,163.2A0.262,0.262,0,0,1,28.441,163.394ZM33.5,173A17.5,17.5,0,1,0,16,155.5,17.482,17.482,0,0,0,33.5,173Z" id="logo" transform="translate(-16 -138)"></path>
+</svg></div>
+                <div class="logoRetina_container" id="logoRetina_container"><svg height="70" viewbox="0 0 70 70" width="70" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#logoRetina{
+                  fill: #001e50;
+                  fill-rule: evenodd;
+                }
+              #logoRetina_container &gt; svg{
+                            overflow: visible;
+                            position: relative;
+                            display: block;
+                            
+                          }</style>
+</defs>
+<path class="" d="M51,191.774A31.879,31.879,0,0,1,19.324,160a31.026,31.026,0,0,1,2-11.1l18.526,37.3a1.248,1.248,0,0,0,1.124.88,1.23,1.23,0,0,0,1.124-.88l8.506-19.113a0.391,0.391,0,0,1,.782,0L59.9,186.2a1.23,1.23,0,0,0,1.124.88,1.248,1.248,0,0,0,1.124-.88l18.527-37.3a31.03,31.03,0,0,1,2,11.1A31.879,31.879,0,0,1,51,191.774Zm0-38.96a0.526,0.526,0,0,1-.391-0.391l-9.972-22.388a30.587,30.587,0,0,1,20.726,0l-9.972,22.388A0.526,0.526,0,0,1,51,152.814ZM40.881,175.789a0.526,0.526,0,0,1-.391-0.391L24.359,142.891a32.756,32.756,0,0,1,11.39-10.7L47.334,158a0.816,0.816,0,0,0,.88.586h5.573a0.817,0.817,0,0,0,.88-0.586l11.585-25.81a32.756,32.756,0,0,1,11.39,10.7L61.51,175.4a0.391,0.391,0,0,1-.782,0l-6.061-13.883a0.818,0.818,0,0,0-.88-0.586H48.214a0.817,0.817,0,0,0-.88.586L41.273,175.4A0.526,0.526,0,0,1,40.881,175.789ZM51,195a35,35,0,1,0-35-35A34.964,34.964,0,0,0,51,195Z" id="logoRetina" transform="translate(-16 -125)"></path>
+</svg></div>
+                <div class="draggable" id="draggable">
+                </div>
+            </div>
+            <div class="form" id="form">
+                <div class="person" id="person">
+                    <div class="person_bg_container" id="person_bg_container"><svg height="35.406" viewbox="0 0 121.781 35.406" width="121.781" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#person_bg{
+                    fill: none;
+                    stroke: #001e50;
+                    stroke-width: 1px;
+                    fill-rule: evenodd;
+                  }
+                #person_bg_container &gt; svg{
+                              overflow: visible;
+                              position: relative;
+                              display: block;
+                              
+                            }</style>
+</defs>
+<path class="" d="M16,58.763H136.776V93.144H16V58.763Z" id="person_bg" transform="translate(-15.5 -58.25)"></path>
+</svg></div>
+                    <div class="interactionElement person_minus" id="person_minus">
+                        <div class="person_minus_bg" id="person_minus_bg">
+                        </div>
+                        <div class="person_minus_icon_container" id="person_minus_icon_container"><svg height="2.656" viewbox="0 0 13.219 2.656" width="13.219" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#person_minus_icon{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #person_minus_icon_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="" d="M38.04,78.157H24.816V75.513H38.04v2.645Z" id="person_minus_icon" transform="translate(-24.813 -75.5)"></path>
+</svg></div>
+                    </div>
+                    <div class="interactionElement person_plus" id="person_plus">
+                        <div class="person_plus_bg" id="person_plus_bg">
+                        </div>
+                        <div class="person_plus_icon_container" id="person_plus_icon_container"><svg height="13.219" viewbox="0 0 13.219 13.219" width="13.219" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#person_plus_icon{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #person_plus_icon_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="" d="M127.96,77.276h-5.289v5.289h-2.645V77.276h-5.289V74.631h5.289V69.342h2.645v5.289h5.289v2.645Z" id="person_plus_icon" transform="translate(-114.75 -69.344)"></path>
+</svg></div>
+                    </div>
+                    <div class="person_icons" id="person_icons">
+                        <div class="person_shape_container person_icon_container" id="person_shape_container"><svg height="12.344" viewbox="0 0 12.313 12.344" width="12.313" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#person_shape{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #person_shape_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="person_icon" d="M61.844,68.556a3.134,3.134,0,1,0-3.086-3.134A3.11,3.11,0,0,0,61.844,68.556ZM60.13,65.268a1.65,1.65,0,0,1,1.714-1.587q0.076,0,.152,0a1.656,1.656,0,0,1,1.563,1.741q0,0.077,0,.154a1.65,1.65,0,0,1-1.714,1.587q-0.076,0-.152,0a1.656,1.656,0,0,1-1.563-1.741C60.127,65.371,60.127,65.319,60.13,65.268ZM66.6,69.014l-0.062-.034L64.913,68.2a4.11,4.11,0,0,1-1.225.954l2.244,1.07a0.642,0.642,0,0,1,.292.534l0.361,2.331c-1.2.076-3.372,0.145-4.564,0.145H61.666c-1.231,0-3.365-.068-4.564-0.145l0.362-2.336a0.632,0.632,0,0,1,.318-0.545l2.226-1.05a4.115,4.115,0,0,1-1.23-.954l-1.636.775a2.02,2.02,0,0,0-1.033,1.553l-0.425,2.742a1.048,1.048,0,0,0,.2.8,0.956,0.956,0,0,0,.686.374c1.019,0.088,3.639.181,5.1,0.181h0.354c1.459,0,4.078-.093,5.094-0.177A0.956,0.956,0,0,0,67.8,74.08a1.049,1.049,0,0,0,.2-0.8l-0.225-1.455-0.217-1.389A1.957,1.957,0,0,0,66.6,69.014Z" id="person_shape" transform="translate(-55.688 -62.281)"></path>
+</svg></div>
+                        <div class="person_shape_1_container person_icon_container" id="person_shape_1_container"><svg height="12.344" viewbox="0 0 12.344 12.344" width="12.344" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#person_shape_1{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #person_shape_1_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="person_icon" d="M75.949,68.556a3.134,3.134,0,1,0-3.086-3.134A3.11,3.11,0,0,0,75.949,68.556Zm-1.714-3.288a1.65,1.65,0,0,1,1.714-1.587q0.076,0,.152,0a1.656,1.656,0,0,1,1.563,1.741q0,0.077,0,.154a1.65,1.65,0,0,1-1.714,1.587q-0.076,0-.152,0a1.656,1.656,0,0,1-1.563-1.741C74.233,65.371,74.233,65.319,74.235,65.268Zm6.474,3.746-0.062-.034L79.018,68.2a4.112,4.112,0,0,1-1.225.954l2.244,1.07a0.642,0.642,0,0,1,.292.534l0.361,2.331c-1.2.076-3.372,0.145-4.564,0.145H75.772c-1.231,0-3.365-.068-4.564-0.145l0.362-2.336a0.632,0.632,0,0,1,.318-0.545l2.226-1.05a4.115,4.115,0,0,1-1.23-.954l-1.636.775a2.02,2.02,0,0,0-1.033,1.553l-0.425,2.742a1.048,1.048,0,0,0,.2.8,0.956,0.956,0,0,0,.686.374c1.019,0.088,3.639.181,5.1,0.181h0.354c1.459,0,4.078-.093,5.094-0.177a0.956,0.956,0,0,0,.686-0.374,1.05,1.05,0,0,0,.2-0.8l-0.226-1.455-0.217-1.389A1.957,1.957,0,0,0,80.709,69.014Z" id="person_shape_1" transform="translate(-69.781 -62.281)"></path>
+</svg></div>
+                        <div class="person_shape_2_container person_icon_container" id="person_shape_2_container"><svg height="12.344" viewbox="0 0 12.313 12.344" width="12.313" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#person_shape_2{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #person_shape_2_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="person_icon" d="M90.054,68.556a3.134,3.134,0,1,0-3.086-3.134A3.11,3.11,0,0,0,90.054,68.556ZM88.34,65.268a1.65,1.65,0,0,1,1.714-1.587q0.076,0,.152,0a1.656,1.656,0,0,1,1.563,1.741q0,0.077,0,.154a1.65,1.65,0,0,1-1.714,1.587q-0.076,0-.152,0a1.656,1.656,0,0,1-1.563-1.741C88.338,65.371,88.338,65.319,88.34,65.268Zm6.474,3.746-0.062-.034L93.124,68.2a4.11,4.11,0,0,1-1.225.954l2.244,1.07a0.642,0.642,0,0,1,.292.534L94.8,73.093c-1.2.076-3.372,0.145-4.564,0.145H89.877c-1.231,0-3.365-.068-4.564-0.145l0.362-2.336a0.632,0.632,0,0,1,.318-0.545l2.226-1.05a4.116,4.116,0,0,1-1.23-.954l-1.636.775a2.02,2.02,0,0,0-1.033,1.553l-0.425,2.742a1.048,1.048,0,0,0,.2.8,0.956,0.956,0,0,0,.686.374c1.019,0.088,3.639.181,5.1,0.181h0.354c1.459,0,4.078-.093,5.094-0.177a0.956,0.956,0,0,0,.686-0.374,1.049,1.049,0,0,0,.2-0.8l-0.225-1.455-0.217-1.389A1.957,1.957,0,0,0,94.815,69.014Z" id="person_shape_2" transform="translate(-83.906 -62.281)"></path>
+</svg></div>
+                        <div class="person_shape_6_container person_icon_container" id="person_shape_6_container"><svg height="12.344" viewbox="0 0 12.313 12.344" width="12.313" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#person_shape_6{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #person_shape_6_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="person_icon" d="M54.791,83.542a3.134,3.134,0,1,0-3.086-3.134A3.11,3.11,0,0,0,54.791,83.542Zm-1.714-3.288a1.65,1.65,0,0,1,1.714-1.587q0.076,0,.152,0a1.656,1.656,0,0,1,1.563,1.741q0,0.077,0,.154a1.65,1.65,0,0,1-1.714,1.587q-0.076,0-.152,0a1.656,1.656,0,0,1-1.563-1.741Q53.074,80.332,53.077,80.255ZM59.552,84l-0.062-.034-1.628-.776a4.111,4.111,0,0,1-1.225.954l2.244,1.07a0.642,0.642,0,0,1,.292.534l0.361,2.331c-1.2.076-3.372,0.145-4.564,0.145H54.614c-1.232,0-3.365-.068-4.564-0.145l0.362-2.336A0.631,0.631,0,0,1,50.73,85.2l2.226-1.05a4.113,4.113,0,0,1-1.23-.954l-1.636.775a2.02,2.02,0,0,0-1.033,1.553l-0.425,2.742a1.048,1.048,0,0,0,.2.8,0.956,0.956,0,0,0,.686.374c1.019,0.088,3.639.181,5.1,0.181h0.354c1.458,0,4.078-.093,5.094-0.178a0.956,0.956,0,0,0,.686-0.374,1.05,1.05,0,0,0,.2-0.8l-0.225-1.455-0.217-1.389A1.957,1.957,0,0,0,59.552,84Z" id="person_shape_6" transform="translate(-48.625 -77.281)"></path>
+</svg></div>
+                        <div class="person_shape_5_container person_icon_container" id="person_shape_5_container"><svg height="12.344" viewbox="0 0 12.313 12.344" width="12.313" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#person_shape_5{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #person_shape_5_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="person_icon" d="M68.9,83.542a3.134,3.134,0,1,0-3.086-3.134A3.11,3.11,0,0,0,68.9,83.542Zm-1.714-3.288A1.65,1.65,0,0,1,68.9,78.668q0.076,0,.152,0a1.656,1.656,0,0,1,1.563,1.741q0,0.077,0,.154A1.65,1.65,0,0,1,68.9,82.15q-0.076,0-.152,0a1.656,1.656,0,0,1-1.563-1.741Q67.179,80.332,67.182,80.255ZM73.657,84l-0.062-.034-1.629-.776a4.111,4.111,0,0,1-1.225.954l2.244,1.07a0.642,0.642,0,0,1,.292.534l0.361,2.331c-1.2.076-3.372,0.145-4.564,0.145H68.719c-1.232,0-3.365-.068-4.564-0.145l0.362-2.336a0.632,0.632,0,0,1,.318-0.545l2.226-1.05a4.114,4.114,0,0,1-1.23-.954l-1.636.775a2.02,2.02,0,0,0-1.033,1.553l-0.425,2.742a1.048,1.048,0,0,0,.2.8,0.956,0.956,0,0,0,.686.374c1.019,0.088,3.639.181,5.1,0.181h0.354c1.458,0,4.078-.093,5.094-0.178a0.956,0.956,0,0,0,.686-0.374,1.05,1.05,0,0,0,.2-0.8l-0.226-1.455-0.217-1.389A1.957,1.957,0,0,0,73.657,84Z" id="person_shape_5" transform="translate(-62.75 -77.281)"></path>
+</svg></div>
+                        <div class="person_shape_4_container person_icon_container" id="person_shape_4_container"><svg height="12.344" viewbox="0 0 12.312 12.344" width="12.312" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#person_shape_4{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #person_shape_4_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="person_icon" d="M83,83.542a3.134,3.134,0,1,0-3.086-3.134A3.11,3.11,0,0,0,83,83.542Zm-1.714-3.288A1.65,1.65,0,0,1,83,78.668q0.076,0,.152,0a1.656,1.656,0,0,1,1.563,1.741q0,0.077,0,.154A1.65,1.65,0,0,1,83,82.15q-0.076,0-.152,0a1.656,1.656,0,0,1-1.563-1.741Q81.284,80.332,81.288,80.255ZM87.762,84L87.7,83.967l-1.629-.776a4.111,4.111,0,0,1-1.225.954l2.244,1.07a0.642,0.642,0,0,1,.292.534l0.361,2.331c-1.2.076-3.372,0.145-4.564,0.145H82.824c-1.232,0-3.365-.068-4.564-0.145l0.362-2.336A0.632,0.632,0,0,1,78.94,85.2l2.226-1.05a4.115,4.115,0,0,1-1.23-.954l-1.636.775a2.02,2.02,0,0,0-1.033,1.553l-0.425,2.742a1.048,1.048,0,0,0,.2.8,0.956,0.956,0,0,0,.686.374c1.019,0.088,3.639.181,5.1,0.181h0.354c1.459,0,4.078-.093,5.094-0.178a0.956,0.956,0,0,0,.686-0.374,1.05,1.05,0,0,0,.2-0.8l-0.226-1.455-0.217-1.389A1.957,1.957,0,0,0,87.762,84Z" id="person_shape_4" transform="translate(-76.844 -77.281)"></path>
+</svg></div>
+                        <div class="person_shape_3_container person_icon_container" id="person_shape_3_container"><svg height="12.344" viewbox="0 0 12.344 12.344" width="12.344" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#person_shape_3{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #person_shape_3_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="person_icon" d="M97.107,83.542a3.134,3.134,0,1,0-3.086-3.134A3.11,3.11,0,0,0,97.107,83.542Zm-1.714-3.288a1.65,1.65,0,0,1,1.714-1.587q0.076,0,.152,0a1.656,1.656,0,0,1,1.563,1.741q0,0.077,0,.154a1.65,1.65,0,0,1-1.714,1.587q-0.076,0-.152,0a1.656,1.656,0,0,1-1.563-1.741Q95.389,80.332,95.393,80.255ZM101.867,84l-0.062-.034-1.629-.776a4.107,4.107,0,0,1-1.225.954l2.244,1.07a0.644,0.644,0,0,1,.292.534l0.361,2.331c-1.2.076-3.372,0.145-4.564,0.145H96.929c-1.231,0-3.365-.068-4.564-0.145l0.362-2.336a0.632,0.632,0,0,1,.318-0.545l2.226-1.05a4.114,4.114,0,0,1-1.23-.954l-1.636.775a2.02,2.02,0,0,0-1.033,1.553l-0.425,2.742a1.048,1.048,0,0,0,.2.8,0.956,0.956,0,0,0,.686.374c1.019,0.088,3.639.181,5.1,0.181h0.354c1.459,0,4.078-.093,5.094-0.178a0.958,0.958,0,0,0,.686-0.374,1.052,1.052,0,0,0,.2-0.8l-0.226-1.455-0.216-1.389A1.957,1.957,0,0,0,101.867,84Z" id="person_shape_3" transform="translate(-90.938 -77.281)"></path>
+</svg></div>
+                    </div>
+                </div>
+                <div class="person_container_copy" id="person_container_copy">Gezinssamenstelling</div>
+                <div class="body" id="body">
+                    <div class="body_bg_container" id="body_bg_container"><svg height="35.406" viewbox="0 0 121.781 35.406" width="121.781" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#body_bg{
+                    fill: none;
+                    stroke: #001e50;
+                    stroke-width: 1px;
+                    fill-rule: evenodd;
+                  }
+                #body_bg_container &gt; svg{
+                              overflow: visible;
+                              position: relative;
+                              display: block;
+                              
+                            }</style>
+</defs>
+<path class="" d="M161.224,58.763H282V93.144H161.224V58.763Z" id="body_bg" transform="translate(-160.719 -58.25)"></path>
+</svg></div>
+                    <div class="interactionElement body_next" id="body_next">
+                        <div class="body_next_bg" id="body_next_bg">
+                        </div>
+                        <div class="body_next_arrow_container" id="body_next_arrow_container"><svg height="14.094" viewbox="0 0 10.594 14.094" width="10.594" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#body_next_arrow{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #body_next_arrow_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="" d="M262.615,69.918l0.921-1.463,8.766,5.311,0.081,0.056a2.132,2.132,0,0,1,0,3.383l-0.079.054-8.768,5.312-0.921-1.463,8.712-5.287a0.425,0.425,0,0,0,.02-0.608l-0.02-.019Z" id="body_next_arrow" transform="translate(-262.625 -68.469)"></path>
+</svg></div>
+                    </div>
+                    <div class="interactionElement body_previous" id="body_previous">
+                        <div class="body_previous_bg" id="body_previous_bg">
+                        </div>
+                        <div class="body_previous_arrow_container" id="body_previous_arrow_container"><svg height="14.094" viewbox="0 0 10.594 14.094" width="10.594" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#body_previous_arrow{
+                      fill: #001e50;
+                      fill-rule: evenodd;
+                    }
+                  #body_previous_arrow_container &gt; svg{
+                                overflow: visible;
+                                position: relative;
+                                display: block;
+                                
+                              }</style>
+</defs>
+<path class="" d="M182.371,69.918l-0.918-1.463-8.743,5.311-0.082.056a2.129,2.129,0,0,0-.366,3.022,2.167,2.167,0,0,0,.366.361l0.08,0.054,8.744,5.312,0.919-1.463-8.689-5.287a0.425,0.425,0,0,1-.019-0.608l0.019-.019Z" id="body_previous_arrow" transform="translate(-171.781 -68.469)"></path>
+</svg></div>
+                    </div>
+                    <div class="body_icon_copy1" id="body_icon_copy1">
+                        <div class="body_copy" id="body_copy">SUV</div>
+                    </div>
+                </div>
+                <div class="body_container_copy" id="body_container_copy">Carrosserie</div>
+            </div>
+            <div class="interactionElement previous" id="previous">
+                <div class="previous_bg" id="previous_bg">
+                </div>
+                <div class="previous_arrow_container" id="previous_arrow_container"><svg height="20" viewbox="0 0 15.031 20" width="15.031" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#previous_arrow{
+                  fill: #001e50;
+                  fill-rule: evenodd;
+                }
+              #previous_arrow_container &gt; svg{
+                            overflow: visible;
+                            position: relative;
+                            display: block;
+                            
+                          }</style>
+</defs>
+<path class="" d="M253.986,205.067l-1.3-2.075-12.43,7.531-0.116.08a3.013,3.013,0,0,0-.521,4.284,3.079,3.079,0,0,0,.521.512l0.113,0.077,12.431,7.531,1.307-2.075-12.353-7.5a0.6,0.6,0,0,1-.028-0.862,0.237,0.237,0,0,1,.028-0.027Z" id="previous_arrow" transform="translate(-238.969 -203)"></path>
+</svg></div>
+            </div>
+            <div class="interactionElement next" id="next">
+                <div class="next_bg" id="next_bg">
+                </div>
+                <div class="next_arrow_container" id="next_arrow_container"><svg height="20" viewbox="0 0 15 20" width="15" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>#next_arrow{
+                  fill: #001e50;
+                  fill-rule: evenodd;
+                }
+              #next_arrow_container &gt; svg{
+                            overflow: visible;
+                            position: relative;
+                            display: block;
+                            
+                          }</style>
+</defs>
+<path class="" d="M268.014,205.067l1.3-2.075,12.4,7.531,0.115,0.08a3.018,3.018,0,0,1,.52,4.284,3.073,3.073,0,0,1-.52.512l-0.113.077-12.405,7.531-1.3-2.075,12.327-7.5a0.6,0.6,0,0,0,.028-0.862,0.237,0.237,0,0,0-.028-0.027Z" id="next_arrow" transform="translate(-268 -203)"></path>
+</svg></div>
+            </div>
+            <div class="safeZone" id="safeZone">
+            </div>
+            <div class="fallback" data-fallback="" id="fallback" style="display: none;">
+                <div class="rectangle_300x250" data-fallback="" data-fallback-image="595.png" id="rectangle_300x250" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <!-- Creative's script -->
+    <script src="script.js"></script>
+    <script>
+        window.lemonpi._start();
+    </script>
+</body>
+
+</html>

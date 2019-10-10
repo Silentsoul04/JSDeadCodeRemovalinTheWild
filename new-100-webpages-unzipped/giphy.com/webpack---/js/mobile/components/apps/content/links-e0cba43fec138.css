@@ -1,0 +1,10 @@
+exports=module.exports=require("../../../../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+// module
+exports.push([module.id, ".sSWbYD-5TBtn10K5jLefv{height:40px;margin-bottom:60px}.nx2VkIz2cjLYLeeUd2lKh{background-position:50%;background-repeat:no-repeat;background-size:contain;display:inline-block;height:100%;margin:0 5px}._11uopH1a79slTTXQEnct1Y{background-image:url(\"/static/img/app_landing/appstore_2x.png\");width:130px}._2iC9cM2e3oVwPD9BvbMN58{background-image:url(\"/static/img/app_landing/googleplay_2x.png\");width:124px}._1q7zhHxFLG_TzTviPSubZa{background-image:url(\"/static/img/app_landing/vive.png\");width:103px}._3zkM4b9Eg1EFnU9CJfGoFK{background-image:url(\"/static/img/app_landing/oculus.png\");width:103px}", ""]);
+// exports
+exports.locals= {
+    "appLinks": "sSWbYD-5TBtn10K5jLefv", "appLink": "nx2VkIz2cjLYLeeUd2lKh", "iosLink": "_11uopH1a79slTTXQEnct1Y nx2VkIz2cjLYLeeUd2lKh", "androidLink": "_2iC9cM2e3oVwPD9BvbMN58 nx2VkIz2cjLYLeeUd2lKh", "viveLink": "_1q7zhHxFLG_TzTviPSubZa nx2VkIz2cjLYLeeUd2lKh", "oculusLink": "_3zkM4b9Eg1EFnU9CJfGoFK nx2VkIz2cjLYLeeUd2lKh"
+}
+
+;
