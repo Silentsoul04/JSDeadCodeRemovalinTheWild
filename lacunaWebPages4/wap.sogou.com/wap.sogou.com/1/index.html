@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="lacuna_cache/exported_gfdeua.js"></script>
+    <meta charset="utf-8">
+    <title>搜狗搜索</title>
+    <meta name="keywords" content="搜狗搜索">
+    <meta name="description" content="搜狗搜索">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="qc:admins" content="5763037553636656377756375">
+    <link rel="dns-prefetch" href="//img01.sogoucdn.com">
+    <link rel="dns-prefetch" href="//img02.sogoucdn.com">
+    <link rel="dns-prefetch" href="//img03.sogoucdn.com">
+    <link rel="dns-prefetch" href="//img04.sogoucdn.com">
+    <link rel="dns-prefetch" href="//pb.sogou.com">
+    <link rel="search" type="application/opensearchdescription+xml" href="/content-search.xml" title="搜狗搜索">
+    <link rel="shortcut icon" href="/images/logo/favicon.ico" type="image/x-icon">
+    <link rel="bookmark" href="/images/logo/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+    <script src="lacuna_cache/exported_3xd4d1.js"></script>
+    <link href="/resource/static/index/css/app.87dba40854007fb5dce546ffbebafc7d.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        .jss-channel-manage-item {
+            flex-shrink: 0;
+            width: 25%;
+            box-sizing: border-box;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            z-index: 2000
+        }
+
+        .jss-channel-manage-item a {
+            display: block;
+            text-align: center;
+            background-color: #f5f5f5;
+            height: 36px;
+            line-height: 36px;
+            color: #000;
+            border-radius: 3px
+        }
+
+        .jss-channel-manage-item a:before {
+            content: '\e608';
+            font-family: iconfont;
+            font-size: 12px;
+            color: #aaa;
+            display: inline-block;
+            margin-right: 4px;
+            transform: rotate(45deg)
+        }
+
+        .index-box .suggestion {
+            display: none
+        }
+    </style>
+    <div id="main"></div>
+    <style>
+        .results .vr-recommend {
+            margin-top: 0;
+            margin-bottom: 7px
+        }
+
+        .results .vr-recommend.recommend-pop {
+            margin-bottom: 0
+        }
+
+        .vr-recommend {
+            background-color: #fff;
+            margin-top: 10px
+        }
+
+        .vr-recommend .img-flex {
+            margin-bottom: 10px
+        }
+
+        .vr-recommend .img-flex .img-layout {
+            margin-bottom: 4px
+        }
+
+        .vr-recommend .recommend-wrap {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 8px 19px
+        }
+
+        .vr-recommend .recommend-wrap .img-layout {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 0;
+            margin-right: 10px;
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 2px
+        }
+
+        .vr-recommend .recommend-wrap.recommend-music .img-layout {
+            width: 18px;
+            height: 18px
+        }
+
+        .vr-recommend .recommend-wrap.recommend-aft {
+            padding: 12px 19px
+        }
+
+        .vr-recommend .recommend-wrap.recommend-aft .spread-txt h4 {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 24px
+        }
+
+        .vr-recommend .recommend-wrap.recommend-aft .spread-txt p {
+            font-size: 12px;
+            color: #999;
+            line-height: 20px
+        }
+
+        .vr-recommend .recommend-wrap.recommend-aft .btn-import {
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            padding: 0 8px;
+            margin-left: 14px;
+            font-size: 12px;
+            height: 28px;
+            line-height: 26px;
+            border: 1px solid #27ba2d;
+            color: #279c28;
+            min-width: 66px
+        }
+
+        .vr-recommend .recommend-arrow .btn-import2 {
+            background-color: #70a2f2;
+            border: 1px solid #70a2f2
+        }
+
+        .vr-recommend .recommend-arrow em {
+            color: #5a91ee
+        }
+
+        .vr-recommend .btn-import2 {
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            padding: 0 8px;
+            margin-left: 14px;
+            font-size: 12px;
+            height: 28px;
+            line-height: 26px;
+            background-color: #f0554b;
+            border: 1px solid #f0554b;
+            min-width: 66px
+        }
+
+        .vr-recommend .spread-txt {
+            color: #333;
+            line-height: 22px;
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            width: 40px
+        }
+
+        .vr-recommend .spread-txt span {
+            color: #666
+        }
+
+        .vr-recommend .spread-txt .open-app {
+            font-style: normal;
+            border: 1px solid #ffcfc4;
+            color: #ff5a34
+        }
+
+        .recommend-pop {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+            z-index: 100;
+            margin-bottom: 0;
+            -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.15)
+        }
+
+        .recommend-pop .recommend-del {
+            position: absolute;
+            width: 25px;
+            height: 16px;
+            top: -15px;
+            right: 0;
+            background: url(/images/rec_del.png) no-repeat;
+            background-size: 25px auto;
+            background-size: 100% auto
+        }
+
+        .recommend-pop.recommend-trace {
+            background: -webkit-gradient(linear, left top, right top, from(#33a1ff), to(#3671e7));
+            background: -webkit-linear-gradient(left, #33a1ff, #3671e7);
+            background: linear-gradient(to right, #33a1ff, #3671e7);
+            -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.15)
+        }
+
+        .recommend-pop.recommend-trace .img-layout {
+            border-radius: 100%;
+            overflow: hidden
+        }
+
+        .recommend-pop.recommend-trace .img-layout img {
+            border-radius: 100%
+        }
+
+        .recommend-pop.recommend-trace .spread-txt {
+            color: #fff
+        }
+
+        .recommend-pop.recommend-trace .spread-txt h4 {
+            font-size: 18px;
+            line-height: 26px
+        }
+
+        .recommend-pop.recommend-trace .spread-txt p {
+            opacity: .5
+        }
+
+        .recommend-pop.recommend-trace .btn-import2 {
+            background-color: #fff;
+            color: #0055cb;
+            border: 1px solid #fff
+        }
+
+        .app-recommend {
+            position: fixed;
+            z-index: 110;
+            padding: 0 20px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            height: 38px;
+            line-height: 38px;
+            color: #fff;
+            bottom: 15px;
+            left: 50%;
+            border-radius: 38px;
+            background: -webkit-gradient(linear, left top, right top, from(#ff5c4b), to(#f92740));
+            background: -webkit-linear-gradient(left, #ff5c4b, #f92740);
+            background: linear-gradient(to right, #ff5c4b, #f92740);
+            -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2)
+        }
+
+        @media screen and (max-width:320px) {
+            .vr-recommend .recommend-wrap.recommend-aft .spread-txt h4 {
+                font-size: 14px;
+                line-height: 22px
+            }
+        }
+
+        .img-layout {
+            background: #f5f5f5 url(/resource/web/images/img-error.png) center center no-repeat;
+            background-size: auto 30px
+        }
+
+        .img-layout img {
+            display: block;
+            width: 100%;
+            height: auto
+        }
+
+        .align-mid {
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .btn-orange2,
+        .btn-import2 {
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            overflow: hidden;
+            border-radius: 2px;
+            text-align: center;
+            color: #fff;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none
+        }
+
+        .btn-orange,
+        .btn-import {
+            display: inline-block;
+            height: 28px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            line-height: 26px;
+            overflow: hidden;
+            border-radius: 2px;
+            text-align: center;
+            padding: 0 8px;
+            border: 1px solid #ffcfc4;
+            background-color: #fff;
+            color: #ff5a34;
+            font-size: 14px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none
+        }
+
+        .index-recommend h4 {
+            font-size: 16px;
+            color: #222;
+            line-height: 24px
+        }
+
+        .index-recommend p {
+            font-size: 12px;
+            color: #aaa;
+            line-height: 19px
+        }
+
+        #indexAppTwo {
+            margin-bottom: 0 !important
+        }
+    </style>
+    <div class="vr-recommend recommend-pop" id="indexAppOne"><a href="javascript:void(0)" class="recommend-del" id="indexAppOneClose"></a>
+        <a id="indexAppOneBtn" type="app" data-openurl="home" data-downloadurl="https://sgsares.sogoucdn.com/apks/高效搜索_搜狗搜索_8149.apk" data-vrid="19891989" href="javascript:void(0)"
+            class="recommend-wrap align-mid index-recommend">
+            <div class="img-layout"><img src="https://img02.sogoucdn.com/app/a/100520043/20181102093156" alt=""></div>
+            <div class="spread-txt clamp2">
+                <h4>使用搜索APP</h4>
+                <p>一搜即得 5亿人都在用</p>
+            </div>
+            <div class="btn-import2" id="indexAppOneState">打 开</div>
+        </a>
+    </div>
+    <script src="lacuna_cache/exported_j97klk.js"></script>
+    <script src="lacuna_cache/exported_riv526.js"></script>
+    <script src="//dlweb.sogoucdn.com/wapsearch/static/js/sugNew/sug.268b1f3b.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/resource/static/index/js/manifest.16ca5468691833c35347.js"></script>
+    <script type="text/javascript" src="/resource/static/index/js/vendor.01730a6c04f0651dd3be.js"></script>
+    <script type="text/javascript" src="/resource/static/index/js/app.e04f1e3c5fc6fd84e283.js"></script>
+</body>
+
+</html>
+<!--zly-->

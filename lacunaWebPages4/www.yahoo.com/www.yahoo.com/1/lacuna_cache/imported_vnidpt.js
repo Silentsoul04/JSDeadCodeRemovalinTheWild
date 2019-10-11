@@ -1,0 +1,11 @@
+// LACUNA LAZY LOAD FALLBACK
+function lacuna_lazy_load(id, callback){
+    fetch("http://127.0.0.1:8125/lazyload/", {
+        method: "POST",
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({id})
+    }).then(response => {
+        return response.text();
+    }).then(callback);
+}
+!function(e,t){lacuna_lazy_load("lacuna_cache/imported_vnidpt.js[14:288]", functionData => eval(functionData))afers=e.wafer.wafers||{},e.wafer.wafers["wafer-tlacuna_lazy_load("lacuna_cache/imported_vnidpt.js[334:3349]", functionData => eval(functionData))", 2259, 2499);function e(e,t){___jdce_logger("lacuna_cache/imported_vnidpt.js", 2270, 2436);for(var r=0;r<t.length;r++){var o=t[r];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,r,o){___jdce_logger("lacuna_cache/imported_vnidpt.js", 2443, 2498);return r&&e(t.prototype,r),o&&e(t,o),t}}(),l=["text"],p=window.wafer.WaferBaseClass,y=function(e){___jdce_logger("lacuna_cache/imported_vnidpt.js", 2545, 2943);function t(e){___jdce_logger("lacuna_cache/imported_vnidpt.js", 2557, 2813);var r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},f=r.selector;o(this,t);var i=n(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e,{selector:f},{STATE_ATTRS:l}));return i._util=u({},i._util,{elem:e}),i.stateDidUpdate(),i}return f(t,e),s(t,[{key:"stateDidUpdate",value:function(){___jdce_logger("lacuna_cache/imported_vnidpt.js", 2860, 2937);var e=this._util.text;if(void 0!==e){this._util.elem.innerHTML=e}}}]),t}(p),b=y,w=window.wafer.controllers.WaferBaseController,d=function(e){___jdce_logger("lacuna_cache/imported_vnidpt.js", 3000, 3296);function t(){___jdce_logger("lacuna_cache/imported_vnidpt.js", 3012, 3280);var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},r=e.root,o=void 0===r?document:r,n=e.selector;i(this,t);var f=a(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,{root:o,selector:n,props:{selector:n},WaferClass:b}));return f.sync(),f}return c(t,e),t}(w),h=d;t.default=new h({selector:".wafer-text"})}})});

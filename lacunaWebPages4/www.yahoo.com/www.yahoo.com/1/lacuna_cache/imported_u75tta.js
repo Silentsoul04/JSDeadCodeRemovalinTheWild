@@ -1,0 +1,11 @@
+// LACUNA LAZY LOAD FALLBACK
+function lacuna_lazy_load(id, callback){
+    fetch("http://127.0.0.1:8125/lazyload/", {
+        method: "POST",
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({id})
+    }).then(response => {
+        return response.text();
+    }).then(callback);
+}
+(function(){lacuna_lazy_load("lacuna_cache/imported_u75tta.js[11:7855]", functionData => eval(functionData))+'" scrollable="no" frameborder="no"></iframe>';t.add(v,x);window.DARLA.render(t);}else{setTimeout(function(){___jdce_logger("lacuna_cache/imported_u75tta.js", 6417, 6458);u.renderIframeInDarla(z,w,v);},500);}},startPlayableMomentsFullScreenDwellTime:function(t,u,v){___jdce_logger("lacuna_cache/imported_u75tta.js", 6507, 7251);window.addEventListener("touchmove",j,{passive:false});if(typeof window.pageYOffset!=="undefined"&&window.scrollTo){this.scrollPosition=window.pageYOffset;if(v&&t&&t.node){var w=t.node.getBoundingClientRect().bottom;window.scrollTo(0,w);}s.documentElement.style.overflow="hidden";s.body.style.overflow="hidden";}if(t&&t.hasOwnProperty("fullScreenInViewStart")){t.fullScreenInViewStart=+(new Date());}if(u&&f.rapidInstance&&f.rapidInstance.beaconClick){var z=a(u);var y=z.slk||"";var x=z.cpos||"";window.rapidInstance.beaconClick("strm",y,x,z);}if(v&&s.body&&s.body.classList){s.body.classList.add("sponsored-moments-in-view");}if(this.caasContent&&this.caasContent.parentElement){this.caasContent.parentElement.style.zIndex=3;}},endPlayableMomentsFullScreenDwellTime:function(t){___jdce_logger("lacuna_cache/imported_u75tta.js", 7290, 7784);window.removeEventListener("touchmove",j);if(typeof window.pageYOffset!=="undefined"&&window.scrollTo){s.body.style.removeProperty("overflow");s.documentElement.style.removeProperty("overflow");window.scrollTo(0,this.scrollPosition);}if(t&&t.hasOwnProperty("fullScreenDwellTime")){var u=+(new Date());var v=u-t.fullScreenInViewStart;t.fullScreenDwellTime.push(v);}if(this.caasContent&&this.caasContent.parentElement){this.caasContent.parentElement.style.removeProperty("z-index");}}};setTimeout(function(){___jdce_logger("lacuna_cache/imported_u75tta.js", 7797, 7848);window.sponsoredMomentsMonitor=new l();},200);})();/* Copyright (c) 2019, Yahoo! Inc.  All rights reserved. */

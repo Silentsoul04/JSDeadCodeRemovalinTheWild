@@ -1,0 +1,28 @@
+{
+    "runDate": "2019-10-11T13:51:03.352Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages4/www.indeed.nl/www.indeed.nl/1",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 1,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages4/www.indeed.nl/www.indeed.nl/1"
+    },
+    "graphStats": {
+        "connectedNodes": 0,
+        "disconnectedNodes": 0,
+        "nodes": 0,
+        "files": 0
+    },
+    "deadFunctions": [],
+    "aliveFunctions": [],
+    "allFunctions": [],
+    "affectedFiles": []
+}

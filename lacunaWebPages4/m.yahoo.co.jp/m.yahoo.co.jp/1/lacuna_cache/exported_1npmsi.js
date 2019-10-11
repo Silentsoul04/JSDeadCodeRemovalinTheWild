@@ -1,0 +1,3 @@
+
+                        document.write('<div style="position:absolute;pointer-events:none;"><img width=1 height=1 alt="" src="https://b5.yahoo.co.jp/b?P=YHDfpzE4My5CgSXoXZ8R3wGKODAuMQAAAACKmDwI&T=1ab3gq9ok%2fX%3d1570706225%2fE%3d2080377422%2fR%3djp_s_t_web%2fK%3d5%2fV%3d10.1%2fW%3dC%2fY%3djp%2fF%3d3377297351%2fH%3dc2VjdXJlPXRydWUgc3RyZWFtPTEgYWRjdmVyPTYuOC4xIGRldmljZS1tb2RlbD0iTmV4dXMgNSIgZGV2aWNlLW9zLXZlcnNpb249IkFuZHJvaWQgNi4wIiBkZXZpY2UtY2Fycmllci1hdmFpbGFibGU9Inltb2JpbGUiIG5vdGh0bWwtcG9zPUFUVyxBVEIx%2fQ%3d-1%2fI%3d1%2fS%3d1%2fJ%3dF02B6364&U=12728rg3r%2fN%3dpHnsAGRinL0-%2fC%3d-1%2fD%3dATW%2fB%3d-1&O=' + Math.random() + '"></img></div>')
+                    
