@@ -1,0 +1,3014 @@
+{
+    "runDate": "2019-10-17T19:23:26.081Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "international.html",
+        "destination": "lacunaWebPages7/www.theguardian.com/www.theguardian.com/0",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 0,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages7/www.theguardian.com/www.theguardian.com/0"
+    },
+    "graphStats": {
+        "connectedNodes": 64,
+        "disconnectedNodes": 19,
+        "nodes": 82,
+        "files": 3
+    },
+    "deadFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1153,
+                1243
+            ],
+            "bodyRange": [
+                1164,
+                1243
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 0,
+            "start": {
+                "line": 22,
+                "column": 47
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                941,
+                1359
+            ],
+            "bodyRange": [
+                969,
+                1359
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 1,
+            "start": {
+                "line": 19,
+                "column": 47
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1450,
+                1511
+            ],
+            "bodyRange": [
+                1463,
+                1511
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 2,
+            "start": {
+                "line": 29,
+                "column": 76
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2372,
+                2604
+            ],
+            "bodyRange": [
+                2388,
+                2604
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 6,
+            "start": {
+                "line": 49,
+                "column": 54
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                146520,
+                146655
+            ],
+            "bodyRange": [
+                146544,
+                146655
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 20,
+            "start": {
+                "line": 2884,
+                "column": 16
+            },
+            "functionName": "cssToDOM"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                146673,
+                146780
+            ],
+            "bodyRange": [
+                146712,
+                146780
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 21,
+            "start": {
+                "line": 2888,
+                "column": 16
+            },
+            "functionName": "cssToDOMReplacer"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                146804,
+                147338
+            ],
+            "bodyRange": [
+                146826,
+                147338
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 22,
+            "start": {
+                "line": 2891,
+                "column": 23
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                156500,
+                156612
+            ],
+            "bodyRange": [
+                156511,
+                156612
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 44,
+            "start": {
+                "line": 3073,
+                "column": 38
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                155974,
+                156658
+            ],
+            "bodyRange": [
+                156009,
+                156658
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 45,
+            "start": {
+                "line": 3065,
+                "column": 12
+            },
+            "functionName": "loadFontsAsynchronously"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                156772,
+                157027
+            ],
+            "bodyRange": [
+                156788,
+                157027
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 46,
+            "start": {
+                "line": 3081,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                158786,
+                158909
+            ],
+            "bodyRange": [
+                158810,
+                158909
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 48,
+            "start": {
+                "line": 3115,
+                "column": 12
+            },
+            "functionName": "disableFonts"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                158923,
+                159053
+            ],
+            "bodyRange": [
+                158946,
+                159053
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 49,
+            "start": {
+                "line": 3119,
+                "column": 12
+            },
+            "functionName": "enableFonts"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                161599,
+                161983
+            ],
+            "bodyRange": [
+                161622,
+                161983
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 58,
+            "start": {
+                "line": 3174,
+                "column": 12
+            },
+            "functionName": "stateChange"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                146,
+                304
+            ],
+            "bodyRange": [
+                160,
+                304
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 39
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2797,
+                2980
+            ],
+            "bodyRange": [
+                2808,
+                2980
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 3,
+            "start": {
+                "line": 54,
+                "column": 34
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4197,
+                4283
+            ],
+            "bodyRange": [
+                4209,
+                4283
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 8,
+            "start": {
+                "line": 80,
+                "column": 79
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3577,
+                4721
+            ],
+            "bodyRange": [
+                3588,
+                4721
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 9,
+            "start": {
+                "line": 72,
+                "column": 71
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5864,
+                6468
+            ],
+            "bodyRange": [
+                5903,
+                6468
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 13,
+            "start": {
+                "line": 112,
+                "column": 30
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6564,
+                6960
+            ],
+            "bodyRange": [
+                6580,
+                6960
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 14,
+            "start": {
+                "line": 125,
+                "column": 41
+            },
+            "functionName": null
+        }
+    ],
+    "aliveFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                350,
+                1521
+            ],
+            "bodyRange": [
+                367,
+                1521
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 3,
+            "start": {
+                "line": 10,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1541,
+                3191
+            ],
+            "bodyRange": [
+                1568,
+                3191
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 9,
+            "start": {
+                "line": 33,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3221,
+                4741
+            ],
+            "bodyRange": [
+                3238,
+                4741
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 16,
+            "start": {
+                "line": 68,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                3952,
+                4081
+            ],
+            "bodyRange": [
+                3978,
+                4081
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 11,
+            "start": {
+                "line": 88,
+                "column": 12
+            },
+            "functionName": "mustNotEnhance"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                3724,
+                3938
+            ],
+            "bodyRange": [
+                3747,
+                3938
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 10,
+            "start": {
+                "line": 82,
+                "column": 12
+            },
+            "functionName": "mustEnhance"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                4095,
+                4182
+            ],
+            "bodyRange": [
+                4119,
+                4182
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 12,
+            "start": {
+                "line": 92,
+                "column": 12
+            },
+            "functionName": "couldEnhance"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                4196,
+                4367
+            ],
+            "bodyRange": [
+                4223,
+                4367
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 13,
+            "start": {
+                "line": 96,
+                "column": 12
+            },
+            "functionName": "weWantToEnhance"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                4381,
+                4520
+            ],
+            "bodyRange": [
+                4409,
+                4520
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 14,
+            "start": {
+                "line": 102,
+                "column": 12
+            },
+            "functionName": "isOlderIOSDevice"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                4534,
+                4610
+            ],
+            "bodyRange": [
+                4552,
+                4610
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 15,
+            "start": {
+                "line": 106,
+                "column": 12
+            },
+            "functionName": "isIpad"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                145581,
+                145683
+            ],
+            "bodyRange": [
+                145592,
+                145683
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 17,
+            "start": {
+                "line": 2860,
+                "column": 93
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                145894,
+                150495
+            ],
+            "bodyRange": [
+                145939,
+                150495
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 32,
+            "start": {
+                "line": 2870,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                146047,
+                146169
+            ],
+            "bodyRange": [
+                146074,
+                146169
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 18,
+            "start": {
+                "line": 2872,
+                "column": 52
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                147366,
+                147799
+            ],
+            "bodyRange": [
+                147398,
+                147799
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 27,
+            "start": {
+                "line": 2905,
+                "column": 12
+            },
+            "functionName": "testAndAddClass"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                147444,
+                147774
+            ],
+            "bodyRange": [
+                147459,
+                147774
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 26,
+            "start": {
+                "line": 2906,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                147505,
+                147718
+            ],
+            "bodyRange": [
+                147520,
+                147718
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 25,
+            "start": {
+                "line": 2907,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                147570,
+                147695
+            ],
+            "bodyRange": [
+                147586,
+                147695
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 24,
+            "start": {
+                "line": 2908,
+                "column": 48
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                146229,
+                146340
+            ],
+            "bodyRange": [
+                146269,
+                146340
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 19,
+            "start": {
+                "line": 2876,
+                "column": 12
+            },
+            "functionName": "nativeCSSSupports"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                148443,
+                148574
+            ],
+            "bodyRange": [
+                148481,
+                148574
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 30,
+            "start": {
+                "line": 2929,
+                "column": 12
+            },
+            "functionName": "shouldHideSupportMessaging"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                147813,
+                148002
+            ],
+            "bodyRange": [
+                147843,
+                148002
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 28,
+            "start": {
+                "line": 2915,
+                "column": 12
+            },
+            "functionName": "getCookieValue"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                148016,
+                148429
+            ],
+            "bodyRange": [
+                148047,
+                148429
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 29,
+            "start": {
+                "line": 2920,
+                "column": 12
+            },
+            "functionName": "isRecentContributor"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                148588,
+                148855
+            ],
+            "bodyRange": [
+                148622,
+                148855
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 31,
+            "start": {
+                "line": 2933,
+                "column": 12
+            },
+            "functionName": "forcePercentagePadding"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                150552,
+                159698
+            ],
+            "bodyRange": [
+                150579,
+                159698
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 52,
+            "start": {
+                "line": 2967,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                150652,
+                151026
+            ],
+            "bodyRange": [
+                150663,
+                151026
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 33,
+            "start": {
+                "line": 2969,
+                "column": 29
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                159411,
+                159664
+            ],
+            "bodyRange": [
+                159432,
+                159664
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 51,
+            "start": {
+                "line": 3129,
+                "column": 12
+            },
+            "functionName": "loadFonts"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                159067,
+                159315
+            ],
+            "bodyRange": [
+                159101,
+                159315
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 50,
+            "start": {
+                "line": 3123,
+                "column": 12
+            },
+            "functionName": "checkUserFontDisabling"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                156672,
+                158676
+            ],
+            "bodyRange": [
+                156704,
+                158676
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 47,
+            "start": {
+                "line": 3079,
+                "column": 12
+            },
+            "functionName": "fontSmoothingEnabled"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                151043,
+                155960
+            ],
+            "bodyRange": [
+                151075,
+                155960
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 43,
+            "start": {
+                "line": 2980,
+                "column": 12
+            },
+            "functionName": "loadFontsFromStorage"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                153120,
+                154901
+            ],
+            "bodyRange": [
+                153131,
+                154901
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 42,
+            "start": {
+                "line": 3017,
+                "column": 41
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                153313,
+                154335
+            ],
+            "bodyRange": [
+                153338,
+                154335
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 41,
+            "start": {
+                "line": 3021,
+                "column": 28
+            },
+            "functionName": "supportsWoff2"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                152867,
+                153077
+            ],
+            "bodyRange": [
+                152896,
+                153077
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 39,
+            "start": {
+                "line": 3013,
+                "column": 45
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                151894,
+                152678
+            ],
+            "bodyRange": [
+                151932,
+                152678
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 37,
+            "start": {
+                "line": 2995,
+                "column": 40
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                159728,
+                160780
+            ],
+            "bodyRange": [
+                159775,
+                160780
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 56,
+            "start": {
+                "line": 3137,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                160498,
+                160749
+            ],
+            "bodyRange": [
+                160516,
+                160749
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 55,
+            "start": {
+                "line": 3155,
+                "column": 12
+            },
+            "functionName": "useCss"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                159789,
+                160484
+            ],
+            "bodyRange": [
+                159819,
+                160484
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 54,
+            "start": {
+                "line": 3138,
+                "column": 12
+            },
+            "functionName": "setMedia"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                161045,
+                162702
+            ],
+            "bodyRange": [
+                161072,
+                162702
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 59,
+            "start": {
+                "line": 3167,
+                "column": 10
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                153587,
+                153600
+            ],
+            "bodyRange": [
+                153598,
+                153600
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 40,
+            "start": {
+                "line": 3024,
+                "column": 54
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                160398,
+                160469
+            ],
+            "bodyRange": [
+                160409,
+                160469
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 53,
+            "start": {
+                "line": 3150,
+                "column": 27
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                152250,
+                152612
+            ],
+            "bodyRange": [
+                152261,
+                152612
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 36,
+            "start": {
+                "line": 3001,
+                "column": 53
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                152037,
+                152139
+            ],
+            "bodyRange": [
+                152056,
+                152139
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 35,
+            "start": {
+                "line": 2997,
+                "column": 45
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                152718,
+                152820
+            ],
+            "bodyRange": [
+                152746,
+                152820
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 38,
+            "start": {
+                "line": 3010,
+                "column": 38
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                151190,
+                151852
+            ],
+            "bodyRange": [
+                151224,
+                151852
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 34,
+            "start": {
+                "line": 2983,
+                "column": 39
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                160860,
+                161044
+            ],
+            "bodyRange": [
+                160890,
+                161044
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 57,
+            "start": {
+                "line": 3162,
+                "column": 8
+            },
+            "functionName": "guardianPolyfilled"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1666,
+                1859
+            ],
+            "bodyRange": [
+                1703,
+                1859
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 4,
+            "start": {
+                "line": 36,
+                "column": 12
+            },
+            "functionName": "toggleDetailsState"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1873,
+                2209
+            ],
+            "bodyRange": [
+                1901,
+                2209
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 5,
+            "start": {
+                "line": 41,
+                "column": 12
+            },
+            "functionName": "handleEvent"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                2223,
+                2625
+            ],
+            "bodyRange": [
+                2245,
+                2625
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 7,
+            "start": {
+                "line": 47,
+                "column": 12
+            },
+            "functionName": "bindEvents"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                2639,
+                3073
+            ],
+            "bodyRange": [
+                2660,
+                3073
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 8,
+            "start": {
+                "line": 55,
+                "column": 12
+            },
+            "functionName": "appendCss"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                146354,
+                147352
+            ],
+            "bodyRange": [
+                146381,
+                147352
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 23,
+            "start": {
+                "line": 2880,
+                "column": 12
+            },
+            "functionName": "shimCSSSupports"
+        },
+        {
+            "file": "HOST(string-replace-model.js)",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                28,
+                1452
+            ],
+            "bodyRange": [
+                69,
+                1452
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 2,
+            "start": {
+                "line": 3,
+                "column": 13
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                343,
+                821
+            ],
+            "bodyRange": [
+                355,
+                821
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 1,
+            "start": {
+                "line": 8,
+                "column": 37
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1564,
+                3336
+            ],
+            "bodyRange": [
+                1591,
+                3336
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 7,
+            "start": {
+                "line": 34,
+                "column": 13
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3407,
+                4736
+            ],
+            "bodyRange": [
+                3448,
+                4736
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 10,
+            "start": {
+                "line": 70,
+                "column": 13
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4848,
+                7270
+            ],
+            "bodyRange": [
+                4875,
+                7270
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 16,
+            "start": {
+                "line": 93,
+                "column": 13
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4927,
+                7254
+            ],
+            "bodyRange": [
+                4938,
+                7254
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 15,
+            "start": {
+                "line": 94,
+                "column": 50
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                5187,
+                5751
+            ],
+            "bodyRange": [
+                5214,
+                5751
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 12,
+            "start": {
+                "line": 100,
+                "column": 20
+            },
+            "functionName": "addLocatorFrame"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7341,
+                8040
+            ],
+            "bodyRange": [
+                7368,
+                8040
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 18,
+            "start": {
+                "line": 145,
+                "column": 13
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                7386,
+                7767
+            ],
+            "bodyRange": [
+                7415,
+                7767
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 17,
+            "start": {
+                "line": 146,
+                "column": 16
+            },
+            "functionName": "shouldServeLotame"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8093,
+                8708
+            ],
+            "bodyRange": [
+                8120,
+                8708
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 21,
+            "start": {
+                "line": 161,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                8134,
+                8622
+            ],
+            "bodyRange": [
+                8164,
+                8622
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 20,
+            "start": {
+                "line": 162,
+                "column": 12
+            },
+            "functionName": "getCookieValue"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8334,
+                8577
+            ],
+            "bodyRange": [
+                8351,
+                8577
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 19,
+            "start": {
+                "line": 166,
+                "column": 32
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2069,
+                3321
+            ],
+            "bodyRange": [
+                2080,
+                3321
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 6,
+            "start": {
+                "line": 44,
+                "column": 45
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2182,
+                3302
+            ],
+            "bodyRange": [
+                2193,
+                3302
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 5,
+            "start": {
+                "line": 46,
+                "column": 49
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                3033,
+                3280
+            ],
+            "bodyRange": [
+                3069,
+                3280
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 4,
+            "start": {
+                "line": 60,
+                "column": 24
+            },
+            "functionName": "runEachListener"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5058,
+                5156
+            ],
+            "bodyRange": [
+                5074,
+                5156
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 11,
+            "start": {
+                "line": 96,
+                "column": 38
+            },
+            "functionName": null
+        }
+    ],
+    "allFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1153,
+                1243
+            ],
+            "bodyRange": [
+                1164,
+                1243
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 0,
+            "start": {
+                "line": 22,
+                "column": 47
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                941,
+                1359
+            ],
+            "bodyRange": [
+                969,
+                1359
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 1,
+            "start": {
+                "line": 19,
+                "column": 47
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1450,
+                1511
+            ],
+            "bodyRange": [
+                1463,
+                1511
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 2,
+            "start": {
+                "line": 29,
+                "column": 76
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                350,
+                1521
+            ],
+            "bodyRange": [
+                367,
+                1521
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 3,
+            "start": {
+                "line": 10,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1666,
+                1859
+            ],
+            "bodyRange": [
+                1703,
+                1859
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 4,
+            "start": {
+                "line": 36,
+                "column": 12
+            },
+            "functionName": "toggleDetailsState"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1873,
+                2209
+            ],
+            "bodyRange": [
+                1901,
+                2209
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 5,
+            "start": {
+                "line": 41,
+                "column": 12
+            },
+            "functionName": "handleEvent"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2372,
+                2604
+            ],
+            "bodyRange": [
+                2388,
+                2604
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 6,
+            "start": {
+                "line": 49,
+                "column": 54
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                2223,
+                2625
+            ],
+            "bodyRange": [
+                2245,
+                2625
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 7,
+            "start": {
+                "line": 47,
+                "column": 12
+            },
+            "functionName": "bindEvents"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                2639,
+                3073
+            ],
+            "bodyRange": [
+                2660,
+                3073
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 8,
+            "start": {
+                "line": 55,
+                "column": 12
+            },
+            "functionName": "appendCss"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1541,
+                3191
+            ],
+            "bodyRange": [
+                1568,
+                3191
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 9,
+            "start": {
+                "line": 33,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                3724,
+                3938
+            ],
+            "bodyRange": [
+                3747,
+                3938
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 10,
+            "start": {
+                "line": 82,
+                "column": 12
+            },
+            "functionName": "mustEnhance"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                3952,
+                4081
+            ],
+            "bodyRange": [
+                3978,
+                4081
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 11,
+            "start": {
+                "line": 88,
+                "column": 12
+            },
+            "functionName": "mustNotEnhance"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                4095,
+                4182
+            ],
+            "bodyRange": [
+                4119,
+                4182
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 12,
+            "start": {
+                "line": 92,
+                "column": 12
+            },
+            "functionName": "couldEnhance"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                4196,
+                4367
+            ],
+            "bodyRange": [
+                4223,
+                4367
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 13,
+            "start": {
+                "line": 96,
+                "column": 12
+            },
+            "functionName": "weWantToEnhance"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                4381,
+                4520
+            ],
+            "bodyRange": [
+                4409,
+                4520
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 14,
+            "start": {
+                "line": 102,
+                "column": 12
+            },
+            "functionName": "isOlderIOSDevice"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                4534,
+                4610
+            ],
+            "bodyRange": [
+                4552,
+                4610
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 15,
+            "start": {
+                "line": 106,
+                "column": 12
+            },
+            "functionName": "isIpad"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3221,
+                4741
+            ],
+            "bodyRange": [
+                3238,
+                4741
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 16,
+            "start": {
+                "line": 68,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                145581,
+                145683
+            ],
+            "bodyRange": [
+                145592,
+                145683
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 17,
+            "start": {
+                "line": 2860,
+                "column": 93
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                146047,
+                146169
+            ],
+            "bodyRange": [
+                146074,
+                146169
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 18,
+            "start": {
+                "line": 2872,
+                "column": 52
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                146229,
+                146340
+            ],
+            "bodyRange": [
+                146269,
+                146340
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 19,
+            "start": {
+                "line": 2876,
+                "column": 12
+            },
+            "functionName": "nativeCSSSupports"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                146520,
+                146655
+            ],
+            "bodyRange": [
+                146544,
+                146655
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 20,
+            "start": {
+                "line": 2884,
+                "column": 16
+            },
+            "functionName": "cssToDOM"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                146673,
+                146780
+            ],
+            "bodyRange": [
+                146712,
+                146780
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 21,
+            "start": {
+                "line": 2888,
+                "column": 16
+            },
+            "functionName": "cssToDOMReplacer"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                146804,
+                147338
+            ],
+            "bodyRange": [
+                146826,
+                147338
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 22,
+            "start": {
+                "line": 2891,
+                "column": 23
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                146354,
+                147352
+            ],
+            "bodyRange": [
+                146381,
+                147352
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 23,
+            "start": {
+                "line": 2880,
+                "column": 12
+            },
+            "functionName": "shimCSSSupports"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                147570,
+                147695
+            ],
+            "bodyRange": [
+                147586,
+                147695
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 24,
+            "start": {
+                "line": 2908,
+                "column": 48
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                147505,
+                147718
+            ],
+            "bodyRange": [
+                147520,
+                147718
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 25,
+            "start": {
+                "line": 2907,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                147444,
+                147774
+            ],
+            "bodyRange": [
+                147459,
+                147774
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 26,
+            "start": {
+                "line": 2906,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                147366,
+                147799
+            ],
+            "bodyRange": [
+                147398,
+                147799
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 27,
+            "start": {
+                "line": 2905,
+                "column": 12
+            },
+            "functionName": "testAndAddClass"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                147813,
+                148002
+            ],
+            "bodyRange": [
+                147843,
+                148002
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 28,
+            "start": {
+                "line": 2915,
+                "column": 12
+            },
+            "functionName": "getCookieValue"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                148016,
+                148429
+            ],
+            "bodyRange": [
+                148047,
+                148429
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 29,
+            "start": {
+                "line": 2920,
+                "column": 12
+            },
+            "functionName": "isRecentContributor"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                148443,
+                148574
+            ],
+            "bodyRange": [
+                148481,
+                148574
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 30,
+            "start": {
+                "line": 2929,
+                "column": 12
+            },
+            "functionName": "shouldHideSupportMessaging"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                148588,
+                148855
+            ],
+            "bodyRange": [
+                148622,
+                148855
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 31,
+            "start": {
+                "line": 2933,
+                "column": 12
+            },
+            "functionName": "forcePercentagePadding"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                145894,
+                150495
+            ],
+            "bodyRange": [
+                145939,
+                150495
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 32,
+            "start": {
+                "line": 2870,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                150652,
+                151026
+            ],
+            "bodyRange": [
+                150663,
+                151026
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 33,
+            "start": {
+                "line": 2969,
+                "column": 29
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                151190,
+                151852
+            ],
+            "bodyRange": [
+                151224,
+                151852
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 34,
+            "start": {
+                "line": 2983,
+                "column": 39
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                152037,
+                152139
+            ],
+            "bodyRange": [
+                152056,
+                152139
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 35,
+            "start": {
+                "line": 2997,
+                "column": 45
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                152250,
+                152612
+            ],
+            "bodyRange": [
+                152261,
+                152612
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 36,
+            "start": {
+                "line": 3001,
+                "column": 53
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                151894,
+                152678
+            ],
+            "bodyRange": [
+                151932,
+                152678
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 37,
+            "start": {
+                "line": 2995,
+                "column": 40
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                152718,
+                152820
+            ],
+            "bodyRange": [
+                152746,
+                152820
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 38,
+            "start": {
+                "line": 3010,
+                "column": 38
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                152867,
+                153077
+            ],
+            "bodyRange": [
+                152896,
+                153077
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 39,
+            "start": {
+                "line": 3013,
+                "column": 45
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                153587,
+                153600
+            ],
+            "bodyRange": [
+                153598,
+                153600
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 40,
+            "start": {
+                "line": 3024,
+                "column": 54
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                153313,
+                154335
+            ],
+            "bodyRange": [
+                153338,
+                154335
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 41,
+            "start": {
+                "line": 3021,
+                "column": 28
+            },
+            "functionName": "supportsWoff2"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                153120,
+                154901
+            ],
+            "bodyRange": [
+                153131,
+                154901
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 42,
+            "start": {
+                "line": 3017,
+                "column": 41
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                151043,
+                155960
+            ],
+            "bodyRange": [
+                151075,
+                155960
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 43,
+            "start": {
+                "line": 2980,
+                "column": 12
+            },
+            "functionName": "loadFontsFromStorage"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                156500,
+                156612
+            ],
+            "bodyRange": [
+                156511,
+                156612
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 44,
+            "start": {
+                "line": 3073,
+                "column": 38
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                155974,
+                156658
+            ],
+            "bodyRange": [
+                156009,
+                156658
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 45,
+            "start": {
+                "line": 3065,
+                "column": 12
+            },
+            "functionName": "loadFontsAsynchronously"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                156772,
+                157027
+            ],
+            "bodyRange": [
+                156788,
+                157027
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 46,
+            "start": {
+                "line": 3081,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                156672,
+                158676
+            ],
+            "bodyRange": [
+                156704,
+                158676
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 47,
+            "start": {
+                "line": 3079,
+                "column": 12
+            },
+            "functionName": "fontSmoothingEnabled"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                158786,
+                158909
+            ],
+            "bodyRange": [
+                158810,
+                158909
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 48,
+            "start": {
+                "line": 3115,
+                "column": 12
+            },
+            "functionName": "disableFonts"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                158923,
+                159053
+            ],
+            "bodyRange": [
+                158946,
+                159053
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 49,
+            "start": {
+                "line": 3119,
+                "column": 12
+            },
+            "functionName": "enableFonts"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                159067,
+                159315
+            ],
+            "bodyRange": [
+                159101,
+                159315
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 50,
+            "start": {
+                "line": 3123,
+                "column": 12
+            },
+            "functionName": "checkUserFontDisabling"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                159411,
+                159664
+            ],
+            "bodyRange": [
+                159432,
+                159664
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 51,
+            "start": {
+                "line": 3129,
+                "column": 12
+            },
+            "functionName": "loadFonts"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                150552,
+                159698
+            ],
+            "bodyRange": [
+                150579,
+                159698
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 52,
+            "start": {
+                "line": 2967,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                160398,
+                160469
+            ],
+            "bodyRange": [
+                160409,
+                160469
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 53,
+            "start": {
+                "line": 3150,
+                "column": 27
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                159789,
+                160484
+            ],
+            "bodyRange": [
+                159819,
+                160484
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 54,
+            "start": {
+                "line": 3138,
+                "column": 12
+            },
+            "functionName": "setMedia"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                160498,
+                160749
+            ],
+            "bodyRange": [
+                160516,
+                160749
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 55,
+            "start": {
+                "line": 3155,
+                "column": 12
+            },
+            "functionName": "useCss"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                159728,
+                160780
+            ],
+            "bodyRange": [
+                159775,
+                160780
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 56,
+            "start": {
+                "line": 3137,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                160860,
+                161044
+            ],
+            "bodyRange": [
+                160890,
+                161044
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 57,
+            "start": {
+                "line": 3162,
+                "column": 8
+            },
+            "functionName": "guardianPolyfilled"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                161599,
+                161983
+            ],
+            "bodyRange": [
+                161622,
+                161983
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 58,
+            "start": {
+                "line": 3174,
+                "column": 12
+            },
+            "functionName": "stateChange"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                161045,
+                162702
+            ],
+            "bodyRange": [
+                161072,
+                162702
+            ],
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "index": 59,
+            "start": {
+                "line": 3167,
+                "column": 10
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                146,
+                304
+            ],
+            "bodyRange": [
+                160,
+                304
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 39
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                343,
+                821
+            ],
+            "bodyRange": [
+                355,
+                821
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 1,
+            "start": {
+                "line": 8,
+                "column": 37
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                28,
+                1452
+            ],
+            "bodyRange": [
+                69,
+                1452
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 2,
+            "start": {
+                "line": 3,
+                "column": 13
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2797,
+                2980
+            ],
+            "bodyRange": [
+                2808,
+                2980
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 3,
+            "start": {
+                "line": 54,
+                "column": 34
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                3033,
+                3280
+            ],
+            "bodyRange": [
+                3069,
+                3280
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 4,
+            "start": {
+                "line": 60,
+                "column": 24
+            },
+            "functionName": "runEachListener"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2182,
+                3302
+            ],
+            "bodyRange": [
+                2193,
+                3302
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 5,
+            "start": {
+                "line": 46,
+                "column": 49
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2069,
+                3321
+            ],
+            "bodyRange": [
+                2080,
+                3321
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 6,
+            "start": {
+                "line": 44,
+                "column": 45
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1564,
+                3336
+            ],
+            "bodyRange": [
+                1591,
+                3336
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 7,
+            "start": {
+                "line": 34,
+                "column": 13
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4197,
+                4283
+            ],
+            "bodyRange": [
+                4209,
+                4283
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 8,
+            "start": {
+                "line": 80,
+                "column": 79
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3577,
+                4721
+            ],
+            "bodyRange": [
+                3588,
+                4721
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 9,
+            "start": {
+                "line": 72,
+                "column": 71
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3407,
+                4736
+            ],
+            "bodyRange": [
+                3448,
+                4736
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 10,
+            "start": {
+                "line": 70,
+                "column": 13
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5058,
+                5156
+            ],
+            "bodyRange": [
+                5074,
+                5156
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 11,
+            "start": {
+                "line": 96,
+                "column": 38
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                5187,
+                5751
+            ],
+            "bodyRange": [
+                5214,
+                5751
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 12,
+            "start": {
+                "line": 100,
+                "column": 20
+            },
+            "functionName": "addLocatorFrame"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5864,
+                6468
+            ],
+            "bodyRange": [
+                5903,
+                6468
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 13,
+            "start": {
+                "line": 112,
+                "column": 30
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6564,
+                6960
+            ],
+            "bodyRange": [
+                6580,
+                6960
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 14,
+            "start": {
+                "line": 125,
+                "column": 41
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4927,
+                7254
+            ],
+            "bodyRange": [
+                4938,
+                7254
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 15,
+            "start": {
+                "line": 94,
+                "column": 50
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                4848,
+                7270
+            ],
+            "bodyRange": [
+                4875,
+                7270
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 16,
+            "start": {
+                "line": 93,
+                "column": 13
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                7386,
+                7767
+            ],
+            "bodyRange": [
+                7415,
+                7767
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 17,
+            "start": {
+                "line": 146,
+                "column": 16
+            },
+            "functionName": "shouldServeLotame"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7341,
+                8040
+            ],
+            "bodyRange": [
+                7368,
+                8040
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 18,
+            "start": {
+                "line": 145,
+                "column": 13
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8334,
+                8577
+            ],
+            "bodyRange": [
+                8351,
+                8577
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 19,
+            "start": {
+                "line": 166,
+                "column": 32
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                8134,
+                8622
+            ],
+            "bodyRange": [
+                8164,
+                8622
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 20,
+            "start": {
+                "line": 162,
+                "column": 12
+            },
+            "functionName": "getCookieValue"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8093,
+                8708
+            ],
+            "bodyRange": [
+                8120,
+                8708
+            ],
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "index": 21,
+            "start": {
+                "line": 161,
+                "column": 9
+            },
+            "functionName": null
+        }
+    ],
+    "affectedFiles": [
+        {
+            "file": "lacuna_cache/exported_pyftvr.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_i5a4a7.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "HOST(string-replace-model.js)",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ]
+}

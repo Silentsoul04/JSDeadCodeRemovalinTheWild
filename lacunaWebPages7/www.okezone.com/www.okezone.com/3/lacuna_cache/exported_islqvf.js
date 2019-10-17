@@ -1,0 +1,3 @@
+
+        $(".hitshare").click(null);
+    

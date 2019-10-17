@@ -1,0 +1,1 @@
+B.load(function () {require(['wiseindex/lib/ivk/logo/logo'], null);});
