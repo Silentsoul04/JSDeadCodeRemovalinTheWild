@@ -1,0 +1,58 @@
+{
+    "runDate": "2019-10-18T02:23:01.868Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "international.html",
+        "destination": "lacunaWebPages8/www.theguardian.com/www.theguardian.com/1",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 1,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages8/www.theguardian.com/www.theguardian.com/1"
+    },
+    "graphStats": {
+        "connectedNodes": 2,
+        "disconnectedNodes": 0,
+        "nodes": 0,
+        "files": 2
+    },
+    "deadFunctions": [],
+    "aliveFunctions": [
+        {
+            "file": "international.html",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "HOST(string-replace-model.js)",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ],
+    "allFunctions": [],
+    "affectedFiles": [
+        {
+            "file": "international.html",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "HOST(string-replace-model.js)",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ]
+}

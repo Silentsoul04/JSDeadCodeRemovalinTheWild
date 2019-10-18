@@ -1,0 +1,2395 @@
+{
+    "runDate": "2019-10-17T23:38:49.331Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages8/nl.godaddy.com/nl.godaddy.com/2",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 2,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages8/nl.godaddy.com/nl.godaddy.com/2"
+    },
+    "graphStats": {
+        "connectedNodes": 39,
+        "disconnectedNodes": 24,
+        "nodes": 63,
+        "files": 12
+    },
+    "deadFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1229,
+                1399
+            ],
+            "bodyRange": [
+                1240,
+                1399
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 1,
+            "start": {
+                "line": 32,
+                "column": 51
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1449,
+                1548
+            ],
+            "bodyRange": [
+                1461,
+                1548
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 2,
+            "start": {
+                "line": 37,
+                "column": 47
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1928,
+                2818
+            ],
+            "bodyRange": [
+                1953,
+                2818
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 4,
+            "start": {
+                "line": 47,
+                "column": 52
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2865,
+                3933
+            ],
+            "bodyRange": [
+                2899,
+                3933
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 5,
+            "start": {
+                "line": 66,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3992,
+                5495
+            ],
+            "bodyRange": [
+                4036,
+                5495
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 6,
+            "start": {
+                "line": 87,
+                "column": 56
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6443,
+                7048
+            ],
+            "bodyRange": [
+                6462,
+                7048
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 8,
+            "start": {
+                "line": 133,
+                "column": 48
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7820,
+                7924
+            ],
+            "bodyRange": [
+                7832,
+                7924
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 9,
+            "start": {
+                "line": 154,
+                "column": 76
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7997,
+                8101
+            ],
+            "bodyRange": [
+                8009,
+                8101
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 10,
+            "start": {
+                "line": 157,
+                "column": 70
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7095,
+                8298
+            ],
+            "bodyRange": [
+                7110,
+                8298
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 11,
+            "start": {
+                "line": 144,
+                "column": 45
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                8790,
+                9261
+            ],
+            "bodyRange": [
+                8818,
+                9261
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 12,
+            "start": {
+                "line": 172,
+                "column": 36
+            },
+            "functionName": "imageLoadHandler"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                9810,
+                10756
+            ],
+            "bodyRange": [
+                9829,
+                10756
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 14,
+            "start": {
+                "line": 190,
+                "column": 41
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10799,
+                12072
+            ],
+            "bodyRange": [
+                10818,
+                12072
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 15,
+            "start": {
+                "line": 208,
+                "column": 41
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                14549,
+                14633
+            ],
+            "bodyRange": [
+                14560,
+                14633
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 19,
+            "start": {
+                "line": 282,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                163,
+                255
+            ],
+            "bodyRange": [
+                200,
+                255
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 30
+            },
+            "functionName": "uxReadyPreScriptsLoaded"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                501,
+                738
+            ],
+            "bodyRange": [
+                534,
+                738
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 2,
+            "start": {
+                "line": 12,
+                "column": 45
+            },
+            "functionName": "shopperDataPreQueue"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1769,
+                2579
+            ],
+            "bodyRange": [
+                1796,
+                2579
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 6,
+            "start": {
+                "line": 44,
+                "column": 16
+            },
+            "functionName": "handleLoadError"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                365,
+                452
+            ],
+            "bodyRange": [
+                376,
+                452
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 1,
+            "start": {
+                "line": 9,
+                "column": 49
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                511,
+                598
+            ],
+            "bodyRange": [
+                522,
+                598
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 2,
+            "start": {
+                "line": 13,
+                "column": 31
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                925,
+                991
+            ],
+            "bodyRange": [
+                936,
+                991
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 4,
+            "start": {
+                "line": 25,
+                "column": 31
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                652,
+                1031
+            ],
+            "bodyRange": [
+                683,
+                1031
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 5,
+            "start": {
+                "line": 19,
+                "column": 12
+            },
+            "functionName": "addToWindowLoad"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1182,
+                1335
+            ],
+            "bodyRange": [
+                1193,
+                1335
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 6,
+            "start": {
+                "line": 33,
+                "column": 52
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1045,
+                1376
+            ],
+            "bodyRange": [
+                1081,
+                1376
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 7,
+            "start": {
+                "line": 31,
+                "column": 12
+            },
+            "functionName": "addLoadEventListener"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1629,
+                1803
+            ],
+            "bodyRange": [
+                1640,
+                1803
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 8,
+            "start": {
+                "line": 47,
+                "column": 36
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1390,
+                1835
+            ],
+            "bodyRange": [
+                1418,
+                1835
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 9,
+            "start": {
+                "line": 41,
+                "column": 12
+            },
+            "functionName": "addLoadEvent"
+        }
+    ],
+    "aliveFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                646
+            ],
+            "bodyRange": [
+                21,
+                646
+            ],
+            "file": "lacuna_cache/exported_utx4n8.js",
+            "index": 1,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                61,
+                544
+            ],
+            "bodyRange": [
+                87,
+                544
+            ],
+            "file": "lacuna_cache/exported_utx4n8.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 12
+            },
+            "functionName": "readCookie"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                162,
+                186435
+            ],
+            "bodyRange": [
+                191,
+                186435
+            ],
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "index": 4,
+            "start": {
+                "line": 3,
+                "column": 58
+            },
+            "functionName": "delayedGlobals"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                525
+            ],
+            "bodyRange": [
+                21,
+                525
+            ],
+            "file": "lacuna_cache/exported_b2xu41.js",
+            "index": 0,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1475,
+                1744
+            ],
+            "bodyRange": [
+                1499,
+                1744
+            ],
+            "file": "lacuna_cache/exported_b21ysw.js",
+            "index": 2,
+            "start": {
+                "line": 41,
+                "column": 12
+            },
+            "functionName": "getHydraData"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                14991
+            ],
+            "bodyRange": [
+                21,
+                14991
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 23,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                59,
+                14767
+            ],
+            "bodyRange": [
+                70,
+                14767
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 22,
+            "start": {
+                "line": 3,
+                "column": 36
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                439,
+                14678
+            ],
+            "bodyRange": [
+                450,
+                14678
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 21,
+            "start": {
+                "line": 13,
+                "column": 27
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                473,
+                14656
+            ],
+            "bodyRange": [
+                484,
+                14656
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 20,
+            "start": {
+                "line": 14,
+                "column": 21
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                14089,
+                14417
+            ],
+            "bodyRange": [
+                14100,
+                14417
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 18,
+            "start": {
+                "line": 271,
+                "column": 42
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                979,
+                1175
+            ],
+            "bodyRange": [
+                990,
+                1175
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 0,
+            "start": {
+                "line": 27,
+                "column": 48
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                14251,
+                14355
+            ],
+            "bodyRange": [
+                14262,
+                14355
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 17,
+            "start": {
+                "line": 274,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                12120,
+                14044
+            ],
+            "bodyRange": [
+                12143,
+                14044
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 16,
+            "start": {
+                "line": 232,
+                "column": 45
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1594,
+                1873
+            ],
+            "bodyRange": [
+                1613,
+                1873
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 3,
+            "start": {
+                "line": 41,
+                "column": 43
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8344,
+                9767
+            ],
+            "bodyRange": [
+                8363,
+                9767
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 13,
+            "start": {
+                "line": 165,
+                "column": 43
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5547,
+                6393
+            ],
+            "bodyRange": [
+                5568,
+                6393
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 7,
+            "start": {
+                "line": 115,
+                "column": 50
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                2276
+            ],
+            "bodyRange": [
+                21,
+                2276
+            ],
+            "file": "lacuna_cache/exported_b21ysw.js",
+            "index": 3,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                35,
+                376
+            ],
+            "bodyRange": [
+                56,
+                376
+            ],
+            "file": "lacuna_cache/exported_b21ysw.js",
+            "index": 0,
+            "start": {
+                "line": 3,
+                "column": 12
+            },
+            "functionName": "getDomain"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                390,
+                1461
+            ],
+            "bodyRange": [
+                412,
+                1461
+            ],
+            "file": "lacuna_cache/exported_b21ysw.js",
+            "index": 1,
+            "start": {
+                "line": 13,
+                "column": 12
+            },
+            "functionName": "getUrlArgs"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1660,
+                1782
+            ],
+            "bodyRange": [
+                1681,
+                1782
+            ],
+            "file": "lacuna_cache/exported_6mnrhx.js",
+            "index": 2,
+            "start": {
+                "line": 43,
+                "column": 12
+            },
+            "functionName": "getUxData"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                115,
+                489
+            ],
+            "bodyRange": [
+                137,
+                489
+            ],
+            "file": "lacuna_cache/exported_ggrqg7.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 13
+            },
+            "functionName": "trfqConfig"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                342,
+                454
+            ],
+            "bodyRange": [
+                385,
+                454
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 1,
+            "start": {
+                "line": 9,
+                "column": 39
+            },
+            "functionName": "eldoradoReadyPreScriptsLoaded"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1102,
+                3561
+            ],
+            "bodyRange": [
+                1133,
+                3561
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 7,
+            "start": {
+                "line": 25,
+                "column": 44
+            },
+            "functionName": "loadDeferredScripts"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1231,
+                1546
+            ],
+            "bodyRange": [
+                1258,
+                1546
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 4,
+            "start": {
+                "line": 29,
+                "column": 16
+            },
+            "functionName": "createScript"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1564,
+                1751
+            ],
+            "bodyRange": [
+                1595,
+                1751
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 5,
+            "start": {
+                "line": 38,
+                "column": 16
+            },
+            "functionName": "checkIfLoadComplete"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                792,
+                1056
+            ],
+            "bodyRange": [
+                825,
+                1056
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 3,
+            "start": {
+                "line": 17,
+                "column": 52
+            },
+            "functionName": "_onDelayedJSLoaded"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                59,
+                583
+            ],
+            "bodyRange": [
+                87,
+                583
+            ],
+            "file": "lacuna_cache/exported_guouyv.js",
+            "index": 0,
+            "start": {
+                "line": 2,
+                "column": 58
+            },
+            "functionName": "delayedMounts"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                181889,
+                182256
+            ],
+            "bodyRange": [
+                181904,
+                182256
+            ],
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "index": 0,
+            "start": {
+                "line": 2793,
+                "column": 58
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                185531,
+                185865
+            ],
+            "bodyRange": [
+                185542,
+                185865
+            ],
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "index": 2,
+            "start": {
+                "line": 2839,
+                "column": 17
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                185727,
+                185844
+            ],
+            "bodyRange": [
+                185741,
+                185844
+            ],
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "index": 1,
+            "start": {
+                "line": 2844,
+                "column": 67
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                185897,
+                186415
+            ],
+            "bodyRange": [
+                185908,
+                186415
+            ],
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "index": 3,
+            "start": {
+                "line": 2849,
+                "column": 27
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                2555
+            ],
+            "bodyRange": [
+                21,
+                2555
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 11,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                35,
+                638
+            ],
+            "bodyRange": [
+                69,
+                638
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 3,
+            "start": {
+                "line": 3,
+                "column": 12
+            },
+            "functionName": "asyncLoad"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                170,
+                257
+            ],
+            "bodyRange": [
+                181,
+                257
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 52
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1849,
+                2340
+            ],
+            "bodyRange": [
+                1903,
+                2340
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 10,
+            "start": {
+                "line": 56,
+                "column": 12
+            },
+            "functionName": "insertScript"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                2059
+            ],
+            "bodyRange": [
+                21,
+                2059
+            ],
+            "file": "lacuna_cache/exported_6mnrhx.js",
+            "index": 3,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                35,
+                1106
+            ],
+            "bodyRange": [
+                57,
+                1106
+            ],
+            "file": "lacuna_cache/exported_6mnrhx.js",
+            "index": 0,
+            "start": {
+                "line": 3,
+                "column": 12
+            },
+            "functionName": "getUrlArgs"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1120,
+                1646
+            ],
+            "bodyRange": [
+                1143,
+                1646
+            ],
+            "file": "lacuna_cache/exported_6mnrhx.js",
+            "index": 1,
+            "start": {
+                "line": 31,
+                "column": 12
+            },
+            "functionName": "updateLinks"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                175
+            ],
+            "bodyRange": [
+                21,
+                175
+            ],
+            "file": "lacuna_cache/exported_ra260w.js",
+            "index": 0,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        }
+    ],
+    "allFunctions": [
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                61,
+                544
+            ],
+            "bodyRange": [
+                87,
+                544
+            ],
+            "file": "lacuna_cache/exported_utx4n8.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 12
+            },
+            "functionName": "readCookie"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                646
+            ],
+            "bodyRange": [
+                21,
+                646
+            ],
+            "file": "lacuna_cache/exported_utx4n8.js",
+            "index": 1,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                525
+            ],
+            "bodyRange": [
+                21,
+                525
+            ],
+            "file": "lacuna_cache/exported_b2xu41.js",
+            "index": 0,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                979,
+                1175
+            ],
+            "bodyRange": [
+                990,
+                1175
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 0,
+            "start": {
+                "line": 27,
+                "column": 48
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1229,
+                1399
+            ],
+            "bodyRange": [
+                1240,
+                1399
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 1,
+            "start": {
+                "line": 32,
+                "column": 51
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1449,
+                1548
+            ],
+            "bodyRange": [
+                1461,
+                1548
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 2,
+            "start": {
+                "line": 37,
+                "column": 47
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1594,
+                1873
+            ],
+            "bodyRange": [
+                1613,
+                1873
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 3,
+            "start": {
+                "line": 41,
+                "column": 43
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1928,
+                2818
+            ],
+            "bodyRange": [
+                1953,
+                2818
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 4,
+            "start": {
+                "line": 47,
+                "column": 52
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                2865,
+                3933
+            ],
+            "bodyRange": [
+                2899,
+                3933
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 5,
+            "start": {
+                "line": 66,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                3992,
+                5495
+            ],
+            "bodyRange": [
+                4036,
+                5495
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 6,
+            "start": {
+                "line": 87,
+                "column": 56
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                5547,
+                6393
+            ],
+            "bodyRange": [
+                5568,
+                6393
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 7,
+            "start": {
+                "line": 115,
+                "column": 50
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                6443,
+                7048
+            ],
+            "bodyRange": [
+                6462,
+                7048
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 8,
+            "start": {
+                "line": 133,
+                "column": 48
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7820,
+                7924
+            ],
+            "bodyRange": [
+                7832,
+                7924
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 9,
+            "start": {
+                "line": 154,
+                "column": 76
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7997,
+                8101
+            ],
+            "bodyRange": [
+                8009,
+                8101
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 10,
+            "start": {
+                "line": 157,
+                "column": 70
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                7095,
+                8298
+            ],
+            "bodyRange": [
+                7110,
+                8298
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 11,
+            "start": {
+                "line": 144,
+                "column": 45
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                8790,
+                9261
+            ],
+            "bodyRange": [
+                8818,
+                9261
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 12,
+            "start": {
+                "line": 172,
+                "column": 36
+            },
+            "functionName": "imageLoadHandler"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                8344,
+                9767
+            ],
+            "bodyRange": [
+                8363,
+                9767
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 13,
+            "start": {
+                "line": 165,
+                "column": 43
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                9810,
+                10756
+            ],
+            "bodyRange": [
+                9829,
+                10756
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 14,
+            "start": {
+                "line": 190,
+                "column": 41
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10799,
+                12072
+            ],
+            "bodyRange": [
+                10818,
+                12072
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 15,
+            "start": {
+                "line": 208,
+                "column": 41
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                12120,
+                14044
+            ],
+            "bodyRange": [
+                12143,
+                14044
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 16,
+            "start": {
+                "line": 232,
+                "column": 45
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                14251,
+                14355
+            ],
+            "bodyRange": [
+                14262,
+                14355
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 17,
+            "start": {
+                "line": 274,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                14089,
+                14417
+            ],
+            "bodyRange": [
+                14100,
+                14417
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 18,
+            "start": {
+                "line": 271,
+                "column": 42
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                14549,
+                14633
+            ],
+            "bodyRange": [
+                14560,
+                14633
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 19,
+            "start": {
+                "line": 282,
+                "column": 44
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                473,
+                14656
+            ],
+            "bodyRange": [
+                484,
+                14656
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 20,
+            "start": {
+                "line": 14,
+                "column": 21
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                439,
+                14678
+            ],
+            "bodyRange": [
+                450,
+                14678
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 21,
+            "start": {
+                "line": 13,
+                "column": 27
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                59,
+                14767
+            ],
+            "bodyRange": [
+                70,
+                14767
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 22,
+            "start": {
+                "line": 3,
+                "column": 36
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                14991
+            ],
+            "bodyRange": [
+                21,
+                14991
+            ],
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "index": 23,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                35,
+                376
+            ],
+            "bodyRange": [
+                56,
+                376
+            ],
+            "file": "lacuna_cache/exported_b21ysw.js",
+            "index": 0,
+            "start": {
+                "line": 3,
+                "column": 12
+            },
+            "functionName": "getDomain"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                390,
+                1461
+            ],
+            "bodyRange": [
+                412,
+                1461
+            ],
+            "file": "lacuna_cache/exported_b21ysw.js",
+            "index": 1,
+            "start": {
+                "line": 13,
+                "column": 12
+            },
+            "functionName": "getUrlArgs"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1475,
+                1744
+            ],
+            "bodyRange": [
+                1499,
+                1744
+            ],
+            "file": "lacuna_cache/exported_b21ysw.js",
+            "index": 2,
+            "start": {
+                "line": 41,
+                "column": 12
+            },
+            "functionName": "getHydraData"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                2276
+            ],
+            "bodyRange": [
+                21,
+                2276
+            ],
+            "file": "lacuna_cache/exported_b21ysw.js",
+            "index": 3,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                115,
+                489
+            ],
+            "bodyRange": [
+                137,
+                489
+            ],
+            "file": "lacuna_cache/exported_ggrqg7.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 13
+            },
+            "functionName": "trfqConfig"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                163,
+                255
+            ],
+            "bodyRange": [
+                200,
+                255
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 30
+            },
+            "functionName": "uxReadyPreScriptsLoaded"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                342,
+                454
+            ],
+            "bodyRange": [
+                385,
+                454
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 1,
+            "start": {
+                "line": 9,
+                "column": 39
+            },
+            "functionName": "eldoradoReadyPreScriptsLoaded"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                501,
+                738
+            ],
+            "bodyRange": [
+                534,
+                738
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 2,
+            "start": {
+                "line": 12,
+                "column": 45
+            },
+            "functionName": "shopperDataPreQueue"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                792,
+                1056
+            ],
+            "bodyRange": [
+                825,
+                1056
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 3,
+            "start": {
+                "line": 17,
+                "column": 52
+            },
+            "functionName": "_onDelayedJSLoaded"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1231,
+                1546
+            ],
+            "bodyRange": [
+                1258,
+                1546
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 4,
+            "start": {
+                "line": 29,
+                "column": 16
+            },
+            "functionName": "createScript"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1564,
+                1751
+            ],
+            "bodyRange": [
+                1595,
+                1751
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 5,
+            "start": {
+                "line": 38,
+                "column": 16
+            },
+            "functionName": "checkIfLoadComplete"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1769,
+                2579
+            ],
+            "bodyRange": [
+                1796,
+                2579
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 6,
+            "start": {
+                "line": 44,
+                "column": 16
+            },
+            "functionName": "handleLoadError"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1102,
+                3561
+            ],
+            "bodyRange": [
+                1133,
+                3561
+            ],
+            "file": "lacuna_cache/exported_4yheir.js",
+            "index": 7,
+            "start": {
+                "line": 25,
+                "column": 44
+            },
+            "functionName": "loadDeferredScripts"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                181889,
+                182256
+            ],
+            "bodyRange": [
+                181904,
+                182256
+            ],
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "index": 0,
+            "start": {
+                "line": 2793,
+                "column": 58
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                185727,
+                185844
+            ],
+            "bodyRange": [
+                185741,
+                185844
+            ],
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "index": 1,
+            "start": {
+                "line": 2844,
+                "column": 67
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                185531,
+                185865
+            ],
+            "bodyRange": [
+                185542,
+                185865
+            ],
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "index": 2,
+            "start": {
+                "line": 2839,
+                "column": 17
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                185897,
+                186415
+            ],
+            "bodyRange": [
+                185908,
+                186415
+            ],
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "index": 3,
+            "start": {
+                "line": 2849,
+                "column": 27
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                162,
+                186435
+            ],
+            "bodyRange": [
+                191,
+                186435
+            ],
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "index": 4,
+            "start": {
+                "line": 3,
+                "column": 58
+            },
+            "functionName": "delayedGlobals"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                59,
+                583
+            ],
+            "bodyRange": [
+                87,
+                583
+            ],
+            "file": "lacuna_cache/exported_guouyv.js",
+            "index": 0,
+            "start": {
+                "line": 2,
+                "column": 58
+            },
+            "functionName": "delayedMounts"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                170,
+                257
+            ],
+            "bodyRange": [
+                181,
+                257
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 52
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                365,
+                452
+            ],
+            "bodyRange": [
+                376,
+                452
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 1,
+            "start": {
+                "line": 9,
+                "column": 49
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                511,
+                598
+            ],
+            "bodyRange": [
+                522,
+                598
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 2,
+            "start": {
+                "line": 13,
+                "column": 31
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                35,
+                638
+            ],
+            "bodyRange": [
+                69,
+                638
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 3,
+            "start": {
+                "line": 3,
+                "column": 12
+            },
+            "functionName": "asyncLoad"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                925,
+                991
+            ],
+            "bodyRange": [
+                936,
+                991
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 4,
+            "start": {
+                "line": 25,
+                "column": 31
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                652,
+                1031
+            ],
+            "bodyRange": [
+                683,
+                1031
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 5,
+            "start": {
+                "line": 19,
+                "column": 12
+            },
+            "functionName": "addToWindowLoad"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1182,
+                1335
+            ],
+            "bodyRange": [
+                1193,
+                1335
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 6,
+            "start": {
+                "line": 33,
+                "column": 52
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1045,
+                1376
+            ],
+            "bodyRange": [
+                1081,
+                1376
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 7,
+            "start": {
+                "line": 31,
+                "column": 12
+            },
+            "functionName": "addLoadEventListener"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                1629,
+                1803
+            ],
+            "bodyRange": [
+                1640,
+                1803
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 8,
+            "start": {
+                "line": 47,
+                "column": 36
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1390,
+                1835
+            ],
+            "bodyRange": [
+                1418,
+                1835
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 9,
+            "start": {
+                "line": 41,
+                "column": 12
+            },
+            "functionName": "addLoadEvent"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1849,
+                2340
+            ],
+            "bodyRange": [
+                1903,
+                2340
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 10,
+            "start": {
+                "line": 56,
+                "column": 12
+            },
+            "functionName": "insertScript"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                2555
+            ],
+            "bodyRange": [
+                21,
+                2555
+            ],
+            "file": "lacuna_cache/exported_53po7n.js",
+            "index": 11,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                35,
+                1106
+            ],
+            "bodyRange": [
+                57,
+                1106
+            ],
+            "file": "lacuna_cache/exported_6mnrhx.js",
+            "index": 0,
+            "start": {
+                "line": 3,
+                "column": 12
+            },
+            "functionName": "getUrlArgs"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1120,
+                1646
+            ],
+            "bodyRange": [
+                1143,
+                1646
+            ],
+            "file": "lacuna_cache/exported_6mnrhx.js",
+            "index": 1,
+            "start": {
+                "line": 31,
+                "column": 12
+            },
+            "functionName": "updateLinks"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "range": [
+                1660,
+                1782
+            ],
+            "bodyRange": [
+                1681,
+                1782
+            ],
+            "file": "lacuna_cache/exported_6mnrhx.js",
+            "index": 2,
+            "start": {
+                "line": 43,
+                "column": 12
+            },
+            "functionName": "getUxData"
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                2059
+            ],
+            "bodyRange": [
+                21,
+                2059
+            ],
+            "file": "lacuna_cache/exported_6mnrhx.js",
+            "index": 3,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                10,
+                175
+            ],
+            "bodyRange": [
+                21,
+                175
+            ],
+            "file": "lacuna_cache/exported_ra260w.js",
+            "index": 0,
+            "start": {
+                "line": 2,
+                "column": 9
+            },
+            "functionName": null
+        }
+    ],
+    "affectedFiles": [
+        {
+            "file": "lacuna_cache/exported_utx4n8.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_b2xu41.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_b6le1c.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_b21ysw.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_ggrqg7.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_4yheir.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_rwxzrj.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_guouyv.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_53po7n.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_6mnrhx.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_ra260w.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_8qaxsx.js",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ]
+}

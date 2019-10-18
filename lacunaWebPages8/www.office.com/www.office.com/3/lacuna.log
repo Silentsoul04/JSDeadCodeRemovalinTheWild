@@ -1,0 +1,44 @@
+{
+    "runDate": "2019-10-18T02:21:00.122Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages8/www.office.com/www.office.com/3",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 3,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages8/www.office.com/www.office.com/3"
+    },
+    "graphStats": {
+        "connectedNodes": 1,
+        "disconnectedNodes": 0,
+        "nodes": 0,
+        "files": 1
+    },
+    "deadFunctions": [],
+    "aliveFunctions": [
+        {
+            "file": "https:/blobs.officehome.msocdn.com/bundles/unauth-vendor-320f34a99e.js",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ],
+    "allFunctions": [],
+    "affectedFiles": [
+        {
+            "file": "https:/blobs.officehome.msocdn.com/bundles/unauth-vendor-320f34a99e.js",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ]
+}

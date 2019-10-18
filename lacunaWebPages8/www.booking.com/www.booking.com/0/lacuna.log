@@ -1,0 +1,119 @@
+{
+    "runDate": "2019-10-18T01:31:53.084Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages8/www.booking.com/www.booking.com/0",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 0,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages8/www.booking.com/www.booking.com/0"
+    },
+    "graphStats": {
+        "connectedNodes": 1,
+        "disconnectedNodes": 1,
+        "nodes": 2,
+        "files": 2
+    },
+    "deadFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                127,
+                208
+            ],
+            "bodyRange": [
+                138,
+                208
+            ],
+            "file": "lacuna_cache/exported_wex7v9.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 29
+            },
+            "functionName": null
+        }
+    ],
+    "aliveFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                20,
+                219
+            ],
+            "bodyRange": [
+                31,
+                219
+            ],
+            "file": "lacuna_cache/exported_wex7v9.js",
+            "index": 1,
+            "start": {
+                "line": 3,
+                "column": 9
+            },
+            "functionName": null
+        }
+    ],
+    "allFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                127,
+                208
+            ],
+            "bodyRange": [
+                138,
+                208
+            ],
+            "file": "lacuna_cache/exported_wex7v9.js",
+            "index": 0,
+            "start": {
+                "line": 5,
+                "column": 29
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                20,
+                219
+            ],
+            "bodyRange": [
+                31,
+                219
+            ],
+            "file": "lacuna_cache/exported_wex7v9.js",
+            "index": 1,
+            "start": {
+                "line": 3,
+                "column": 9
+            },
+            "functionName": null
+        }
+    ],
+    "affectedFiles": [
+        {
+            "file": "lacuna_cache/exported_wex7v9.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        },
+        {
+            "file": "lacuna_cache/exported_chwo82.js",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ]
+}

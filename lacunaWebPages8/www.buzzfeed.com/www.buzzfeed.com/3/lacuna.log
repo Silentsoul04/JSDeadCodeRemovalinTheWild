@@ -1,0 +1,111 @@
+{
+    "runDate": "2019-10-18T01:32:47.126Z",
+    "runOptions": {
+        "analyzer": [
+            "dynamic",
+            "tajs"
+        ],
+        "entry": "index.html",
+        "destination": "lacunaWebPages8/www.buzzfeed.com/www.buzzfeed.com/3",
+        "logfile": "lacuna.log",
+        "timeout": null,
+        "olevel": 3,
+        "force": false,
+        "normalizeOnly": false,
+        "assumeNormalization": false,
+        "directory": "lacunaWebPages8/www.buzzfeed.com/www.buzzfeed.com/3"
+    },
+    "graphStats": {
+        "connectedNodes": 0,
+        "disconnectedNodes": 2,
+        "nodes": 2,
+        "files": 1
+    },
+    "deadFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                286,
+                390
+            ],
+            "bodyRange": [
+                297,
+                390
+            ],
+            "file": "lacuna_cache/exported_wn5ou2.js",
+            "index": 0,
+            "start": {
+                "line": 8,
+                "column": 35
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                106,
+                663
+            ],
+            "bodyRange": [
+                117,
+                663
+            ],
+            "file": "lacuna_cache/exported_wn5ou2.js",
+            "index": 1,
+            "start": {
+                "line": 4,
+                "column": 27
+            },
+            "functionName": null
+        }
+    ],
+    "aliveFunctions": [],
+    "allFunctions": [
+        {
+            "type": "FunctionExpression",
+            "range": [
+                286,
+                390
+            ],
+            "bodyRange": [
+                297,
+                390
+            ],
+            "file": "lacuna_cache/exported_wn5ou2.js",
+            "index": 0,
+            "start": {
+                "line": 8,
+                "column": 35
+            },
+            "functionName": null
+        },
+        {
+            "type": "FunctionExpression",
+            "range": [
+                106,
+                663
+            ],
+            "bodyRange": [
+                117,
+                663
+            ],
+            "file": "lacuna_cache/exported_wn5ou2.js",
+            "index": 1,
+            "start": {
+                "line": 4,
+                "column": 27
+            },
+            "functionName": null
+        }
+    ],
+    "affectedFiles": [
+        {
+            "file": "lacuna_cache/exported_wn5ou2.js",
+            "type": "rootNode",
+            "range": [
+                null,
+                null
+            ]
+        }
+    ]
+}
