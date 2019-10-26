@@ -1,3 +1,28 @@
+# JSDeadCodeRemovalinTheWild (16 Selected Subjects)
+
+| #  | Rank  | Mobile Webpage URL | Redirect | Login  | 0 | 1 | 2 | 3 |
+| ------------------------------------ |:---:| :---:| :---:| :---: | :---: | :---:|:---:|:---:|
+| 1   | 4   | https://www.youtube.com | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 2   | 7   | https://www.amazon.com | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 3   | 12  | https://www.wikipedia.org| :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 4   | 38  | https://aws.amazon.com/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 5   | 42  | https://www.office.com/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 6   | 43  | https://www.buzzfeed.com/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 7   | 52  | https://nl.godaddy.com/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 8   | 56  | https://www.mozilla.org/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 9   | 67  | https://stackoverflow.com/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 10  | 80  | http://apache.org/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 11  | 84  | https://www.theguardian.com/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 12  | 87  | https://stackexchange.com/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 13  | 88  | https://www.paypal.com/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 14  | 104 | https://www.booking.com/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 15  | 109 | https://www.bbc.com/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| 16  | 143 | https://www.amazon.in/ | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+
+
+
+
+
 # JSDeadCodeRemovalinTheWild (with different resource saver settings)
 
 | #  | Webpage | Redirect | Login  | 0 | 1 | 2 | 3 |
